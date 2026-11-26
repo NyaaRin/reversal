@@ -1,0 +1,36 @@
+// 0x18020e770  FUN_18020e770
+// size=142 thunk=false
+// signature: undefined FUN_18020e770()
+// status: ok
+
+
+void FUN_18020e770(undefined8 *param_1,ulonglong param_2)
+
+{
+  ulonglong uVar1;
+  ulonglong _Size;
+  
+  uVar1 = param_1[2];
+  if (param_2 <= uVar1) {
+    param_1[2] = param_2;
+    if (0xf < (ulonglong)param_1[3]) {
+      param_1 = (undefined8 *)*param_1;
+    }
+    *(undefined1 *)((longlong)param_1 + param_2) = 0;
+    return;
+  }
+  _Size = param_2 - uVar1;
+  if (_Size <= param_1[3] - uVar1) {
+    param_1[2] = param_2;
+    if (0xf < (ulonglong)param_1[3]) {
+      param_1 = (undefined8 *)*param_1;
+    }
+    memset((void *)(uVar1 + (longlong)param_1),0,_Size);
+    *(undefined1 *)((longlong)(uVar1 + (longlong)param_1) + _Size) = 0;
+    return;
+  }
+  FUN_18022a720(param_1,_Size,uVar1,_Size,0);
+  return;
+}
+
+

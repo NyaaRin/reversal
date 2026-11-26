@@ -1,0 +1,208 @@
+[
+ {
+  "container": "font_blob_0_30f5e0.bin",
+  "container_size": 137024,
+  "container_md5": "8a7aeed297820823c906867f9fef9fa0",
+  "stream_size": 133406,
+  "stream_md5": "e9d2bd628999982e57306ade2b38b493",
+  "post_stream_size": 3618,
+  "uncompressed_size": 186228,
+  "trailing_bytes_after_stream": 3618,
+  "region_bytes_sum": 137024,
+  "regions": [
+   {
+    "region": 0,
+    "offset": 0,
+    "length": 133406,
+    "kind": "stb-compress-stream",
+    "evidence": "magic 57BC0000; 05 FA end marker; Adler-32 6f78226b; output 186228 bytes"
+   },
+   {
+    "region": 1,
+    "offset": 133406,
+    "length": 2,
+    "kind": "alignment-padding",
+    "evidence": "zero fill to 16-byte boundary 0x32FF00"
+   },
+   {
+    "region": 2,
+    "offset": 133408,
+    "length": 6,
+    "kind": "font-glyph-ranges",
+    "evidence": "ImWchar ranges {0xF000,0xF8FF,0}; FUN_1801EA560 sets GlyphRanges=&DAT_180330F00 and FUN_1802983A0 copies it"
+   },
+   {
+    "region": 3,
+    "offset": 133414,
+    "length": 58,
+    "kind": "static-rdata-header",
+    "evidence": "58-byte static header; first dwords 0000000A 000741B0 000F0000 00000000; pointer 0x180343F08"
+   },
+   {
+    "region": 4,
+    "offset": 133472,
+    "length": 360,
+    "kind": "netvar-name-table",
+    "evidence": "15 records of {name_ptr,var_ptr,len,0}; first DT_BaseEntity/m_vecOrigin[0]; last DT_BaseFlex/m_vecViewOffset[0]"
+   },
+   {
+    "region": 5,
+    "offset": 133832,
+    "length": 3192,
+    "kind": "static-rdata-block",
+    "evidence": "static .rdata block; head c8000000b80b00007800000006000000; no 57BC/zlib/gzip/LZMA/LZ4; sfnt/image magic hits fail validation"
+   }
+  ],
+  "post_stream_kind": "alignment-padding:2;font-glyph-ranges:6;static-rdata-header:58;netvar-name-table:360;static-rdata-block:3192",
+  "recognized_assets": "none",
+  "magic_scan": "57BC=0; zlib=0/0; gzip=0; lzma=0/0; lz4=0; sfnt=4/0; jpeg=0/0; png=0; dds=0; vtf=0",
+  "tokens": 22316,
+  "literal_tokens": 9793,
+  "match_tokens": 12523,
+  "literal_bytes": 93054,
+  "match_bytes": 93174,
+  "max_match_distance": 122592,
+  "stored_adler32": "6f78226b",
+  "computed_adler32": "6f78226b",
+  "end_marker_offset": 133400,
+  "font": "font_blob_0_30f5e0.ttf",
+  "family": "Font Awesome 5 Free Solid",
+  "full_name": "Font Awesome 5 Free Solid",
+  "version": "329.474 (Font Awesome version: 5.7.2)",
+  "glyphs": 938,
+  "cmap_mappings": 935,
+  "tables": 13,
+  "units_per_em": 512,
+  "table_checksums_ok": true,
+  "checksum_adjustment_ok": true,
+  "md5": "22374fd5e844b7fe204a4f51329286dd"
+ },
+ {
+  "container": "font_blob_1_330d20.bin",
+  "container_size": 14576,
+  "container_md5": "c5e2e65669e5092a2733bccb506cf6da",
+  "stream_size": 14562,
+  "stream_md5": "723c8f76d70d6a0734f5e024a67f3fe4",
+  "post_stream_size": 14,
+  "uncompressed_size": 18556,
+  "trailing_bytes_after_stream": 14,
+  "region_bytes_sum": 14576,
+  "regions": [
+   {
+    "region": 0,
+    "offset": 0,
+    "length": 14562,
+    "kind": "stb-compress-stream",
+    "evidence": "magic 57BC0000; 05 FA end marker; Adler-32 3078caf1; output 18556 bytes"
+   },
+   {
+    "region": 1,
+    "offset": 14562,
+    "length": 14,
+    "kind": "alignment-padding",
+    "evidence": "zero fill to 16-byte boundary 0x334610"
+   }
+  ],
+  "post_stream_kind": "alignment-padding:14",
+  "recognized_assets": "none",
+  "magic_scan": "57BC=0; zlib=0/0; gzip=0; lzma=0/0; lz4=0; sfnt=0/0; jpeg=0/0; png=0; dds=0; vtf=0",
+  "tokens": 1967,
+  "literal_tokens": 914,
+  "match_tokens": 1053,
+  "literal_bytes": 11174,
+  "match_bytes": 7382,
+  "max_match_distance": 12745,
+  "stored_adler32": "3078caf1",
+  "computed_adler32": "3078caf1",
+  "end_marker_offset": 14556,
+  "font": "font_blob_1_330d20.ttf",
+  "family": ".",
+  "full_name": ".",
+  "version": "Version .",
+  "glyphs": 192,
+  "cmap_mappings": 190,
+  "tables": 14,
+  "units_per_em": 1000,
+  "table_checksums_ok": true,
+  "checksum_adjustment_ok": true,
+  "md5": "3ae09ad21ea42d6a94a691910aae2049"
+ },
+ {
+  "container": "font_blob_2_334610.bin",
+  "container_size": 1071088,
+  "container_md5": "eb5870b029257bd47aff969a02f5e29b",
+  "stream_size": 9583,
+  "stream_md5": "1b2125d82102841ab8c3afe5968fb848",
+  "post_stream_size": 1061505,
+  "uncompressed_size": 41208,
+  "trailing_bytes_after_stream": 1061505,
+  "region_bytes_sum": 1071088,
+  "regions": [
+   {
+    "region": 0,
+    "offset": 0,
+    "length": 9583,
+    "kind": "stb-compress-stream",
+    "evidence": "magic 57BC0000; 05 FA end marker; Adler-32 48f962f7; output 41208 bytes"
+   },
+   {
+    "region": 1,
+    "offset": 9583,
+    "length": 661121,
+    "kind": "pe-section:.rdata",
+    "evidence": "PE section .rdata raw 0x30B000..0x3D8200"
+   },
+   {
+    "region": 2,
+    "offset": 670704,
+    "length": 93696,
+    "kind": "pe-section:.data",
+    "evidence": "PE section .data raw 0x3D8200..0x3EF000"
+   },
+   {
+    "region": 3,
+    "offset": 764400,
+    "length": 129536,
+    "kind": "pe-section:.pdata",
+    "evidence": "PE section .pdata raw 0x3EF000..0x40EA00"
+   },
+   {
+    "region": 4,
+    "offset": 893936,
+    "length": 168960,
+    "kind": "pe-section:.rsrc",
+    "evidence": "PE section .rsrc raw 0x40EA00..0x437E00"
+   },
+   {
+    "region": 5,
+    "offset": 1062896,
+    "length": 8192,
+    "kind": "pe-section:.reloc",
+    "evidence": "PE section .reloc raw 0x437E00..0x439E00"
+   }
+  ],
+  "post_stream_kind": "pe-section:.rdata:661121;pe-section:.data:93696;pe-section:.pdata:129536;pe-section:.rsrc:168960;pe-section:.reloc:8192",
+  "recognized_assets": "Maven Pro (sfnt at +0xD7F51); Nexa Book (sfnt at +0xEF4B1)",
+  "magic_scan": "57BC=0; zlib=43/0; gzip=0; lzma=156/0; lz4=0; sfnt=1582/2; jpeg=8/0; png=0; dds=0; vtf=0",
+  "tokens": 2981,
+  "literal_tokens": 660,
+  "match_tokens": 2321,
+  "literal_bytes": 2638,
+  "match_bytes": 38570,
+  "max_match_distance": 34660,
+  "stored_adler32": "48f962f7",
+  "computed_adler32": "48f962f7",
+  "end_marker_offset": 9577,
+  "font": "font_blob_2_334610.ttf",
+  "family": "ProggyCleanTT",
+  "full_name": "ProggyCleanTT",
+  "version": "2004/04/15",
+  "glyphs": 257,
+  "cmap_mappings": 256,
+  "tables": 12,
+  "units_per_em": 2048,
+  "table_checksums_ok": true,
+  "checksum_adjustment_ok": true,
+  "md5": "361ffa4ca82d2a1841d178464353e955"
+ }
+]

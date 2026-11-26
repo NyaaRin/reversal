@@ -1,0 +1,13 @@
+{
+ "resources": 3,
+ "fonts": 5,
+ "decoded_fonts": 3,
+ "icons": 20,
+ "font_blobs": 3,
+ "font_blob_regions": 14,
+ "glyph_mappings": 2464,
+ "glyph_metrics": 2609,
+ "asset_paths": 78,
+ "rsrc_bytes": 168689,
+ "md5": "3d9ad8894d9d55e4212b7d800119aaa7"
+}

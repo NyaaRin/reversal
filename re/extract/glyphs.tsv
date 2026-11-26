@@ -1,0 +1,2465 @@
+font	file	codepoint	glyph_id	glyph_name	advance_width	left_side_bearing
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0000	1	NULL	0	0
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+000D	2	nonmarkingreturn	270	0
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0020	3	space	270	0
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0041	4	A	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C1	5	Aacute	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0102	6	Abreve	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EAE	7	uni1EAE	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB6	8	uni1EB6	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB0	9	uni1EB0	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB2	10	uni1EB2	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB4	11	uni1EB4	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01CD	12	uni01CD	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C2	13	Acircumflex	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA4	14	uni1EA4	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EAC	15	uni1EAC	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA6	16	uni1EA6	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA8	17	uni1EA8	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EAA	18	uni1EAA	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0200	19	uni0200	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C4	20	Adieresis	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0226	21	uni0226	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA0	22	uni1EA0	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C0	23	Agrave	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA2	24	uni1EA2	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0202	25	uni0202	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0100	26	Amacron	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0104	27	Aogonek	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C5	28	Aring	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01FA	29	Aringacute	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C3	30	Atilde	712	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C6	31	AE	1059	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01FC	32	AEacute	1059	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0042	33	B	689	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0043	34	C	633	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0106	35	Cacute	633	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+010C	36	Ccaron	633	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C7	37	Ccedilla	633	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0108	38	Ccircumflex	633	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+010A	39	Cdotaccent	633	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0044	40	D	730	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01C4	41	uni01C4	1374	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D0	42	Eth	730	5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+010E	43	Dcaron	730	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0110	44	Dcroat	730	5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01F2	45	uni01F2	1238	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01C5	46	uni01C5	1238	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0045	47	E	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C9	48	Eacute	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0114	49	Ebreve	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+011A	50	Ecaron	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E1C	51	uni1E1C	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00CA	52	Ecircumflex	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EBE	53	uni1EBE	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC6	54	uni1EC6	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC0	55	uni1EC0	598	-33
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC2	56	uni1EC2	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC4	57	uni1EC4	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0204	58	uni0204	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00CB	59	Edieresis	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0116	60	Edotaccent	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB8	61	uni1EB8	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00C8	62	Egrave	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EBA	63	uni1EBA	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0206	64	uni0206	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0112	65	Emacron	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E16	66	uni1E16	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E14	67	uni1E14	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0118	68	Eogonek	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EBC	69	uni1EBC	598	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0046	70	F	583	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E1E	71	uni1E1E	580	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0047	72	G	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01F4	73	uni01F4	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+011E	74	Gbreve	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01E6	75	Gcaron	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+011C	76	Gcircumflex	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0122	77	Gcommaaccent	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0120	78	Gdotaccent	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E20	79	uni1E20	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0048	80	H	728	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0126	81	Hbar	728	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E2A	82	uni1E2A	728	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0124	83	Hcircumflex	728	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0049	84	I	331	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0132	85	IJ	820	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00CD	86	Iacute	331	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+012C	87	Ibreve	331	16
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01CF	88	uni01CF	331	14
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00CE	89	Icircumflex	331	9
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0208	90	uni0208	331	-60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00CF	91	Idieresis	331	-6
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E2E	92	uni1E2E	331	-6
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0130	93	Idotaccent	331	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ECA	94	uni1ECA	331	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00CC	95	Igrave	331	27
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC8	96	uni1EC8	331	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+020A	97	uni020A	331	16
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+012A	98	Imacron	331	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+012E	99	Iogonek	331	19
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0128	100	Itilde	331	-21
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+004A	101	J	489	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0134	102	Jcircumflex	489	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+004B	103	K	708	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0136	104	Kcommaaccent	708	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+004C	105	L	568	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01C7	106	uni01C7	1057	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0139	107	Lacute	568	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+013D	108	Lcaron	568	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+013B	109	Lcommaaccent	568	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+013F	110	Ldot	568	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E36	111	uni1E36	568	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01C8	112	uni01C8	887	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E3A	113	uni1E3A	568	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0141	114	Lslash	576	4
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+004D	115	M	872	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E42	116	uni1E42	872	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+004E	117	N	725	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01CA	118	uni01CA	1214	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0143	119	Nacute	725	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0147	120	Ncaron	725	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0145	121	Ncommaaccent	725	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E46	122	uni1E46	725	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+014A	123	Eng	791	87
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+019D	124	uni019D	735	5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01CB	125	uni01CB	1044	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E48	126	uni1E48	725	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D1	127	Ntilde	725	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+004F	128	O	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D3	129	Oacute	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+014E	130	Obreve	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01D1	131	uni01D1	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D4	132	Ocircumflex	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED0	133	uni1ED0	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED8	134	uni1ED8	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED2	135	uni1ED2	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED4	136	uni1ED4	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED6	137	uni1ED6	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+020C	138	uni020C	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D6	139	Odieresis	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+022A	140	uni022A	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0230	141	uni0230	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ECC	142	uni1ECC	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D2	143	Ograve	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ECE	144	uni1ECE	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01A0	145	Ohorn	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EDA	146	uni1EDA	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE2	147	uni1EE2	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EDC	148	uni1EDC	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EDE	149	uni1EDE	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE0	150	uni1EE0	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0150	151	Ohungarumlaut	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+020E	152	uni020E	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+014C	153	Omacron	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E52	154	uni1E52	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E50	155	uni1E50	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01EA	156	uni01EA	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D8	157	Oslash	744	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01FE	158	Oslashacute	744	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D5	159	Otilde	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E4C	160	uni1E4C	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E4E	161	uni1E4E	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+022C	162	uni022C	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0152	163	OE	1038	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0050	164	P	686	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00DE	165	Thorn	653	86
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0051	166	Q	744	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0052	167	R	743	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0154	168	Racute	743	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0158	169	Rcaron	743	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0156	170	Rcommaaccent	743	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0210	171	uni0210	743	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0212	172	uni0212	743	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E5E	173	uni1E5E	743	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0053	174	S	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+015A	175	Sacute	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E64	176	uni1E64	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0160	177	Scaron	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E66	178	uni1E66	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+015E	179	Scedilla	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+015C	180	Scircumflex	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0218	181	Scommaaccent	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E60	182	uni1E60	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E62	183	uni1E62	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E68	184	uni1E68	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E9E	185	uni1E9E	731	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+018F	186	uni018F	748	34
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0054	187	T	588	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0166	188	Tbar	588	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0164	189	Tcaron	582	12
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0162	190	uni0162	588	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E6E	191	uni1E6E	588	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0055	192	U	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00DA	193	Uacute	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+016C	194	Ubreve	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01D3	195	uni01D3	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00DB	196	Ucircumflex	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0214	197	uni0214	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00DC	198	Udieresis	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE4	199	uni1EE4	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D9	200	Ugrave	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE6	201	uni1EE6	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01AF	202	Uhorn	845	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE8	203	uni1EE8	845	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF0	204	uni1EF0	845	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EEA	205	uni1EEA	845	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EEC	206	uni1EEC	845	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EEE	207	uni1EEE	845	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0170	208	Uhungarumlaut	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0216	209	uni0216	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+016A	210	Umacron	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E7A	211	uni1E7A	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0172	212	Uogonek	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+016E	213	Uring	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0168	214	Utilde	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E78	215	uni1E78	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0056	216	V	746	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0057	217	W	1024	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E82	218	Wacute	1024	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0174	219	Wcircumflex	1024	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E84	220	Wdieresis	1024	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E80	221	Wgrave	1024	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0058	222	X	718	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0059	223	Y	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00DD	224	Yacute	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0176	225	Ycircumflex	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0178	226	Ydieresis	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E8E	227	uni1E8E	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF4	228	uni1EF4	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF2	229	Ygrave	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF6	230	uni1EF6	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0232	231	uni0232	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF8	232	uni1EF8	732	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+005A	233	Z	644	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0179	234	Zacute	644	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+017D	235	Zcaron	644	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+017B	236	Zdotaccent	644	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0061	237	a	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E1	238	aacute	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0103	239	abreve	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EAF	240	uni1EAF	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB7	241	uni1EB7	551	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB1	242	uni1EB1	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB3	243	uni1EB3	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB5	244	uni1EB5	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01CE	245	uni01CE	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E2	246	acircumflex	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA5	247	uni1EA5	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EAD	248	uni1EAD	551	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA7	249	uni1EA7	579	-54
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA9	250	uni1EA9	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EAB	251	uni1EAB	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0201	252	uni0201	579	27
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E4	253	adieresis	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA1	254	uni1EA1	551	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E0	255	agrave	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EA3	256	uni1EA3	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0203	257	uni0203	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0101	258	amacron	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0105	259	aogonek	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E5	260	aring	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01FB	261	aringacute	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E3	262	atilde	579	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E6	263	ae	878	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01FD	264	aeacute	878	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0062	265	b	615	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0063	266	c	506	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0107	267	cacute	506	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+010D	268	ccaron	506	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E7	269	ccedilla	506	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E09	270	uni1E09	506	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0109	271	ccircumflex	506	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+010B	272	cdotaccent	506	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0064	273	d	626	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F0	274	eth	589	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+010F	275	dcaron	802	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0111	276	dcroat	626	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E0F	277	uni1E0F	626	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01C6	278	uni01C6	1134	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0065	279	e	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E9	280	eacute	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0115	281	ebreve	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+011B	282	ecaron	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E1D	283	uni1E1D	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00EA	284	ecircumflex	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EBF	285	uni1EBF	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC7	286	uni1EC7	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC1	287	uni1EC1	568	-44
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC3	288	uni1EC3	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC5	289	uni1EC5	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0205	290	uni0205	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00EB	291	edieresis	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0117	292	edotaccent	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EB9	293	uni1EB9	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00E8	294	egrave	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EBB	295	uni1EBB	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0207	296	uni0207	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0113	297	emacron	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E17	298	uni1E17	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E15	299	uni1E15	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0119	300	eogonek	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EBD	301	uni1EBD	568	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0259	302	uni0259	568	29
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0066	303	f	402	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0067	304	g	603	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+011F	305	gbreve	603	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01E7	306	gcaron	603	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+011D	307	gcircumflex	603	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0123	308	gcommaaccent	603	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0121	309	gdotaccent	603	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E21	310	uni1E21	603	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0068	311	h	627	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0127	312	hbar	627	0
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E2B	313	uni1E2B	627	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0125	314	hcircumflex	627	-17
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0069	315	i	306	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0131	316	dotlessi	304	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00ED	317	iacute	359	96
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+012D	318	ibreve	304	-5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01D0	319	uni01D0	304	-7
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00EE	320	icircumflex	359	38
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0209	321	uni0209	304	-102
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00EF	322	idieresis	359	37
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E2F	323	uni1E2F	304	-12
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ECB	325	uni1ECB	359	94
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00EC	326	igrave	359	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EC9	327	uni1EC9	359	96
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+020B	328	uni020B	304	-5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0133	329	ij	625	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+012B	330	imacron	359	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+012F	331	iogonek	306	5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0129	332	itilde	304	-42
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+006A	333	j	319	5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0237	334	uni0237	330	3
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0135	335	jcircumflex	324	3
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+006B	336	k	621	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0137	337	kcommaaccent	644	87
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0138	338	kgreenlandic	644	87
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+006C	339	l	300	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+013A	340	lacute	300	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+013E	341	lcaron	417	101
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+013C	342	lcommaaccent	300	53
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0140	343	ldot	478	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E37	344	uni1E37	300	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01C9	345	uni01C9	619	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E3B	346	uni1E3B	300	2
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0142	347	lslash	431	18
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+006D	348	m	930	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E43	349	uni1E43	930	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+006E	350	n	626	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0144	351	nacute	626	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0149	352	napostrophe	647	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0148	353	ncaron	626	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0146	354	ncommaaccent	626	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E45	355	uni1E45	626	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E47	356	uni1E47	626	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+014B	357	eng	639	56
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0272	358	uni0272	626	-10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01CC	359	uni01CC	945	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E49	360	uni1E49	626	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F1	361	ntilde	626	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+006F	362	o	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F3	363	oacute	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+014F	364	obreve	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01D2	365	uni01D2	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F4	366	ocircumflex	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED1	367	uni1ED1	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED9	368	uni1ED9	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED3	369	uni1ED3	599	-35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED5	370	uni1ED5	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ED7	371	uni1ED7	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+020D	372	uni020D	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F6	373	odieresis	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+022B	374	uni022B	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0231	375	uni0231	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ECD	376	uni1ECD	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F2	377	ograve	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1ECF	378	uni1ECF	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01A1	379	ohorn	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EDB	380	uni1EDB	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE3	381	uni1EE3	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EDD	382	uni1EDD	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EDF	383	uni1EDF	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE1	384	uni1EE1	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0151	385	ohungarumlaut	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+020F	386	uni020F	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+014D	387	omacron	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E53	388	uni1E53	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E51	389	uni1E51	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01EB	390	uni01EB	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F8	391	oslash	613	11
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01FF	392	oslashacute	613	11
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F5	393	otilde	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E4D	394	uni1E4D	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E4F	395	uni1E4F	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+022D	396	uni022D	599	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0153	397	oe	929	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0070	398	p	614	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00FE	399	thorn	606	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0071	400	q	615	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0072	401	r	450	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0155	402	racute	450	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0159	403	rcaron	450	49
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0157	404	rcommaaccent	450	41
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0211	405	uni0211	450	-46
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0213	406	uni0213	450	51
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E5F	407	uni1E5F	450	-10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0073	408	s	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+015B	409	sacute	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E65	410	uni1E65	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0161	411	scaron	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E67	412	uni1E67	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+015F	413	scedilla	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+015D	414	scircumflex	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0219	415	scommaaccent	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E61	416	uni1E61	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E63	417	uni1E63	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E69	418	uni1E69	493	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00DF	419	germandbls	656	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0074	420	t	434	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0167	421	tbar	410	24
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0165	422	tcaron	434	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0163	423	uni0163	434	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E97	424	uni1E97	434	16
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E6D	425	uni1E6D	434	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E6F	426	uni1E6F	434	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0075	427	u	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00FA	428	uacute	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+016D	429	ubreve	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01D4	430	uni01D4	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00FB	431	ucircumflex	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0215	432	uni0215	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00FC	433	udieresis	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE5	434	uni1EE5	620	84
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F9	435	ugrave	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE7	436	uni1EE7	620	84
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+01B0	437	uhorn	685	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EE9	438	uni1EE9	685	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF1	439	uni1EF1	685	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EEB	440	uni1EEB	685	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EED	441	uni1EED	685	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EEF	442	uni1EEF	685	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0171	443	uhungarumlaut	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0217	444	uni0217	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+016B	445	umacron	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E7B	446	uni1E7B	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+021B	447	uni021B	410	24
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0173	448	uogonek	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+016F	449	uring	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0169	450	utilde	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E79	451	uni1E79	611	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0076	452	v	644	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0077	453	w	840	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E83	454	wacute	840	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0175	455	wcircumflex	840	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E85	456	wdieresis	840	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E81	457	wgrave	840	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0078	458	x	620	15
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0079	459	y	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00FD	460	yacute	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0177	461	ycircumflex	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00FF	462	ydieresis	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1E8F	463	uni1E8F	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF5	464	uni1EF5	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF3	465	ygrave	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF7	466	uni1EF7	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0233	467	uni0233	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+1EF9	468	uni1EF9	616	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+007A	469	z	508	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+017A	470	zacute	508	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+017E	471	zcaron	508	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+017C	472	zdotaccent	508	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+FB01	473	fi	708	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+FB02	474	fl	702	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00AA	475	ordfeminine	407	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00BA	476	ordmasculine	424	74
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+03C0	477	pi	634	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0030	478	zero	675	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0031	479	one	478	40
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0032	480	two	620	67
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0033	481	three	600	68
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0034	482	four	618	39
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0035	483	five	612	73
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0036	484	six	643	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0037	485	seven	599	66
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0038	486	eight	652	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0039	487	nine	646	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2080	488	zero.inferior	380	15
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2081	489	one.inferior	250	17
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2082	490	two.inferior	339	43
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2083	491	three.inferior	335	40
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2084	492	four.inferior	343	24
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2085	493	five.inferior	326	46
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2086	494	six.inferior	347	12
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2087	495	seven.inferior	322	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2088	496	eight.inferior	343	6
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2089	497	nine.inferior	349	12
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2070	498	zero.superior	380	15
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B9	499	one.superior	250	17
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B2	500	two.superior	339	43
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B3	501	three.superior	335	40
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2074	502	four.superior	343	24
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2075	503	five.superior	326	46
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2076	504	six.superior	347	12
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2077	505	seven.superior	322	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2078	506	eight.superior	343	6
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2079	507	nine.superior	349	12
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2044	529	fraction	391	-70
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00BD	530	onehalf	759	17
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2153	531	uni2153	770	17
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00BC	532	onequarter	733	17
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00BE	533	threequarters	799	40
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+215B	534	oneeighth	801	17
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+215C	535	threeeighths	871	40
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+215D	536	fiveeighths	891	46
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+215E	537	seveneighths	844	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+002A	538	asterisk	413	84
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+005C	539	backslash	430	-37
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B7	540	periodcentered	362	105
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2022	541	bullet	530	84
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+003A	542	colon	424	137
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+002C	543	comma	367	74
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2026	544	ellipsis	903	107
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0021	545	exclam	431	136
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A1	546	exclamdown	431	132
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0023	547	numbersign	629	74
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+002E	548	period	264	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+003F	549	question	525	80
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00BF	550	questiondown	525	80
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0022	551	quotedbl	439	81
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0027	552	quotesingle	285	81
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+003B	553	semicolon	319	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+002F	554	slash	463	-14
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+005F	555	underscore	546	0
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+007B	558	braceleft	400	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+007D	559	braceright	393	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+005B	560	bracketleft	402	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+005D	561	bracketright	415	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0028	562	parenleft	358	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0029	563	parenright	358	15
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2014	564	emdash	891	79
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2013	565	endash	560	69
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+002D	566	hyphen	464	79
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00AD	567	uni00AD	600	79
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00AB	568	guillemotleft	658	34
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00BB	569	guillemotright	671	52
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2039	570	guilsinglleft	400	31
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+203A	571	guilsinglright	412	39
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+201E	572	quotedblbase	516	72
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+201C	573	quotedblleft	479	48
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+201D	574	quotedblright	479	48
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2018	575	quoteleft	301	47
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2019	576	quoteright	301	47
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+201A	577	quotesinglbase	341	72
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20AC	578	Euro	716	48
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20B5	579	uni20B5	633	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A2	580	cent	506	30
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20A1	581	colonmonetary	703	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A4	582	currency	492	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0024	583	dollar	586	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20AB	584	dong	447	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0192	585	florin	360	4
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20A3	586	franc	583	5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20B2	587	uni20B2	714	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20AD	588	uni20AD	708	20
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20A4	589	lira	600	49
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20BA	590	uni20BA	568	18
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20BC	591	uni20BC	740	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20A6	592	uni20A6	725	5
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20A7	593	peseta	703	6
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20B1	594	uni20B1	686	6
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20BD	595	uni20BD	686	15
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20B9	596	uni20B9	517	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A3	597	sterling	563	49
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+20A9	598	uni20A9	999	25
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A5	599	yen	729	18
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2219	600	uni2219	362	105
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2215	601	uni2215	391	-70
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+002B	602	plus	551	93
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2212	603	minus	583	95
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00D7	604	multiply	534	72
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00F7	605	divide	628	92
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+003D	606	equal	638	122
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2260	607	notequal	611	106
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+003E	608	greater	660	116
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+003C	609	less	668	120
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2265	610	greaterequal	580	107
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2264	611	lessequal	580	107
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B1	612	plusminus	585	115
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2248	613	approxequal	636	97
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+007E	614	asciitilde	523	98
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00AC	615	logicalnot	635	97
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+221E	616	infinity	735	58
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+222B	617	integral	370	10
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2206	618	uni2206	729	27
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+220F	619	product	728	38
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2211	620	summation	582	77
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+221A	621	radical	779	94
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B5	622	uni00B5	647	99
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2202	623	partialdiff	620	65
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0025	624	percent	848	15
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2030	625	perthousand	1238	15
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+25CA	626	lozenge	636	64
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0040	627	at	913	81
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0026	628	ampersand	704	35
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B6	629	paragraph	529	39
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A7	630	section	609	62
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A9	631	copyright	778	48
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00AE	632	registered	778	49
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+E194	633	uniE194	778	49
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2122	634	trademark	772	49
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B0	635	degree	387	82
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+007C	636	bar	491	185
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A6	637	brokenbar	491	185
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2020	638	dagger	474	82
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2021	639	daggerdbl	504	68
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2116	640	uni2116	1132	87
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+005E	641	asciicircum	591	120
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+2120	642	uni2120	735	56
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0308	643	uni0308	0	-389
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0307	644	uni0307	0	-210
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0300	645	gravecomb	0	-256
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0301	646	acutecomb	0	-210
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+030B	647	uni030B	0	-371
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0302	648	uni0302	0	-370
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+030C	649	uni030C	0	-370
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0306	650	uni0306	0	-392
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+030A	651	uni030A	0	-333
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0303	652	tildecomb	0	-454
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0304	653	uni0304	0	-353
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0309	654	hookabovecomb	0	-192
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+030F	655	uni030F	0	-474
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0311	656	uni0311	0	-392
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+031B	657	uni031B	0	-285
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0323	658	dotbelowcmb	0	-170
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0324	659	uni0324	0	-389
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+F6C3	660	uniF6C3	0	-219
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0326	661	uni0326	0	-219
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0327	662	uni0327	0	-244
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0328	663	uni0328	0	-327
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+032E	664	uni032E	0	-392
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0331	665	uni0331	0	-353
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0335	666	uni0335	0	-358
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02C9	690	uni02C9	394	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B4	691	acute	273	63
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02D8	692	breve	456	64
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02C7	693	caron	427	57
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00B8	694	cedilla	286	42
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02C6	695	circumflex	427	57
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A8	696	dieresis	449	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02D9	697	dotaccent	240	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+0060	698	grave	279	23
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02DD	699	hungarumlaut	431	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00AF	700	macron	394	50
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02DB	701	ogonek	368	41
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02DA	702	ring	409	76
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+02DC	703	tilde	517	63
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+00A0	715	uni00A0	270	0
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+F6C9	716	uniF6C9	275	59
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+F6CA	717	uniF6CA	444	78
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+F6CB	718	uniF6CB	418	68
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+F6CE	719	uniF6CE	267	45
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+F6CF	720	uniF6CF	427	60
+Maven Pro	assets/fonts/MavenPro-Black.ttf	U+F6D0	721	uniF6D0	403	86
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0020	3	space	261	0
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0021	4	exclam	253	79
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0022	5	quotedbl	361	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0023	6	numbersign	678	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0024	7	dollar	655	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0025	8	percent	753	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0026	9	ampersand	695	61
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0027	10	quotesingle	211	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0028	11	parenleft	332	40
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0029	12	parenright	330	25
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+002A	13	asterisk	365	59
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+002B	14	plus	500	49
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+002C	15	comma	233	69
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+002D	16	hyphen	497	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+002E	17	period	231	68
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+002F	18	slash	484	25
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0030	19	zero	683	65
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0031	20	one	406	51
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0032	21	two	672	65
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0033	22	three	663	56
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0034	23	four	646	23
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0035	24	five	659	63
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0036	25	six	689	77
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0037	26	seven	562	32
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0038	27	eight	703	59
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0039	28	nine	691	56
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+003A	29	colon	237	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+003B	30	semicolon	237	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+003C	31	less	366	48
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+003D	32	equal	557	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+003E	33	greater	366	57
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+003F	34	question	600	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0040	35	at	896	53
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0041	36	A	740	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0042	37	B	704	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0043	38	C	709	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0044	39	D	748	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0045	40	E	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0046	41	F	627	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0047	42	G	747	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0048	43	H	758	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0049	44	I	264	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+004A	45	J	684	26
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+004B	46	K	606	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+004C	47	L	573	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+004D	48	M	877	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+004E	49	N	757	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+004F	50	O	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0050	51	P	679	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0051	52	Q	815	51
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0052	53	R	708	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0053	54	S	660	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0054	55	T	596	16
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0055	56	U	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0056	57	V	722	25
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0057	58	W	1080	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0058	59	X	622	12
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0059	60	Y	663	27
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+005A	61	Z	596	22
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+005B	62	bracketleft	319	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+005C	63	backslash	485	26
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+005D	64	bracketright	319	36
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+005E	65	asciicircum	593	50
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+005F	66	underscore	609	70
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0060	67	grave	234	23
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0061	68	a	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0062	69	b	635	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0063	70	c	516	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0064	71	d	635	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0065	72	e	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0066	73	f	372	34
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0067	74	g	611	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0068	75	h	594	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0069	76	i	223	65
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+006A	77	j	223	-86
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+006B	78	k	482	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+006C	79	l	237	85
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+006D	80	m	929	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+006E	81	n	608	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+006F	82	o	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0070	83	p	635	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0071	84	q	635	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0072	85	r	418	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0073	86	s	499	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0074	87	t	392	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0075	88	u	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0076	89	v	554	32
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0077	90	w	833	36
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0078	91	x	490	17
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0079	92	y	544	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+007A	93	z	466	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+007B	94	braceleft	318	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+007C	95	bar	246	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+007D	96	braceright	318	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+007E	97	asciitilde	630	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A1	98	exclamdown	235	66
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A2	99	cent	536	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A3	100	sterling	649	59
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A4	101	currency	603	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A5	102	yen	673	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A6	103	brokenbar	243	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A7	104	section	561	57
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A8	105	dieresis	455	63
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00A9	106	copyright	834	55
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00AA	107	ordfeminine	496	68
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00AB	108	guillemotleft	435	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00AC	109	logicalnot	511	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00AD	110	uni00AD	0	0
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00AE	111	registered	832	55
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00AF	112	macron	407	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B0	113	degree	324	53
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B1	114	plusminus	529	74
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B2	115	twosuperior	362	43
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B3	116	threesuperior	362	38
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B4	117	acute	224	28
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B5	118	mu	603	86
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+03BC	118	mu	603	86
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B6	119	paragraph	797	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B7	120	periodcentered	239	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B8	121	cedilla	296	25
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00B9	122	onesuperior	255	36
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00BA	123	ordmasculine	475	70
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00BB	124	guillemotright	433	51
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00BC	125	onequarter	733	49
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00BD	126	onehalf	787	49
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00BE	127	threequarters	771	43
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00BF	128	questiondown	582	34
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C0	129	Agrave	740	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C1	130	Aacute	740	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C2	131	Acircumflex	740	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C3	132	Atilde	740	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C4	133	Adieresis	740	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C5	134	Aring	750	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C6	135	AE	914	-14
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C7	136	Ccedilla	710	53
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C8	137	Egrave	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00C9	138	Eacute	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00CA	139	Ecircumflex	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00CB	140	Edieresis	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00CC	141	Igrave	264	28
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00CD	142	Iacute	264	95
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00CE	143	Icircumflex	264	-25
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00CF	144	Idieresis	264	13
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D0	145	Eth	754	29
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D1	146	Ntilde	757	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D2	147	Ograve	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D3	148	Oacute	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D4	149	Ocircumflex	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D5	150	Otilde	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D6	151	Odieresis	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D7	152	multiply	457	67
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D8	153	Oslash	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00D9	154	Ugrave	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00DA	155	Uacute	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00DB	156	Ucircumflex	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00DC	157	Udieresis	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00DD	158	Yacute	663	27
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00DE	159	Thorn	682	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00DF	160	germandbls	605	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E0	161	agrave	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E1	162	aacute	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E2	163	acircumflex	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E3	164	atilde	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E4	165	adieresis	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E5	166	aring	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E6	167	ae	1022	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E7	168	ccedilla	519	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E8	169	egrave	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00E9	170	eacute	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00EA	171	ecircumflex	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00EB	172	edieresis	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00EC	173	igrave	225	16
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00ED	174	iacute	225	73
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00EE	175	icircumflex	225	-8
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00EF	176	idieresis	225	-3
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F0	177	eth	605	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F1	178	ntilde	608	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F2	179	ograve	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F3	180	oacute	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F4	181	ocircumflex	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F5	182	otilde	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F6	183	odieresis	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F7	184	divide	559	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F8	185	oslash	597	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00F9	186	ugrave	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00FA	187	uacute	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00FB	188	ucircumflex	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00FC	189	udieresis	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00FD	190	yacute	544	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00FE	191	thorn	636	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+00FF	192	ydieresis	544	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0100	193	Amacron	740	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0101	194	amacron	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0102	195	Abreve	740	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0103	196	abreve	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0104	197	Aogonek	745	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0105	198	aogonek	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0106	199	Cacute	709	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0107	200	cacute	516	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0108	201	Ccircumflex	709	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0109	202	ccircumflex	516	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+010A	203	Cdotaccent	709	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+010B	204	cdotaccent	516	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+010C	205	Ccaron	709	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+010D	206	ccaron	516	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+010E	207	Dcaron	748	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+010F	208	dcaron	635	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0110	209	Dcroat	754	29
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0111	210	dcroat	635	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0112	211	Emacron	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0113	212	emacron	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0114	213	Ebreve	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0115	214	ebreve	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0116	215	Edotaccent	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0117	216	edotaccent	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0118	217	Eogonek	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0119	218	eogonek	587	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+011A	219	Ecaron	655	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+011B	220	ecaron	586	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+011C	221	Gcircumflex	747	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+011D	222	gcircumflex	611	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+011E	223	Gbreve	747	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+011F	224	gbreve	611	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0120	225	Gdotaccent	747	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0121	226	gdotaccent	611	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0122	227	Gcommaaccent	747	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0123	228	gcommaaccent	611	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0124	229	Hcircumflex	758	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0125	230	hcircumflex	594	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0126	231	Hbar	773	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0127	232	hbar	594	14
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0128	233	Itilde	264	0
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0129	234	itilde	225	3
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+012A	235	Imacron	264	10
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+012B	236	imacron	225	11
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+012C	237	Ibreve	264	11
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+012D	238	ibreve	225	-3
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+012E	239	Iogonek	269	26
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+012F	240	iogonek	226	14
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0130	241	Idotaccent	264	85
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0131	242	dotlessi	225	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0132	243	IJ	948	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0133	244	ij	446	65
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0134	245	Jcircumflex	684	26
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0135	246	jcircumflex	223	-86
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0136	247	Kcommaaccent	606	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0137	248	kcommaaccent	482	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0138	249	kgreenlandic	483	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0139	250	Lacute	573	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+013A	251	lacute	237	80
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+013B	252	Lcommaaccent	573	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+013C	253	lcommaaccent	237	73
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+013D	254	Lcaron	574	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+013E	255	lcaron	230	85
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+013F	256	Ldot	573	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0140	257	ldot	327	85
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0141	258	Lslash	577	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0142	259	lslash	267	29
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0143	260	Nacute	757	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0144	261	nacute	608	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0145	262	Ncommaaccent	757	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0146	263	ncommaaccent	608	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0147	264	Ncaron	757	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0148	265	ncaron	608	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0149	266	napostrophe	608	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+014A	267	Eng	757	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+014B	268	eng	608	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+014C	269	Omacron	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+014D	270	omacron	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+014E	271	Obreve	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+014F	272	obreve	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0150	273	Ohungarumlaut	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0151	274	ohungarumlaut	600	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0152	275	OE	972	53
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0153	276	oe	1009	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0154	277	Racute	708	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0155	278	racute	418	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0156	279	Rcommaaccent	708	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0157	280	rcommaaccent	418	68
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0158	281	Rcaron	708	97
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0159	282	rcaron	418	78
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+015A	283	Sacute	660	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+015B	284	sacute	499	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+015C	285	Scircumflex	660	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+015D	286	scircumflex	499	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+015E	287	Scedilla	660	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+015F	288	scedilla	503	38
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0160	289	Scaron	660	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0161	290	scaron	499	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0162	291	Tcommaaccent	598	17
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0163	292	tcommaaccent	392	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0164	293	Tcaron	596	16
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0165	294	tcaron	423	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0166	295	Tbar	608	22
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0167	296	tbar	392	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0168	297	Utilde	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0169	298	utilde	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+016A	299	Umacron	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+016B	300	umacron	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+016C	301	Ubreve	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+016D	302	ubreve	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+016E	303	Uring	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+016F	304	uring	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0170	305	Uhungarumlaut	734	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0171	306	uhungarumlaut	606	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0172	307	Uogonek	733	89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0173	308	uogonek	604	69
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0174	309	Wcircumflex	1080	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0175	310	wcircumflex	833	36
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0176	311	Ycircumflex	663	27
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0177	312	ycircumflex	544	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0178	313	Ydieresis	663	27
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0179	314	Zacute	596	22
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+017A	315	zacute	466	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+017B	316	Zdotaccent	596	22
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+017C	317	zdotaccent	466	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+017D	318	Zcaron	596	22
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+017E	319	zcaron	466	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+017F	320	longs	297	34
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0192	321	florin	454	-7
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+01FA	322	Aringacute	750	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+01FB	323	aringacute	634	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+01FC	324	AEacute	914	-14
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+01FD	325	aeacute	1022	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+01FE	326	Oslashacute	813	52
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+01FF	327	oslashacute	597	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0218	328	Scommaaccent	660	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0219	329	scommaaccent	499	37
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+021A	330	uni021A	596	16
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+021B	331	uni021B	392	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0237	332	dotlessj	223	-89
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+02C6	333	circumflex	421	32
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+02C7	334	caron	404	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+02D8	335	breve	333	28
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+02D9	336	dotaccent	206	45
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+02DA	337	ring	397	59
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+02DB	338	ogonek	407	60
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+02DC	339	tilde	336	30
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+02DD	340	hungarumlaut	352	26
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+0394	341	_375	693	-12
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+03A9	342	_376	801	30
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+03C0	343	pi	679	27
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+1E80	344	Wgrave	1080	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+1E81	345	wgrave	833	36
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+1E82	346	Wacute	1080	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+1E83	347	wacute	833	36
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+1E84	348	Wdieresis	1080	31
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+1E85	349	wdieresis	833	36
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+1EF2	350	Ygrave	663	27
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+1EF3	351	ygrave	544	35
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2013	352	endash	596	72
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2014	353	emdash	701	72
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2018	354	quoteleft	223	55
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2019	355	quoteright	222	60
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+201A	356	quotesinglbase	238	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+201C	357	quotedblleft	364	56
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+201D	358	quotedblright	356	58
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+201E	359	quotedblbase	367	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2020	360	dagger	560	34
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2021	361	daggerdbl	608	58
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2022	362	bullet	390	90
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2026	363	ellipsis	603	68
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2030	364	perthousand	1121	40
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2039	365	guilsinglleft	307	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+203A	366	guilsinglright	308	51
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2044	367	fraction	149	-146
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2070	368	zerosuperior	385	43
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2074	369	foursuperior	360	26
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2075	370	fivesuperior	360	40
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2076	371	sixsuperior	375	49
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2077	372	sevensuperior	315	30
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2078	373	eightsuperior	382	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2079	374	ninesuperior	375	39
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2080	375	zeroinferior	385	43
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2081	376	oneinferior	250	38
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2082	377	twoinferior	361	43
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2083	378	threeinferior	362	38
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2084	379	fourinferior	356	26
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2085	380	fiveinferior	360	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2086	381	sixinferior	374	48
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2087	382	seveninferior	315	30
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2088	383	eightinferior	382	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2089	384	nineinferior	373	38
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+20AC	385	Euro	610	42
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2113	386	afii61289	402	40
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2117	387	uni2117	832	55
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2122	388	trademark	791	62
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2126	389	Omega	821	55
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+212E	390	estimated	646	63
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2153	391	onethird	749	51
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2154	392	twothirds	828	51
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+215B	393	oneeighth	775	51
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+215C	394	threeeighths	834	44
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+215D	395	fiveeighths	837	46
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+215E	396	seveneighths	755	41
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2190	397	arrowleft	632	39
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2191	398	arrowup	499	32
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2192	399	arrowright	632	62
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2193	400	arrowdown	500	33
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2196	401	uni2196	503	66
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2197	402	uni2197	503	39
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2198	403	uni2198	548	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2199	404	uni2199	548	103
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2202	405	partialdiff	605	47
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2206	406	Delta	762	27
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+220F	407	product	685	94
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2211	408	summation	580	36
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2212	409	minus	529	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2215	410	uni2215	433	-5
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2219	411	uni2219	240	71
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+221A	412	radical	615	21
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+221E	413	infinity	793	58
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+222B	414	integral	456	6
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2248	415	approxequal	566	76
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2260	416	notequal	553	72
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2264	417	lessequal	452	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+2265	418	greaterequal	451	75
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+25CA	419	lozenge	564	38
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+FB01	420	fi	573	34
+Nexa Book	assets/fonts/Nexa-Book.ttf	U+FB02	421	fl	573	34
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F000	3	glass-martini	512	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F001	4	music	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F002	5	search	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F004	6	heart	512	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F005	7	star	576	15
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F007	8	user	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F008	9	film	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F009	10	th-large	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F00A	11	th	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F00B	12	th-list	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F00C	13	check	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F00D	14	times	352	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F00E	15	search-plus	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F010	16	search-minus	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F011	17	power-off	511	7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F012	18	signal	640	24
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F013	19	cog	512	16
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F015	20	home	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F017	21	clock	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F018	22	road	576	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F019	23	download	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F01C	24	inbox	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F01E	25	redo	520	7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F021	26	sync	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F022	27	list-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F023	28	lock	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F024	29	flag	520	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F025	30	headphones	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F026	31	volume-off	258	1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F027	32	volume-down	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F028	33	volume-up	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F029	34	qrcode	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F02A	35	barcode	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F02B	36	tag	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F02C	37	tags	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F02D	38	book	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F02E	39	bookmark	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F02F	40	print	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F030	41	camera	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F031	42	font	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F032	43	bold	384	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F033	44	italic	320	22
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F034	45	text-height	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F035	46	text-width	448	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F036	47	align-left	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F037	48	align-center	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F038	49	align-right	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F039	50	align-justify	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F03A	51	list	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F03B	52	outdent	448	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F03C	53	indent	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F03D	54	video	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F03E	55	image	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F041	56	map-marker	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F042	57	adjust	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F043	58	tint	352	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F044	59	edit	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F048	60	step-backward	448	64
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F049	61	fast-backward	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F04A	62	backward	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F04B	63	play	447	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F04C	64	pause	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F04D	65	stop	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F04E	66	forward	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F050	67	fast-forward	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F051	68	step-forward	448	64
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F052	69	eject	448	-8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F053	70	chevron-left	320	27
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F054	71	chevron-right	319	27
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F055	72	plus-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F056	73	minus-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F057	74	times-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F058	75	check-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F059	76	question-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F05A	77	info-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F05B	78	crosshairs	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F05E	79	ban	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F060	80	arrow-left	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F061	81	arrow-right	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F062	82	arrow-up	447	5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F063	83	arrow-down	448	5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F064	84	share	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F065	85	expand	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F066	86	compress	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F067	87	plus	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F068	88	minus	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F069	89	asterisk	512	19
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F06A	90	exclamation-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F06B	91	gift	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F06C	92	leaf	576	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F06D	93	fire	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F06E	94	eye	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F070	95	eye-slash	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F071	96	exclamation-triangle	576	-7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F072	97	plane	576	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F073	98	calendar-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F074	99	random	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F075	100	comment	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F076	101	magnet	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F077	102	chevron-up	448	5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F078	103	chevron-down	447	5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F079	104	retweet	640	3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F07A	105	shopping-cart	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F07B	106	folder	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F07C	107	folder-open	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F080	108	chart-bar	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F083	109	camera-retro	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F084	110	key	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F085	111	cogs	639	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F086	112	comments	576	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F089	113	star-half	308	15
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F08D	114	thumbtack	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F091	115	trophy	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F093	116	upload	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F094	117	lemon	512	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F095	118	phone	512	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F098	119	phone-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F09C	120	unlock	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F09D	121	credit-card	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F09E	122	rss	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A0	123	hdd	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A1	124	bullhorn	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A3	125	certificate	511	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A4	126	hand-point-right	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A5	127	hand-point-left	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A6	128	hand-point-up	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A7	129	hand-point-down	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A8	130	arrow-circle-left	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0A9	131	arrow-circle-right	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0AA	132	arrow-circle-up	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0AB	133	arrow-circle-down	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0AC	134	globe	495	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0AD	135	wrench	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0AE	136	tasks	512	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0B0	137	filter	512	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0B1	138	briefcase	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0B2	139	arrows-alt	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C0	140	users	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C1	141	link	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C2	142	cloud	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C3	143	flask	448	-11
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C4	144	cut	447	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C5	145	copy	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C6	146	paperclip	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C7	147	save	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C8	148	square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0C9	149	bars	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0CA	150	list-ul	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0CB	151	list-ol	514	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0CC	152	strikethrough	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0CD	153	underline	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0CE	154	table	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0D0	155	magic	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0D1	156	truck	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0D6	157	money-bill	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0D7	158	caret-down	319	7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0D8	159	caret-up	320	7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0D9	160	caret-left	215	23
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0DA	161	caret-right	168	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0DB	162	columns	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0DC	163	sort	320	13
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0DD	164	sort-down	320	13
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0DE	165	sort-up	319	13
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0E0	166	envelope	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0E2	167	undo	504	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0E3	168	gavel	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0E7	169	bolt	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0E8	170	sitemap	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0E9	171	umbrella	576	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0EA	172	paste	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0EB	173	lightbulb	352	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0F0	174	user-md	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0F1	175	stethoscope	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0F2	176	suitcase	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0F3	177	bell	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0F4	178	coffee	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0F8	179	hospital	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0F9	180	ambulance	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0FA	181	medkit	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0FB	182	fighter-jet	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0FC	183	beer	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0FD	184	h-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F0FE	185	plus-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F100	186	angle-double-left	448	24
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F101	187	angle-double-right	448	24
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F102	188	angle-double-up	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F103	189	angle-double-down	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F104	190	angle-left	256	24
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F105	191	angle-right	256	24
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F106	192	angle-up	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F107	193	angle-down	319	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F108	194	desktop	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F109	195	laptop	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F10A	196	tablet	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F10B	197	mobile	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F10D	198	quote-left	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F10E	199	quote-right	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F110	200	spinner	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F111	201	circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F118	202	smile	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F119	203	frown	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F11A	204	meh	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F11B	205	gamepad	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F11C	206	keyboard	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F11E	207	flag-checkered	519	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F120	208	terminal	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F121	209	code	640	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F122	210	reply-all	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F124	211	location-arrow	512	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F125	212	crop	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F126	213	code-branch	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F127	214	unlink	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F128	215	question	403	24
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F129	216	info	192	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F12A	217	exclamation	192	16
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F12B	218	superscript	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F12C	219	subscript	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F12D	220	eraser	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F12E	221	puzzle-piece	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F130	222	microphone	352	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F131	223	microphone-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F133	224	calendar	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F134	225	fire-extinguisher	448	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F135	226	rocket	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F137	227	chevron-circle-left	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F138	228	chevron-circle-right	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F139	229	chevron-circle-up	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F13A	230	chevron-circle-down	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F13D	231	anchor	575	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F13E	232	unlock-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F140	233	bullseye	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F141	234	ellipsis-h	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F142	235	ellipsis-v	192	24
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F143	236	rss-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F144	237	play-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F146	238	minus-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F14A	239	check-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F14B	240	pen-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F14D	241	share-square	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F14E	242	compass	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F150	243	caret-square-down	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F151	244	caret-square-up	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F152	245	caret-square-right	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F153	246	euro-sign	319	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F154	247	pound-sign	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F155	248	dollar-sign	288	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F156	249	rupee-sign	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F157	250	yen-sign	384	19
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F158	251	ruble-sign	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F159	252	won-sign	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F15B	253	file	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F15C	254	file-alt	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F15D	255	sort-alpha-down	424	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F15E	256	sort-alpha-up	424	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F160	257	sort-amount-down	512	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F161	258	sort-amount-up	512	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F162	259	sort-numeric-down	425	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F163	260	sort-numeric-up	425	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F164	261	thumbs-up	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F165	262	thumbs-down	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F182	263	female	256	5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F183	264	male	192	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F185	265	sun	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F186	266	moon	512	27
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F187	267	archive	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F188	268	bug	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F191	269	caret-square-left	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F192	270	dot-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F193	271	wheelchair	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F195	272	lira-sign	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F197	273	space-shuttle	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F199	274	envelope-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F19C	275	university	512	16
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F19D	276	graduation-cap	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1AB	277	language	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1AC	278	fax	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1AD	279	building	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1AE	280	child	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1B0	281	paw	512	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1B2	282	cube	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1B3	283	cubes	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1B8	284	recycle	512	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1B9	285	car	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1BA	286	taxi	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1BB	287	tree	384	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C0	288	database	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C1	289	file-pdf	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C2	290	file-word	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C3	291	file-excel	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C4	292	file-powerpoint	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C5	293	file-image	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C6	294	file-archive	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C7	295	file-audio	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C8	296	file-video	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1C9	297	file-code	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1CD	298	life-ring	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1CE	299	circle-notch	511	7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1D8	300	paper-plane	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1DA	301	history	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1DC	302	heading	512	16
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1DD	303	paragraph	447	15
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1DE	304	sliders-h	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1E0	305	share-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1E1	306	share-alt-square	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1E2	307	bomb	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1E3	308	futbol	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1E4	309	tty	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1E5	310	binoculars	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1E6	311	plug	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1EA	312	newspaper	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1EB	313	wifi	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1EC	314	calculator	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1F6	315	bell-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1F8	316	trash	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1F9	317	copyright	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1FA	318	at	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1FB	319	eye-dropper	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1FC	320	paint-brush	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1FD	321	birthday-cake	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F1FE	322	chart-area	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F200	323	chart-pie	544	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F201	324	chart-line	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F204	325	toggle-off	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F205	326	toggle-on	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F206	327	bicycle	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F207	328	bus	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F20A	329	closed-captioning	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F20B	330	shekel-sign	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F217	331	cart-plus	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F218	332	cart-arrow-down	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F21A	333	ship	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F21B	334	user-secret	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F21C	335	motorcycle	640	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F21D	336	street-view	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F21E	337	heartbeat	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F221	338	venus	288	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F222	339	mars	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F223	340	mercury	288	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F224	341	transgender	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F225	342	transgender-alt	480	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F226	343	venus-double	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F227	344	mars-double	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F228	345	venus-mars	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F229	346	mars-stroke	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F22A	347	mars-stroke-v	288	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F22B	348	mars-stroke-h	479	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F22C	349	neuter	288	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F22D	350	genderless	288	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F233	351	server	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F234	352	user-plus	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F235	353	user-times	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F236	354	bed	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F238	355	train	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F239	356	subway	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F240	357	battery-full	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F241	358	battery-three-quarters	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F242	359	battery-half	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F243	360	battery-quarter	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F244	361	battery-empty	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F245	362	mouse-pointer	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F246	363	i-cursor	256	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F247	364	object-group	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F248	365	object-ungroup	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F249	366	sticky-note	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F24D	367	clone	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F24E	368	balance-scale	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F251	369	hourglass-start	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F252	370	hourglass-half	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F253	371	hourglass-end	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F254	372	hourglass	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F255	373	hand-rock	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F256	374	hand-paper	447	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F257	375	hand-scissors	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F258	376	hand-lizard	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F259	377	hand-spock	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F25A	378	hand-pointer	448	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F25B	379	hand-peace	448	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F25C	380	trademark	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F25D	381	registered	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F26C	382	tv	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F271	383	calendar-plus	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F272	384	calendar-minus	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F273	385	calendar-times	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F274	386	calendar-check	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F275	387	industry	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F276	388	map-pin	288	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F277	389	map-signs	512	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F279	390	map	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F27A	391	comment-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F28B	392	pause-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F28D	393	stop-circle	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F290	394	shopping-bag	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F291	395	shopping-basket	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F292	396	hashtag	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F295	397	percent	448	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F29A	398	universal-access	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F29D	399	blind	383	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F29E	400	audio-description	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2A0	401	phone-volume	383	-11
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2A1	402	braille	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2A2	403	assistive-listening-systems	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2A3	404	american-sign-language-interpreting	639	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2A4	405	deaf	512	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2A7	406	sign-language	447	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2A8	407	low-vision	576	-7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2B5	408	handshake	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2B6	409	envelope-open	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2B9	410	address-book	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2BB	411	address-card	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2BD	412	user-circle	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2C1	413	id-badge	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2C2	414	id-card	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2C7	415	thermometer-full	256	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2C8	416	thermometer-three-quarters	256	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2C9	417	thermometer-half	256	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2CA	418	thermometer-quarter	256	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2CB	419	thermometer-empty	256	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2CC	420	shower	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2CD	421	bath	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2CE	422	podcast	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2D0	423	window-maximize	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2D1	424	window-minimize	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2D2	425	window-restore	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2DB	426	microchip	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2DC	427	snowflake	448	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2E5	428	utensil-spoon	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2E7	429	utensils	416	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2EA	430	undo-alt	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2ED	431	trash-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2F1	432	sync-alt	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2F2	433	stopwatch	448	16
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2F5	434	sign-out-alt	503	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2F6	435	sign-in-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2F9	436	redo-alt	511	7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F2FE	437	poo	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F302	438	images	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F303	439	pencil-alt	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F304	440	pen	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F305	441	pen-alt	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F309	442	long-arrow-alt-down	255	13
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F30A	443	long-arrow-alt-left	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F30B	444	long-arrow-alt-right	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F30C	445	long-arrow-alt-up	256	13
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F31E	446	expand-arrows-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F328	447	clipboard	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F337	448	arrows-alt-h	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F338	449	arrows-alt-v	256	13
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F358	450	arrow-alt-circle-down	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F359	451	arrow-alt-circle-left	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F35A	452	arrow-alt-circle-right	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F35B	453	arrow-alt-circle-up	512	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F35D	454	external-link-alt	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F360	455	external-link-square-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F362	456	exchange-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F381	457	cloud-download-alt	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F382	458	cloud-upload-alt	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3A5	459	gem	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3BE	460	level-down-alt	320	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3BF	461	level-up-alt	320	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3C1	462	lock-open	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3C5	463	map-marker-alt	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3C9	464	microphone-alt	352	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3CD	465	mobile-alt	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3D1	466	money-bill-alt	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3DD	467	phone-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3E0	468	portrait	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3E5	469	reply	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3ED	470	shield-alt	512	16
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3FA	471	tablet-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3FD	472	tachometer-alt	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F3FF	473	ticket-alt	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F406	474	user-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F410	475	window-close	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F433	476	baseball-ball	495	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F434	477	basketball-ball	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F436	478	bowling-ball	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F439	479	chess	514	8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F43A	480	chess-bishop	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F43C	481	chess-board	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F43F	482	chess-king	448	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F441	483	chess-knight	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F443	484	chess-pawn	320	16
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F445	485	chess-queen	512	6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F447	486	chess-rook	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F44B	487	dumbbell	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F44E	488	football-ball	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F450	489	golf-ball	416	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F453	490	hockey-puck	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F458	491	quidditch	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F45C	492	square-full	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F45D	493	table-tennis	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F45F	494	volleyball-ball	495	-10
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F461	495	allergies	448	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F462	496	band-aid	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F466	497	box	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F468	498	boxes	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F469	499	briefcase-medical	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F46A	500	burn	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F46B	501	capsules	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F46C	502	clipboard-check	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F46D	503	clipboard-list	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F470	504	diagnoses	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F471	505	dna	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F472	506	dolly	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F474	507	dolly-flatbed	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F477	508	file-medical	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F478	509	file-medical-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F479	510	first-aid	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F47D	511	hospital-alt	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F47E	512	hospital-symbol	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F47F	513	id-card-alt	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F481	514	notes-medical	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F482	515	pallet	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F484	516	pills	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F485	517	prescription-bottle	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F486	518	prescription-bottle-alt	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F487	519	procedures	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F48B	520	shipping-fast	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F48D	521	smoking	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F48E	522	syringe	512	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F490	523	tablets	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F491	524	thermometer	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F492	525	vial	480	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F493	526	vials	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F494	527	warehouse	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F496	528	weight	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F497	529	x-ray	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F49E	530	box-open	640	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4AD	531	comment-dots	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4B3	532	comment-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4B8	533	couch	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4B9	534	donate	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4BA	535	dove	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4BD	536	hand-holding	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4BE	537	hand-holding-heart	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4C0	538	hand-holding-usd	543	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4C2	539	hands	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4C4	540	hands-helping	640	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4CD	541	parachute-box	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4CE	542	people-carry	640	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4D3	543	piggy-bank	576	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4D6	544	ribbon	448	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4D7	545	route	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4D8	546	seedling	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4D9	547	sign	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4DA	548	smile-wink	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4DB	549	tape	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4DE	550	truck-loading	640	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4DF	551	truck-moving	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4E2	552	video-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4E3	553	wine-glass	288	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4FA	554	user-alt-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4FB	555	user-astronaut	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4FC	556	user-check	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4FD	557	user-clock	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4FE	558	user-cog	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F4FF	559	user-edit	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F500	560	user-friends	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F501	561	user-graduate	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F502	562	user-lock	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F503	563	user-minus	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F504	564	user-ninja	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F505	565	user-shield	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F506	566	user-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F507	567	user-tag	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F508	568	user-tie	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F509	569	users-cog	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F517	570	blender	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F518	571	book-open	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F519	572	broadcast-tower	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F51A	573	broom	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F51B	574	chalkboard	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F51C	575	chalkboard-teacher	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F51D	576	church	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F51E	577	coins	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F51F	578	compact-disc	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F520	579	crow	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F521	580	crown	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F522	581	dice	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F523	582	dice-five	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F524	583	dice-four	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F525	584	dice-one	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F526	585	dice-six	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F527	586	dice-three	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F528	587	dice-two	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F529	588	divide	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F52A	589	door-closed	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F52B	590	door-open	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F52C	591	equals	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F52D	592	feather	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F52E	593	frog	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F52F	594	gas-pump	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F530	595	glasses	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F531	596	greater-than	384	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F532	597	greater-than-equal	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F533	598	helicopter	640	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F534	599	infinity	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F535	600	kiwi-bird	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F536	601	less-than	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F537	602	less-than-equal	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F538	603	memory	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F539	604	microphone-alt-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F53A	605	money-bill-wave	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F53B	606	money-bill-wave-alt	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F53C	607	money-check	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F53D	608	money-check-alt	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F53E	609	not-equal	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F53F	610	palette	512	-8
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F540	611	parking	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F541	612	percentage	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F542	613	project-diagram	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F543	614	receipt	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F544	615	robot	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F545	616	ruler	640	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F546	617	ruler-combined	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F547	618	ruler-horizontal	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F548	619	ruler-vertical	256	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F549	620	school	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F54A	621	screwdriver	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F54B	622	shoe-prints	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F54C	623	skull	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F54D	624	smoking-ban	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F54E	625	store	616	-11
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F54F	626	store-alt	640	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F550	627	stream	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F551	628	stroopwafel	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F552	629	toolbox	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F553	630	tshirt	640	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F554	631	walking	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F555	632	wallet	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F556	633	angry	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F557	634	archway	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F558	635	atlas	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F559	636	award	384	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F55A	637	backspace	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F55B	638	bezier-curve	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F55C	639	bong	447	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F55D	640	brush	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F55E	641	bus-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F55F	642	cannabis	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F560	643	check-double	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F561	644	cocktail	576	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F562	645	concierge-bell	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F563	646	cookie	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F564	647	cookie-bite	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F565	648	crop-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F566	649	digital-tachograph	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F567	650	dizzy	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F568	651	drafting-compass	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F569	652	drum	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F56A	653	drum-steelpan	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F56B	654	feather-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F56C	655	file-contract	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F56D	656	file-download	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F56E	657	file-export	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F56F	658	file-import	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F570	659	file-invoice	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F571	660	file-invoice-dollar	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F572	661	file-prescription	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F573	662	file-signature	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F574	663	file-upload	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F575	664	fill	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F576	665	fill-drip	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F577	666	fingerprint	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F578	667	fish	576	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F579	668	flushed	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F57A	669	frown-open	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F57B	670	glass-martini-alt	512	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F57C	671	globe-africa	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F57D	672	globe-americas	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F57E	673	globe-asia	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F57F	674	grimace	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F580	675	grin	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F581	676	grin-alt	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F582	677	grin-beam	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F583	678	grin-beam-sweat	504	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F584	679	grin-hearts	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F585	680	grin-squint	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F586	681	grin-squint-tears	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F587	682	grin-stars	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F588	683	grin-tears	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F589	684	grin-tongue	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F58A	685	grin-tongue-squint	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F58B	686	grin-tongue-wink	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F58C	687	grin-wink	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F58D	688	grip-horizontal	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F58E	689	grip-vertical	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F58F	690	headphones-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F590	691	headset	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F591	692	highlighter	544	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F593	693	hot-tub	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F594	694	hotel	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F595	695	joint	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F596	696	kiss	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F597	697	kiss-beam	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F598	698	kiss-wink-heart	503	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F599	699	laugh	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F59A	700	laugh-beam	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F59B	701	laugh-squint	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F59C	702	laugh-wink	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F59D	703	luggage-cart	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F59F	704	map-marked	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5A0	705	map-marked-alt	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5A1	706	marker	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5A2	707	medal	512	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5A4	708	meh-blank	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5A5	709	meh-rolling-eyes	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5A6	710	monument	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5A7	711	mortar-pestle	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5AA	712	paint-roller	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5AB	713	passport	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5AC	714	pen-fancy	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5AD	715	pen-nib	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5AE	716	pencil-ruler	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5AF	717	plane-arrival	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5B0	718	plane-departure	640	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5B1	719	prescription	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5B3	720	sad-cry	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5B4	721	sad-tear	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5B6	722	shuttle-van	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5B7	723	signature	639	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5B8	724	smile-beam	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5BA	725	solar-panel	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5BB	726	spa	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5BC	727	splotch	512	-11
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5BD	728	spray-can	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5BF	729	stamp	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C0	730	star-half-alt	536	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C1	731	suitcase-rolling	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C2	732	surprise	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C3	733	swatchbook	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C4	734	swimmer	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C5	735	swimming-pool	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C7	736	tint-slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C8	737	tired	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5C9	738	tooth	448	-10
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5CA	739	umbrella-beach	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5CB	740	vector-square	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5CD	741	weight-hanging	512	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5CE	742	wine-glass-alt	288	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5D0	743	air-freshener	384	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5D1	744	apple-alt	448	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5D2	745	atom	448	-19
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5D7	746	bone	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5DA	747	book-reader	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5DC	748	brain	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5DE	749	car-alt	480	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5DF	750	car-battery	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5E1	751	car-crash	640	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5E4	752	car-side	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5E7	753	charging-station	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5EB	754	directions	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5EE	755	draw-polygon	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5FC	756	laptop-code	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F5FD	757	layer-group	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F610	758	microscope	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F613	759	oil-can	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F619	760	poop	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F61F	761	shapes	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F621	762	star-of-life	480	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F62E	763	teeth	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F62F	764	teeth-open	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F630	765	theater-masks	640	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F637	766	traffic-light	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F63B	767	truck-monster	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F63C	768	truck-pickup	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F641	769	ad	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F644	770	ankh	320	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F647	771	bible	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F64A	772	business-time	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F64F	773	city	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F651	774	comment-dollar	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F653	775	comments-dollar	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F654	776	cross	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F655	777	dharmachakra	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F658	778	envelope-open-text	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F65D	779	folder-minus	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F65E	780	folder-plus	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F662	781	funnel-dollar	640	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F664	782	gopuram	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F665	783	hamsa	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F666	784	haykal	512	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F669	785	jedi	544	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F66A	786	journal-whills	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F66B	787	kaaba	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F66D	788	khanda	511	-12
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F66F	789	landmark	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F674	790	mail-bulk	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F676	791	menorah	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F678	792	mosque	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F679	793	om	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F67B	794	pastafarianism	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F67C	795	peace	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F67F	796	place-of-worship	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F681	797	poll	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F682	798	poll-h	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F683	799	pray	383	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F684	800	praying-hands	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F687	801	quran	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F688	802	search-dollar	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F689	803	search-location	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F696	804	socks	512	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F698	805	square-root-alt	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F699	806	star-and-crescent	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F69A	807	star-of-david	464	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F69B	808	synagogue	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6A0	809	torah	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6A1	810	torii-gate	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6A7	811	vihara	639	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6A9	812	volume-mute	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6AD	813	yin-yang	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6B6	814	blender-phone	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6B7	815	book-dead	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6BB	816	campground	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6BE	817	cat	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6C0	818	chair	447	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6C3	819	cloud-moon	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6C4	820	cloud-sun	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6CF	821	dice-d20	480	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6D1	822	dice-d6	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6D3	823	dog	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6D5	824	dragon	640	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6D7	825	drumstick-bite	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6D9	826	dungeon	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6DD	827	file-csv	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6DE	828	fist-raised	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6E2	829	ghost	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6E3	830	hammer	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6E6	831	hanukiah	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6E8	832	hat-wizard	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6EC	833	hiking	383	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6ED	834	hippo	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6F0	835	horse	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6F1	836	house-damage	576	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6F2	837	hryvnia	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6FA	838	mask	640	-14
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6FC	839	mountain	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F6FF	840	network-wired	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F700	841	otter	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F70B	842	ring	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F70C	843	running	416	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F70E	844	scroll	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F714	845	skull-crossbones	448	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F715	846	slash	640	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F717	847	spider	576	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F71E	848	toilet-paper	576	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F722	849	tractor	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F728	850	user-injured	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F729	851	vr-cardboard	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F72E	852	wind	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F72F	853	wine-bottle	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F73B	854	cloud-meatball	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F73C	855	cloud-moon-rain	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F73D	856	cloud-rain	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F740	857	cloud-showers-heavy	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F743	858	cloud-sun-rain	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F747	859	democrat	639	-5
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F74D	860	flag-usa	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F753	861	meteor	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F756	862	person-booth	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F75A	863	poo-storm	447	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F75B	864	rainbow	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F75E	865	republican	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F75F	866	smog	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F769	867	temperature-high	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F76B	868	temperature-low	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F772	869	vote-yea	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F773	870	water	575	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F77C	871	baby	384	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F77D	872	baby-carriage	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F780	873	biohazard	575	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F781	874	blog	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F783	875	calendar-day	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F784	876	calendar-week	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F786	877	candy-cane	512	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F787	878	carrot	512	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F788	879	cash-register	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F78C	880	compress-arrows-alt	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F793	881	dumpster	576	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F794	882	dumpster-fire	639	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F796	883	ethernet	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F79C	884	gifts	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F79F	885	glass-cheers	640	-2
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7A0	886	glass-whiskey	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7A2	887	globe-europe	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7A4	888	grip-lines	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7A5	889	grip-lines-vertical	256	32
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7A6	890	guitar	511	-4
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7A9	891	heart-broken	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7AA	892	holly-berry	447	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7AB	893	horse-head	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7AD	894	icicles	511	-3
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7AE	895	igloo	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7B5	896	mitten	448	-9
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7B6	897	mug-hot	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7B9	898	radiation	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7BA	899	radiation-alt	496	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7BD	900	restroom	671	32
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7BF	901	satellite	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7C0	902	satellite-dish	511	-7
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7C2	903	sd-card	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7C4	904	sim-card	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7C5	905	skating	448	-6
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7C9	906	skiing	511	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7CA	907	skiing-nordic	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7CC	908	sleigh	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7CD	909	sms	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7CE	910	snowboarding	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7D0	911	snowman	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7D2	912	snowplow	639	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7D7	913	tenge	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7D8	914	toilet	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7D9	915	tools	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7DA	916	tram	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7E4	917	fire-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7E5	918	bacon	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7E6	919	book-medical	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7EC	920	bread-slice	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7EF	921	cheese	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7F2	922	clinic-medical	576	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7F5	923	comment-medical	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7F7	924	crutch	511	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F7FB	925	egg	384	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F805	926	hamburger	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F806	927	hand-middle-finger	512	32
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F807	928	hard-hat	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F80F	929	hotdog	512	-1
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F810	930	ice-cream	448	32
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F812	931	laptop-medical	640	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F815	932	pager	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F816	933	pepper-hot	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F818	934	pizza-slice	512	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F829	935	trash-restore	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F82A	936	trash-restore-alt	448	0
+Font Awesome 5 Free Solid	assets/decoded/font_blob_0_30f5e0.ttf	U+F82F	937	user-nurse	448	0
+.	assets/decoded/font_blob_1_330d20.ttf	U+0020	3	space	440	0
+.	assets/decoded/font_blob_1_330d20.ttf	U+0021	4	exclam	440	166
+.	assets/decoded/font_blob_1_330d20.ttf	U+0022	5	quotedbl	440	116
+.	assets/decoded/font_blob_1_330d20.ttf	U+0023	6	numbersign	440	-7
+.	assets/decoded/font_blob_1_330d20.ttf	U+0024	7	dollar	440	49
+.	assets/decoded/font_blob_1_330d20.ttf	U+0025	8	percent	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+0026	9	ampersand	440	4
+.	assets/decoded/font_blob_1_330d20.ttf	U+0027	10	quotesingle	440	185
+.	assets/decoded/font_blob_1_330d20.ttf	U+0028	11	parenleft	440	135
+.	assets/decoded/font_blob_1_330d20.ttf	U+0029	12	parenright	440	135
+.	assets/decoded/font_blob_1_330d20.ttf	U+002A	13	asterisk	440	27
+.	assets/decoded/font_blob_1_330d20.ttf	U+002B	14	plus	440	22
+.	assets/decoded/font_blob_1_330d20.ttf	U+002C	15	comma	440	154
+.	assets/decoded/font_blob_1_330d20.ttf	U+002D	16	hyphen	440	53
+.	assets/decoded/font_blob_1_330d20.ttf	U+002E	17	period	440	166
+.	assets/decoded/font_blob_1_330d20.ttf	U+002F	18	slash	440	39
+.	assets/decoded/font_blob_1_330d20.ttf	U+0030	19	zero	440	41
+.	assets/decoded/font_blob_1_330d20.ttf	U+0031	20	one	440	79
+.	assets/decoded/font_blob_1_330d20.ttf	U+0032	21	two	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+0033	22	three	440	45
+.	assets/decoded/font_blob_1_330d20.ttf	U+0034	23	four	440	22
+.	assets/decoded/font_blob_1_330d20.ttf	U+0035	24	five	440	49
+.	assets/decoded/font_blob_1_330d20.ttf	U+0036	25	six	440	41
+.	assets/decoded/font_blob_1_330d20.ttf	U+0037	26	seven	440	46
+.	assets/decoded/font_blob_1_330d20.ttf	U+0038	27	eight	440	39
+.	assets/decoded/font_blob_1_330d20.ttf	U+0039	28	nine	440	41
+.	assets/decoded/font_blob_1_330d20.ttf	U+003A	29	colon	440	166
+.	assets/decoded/font_blob_1_330d20.ttf	U+003B	30	semicolon	440	143
+.	assets/decoded/font_blob_1_330d20.ttf	U+003C	31	less	440	24
+.	assets/decoded/font_blob_1_330d20.ttf	U+003D	32	equal	440	24
+.	assets/decoded/font_blob_1_330d20.ttf	U+003E	33	greater	440	24
+.	assets/decoded/font_blob_1_330d20.ttf	U+003F	34	question	440	48
+.	assets/decoded/font_blob_1_330d20.ttf	U+0040	35	at	440	-31
+.	assets/decoded/font_blob_1_330d20.ttf	U+0041	36	A	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+0042	37	B	440	38
+.	assets/decoded/font_blob_1_330d20.ttf	U+0043	38	C	440	47
+.	assets/decoded/font_blob_1_330d20.ttf	U+0044	39	D	440	39
+.	assets/decoded/font_blob_1_330d20.ttf	U+0045	40	E	440	52
+.	assets/decoded/font_blob_1_330d20.ttf	U+0046	41	F	440	58
+.	assets/decoded/font_blob_1_330d20.ttf	U+0047	42	G	440	35
+.	assets/decoded/font_blob_1_330d20.ttf	U+0048	43	H	440	42
+.	assets/decoded/font_blob_1_330d20.ttf	U+0049	44	I	440	66
+.	assets/decoded/font_blob_1_330d20.ttf	U+004A	45	J	440	65
+.	assets/decoded/font_blob_1_330d20.ttf	U+004B	46	K	440	19
+.	assets/decoded/font_blob_1_330d20.ttf	U+004C	47	L	440	49
+.	assets/decoded/font_blob_1_330d20.ttf	U+004D	48	M	440	19
+.	assets/decoded/font_blob_1_330d20.ttf	U+004E	49	N	440	41
+.	assets/decoded/font_blob_1_330d20.ttf	U+004F	50	O	440	35
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D3	50	O	440	35
+.	assets/decoded/font_blob_1_330d20.ttf	U+0050	51	P	440	44
+.	assets/decoded/font_blob_1_330d20.ttf	U+0051	52	Q	440	13
+.	assets/decoded/font_blob_1_330d20.ttf	U+0052	53	R	440	38
+.	assets/decoded/font_blob_1_330d20.ttf	U+0053	54	S	440	42
+.	assets/decoded/font_blob_1_330d20.ttf	U+0054	55	T	440	9
+.	assets/decoded/font_blob_1_330d20.ttf	U+0055	56	U	440	37
+.	assets/decoded/font_blob_1_330d20.ttf	U+0056	57	V	440	13
+.	assets/decoded/font_blob_1_330d20.ttf	U+0057	58	W	440	-6
+.	assets/decoded/font_blob_1_330d20.ttf	U+0058	59	X	440	0
+.	assets/decoded/font_blob_1_330d20.ttf	U+0059	60	Y	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+005A	61	Z	440	33
+.	assets/decoded/font_blob_1_330d20.ttf	U+005B	62	bracketleft	440	104
+.	assets/decoded/font_blob_1_330d20.ttf	U+005C	63	backslash	440	39
+.	assets/decoded/font_blob_1_330d20.ttf	U+005D	64	bracketright	440	104
+.	assets/decoded/font_blob_1_330d20.ttf	U+005E	65	asciicircum	440	37
+.	assets/decoded/font_blob_1_330d20.ttf	U+005F	66	underscore	440	-14
+.	assets/decoded/font_blob_1_330d20.ttf	U+0060	67	grave	440	124
+.	assets/decoded/font_blob_1_330d20.ttf	U+0061	68	a	440	48
+.	assets/decoded/font_blob_1_330d20.ttf	U+0062	69	b	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+0063	70	c	440	59
+.	assets/decoded/font_blob_1_330d20.ttf	U+0064	71	d	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+0065	72	e	440	37
+.	assets/decoded/font_blob_1_330d20.ttf	U+0066	73	f	440	40
+.	assets/decoded/font_blob_1_330d20.ttf	U+0067	74	g	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+0068	75	h	440	62
+.	assets/decoded/font_blob_1_330d20.ttf	U+0069	76	i	440	139
+.	assets/decoded/font_blob_1_330d20.ttf	U+006A	77	j	440	100
+.	assets/decoded/font_blob_1_330d20.ttf	U+006B	78	k	440	41
+.	assets/decoded/font_blob_1_330d20.ttf	U+006C	79	l	440	133
+.	assets/decoded/font_blob_1_330d20.ttf	U+006D	80	m	440	20
+.	assets/decoded/font_blob_1_330d20.ttf	U+006E	81	n	440	62
+.	assets/decoded/font_blob_1_330d20.ttf	U+006F	82	o	440	42
+.	assets/decoded/font_blob_1_330d20.ttf	U+0070	83	p	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+0071	84	q	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+0072	85	r	440	69
+.	assets/decoded/font_blob_1_330d20.ttf	U+0073	86	s	440	69
+.	assets/decoded/font_blob_1_330d20.ttf	U+0074	87	t	440	87
+.	assets/decoded/font_blob_1_330d20.ttf	U+0075	88	u	440	54
+.	assets/decoded/font_blob_1_330d20.ttf	U+0076	89	v	440	29
+.	assets/decoded/font_blob_1_330d20.ttf	U+0077	90	w	440	-7
+.	assets/decoded/font_blob_1_330d20.ttf	U+0078	91	x	440	20
+.	assets/decoded/font_blob_1_330d20.ttf	U+0079	92	y	440	47
+.	assets/decoded/font_blob_1_330d20.ttf	U+007A	93	z	440	64
+.	assets/decoded/font_blob_1_330d20.ttf	U+007B	94	braceleft	440	63
+.	assets/decoded/font_blob_1_330d20.ttf	U+007C	95	verticalbar	440	188
+.	assets/decoded/font_blob_1_330d20.ttf	U+007D	96	braceright	440	63
+.	assets/decoded/font_blob_1_330d20.ttf	U+007E	97	asciitilde	440	22
+.	assets/decoded/font_blob_1_330d20.ttf	U+0085	98	uni0085	440	21
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A1	99	exclamdown	440	159
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A2	100	cent	440	63
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A3	101	sterling	440	40
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A4	102	currency	440	55
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A5	103	yen	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A6	104	brokenbar	440	188
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A7	105	section	440	64
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A8	106	dieresis	440	109
+.	assets/decoded/font_blob_1_330d20.ttf	U+00A9	107	copyright	440	-7
+.	assets/decoded/font_blob_1_330d20.ttf	U+00AA	108	ordfeminine	440	92
+.	assets/decoded/font_blob_1_330d20.ttf	U+00AB	109	guillemotleft	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+00AE	110	registered	440	-7
+.	assets/decoded/font_blob_1_330d20.ttf	U+00AF	111	overscore	440	109
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B0	112	degree	440	101
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B1	113	plusminus	440	24
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B2	114	twosuperior	440	115
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B3	115	threesuperior	440	109
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B4	116	acute	440	131
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B5	117	mu	440	37
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B6	118	paragraph	440	48
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B7	119	periodcentered	440	159
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B8	120	cedilla	440	143
+.	assets/decoded/font_blob_1_330d20.ttf	U+00B9	121	onesuperior	440	114
+.	assets/decoded/font_blob_1_330d20.ttf	U+00BA	122	ordmasculine	440	83
+.	assets/decoded/font_blob_1_330d20.ttf	U+00BB	123	guillemotright	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+00BC	124	onequarter	440	19
+.	assets/decoded/font_blob_1_330d20.ttf	U+00BD	125	onehalf	440	19
+.	assets/decoded/font_blob_1_330d20.ttf	U+00BE	126	threequarters	440	18
+.	assets/decoded/font_blob_1_330d20.ttf	U+00BF	127	questiondown	440	73
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C0	128	Agrave	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C1	129	Aacute	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C2	130	Acircumflex	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C3	131	Atilde	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C4	132	Adieresis	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C5	133	Aring	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C6	134	AE	440	2
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C7	135	Ccedilla	440	47
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C8	136	Egrave	440	52
+.	assets/decoded/font_blob_1_330d20.ttf	U+00C9	137	Eacute	440	52
+.	assets/decoded/font_blob_1_330d20.ttf	U+00CA	138	Ecircumflex	440	52
+.	assets/decoded/font_blob_1_330d20.ttf	U+00CB	139	Edieresis	440	52
+.	assets/decoded/font_blob_1_330d20.ttf	U+00CC	140	Igrave	440	66
+.	assets/decoded/font_blob_1_330d20.ttf	U+00CD	141	Iacute	440	66
+.	assets/decoded/font_blob_1_330d20.ttf	U+00CE	142	Icircumflex	440	66
+.	assets/decoded/font_blob_1_330d20.ttf	U+00CF	143	Idieresis	440	66
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D0	144	Eth	440	17
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D1	145	Ntilde	440	42
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D2	146	Ograve	440	35
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D4	147	Ocircumflex	440	35
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D5	148	Otilde	440	35
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D6	149	Odieresis	440	35
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D7	150	multiply	440	46
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D8	151	Oslash	440	1
+.	assets/decoded/font_blob_1_330d20.ttf	U+00D9	152	Ugrave	440	46
+.	assets/decoded/font_blob_1_330d20.ttf	U+00DA	153	Uacute	440	46
+.	assets/decoded/font_blob_1_330d20.ttf	U+00DB	154	Ucircumflex	440	46
+.	assets/decoded/font_blob_1_330d20.ttf	U+00DC	155	Udieresis	440	47
+.	assets/decoded/font_blob_1_330d20.ttf	U+00DD	156	Yacute	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00DE	157	Thorn	440	42
+.	assets/decoded/font_blob_1_330d20.ttf	U+00DF	158	germandbls	440	42
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E0	159	agrave	440	38
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E1	160	aacute	440	38
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E2	161	acircumflex	440	38
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E3	162	atilde	440	38
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E4	163	adieresis	440	38
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E5	164	aring	440	38
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E6	165	ae	440	5
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E7	166	ccedilla	440	59
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E8	167	egrave	440	37
+.	assets/decoded/font_blob_1_330d20.ttf	U+00E9	168	eacute	440	37
+.	assets/decoded/font_blob_1_330d20.ttf	U+00EA	169	ecircumflex	440	37
+.	assets/decoded/font_blob_1_330d20.ttf	U+00EB	170	edieresis	440	37
+.	assets/decoded/font_blob_1_330d20.ttf	U+00EC	171	igrave	440	51
+.	assets/decoded/font_blob_1_330d20.ttf	U+00ED	172	iacute	440	68
+.	assets/decoded/font_blob_1_330d20.ttf	U+00EE	173	icircumflex	440	68
+.	assets/decoded/font_blob_1_330d20.ttf	U+00EF	174	idieresis	440	68
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F0	175	eth	440	42
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F1	176	ntilde	440	62
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F2	177	ograve	440	43
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F3	178	oacute	440	43
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F4	179	ocircumflex	440	43
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F5	180	otilde	440	43
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F6	181	odieresis	440	43
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F7	182	divide	440	24
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F8	183	oslash	440	12
+.	assets/decoded/font_blob_1_330d20.ttf	U+00F9	184	ugrave	440	61
+.	assets/decoded/font_blob_1_330d20.ttf	U+00FA	185	uacute	440	61
+.	assets/decoded/font_blob_1_330d20.ttf	U+00FB	186	ucircumflex	440	61
+.	assets/decoded/font_blob_1_330d20.ttf	U+00FC	187	udieresis	440	61
+.	assets/decoded/font_blob_1_330d20.ttf	U+00FD	188	yacute	440	26
+.	assets/decoded/font_blob_1_330d20.ttf	U+00FE	189	thorn	440	50
+.	assets/decoded/font_blob_1_330d20.ttf	U+00FF	190	ydieresis	440	26
+.	assets/decoded/font_blob_1_330d20.ttf	U+20AC	191	Euro	440	30
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0000	1	.null	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0001	2	unicode#0x0001	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0002	3	unicode#0x0002	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0003	4	unicode#0x0003	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0004	5	unicode#0x0004	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0005	6	unicode#0x0005	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0006	7	unicode#0x0006	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0007	8	unicode#0x0007	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0008	9	unicode#0x0008	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0009	10	unicode#0x0009	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+000A	11	unicode#0x000a	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+000B	12	unicode#0x000b	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+000C	13	unicode#0x000c	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+000D	14	unicode#0x000d	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+000E	15	unicode#0x000e	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+000F	16	unicode#0x000f	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0010	17	unicode#0x0010	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0011	18	unicode#0x0011	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0012	19	unicode#0x0012	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0013	20	unicode#0x0013	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0014	21	unicode#0x0014	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0015	22	unicode#0x0015	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0016	23	unicode#0x0016	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0017	24	unicode#0x0017	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0018	25	unicode#0x0018	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0019	26	unicode#0x0019	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+001A	27	unicode#0x001a	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+001B	28	unicode#0x001b	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+001C	29	unicode#0x001c	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+001D	30	unicode#0x001d	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+001E	31	unicode#0x001e	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+001F	32	unicode#0x001f	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0020	33	space	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0021	34	exclam	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0022	35	quotedbl	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0023	36	numbersign	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0024	37	dollar	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0025	38	percent	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0026	39	ampersand	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0027	40	quotesingle	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0028	41	parenleft	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0029	42	parenright	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+002A	43	asterisk	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+002B	44	plus	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+002C	45	comma	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+002D	46	hyphen	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+002E	47	period	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+002F	48	slash	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0030	49	zero	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0031	50	one	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0032	51	two	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0033	52	three	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0034	53	four	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0035	54	five	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0036	55	six	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0037	56	seven	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0038	57	eight	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0039	58	nine	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+003A	59	colon	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+003B	60	semicolon	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+003C	61	less	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+003D	62	equal	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+003E	63	greater	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+003F	64	question	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0040	65	at	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0041	66	A	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0042	67	B	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0043	68	C	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0044	69	D	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0045	70	E	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0046	71	F	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0047	72	G	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0048	73	H	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0049	74	I	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+004A	75	J	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+004B	76	K	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+004C	77	L	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+004D	78	M	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+004E	79	N	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+004F	80	O	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0050	81	P	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0051	82	Q	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0052	83	R	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0053	84	S	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0054	85	T	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0055	86	U	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0056	87	V	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0057	88	W	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0058	89	X	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0059	90	Y	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+005A	91	Z	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+005B	92	bracketleft	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+005C	93	backslash	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+005D	94	bracketright	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+005E	95	asciicircum	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+005F	96	underscore	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0060	97	grave	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0061	98	a	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0062	99	b	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0063	100	c	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0064	101	d	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0065	102	e	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0066	103	f	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0067	104	g	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0068	105	h	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0069	106	i	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+006A	107	j	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+006B	108	k	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+006C	109	l	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+006D	110	m	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+006E	111	n	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+006F	112	o	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0070	113	p	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0071	114	q	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0072	115	r	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0073	116	s	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0074	117	t	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0075	118	u	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0076	119	v	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0077	120	w	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0078	121	x	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0079	122	y	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+007A	123	z	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+007B	124	braceleft	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+007C	125	bar	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+007D	126	braceright	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+007E	127	asciitilde	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+007F	128	delete	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+20AC	129	Euro	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0081	130	unicode#0x0081	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0082	131	unicode#0x0082	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0083	132	unicode#0x0083	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0084	133	unicode#0x0084	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0085	134	unicode#0x0085	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0086	135	unicode#0x0086	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0087	136	unicode#0x0087	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0088	137	unicode#0x0088	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0089	138	unicode#0x0089	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+008A	139	unicode#0x008a	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+008B	140	unicode#0x008b	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+008C	141	unicode#0x008c	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+008D	142	unicode#0x008d	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+008E	143	unicode#0x008e	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+008F	144	unicode#0x008f	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0090	145	unicode#0x0090	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0091	146	unicode#0x0091	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0092	147	unicode#0x0092	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0093	148	unicode#0x0093	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0094	149	unicode#0x0094	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0095	150	unicode#0x0095	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0096	151	unicode#0x0096	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0097	152	unicode#0x0097	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0098	153	unicode#0x0098	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+0099	154	unicode#0x0099	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+009A	155	unicode#0x009a	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+009B	156	unicode#0x009b	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+009C	157	unicode#0x009c	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+009D	158	unicode#0x009d	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+009E	159	unicode#0x009e	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+009F	160	unicode#0x009f	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A0	161	nonbreakingspace	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A1	162	exclamdown	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A2	163	cent	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A3	164	sterling	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A4	165	currency	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A5	166	yen	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A6	167	brokenbar	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A7	168	section	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A8	169	dieresis	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00A9	170	copyright	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00AA	171	ordfeminine	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00AB	172	guillemotleft	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00AC	173	logicalnot	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00AD	174	minus	896	896
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00AE	175	registered	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00AF	176	macron	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B0	177	degree	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B1	178	plusminus	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B2	179	twosuperior	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B3	180	threesuperior	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B4	181	acute	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B5	182	mu	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B6	183	paragraph	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B7	184	periodcentered	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B8	185	cedilla	896	384
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00B9	186	onesuperior	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00BA	187	ordmasculine	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00BB	188	guillemotright	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00BC	189	onequarter	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00BD	190	onehalf	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00BE	191	threequarters	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00BF	192	questiondown	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C0	193	Agrave	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C1	194	Aacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C2	195	Acircumflex	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C3	196	Atilde	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C4	197	Adieresis	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C5	198	Aring	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C6	199	AE	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C7	200	Ccedilla	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C8	201	Egrave	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00C9	202	Eacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00CA	203	Ecircumflex	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00CB	204	Edieresis	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00CC	205	Igrave	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00CD	206	Iacute	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00CE	207	Icircumflex	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00CF	208	Idieresis	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D0	209	Eth	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D1	210	Ntilde	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D2	211	Ograve	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D3	212	Oacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D4	213	Ocircumflex	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D5	214	Otilde	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D6	215	Odieresis	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D7	216	multiply	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D8	217	Oslash	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00D9	218	Ugrave	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00DA	219	Uacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00DB	220	Ucircumflex	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00DC	221	Udieresis	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00DD	222	Yacute	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00DE	223	Thorn	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00DF	224	germandbls	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E0	225	agrave	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E1	226	aacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E2	227	acircumflex	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E3	228	atilde	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E4	229	adieresis	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E5	230	aring	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E6	231	ae	896	0
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E7	232	ccedilla	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E8	233	egrave	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00E9	234	eacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00EA	235	ecircumflex	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00EB	236	edieresis	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00EC	237	igrave	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00ED	238	iacute	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00EE	239	icircumflex	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00EF	240	idieresis	896	256
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F0	241	eth	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F1	242	ntilde	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F2	243	ograve	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F3	244	oacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F4	245	ocircumflex	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F5	246	otilde	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F6	247	odieresis	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F7	248	divide	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F8	249	oslash	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00F9	250	ugrave	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00FA	251	uacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00FB	252	ucircumflex	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00FC	253	udieresis	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00FD	254	yacute	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00FE	255	thorn	896	128
+ProggyCleanTT	assets/decoded/font_blob_2_334610.ttf	U+00FF	256	ydieresis	896	128

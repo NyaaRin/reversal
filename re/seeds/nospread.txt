@@ -1,0 +1,29 @@
+# No-spread / compensation seeds, taken from inventory.tsv (string evidence) and
+# vtable_methods.tsv (class ownership).
+#
+# Seed / RNG
+0x180082310
+# SWCS no-spread path
+0x1800860c0
+# ARC9 spread direction (CalcSpreadDir / FireBullets cone)
+0x180086e00
+# ARC9 bullet physics / shotgun
+0x180088980
+# ARC9 lua tick offset calibration
+0x1800892f0
+# OCTO muzzle pitch fit
+0x1800a4c80
+# NS verification against the physical bullet
+0x1800df780
+# NoVisualRecoil punch verdict
+0x180104260
+# Cone / weapon spread math
+0x18007b7b0
+0x18007c5e0
+0x1800dd840
+# NospreadFeature virtual methods (CreateMove-era entry points)
+0x1800de9b0
+0x1800deb70
+0x1800de920
+0x1800e0950
+0x1800e0910

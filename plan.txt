@@ -1,0 +1,4 @@
+if possible i would like to completely reverse m64.dll so we can see the source and if we cant i would be fine with injecting our own code into it to rebrand it to Skyfall, and adding a auth to it along with adding it as a secondary gmod option named Skyfall in the Loader, also i would like it if we could rip its Nospread and compensation systems out and make them usuable source so that way we can read through it 
+
+
+however i would love if we could make m64 completely customizable/updatable eg if we can update the offsets and edit code as needed to keep it updated across versions and make our own full feature edits via completely reversing it to usable source 

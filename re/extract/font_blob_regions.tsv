@@ -1,0 +1,15 @@
+blob	region	file_offset	va	length	kind	evidence
+font_blob_0_30f5e0.bin	0	0x30f5e0	0x1803105e0	133406	stb-compress-stream	magic 57BC0000; 05 FA end marker; Adler-32 6f78226b; output 186228 bytes
+font_blob_0_30f5e0.bin	1	0x32fefe	0x180330efe	2	alignment-padding	zero fill to 16-byte boundary 0x32FF00
+font_blob_0_30f5e0.bin	2	0x32ff00	0x180330f00	6	font-glyph-ranges	ImWchar ranges {0xF000,0xF8FF,0}; FUN_1801EA560 sets GlyphRanges=&DAT_180330F00 and FUN_1802983A0 copies it
+font_blob_0_30f5e0.bin	3	0x32ff06	0x180330f06	58	static-rdata-header	58-byte static header; first dwords 0000000A 000741B0 000F0000 00000000; pointer 0x180343F08
+font_blob_0_30f5e0.bin	4	0x32ff40	0x180330f40	360	netvar-name-table	15 records of {name_ptr,var_ptr,len,0}; first DT_BaseEntity/m_vecOrigin[0]; last DT_BaseFlex/m_vecViewOffset[0]
+font_blob_0_30f5e0.bin	5	0x3300a8	0x1803310a8	3192	static-rdata-block	static .rdata block; head c8000000b80b00007800000006000000; no 57BC/zlib/gzip/LZMA/LZ4; sfnt/image magic hits fail validation
+font_blob_1_330d20.bin	0	0x330d20	0x180331d20	14562	stb-compress-stream	magic 57BC0000; 05 FA end marker; Adler-32 3078caf1; output 18556 bytes
+font_blob_1_330d20.bin	1	0x334602	0x180335602	14	alignment-padding	zero fill to 16-byte boundary 0x334610
+font_blob_2_334610.bin	0	0x334610	0x180335610	9583	stb-compress-stream	magic 57BC0000; 05 FA end marker; Adler-32 48f962f7; output 41208 bytes
+font_blob_2_334610.bin	1	0x336b7f	0x180337b7f	661121	pe-section:.rdata	PE section .rdata raw 0x30B000..0x3D8200
+font_blob_2_334610.bin	2	0x3d8200	0x1803da000	93696	pe-section:.data	PE section .data raw 0x3D8200..0x3EF000
+font_blob_2_334610.bin	3	0x3ef000	0x1805c9000	129536	pe-section:.pdata	PE section .pdata raw 0x3EF000..0x40EA00
+font_blob_2_334610.bin	4	0x40ea00	0x1805e9000	168960	pe-section:.rsrc	PE section .rsrc raw 0x40EA00..0x437E00
+font_blob_2_334610.bin	5	0x437e00	0x180613000	8192	pe-section:.reloc	PE section .reloc raw 0x437E00..0x439E00

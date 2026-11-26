@@ -1,0 +1,2 @@
+id	rva	va	size	guid	kind	context	static_present	refs	signature	note
+G001	n/a	0x276df0dba64	36	cca94594-1b09-4be8-b70f-c87bd9c04c93	text-guid	UPDATE ga_events SET status = 'new' WHERE status = 'cca94594-1b09-4be8-b70f-c87bd9c04c93';	no	0x3e9b98, 0x3e9ba0, 0x3e9ba8	63636139343539342d316230392d3462	GUID literal in runtime telemetry SQL

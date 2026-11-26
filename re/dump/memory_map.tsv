@@ -1,0 +1,9 @@
+name	start	end	initialized	perm
+Headers	0x180000000	0x1800003ff	true	r--
+.text	0x180001000	0x18030bbff	true	r-x
+.rdata	0x18030c000	0x1803d91ff	true	r--
+.data	0x1803da000	0x1805c8487	true	rw-
+.pdata	0x1805c9000	0x1805e89ff	true	r--
+.rsrc	0x1805e9000	0x1806123ff	true	r--
+.reloc	0x180613000	0x180614fff	true	r--
+tdb	0xff00000000	0xff0000184f	true	rw-

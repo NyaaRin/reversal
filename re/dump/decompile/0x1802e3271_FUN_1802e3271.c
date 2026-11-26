@@ -1,0 +1,14 @@
+// 0x1802e3271  FUN_1802e3271
+// size=33 thunk=false
+// signature: undefined FUN_1802e3271()
+// status: ok
+
+
+undefined8 FUN_1802e3271(undefined8 param_1,longlong param_2)
+
+{
+  *(undefined1 *)(param_2 + 0x7c) = 0;
+  return 0;
+}
+
+

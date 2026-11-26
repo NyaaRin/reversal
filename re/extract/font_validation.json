@@ -1,0 +1,437 @@
+[
+ {
+  "family": "Maven Pro",
+  "file": "assets/fonts/MavenPro-Black.ttf",
+  "size": 95584,
+  "md5": "21647836ff1972cfde867eaeba16a07a",
+  "sfnt_version": "0x00010000",
+  "num_tables": 18,
+  "units_per_em": 1000,
+  "glyphs": 722,
+  "cmap_mappings": 663,
+  "table_checksums_ok": true,
+  "checksum_adjustment_ok": true,
+  "tables": {
+   "DSIG": {
+    "checksum": 1,
+    "offset": 95576,
+    "length": 8
+   },
+   "GDEF": {
+    "checksum": 1367757385,
+    "offset": 300,
+    "length": 302
+   },
+   "GPOS": {
+    "checksum": 2630953469,
+    "offset": 604,
+    "length": 12506
+   },
+   "GSUB": {
+    "checksum": 4095341153,
+    "offset": 13112,
+    "length": 2544
+   },
+   "OS/2": {
+    "checksum": 1802020855,
+    "offset": 15656,
+    "length": 96
+   },
+   "cmap": {
+    "checksum": 3411015890,
+    "offset": 15752,
+    "length": 2522
+   },
+   "cvt ": {
+    "checksum": 240197925,
+    "offset": 91812,
+    "length": 142
+   },
+   "fpgm": {
+    "checksum": 1092521596,
+    "offset": 91956,
+    "length": 3437
+   },
+   "gasp": {
+    "checksum": 16,
+    "offset": 91804,
+    "length": 8
+   },
+   "glyf": {
+    "checksum": 3768275786,
+    "offset": 18276,
+    "length": 61404
+   },
+   "head": {
+    "checksum": 184138368,
+    "offset": 79680,
+    "length": 54
+   },
+   "hhea": {
+    "checksum": 106497788,
+    "offset": 79736,
+    "length": 36
+   },
+   "hmtx": {
+    "checksum": 189866737,
+    "offset": 79772,
+    "length": 2888
+   },
+   "loca": {
+    "checksum": 4026446396,
+    "offset": 82660,
+    "length": 1446
+   },
+   "maxp": {
+    "checksum": 68750930,
+    "offset": 84108,
+    "length": 32
+   },
+   "name": {
+    "checksum": 6119141,
+    "offset": 84140,
+    "length": 1916
+   },
+   "post": {
+    "checksum": 988145399,
+    "offset": 86056,
+    "length": 5748
+   },
+   "prep": {
+    "checksum": 1710437172,
+    "offset": 95396,
+    "length": 177
+   }
+  }
+ },
+ {
+  "family": "Nexa Book",
+  "file": "assets/fonts/Nexa-Book.ttf",
+  "size": 72724,
+  "md5": "a51b9120d0d61b3f5fce535f729eb8c7",
+  "sfnt_version": "0x00010000",
+  "num_tables": 15,
+  "units_per_em": 1000,
+  "glyphs": 500,
+  "cmap_mappings": 420,
+  "table_checksums_ok": true,
+  "checksum_adjustment_ok": true,
+  "tables": {
+   "FFTM": {
+    "checksum": 1858313227,
+    "offset": 72696,
+    "length": 28
+   },
+   "GDEF": {
+    "checksum": 55903511,
+    "offset": 52016,
+    "length": 42
+   },
+   "GPOS": {
+    "checksum": 198757304,
+    "offset": 54192,
+    "length": 18502
+   },
+   "GSUB": {
+    "checksum": 3713680753,
+    "offset": 52060,
+    "length": 2130
+   },
+   "OS/2": {
+    "checksum": 2266779102,
+    "offset": 376,
+    "length": 96
+   },
+   "cmap": {
+    "checksum": 2064381239,
+    "offset": 2472,
+    "length": 958
+   },
+   "gasp": {
+    "checksum": 4294901763,
+    "offset": 52008,
+    "length": 8
+   },
+   "glyf": {
+    "checksum": 1061265361,
+    "offset": 4436,
+    "length": 42872
+   },
+   "head": {
+    "checksum": 4226529429,
+    "offset": 252,
+    "length": 54
+   },
+   "hhea": {
+    "checksum": 111019212,
+    "offset": 308,
+    "length": 36
+   },
+   "hmtx": {
+    "checksum": 1000760350,
+    "offset": 472,
+    "length": 2000
+   },
+   "loca": {
+    "checksum": 3570772700,
+    "offset": 3432,
+    "length": 1002
+   },
+   "maxp": {
+    "checksum": 37552214,
+    "offset": 344,
+    "length": 32
+   },
+   "name": {
+    "checksum": 1755605504,
+    "offset": 47308,
+    "length": 1215
+   },
+   "post": {
+    "checksum": 714583911,
+    "offset": 48524,
+    "length": 3483
+   }
+  }
+ },
+ {
+  "family": "Font Awesome 5 Free Solid",
+  "file": "assets/decoded/font_blob_0_30f5e0.ttf",
+  "size": 186228,
+  "md5": "22374fd5e844b7fe204a4f51329286dd",
+  "sfnt_version": "0x00010000",
+  "num_tables": 13,
+  "units_per_em": 512,
+  "glyphs": 938,
+  "cmap_mappings": 935,
+  "table_checksums_ok": true,
+  "checksum_adjustment_ok": true,
+  "tables": {
+   "FFTM": {
+    "checksum": 2305913022,
+    "offset": 186200,
+    "length": 28
+   },
+   "GDEF": {
+    "checksum": 2753456,
+    "offset": 186168,
+    "length": 30
+   },
+   "OS/2": {
+    "checksum": 1132717452,
+    "offset": 344,
+    "length": 96
+   },
+   "cmap": {
+    "checksum": 1094077698,
+    "offset": 4188,
+    "length": 2826
+   },
+   "gasp": {
+    "checksum": 4294901763,
+    "offset": 186160,
+    "length": 8
+   },
+   "glyf": {
+    "checksum": 2736837155,
+    "offset": 10772,
+    "length": 162452
+   },
+   "head": {
+    "checksum": 335151400,
+    "offset": 220,
+    "length": 54
+   },
+   "hhea": {
+    "checksum": 71501320,
+    "offset": 276,
+    "length": 36
+   },
+   "hmtx": {
+    "checksum": 812974789,
+    "offset": 440,
+    "length": 3748
+   },
+   "loca": {
+    "checksum": 70126736,
+    "offset": 7016,
+    "length": 3756
+   },
+   "maxp": {
+    "checksum": 67895532,
+    "offset": 312,
+    "length": 32
+   },
+   "name": {
+    "checksum": 1236480718,
+    "offset": 173224,
+    "length": 1317
+   },
+   "post": {
+    "checksum": 2407188145,
+    "offset": 174544,
+    "length": 11615
+   }
+  }
+ },
+ {
+  "family": ".",
+  "file": "assets/decoded/font_blob_1_330d20.ttf",
+  "size": 18556,
+  "md5": "3ae09ad21ea42d6a94a691910aae2049",
+  "sfnt_version": "0x00010000",
+  "num_tables": 14,
+  "units_per_em": 1000,
+  "glyphs": 192,
+  "cmap_mappings": 190,
+  "table_checksums_ok": true,
+  "checksum_adjustment_ok": true,
+  "tables": {
+   "FFTM": {
+    "checksum": 2960109246,
+    "offset": 18528,
+    "length": 28
+   },
+   "GDEF": {
+    "checksum": 8913001,
+    "offset": 18496,
+    "length": 30
+   },
+   "OS/2": {
+    "checksum": 1751192514,
+    "offset": 360,
+    "length": 96
+   },
+   "cmap": {
+    "checksum": 2980961675,
+    "offset": 848,
+    "length": 370
+   },
+   "cvt ": {
+    "checksum": 2163321,
+    "offset": 1220,
+    "length": 4
+   },
+   "gasp": {
+    "checksum": 4294901763,
+    "offset": 18488,
+    "length": 8
+   },
+   "glyf": {
+    "checksum": 4025838799,
+    "offset": 1612,
+    "length": 16096
+   },
+   "head": {
+    "checksum": 741947907,
+    "offset": 236,
+    "length": 54
+   },
+   "hhea": {
+    "checksum": 71172326,
+    "offset": 292,
+    "length": 36
+   },
+   "hmtx": {
+    "checksum": 404099979,
+    "offset": 456,
+    "length": 392
+   },
+   "loca": {
+    "checksum": 1342783602,
+    "offset": 1224,
+    "length": 386
+   },
+   "maxp": {
+    "checksum": 17236107,
+    "offset": 328,
+    "length": 32
+   },
+   "name": {
+    "checksum": 178298775,
+    "offset": 17708,
+    "length": 324
+   },
+   "post": {
+    "checksum": 1179496445,
+    "offset": 18032,
+    "length": 453
+   }
+  }
+ },
+ {
+  "family": "ProggyCleanTT",
+  "file": "assets/decoded/font_blob_2_334610.ttf",
+  "size": 41208,
+  "md5": "361ffa4ca82d2a1841d178464353e955",
+  "sfnt_version": "0x00010000",
+  "num_tables": 12,
+  "units_per_em": 2048,
+  "glyphs": 257,
+  "cmap_mappings": 256,
+  "table_checksums_ok": true,
+  "checksum_adjustment_ok": true,
+  "tables": {
+   "OS/2": {
+    "checksum": 2297132176,
+    "offset": 328,
+    "length": 78
+   },
+   "cmap": {
+    "checksum": 34743157,
+    "offset": 928,
+    "length": 338
+   },
+   "cvt ": {
+    "checksum": 0,
+    "offset": 1276,
+    "length": 2
+   },
+   "glyf": {
+    "checksum": 313493846,
+    "offset": 1796,
+    "length": 37504
+   },
+   "head": {
+    "checksum": 3616630483,
+    "offset": 204,
+    "length": 54
+   },
+   "hhea": {
+    "checksum": 138543555,
+    "offset": 260,
+    "length": 36
+   },
+   "hmtx": {
+    "checksum": 2315288192,
+    "offset": 408,
+    "length": 518
+   },
+   "loca": {
+    "checksum": 2356392152,
+    "offset": 1280,
+    "length": 516
+   },
+   "maxp": {
+    "checksum": 28180698,
+    "offset": 296,
+    "length": 32
+   },
+   "name": {
+    "checksum": 626637718,
+    "offset": 39300,
+    "length": 414
+   },
+   "post": {
+    "checksum": 2796323823,
+    "offset": 39716,
+    "length": 1490
+   },
+   "prep": {
+    "checksum": 1761739026,
+    "offset": 1268,
+    "length": 8
+   }
+  }
+ }
+]
