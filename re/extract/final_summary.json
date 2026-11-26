@@ -1,12 +1,11 @@
 {
- "functions": 7654,
- "functions_no_decompile": 650,
- "functions_thunks": 109,
+ "functions": 7656,
+ "functions_no_decompile": 0,
+ "functions_thunks": 110,
  "signatures": 4259,
  "function_prologue_patterns": 4238,
  "interfaces": 27,
  "icons": 20,
- "tsvs": 31,
  "runtime": {
   "regions": 340,
   "region_classes": {
@@ -48,7 +47,8 @@
   "interfaces_resolved": 27,
   "interfaces_call_site_only": 16
  },
- "runtime_tsvs": 8,
+ "runtime_closures": 5,
  "runtime_summary_md5": "abbb14adda90d57c3155b0571a86beac",
- "runtime_closures": 5
+ "runtime_tsvs": 8,
+ "tsvs": 31
 }

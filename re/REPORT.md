@@ -19,7 +19,7 @@ Stage 0. Inferences are marked as such.
 | Sections | `.text`, `.rdata`, `.data`, `.pdata`, `.rsrc`, `.reloc` |
 | Exports | none |
 | TLS | present (TLS directory + callbacks) |
-| Functions recovered | 7,654 (109 thunks) |
+| Functions recovered | 7,656 (110 thunks) |
 | Strings | 60,550 raw, 7,035 defined |
 | RTTI classes | 159 |
 | Internal brand | **mayrrX64** (30 strings; "Skyfall" does not appear in the image) |
@@ -158,7 +158,7 @@ for the offset database in Stage 4.
 
 | File | Contents |
 |------|----------|
-| `dump/inventory.tsv` | 7,654 functions: address, size, caller count, name, string hits, sample strings |
+| `dump/inventory.tsv` | 7,656 functions: address, size, caller count, name, string hits, sample strings |
 | `dump/strings_by_function.tsv` | every string→function edge (this is how unnamed functions get identified) |
 | `dump/vtable_methods.tsv` | every vtable slot: class, slot index, target, name applied |
 | `dump/datatypes.tsv` | recovered structures/classes |

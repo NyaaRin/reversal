@@ -78,12 +78,12 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180012bf0	474	7	false	FUN_180012bf0	0	
 0x180012dd0	51	0	false	FUN_180012dd0	0	
 0x180012e10	30	0	false	FUN_180012e10	0	
-0x180012e30	19	0	false	FUN_180012e30	1	Unknown exception
-0x180012e50	67	0	false	FUN_180012e50	0	
-0x180012ea0	72	0	false	FUN_180012ea0	0	
+0x180012e30	19	0	false	vfunc_shared_180012e30	1	Unknown exception
+0x180012e50	67	0	false	std_exception_vfunc00	0	
+0x180012ea0	72	0	false	vfunc_shared_180012ea0	0	
 0x180012ef0	35	0	false	FUN_180012ef0	0	
 0x180012f20	58	1	false	FUN_180012f20	1	bad array new length
-0x180012f60	72	0	false	FUN_180012f60	0	
+0x180012f60	72	0	false	vfunc_shared_180012f60	0	
 0x180012fb0	35	0	false	FUN_180012fb0	0	
 0x180012fe0	31	177	false	FUN_180012fe0	0	
 0x180013000	76	0	false	FUN_180013000	0	
@@ -92,44 +92,44 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800130c0	56	2	false	FUN_1800130c0	0	
 0x180013100	120	1	false	FUN_180013100	1	Invalid module passed.
 0x180013180	66	0	false	FUN_180013180	0	
-0x1800131d0	11	0	false	FUN_1800131d0	0	
-0x1800131e0	63	0	false	FUN_1800131e0	0	
-0x180013220	25	0	false	FUN_180013220	0	
+0x1800131d0	11	0	false	std__Generic_error_category_vfunc03	0	
+0x1800131e0	63	0	false	vfunc_shared_1800131e0	0	
+0x180013220	25	0	false	vfunc_shared_180013220	0	
 0x180013240	17	1	false	FUN_180013240	0	
-0x180013260	72	0	false	FUN_180013260	0	
+0x180013260	72	0	false	std__System_error_vfunc00	0	
 0x1800132b0	241	2	false	FUN_1800132b0	0	
 0x1800133b0	392	2	false	FUN_1800133b0	0	
-0x180013540	72	0	false	FUN_180013540	0	
+0x180013540	72	0	false	std_system_error_vfunc00	0	
 0x180013590	35	0	false	FUN_180013590	0	
 0x1800135c0	56	4	false	FUN_1800135c0	0	
 0x180013600	104	0	false	FUN_180013600	0	
 0x180013670	94	0	false	FUN_180013670	0	
-0x1800136e0	8	0	false	FUN_1800136e0	1	generic
-0x1800136f0	105	0	false	FUN_1800136f0	0	
-0x180013760	33	1	false	FUN_180013760	0	
-0x180013790	8	0	false	FUN_180013790	1	system
-0x1800137a0	186	0	false	FUN_1800137a0	1	unknown error
-0x180013860	115	0	false	FUN_180013860	0	
+0x1800136e0	8	0	false	std__Generic_error_category_vfunc01	1	generic
+0x1800136f0	105	0	false	std__Generic_error_category_vfunc02	0	
+0x180013760	33	1	false	vfunc_shared_180013760	0	
+0x180013790	8	0	false	std__System_error_category_vfunc01	1	system
+0x1800137a0	186	0	false	std__System_error_category_vfunc02	1	unknown error
+0x180013860	115	0	false	std__System_error_category_vfunc03	0	
 0x1800138e0	17	3	false	FUN_1800138e0	0	
 0x180013900	56	4	false	FUN_180013900	0	
 0x180013940	48	1	false	FUN_180013940	1	bad cast
 0x180013970	31	2	false	FUN_180013970	0	
 0x180013990	66	0	false	FUN_180013990	0	
-0x1800139e0	3	1	false	FUN_1800139e0	0	
+0x1800139e0	3	1	false	vfunc_shared_1800139e0	0	
 0x1800139f0	47	0	false	FUN_1800139f0	0	
 0x180013a20	256	1	false	FUN_180013a20	0	
 0x180013b80	18	23	false	FUN_180013b80	1	map/set too long
 0x180013ba0	258	32	false	FUN_180013ba0	0	
 0x180013cb0	190	2	false	FUN_180013cb0	0	
 0x180013d70	206	5	false	FUN_180013d70	0	
-0x180013e50	43	0	false	FUN_180013e50	0	
-0x180013e80	47	0	false	FUN_180013e80	0	
-0x180013eb0	47	0	false	FUN_180013eb0	0	
-0x180013ee0	117	0	false	FUN_180013ee0	0	
-0x180013f60	47	0	false	FUN_180013f60	0	
-0x180013f90	153	0	false	FUN_180013f90	0	
-0x180014030	47	0	false	FUN_180014030	0	
-0x180014060	8	0	false	FUN_180014060	1	Bad any_cast
+0x180013e50	43	0	false	std__Node_base_vfunc00	0	
+0x180013e80	47	0	false	std__Root_node_vfunc00	0	
+0x180013eb0	47	0	false	vfunc_shared_180013eb0	0	
+0x180013ee0	117	0	false	std__Node_assert_vfunc00	0	
+0x180013f60	47	0	false	std__Node_endif_vfunc00	0	
+0x180013f90	153	0	false	std__Node_if_vfunc00	0	
+0x180014030	47	0	false	std__Node_rep_vfunc00	0	
+0x180014060	8	0	false	std_bad_any_cast_vfunc01	1	Bad any_cast
 0x180014070	46	15	false	FUN_180014070	0	
 0x1800140a0	58	1	false	FUN_1800140a0	1	bad cast
 0x1800140e0	76	0	false	FUN_1800140e0	0	
@@ -142,8 +142,8 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180014520	1290	1	false	FUN_180014520	29	write | user-mode data execution prevention (DEP) violation | unknown | EXCEPTION_ACCESS_VIOLATION | EXCEPTION_ARRAY_BOUNDS_EXCEEDED | EXCEPTION_BREAKPOINT | EXCEPTION_DATATYPE_MISALIGNMENT | EXCEPTION_FLT_DENORMAL_OPERAND | +21
 0x180014b70	140	1	false	FUN_180014b70	0	
 0x180014c00	43	1	false	FUN_180014c00	0	
-0x180014c30	56	0	false	FUN_180014c30	0	
-0x180014c70	72	0	false	FUN_180014c70	0	
+0x180014c30	56	0	false	SE_Exception_vfunc01	0	
+0x180014c70	72	0	false	SE_Exception_vfunc00	0	
 0x180014cc0	19	0	false	FUN_180014cc0	0	
 0x180014ce0	36	0	false	FUN_180014ce0	0	
 0x180014d10	90	0	false	FUN_180014d10	0	
@@ -216,12 +216,12 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18001b8a0	191	2	false	FUN_18001b8a0	0	
 0x18001b960	346	1	false	FUN_18001b960	0	
 0x18001bac0	229	1	false	FUN_18001bac0	0	
-0x18001bbb0	10	0	false	FUN_18001bbb0	0	
-0x18001bbc0	22	0	false	FUN_18001bbc0	0	
-0x18001bbe0	124	0	false	FUN_18001bbe0	0	
+0x18001bbb0	10	0	false	CUtlNoEscConversion_vfunc00	0	
+0x18001bbc0	22	0	false	CUtlCStringConversion_vfunc00	0	
+0x18001bbe0	124	0	false	CUtlCharConversion_vfunc00	0	
 0x18001bc60	98	33	false	FUN_18001bc60	0	
 0x18001bcd0	161	64	false	FUN_18001bcd0	0	
-0x18001bd90	43	0	false	FUN_18001bd90	0	
+0x18001bd90	43	0	false	INetMessage_vfunc00	0	
 0x18001bdc0	34	1	false	FUN_18001bdc0	0	
 0x18001bdf0	247	2	false	FUN_18001bdf0	0	
 0x18001bef0	233	8	false	FUN_18001bef0	2	DT_BaseEntity | m_Collision
@@ -255,7 +255,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18001e0a0	271	19	false	FUN_18001e0a0	2	DT_BaseEntity | m_iParentAttachment
 0x18001e1b0	252	2	false	FUN_18001e1b0	1	[PUSH] native PushEntity(vt174) verified: +1 ENTITY, no Lua executed 
 0x18001e2b0	301	69	false	FUN_18001e2b0	1	Entity
-0x18001e3e0	3	16	false	_guard_check_icall	0	
+0x18001e3e0	3	16	false	vfunc_shared_18001e3e0	0	
 0x18001e3f0	30	2	false	FUN_18001e3f0	0	
 0x18001e410	198	19	false	FUN_18001e410	2	client.dll | E8 ? ? ? ? 4D 8B 47 10
 0x18001e4e0	201	21	false	FUN_18001e4e0	1	CWeaponSWEP
@@ -277,11 +277,11 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18001fcf0	230	9	false	FUN_18001fcf0	2	DT_GMOD_Player | m_nWaterLevel
 0x18001fde0	169	9	false	FUN_18001fde0	0	
 0x18001fe90	376	4	false	FUN_18001fe90	0	
-0x180020010	3	2	false	FUN_180020010	0	
-0x180020020	8	0	false	FUN_180020020	0	
-0x180020030	18	0	false	FUN_180020030	0	
-0x180020050	24	0	false	FUN_180020050	0	
-0x180020080	43	0	false	FUN_180020080	0	
+0x180020010	3	2	false	vfunc_shared_180020010	0	
+0x180020020	8	0	false	CTraceFilter_vfunc00	0	
+0x180020030	18	0	false	CDoubleTraceFilter_vfunc00	0	
+0x180020050	24	0	false	CTripleTraceFilter_vfunc00	0	
+0x180020080	43	0	false	IGameEventListener_vfunc00	0	
 0x1800200b0	464	2	false	FUN_1800200b0	6	client.dll | 48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 30 48 89 91 28 03 00 00 | 4C 8B DC 49 89 5B 18 49 89 6B 20 57 48 81 EC 90 00 00 00 8B 81 14 03 00 00 | 48 83 79 10 00 74 09 48 C7 41 10 00 00 00 00 C3 48 83 C1 20 | [PAT] BeamSeg Start=%p NextSeg=%p End=%p  | [PAT-WARN] CBeamSegDraw x64 incomplete 
 0x180020280	353	3	false	FUN_180020280	1	Model textures
 0x1800203f0	894	3	false	FUN_1800203f0	0	
@@ -990,9 +990,9 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180066a70	90	2	false	FUN_180066a70	0	
 0x180066ad0	178	2	false	FUN_180066ad0	1	Unknown exception
 0x180066b90	231	2	false	FUN_180066b90	1	Unknown exception
-0x180066c80	15	0	false	FUN_180066c80	0	
+0x180066c80	15	0	false	std_filesystem_filesystem_error_vfunc01	0	
 0x180066c90	473	1	false	FUN_180066c90	0	
-0x180066e70	112	0	false	FUN_180066e70	0	
+0x180066e70	112	0	false	std_filesystem_filesystem_error_vfunc00	0	
 0x180066ee0	80	0	false	FUN_180066ee0	0	
 0x180066f30	88	1	false	FUN_180066f30	1	directory_iterator::operator++
 0x180066f90	166	0	false	FUN_180066f90	0	
@@ -1064,8 +1064,8 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18006da40	35	5	false	FUN_18006da40	0	
 0x18006da70	58	2	false	FUN_18006da70	0	
 0x18006dac0	30	1	false	FUN_18006dac0	0	
-0x18006daf0	78	0	false	FUN_18006daf0	0	
-0x18006db50	47	0	false	FUN_18006db50	0	
+0x18006daf0	78	0	false	Core_GameEvents_Sink_vfunc01	0	
+0x18006db50	47	0	false	Core_GameEvents_Sink_vfunc00	0	
 0x18006db80	16	0	false	FUN_18006db80	0	
 0x18006db90	803	2	false	FUN_18006db90	4	armed | REFUSED | [GAMEEVENT] '%s' listener %s (%d descriptors, in-game=%d)  | [GAMEEVENT] '%s' listener released 
 0x18006df10	59	3	false	FUN_18006df10	0	
@@ -1134,13 +1134,13 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180075ea0	241	2	false	FUN_180075ea0	0	
 0x180075fa0	915	1	false	FUN_180075fa0	0	
 0x180076340	59	2	false	FUN_180076340	1	CWeaponSWEP
-0x180076380	10	0	false	FUN_180076380	0	
-0x180076390	3	5	false	FUN_180076390	0	
-0x1800763a0	83	0	false	FUN_1800763a0	0	
+0x180076380	10	0	false	vfunc_shared_180076380	0	
+0x180076390	3	5	false	vfunc_shared_180076390	0	
+0x1800763a0	83	0	false	vfunc_shared_1800763a0	0	
 0x180076400	97	3	false	FUN_180076400	0	
-0x180076470	38	0	false	FUN_180076470	0	
-0x1800764a0	4	0	false	FUN_1800764a0	0	
-0x1800764b0	9	0	false	FUN_1800764b0	0	
+0x180076470	38	0	false	vfunc_shared_180076470	0	
+0x1800764a0	4	0	false	vfunc_shared_1800764a0	0	
+0x1800764b0	9	0	false	vfunc_shared_1800764b0	0	
 0x1800764c0	630	1	false	FUN_1800764c0	2	weapons | GetStored
 0x180076750	147	21	false	FUN_180076750	0	
 0x180076800	109	1	false	FUN_180076800	2	gmod_camera | gmod_tool
@@ -1149,144 +1149,144 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180076a40	190	3	false	FUN_180076a40	0	
 0x180076b00	79	1	false	FUN_180076b00	0	
 0x180076b50	3172	5	false	FUN_180076b50	4	CWeaponSWEP | class  | CBaseEntity | [UpdateCache] Backends: %d, Base: '%s', Class: '%s', Matched: %s 
-0x180077880	8	0	false	FUN_180077880	1	Generic
-0x180077890	276	1	false	FUN_180077890	0	
-0x1800779b0	12	0	false	FUN_1800779b0	0	
-0x1800779c0	764	0	false	FUN_1800779c0	0	
-0x180077cc0	816	0	false	FUN_180077cc0	2	Primary | Automatic
-0x180077ff0	75	0	false	FUN_180077ff0	0	
-0x180078040	8	0	false	FUN_180078040	0	
-0x180078050	22	0	false	FUN_180078050	0	
+0x180077880	8	0	false	Features_Weapons_Backends_GenericWeaponBackend_vfunc00	1	Generic
+0x180077890	276	1	false	vfunc_shared_180077890	0	
+0x1800779b0	12	0	false	vfunc_shared_1800779b0	0	
+0x1800779c0	764	0	false	vfunc_shared_1800779c0	0	
+0x180077cc0	816	0	false	vfunc_shared_180077cc0	2	Primary | Automatic
+0x180077ff0	75	0	false	Features_Weapons_Backends_HL2WeaponBackend_vfunc01	0	
+0x180078040	8	0	false	Features_Weapons_Backends_HL2WeaponBackend_vfunc00	0	
+0x180078050	22	0	false	Features_Weapons_Backends_HL2WeaponBackend_vfunc02	0	
 0x180078070	338	1	false	FUN_180078070	2	DT_WeaponPistol | m_flAccuracyPenalty
-0x1800781d0	287	0	false	FUN_1800781d0	1	weapon_pistol
-0x180078300	193	0	false	FUN_180078300	2	weapon_pistol | weapon_357
-0x1800783d0	329	0	false	FUN_1800783d0	0	
+0x1800781d0	287	0	false	Features_Weapons_Backends_HL2WeaponBackend_vfunc32	1	weapon_pistol
+0x180078300	193	0	false	vfunc_shared_180078300	2	weapon_pistol | weapon_357
+0x1800783d0	329	0	false	vfunc_shared_1800783d0	0	
 0x180078520	1125	2	false	FUN_180078520	1	randomseed
-0x1800789a0	8	0	false	FUN_1800789a0	0	
-0x1800789b0	9	0	false	FUN_1800789b0	0	
-0x1800789c0	175	0	false	FUN_1800789c0	0	
-0x180078a70	389	0	false	FUN_180078a70	0	
-0x180078c00	946	2	false	FUN_180078c00	4	CurCone | MaxSpreadInc | ViewAff | LastView
-0x180078fc0	121	0	false	FUN_180078fc0	0	
-0x180079040	538	1	false	FUN_180079040	2	vstdlib.dll | RandomFloat
-0x180079260	561	0	false	FUN_180079260	1	FireMode
-0x1800794a0	1533	1	false	FUN_1800794a0	3	CurCone | ViewAff | [CW20-DIAG] cone(cached=%.4f proj=%.4f live=%.4f) viewaff(cached=%.4f live=%.4f) maxinc=%.3f | rcs=%d nvr=(%.3f,%.3f) punchNow=(%.3f,%.3f) drift=(%.3f,%.3f) 
-0x180079b30	76	0	false	FUN_180079b30	0	
-0x180079b80	8	0	false	FUN_180079b80	0	
+0x1800789a0	8	0	false	Features_Weapons_Backends_CW20WeaponBackend_vfunc00	0	
+0x1800789b0	9	0	false	vfunc_shared_1800789b0	0	
+0x1800789c0	175	0	false	vfunc_shared_1800789c0	0	
+0x180078a70	389	0	false	Features_Weapons_Backends_CW20WeaponBackend_vfunc02	0	
+0x180078c00	946	2	false	vfunc_shared_180078c00	4	CurCone | MaxSpreadInc | ViewAff | LastView
+0x180078fc0	121	0	false	vfunc_shared_180078fc0	0	
+0x180079040	538	1	false	vfunc_shared_180079040	2	vstdlib.dll | RandomFloat
+0x180079260	561	0	false	vfunc_shared_180079260	1	FireMode
+0x1800794a0	1533	1	false	vfunc_shared_1800794a0	3	CurCone | ViewAff | [CW20-DIAG] cone(cached=%.4f proj=%.4f live=%.4f) viewaff(cached=%.4f live=%.4f) maxinc=%.3f | rcs=%d nvr=(%.3f,%.3f) punchNow=(%.3f,%.3f) drift=(%.3f,%.3f) 
+0x180079b30	76	0	false	Features_Weapons_Backends_CWBaseWeaponBackend_vfunc34	0	
+0x180079b80	8	0	false	Features_Weapons_Backends_CWBaseWeaponBackend_vfunc36	0	
 0x180079b90	494	1	false	FUN_180079b90	0	
-0x180079d80	8	0	false	FUN_180079d80	0	
-0x180079d90	214	0	false	FUN_180079d90	0	
-0x180079e70	933	0	false	FUN_180079e70	3	ViewAff | LastView | AddSpread
-0x18007a240	423	0	false	FUN_18007a240	0	
-0x18007a3f0	814	0	false	FUN_18007a3f0	1	ViewAff
-0x18007a750	1458	0	false	FUN_18007a750	3	ViewAff | AddSpread | [%s-DIAG] lerp(measured=%.4f default=%.4f used=%.4f) snapscale=%.3f viewaff(cached=%.5f proj=%.5f live=%.5f snap=%.5f needed=%.5f) addspread(prev=%.5f cached=%.5f live=%.5f step=%.5f) seen=%d 
-0x18007ad60	9	0	false	FUN_18007ad60	0	
-0x18007ad70	8	0	false	FUN_18007ad70	0	
-0x18007ad80	171	0	false	FUN_18007ad80	0	
+0x180079d80	8	0	false	Features_Weapons_Backends_CWBaseWeaponBackend_vfunc00	0	
+0x180079d90	214	0	false	Features_Weapons_Backends_CWBaseWeaponBackend_vfunc02	0	
+0x180079e70	933	0	false	vfunc_shared_180079e70	3	ViewAff | LastView | AddSpread
+0x18007a240	423	0	false	vfunc_shared_18007a240	0	
+0x18007a3f0	814	0	false	vfunc_shared_18007a3f0	1	ViewAff
+0x18007a750	1458	0	false	vfunc_shared_18007a750	3	ViewAff | AddSpread | [%s-DIAG] lerp(measured=%.4f default=%.4f used=%.4f) snapscale=%.3f viewaff(cached=%.5f proj=%.5f live=%.5f snap=%.5f needed=%.5f) addspread(prev=%.5f cached=%.5f live=%.5f step=%.5f) seen=%d 
+0x18007ad60	9	0	false	Features_Weapons_Backends_SWBWeaponBackend_vfunc34	0	
+0x18007ad70	8	0	false	vfunc_shared_18007ad70	0	
+0x18007ad80	171	0	false	Features_Weapons_Backends_SWBWeaponBackend_vfunc02	0	
 0x18007ae30	261	2	false	FUN_18007ae30	0	
 0x18007af40	1570	1	false	FUN_18007af40	1	randomseed
-0x18007b580	8	0	false	FUN_18007b580	0	
+0x18007b580	8	0	false	Features_Weapons_Backends_UTSWBWeaponBackend_vfunc00	0	
 0x18007b590	138	1	false	FUN_18007b590	0	
-0x18007b620	122	0	false	FUN_18007b620	1	sv_ut_swb_bullet_debug
-0x18007b6a0	272	0	false	FUN_18007b6a0	1	sv_ut_swb_bullet_debug
-0x18007b7b0	2114	0	false	FUN_18007b7b0	16	CurCone | MaxSpreadInc | ViewAff | LastView | sv_ut_swb_bullet_debug | IsM9KRework | _curSpreadCone | BaseSpreadMultiplier | +8
-0x18007c030	168	0	false	FUN_18007c030	0	
-0x18007c0e0	1272	0	false	FUN_18007c0e0	2	vstdlib.dll | RandomFloat
-0x18007c5e0	1116	0	false	FUN_18007c5e0	9	CurCone | ViewAff | sv_ut_swb_bullet_debug | _curSpreadCone | swb_ViewAff | legacy | [UTSWB-DIAG] NOT CONFIRMED (convar=%d) -- stock CW20 fallback active  | [UTSWB] seed calibrated: offset now %d ticks  | +1
-0x18007ca80	117	0	false	FUN_18007ca80	0	
-0x18007cb00	8	0	false	FUN_18007cb00	0	
-0x18007cb10	76	0	false	FUN_18007cb10	0	
-0x18007cb60	400	0	false	FUN_18007cb60	1	GetPrimaryCone
-0x18007cd00	25	0	false	FUN_18007cd00	0	
-0x18007cd20	8	0	false	FUN_18007cd20	0	
+0x18007b620	122	0	false	Features_Weapons_Backends_UTSWBWeaponBackend_vfunc01	1	sv_ut_swb_bullet_debug
+0x18007b6a0	272	0	false	Features_Weapons_Backends_UTSWBWeaponBackend_vfunc02	1	sv_ut_swb_bullet_debug
+0x18007b7b0	2114	0	false	Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	16	CurCone | MaxSpreadInc | ViewAff | LastView | sv_ut_swb_bullet_debug | IsM9KRework | _curSpreadCone | BaseSpreadMultiplier | +8
+0x18007c030	168	0	false	Features_Weapons_Backends_UTSWBWeaponBackend_vfunc33	0	
+0x18007c0e0	1272	0	false	Features_Weapons_Backends_UTSWBWeaponBackend_vfunc04	2	vstdlib.dll | RandomFloat
+0x18007c5e0	1116	0	false	Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	9	CurCone | ViewAff | sv_ut_swb_bullet_debug | _curSpreadCone | swb_ViewAff | legacy | [UTSWB-DIAG] NOT CONFIRMED (convar=%d) -- stock CW20 fallback active  | [UTSWB] seed calibrated: offset now %d ticks  | +1
+0x18007ca80	117	0	false	Features_Weapons_Backends_TTTWeaponBackend_vfunc01	0	
+0x18007cb00	8	0	false	Features_Weapons_Backends_TTTWeaponBackend_vfunc00	0	
+0x18007cb10	76	0	false	Features_Weapons_Backends_TTTWeaponBackend_vfunc02	0	
+0x18007cb60	400	0	false	Features_Weapons_Backends_TTTWeaponBackend_vfunc25	1	GetPrimaryCone
+0x18007cd00	25	0	false	vfunc_shared_18007cd00	0	
+0x18007cd20	8	0	false	vfunc_shared_18007cd20	0	
 0x18007cd30	271	2	false	FUN_18007cd30	0	
 0x18007ce40	296	1	false	FUN_18007ce40	1	weapon_m9k
-0x18007cf70	111	0	false	FUN_18007cf70	0	
-0x18007cfe0	121	0	false	FUN_18007cfe0	0	
+0x18007cf70	111	0	false	Features_Weapons_Backends_M9KWeaponBackend_vfunc01	0	
+0x18007cfe0	121	0	false	Features_Weapons_Backends_M9KWeaponBackend_vfunc02	0	
 0x18007d060	1036	1	false	FUN_18007d060	1	Primary
 0x18007d480	922	1	false	FUN_18007d480	3	GetNWBool | Ironsights | M9K_Ironsights
-0x18007d830	223	0	false	FUN_18007d830	4	Automatic | IronAccuracy | Spread | HipCone
-0x18007d910	411	0	false	FUN_18007d910	0	
-0x18007dad0	29	0	false	FUN_18007dad0	0	
+0x18007d830	223	0	false	Features_Weapons_Backends_M9KWeaponBackend_vfunc25	4	Automatic | IronAccuracy | Spread | HipCone
+0x18007d910	411	0	false	Features_Weapons_Backends_M9KWeaponBackend_vfunc32	0	
+0x18007dad0	29	0	false	Features_Weapons_Backends_M9KWeaponBackend_vfunc09	0	
 0x18007daf0	195	5	false	FUN_18007daf0	0	
 0x18007dbc0	330	1	false	FUN_18007dbc0	2	GetNWBool | Ironsights
 0x18007dd10	266	1	false	FUN_18007dd10	0	
-0x18007de20	8	0	false	FUN_18007de20	0	
+0x18007de20	8	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc00	0	
 0x18007de30	261	3	false	FUN_18007de30	2	ptp_weapon_base | ptp_scoped_base
-0x18007df40	62	0	false	FUN_18007df40	0	
-0x18007df80	279	0	false	FUN_18007df80	0	
-0x18007e0a0	92	0	false	FUN_18007e0a0	0	
-0x18007e100	1059	0	false	FUN_18007e100	11	Primary | ptp_scoped_base | StandCone | WalkCone | CrouchCone | CrouchWalkCone | AirCone | IronSightsCone | +3
-0x18007e530	135	0	false	FUN_18007e530	0	
-0x18007e5c0	363	0	false	FUN_18007e5c0	3	shotgun | scoped | [PTP] cone=%.5f derived=%d live=%.5f iron=%d dead=%d ground=%d dialect=%s 
-0x18007e730	35	0	false	FUN_18007e730	0	
-0x18007e760	44	0	false	FUN_18007e760	0	
-0x18007e790	315	0	false	FUN_18007e790	0	
-0x18007e8d0	8	0	false	FUN_18007e8d0	1	HVH2/CSS
-0x18007e8e0	111	0	false	FUN_18007e8e0	0	
-0x18007e950	788	0	false	FUN_18007e950	3	Primary | Spread | css_m249
-0x18007ec80	104	0	false	FUN_18007ec80	0	
-0x18007ecf0	102	0	false	FUN_18007ecf0	0	
-0x18007ed60	8	0	false	FUN_18007ed60	0	
-0x18007ed70	214	0	false	FUN_18007ed70	0	
-0x18007ee50	1088	0	false	FUN_18007ee50	5	vstdlib.dll | RandomFloat | Status | AimRecoil | HipRecoil
-0x18007f2a0	8	0	false	FUN_18007f2a0	0	
+0x18007df40	62	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc01	0	
+0x18007df80	279	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc02	0	
+0x18007e0a0	92	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc03	0	
+0x18007e100	1059	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc25	11	Primary | ptp_scoped_base | StandCone | WalkCone | CrouchCone | CrouchWalkCone | AirCone | IronSightsCone | +3
+0x18007e530	135	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc27	0	
+0x18007e5c0	363	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc32	3	shotgun | scoped | [PTP] cone=%.5f derived=%d live=%.5f iron=%d dead=%d ground=%d dialect=%s 
+0x18007e730	35	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc10	0	
+0x18007e760	44	0	false	Features_Weapons_Backends_PTPWeaponBackend_vfunc07	0	
+0x18007e790	315	0	false	Features_Weapons_Backends_HVH2WeaponBackend_vfunc01	0	
+0x18007e8d0	8	0	false	Features_Weapons_Backends_HVH2WeaponBackend_vfunc00	1	HVH2/CSS
+0x18007e8e0	111	0	false	Features_Weapons_Backends_HVH2WeaponBackend_vfunc02	0	
+0x18007e950	788	0	false	Features_Weapons_Backends_HVH2WeaponBackend_vfunc32	3	Primary | Spread | css_m249
+0x18007ec80	104	0	false	Features_Weapons_Backends_FAS2WeaponBackend_vfunc33	0	
+0x18007ecf0	102	0	false	Features_Weapons_Backends_FAS2WeaponBackend_vfunc01	0	
+0x18007ed60	8	0	false	Features_Weapons_Backends_FAS2WeaponBackend_vfunc00	0	
+0x18007ed70	214	0	false	Features_Weapons_Backends_FAS2WeaponBackend_vfunc02	0	
+0x18007ee50	1088	0	false	Features_Weapons_Backends_FAS2WeaponBackend_vfunc23	5	vstdlib.dll | RandomFloat | Status | AimRecoil | HipRecoil
+0x18007f2a0	8	0	false	vfunc_shared_18007f2a0	0	
 0x18007f2b0	135	3	false	FUN_18007f2b0	0	
-0x18007f340	131	0	false	FUN_18007f340	0	
-0x18007f3d0	173	0	false	FUN_18007f3d0	0	
-0x18007f480	71	0	false	FUN_18007f480	0	
-0x18007f4d0	1468	0	false	FUN_18007f4d0	8	CalculateConeRecoil | GetStatL | Primary.SpreadBiasYaw | Primary.SpreadBiasPitch | Primary.NumShots | GetViewPunchP | GetViewPunchY | sv_tfa_recoil_legacy
+0x18007f340	131	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc01	0	
+0x18007f3d0	173	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc02	0	
+0x18007f480	71	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc03	0	
+0x18007f4d0	1468	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc25	8	CalculateConeRecoil | GetStatL | Primary.SpreadBiasYaw | Primary.SpreadBiasPitch | Primary.NumShots | GetViewPunchP | GetViewPunchY | sv_tfa_recoil_legacy
 0x18007fab0	341	1	false	FUN_18007fab0	0	
 0x18007fc10	412	1	false	FUN_18007fc10	0	
-0x18007fdb0	2914	0	false	FUN_18007fdb0	2	CalculateConeRecoil | ComputeBulletDeviation
-0x180080980	1201	0	false	FUN_180080980	4	GetAimAngle | GetOwner | GetAimVector | Angle
-0x180080e40	5	0	false	FUN_180080e40	0	
-0x180080e50	236	0	false	FUN_180080e50	1	[TFA-DIAG] predCT=%.17g actualCT=%.17g dTicks=%.3f cone=%.5f dev(yaw=%.3f pitch=%.3f) shots=%d ownPunch=(%.3f,%.3f) punchIsEngine=%d 
-0x180080f40	784	0	false	FUN_180080f40	2	GetStat | Primary.Automatic
-0x180081280	204	0	false	FUN_180081280	0	
-0x180081350	8	0	false	FUN_180081350	0	
-0x180081360	293	0	false	FUN_180081360	0	
-0x180081490	3624	0	false	FUN_180081490	19	IsValid | GetBurstCount | GetDispersion | MOAToAcc | GetBuff | AccuracyMOA | StrafeTilt | GetFreeAimOffset | +11
+0x18007fdb0	2914	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc04	2	CalculateConeRecoil | ComputeBulletDeviation
+0x180080980	1201	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc05	4	GetAimAngle | GetOwner | GetAimVector | Angle
+0x180080e40	5	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc19	0	
+0x180080e50	236	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc30	1	[TFA-DIAG] predCT=%.17g actualCT=%.17g dTicks=%.3f cone=%.5f dev(yaw=%.3f pitch=%.3f) shots=%d ownPunch=(%.3f,%.3f) punchIsEngine=%d 
+0x180080f40	784	0	false	Features_Weapons_Backends_TFAWeaponBackend_vfunc09	2	GetStat | Primary.Automatic
+0x180081280	204	0	false	Features_Weapons_Backends_ArcCWWeaponBackend_vfunc01	0	
+0x180081350	8	0	false	vfunc_shared_180081350	0	
+0x180081360	293	0	false	Features_Weapons_Backends_ArcCWWeaponBackend_vfunc02	0	
+0x180081490	3624	0	false	Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	19	IsValid | GetBurstCount | GetDispersion | MOAToAcc | GetBuff | AccuracyMOA | StrafeTilt | GetFreeAimOffset | +11
 0x180082310	2086	1	false	FUN_180082310	8	randomseed | SinglePlayer | [NS-SEED] pcall SinglePlayer FAILED: %s  | Round | SharedRandom | [NS-SEED] pcall SharedRandom FAILED: %s  | [NS-SEED] pcall randomseed FAILED: %s  | [NS-SEED] OK: sr=%.4f modulo=%d rounded=%.0f seed='%s' addSeed=%.0f 
 0x180082b40	862	1	false	FUN_180082b40	0	
-0x180082ed0	564	0	false	FUN_180082ed0	0	
-0x180083110	1277	0	false	FUN_180083110	4	GetBuff | GetCurrentFiremode | Autmatic | Autofire
-0x180083620	101	0	false	FUN_180083620	0	
-0x180083690	132	0	false	FUN_180083690	0	
-0x180083720	345	0	false	FUN_180083720	0	
-0x180083880	8	0	false	FUN_180083880	0	
-0x180083890	137	0	false	FUN_180083890	0	
-0x180083920	585	0	false	FUN_180083920	2	Primary | Spread
-0x180083b80	377	0	false	FUN_180083b80	0	
+0x180082ed0	564	0	false	Features_Weapons_Backends_ArcCWWeaponBackend_vfunc04	0	
+0x180083110	1277	0	false	Features_Weapons_Backends_ArcCWWeaponBackend_vfunc09	4	GetBuff | GetCurrentFiremode | Autmatic | Autofire
+0x180083620	101	0	false	Features_Weapons_Backends_ArcCWWeaponBackend_vfunc07	0	
+0x180083690	132	0	false	Features_Weapons_Backends_ArcCWWeaponBackend_vfunc08	0	
+0x180083720	345	0	false	Features_Weapons_Backends_CSGOWeaponBackend_vfunc01	0	
+0x180083880	8	0	false	Features_Weapons_Backends_CSGOWeaponBackend_vfunc00	0	
+0x180083890	137	0	false	Features_Weapons_Backends_CSGOWeaponBackend_vfunc02	0	
+0x180083920	585	0	false	Features_Weapons_Backends_CSGOWeaponBackend_vfunc32	2	Primary | Spread
+0x180083b80	377	0	false	Features_Weapons_Backends_CSGOWeaponBackend_vfunc05	0	
 0x180083d00	491	2	false	FUN_180083d00	0	
-0x180083ef0	8	0	false	FUN_180083ef0	0	
+0x180083ef0	8	0	false	vfunc_shared_180083ef0	0	
 0x180083f00	117	1	false	FUN_180083f00	1	weapon_swcs_
-0x180083f80	202	0	false	FUN_180083f80	1	weapon_swcs_
-0x180084050	190	0	false	FUN_180084050	1	weapon_swcs_
-0x180084110	152	0	false	FUN_180084110	1	weapon_swcs_
-0x1800841b0	2924	0	false	FUN_1800841b0	20	GetMaxSpeed | GetInaccuracy | GetSpread | GetRecoilIndex | GetWeaponMode | GetBullets | GetBurstShotsRemaining | GetInReload | +12
+0x180083f80	202	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc01	1	weapon_swcs_
+0x180084050	190	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc02	1	weapon_swcs_
+0x180084110	152	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc03	1	weapon_swcs_
+0x1800841b0	2924	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	20	GetMaxSpeed | GetInaccuracy | GetSpread | GetRecoilIndex | GetWeaponMode | GetBullets | GetBurstShotsRemaining | GetInReload | +12
 0x180084d90	358	2	false	FUN_180084d90	0	
 0x180084f00	120	1	false	FUN_180084f00	0	
 0x180084f80	1642	1	false	FUN_180084f80	0	
 0x1800855f0	497	1	false	FUN_1800855f0	1	weapon_air_spread_scale
-0x1800857f0	119	0	false	FUN_1800857f0	0	
+0x1800857f0	119	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc27	0	
 0x180085870	334	2	false	FUN_180085870	2	weapon_accuracy_nospread | weapon_accuracy_forcespread
 0x1800859c0	1759	1	false	FUN_1800859c0	4	swcs_weapon_max_spread_seed | weapon_debug_max_inaccuracy | weapon_debug_inaccuracy_only_up | weapon_accuracy_shotgun_spread_patterns
-0x1800860c0	1484	0	false	FUN_1800860c0	3	swcs_weapon_sync_seed | [SWCS-NS] swcs_weapon_sync_seed 0 -- server and client seed the spread from unshared table CRCs, cone not predictable  | [SWCS-NS] inacc=%.5f(cached %.5f) spread=%.5f recoilIdx=%.2f mode=%d bullets=%d pat=%d ground=%d/%d vz=%.0f/%.0f spd=%.0f/%.0f off=(%.5f,%.5f) punch=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
-0x180086690	217	0	false	FUN_180086690	0	
-0x180086780	5	0	false	FUN_180086780	0	
-0x180086790	5	0	false	FUN_180086790	0	
-0x1800867a0	30	0	false	FUN_1800867a0	0	
-0x1800867c0	341	0	false	FUN_1800867c0	0	
-0x180086920	8	0	false	FUN_180086920	1	CombineWeaponry
-0x180086930	137	0	false	FUN_180086930	0	
-0x1800869c0	529	0	false	FUN_1800869c0	1	CurCone
-0x180086bf0	200	0	false	FUN_180086bf0	0	
-0x180086cc0	8	0	false	FUN_180086cc0	0	
-0x180086cd0	293	0	false	FUN_180086cd0	0	
+0x1800860c0	1484	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc04	3	swcs_weapon_sync_seed | [SWCS-NS] swcs_weapon_sync_seed 0 -- server and client seed the spread from unshared table CRCs, cone not predictable  | [SWCS-NS] inacc=%.5f(cached %.5f) spread=%.5f recoilIdx=%.2f mode=%d bullets=%d pat=%d ground=%d/%d vz=%.0f/%.0f spd=%.0f/%.0f off=(%.5f,%.5f) punch=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
+0x180086690	217	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc05	0	
+0x180086780	5	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc07	0	
+0x180086790	5	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc09	0	
+0x1800867a0	30	0	false	Features_Weapons_Backends_SWCSWeaponBackend_vfunc10	0	
+0x1800867c0	341	0	false	Features_Weapons_Backends_CombineWeapWeaponBackend_vfunc01	0	
+0x180086920	8	0	false	Features_Weapons_Backends_CombineWeapWeaponBackend_vfunc00	1	CombineWeaponry
+0x180086930	137	0	false	Features_Weapons_Backends_CombineWeapWeaponBackend_vfunc02	0	
+0x1800869c0	529	0	false	Features_Weapons_Backends_CombineWeapWeaponBackend_vfunc32	1	CurCone
+0x180086bf0	200	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc01	0	
+0x180086cc0	8	0	false	vfunc_shared_180086cc0	0	
+0x180086cd0	293	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc02	0	
 0x180086e00	422	1	false	FUN_180086e00	6	DoProjectileAttack | CalcSpreadDir | LUA CalcSpreadDir (current ARC9) | engine FireBullets cone (legacy ARC9) | UNKNOWN (upvalue names stripped) | [ARC9-NS] spread path = %s 
 0x180086fc0	206	1	false	FUN_180086fc0	0	
-0x180087090	2194	0	false	FUN_180087090	15	Spread | AlwaysPhysBullet | NeverPhysBullet | UseDispersion | DispersionSpread | GetShootPos | Recoil | RecoilUp | +7
+0x180087090	2194	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	15	Spread | AlwaysPhysBullet | NeverPhysBullet | UseDispersion | DispersionSpread | GetShootPos | Recoil | RecoilUp | +7
 0x180087940	291	1	false	FUN_180087940	1	GetProcessedValue
 0x180087a70	300	1	false	FUN_180087a70	1	GetProcessedValue
 0x180087ba0	228	2	false	FUN_180087ba0	0	
@@ -1294,17 +1294,17 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180087eb0	509	1	false	FUN_180087eb0	4	arc9_physbullet3 | arc9_physbullet4 | arc9_physbullet | arc9_physbullet2
 0x1800880b0	1538	1	false	FUN_1800880b0	1	SharedRandom
 0x1800886c0	692	1	false	FUN_1800886c0	0	
-0x180088980	2256	0	false	FUN_180088980	5	arc9_bullet_physics | arc9_bullet_physics_shotguns | LUACONE | [ARC9-NS] %s dist=%.1f baseTick=%d bestTick=%d luaTick=%d tickoff=%d lat=%d choke=%d win=%d spread=%.4f dbldisp=%d shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d  | [ARC9-NS] HITSCAN(engine cone) dist=%.1f baseTick=%d bestTick=%d luaTick=%d lat=%d choke=%d win=%d spread=%.4f shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
-0x180089250	101	0	false	FUN_180089250	0	
-0x1800892c0	23	0	false	FUN_1800892c0	0	
-0x1800892e0	5	0	false	FUN_1800892e0	0	
-0x1800892f0	162	0	false	FUN_1800892f0	1	[ARC9-NS] lua tick offset calibrated: now %d (measured %+d) 
-0x1800893a0	97	0	false	FUN_1800893a0	1	[ARC9-DIAG] predTick=%d actualTick=%d off=%d luaTickOffset=%d loopback=%d path=%d 
+0x180088980	2256	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc04	5	arc9_bullet_physics | arc9_bullet_physics_shotguns | LUACONE | [ARC9-NS] %s dist=%.1f baseTick=%d bestTick=%d luaTick=%d tickoff=%d lat=%d choke=%d win=%d spread=%.4f dbldisp=%d shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d  | [ARC9-NS] HITSCAN(engine cone) dist=%.1f baseTick=%d bestTick=%d luaTick=%d lat=%d choke=%d win=%d spread=%.4f shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
+0x180089250	101	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc05	0	
+0x1800892c0	23	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc07	0	
+0x1800892e0	5	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc09	0	
+0x1800892f0	162	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc31	1	[ARC9-NS] lua tick offset calibrated: now %d (measured %+d) 
+0x1800893a0	97	0	false	Features_Weapons_Backends_ARC9WeaponBackend_vfunc30	1	[ARC9-DIAG] predTick=%d actualTick=%d off=%d luaTickOffset=%d loopback=%d path=%d 
 0x180089410	26	1	false	FUN_180089410	0	
-0x180089430	204	0	false	FUN_180089430	0	
-0x180089500	8	0	false	FUN_180089500	0	
-0x180089510	293	0	false	FUN_180089510	0	
-0x180089640	3845	0	false	FUN_180089640	21	GetOwner | GetFreeAimOffset | GetCurrentFiremode | GetSpread | ShotgunPelletSpread | MuzzleVelocity | IsShotgun | ShootEnt | +13
+0x180089430	204	0	false	Features_Weapons_Backends_TacRPWeaponBackend_vfunc01	0	
+0x180089500	8	0	false	vfunc_shared_180089500	0	
+0x180089510	293	0	false	Features_Weapons_Backends_TacRPWeaponBackend_vfunc02	0	
+0x180089640	3845	0	false	Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	21	GetOwner | GetFreeAimOffset | GetCurrentFiremode | GetSpread | ShotgunPelletSpread | MuzzleVelocity | IsShotgun | ShootEnt | +13
 0x18008a570	273	1	false	FUN_18008a570	0	
 0x18008a690	267	1	false	FUN_18008a690	0	
 0x18008a7a0	408	1	false	FUN_18008a7a0	0	
@@ -1318,15 +1318,15 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18008b430	409	1	false	FUN_18008b430	0	
 0x18008b5d0	1413	1	false	FUN_18008b5d0	1	SharedRandom
 0x18008bb60	651	1	false	FUN_18008bb60	0	
-0x18008bdf0	5396	0	false	FUN_18008bdf0	12	tacrp_physbullet | tacrp_fixedspread | tacrp_pelletspread | tacrp_client_damage | [CVAR-LAYOUT] xorOk=%d (str@0x48 plain, f@0x54/n@0x58 xor low32(obj)) valueObj=%p this=%p  | [CVAR-DUMP] +0x%02X: %016llX %016llX %016llX %016llX | ints: %d %d %d %d %d %d %d %d  | [CVAR-DUMP] +0x%02X -> str "%.24s"  | [TacRP-FINDVAR] OK slot17=%p phys=%p name='%s' str='%s' float=%.3f int=%d fixed=%p name='%s' int=%d pellet=%p name='%s' int=%d client=%p name='%s' int=%d  | +4
-0x18008d310	24	0	false	FUN_18008d310	0	
-0x18008d330	5	0	false	FUN_18008d330	0	
-0x18008d340	88	0	false	FUN_18008d340	0	
-0x18008d3a0	67	0	false	FUN_18008d3a0	0	
-0x18008d3f0	8	0	false	FUN_18008d3f0	1	ZS/SunRust
+0x18008bdf0	5396	0	false	Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	12	tacrp_physbullet | tacrp_fixedspread | tacrp_pelletspread | tacrp_client_damage | [CVAR-LAYOUT] xorOk=%d (str@0x48 plain, f@0x54/n@0x58 xor low32(obj)) valueObj=%p this=%p  | [CVAR-DUMP] +0x%02X: %016llX %016llX %016llX %016llX | ints: %d %d %d %d %d %d %d %d  | [CVAR-DUMP] +0x%02X -> str "%.24s"  | [TacRP-FINDVAR] OK slot17=%p phys=%p name='%s' str='%s' float=%.3f int=%d fixed=%p name='%s' int=%d pellet=%p name='%s' int=%d client=%p name='%s' int=%d  | +4
+0x18008d310	24	0	false	Features_Weapons_Backends_TacRPWeaponBackend_vfunc07	0	
+0x18008d330	5	0	false	Features_Weapons_Backends_TacRPWeaponBackend_vfunc09	0	
+0x18008d340	88	0	false	Features_Weapons_Backends_TacRPWeaponBackend_vfunc11	0	
+0x18008d3a0	67	0	false	Features_Weapons_Backends_TacRPWeaponBackend_vfunc12	0	
+0x18008d3f0	8	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc00	1	ZS/SunRust
 0x18008d400	996	2	false	FUN_18008d400	13	weapon_zs_basemelee | weapon_zs_baseknife | weapon_zs_baseshotgun | weapon_zs_base_akimbo | weapon_zs_basedeployer | weapon_zs_baseflask | weapon_zs_baseflaskclassic | weapon_zs_base_medicgun | +5
-0x18008d7f0	97	0	false	FUN_18008d7f0	0	
-0x18008d860	332	0	false	FUN_18008d860	1	weapon_zs_
+0x18008d7f0	97	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc02	0	
+0x18008d860	332	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc01	1	weapon_zs_
 0x18008d9b0	177	2	false	FUN_18008d9b0	0	
 0x18008da70	211	1	false	FUN_18008da70	0	
 0x18008db50	183	4	false	FUN_18008db50	0	
@@ -1337,7 +1337,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18008e960	524	1	false	FUN_18008e960	1	GetFireMode
 0x18008eb80	370	1	false	FUN_18008eb80	2	PLAYER_WeaponMeta | BulletNum
 0x18008ed00	642	1	false	FUN_18008ed00	0	
-0x18008ef90	106	0	false	FUN_18008ef90	0	
+0x18008ef90	106	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc27	0	
 0x18008f000	1180	3	false	FUN_18008f000	2	Deliberation | GetCone
 0x18008f4c0	799	1	false	FUN_18008f4c0	2	Right | [ZS-BASIS] Angle:Right dot=%.3f sign=%+.0f | Angle:Up dot=%.3f sign=%+.0f (read %d/%d) 
 0x18008f7e0	381	1	false	FUN_18008f7e0	0	
@@ -1350,14 +1350,14 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180090d30	19	1	false	FUN_180090d30	0	
 0x180090d50	470	2	false	FUN_180090d50	1	SharedRandom
 0x180090f30	1018	1	false	FUN_180090f30	4	GetBurstShotsLeft | GetNextBurstShot | GetReloadFinish | NoTakeAmmoOnBurst
-0x180091350	4407	0	false	FUN_180091350	39	Primary | Automatic | legacy | weapon_zs_baseshotgun | weapon_zs_base_akimbo | weapon_zs_bigglock3 | weapon_zs_blackrock | weapon_zs_hurricane | +31
-0x180092490	106	0	false	FUN_180092490	0	
-0x180092500	101	0	false	FUN_180092500	0	
-0x180092570	3410	0	false	FUN_180092570	12	bulletrotate0 | bulletangle0 | [ZS-SHOT] SKIP (%s) mode=%d class=%s  | disabled | not-ready | no-cone | sunrust-sample | midnight-pattern | +4
-0x180093310	180	0	false	FUN_180093310	0	
-0x1800933d0	8	0	false	FUN_1800933d0	0	
-0x1800933e0	8	0	false	FUN_1800933e0	0	
-0x1800933f0	5	0	false	FUN_1800933f0	0	
+0x180091350	4407	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc25	39	Primary | Automatic | legacy | weapon_zs_baseshotgun | weapon_zs_base_akimbo | weapon_zs_bigglock3 | weapon_zs_blackrock | weapon_zs_hurricane | +31
+0x180092490	106	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc10	0	
+0x180092500	101	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc32	0	
+0x180092570	3410	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc04	12	bulletrotate0 | bulletangle0 | [ZS-SHOT] SKIP (%s) mode=%d class=%s  | disabled | not-ready | no-cone | sunrust-sample | midnight-pattern | +4
+0x180093310	180	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc05	0	
+0x1800933d0	8	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc14	0	
+0x1800933e0	8	0	false	vfunc_shared_1800933e0	0	
+0x1800933f0	5	0	false	Features_Weapons_Backends_ZSWeaponBackend_vfunc09	0	
 0x180093400	971	1	false	FUN_180093400	1	abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_
 0x1800937d0	196	2	false	FUN_1800937d0	0	
 0x1800938a0	221	2	false	FUN_1800938a0	0	
@@ -1405,40 +1405,40 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18009a2f0	409	1	false	FUN_18009a2f0	1	weapon_ags_30_handheld
 0x18009a490	384	1	false	FUN_18009a490	2	Shoot | FireBullet
 0x18009a610	659	1	false	FUN_18009a610	0	
-0x18009a8b0	8	0	false	FUN_18009a8b0	1	Z-City/Homigrad
-0x18009a8c0	285	0	false	FUN_18009a8c0	1	lastShoot
-0x18009a9f0	670	0	false	FUN_18009a9f0	0	
-0x18009ac90	145	0	false	FUN_18009ac90	0	
-0x18009ad30	342	0	false	FUN_18009ad30	1	homigrad_base
-0x18009ae90	11	0	false	FUN_18009ae90	0	
-0x18009aea0	14418	0	false	FUN_18009aea0	22	Primary | Automatic | reload | Shoot | FireBullet | weapon_doublebarrel_short | weapon_revolver2 | weapon_tranquilizer | +14
+0x18009a8b0	8	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc00	1	Z-City/Homigrad
+0x18009a8c0	285	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc24	1	lastShoot
+0x18009a9f0	670	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc26	0	
+0x18009ac90	145	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc01	0	
+0x18009ad30	342	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc02	1	homigrad_base
+0x18009ae90	11	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc03	0	
+0x18009aea0	14418	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	22	Primary | Automatic | reload | Shoot | FireBullet | weapon_doublebarrel_short | weapon_revolver2 | weapon_tranquilizer | +14
 0x18009e9b0	101	1	false	FUN_18009e9b0	0	
-0x18009ea20	71	0	false	FUN_18009ea20	0	
-0x18009ea70	271	1	false	FUN_18009ea70	0	
-0x18009eb90	48	0	false	FUN_18009eb90	0	
-0x18009ebc0	1494	0	false	FUN_18009ebc0	0	
-0x18009f1a0	4994	0	false	FUN_18009f1a0	4	[ZCITY-TICK] HELD slew=%.2f d=(%.4f,%.4f) band=%.4f est=(%.4f,%.4f) got=(%.4f,%.4f) hold=%d  | official-pose | pack-trace | [ZCITY-TICK] r=%.4f u=%.4f bias=(%.4f,%.4f) prank=(%.4f,%.4f) unexp=%.4f post=%.0f eye=(%.2f,%.2f) raw=(%.2f,%.2f) cmd#%d method=%s animAge=%.3f 
-0x1800a0530	1680	0	false	FUN_1800a0530	7	Primary | Automatic | reload | RealAutomatic | NextFire | drawBullet | [ZCITY-TSTATE] busy=%d chamber=%d canuse=%d auto=%d cyl=%d next=%.3f now=%.3f cmd#%d 
-0x1800a0bd0	8	0	false	FUN_1800a0bd0	0	
+0x18009ea20	71	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc07	0	
+0x18009ea70	271	1	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc08	0	
+0x18009eb90	48	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc10	0	
+0x18009ebc0	1494	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc04	0	
+0x18009f1a0	4994	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc28	4	[ZCITY-TICK] HELD slew=%.2f d=(%.4f,%.4f) band=%.4f est=(%.4f,%.4f) got=(%.4f,%.4f) hold=%d  | official-pose | pack-trace | [ZCITY-TICK] r=%.4f u=%.4f bias=(%.4f,%.4f) prank=(%.4f,%.4f) unexp=%.4f post=%.0f eye=(%.2f,%.2f) raw=(%.2f,%.2f) cmd#%d method=%s animAge=%.3f 
+0x1800a0530	1680	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc29	7	Primary | Automatic | reload | RealAutomatic | NextFire | drawBullet | [ZCITY-TSTATE] busy=%d chamber=%d canuse=%d auto=%d cyl=%d next=%.3f now=%.3f cmd#%d 
+0x1800a0bd0	8	0	false	Features_Weapons_Backends_ZCityWeaponBackend_vfunc09	0	
 0x1800a0be0	222	2	false	FUN_1800a0be0	0	
 0x1800a0cc0	25	0	false	FUN_1800a0cc0	0	
 0x1800a0ce0	126	3	false	FUN_1800a0ce0	0	
 0x1800a0d60	99	1	false	FUN_1800a0d60	0	
 0x1800a0dd0	1177	1	false	FUN_1800a0dd0	2	TPIK_CamPos | TPIK_CamAng
 0x1800a1280	1103	1	false	FUN_1800a1280	6	Primary | Automatic | Reloading | DoAnimation | Otrub | TazerFake
-0x1800a16e0	8	0	false	FUN_1800a16e0	1	ORP/TPIK camera
-0x1800a16f0	128	0	false	FUN_1800a16f0	0	
-0x1800a1770	84	0	false	FUN_1800a1770	0	
-0x1800a17d0	11	0	false	FUN_1800a17d0	0	
-0x1800a17e0	125	0	false	FUN_1800a17e0	0	
-0x1800a1860	294	0	false	FUN_1800a1860	0	
-0x1800a1990	5	0	true	thunk_FUN_1800a0dd0	0	
-0x1800a19a0	5	0	true	thunk_FUN_1800a1280	0	
-0x1800a19b0	514	0	false	FUN_1800a19b0	0	
-0x1800a1bc0	68	0	false	FUN_1800a1bc0	0	
-0x1800a1c10	5	0	false	FUN_1800a1c10	0	
-0x1800a1c20	1702	0	false	FUN_1800a1c20	2	TPIK_CamPos | TPIK_CamAng
-0x1800a22e0	705	0	false	FUN_1800a22e0	2	TPIK_CamPos | TPIK_CamAng
+0x1800a16e0	8	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc00	1	ORP/TPIK camera
+0x1800a16f0	128	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc01	0	
+0x1800a1770	84	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc02	0	
+0x1800a17d0	11	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc03	0	
+0x1800a17e0	125	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc26	0	
+0x1800a1860	294	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc25	0	
+0x1800a1990	5	0	true	Features_Weapons_Backends_ORPWeaponBackend_vfunc27	0	
+0x1800a19a0	5	0	true	Features_Weapons_Backends_ORPWeaponBackend_vfunc29	0	
+0x1800a19b0	514	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc28	0	
+0x1800a1bc0	68	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc07	0	
+0x1800a1c10	5	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc09	0	
+0x1800a1c20	1702	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc23	2	TPIK_CamPos | TPIK_CamAng
+0x1800a22e0	705	0	false	Features_Weapons_Backends_ORPWeaponBackend_vfunc24	2	TPIK_CamPos | TPIK_CamAng
 0x1800a25b0	588	2	false	FUN_1800a25b0	0	
 0x1800a2800	720	1	false	FUN_1800a2800	0	
 0x1800a2ad0	93	3	false	FUN_1800a2ad0	0	
@@ -1469,20 +1469,20 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800a7210	1090	1	false	FUN_1800a7210	6	ValveBiped.Bip01_R_Hand | VisualRecoilState | UpdateVisualRecoil | ManipulateBoneAngles | ValveBiped.Bip01_R_Clavicle | ManipulateBonePosition
 0x1800a7660	403	2	false	FUN_1800a7660	1	EyeAngles
 0x1800a7800	129	2	false	FUN_1800a7800	0	
-0x1800a7890	8	0	false	FUN_1800a7890	0	
+0x1800a7890	8	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc00	0	
 0x1800a78a0	117	1	false	FUN_1800a78a0	1	weapon_octo_base
-0x1800a7920	62	0	false	FUN_1800a7920	0	
-0x1800a7960	176	0	false	FUN_1800a7960	2	weapon_octo_base | weapon_octo_
-0x1800a7a10	152	0	false	FUN_1800a7a10	1	weapon_octo_base
+0x1800a7920	62	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc01	0	
+0x1800a7960	176	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc02	2	weapon_octo_base | weapon_octo_
+0x1800a7a10	152	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc03	1	weapon_octo_base
 0x1800a7ab0	155	6	false	FUN_1800a7ab0	0	
-0x1800a7b50	173	0	false	FUN_1800a7b50	0	
-0x1800a7c00	2893	0	false	FUN_1800a7c00	13	ValveBiped.Bip01_R_Hand | Spread | NumShots | ValveBiped.Bip01_R_Clavicle | Distance | WeaponCategory | IsStockHidden | IsReady | +5
-0x1800a87d0	305	0	false	FUN_1800a87d0	1	nextFire
-0x1800a8910	2069	0	false	FUN_1800a8910	4	sample too old | pitch drift | ads changed | [OCTO-TICK] probe tick=(%.2f,%.2f) render=(%.2f,%.2f) delta=(%.2f,%.2f) eye=(%.2f,%.2f) ready=%d cmd#%d 
-0x1800a9130	351	0	false	FUN_1800a9130	1	[OCTO] cone=%.5f base=%.5f stock=%d supp=%.2f ready=%d auto=%d 
-0x1800a9290	62	0	false	FUN_1800a9290	0	
-0x1800a92d0	107	0	false	FUN_1800a92d0	0	
-0x1800a9340	34	0	false	FUN_1800a9340	0	
+0x1800a7b50	173	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc26	0	
+0x1800a7c00	2893	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc25	13	ValveBiped.Bip01_R_Hand | Spread | NumShots | ValveBiped.Bip01_R_Clavicle | Distance | WeaponCategory | IsStockHidden | IsReady | +5
+0x1800a87d0	305	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc29	1	nextFire
+0x1800a8910	2069	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc28	4	sample too old | pitch drift | ads changed | [OCTO-TICK] probe tick=(%.2f,%.2f) render=(%.2f,%.2f) delta=(%.2f,%.2f) eye=(%.2f,%.2f) ready=%d cmd#%d 
+0x1800a9130	351	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc32	1	[OCTO] cone=%.5f base=%.5f stock=%d supp=%.2f ready=%d auto=%d 
+0x1800a9290	62	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc13	0	
+0x1800a92d0	107	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc07	0	
+0x1800a9340	34	0	false	Features_Weapons_Backends_OctoWeaponBackend_vfunc09	0	
 0x1800a9370	3900	1	false	FUN_1800a9370	0	
 0x1800aa2b0	54	10	false	FUN_1800aa2b0	0	
 0x1800aa2f0	79	1	false	FUN_1800aa2f0	0	
@@ -1508,9 +1508,9 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800acae0	28	4	false	FUN_1800acae0	0	
 0x1800acb00	70	1	false	FUN_1800acb00	0	
 0x1800acb50	842	4	false	FUN_1800acb50	0	
-0x1800acea0	9	0	false	FUN_1800acea0	0	
-0x1800aceb0	6	0	false	FUN_1800aceb0	0	
-0x1800acec0	4	0	false	FUN_1800acec0	0	
+0x1800acea0	9	0	false	vfunc_shared_1800acea0	0	
+0x1800aceb0	6	0	false	vfunc_shared_1800aceb0	0	
+0x1800acec0	4	0	false	vfunc_shared_1800acec0	0	
 0x1800aced0	111	1	false	FUN_1800aced0	9	pack has no autowall | pack penetration unavailable | no penetration budget | no surface between us | another body in the way | wall limit reached | pack refused this surface | out of range | +1
 0x1800acf70	62	3	false	FUN_1800acf70	0	
 0x1800acfc0	82	1	false	FUN_1800acfc0	0	
@@ -1519,63 +1519,63 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800ad340	3642	1	false	FUN_1800ad340	0	
 0x1800ae270	88	1	false	FUN_1800ae270	0	
 0x1800ae2d0	958	2	false	FUN_1800ae2d0	3	[Autowall] %s: HIT through %d wall(s), %.1f dmg left  | [Autowall] %s: no - %s (surface %d, mat %c, budget %.1f, allowed %.1f, wall %.1f)  | [Autowall] %s: no - %s (surface %d, mat %c, budget %.1f, allowed %.1f, wall thicker than that) 
-0x1800ae6b0	42	0	false	FUN_1800ae6b0	0	
-0x1800ae6e0	354	0	false	FUN_1800ae6e0	5	GetBuff | Penetration | Damage | arccw_enable_penetration | arccw_mult_penetration
-0x1800ae870	41	0	false	FUN_1800ae870	0	
-0x1800ae8a0	12	0	false	FUN_1800ae8a0	0	
-0x1800ae8b0	6	0	false	FUN_1800ae8b0	0	
-0x1800ae8c0	842	0	false	FUN_1800ae8c0	0	
-0x1800aecc0	42	0	false	FUN_1800aecc0	0	
-0x1800aecf0	436	0	false	FUN_1800aecf0	6	GetProcessedValue | Penetration | arc9_mod_penetration | PenetrationDelta | Damage_Max | MaxPenetrationLayers
-0x1800aeeb0	31	0	false	FUN_1800aeeb0	0	
-0x1800aeed0	12	0	false	FUN_1800aeed0	0	
-0x1800aeee0	44	0	false	FUN_1800aeee0	0	
-0x1800aef10	637	0	false	FUN_1800aef10	0	
-0x1800af190	42	0	false	FUN_1800af190	0	
-0x1800af1c0	218	0	false	FUN_1800af1c0	4	GetValue | Penetration | Damage_Max | tacrp_penetration
-0x1800af2a0	31	0	false	FUN_1800af2a0	0	
-0x1800af2c0	1034	0	false	FUN_1800af2c0	0	
+0x1800ae6b0	42	0	false	Features_Autowall_ArcCWAutowall_vfunc02	0	
+0x1800ae6e0	354	0	false	Features_Autowall_ArcCWAutowall_vfunc03	5	GetBuff | Penetration | Damage | arccw_enable_penetration | arccw_mult_penetration
+0x1800ae870	41	0	false	Features_Autowall_ArcCWAutowall_vfunc04	0	
+0x1800ae8a0	12	0	false	vfunc_shared_1800ae8a0	0	
+0x1800ae8b0	6	0	false	vfunc_shared_1800ae8b0	0	
+0x1800ae8c0	842	0	false	Features_Autowall_ArcCWAutowall_vfunc11	0	
+0x1800aecc0	42	0	false	Features_Autowall_ARC9Autowall_vfunc02	0	
+0x1800aecf0	436	0	false	Features_Autowall_ARC9Autowall_vfunc03	6	GetProcessedValue | Penetration | arc9_mod_penetration | PenetrationDelta | Damage_Max | MaxPenetrationLayers
+0x1800aeeb0	31	0	false	Features_Autowall_ARC9Autowall_vfunc04	0	
+0x1800aeed0	12	0	false	vfunc_shared_1800aeed0	0	
+0x1800aeee0	44	0	false	Features_Autowall_ARC9Autowall_vfunc08	0	
+0x1800aef10	637	0	false	Features_Autowall_ARC9Autowall_vfunc11	0	
+0x1800af190	42	0	false	Features_Autowall_TacRPAutowall_vfunc02	0	
+0x1800af1c0	218	0	false	Features_Autowall_TacRPAutowall_vfunc03	4	GetValue | Penetration | Damage_Max | tacrp_penetration
+0x1800af2a0	31	0	false	Features_Autowall_TacRPAutowall_vfunc04	0	
+0x1800af2c0	1034	0	false	Features_Autowall_TacRPAutowall_vfunc11	0	
 0x1800af7b0	169	1	false	FUN_1800af7b0	2	default | default_silent
-0x1800af860	42	0	false	FUN_1800af860	0	
-0x1800af890	446	0	false	FUN_1800af890	5	swcs_penetration_type | GetPenetration | GetDamage | GetRange | GetRangeModifier
-0x1800afa80	31	0	false	FUN_1800afa80	0	
-0x1800afaa0	55	0	false	FUN_1800afaa0	0	
-0x1800afae0	76	0	false	FUN_1800afae0	0	
-0x1800afb30	86	0	false	FUN_1800afb30	0	
-0x1800afb90	975	0	false	FUN_1800afb90	1	tools/toolsblockbullets
-0x1800aff60	42	0	false	FUN_1800aff60	0	
-0x1800aff90	756	0	false	FUN_1800aff90	8	GetStatL | sv_tfa_bullet_penetration | sv_tfa_bullet_penetration_power_mul | sv_tfa_penetration_hardlimit | Primary.PenetrationPower | Primary.PenetrationMultiplier | Primary.Damage | Primary.MaxSurfacePenetrationCount
-0x1800b02c0	31	0	false	FUN_1800b02c0	0	
-0x1800b02e0	4	0	false	FUN_1800b02e0	0	
-0x1800b02f0	494	0	false	FUN_1800b02f0	0	
+0x1800af860	42	0	false	Features_Autowall_SWCSAutowall_vfunc02	0	
+0x1800af890	446	0	false	Features_Autowall_SWCSAutowall_vfunc03	5	swcs_penetration_type | GetPenetration | GetDamage | GetRange | GetRangeModifier
+0x1800afa80	31	0	false	Features_Autowall_SWCSAutowall_vfunc04	0	
+0x1800afaa0	55	0	false	Features_Autowall_SWCSAutowall_vfunc07	0	
+0x1800afae0	76	0	false	Features_Autowall_SWCSAutowall_vfunc09	0	
+0x1800afb30	86	0	false	Features_Autowall_SWCSAutowall_vfunc10	0	
+0x1800afb90	975	0	false	Features_Autowall_SWCSAutowall_vfunc11	1	tools/toolsblockbullets
+0x1800aff60	42	0	false	Features_Autowall_TFAAutowall_vfunc02	0	
+0x1800aff90	756	0	false	Features_Autowall_TFAAutowall_vfunc03	8	GetStatL | sv_tfa_bullet_penetration | sv_tfa_bullet_penetration_power_mul | sv_tfa_penetration_hardlimit | Primary.PenetrationPower | Primary.PenetrationMultiplier | Primary.Damage | Primary.MaxSurfacePenetrationCount
+0x1800b02c0	31	0	false	Features_Autowall_TFAAutowall_vfunc04	0	
+0x1800b02e0	4	0	false	Features_Autowall_TFAAutowall_vfunc08	0	
+0x1800b02f0	494	0	false	Features_Autowall_TFAAutowall_vfunc11	0	
 0x1800b0540	539	1	false	FUN_1800b0540	4	SniperPenetratedRound | pistol | buckshot | AirboatGun
-0x1800b0760	42	0	false	FUN_1800b0760	0	
-0x1800b0790	514	0	false	FUN_1800b0790	3	Penetration | M9KDisablePenetration | M9KDamageMultiplier
-0x1800b09d0	37	0	false	FUN_1800b09d0	0	
-0x1800b0a00	354	0	false	FUN_1800b0a00	0	
-0x1800b0b70	8	0	false	FUN_1800b0b70	1	CW 2.0
-0x1800b0b80	74	0	false	FUN_1800b0b80	0	
-0x1800b0bd0	338	0	false	FUN_1800b0bd0	5	Damage | PenStr | PenMod | PenetrativeRange | CanPenetrate
-0x1800b0d30	31	0	false	FUN_1800b0d30	0	
-0x1800b0d50	12	0	false	FUN_1800b0d50	0	
-0x1800b0d60	6	1	false	FUN_1800b0d60	0	
-0x1800b0d70	55	0	false	FUN_1800b0d70	0	
-0x1800b0db0	658	0	false	FUN_1800b0db0	0	
-0x1800b1050	74	0	false	FUN_1800b1050	0	
-0x1800b10a0	8	0	false	FUN_1800b10a0	1	FA:S 2.0
-0x1800b10b0	42	0	false	FUN_1800b10b0	0	
-0x1800b10e0	281	0	false	FUN_1800b10e0	4	Damage | PenStr | PenMod | PenetrationEnabled
-0x1800b1200	31	0	false	FUN_1800b1200	0	
-0x1800b1220	8	0	false	FUN_1800b1220	1	Homigrad
-0x1800b1230	45	0	false	FUN_1800b1230	1	Z-City/Homigrad
-0x1800b1260	82	0	false	FUN_1800b1260	0	
-0x1800b12c0	12	0	false	FUN_1800b12c0	0	
-0x1800b12d0	9	0	false	FUN_1800b12d0	0	
-0x1800b12e0	102	0	false	FUN_1800b12e0	0	
-0x1800b1350	14	0	false	FUN_1800b1350	0	
-0x1800b1360	785	0	false	FUN_1800b1360	0	
+0x1800b0760	42	0	false	Features_Autowall_M9KAutowall_vfunc02	0	
+0x1800b0790	514	0	false	Features_Autowall_M9KAutowall_vfunc03	3	Penetration | M9KDisablePenetration | M9KDamageMultiplier
+0x1800b09d0	37	0	false	Features_Autowall_M9KAutowall_vfunc04	0	
+0x1800b0a00	354	0	false	Features_Autowall_M9KAutowall_vfunc11	0	
+0x1800b0b70	8	0	false	Features_Autowall_CW20Autowall_vfunc01	1	CW 2.0
+0x1800b0b80	74	0	false	Features_Autowall_CW20Autowall_vfunc02	0	
+0x1800b0bd0	338	0	false	vfunc_shared_1800b0bd0	5	Damage | PenStr | PenMod | PenetrativeRange | CanPenetrate
+0x1800b0d30	31	0	false	vfunc_shared_1800b0d30	0	
+0x1800b0d50	12	0	false	vfunc_shared_1800b0d50	0	
+0x1800b0d60	6	1	false	vfunc_shared_1800b0d60	0	
+0x1800b0d70	55	0	false	vfunc_shared_1800b0d70	0	
+0x1800b0db0	658	0	false	vfunc_shared_1800b0db0	0	
+0x1800b1050	74	0	false	Features_Autowall_SWBAutowall_vfunc02	0	
+0x1800b10a0	8	0	false	Features_Autowall_FAS2Autowall_vfunc01	1	FA:S 2.0
+0x1800b10b0	42	0	false	Features_Autowall_FAS2Autowall_vfunc02	0	
+0x1800b10e0	281	0	false	Features_Autowall_FAS2Autowall_vfunc03	4	Damage | PenStr | PenMod | PenetrationEnabled
+0x1800b1200	31	0	false	Features_Autowall_FAS2Autowall_vfunc04	0	
+0x1800b1220	8	0	false	Features_Autowall_HomigradAutowall_vfunc01	1	Homigrad
+0x1800b1230	45	0	false	Features_Autowall_HomigradAutowall_vfunc02	1	Z-City/Homigrad
+0x1800b1260	82	0	false	Features_Autowall_HomigradAutowall_vfunc04	0	
+0x1800b12c0	12	0	false	Features_Autowall_HomigradAutowall_vfunc05	0	
+0x1800b12d0	9	0	false	Features_Autowall_HomigradAutowall_vfunc06	0	
+0x1800b12e0	102	0	false	Features_Autowall_HomigradAutowall_vfunc10	0	
+0x1800b1350	14	0	false	Features_Autowall_HomigradAutowall_vfunc09	0	
+0x1800b1360	785	0	false	Features_Autowall_HomigradAutowall_vfunc11	0	
 0x1800b16e0	122	1	false	FUN_1800b16e0	0	
-0x1800b1760	33	0	false	FUN_1800b1760	0	
+0x1800b1760	33	0	false	Features_Autowall_AutowallFeature_vfunc06	0	
 0x1800b1790	1496	1	false	FUN_1800b1790	0	
 0x1800b1d70	99	6	false	FUN_1800b1d70	0	
 0x1800b1de0	579	4	false	FUN_1800b1de0	0	
@@ -1644,8 +1644,8 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800b7530	157	1	false	FUN_1800b7530	0	
 0x1800b75e0	447	1	false	FUN_1800b75e0	0	
 0x1800b77a0	1330	1	false	FUN_1800b77a0	0	
-0x1800b7ce0	24	0	false	FUN_1800b7ce0	0	
-0x1800b7d00	1095	0	false	FUN_1800b7d00	1	[FAKEPING] %s: +%dms achieved of %dms wanted, real %.0fms (target total %dms) -> band centres at cmd age %dms, records=%d armed=%d 
+0x1800b7ce0	24	0	false	Features_FakePing_FakePingFeature_vfunc16	0	
+0x1800b7d00	1095	0	false	Features_FakePing_FakePingFeature_vfunc01	1	[FAKEPING] %s: +%dms achieved of %dms wanted, real %.0fms (target total %dms) -> band centres at cmd age %dms, records=%d armed=%d 
 0x1800b8160	62	5	false	FUN_1800b8160	0	
 0x1800b81b0	62	10	false	FUN_1800b81b0	0	
 0x1800b8200	62	11	false	FUN_1800b8200	0	
@@ -1684,10 +1684,10 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800bc110	589	0	false	FUN_1800bc110	6	[RESOLVER] player_hurt DELIVERED -- switching verdicts from the health poll to the event  | userid | attacker | hitgroup | [RESOLVER] idx=%d hit wrong hitbox (aimed %d, server %d) -> pose still wrong, NOT latching %+.0f  | [RESOLVER] idx=%d late player_hurt -> undo miss, latch %+.0f 
 0x1800bc360	790	1	false	FUN_1800bc360	2	player_hurt | [RESOLVER] player_hurt subscribed but never delivered on this server -- verdicts come from the health poll (kills always count) 
 0x1800bc690	252	1	false	FUN_1800bc690	0	
-0x1800bc790	404	0	false	FUN_1800bc790	0	
+0x1800bc790	404	0	false	Features_HVH_Resolver_ResolverFeature_vfunc16	0	
 0x1800bc930	168	1	false	FUN_1800bc930	0	
-0x1800bc9e0	529	0	false	FUN_1800bc9e0	0	
-0x1800bcc10	108	0	false	FUN_1800bcc10	0	
+0x1800bc9e0	529	0	false	Features_HVH_Resolver_ResolverFeature_vfunc01	0	
+0x1800bcc10	108	0	false	Features_HVH_Resolver_ResolverFeature_vfunc11	0	
 0x1800bcc80	62	1	false	FUN_1800bcc80	0	
 0x1800bccd0	531	0	false	FUN_1800bccd0	0	
 0x1800bcef0	61	1	false	FUN_1800bcef0	0	
@@ -1702,8 +1702,8 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800bd8d0	441	1	false	FUN_1800bd8d0	0	
 0x1800bda90	518	1	false	FUN_1800bda90	0	
 0x1800bdcb0	182	1	false	FUN_1800bdcb0	1	cl_updaterate
-0x1800bdd70	5	0	true	thunk_FUN_1800bccd0	0	
-0x1800bdd80	3935	0	false	FUN_1800bdd80	7	server.dll | [ANIMPROBE] server.dll went away or moved (%p -> %p) - disarming  | NO (Lua clock -- this option cannot help here) | [AA-COOLDOWN] retook %d of %d attack ticks | engine fire clock: %s  | batch | mirror | [AA-DESYNC] cmd=%u base=%.2f pull=%.2f shown=%.2f | body batch=%.2f mirror=%.2f src=%s | bodyOff raw=%.1f used=%.1f | batch=%d steps=%d skips=%d 
+0x1800bdd70	5	0	true	Features_HVH_AntiAim_AntiAimFeature_vfunc01	0	
+0x1800bdd80	3935	0	false	Features_HVH_AntiAim_AntiAimFeature_vfunc02	7	server.dll | [ANIMPROBE] server.dll went away or moved (%p -> %p) - disarming  | NO (Lua clock -- this option cannot help here) | [AA-COOLDOWN] retook %d of %d attack ticks | engine fire clock: %s  | batch | mirror | [AA-DESYNC] cmd=%u base=%.2f pull=%.2f shown=%.2f | body batch=%.2f mirror=%.2f src=%s | bodyOff raw=%.1f used=%.1f | batch=%d steps=%d skips=%d 
 0x1800bed60	62	2	false	FUN_1800bed60	0	
 0x1800bedb0	79	1	false	FUN_1800bedb0	0	
 0x1800bee10	146	1	false	FUN_1800bee10	0	
@@ -1711,12 +1711,12 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800bf010	62	1	false	FUN_1800bf010	0	
 0x1800bf060	62	1	false	FUN_1800bf060	0	
 0x1800bf0b0	168	1	false	FUN_1800bf0b0	0	
-0x1800bf160	5584	0	false	FUN_1800bf160	12	rotate | alternate | repeat | legit | LBY  cur %.0f  goal %.0f  d %.0f  eye %.0f | LBY  cur %.0f  (calibrating field offsets, turn around) | LBY unavailable (animstate pointer unresolved) |   %s %.0f%% | +4
+0x1800bf160	5584	0	false	Features_HVH_Visualize_VisualizeFeature_vfunc06	12	rotate | alternate | repeat | legit | LBY  cur %.0f  goal %.0f  d %.0f  eye %.0f | LBY  cur %.0f  (calibrating field offsets, turn around) | LBY unavailable (animstate pointer unresolved) |   %s %.0f%% | +4
 0x1800c07c0	295	1	false	FUN_1800c07c0	0	
 0x1800c08f0	44	1	false	FUN_1800c08f0	0	
 0x1800c0920	512	3	false	FUN_1800c0920	4	%s %s | (null) | DID NOT TAKE | [LAGCOMP] %s -> %.3f : string="%s" float=%.3f %s 
-0x1800c0b20	646	0	false	FUN_1800c0b20	4	cl_interpolate | cl_interp | cl_interp_ratio | [LAGCOMP] interp abuse restored on shutdown (%.3f / %.1f) 
-0x1800c0db0	771	0	false	FUN_1800c0db0	4	cl_interp | cl_interp_ratio | [LAGCOMP] interp abuse ON (was %.3f / %.1f)  | [LAGCOMP] interp abuse OFF (restored %.3f / %.1f) 
+0x1800c0b20	646	0	false	Features_HVH_LagComp_LagCompFeature_vfunc16	4	cl_interpolate | cl_interp | cl_interp_ratio | [LAGCOMP] interp abuse restored on shutdown (%.3f / %.1f) 
+0x1800c0db0	771	0	false	Features_HVH_LagComp_LagCompFeature_vfunc01	4	cl_interp | cl_interp_ratio | [LAGCOMP] interp abuse ON (was %.3f / %.1f)  | [LAGCOMP] interp abuse OFF (restored %.3f / %.1f) 
 0x1800c10c0	469	1	false	FUN_1800c10c0	4	cl_interpolate | as it was | restored | [LAGCOMP] interpolation %s (cl_interpolate %.0f) 
 0x1800c12a0	62	1	false	FUN_1800c12a0	0	
 0x1800c12f0	122	1	false	FUN_1800c12f0	0	
@@ -1733,13 +1733,13 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800c2340	688	1	false	FUN_1800c2340	0	
 0x1800c25f0	555	1	false	FUN_1800c25f0	0	
 0x1800c2820	336	1	false	FUN_1800c2820	0	
-0x1800c2970	1309	0	false	FUN_1800c2970	1	[BHOP] sim said jumped, engine kept us grounded #%d -- gamemode blocks the jump from Lua; heuristic path for this contact 
-0x1800c2e90	204	0	false	FUN_1800c2e90	0	
+0x1800c2970	1309	0	false	Features_BunnyHop_BunnyHopFeature_vfunc01	1	[BHOP] sim said jumped, engine kept us grounded #%d -- gamemode blocks the jump from Lua; heuristic path for this contact 
+0x1800c2e90	204	0	false	Features_BunnyHop_BunnyHopFeature_vfunc02	0	
 0x1800c2f60	387	2	false	FUN_1800c2f60	0	
 0x1800c30f0	371	1	false	FUN_1800c30f0	0	
 0x1800c3270	1777	1	false	FUN_1800c3270	2	[EDGEJUMP] probe: speed=%.0f nextDrop=%.1fu normal.z=%.2f support=%d/5 clipped=%d  | [EDGEJUMP] skip #%d: walkable ground continues within %.0fu (stairs/terrace, not a ledge) speed=%.0f 
-0x1800c3970	581	0	false	FUN_1800c3970	0	
-0x1800c3bc0	308	0	false	FUN_1800c3bc0	3	engine sim | traces | [EDGEJUMP] fire #%d speed=%.0f source=%s at (%.0f %.0f %.0f) 
+0x1800c3970	581	0	false	Features_EdgeJump_EdgeJumpFeature_vfunc01	0	
+0x1800c3bc0	308	0	false	Features_EdgeJump_EdgeJumpFeature_vfunc02	3	engine sim | traces | [EDGEJUMP] fire #%d speed=%.0f source=%s at (%.0f %.0f %.0f) 
 0x1800c3d00	272	2	false	FUN_1800c3d00	0	
 0x1800c3e10	1388	1	false	FUN_1800c3e10	0	
 0x1800c4380	115	1	false	FUN_1800c4380	0	
@@ -1787,15 +1787,15 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800c7dd0	5550	4	false	FUN_1800c7dd0	0	
 0x1800c9380	62	1	false	FUN_1800c9380	0	
 0x1800c93d0	505	1	false	FUN_1800c93d0	4	cl_extrapolate_amount | cl_extrapolate | [BT-EXTRAP] cl_extrapolate restored to %.0f  | [BT-EXTRAP] cl_extrapolate -> 0 (was %.0f): entities now clamp to their last real snapshot instead of drifting up to %.0fms past it 
-0x1800c95d0	108	0	false	FUN_1800c95d0	1	cl_extrapolate
-0x1800c9640	711	0	false	FUN_1800c9640	0	
-0x1800c9910	3638	0	false	FUN_1800c9910	4	[BT-CLOSED] no legal tick: floor %d > ceiling %d. band centre %.0fms +-%.0fms, restorable %.0fms, choke %d ticks -> margins eat %.0fms off the floor and %.0fms off the ceiling. fakeping %.0fms pushed the band out and lerp %.0fms spent the unlag budget it shares with the shift. Back off ONE of fakeping / interp abuse / fakelag and the window reopens  | [BT] records=%d valid=%d shift=%d..%d ticks (%d usable) curtime=%.2f latestSim=%.2f diff=%.3f  | worth building | not worth building
+0x1800c95d0	108	0	false	Features_Backtrack_BacktrackFeature_vfunc16	1	cl_extrapolate
+0x1800c9640	711	0	false	Features_Backtrack_BacktrackFeature_vfunc01	0	
+0x1800c9910	3638	0	false	Features_Backtrack_BacktrackFeature_vfunc02	4	[BT-CLOSED] no legal tick: floor %d > ceiling %d. band centre %.0fms +-%.0fms, restorable %.0fms, choke %d ticks -> margins eat %.0fms off the floor and %.0fms off the ceiling. fakeping %.0fms pushed the band out and lerp %.0fms spent the unlag budget it shares with the shift. Back off ONE of fakeping / interp abuse / fakelag and the window reopens  | [BT] records=%d valid=%d shift=%d..%d ticks (%d usable) curtime=%.2f latestSim=%.2f diff=%.3f  | worth building | not worth building
 0x1800ca750	18	0	false	FUN_1800ca750	0	
 0x1800ca770	209	1	false	FUN_1800ca770	0	
 0x1800ca850	75	1	false	FUN_1800ca850	0	
 0x1800ca8a0	911	1	false	FUN_1800ca8a0	0	
 0x1800cac30	903	1	false	FUN_1800cac30	0	
-0x1800cb010	196	0	false	FUN_1800cb010	0	
+0x1800cb010	196	0	false	Features_Aimbot_AimbotFeature_vfunc16	0	
 0x1800cb0e0	168	2	false	FUN_1800cb0e0	0	
 0x1800cb190	132	1	false	FUN_1800cb190	0	
 0x1800cb220	316	2	false	FUN_1800cb220	0	
@@ -1829,9 +1829,9 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800d3160	298	2	false	FUN_1800d3160	0	
 0x1800d3290	116	3	false	FUN_1800d3290	0	
 0x1800d3310	336	2	false	FUN_1800d3310	0	
-0x1800d3460	26	0	false	FUN_1800d3460	0	
+0x1800d3460	26	0	false	Features_Aimbot_AimbotFeature_vfunc02	0	
 0x1800d34a0	2679	1	false	FUN_1800d34a0	4	[AIM] shot held: post-kill snap delay, no tick named, the round could not register (#%d)  | [PSILENT] worldclicking offsets flag=0x%X dir=0x%X mouse=(0x%X,0x%X)  | aimbot | [AIM] shot held: tick %d could not be named, aim is on a pose the server will not restore (#%d) 
-0x1800d3f50	4403	0	false	FUN_1800d3f50	2	aim %.1f/%.1f  cam %.1f  ell %.2f | aim --  cam %.1f  ell %.2f
+0x1800d3f50	4403	0	false	Features_Aimbot_AimbotFeature_vfunc06	2	aim %.1f/%.1f  cam %.1f  ell %.2f | aim --  cam %.1f  ell %.2f
 0x1800d50e0	62	1	false	FUN_1800d50e0	0	
 0x1800d5130	62	1	false	FUN_1800d5130	0	
 0x1800d5180	62	1	false	FUN_1800d5180	0	
@@ -1839,24 +1839,24 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800d5220	62	1	false	FUN_1800d5220	0	
 0x1800d5270	74	1	false	FUN_1800d5270	0	
 0x1800d52c0	64	1	false	FUN_1800d52c0	0	
-0x1800d5310	4319	0	false	FUN_1800d5310	15	cl_lagcompensation 0 | cl_lagcompensation 1 | [EXPLOIT] cl_lagcompensation -> %d  | velocity turned | strafing | [RAGE] on: anti_lsac released (was %d)  | [RAGE] off: anti_lsac restored to %d  | no origin-derived velocity yet | +7
-0x1800d64c0	132	0	false	FUN_1800d64c0	2	cl_lagcompensation 1 | [EXPLOIT] cl_lagcompensation restored on teardown 
+0x1800d5310	4319	0	false	Features_RageAim_RageAimFeature_vfunc02	15	cl_lagcompensation 0 | cl_lagcompensation 1 | [EXPLOIT] cl_lagcompensation -> %d  | velocity turned | strafing | [RAGE] on: anti_lsac released (was %d)  | [RAGE] off: anti_lsac restored to %d  | no origin-derived velocity yet | +7
+0x1800d64c0	132	0	false	Features_RageAim_RageAimFeature_vfunc16	2	cl_lagcompensation 1 | [EXPLOIT] cl_lagcompensation restored on teardown 
 0x1800d6550	124	1	false	FUN_1800d6550	1	Z-City/Homigrad
 0x1800d65d0	324	1	false	FUN_1800d65d0	0	
 0x1800d6720	1358	1	false	FUN_1800d6720	1	[ZC-FRESH] allowed=%d blocked=%d native=%d applied=%d conv=%d sprint=%d held=%d unexp=%.4f/%.4f solveCmd=%d cmd#%d 
 0x1800d6c70	977	1	false	FUN_1800d6c70	1	[ZC-FIRE] dt=%.3f cps=%.1f off=%dtick floor=%.3f 
-0x1800d7090	3417	0	false	FUN_1800d7090	1	[AF-SEMI] dt=%.3f cps=%.1f readyLag=%.3f off=%dtick floor=%.3f 
+0x1800d7090	3417	0	false	Features_AutoFire_AutoFireFeature_vfunc02	1	[AF-SEMI] dt=%.3f cps=%.1f readyLag=%.3f off=%dtick floor=%.3f 
 0x1800d7f60	210	1	false	FUN_1800d7f60	4	weapon_ar2 | weapon_smg1 | CWeaponAR2 | CWeaponSMG1
-0x1800d8040	348	0	false	FUN_1800d8040	0	
+0x1800d8040	348	0	false	Features_PTPCompat_PTPCompatFeature_vfunc02	0	
 0x1800d81c0	620	1	false	FUN_1800d81c0	5	ptp_cs_ak47 | ptp_cs_deagle | ptp_cs_autoshotgun | ptp_cs_pumpshotgun | [PTP] spray reset: released IN_ATTACK for 1 cmd (%s clip=%d thr=%d cooldown=%d) 
 0x1800d8460	1280	1	false	FUN_1800d8460	0	
 0x1800d8960	596	1	false	FUN_1800d8960	4	m_flNextPrimaryAttack | [OCTO] m_flNextPrimaryAttack = +0x%X (weapon prediction datamap, %d fields)  | m_flNext | [OCTO]   +0x%X %s 
-0x1800d8bc0	408	0	false	FUN_1800d8bc0	1	weapon_octo_
-0x1800d8d60	1022	0	false	FUN_1800d8d60	0	
-0x1800d9160	1180	0	false	FUN_1800d9160	1	[OCTO-IMPACT] candidate srcErr=%.1fu modelErr=%.3fdeg aimErr=%.3fdeg miss=%.1fu range=%.0fu lag=%.3fs pitchScale=%.3f cmd#%d tgt=%d 
+0x1800d8bc0	408	0	false	Features_OctoCompat_OctoTickFeature_vfunc06	1	weapon_octo_
+0x1800d8d60	1022	0	false	Features_OctoCompat_OctoTickFeature_vfunc02	0	
+0x1800d9160	1180	0	false	Features_OctoCompat_OctoTickFeature_vfunc00	1	[OCTO-IMPACT] candidate srcErr=%.1fu modelErr=%.3fdeg aimErr=%.3fdeg miss=%.1fu range=%.0fu lag=%.3fs pitchScale=%.3f cmd#%d tgt=%d 
 0x1800d9600	271	1	false	FUN_1800d9600	0	
-0x1800d9710	519	0	false	FUN_1800d9710	1	weapon_octo_
-0x1800d9940	680	0	false	FUN_1800d9940	1	weapon_octo_
+0x1800d9710	519	0	false	Features_OctoCompat_OctoCompatFeature_vfunc02	1	weapon_octo_
+0x1800d9940	680	0	false	Features_OctoCompat_OctoCompatFeature_vfunc07	1	weapon_octo_
 0x1800d9bf0	503	1	false	FUN_1800d9bf0	2	weapon_octo_grenade | weapon_octo_fishing
 0x1800d9e00	663	1	false	FUN_1800d9e00	4	WeaponSelector | [SELGUARD] hg.WeaponSelector.Show found (=%.2f, now=%.2f) after %d miss(es)  | closed | [SELGUARD] %s show=%.2f now=%.2f 
 0x1800da0a0	62	4	false	FUN_1800da0a0	0	
@@ -1876,11 +1876,11 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800db240	188	1	false	FUN_1800db240	1	[ZCITY-RAGDOLL] resolved body idx=%d networkName='%s' 
 0x1800db310	331	1	false	FUN_1800db310	0	
 0x1800db480	1929	1	false	FUN_1800db480	5	FakeRagdoll | GetNWEntity | [ZCITY-RAGDOLL] mapped %d/%d  pushed=%d scanned=%d  | [ZCITY-RAGDOLL] field types: nil=%d bool=%d num=%d str=%d tbl=%d fn=%d userdata=%d other=%d  | [ZCITY-RAGDOLL] fails: notEnt=%d notTransmitted=%d badBlock=%d badEnt=%d noNet=%d badIdx=%d listMismatch=%d exc=%d noTramp=%d 
-0x1800dbc70	569	0	false	FUN_1800dbc70	1	recoilmul
-0x1800dbeb0	422	0	false	FUN_1800dbeb0	0	
-0x1800dc060	942	0	false	FUN_1800dc060	0	
-0x1800dc410	961	0	false	FUN_1800dc410	5	norecoil=1 (pack gate) | fields (shared animation preserved) | spray fields + scoped eye recoil | RecoilMul=0 | [ZCITY-KILL] idx=%d spread=%d recoil=%d cone=%d gate=%d -> %s 
-0x1800dc810	823	0	false	FUN_1800dc810	0	
+0x1800dbc70	569	0	false	Features_ZCityCompat_ZCityCompatFeature_vfunc13	1	recoilmul
+0x1800dbeb0	422	0	false	Features_ZCityCompat_ZCityCompatFeature_vfunc14	0	
+0x1800dc060	942	0	false	Features_ZCityCompat_ZCityCompatFeature_vfunc02	0	
+0x1800dc410	961	0	false	Features_ZCityCompat_ZCityCompatFeature_vfunc06	5	norecoil=1 (pack gate) | fields (shared animation preserved) | spray fields + scoped eye recoil | RecoilMul=0 | [ZCITY-KILL] idx=%d spread=%d recoil=%d cone=%d gate=%d -> %s 
+0x1800dc810	823	0	false	Features_ZCityCompat_ZCityCompatFeature_vfunc16	0	
 0x1800dcb60	242	1	false	FUN_1800dcb60	0	
 0x1800dcc60	1515	1	false	FUN_1800dcc60	0	
 0x1800dd250	567	1	false	FUN_1800dd250	0	
@@ -1893,28 +1893,28 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800de120	835	1	false	FUN_1800de120	4	randgen | MATCH | differ | [LEYHITREG] rng self-check %s live=%08X %08X %08X %08X newest=%08X %08X %08X %08X (ring=%d) 
 0x1800de470	64	1	false	FUN_1800de470	0	
 0x1800de4c0	246	1	false	FUN_1800de4c0	0	
-0x1800de5c0	30	0	false	FUN_1800de5c0	0	
-0x1800de5e0	830	0	false	FUN_1800de5e0	1	[LEYHITREG] applied dev=(%.4f,%.4f) curtime=%.4f cmd=%d clip-tick 
-0x1800de920	134	0	false	FUN_1800de920	0	
-0x1800de9b0	261	0	false	FUN_1800de9b0	0	
+0x1800de5c0	30	0	false	Features_LeyHitregCompat_LeyHitregCompatFeature_vfunc01	0	
+0x1800de5e0	830	0	false	Features_LeyHitregCompat_LeyHitregCompatFeature_vfunc02	1	[LEYHITREG] applied dev=(%.4f,%.4f) curtime=%.4f cmd=%d clip-tick 
+0x1800de920	134	0	false	Features_Nospread_NospreadFeature_vfunc06	0	
+0x1800de9b0	261	0	false	Features_Nospread_NospreadFeature_vfunc01	0	
 0x1800deac0	164	1	false	FUN_1800deac0	0	
-0x1800deb70	3003	0	false	FUN_1800deb70	1	[LEYHITREG] shot-command dev=(%.4f,%.4f) curtime=%.4f cmd=%d 
-0x1800df780	4031	0	false	FUN_1800df780	6	tacrp_ | [NS-VERIFY-PHYS] err=(%.3f,%.3f) flight=(%.3f,%.3f) want=(%.3f,%.3f) srcdist=%.1f dmg=%.1f tick=%d  | [NS-VERIFY] skip non-shot FB srcdist=%.1f dmg=%.1f  | [NS-VERIFY] err=(%.3f,%.3f) actual=(%.3f,%.3f) want=(%.3f,%.3f) dev=(%.3f,%.3f) punch=(%.2f,%.2f) eye=(%.2f,%.2f) fbspread=%.4f srcdist=%.1f tick=%d  | [NS-SRCANG] bullet=(%.2f,%.2f) shipped=(%.2f,%.2f) view=(%.2f,%.2f) | bullet-vs-cmd=(%.2f,%.2f)=%.2fdeg bullet-vs-view=(%.2f,%.2f)=%.2fdeg | punch=(%.2f,%.2f)  | [NS-VISDIR] visDir=(%.3f,%.3f) want=(%.3f,%.3f) nvr=(%.3f,%.3f) applied=%d dev=(%.3f,%.3f) cmdN=%d/%d 
+0x1800deb70	3003	0	false	Features_Nospread_NospreadFeature_vfunc02	1	[LEYHITREG] shot-command dev=(%.4f,%.4f) curtime=%.4f cmd=%d 
+0x1800df780	4031	0	false	Features_Nospread_NospreadFeature_vfunc10	6	tacrp_ | [NS-VERIFY-PHYS] err=(%.3f,%.3f) flight=(%.3f,%.3f) want=(%.3f,%.3f) srcdist=%.1f dmg=%.1f tick=%d  | [NS-VERIFY] skip non-shot FB srcdist=%.1f dmg=%.1f  | [NS-VERIFY] err=(%.3f,%.3f) actual=(%.3f,%.3f) want=(%.3f,%.3f) dev=(%.3f,%.3f) punch=(%.2f,%.2f) eye=(%.2f,%.2f) fbspread=%.4f srcdist=%.1f tick=%d  | [NS-SRCANG] bullet=(%.2f,%.2f) shipped=(%.2f,%.2f) view=(%.2f,%.2f) | bullet-vs-cmd=(%.2f,%.2f)=%.2fdeg bullet-vs-view=(%.2f,%.2f)=%.2fdeg | punch=(%.2f,%.2f)  | [NS-VISDIR] visDir=(%.3f,%.3f) want=(%.3f,%.3f) nvr=(%.3f,%.3f) applied=%d dev=(%.3f,%.3f) cmdN=%d/%d 
 0x1800e0870	154	4	false	FUN_1800e0870	0	
-0x1800e0910	49	0	false	FUN_1800e0910	0	
-0x1800e0950	49	0	false	FUN_1800e0950	0	
+0x1800e0910	49	0	false	Features_Nospread_NospreadFeature_vfunc14	0	
+0x1800e0950	49	0	false	Features_Nospread_NospreadFeature_vfunc13	0	
 0x1800e0990	2285	1	false	FUN_1800e0990	4	cl_forwardspeed | cl_sidespeed | [STRAFE] AA tick: wish=%.2f view=%.2f rel=%.2f -> move=(%.1f,%.1f) exact, len=%.0f (lattice skipped)  | [STRAFE] wish=%.2f view=%.2f rel=%.2f -> move=(%.0f,%.0f) solved=%.2f err=%.3f (fwd=%d side=%d min=%.0f) 
-0x1800e1280	2516	0	false	FUN_1800e1280	0	
+0x1800e1280	2516	0	false	Features_Autostrafe_AutostrafeFeature_vfunc01	0	
 0x1800e1c60	236	1	false	FUN_1800e1c60	0	
 0x1800e1d50	751	1	false	FUN_1800e1d50	2	cl_forwardspeed | cl_sidespeed
-0x1800e2040	426	0	false	FUN_1800e2040	0	
+0x1800e2040	426	0	false	Features_MoveFix_MoveFixFeature_vfunc02	0	
 0x1800e21f0	132	1	false	FUN_1800e21f0	0	
 0x1800e2280	166	1	false	FUN_1800e2280	3	[TB] weapon not ready (backend)  | [TB] no ammo  | [TB] weapon cooldown 
 0x1800e2330	215	1	false	FUN_1800e2330	0	
 0x1800e2410	16	1	false	FUN_1800e2410	0	
 0x1800e2430	28	1	false	FUN_1800e2430	0	
 0x1800e2460	276	1	false	FUN_1800e2460	0	
-0x1800e2580	3336	0	false	FUN_1800e2580	12	Triggerbot_IgnoreEntities | [TB] g_pEngineTrace is NULL!  | MUZZLE | [TB] trace: ray=%s frac=%.3f hitEnt=%p hitgroup=%d allsolid=%d startsolid=%d  | [TB] start=(%.0f,%.0f,%.0f) angles=(%.1f,%.1f) fwd=(%.3f,%.3f,%.3f)  | [TB] body %d -> player %d  | [TB] REJECTED: ent=%p badRead=%d badVt=%d idx=%d dormant=%d hp=%d team=%d localTeam=%d  | [TB] VALID target: ent=%p idx=%d hp=%d team=%d  | +4
+0x1800e2580	3336	0	false	Features_Triggerbot_TriggerbotFeature_vfunc02	12	Triggerbot_IgnoreEntities | [TB] g_pEngineTrace is NULL!  | MUZZLE | [TB] trace: ray=%s frac=%.3f hitEnt=%p hitgroup=%d allsolid=%d startsolid=%d  | [TB] start=(%.0f,%.0f,%.0f) angles=(%.1f,%.1f) fwd=(%.3f,%.3f,%.3f)  | [TB] body %d -> player %d  | [TB] REJECTED: ent=%p badRead=%d badVt=%d idx=%d dormant=%d hp=%d team=%d localTeam=%d  | [TB] VALID target: ent=%p idx=%d hp=%d team=%d  | +4
 0x1800e3320	384	6	false	FUN_1800e3320	0	
 0x1800e34b0	313	1	false	FUN_1800e34b0	2	DT_BaseEntity | m_flSimulationTime
 0x1800e35f0	184	1	false	FUN_1800e35f0	0	
@@ -2094,7 +2094,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800f0ab0	451	1	false	FUN_1800f0ab0	4	Client/shared | Server | Unknown | [LUAEDITOR] external %s chunk failed: %s 
 0x1800f0c80	796	1	false	FUN_1800f0c80	0	
 0x1800f0fa0	596	0	false	FUN_1800f0fa0	0	
-0x1800f1200	15758	0	false	FUN_1800f1200	32	Close | script.lua | Client/shared | Server | Unknown | Failed on  | Hook  |  - OK | +24
+0x1800f1200	15758	0	false	Features_LuaLoader_LuaLoaderFeature_vfunc03	32	Close | script.lua | Client/shared | Server | Unknown | Failed on  | Hook  |  - OK | +24
 0x1800f50b0	388	1	false	FUN_1800f50b0	0	
 0x1800f5240	612	1	false	FUN_1800f5240	0	
 0x1800f54b0	112	1	false	FUN_1800f54b0	0	
@@ -2121,11 +2121,11 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800f59f0	64	1	false	FUN_1800f59f0	0	
 0x1800f5a30	16	1	false	FUN_1800f5a30	0	
 0x1800f5a40	16	1	false	FUN_1800f5a40	0	
-0x1800f5a50	944	0	false	FUN_1800f5a50	2	unknown | UserGroup
-0x1800f5e00	2025	0	false	FUN_1800f5e00	4	Spectators | No spectators | [First-Person]  | Calling PopFont() too many times!
+0x1800f5a50	944	0	false	Features_Spectators_SpectatorsFeature_vfunc06	2	unknown | UserGroup
+0x1800f5e00	2025	0	false	Features_Spectators_SpectatorsFeature_vfunc04	4	Spectators | No spectators | [First-Person]  | Calling PopFont() too many times!
 0x1800f65f0	418	1	false	FUN_1800f65f0	2	Server | Local host
 0x1800f67a0	2165	1	false	FUN_1800f67a0	0	
-0x1800f7020	3060	0	false	FUN_1800f7020	6	%d RATE | %d MS | %d FPS | %02d:%02d | ##mayrr_watermark | Calling PopFont() too many times!
+0x1800f7020	3060	0	false	Features_Watermark_WatermarkFeature_vfunc04	6	%d RATE | %d MS | %d FPS | %02d:%02d | ##mayrr_watermark | Calling PopFont() too many times!
 0x1800f7c20	271	2	false	FUN_1800f7c20	0	
 0x1800f7d30	264	1	false	FUN_1800f7d30	0	
 0x1800f7e40	620	1	false	FUN_1800f7e40	0	
@@ -2134,7 +2134,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800f8720	2441	1	false	FUN_1800f8720	0	
 0x1800f90b0	2170	1	false	FUN_1800f90b0	0	
 0x1800f9930	1597	1	false	FUN_1800f9930	4	Player | chest | Enemy | 74 hp
-0x1800f9f70	2277	0	false	FUN_1800f9f70	2	##mayrr_damagefeed | Calling PopFont() too many times!
+0x1800f9f70	2277	0	false	Features_DamageFeed_DamageFeedFeature_vfunc04	2	##mayrr_damagefeed | Calling PopFont() too many times!
 0x1800fa860	170	2	false	FUN_1800fa860	0	
 0x1800fa910	130	1	false	FUN_1800fa910	0	
 0x1800fa9a0	194	2	false	FUN_1800fa9a0	0	
@@ -2146,34 +2146,34 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1800fd440	6613	1	false	FUN_1800fd440	17	teamlist.count | teamlist. | ignore_aim | ignore_trigger | ignore_visuals | highlight | color.r | color.g | +9
 0x1800fee30	175	3	false	FUN_1800fee30	0	
 0x1800feee0	256	2	false	FUN_1800feee0	0	
-0x1800fefe0	15	0	false	FUN_1800fefe0	0	
+0x1800fefe0	15	0	false	Features_Visual_TeamList_TeamListFeature_vfunc06	0	
 0x1800feff0	136	1	false	FUN_1800feff0	0	
 0x1800ff080	257	1	false	FUN_1800ff080	0	
 0x1800ff190	3199	1	false	FUN_1800ff190	2	ESP_PlayerName | ESP_Usergroup
 0x1800fffb0	6811	1	false	FUN_1800fffb0	19	%016llx | ignore_aim | ignore_trigger | ignore_visuals | highlight | color.r | color.g | color.b | +11
 0x180101a60	6653	1	false	FUN_180101a60	17	ignore_aim | ignore_trigger | ignore_visuals | highlight | color.r | color.g | color.b | color.a | +9
-0x180103470	15	0	false	FUN_180103470	0	
+0x180103470	15	0	false	Features_Visual_UserGroupList_GroupListFeature_vfunc06	0	
 0x180103480	1907	1	false	FUN_180103480	10	@nwvars | @nw2vars | [NWCAP] census: %llu message(s)  | [NWCAP]   subtype %3d (0x%02X): %8llu msg, bits %d..%d  | [NWCAP]   --- subtype 0 by message name (%d distinct) ---  | (unresolved) | [NWCAP]   tag %5d %-32s %8llu msg, bits %d..%d  | [NWCAP] wire probe OFF  | +2
 0x180103c10	326	1	false	FUN_180103c10	2	ARMED | [NWSTORE] native reads %s 
 0x180103d60	316	1	false	FUN_180103d60	1	[NWSTORE] native probe %s 
-0x180103eb0	92	0	false	FUN_180103eb0	0	
+0x180103eb0	92	0	false	Features_NetVars_NetVarsFeature_vfunc06	0	
 0x180103f20	105	5	false	FUN_180103f20	0	
 0x180103f90	62	1	false	FUN_180103f90	0	
-0x180103fe0	639	0	false	FUN_180103fe0	2	DT_HL2MP_Player | m_angEyeAngles[0]
+0x180103fe0	639	0	false	Features_NoVisualRecoil_NoVisualRecoilFeature_vfunc01	2	DT_HL2MP_Player | m_angEyeAngles[0]
 0x180104260	1534	1	false	FUN_180104260	3	[NVR-PUNCH] no verdict #%d: dNo=%.3f dWith=%.3f punch=(%.2f,%.2f)  | NOT in | [NVR-PUNCH] '%s': punch is %s the bullet dir (dNo=%.3f dWith=%.3f punch=(%.2f,%.2f)) -> RCS %s 
-0x180104860	380	0	false	FUN_180104860	0	
-0x1801049f0	250	0	false	FUN_1801049f0	0	
-0x180104af0	24	0	false	FUN_180104af0	0	
-0x180104b10	1127	0	false	FUN_180104b10	0	
+0x180104860	380	0	false	Features_NoVisualRecoil_NoVisualRecoilFeature_vfunc10	0	
+0x1801049f0	250	0	false	Features_NoVisualRecoil_NoVisualRecoilFeature_vfunc13	0	
+0x180104af0	24	0	false	Features_NoVisualRecoil_NoVisualRecoilFeature_vfunc06	0	
+0x180104b10	1127	0	false	Features_NoVisualRecoil_NoVisualRecoilFeature_vfunc02	0	
 0x180104fb0	287	1	false	FUN_180104fb0	0	
-0x1801050f0	544	0	false	FUN_1801050f0	0	
-0x180105310	344	0	false	FUN_180105310	0	
-0x180105470	639	0	false	FUN_180105470	0	
+0x1801050f0	544	0	false	Features_NoVisualRecoil_NoVisualRecoilFeature_vfunc07	0	
+0x180105310	344	0	false	Features_FakeDuck_FakeDuckFeature_vfunc01	0	
+0x180105470	639	0	false	Features_DoubleTap_DoubleTapFeature_vfunc02	0	
 0x1801056f0	318	2	false	FUN_1801056f0	1	DT_BasePlayer
 0x180105840	288	1	false	FUN_180105840	1	DT_BasePlayer
 0x180105970	781	1	false	FUN_180105970	4	[JUMPBUG] fall #%d: %d tick(s), vz %.0f, ground never came within %.0f..%.0fu of the ducked feet -- no attempt  | [JUMPBUG] fall #%d: %d tick(s), vz %.0f, step %.1fu/tick, closest gap %.1fu (window %.0f..%.0fu, miss %.1fu), fired=%d, unduck refused=%d, lockout=%.0fms inDuckJump=%d  | %s%.1f | [JUMPBUG]   ladder (last %d ticks, feet->floor): %s | window %.0f..%.0f 
-0x180105c80	3827	0	false	FUN_180105c80	8	m_bDucked | m_bDucking | m_flDucktime | m_flJumpTime | m_flDuckJumpTime | m_bInDuckJump | [JUMPBUG] result: dz=%.1f (unduck alone = -%.0f) onGround=%d ducked=%d vz=%.0f (fired at gap %.1f) | state: bDucked=%d bDucking=%d inDuckJump=%d ducktime=%.0f jumpTime=%.0f duckJumpTime=%.0f hull=%.0f/%.0f  | [JUMPBUG] CanUnduck refused: frac=%.3f startsolid=%d n=(%.2f %.2f %.2f) stoppedAfter=%.1fu of %.0f (gap was %.1f) 
-0x180106b80	827	0	false	FUN_180106b80	4	m_flDucktime | [JUMPBUG] sent: IN_DUCK=%d IN_JUMP=%d (no sim, result next tick)  |  -> reverting to ducked, fall stays alive | [JUMPBUG] sim says: jumped=%d onGround=%d ducked=%d dz=%.1f (unduck alone = -%.0f) vz=%.0f | fired: hullGap=%.1f rayGap=%.1f n.z=%.2f ducktime=%.0f->%.0f sent(duck=%d jump=%d)%s 
+0x180105c80	3827	0	false	Features_JumpBug_JumpBugFeature_vfunc01	8	m_bDucked | m_bDucking | m_flDucktime | m_flJumpTime | m_flDuckJumpTime | m_bInDuckJump | [JUMPBUG] result: dz=%.1f (unduck alone = -%.0f) onGround=%d ducked=%d vz=%.0f (fired at gap %.1f) | state: bDucked=%d bDucking=%d inDuckJump=%d ducktime=%.0f jumpTime=%.0f duckJumpTime=%.0f hull=%.0f/%.0f  | [JUMPBUG] CanUnduck refused: frac=%.3f startsolid=%d n=(%.2f %.2f %.2f) stoppedAfter=%.1fu of %.0f (gap was %.1f) 
+0x180106b80	827	0	false	Features_JumpBug_JumpBugFeature_vfunc02	4	m_flDucktime | [JUMPBUG] sent: IN_DUCK=%d IN_JUMP=%d (no sim, result next tick)  |  -> reverting to ducked, fall stays alive | [JUMPBUG] sim says: jumped=%d onGround=%d ducked=%d dz=%.1f (unduck alone = -%.0f) vz=%.0f | fired: hullGap=%.1f rayGap=%.1f n.z=%.2f ducktime=%.0f->%.0f sent(duck=%d jump=%d)%s 
 0x180106ec0	478	1	false	FUN_180106ec0	3	Model textures | [CHAMS] custom material '%s' resolved  | [CHAMS] custom material '%s' not found -> falling back to Flat 
 0x1801070a0	305	6	false	FUN_1801070a0	2	Model textures | [CHAMS] material '%s' unavailable on this mount -> falling back to Flat 
 0x1801071e0	210	2	false	FUN_1801071e0	0	
@@ -2181,11 +2181,11 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180107300	54	1	false	FUN_180107300	0	
 0x180107340	130	2	false	FUN_180107340	2	Model textures | models/wireframe
 0x1801073d0	245	5	false	FUN_1801073d0	4	Model textures | models/debug/debugwhite | debug/debugdrawflat | vgui/white
-0x1801074d0	2254	0	false	FUN_1801074d0	0	
-0x180107da0	476	0	false	FUN_180107da0	0	
-0x180107f80	1007	0	false	FUN_180107f80	0	
-0x180108370	1232	0	false	FUN_180108370	0	
-0x180108840	212	0	false	FUN_180108840	0	
+0x1801074d0	2254	0	false	Features_LookBeam_LookBeamFeature_vfunc15	0	
+0x180107da0	476	0	false	Features_LookBeam_LookBeamFeature_vfunc05	0	
+0x180107f80	1007	0	false	Features_LookBeam_LookBeamFeature_vfunc06	0	
+0x180108370	1232	0	false	Features_LookBeam_LookBeamFeature_vfunc09	0	
+0x180108840	212	0	false	Features_LookBeam_LookBeamFeature_vfunc16	0	
 0x180108920	2676	2	false	FUN_180108920	0	
 0x1801093d0	235	2	false	FUN_1801093d0	0	
 0x1801094c0	126	2	false	FUN_1801094c0	0	
@@ -2206,34 +2206,34 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18010c040	258	1	false	FUN_18010c040	1	[GLOW] composite #%d (ctx=%p) 
 0x18010c1b0	2168	1	false	FUN_18010c1b0	3	[GLOW] diag: outline=%d model=%d through=%d seen=%d drew=%d subview=%d filtered=%d noMat=%d noCtx=%d  | [GLOW] pass %s: rt=%p vp=%dx%d ent=%d frame=%d cam=(%.0f %.0f %.0f) fov=%.1f | main=(%.0f %.0f %.0f) fov=%.1f  | [GLOW] render context = %p (global was %p) 
 0x18010caa0	382	1	false	FUN_18010caa0	0	
-0x18010cc70	561	0	false	FUN_18010cc70	2	sharp | [GLOW] toggle -> %s (through walls=%d, style=%s, blur=%.1f, sharp=%dpx) 
-0x18010ceb0	97	0	false	FUN_18010ceb0	0	
+0x18010cc70	561	0	false	Features_ChamsGlow_ChamsGlowFeature_vfunc05	2	sharp | [GLOW] toggle -> %s (through walls=%d, style=%s, blur=%.1f, sharp=%dpx) 
+0x18010ceb0	97	0	false	Features_ChamsGlow_ChamsGlowFeature_vfunc16	0	
 0x18010cf20	133	2	false	FUN_18010cf20	0	
 0x18010cfb0	874	1	false	FUN_18010cfb0	0	
-0x18010d320	2798	0	false	FUN_18010d320	2	##Background | ##Foreground
+0x18010d320	2798	0	false	Features_Radar_RadarFeature_vfunc04	2	##Background | ##Foreground
 0x18010de10	448	1	false	FUN_18010de10	0	
-0x18010dfd0	5568	0	false	FUN_18010dfd0	0	
-0x18010f600	120	0	false	FUN_18010f600	0	
-0x18010f680	2985	0	false	FUN_18010f680	0	
+0x18010dfd0	5568	0	false	Features_Radar_RadarFeature_vfunc06	0	
+0x18010f600	120	0	false	Features_BulletTracers_BulletTracersFeature_vfunc12	0	
+0x18010f680	2985	0	false	Features_BulletTracers_BulletTracersFeature_vfunc11	0	
 0x180110230	226	2	false	FUN_180110230	0	
 0x180110320	119	2	false	FUN_180110320	0	
-0x1801103a0	1209	0	false	FUN_1801103a0	0	
-0x180110860	1107	0	false	FUN_180110860	0	
+0x1801103a0	1209	0	false	Features_BulletTracers_BulletTracersFeature_vfunc06	0	
+0x180110860	1107	0	false	Features_BulletTracers_BulletTracersFeature_vfunc09	0	
 0x180110cc0	62	3	false	FUN_180110cc0	0	
 0x180110d10	1134	1	false	FUN_180110d10	2	[BP] view=(%.1f,%.1f) dRay=%.2fdeg org=(%.0f,%.0f,%.0f) pen=%.1f dmg=%.0f noric=%d segs=%d %dp %dr  | [BP]   %c len=%.0fu end=(%.0f,%.0f,%.0f) dmg=%.0f ply=%d 
 0x1801111a0	459	1	false	FUN_1801111a0	0	
-0x180111370	1129	0	false	FUN_180111370	1	cable/cable
-0x1801117e0	2745	0	false	FUN_1801117e0	1	%.0f  %dp %dr
+0x180111370	1129	0	false	Features_BulletPath_BulletPathFeature_vfunc09	1	cable/cable
+0x1801117e0	2745	0	false	Features_BulletPath_BulletPathFeature_vfunc06	1	%.0f  %dp %dr
 0x1801122a0	62	1	false	FUN_1801122a0	0	
 0x1801122f0	133	1	false	FUN_1801122f0	0	
 0x180112380	1795	1	false	FUN_180112380	0	
 0x180112ad0	926	1	false	FUN_180112ad0	0	
-0x180112e70	1705	0	false	FUN_180112e70	2	%.2f deg  %.0fu  (eye) | %.2f deg  %.0fu
+0x180112e70	1705	0	false	Features_AimPoint_AimPointFeature_vfunc06	2	%.2f deg  %.0fu  (eye) | %.2f deg  %.0fu
 0x180113550	344	2	false	FUN_180113550	0	
 0x1801136b0	84	2	false	FUN_1801136b0	0	
-0x180113730	57	0	false	FUN_180113730	0	
-0x180113770	2172	0	false	FUN_180113770	0	
-0x180113ff0	632	0	false	FUN_180113ff0	0	
+0x180113730	57	0	false	Features_FreeCam_FreeCamFeature_vfunc16	0	
+0x180113770	2172	0	false	Features_FreeCam_FreeCamFeature_vfunc07	0	
+0x180113ff0	632	0	false	Features_FreeCam_FreeCamFeature_vfunc02	0	
 0x1801142a0	110	1	false	FUN_1801142a0	0	
 0x180114310	193	2	false	FUN_180114310	0	
 0x1801143e0	350	2	false	FUN_1801143e0	0	
@@ -2294,7 +2294,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180119590	193	1	false	FUN_180119590	0	
 0x180119660	1791	1	false	FUN_180119660	5	lua budget | engine screenshot | unannounced read | [AntiSS] ReadPixels -> cleanRT #%d (%dx%d, fmt=%d, via %s)  | [AntiSS] ReadPixels -> scaled v5 cleanRT #%d (%dx%d <- %dx%d, fmt=%d) 
 0x180119da0	794	0	false	FUN_180119da0	3	[AntiSS] ReadPixels (%dx%d) too small for a screenshot -- ignored #%d  | Pixel readback | [AntiSS] ReadPixels (%dx%d): clean tail 
-0x18011a0c0	661	0	false	FUN_18011a0c0	0	
+0x18011a0c0	661	0	false	Features_AutoReload_AutoReloadFeature_vfunc02	0	
 0x18011a360	69	1	false	FUN_18011a360	0	
 0x18011a3b0	6	1	false	FUN_18011a3b0	0	
 0x18011a3c0	427	2	false	FUN_18011a3c0	3	m_bInReload | [AutoReload] m_bInReload = +0x%X (weapon prediction datamap, %d fields)  | [AutoReload]   +0x%X %s 
@@ -2318,8 +2318,8 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18011c710	391	1	false	FUN_18011c710	1	\%03u
 0x18011c8a0	63	1	false	FUN_18011c8a0	1	cl_enable_loadingurl
 0x18011c8f0	380	1	false	FUN_18011c8f0	1	LoadingDialog
-0x18011ca80	5	0	true	thunk_FUN_18011cf40	0	
-0x18011ca90	153	0	false	FUN_18011ca90	2	tier0.dll | ThreadInMainThread
+0x18011ca80	5	0	true	Features_LoadingUrl_LoadingUrlFeature_vfunc01	0	
+0x18011ca90	153	0	false	Features_LoadingUrl_LoadingUrlFeature_vfunc04	2	tier0.dll | ThreadInMainThread
 0x18011cb30	1035	1	false	FUN_18011cb30	1	https://
 0x18011cf40	2541	1	false	FUN_18011cf40	14	false | __gm_loadscreen | local K = " | local ST = rawget(_G, K)  | if type(ST) ~= "table" then ST = {} rawset(_G, K, ST) end  | ST.on =  | ST.url = " | if type(GameDetails) == "function" and GameDetails ~= ST.wrap then  ST.orig = GameDetails  ST.wrap = function(servername, serverurl, mapname, maxplayers, ...)   if ST.on then    local u = ST.url    if type(u) == "string" and #u >= 5 then     local openable = (u:sub(1, 4) == "http" or u:sub(1, 8) == "asset://")     local mp = tonumber(maxplayers) or 0     local cv = GetConVar and GetConVar("cl_enable_loadingurl")     if openable and mp > 1 and cv and cv:GetBool() then      serverurl = u     else      pcall(function()       local pnl = GetLoadPanel and GetLoadPanel()       if pnl and IsValid(pnl) then pnl:ShowURL(u, true) end      end)      serverurl = ""     end    else     serverurl = ""    end   end   return ST.orig(servername, serverurl, mapname, maxplayers, ...)  end  GameDetails = ST.wrap end if type(ST.wrap) ~= "function" then return "GameDetails not found" end return "ok"  | +6
 0x18011d930	1724	1	false	FUN_18011d930	9	Off - the server's own loading screen is used. | That page is too big to hand over (512 KB max) - blocking instead. | Could not find garrysmod\html - blocking instead. | Blocking server loading screens ( | built-in mayrr screen |  Written to garrysmod\html for 5 seconds when the screen opens, then removed. | Active ( | Not a loadable address (http:// https:// asset://) - blocking instead. | +1
@@ -2348,14 +2348,14 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18011faf0	423	0	false	FUN_18011faf0	2	<unknown> | [SEPROBE] %s 
 0x18011fca0	1112	1	false	FUN_18011fca0	11	client.dll | 48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8B D9 FF 15 ? ? ? ? | 48 89 5C 24 08 57 48 83 EC 20 48 8B FA 48 8B D9 FF 15 ? ? ? ? | 48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 80 79 08 00 41 0F B6 F8 8B F2 48 8B D9 | [SEPROBE] StartFunction matches=%zu  StartFunctionStr matches=%zu  CallFunction matches=%zu  | [SEPROBE] MH StartFunction    @ %p: %s  | [SEPROBE] StartFunction NOT hooked (expected exactly 1 match)  | [SEPROBE] MH StartFunctionStr @ %p: %s  | +3
 0x180120100	101	2	false	FUN_180120100	0	
-0x180120190	43	0	false	FUN_180120190	0	
+0x180120190	43	0	false	Features_ThirdPerson_ThirdPersonFeature_vfunc16	0	
 0x1801201c0	55	1	false	FUN_1801201c0	0	
-0x180120220	1857	0	false	FUN_180120220	0	
-0x180120970	1933	0	false	FUN_180120970	0	
+0x180120220	1857	0	false	Features_ThirdPerson_ThirdPersonFeature_vfunc07	0	
+0x180120970	1933	0	false	Features_CameraView_CameraViewFeature_vfunc07	0	
 0x180121100	115	2	false	FUN_180121100	4	viewmodel | hands | ViewModel | Hands
 0x180121180	120	1	false	FUN_180121180	0	
 0x180121200	338	4	false	FUN_180121200	3	models/weapons/v_ | _arms | models/weapons/c_
-0x180121360	835	0	false	FUN_180121360	1	[VMCHAMS] DME vm ent %d '%s' (pass=%d) 
+0x180121360	835	0	false	Features_VMChams_VMChamsFeature_vfunc15	1	[VMCHAMS] DME vm ent %d '%s' (pass=%d) 
 0x1801216b0	37	0	false	FUN_1801216b0	0	
 0x1801216e0	37	0	false	FUN_1801216e0	0	
 0x180121710	579	3	false	FUN_180121710	0	
@@ -2379,11 +2379,11 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180128770	868	1	false	FUN_180128770	0	
 0x180128ae0	144	2	false	FUN_180128ae0	0	
 0x180128b70	699	1	false	FUN_180128b70	0	
-0x180128e30	1218	0	false	FUN_180128e30	0	
+0x180128e30	1218	0	false	Features_EntityChams_EntityChamsFeature_vfunc15	0	
 0x180129320	1191	1	false	FUN_180129320	7	client.dll | DT_BaseEntity | 09 91 ? ? ? ? F6 C2 20 0F 85 ? ? ? ? C3 | 40 53 48 83 EC 20 48 8B 41 08 48 8B D9 48 83 C1 08 FF 50 18 84 C0 | m_fEffects |  MISMATCH | [FORCEDRAW] UpdateVisibility=%p m_fEffects=+0x%X (netvar says +0x%X)%s 
 0x1801297e0	43	1	false	FUN_1801297e0	0	
 0x180129810	532	0	false	FUN_180129810	0	
-0x180129a50	5	0	true	thunk_FUN_180129810	0	
+0x180129a50	5	0	true	vfunc_shared_180129a50	0	
 0x180129a60	159	2	false	FUN_180129a60	0	
 0x180129b00	289	1	false	FUN_180129b00	4	models/debug/debugwhite | vgui/white | Other textures | color/white
 0x180129c50	245	3	false	FUN_180129c50	0	
@@ -2394,8 +2394,8 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18012a2e0	88	3	false	FUN_18012a2e0	0	
 0x18012a350	79	3	false	FUN_18012a350	0	
 0x18012a3a0	1214	0	false	FUN_18012a3a0	0	
-0x18012a860	5	0	true	thunk_FUN_18012a3a0	0	
-0x18012a870	348	0	false	FUN_18012a870	0	
+0x18012a860	5	0	true	Features_Fullbright_FullbrightFeature_vfunc01	0	
+0x18012a870	348	0	false	Features_Fullbright_FullbrightFeature_vfunc07	0	
 0x18012a9d0	15	1	false	FUN_18012a9d0	0	
 0x18012a9f0	94	5	false	FUN_18012a9f0	1	sv_skyname
 0x18012aa50	175	3	false	FUN_18012aa50	3	engine.dll | 48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57 41 56 41 57 48 81 EC B0 01 00 00 | [SKY] LoadNamedSkys(engine) @ %p 
@@ -2422,16 +2422,16 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18012f810	1113	4	false	FUN_18012f810	3	SkyBox textures | skybox/%s%s | [SKY] ResolveFaces: sky='%s' -> %d/6 faces 
 0x18012fc70	122	3	false	FUN_18012fc70	0	
 0x18012fcf0	1085	4	false	FUN_18012fcf0	0	
-0x180130130	5	0	true	thunk_FUN_18012f300	0	
-0x180130140	586	0	false	FUN_180130140	0	
+0x180130130	5	0	true	Features_SkyEditor_SkyEditorFeature_vfunc01	0	
+0x180130140	586	0	false	Features_SkyEditor_SkyEditorFeature_vfunc07	0	
 0x180130390	301	5	false	FUN_180130390	1	$color
 0x1801304c0	110	1	false	FUN_1801304c0	0	
 0x180130540	60	2	false	FUN_180130540	0	
 0x180130580	849	1	false	FUN_180130580	4	$color | World textures | [WorldTint] stopped cyclic material list at handle=%u  | [WorldTint] material walk capped: declared=%d limit=%zu 
 0x1801308e0	41	1	false	FUN_1801308e0	0	
 0x180130920	546	4	false	FUN_180130920	0	
-0x180130b50	1323	0	false	FUN_180130b50	0	
-0x180131080	348	0	false	FUN_180131080	0	
+0x180130b50	1323	0	false	Features_WorldTint_WorldTintFeature_vfunc01	0	
+0x180131080	348	0	false	Features_WorldTint_WorldTintFeature_vfunc07	0	
 0x1801311e0	143	11	false	FUN_1801311e0	1	steamclient64.dll
 0x180131270	285	10	false	FUN_180131270	7	CreateInterface | steamclient64.dll | Steam_CreateLocalUser | Steam_ReleaseUser | Steam_BGetCallback | Steam_FreeLastCallback | Steam_BReleaseSteamPipe
 0x180131390	65	1	false	FUN_180131390	0	
@@ -2530,12 +2530,12 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18013f1a0	62	1	false	FUN_18013f1a0	0	
 0x18013f1f0	61	1	false	FUN_18013f1f0	0	
 0x18013f230	427	1	false	FUN_18013f230	0	
-0x18013f400	348	0	false	FUN_18013f400	0	
-0x18013f560	1212	0	false	FUN_18013f560	0	
-0x18013fa40	1394	0	false	FUN_18013fa40	1	[AIRSTUCK] auto interval=%dms avgDrop=%.1fu 
-0x18013ffc0	1816	0	false	FUN_18013ffc0	4	sv_maxusrcmdprocessticks | <not found> | [WARP] charge=%d -> travelled %.0fu (%.1f u/tick) sv_maxusrcmdprocessticks=%s  | [WARP] state key=%d down=%d tap=%d charging=%d ticks=%d 
+0x18013f400	348	0	false	Features_FakeLag_FakeLagFeature_vfunc07	0	
+0x18013f560	1212	0	false	Features_FakeLag_FakeLagFeature_vfunc01	0	
+0x18013fa40	1394	0	false	Features_Airstuck_AirstuckFeature_vfunc02	1	[AIRSTUCK] auto interval=%dms avgDrop=%.1fu 
+0x18013ffc0	1816	0	false	Features_Warp_WarpFeature_vfunc02	4	sv_maxusrcmdprocessticks | <not found> | [WARP] charge=%d -> travelled %.0fu (%.1f u/tick) sv_maxusrcmdprocessticks=%s  | [WARP] state key=%d down=%d tap=%d charging=%d ticks=%d 
 0x1801406e0	560	1	false	FUN_1801406e0	2	[WARP] bank short: asked %d, granted %d (bank %d/%d) - releasing the smaller burst  | [WARP] release ticks=%d clChoked=%d nchChoked=%d outSeq=%d ack=%d 
-0x180140920	583	0	false	FUN_180140920	1	[SPEED] on=%d held=%d hooks=%d factor=%.2f frametime=%.5f 
+0x180140920	583	0	false	Features_Speedhack_SpeedhackFeature_vfunc02	1	[SPEED] on=%d held=%d hooks=%d factor=%.2f frametime=%.5f 
 0x180140b70	502	5	false	FUN_180140b70	0	
 0x180140d70	106	2	false	FUN_180140d70	0	
 0x180140de0	672	1	false	FUN_180140de0	2	weapon_ | CWeapon
@@ -2552,11 +2552,11 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180143040	906	1	false	FUN_180143040	4	%016llx |  # Kill say messages  | killsay.count | killsay.
 0x1801433d0	747	1	false	FUN_1801433d0	1	killsay.
 0x1801436c0	498	0	false	FUN_1801436c0	4	userid | attacker | [KILLSAY] player_death DELIVERED -- the health poll is off for this map  | enemy
-0x1801438c0	162	0	false	FUN_1801438c0	0	
-0x180143970	941	0	false	FUN_180143970	1	say "
+0x1801438c0	162	0	false	Features_KillSay_KillSayFeature_vfunc16	0	
+0x180143970	941	0	false	Features_KillSay_KillSayFeature_vfunc01	1	say "
 0x180143d20	906	1	false	FUN_180143d20	4	%016llx |  # Chat spam messages  | chatspam.count | chatspam.
 0x1801440b0	732	1	false	FUN_1801440b0	1	chatspam.
-0x180144390	2205	0	false	FUN_180144390	1	say "
+0x180144390	2205	0	false	Features_ChatSpam_ChatSpamFeature_vfunc01	1	say "
 0x180144c60	133	4	false	FUN_180144c60	0	
 0x180144cf0	143	1	false	FUN_180144cf0	0	
 0x180144d80	477	1	false	FUN_180144d80	1	no cvar name
@@ -2568,22 +2568,22 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180145ab0	397	1	false	FUN_180145ab0	0	
 0x180145c40	763	2	false	FUN_180145c40	1	models/
 0x180145f40	1111	1	false	FUN_180145f40	5	: nothing to send |  refused | Not in a server -  |  queued | Ready
-0x1801463a0	5	0	false	FUN_1801463a0	0	
-0x1801463b0	4	0	false	FUN_1801463b0	0	
-0x1801463c0	448	0	false	FUN_1801463c0	0	
-0x180146580	5	0	false	FUN_180146580	0	
-0x180146590	6	0	false	FUN_180146590	0	
-0x1801465a0	8	0	false	FUN_1801465a0	1	net_SetConVar
-0x1801465b0	5	0	false	FUN_1801465b0	0	
-0x1801465c0	47	0	false	FUN_1801465c0	0	
+0x1801463a0	5	0	false	Features_Toolbox_RawSetConVarMessage_vfunc01	0	
+0x1801463b0	4	0	false	Features_Toolbox_RawSetConVarMessage_vfunc02	0	
+0x1801463c0	448	0	false	Features_Toolbox_RawSetConVarMessage_vfunc05	0	
+0x180146580	5	0	false	Features_Toolbox_RawSetConVarMessage_vfunc06	0	
+0x180146590	6	0	false	vfunc_shared_180146590	0	
+0x1801465a0	8	0	false	vfunc_shared_1801465a0	1	net_SetConVar
+0x1801465b0	5	0	false	Features_Toolbox_RawSetConVarMessage_vfunc10	0	
+0x1801465c0	47	0	false	Features_Toolbox_RawSetConVarMessage_vfunc00	0	
 0x1801465f0	16	0	false	FUN_1801465f0	0	
-0x180146600	5	0	false	FUN_180146600	0	
-0x180146610	4	0	false	FUN_180146610	0	
-0x180146620	256	0	false	FUN_180146620	0	
-0x180146720	5	0	false	FUN_180146720	0	
-0x180146730	8	0	false	FUN_180146730	1	net_Disconnect
-0x180146740	5	0	false	FUN_180146740	0	
-0x180146750	47	0	false	FUN_180146750	0	
+0x180146600	5	0	false	Features_Toolbox_RawDisconnectMessage_vfunc01	0	
+0x180146610	4	0	false	Features_Toolbox_RawDisconnectMessage_vfunc02	0	
+0x180146620	256	0	false	Features_Toolbox_RawDisconnectMessage_vfunc05	0	
+0x180146720	5	0	false	Features_Toolbox_RawDisconnectMessage_vfunc06	0	
+0x180146730	8	0	false	vfunc_shared_180146730	1	net_Disconnect
+0x180146740	5	0	false	Features_Toolbox_RawDisconnectMessage_vfunc10	0	
+0x180146750	47	0	false	Features_Toolbox_RawDisconnectMessage_vfunc00	0	
 0x180146780	170	1	false	FUN_180146780	0	
 0x180146830	92	1	false	FUN_180146830	0	
 0x180146890	144	1	false	FUN_180146890	0	
@@ -2620,10 +2620,10 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18014a290	1018	1	false	FUN_18014a290	6	Dropped: queued in another session | Disconnect sent | net_Disconnect failed | Name sent via NET_SetConVar | NET_SetConVar failed | Ready
 0x18014a690	600	1	false	FUN_18014a690	8	FAILED | [Toolbox] restore idx=%d model=%p -> %s  | [Toolbox] restore SKIPPED: no snapshot for this entity (owner=%p local=%p idx=%d)  | UNAVAILABLE | [Toolbox] full-update requested -> %s  | Model restored - server re-sync requested | Model restored (full-update sig OUTDATED - snapshot only) | Ready
 0x18014a8f0	1964	2	false	FUN_18014a8f0	11	client.dll | 48 83 EC 28 48 8B D1 48 8D 0D ? ? ? ? E8 ? ? ? ? 85 C0 78 ? 48 63 C8 48 8B 05 ? ? ? ? 48 8D 14 C8 | FAIL (donor transplant fallback) | [Toolbox-anim] ActivityList_IndexForName = %p %s  | Model loaded: no precache index - pointer mode (guarded) | Model loaded: native animations (%d acts) | Model loaded: %d acts only - client driver | Model loaded (transplant fallback) | +3
-0x18014b0a0	208	0	false	FUN_18014b0a0	2	UNAVAILABLE | [Toolbox] unload with override worn: delta reset -> %s 
-0x18014b170	1437	0	false	FUN_18014b170	0	
-0x18014b710	140	0	false	FUN_18014b710	0	
-0x18014b7a0	153	0	false	FUN_18014b7a0	0	
+0x18014b0a0	208	0	false	Features_Toolbox_ToolboxFeature_vfunc16	2	UNAVAILABLE | [Toolbox] unload with override worn: delta reset -> %s 
+0x18014b170	1437	0	false	Features_Toolbox_ToolboxFeature_vfunc01	0	
+0x18014b710	140	0	false	Features_Toolbox_ToolboxFeature_vfunc07	0	
+0x18014b7a0	153	0	false	Features_Toolbox_ToolboxFeature_vfunc15	0	
 0x18014b840	385	2	false	FUN_18014b840	0	
 0x18014b9d0	405	2	false	FUN_18014b9d0	0	
 0x18014bba0	108	2	false	FUN_18014bba0	0	
@@ -2679,7 +2679,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1801542d0	388	2	false	FUN_1801542d0	1	[DATA] post-exit cleaner failed: game root unresolved 
 0x180154460	116	2	false	FUN_180154460	0	
 0x1801544e0	935	1	false	FUN_1801544e0	3	Nothing selected | Cleaning... | sql wipe: queued for cl.db + mn.db (next game tick)
-0x180154890	686	0	false	FUN_180154890	5	cl_timeout | net_graph | ConVars: %d reset, %d unavailable | cl_timeout = %g (not 30) - this is where a ban marker is stored | %s = %g (not 0) - counts as "advanced user"
+0x180154890	686	0	false	Features_DataCleaner_DataCleanerFeature_vfunc01	5	cl_timeout | net_graph | ConVars: %d reset, %d unavailable | cl_timeout = %g (not 30) - this is where a ban marker is stored | %s = %g (not 0) - counts as "advanced user"
 0x180154b40	631	1	false	FUN_180154b40	17	lua_shared.dll | lua_gettop | lua_settop | lua_pushnil | lua_type | lua_pushstring | lua_pushlstring | lua_pushboolean | +9
 0x180154dc0	344	1	false	FUN_180154dc0	0	
 0x180154f20	1001	4	false	FUN_180154f20	6	garrysmod | download/ | luamenu | download | base_path | executable_path
@@ -2706,15 +2706,15 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1801585e0	474	1	false	FUN_1801585e0	0	
 0x1801587c0	983	1	false	FUN_1801587c0	4	%016llx |  # Lua file cloak  | luafs.count | luafs.
 0x180158ba0	1151	1	false	FUN_180158ba0	2	addons | luafs.
-0x180159020	5	0	true	thunk_FUN_180157e40	0	
+0x180159020	5	0	true	Features_LuaFileCloak_LuaFileCloakFeature_vfunc01	0	
 0x180159030	230	2	false	FUN_180159030	2	DT_BaseAnimating | m_nSkin
 0x180159120	230	2	false	FUN_180159120	2	DT_BaseAnimating | m_nBody
 0x180159210	88	1	false	FUN_180159210	0	
 0x180159270	19	1	false	FUN_180159270	0	
 0x180159290	268	1	false	FUN_180159290	0	
 0x1801593b0	731	2	false	FUN_1801593b0	0	
-0x180159690	7	0	true	thunk_FUN_1801593b0	0	
-0x1801596a0	7	0	false	FUN_1801596a0	0	
+0x180159690	7	0	true	Features_SetSkin_SetSkinFeature_vfunc01	0	
+0x1801596a0	7	0	false	Features_SetSkin_SetSkinFeature_vfunc07	0	
 0x1801596b0	79	4	false	FUN_1801596b0	0	
 0x180159710	58	0	false	FUN_180159710	0	
 0x180159750	522	2	false	FUN_180159750	2	unknown | player 
@@ -2723,10 +2723,10 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180159dc0	721	2	false	FUN_180159dc0	0	
 0x18015a0a0	337	1	false	FUN_18015a0a0	2	DT_BasePlayer | m_lifeState
 0x18015a210	393	1	false	FUN_18015a210	2	[GAMEEVENT] sink table full, '%s' dropped  | player_hurt
-0x18015a3a0	87	0	false	FUN_18015a3a0	0	
+0x18015a3a0	87	0	false	Features_DamageLogger_DamageLoggerFeature_vfunc16	0	
 0x18015a400	2443	0	false	FUN_18015a400	12	generic | chest | stomach | left arm | right arm | left leg | right leg | userid | +4
-0x18015ade0	1327	0	false	FUN_18015ade0	1	weapon_
-0x18015b320	4147	0	false	FUN_18015b320	0	
+0x18015ade0	1327	0	false	Features_DamageLogger_DamageLoggerFeature_vfunc12	1	weapon_
+0x18015b320	4147	0	false	Features_DamageLogger_DamageLoggerFeature_vfunc01	0	
 0x18015c4c0	18	0	false	FUN_18015c4c0	0	
 0x18015c500	4732	1	false	FUN_18015c500	0	
 0x18015d780	37	0	false	FUN_18015d780	0	
@@ -2767,69 +2767,69 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1801664d0	11299	1	false	FUN_1801664d0	0	
 0x180169100	98	5	false	FUN_180169100	1	Element
 0x180169170	32	0	false	FUN_180169170	0	
-0x180169190	17	0	false	FUN_180169190	0	
-0x1801691b0	8	0	false	FUN_1801691b0	0	
-0x1801691c0	9	0	false	FUN_1801691c0	0	
+0x180169190	17	0	false	Features_Visual_ESP_Editor_Elements_BaseElement_vfunc02	0	
+0x1801691b0	8	0	false	Features_Visual_ESP_Editor_Elements_BaseElement_vfunc05	0	
+0x1801691c0	9	0	false	vfunc_shared_1801691c0	0	
 0x1801691d0	129	6	false	FUN_1801691d0	0	
-0x180169260	530	0	false	FUN_180169260	0	
-0x1801694b0	71	0	false	FUN_1801694b0	0	
-0x180169500	8	0	false	FUN_180169500	0	
-0x180169510	13	0	false	FUN_180169510	0	
-0x180169520	571	0	false	FUN_180169520	0	
-0x180169760	355	0	false	FUN_180169760	7	Color | ##box_color | Rounding | ##box_rounding | Filled | Thickness | ##box_thickness
-0x1801698d0	71	0	false	FUN_1801698d0	0	
-0x180169920	6	0	false	FUN_180169920	0	
-0x180169930	8	0	false	FUN_180169930	1	Circle
-0x180169940	22	0	false	FUN_180169940	0	
-0x180169960	252	0	false	FUN_180169960	0	
-0x180169a60	447	0	false	FUN_180169a60	9	Color | Thickness | ##circle_color | Radius | ##circle_radius | Segments | ##circle_segments | Filled##circ | +1
-0x180169c20	71	0	false	FUN_180169c20	0	
-0x180169c70	6	0	false	FUN_180169c70	0	
-0x180169c80	8	0	false	FUN_180169c80	1	ESP Box
-0x180169c90	45	0	false	FUN_180169c90	0	
-0x180169cc0	1410	0	false	FUN_180169cc0	0	
+0x180169260	530	0	false	vfunc_shared_180169260	0	
+0x1801694b0	71	0	false	Features_Visual_ESP_Editor_Elements_BaseElement_vfunc00	0	
+0x180169500	8	0	false	Features_Visual_ESP_Editor_Elements_BoxElement_vfunc05	0	
+0x180169510	13	0	false	Features_Visual_ESP_Editor_Elements_BoxElement_vfunc02	0	
+0x180169520	571	0	false	Features_Visual_ESP_Editor_Elements_BoxElement_vfunc03	0	
+0x180169760	355	0	false	Features_Visual_ESP_Editor_Elements_BoxElement_vfunc04	7	Color | ##box_color | Rounding | ##box_rounding | Filled | Thickness | ##box_thickness
+0x1801698d0	71	0	false	Features_Visual_ESP_Editor_Elements_BoxElement_vfunc00	0	
+0x180169920	6	0	false	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc01	0	
+0x180169930	8	0	false	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc05	1	Circle
+0x180169940	22	0	false	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc02	0	
+0x180169960	252	0	false	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc03	0	
+0x180169a60	447	0	false	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	9	Color | Thickness | ##circle_color | Radius | ##circle_radius | Segments | ##circle_segments | Filled##circ | +1
+0x180169c20	71	0	false	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc00	0	
+0x180169c70	6	0	false	Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc01	0	
+0x180169c80	8	0	false	Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc05	1	ESP Box
+0x180169c90	45	0	false	Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc02	0	
+0x180169cc0	1410	0	false	Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc03	0	
 0x18016a250	1773	1	false	FUN_18016a250	0	
 0x18016a940	331	2	false	FUN_18016a940	5	AABB (collision) | Legacy (0.55) | Silhouette (hitboxes) | Box size | AABB - the player's collision box, axis-aligned, all 8 corners projected, then thinned. Follows crouching and model size.  Legacy - head and feet only, width = 55%% of height.  Silhouette - the model itself: every hitbox corner, measured across your view axis. Tight to the actual model, exact at any angle, and nothing about it is a tuned constant. Costs one bone setup per player.  Applies to every player: the whole element layout anchors to this rect.
-0x18016aa90	664	0	false	FUN_18016aa90	21	Color | Rounding | Thickness | ##bbox_size_mode | Full box | Corner box | Top + bottom | Side rails | +13
-0x18016ad30	71	0	false	FUN_18016ad30	0	
+0x18016aa90	664	0	false	Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	21	Color | Rounding | Thickness | ##bbox_size_mode | Full box | Corner box | Top + bottom | Side rails | +13
+0x18016ad30	71	0	false	Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc00	0	
 0x18016ad80	227	2	false	FUN_18016ad80	1	Health Bar
-0x18016ae70	8	0	false	FUN_18016ae70	1	Health Bar
-0x18016ae80	74	0	false	FUN_18016ae80	0	
+0x18016ae70	8	0	false	Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc05	1	Health Bar
+0x18016ae80	74	0	false	vfunc_shared_18016ae80	0	
 0x18016aed0	151	2	false	FUN_18016aed0	0	
-0x18016af90	172	0	false	FUN_18016af90	0	
+0x18016af90	172	0	false	vfunc_shared_18016af90	0	
 0x18016b060	129	2	false	FUN_18016b060	0	
 0x18016b110	211	1	false	FUN_18016b110	0	
-0x18016b1f0	47	0	false	FUN_18016b1f0	0	
-0x18016b220	59	0	false	FUN_18016b220	0	
+0x18016b1f0	47	0	false	Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc11	0	
+0x18016b220	59	0	false	Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc12	0	
 0x18016b260	2299	1	false	FUN_18016b260	0	
 0x18016bb80	36	0	false	FUN_18016bb80	0	
 0x18016bbb0	1600	1	false	FUN_18016bbb0	0	
-0x18016c220	5	0	true	thunk_FUN_18016b260	0	
-0x18016c230	1248	1	false	FUN_18016c230	43	Default | Right | Rounding | Thickness | Vertical | horizontal | vertical | Direction: %s | +35
-0x18016c770	71	0	false	FUN_18016c770	0	
+0x18016c220	5	0	true	vfunc_shared_18016c220	0	
+0x18016c230	1248	1	false	Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	43	Default | Right | Rounding | Thickness | Vertical | horizontal | vertical | Direction: %s | +35
+0x18016c770	71	0	false	Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc00	0	
 0x18016c7c0	32	0	false	FUN_18016c7c0	0	
 0x18016c7e0	22	0	false	FUN_18016c7e0	0	
-0x18016c800	6	0	false	FUN_18016c800	0	
-0x18016c810	8	0	false	FUN_18016c810	1	Armor Bar
-0x18016c820	8	0	false	FUN_18016c820	0	
-0x18016c830	47	0	false	FUN_18016c830	0	
-0x18016c860	47	0	false	FUN_18016c860	0	
-0x18016c890	71	0	false	FUN_18016c890	2	Combine with HP bar | Shares the HP bar's track (top half).
-0x18016c8e0	71	0	false	FUN_18016c8e0	0	
+0x18016c800	6	0	false	Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc01	0	
+0x18016c810	8	0	false	Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc05	1	Armor Bar
+0x18016c820	8	0	false	Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc10	0	
+0x18016c830	47	0	false	Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc11	0	
+0x18016c860	47	0	false	Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc12	0	
+0x18016c890	71	0	false	Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc04	2	Combine with HP bar | Shares the HP bar's track (top half).
+0x18016c8e0	71	0	false	Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc00	0	
 0x18016c930	161	2	false	FUN_18016c930	1	Sample text
-0x18016c9e0	8	0	false	FUN_18016c9e0	0	
-0x18016c9f0	9	0	false	FUN_18016c9f0	0	
-0x18016ca00	22	0	false	FUN_18016ca00	0	
-0x18016ca20	6	0	false	FUN_18016ca20	0	
+0x18016c9e0	8	0	false	Features_Visual_ESP_Editor_Elements_TextElement_vfunc05	0	
+0x18016c9f0	9	0	false	vfunc_shared_18016c9f0	0	
+0x18016ca00	22	0	false	vfunc_shared_18016ca00	0	
+0x18016ca20	6	0	false	Features_Visual_ESP_Editor_Elements_TextElement_vfunc09	0	
 0x18016ca30	601	2	false	FUN_18016ca30	0	
-0x18016cc90	40	0	false	FUN_18016cc90	0	
-0x18016ccc0	396	0	false	FUN_18016ccc0	0	
+0x18016cc90	40	0	false	Features_Visual_ESP_Editor_Elements_TextElement_vfunc02	0	
+0x18016ccc0	396	0	false	Features_Visual_ESP_Editor_Elements_TextElement_vfunc10	0	
 0x18016ce50	768	2	false	FUN_18016ce50	0	
-0x18016d150	379	0	false	FUN_18016d150	0	
-0x18016d2d0	348	0	false	FUN_18016d2d0	7	Color | Color by Job | Shadow color | ##txt_color | Shadow##txt | ##txt_shadow | ##txt_text
-0x18016d430	81	0	false	FUN_18016d430	0	
+0x18016d150	379	0	false	Features_Visual_ESP_Editor_Elements_TextElement_vfunc11	0	
+0x18016d2d0	348	0	false	Features_Visual_ESP_Editor_Elements_TextElement_vfunc04	7	Color | Color by Job | Shadow color | ##txt_color | Shadow##txt | ##txt_shadow | ##txt_text
+0x18016d430	81	0	false	Features_Visual_ESP_Editor_Elements_TextElement_vfunc00	0	
 0x18016d490	47	0	false	FUN_18016d490	0	
-0x18016d4c0	276	177	false	FUN_18016d4c0	0	
+0x18016d4c0	276	178	false	FUN_18016d4c0	0	
 0x18016d5e0	50	0	false	FUN_18016d5e0	0	
 0x18016d630	188	2	false	FUN_18016d630	0	
 0x18016d6f0	527	1	false	FUN_18016d6f0	1	Dynamic Text
@@ -2837,17 +2837,17 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18016d980	1186	1	false	FUN_18016d980	0	
 0x18016de30	505	2	false	FUN_18016de30	1	Script 
 0x18016e030	447	1	false	FUN_18016e030	1	unknown
-0x18016e1f0	6	0	false	FUN_18016e1f0	0	
-0x18016e200	8	0	false	FUN_18016e200	1	Dynamic Text
-0x18016e210	7	0	false	FUN_18016e210	0	
-0x18016e220	126	0	false	FUN_18016e220	0	
+0x18016e1f0	6	0	false	Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc01	0	
+0x18016e200	8	0	false	Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc05	1	Dynamic Text
+0x18016e210	7	0	false	Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc09	0	
+0x18016e220	126	0	false	Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc02	0	
 0x18016e2a0	5335	1	false	FUN_18016e2a0	2	PROTECTED | Invalid
 0x18016f800	312	1	false	FUN_18016f800	0	
 0x18016f960	939	1	false	FUN_18016f960	3	Unknown | weapon_ | CWeapon
-0x18016fd10	634	0	false	FUN_18016fd10	0	
-0x18016ff90	1608	0	false	FUN_18016ff90	0	
-0x180170610	2049	0	false	FUN_180170610	39	Color | Color by Job | Shadow color | ##dyn_color | Shadow##dyn | ##dyn_shadow | ##dyn_type | Script slot | +31
-0x180170e20	52	0	false	FUN_180170e20	0	
+0x18016fd10	634	0	false	Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc10	0	
+0x18016ff90	1608	0	false	Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc11	0	
+0x180170610	2049	0	false	Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	39	Color | Color by Job | Shadow color | ##dyn_color | Shadow##dyn | ##dyn_shadow | ##dyn_type | Script slot | +31
+0x180170e20	52	0	false	Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc00	0	
 0x180170e60	258	1	false	FUN_180170e60	0	
 0x180170f70	154	3	false	FUN_180170f70	0	
 0x180171010	322	2	false	FUN_180171010	0	
@@ -2956,8 +2956,8 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180190ef0	214	2	false	FUN_180190ef0	1	client.dll
 0x180190fd0	69	0	false	FUN_180190fd0	0	
 0x180191020	434	0	false	FUN_180191020	0	
-0x1801911e0	304	0	false	FUN_1801911e0	0	
-0x180191320	34	0	false	FUN_180191320	0	
+0x1801911e0	304	0	false	Features_Visual_ESP_CGhostEntityListener_vfunc00	0	
+0x180191320	34	0	false	Features_Visual_ESP_CGhostEntityListener_vfunc01	0	
 0x180191350	159	2	false	FUN_180191350	0	
 0x1801913f0	332	1	false	FUN_1801913f0	4	[ESP] listener unregister: CClientEntityList base unavailable  | [ESP] listener unregister: vector looks wrong (data=%p size=%d)  | [ESP] entity lifecycle listener unregistered (slot %d of %d)  | [ESP] listener unregister: our entry is not in the list (%d entries) 
 0x180191540	569	1	false	FUN_180191540	2	STUCK | [ESP] lifecycle footprint released: listener=%s transmit=%d recreate=%d 
@@ -3482,9 +3482,9 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18020df40	389	1	false	FUN_18020df40	0	
 0x18020e0d0	302	1	false	FUN_18020e0d0	0	
 0x18020e200	18	0	false	FUN_18020e200	0	
-0x18020e220	146	0	false	FUN_18020e220	0	
-0x18020e2c0	303	1	false	FUN_18020e2c0	0	
-0x18020e3f0	74	0	false	FUN_18020e3f0	0	
+0x18020e220	146	0	false	std_D_?$collate_vfunc05	0	
+0x18020e2c0	303	1	false	std_D_?$collate_vfunc04	0	
+0x18020e3f0	74	0	false	std_D_?$collate_vfunc03	0	
 0x18020e440	6	1	false	FUN_18020e440	0	
 0x18020e450	97	779	false	FUN_18020e450	0	
 0x18020e4c0	101	1	false	FUN_18020e4c0	0	
@@ -3495,34 +3495,34 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18020e770	142	10	false	FUN_18020e770	0	
 0x18020e800	94	1	false	FUN_18020e800	0	
 0x18020e860	42	1	false	FUN_18020e860	0	
-0x18020e890	5	790	true	thunk_FUN_18020e450	0	
+0x18020e890	5	790	true	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09	0	
 0x18020e8a0	142	96	false	FUN_18020e8a0	0	
 0x18020e930	281	43	false	FUN_18020e930	0	
 0x18020ea50	48	1	false	FUN_18020ea50	0	
 0x18020ea80	264	7	false	FUN_18020ea80	0	
 0x18020eb90	131	1	false	FUN_18020eb90	0	
 0x18020ec20	131	1	false	FUN_18020ec20	0	
-0x18020ecb0	80	0	false	FUN_18020ecb0	0	
-0x18020ed00	72	0	false	FUN_18020ed00	0	
-0x18020ed50	245	0	false	FUN_18020ed50	0	
-0x18020ee50	211	0	false	FUN_18020ee50	0	
-0x18020ef30	262	0	false	FUN_18020ef30	0	
-0x18020f040	197	0	false	FUN_18020f040	0	
-0x18020f110	322	0	false	FUN_18020f110	0	
-0x18020f260	648	0	false	FUN_18020f260	0	
-0x18020f4f0	101	0	false	FUN_18020f4f0	0	
-0x18020f560	226	0	false	FUN_18020f560	0	
-0x18020f650	439	0	false	FUN_18020f650	0	
-0x18020f810	20	0	false	FUN_18020f810	0	
-0x18020f830	20	0	false	FUN_18020f830	0	
+0x18020ecb0	80	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc14	0	
+0x18020ed00	72	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc13	0	
+0x18020ed50	245	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc12	0	
+0x18020ee50	211	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc11	0	
+0x18020ef30	262	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc10	0	
+0x18020f040	197	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc09	0	
+0x18020f110	322	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc08	0	
+0x18020f260	648	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc07	0	
+0x18020f4f0	101	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc06	0	
+0x18020f560	226	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc04	0	
+0x18020f650	439	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc03	0	
+0x18020f810	20	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc02	0	
+0x18020f830	20	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc01	0	
 0x18020f850	108	17	false	FUN_18020f850	0	
 0x18020f8c0	178	1	false	FUN_18020f8c0	0	
 0x18020f980	161	1	false	FUN_18020f980	0	
-0x18020fa30	299	0	false	FUN_18020fa30	0	
-0x18020fb60	405	0	false	FUN_18020fb60	0	
-0x18020fd00	92	0	false	FUN_18020fd00	0	
-0x18020fd60	82	0	false	FUN_18020fd60	0	
-0x18020fdc0	508	0	false	FUN_18020fdc0	0	
+0x18020fa30	299	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc11	0	
+0x18020fb60	405	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc10	0	
+0x18020fd00	92	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc06	0	
+0x18020fd60	82	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc04	0	
+0x18020fdc0	508	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc03	0	
 0x18020ffc0	193	11	false	FUN_18020ffc0	0	
 0x180210090	76	0	false	FUN_180210090	0	
 0x1802100e0	66	0	false	FUN_1802100e0	0	
@@ -3531,14 +3531,14 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180210220	41	0	false	FUN_180210220	0	
 0x180210250	52	0	false	FUN_180210250	0	
 0x180210290	52	0	false	FUN_180210290	0	
-0x1802102d0	93	0	false	FUN_1802102d0	0	
+0x1802102d0	93	0	false	std_D_?$collate_vfunc00	0	
 0x180210330	59	1	false	FUN_180210330	0	
 0x180210370	59	1	false	FUN_180210370	0	
-0x1802103b0	52	0	false	FUN_1802103b0	0	
+0x1802103b0	52	0	false	std_std_D_DU?$char_traits_?$basic_filebuf_vfunc00	0	
 0x1802103f0	152	1	false	FUN_1802103f0	0	
 0x180210490	59	1	false	FUN_180210490	0	
 0x1802104d0	59	1	false	FUN_1802104d0	0	
-0x180210510	52	0	false	FUN_180210510	0	
+0x180210510	52	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc00	0	
 0x180210550	353	7	false	FUN_180210550	0	
 0x1802106d0	120	3	false	FUN_1802106d0	0	
 0x180210750	481	1	false	FUN_180210750	0	
@@ -3729,11 +3729,11 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18021eb80	109	0	false	FUN_18021eb80	0	
 0x18021ebf0	42	0	false	FUN_18021ebf0	0	
 0x18021ec20	27	0	false	FUN_18021ec20	0	
-0x18021ec40	33	1	false	FUN_18021ec40	0	
-0x18021ec70	33	1	false	FUN_18021ec70	0	
-0x18021eca0	33	1	false	FUN_18021eca0	0	
-0x18021ecd0	33	1	false	FUN_18021ecd0	0	
-0x18021ed00	33	1	false	FUN_18021ed00	0	
+0x18021ec40	33	1	false	Features_Autowall_ArcCWAutowall_vfunc00	0	
+0x18021ec70	33	1	false	vfunc_shared_18021ec70	0	
+0x18021eca0	33	1	false	vfunc_shared_18021eca0	0	
+0x18021ecd0	33	1	false	vfunc_shared_18021ecd0	0	
+0x18021ed00	33	1	false	Features_Autowall_FAS2Autowall_vfunc00	0	
 0x18021ed30	199	1	false	FUN_18021ed30	0	
 0x18021ee00	138	1	false	FUN_18021ee00	0	
 0x18021ee90	161	1	false	FUN_18021ee90	0	
@@ -3876,20 +3876,20 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18022b400	96	0	false	FUN_18022b400	0	
 0x18022b480	37	0	false	FUN_18022b480	0	
 0x18022b4b0	19	4	false	FUN_18022b4b0	0	
-0x18022b4d0	15	1	false	FUN_18022b4d0	0	
-0x18022b4e0	5	0	false	FUN_18022b4e0	0	
-0x18022b4f0	8	0	false	FUN_18022b4f0	0	
-0x18022b500	174	0	false	FUN_18022b500	0	
-0x18022b5b0	32	0	false	FUN_18022b5b0	0	
-0x18022b5d0	15	1	false	FUN_18022b5d0	0	
-0x18022b5e0	8	0	false	FUN_18022b5e0	0	
-0x18022b5f0	9	0	false	FUN_18022b5f0	0	
-0x18022b600	30	0	false	FUN_18022b600	0	
+0x18022b4d0	15	1	false	std_8_std_E_EV?$allocator_X_JAEBV?$vector_Z_std_filesystem_AEBVpath_34_YA?AUDatabase_Features_Sqlite_?7??Read_V<lambda_2>_?$_Func_impl_no_alloc_vfunc04	0	
+0x18022b4e0	5	0	false	vfunc_shared_18022b4e0	0	
+0x18022b4f0	8	0	false	std_8_std_E_EV?$allocator_X_JAEBV?$vector_Z_std_filesystem_AEBVpath_34_YA?AUDatabase_Features_Sqlite_?7??Read_V<lambda_2>_?$_Func_impl_no_alloc_vfunc03	0	
+0x18022b500	174	0	false	std_8_std_E_EV?$allocator_X_JAEBV?$vector_Z_std_filesystem_AEBVpath_34_YA?AUDatabase_Features_Sqlite_?7??Read_V<lambda_2>_?$_Func_impl_no_alloc_vfunc02	0	
+0x18022b5b0	32	0	false	vfunc_shared_18022b5b0	0	
+0x18022b5d0	15	1	false	std_8_std_E_EV?$allocator_X_JAEBV?$vector_Z_std_filesystem_AEBVpath_34_YA?AUDatabase_Features_Sqlite_?2??Read_V<lambda_1>_?$_Func_impl_no_alloc_vfunc04	0	
+0x18022b5e0	8	0	false	std_8_std_E_EV?$allocator_X_JAEBV?$vector_Z_std_filesystem_AEBVpath_34_YA?AUDatabase_Features_Sqlite_?2??Read_V<lambda_1>_?$_Func_impl_no_alloc_vfunc03	0	
+0x18022b5f0	9	0	false	std_8_std_E_EV?$allocator_X_JAEBV?$vector_Z_std_filesystem_AEBVpath_34_YA?AUDatabase_Features_Sqlite_?2??Read_V<lambda_1>_?$_Func_impl_no_alloc_vfunc02	0	
+0x18022b600	30	0	false	vfunc_shared_18022b600	0	
 0x18022b620	61	1	false	FUN_18022b620	0	
 0x18022b660	71	1	false	FUN_18022b660	0	
 0x18022b6b0	71	1	false	FUN_18022b6b0	0	
-0x18022b700	18	1	false	FUN_18022b700	0	
-0x18022b720	49	0	false	FUN_18022b720	0	
+0x18022b700	18	1	false	vfunc_shared_18022b700	0	
+0x18022b720	49	0	false	std_std_filesystem_U_Dir_enum_impl_?$_Ref_count_obj2_vfunc00	0	
 0x18022b760	63	0	false	FUN_18022b760	0	
 0x18022b7a0	86	0	false	FUN_18022b7a0	0	
 0x18022b800	72	0	false	FUN_18022b800	0	
@@ -3933,7 +3933,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18022ed80	290	4	false	FUN_18022ed80	0	
 0x18022eeb0	37	0	false	FUN_18022eeb0	0	
 0x18022eee0	37	0	false	FUN_18022eee0	0	
-0x18022ef10	43	0	false	FUN_18022ef10	0	
+0x18022ef10	43	0	false	std_std_filesystem_U_Dir_enum_impl_?$_Ref_count_obj2_vfunc02	0	
 0x18022ef40	37	0	false	FUN_18022ef40	0	
 0x18022ef70	37	0	false	FUN_18022ef70	0	
 0x18022efa0	37	0	false	FUN_18022efa0	0	
@@ -4081,7 +4081,9 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18023a090	229	2	false	FUN_18023a090	0	
 0x18023a180	132	2	false	FUN_18023a180	0	
 0x18023a210	305	2	false	FUN_18023a210	0	
-0x18023a350	261	0	false	FUN_18023a350	0	
+0x18023a350	261	0	false	std_std_D_DV?$regex_traits_?$_Node_class_vfunc00	0	
+0x18023a460	5	0	true	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc10	0	
+0x18023a470	45	0	false	Features_Visual_ESP_Editor_Elements_CircleElement_vfunc11	0	
 0x18023a4a0	52	2	false	FUN_18023a4a0	0	
 0x18023a4e0	214	1	false	FUN_18023a4e0	0	
 0x18023a5c0	264	2	false	FUN_18023a5c0	0	
@@ -4162,7 +4164,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x18023fc80	729	1	false	FUN_18023fc80	0	
 0x18023ff60	187	2	false	FUN_18023ff60	0	
 0x180240020	134	1	false	FUN_180240020	0	
-0x1802400b0	73	0	false	FUN_1802400b0	0	
+0x1802400b0	73	0	false	std_D_?$_Node_str_vfunc00	0	
 0x180240100	547	1	false	FUN_180240100	0	
 0x180240330	935	1	false	FUN_180240330	0	
 0x1802406e0	366	1	false	FUN_1802406e0	0	
@@ -4173,11 +4175,11 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180240b80	582	1	false	FUN_180240b80	0	
 0x180240dd0	81	0	false	FUN_180240dd0	0	
 0x180240e30	382	2	false	FUN_180240e30	0	
-0x180240fd0	12	0	false	FUN_180240fd0	0	
-0x180240fdc	12	0	false	FUN_180240fdc	0	
-0x180240fe8	12	0	false	FUN_180240fe8	0	
-0x180240ff4	12	0	false	FUN_180240ff4	0	
-0x180241000	12	0	false	FUN_180241000	0	
+0x180240fd0	12	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringstream_vfunc00	0	
+0x180240fdc	12	0	false	std_std_D_DU?$char_traits_?$basic_ifstream_vfunc00	0	
+0x180240fe8	12	0	false	std_std_D_DU?$char_traits_?$basic_ofstream_vfunc00	0	
+0x180240ff4	12	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_ostringstream_vfunc00	0	
+0x180241000	12	0	false	std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_istringstream_vfunc00	0	
 0x180241010	619	1	false	FUN_180241010	0	
 0x180241280	141	4	false	FUN_180241280	0	
 0x180241310	41	2	false	FUN_180241310	0	
@@ -4370,15 +4372,15 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180261ae0	246	2	false	FUN_180261ae0	0	
 0x180261be0	622	1	false	FUN_180261be0	0	
 0x180261e50	613	1	false	FUN_180261e50	1	unordered_map/set too long
-0x1802620c0	9	1	false	FUN_1802620c0	0	
-0x1802620d0	58	0	false	FUN_1802620d0	0	
+0x1802620c0	9	1	false	std_std_std_TextEditor_ULineSection_V?$allocator_TextEditor_ULineSection_V?$vector_?$_Ref_count_obj2_vfunc00	0	
+0x1802620d0	58	0	false	std_TextEditor_VTransaction_?$_Ref_count_obj2_vfunc00	0	
 0x180262110	98	2	false	FUN_180262110	0	
 0x180262180	18	64	false	FUN_180262180	1	invalid vector subscript
 0x1802621a0	454	1	false	FUN_1802621a0	0	
 0x180262370	119	2	false	FUN_180262370	0	
 0x1802623f0	18	2	false	FUN_1802623f0	1	invalid array<T, N> subscript
-0x180262410	43	0	false	FUN_180262410	0	
-0x180262440	43	0	false	FUN_180262440	0	
+0x180262410	43	0	false	std_TextEditor_VTransaction_?$_Ref_count_obj2_vfunc02	0	
+0x180262440	43	0	false	std_std_std_TextEditor_ULineSection_V?$allocator_TextEditor_ULineSection_V?$vector_?$_Ref_count_obj2_vfunc02	0	
 0x180262470	514	2	false	FUN_180262470	0	
 0x180262680	683	10	false	FUN_180262680	0	
 0x180262930	742	1	false	FUN_180262930	0	
@@ -4397,10 +4399,10 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180264500	98	1	false	FUN_180264500	0	
 0x180264570	414	1	false	FUN_180264570	0	
 0x180264710	618	1	false	FUN_180264710	0	
-0x180264990	15	1	false	FUN_180264990	0	
-0x1802649a0	8	0	false	FUN_1802649a0	0	
-0x1802649b0	9	0	false	FUN_1802649b0	0	
-0x1802649c0	22	0	false	FUN_1802649c0	0	
+0x180264990	15	1	false	vfunc_shared_180264990	0	
+0x1802649a0	8	0	false	std_3_XAEAUGlyph_Z_std_std_D_DU?$char_traits_0_KIAEBV?$basic_string_view_3_IEAAXUDocPos_TextEditor_?4??addSquiggle_V<lambda_1>_?$_Func_impl_no_alloc_vfunc03	0	
+0x1802649b0	9	0	false	std_3_XAEAUGlyph_Z_std_std_D_DU?$char_traits_0_KIAEBV?$basic_string_view_3_IEAAXUDocPos_TextEditor_?4??addSquiggle_V<lambda_1>_?$_Func_impl_no_alloc_vfunc02	0	
+0x1802649c0	22	0	false	vfunc_shared_1802649c0	0	
 0x180264a00	323	1	false	FUN_180264a00	0	
 0x180264b50	238	2	false	FUN_180264b50	0	
 0x180264c40	179	2	false	FUN_180264c40	0	
@@ -4413,15 +4415,15 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x180265b90	151	1	false	FUN_180265b90	0	
 0x180265c30	119	2	false	FUN_180265c30	0	
 0x180265cb0	615	9	false	FUN_180265cb0	1	unordered_map/set too long
-0x180265f30	8	0	false	FUN_180265f30	0	
-0x180265f40	45	0	false	FUN_180265f40	0	
-0x180265f70	22	0	false	FUN_180265f70	0	
-0x180265f90	8	0	false	FUN_180265f90	0	
-0x180265fa0	37	0	false	FUN_180265fa0	0	
-0x180265fd0	22	0	false	FUN_180265fd0	0	
-0x180265ff0	8	0	false	FUN_180265ff0	0	
-0x180266000	10	0	false	FUN_180266000	0	
-0x180266010	22	0	false	FUN_180266010	0	
+0x180265f30	8	0	false	std_AEA_K_V12_V12_ZV12_0AEA_K_V12_TextEditor_P6A?AVIterator_?$_Func_impl_no_alloc_vfunc03	0	
+0x180265f40	45	0	false	std_AEA_K_V12_V12_ZV12_0AEA_K_V12_TextEditor_P6A?AVIterator_?$_Func_impl_no_alloc_vfunc02	0	
+0x180265f70	22	0	false	vfunc_shared_180265f70	0	
+0x180265f90	8	0	false	std_V12_V12_ZV12_0_V12_TextEditor_P6A?AVIterator_?$_Func_impl_no_alloc_vfunc03	0	
+0x180265fa0	37	0	false	std_V12_V12_ZV12_0_V12_TextEditor_P6A?AVIterator_?$_Func_impl_no_alloc_vfunc02	0	
+0x180265fd0	22	0	false	vfunc_shared_180265fd0	0	
+0x180265ff0	8	0	false	std_Z_NG_P6A_NG_?$_Func_impl_no_alloc_vfunc03	0	
+0x180266000	10	0	false	std_Z_NG_P6A_NG_?$_Func_impl_no_alloc_vfunc02	0	
+0x180266010	22	0	false	vfunc_shared_180266010	0	
 0x180266030	18	2	false	FUN_180266030	1	vector too long
 0x180266050	161	0	false	FUN_180266050	0	
 0x180266100	154	0	false	FUN_180266100	0	
@@ -5227,17 +5229,17 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1802d80cc	261	1	false	FUN_1802d80cc	0	
 0x1802d81e0	6	1	true	MSVCP140.DLL::std::_Xbad_alloc	0	
 0x1802d81e8	60	3	false	FUN_1802d81e8	0	
-0x1802d8236	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::_Lock	0	
-0x1802d823c	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::_Unlock	0	
-0x1802d8242	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::showmanyc	0	
-0x1802d8248	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::uflow	0	
-0x1802d824e	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::xsgetn	0	
-0x1802d8254	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::xsputn	0	
-0x1802d825a	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::setbuf	0	
-0x1802d8260	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::sync	0	
-0x1802d8266	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::imbue	0	
-0x1802d8272	6	0	true	MSVCP140.DLL::std::locale::facet::_Decref	0	
-0x1802d8278	6	1	true	MSVCP140.DLL::std::locale::facet::_Incref	0	
+0x1802d8236	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc01	0	
+0x1802d823c	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc02	0	
+0x1802d8242	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::vfunc_shared_1802d8242	0	
+0x1802d8248	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc07	0	
+0x1802d824e	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc08	0	
+0x1802d8254	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc09	0	
+0x1802d825a	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc12	0	
+0x1802d8260	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc13	0	
+0x1802d8266	6	0	true	MSVCP140.DLL::std::basic_streambuf<char,std::char_traits<char>_>::std_2_D_V?$allocator_std_D_DU?$char_traits_?$basic_stringbuf_vfunc14	0	
+0x1802d8272	6	0	true	MSVCP140.DLL::std::locale::facet::std_D_?$collate_vfunc02	0	
+0x1802d8278	6	1	true	MSVCP140.DLL::std::locale::facet::std_D_?$collate_vfunc01	0	
 0x1802d8284	6	1	true	MSVCP140.DLL::__crtLCMapStringA	0	
 0x1802d828c	102	1	false	tls_callback_0	0	
 0x1802d82f4	14	554	false	__dyn_tls_on_demand_init	0	
@@ -5264,9 +5266,9 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1802d87c0	23	117	false	atexit	0	
 0x1802d87d8	5	1	true	API-MS-WIN-CRT-HEAP-L1-1-0.DLL::free	0	
 0x1802d87e0	5	689	true	API-MS-WIN-CRT-HEAP-L1-1-0.DLL::free	0	
-0x1802d87e8	43	0	false	FUN_1802d87e8	0	
+0x1802d87e8	43	0	false	type_info_vfunc00	0	
 0x1802d8814	112	4	false	`eh_vector_constructor_iterator'	0	
-0x1802d8884	138	0	false	tls_callback_1	0	
+0x1802d8884	138	0	false	type_info_vfunc01	0	
 0x1802d8910	166	9	false	FUN_1802d8910	0	
 0x1802d89b8	80	1	false	FUN_1802d89b8	0	
 0x1802d8a08	276	1	false	FUN_1802d8a08	0	
@@ -5290,7 +5292,7 @@ address	size	callers	isThunk	name	stringHits	sampleStrings
 0x1802d9210	60	1	false	FUN_1802d9210	0	
 0x1802d9250	6	1	true	VCRUNTIME140_1.DLL::__CxxFrameHandler4	0	
 0x1802d9256	6	1	true	VCRUNTIME140.DLL::__C_specific_handler	0	
-0x1802d925c	6	0	true	VCRUNTIME140.DLL::_purecall	0	
+0x1802d925c	6	0	true	VCRUNTIME140.DLL::vfunc_shared_1802d925c	0	
 0x1802d9262	6	204	true	VCRUNTIME140.DLL::memcpy	0	
 0x1802d9268	6	144	true	VCRUNTIME140.DLL::memcmp	0	
 0x1802d926e	6	11	true	VCRUNTIME140.DLL::memchr	0	

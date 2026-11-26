@@ -8,20 +8,20 @@ FUN_18014c6b0	0x18014c6b0	SQLite format 3
 FUN_18001e850	0x18001e850	GetPrintName
 FUN_18001eac0	0x18001eac0	GetPhrase
 FUN_180040ea0	0x180040ea0	local t = ... return function(...)  if not t.live then return end  return t.fn(t.ref, ...) end 
-FUN_1800137a0	0x1800137a0	unknown error
+std__System_error_category_vfunc02	0x1800137a0	unknown error
 FUN_180024cd0	0x180024cd0	m_flStepSoundTime
 FUN_180154f20	0x180154f20	garrysmod
 FUN_180137640	0x180137640	Disconnect: %s. 
 FUN_180066ad0	0x180066ad0	Unknown exception
 FUN_180066b90	0x180066b90	Unknown exception
-FUN_180012e30	0x180012e30	Unknown exception
+vfunc_shared_180012e30	0x180012e30	Unknown exception
 FUN_180012f20	0x180012f20	bad array new length
 FUN_1800130a0	0x1800130a0	string too long
 FUN_18006b160	0x18006b160	generic
 FUN_18015a400	0x18015a400	generic
 FUN_180138760	0x180138760	generic
-FUN_1800136e0	0x1800136e0	generic
-FUN_180013790	0x180013790	system
+std__Generic_error_category_vfunc01	0x1800136e0	generic
+std__System_error_category_vfunc01	0x180013790	system
 FUN_180013940	0x180013940	bad cast
 FUN_1800140a0	0x1800140a0	bad cast
 FUN_18006fb20	0x18006fb20	false
@@ -32,7 +32,7 @@ FUN_18011cf40	0x18011cf40	false
 FUN_180013b80	0x180013b80	map/set too long
 FUN_180070ff0	0x180070ff0	invalid stod argument
 FUN_180070ff0	0x180070ff0	stod argument out of range
-FUN_180014060	0x180014060	Bad any_cast
+std_bad_any_cast_vfunc01	0x180014060	Bad any_cast
 FUN_1801e9960	0x1801e9960	Valve001
 FUN_1801f14a0	0x1801f14a0	write
 FUN_180014520	0x180014520	write
@@ -42,7 +42,7 @@ FUN_18001f750	0x18001f750	unknown
 FUN_1800fab80	0x1800fab80	unknown
 FUN_1801f6f60	0x1801f6f60	unknown
 FUN_18016e030	0x18016e030	unknown
-FUN_1800f5a50	0x1800f5a50	unknown
+Features_Spectators_SpectatorsFeature_vfunc06	0x1800f5a50	unknown
 FUN_1801410a0	0x1801410a0	unknown
 FUN_180159750	0x180159750	unknown
 FUN_180030f20	0x180030f20	unknown
@@ -189,10 +189,10 @@ FUN_180017150	0x180017150	vphysics.dll
 FUN_180017150	0x180017150	VEngineCvar007
 FUN_180053f40	0x180053f40	vstdlib.dll
 FUN_180017150	0x180017150	vstdlib.dll
-FUN_18007ee50	0x18007ee50	vstdlib.dll
-FUN_180079040	0x180079040	vstdlib.dll
+Features_Weapons_Backends_FAS2WeaponBackend_vfunc23	0x18007ee50	vstdlib.dll
+vfunc_shared_180079040	0x180079040	vstdlib.dll
 FUN_180024f00	0x180024f00	vstdlib.dll
-FUN_18007c0e0	0x18007c0e0	vstdlib.dll
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc04	0x18007c0e0	vstdlib.dll
 FUN_180020770	0x180020770	vstdlib.dll
 FUN_180017150	0x180017150	ShaderApi030
 FUN_180017150	0x180017150	shaderapidx9.dll
@@ -344,7 +344,7 @@ FUN_1800ec770	0x1800ec770	lua_shared.dll
 FUN_1802007c0	0x1802007c0	lua_shared.dll
 FUN_180017150	0x180017150	g_pMemAlloc
 FUN_180017150	0x180017150	tier0.dll
-FUN_18011ca90	0x18011ca90	tier0.dll
+Features_LoadingUrl_LoadingUrlFeature_vfunc04	0x18011ca90	tier0.dll
 FUN_180017150	0x180017150	40 55 53 48 8D AC 24 38 F0 FF FF B8 C8 10 00 00
 FUN_1801f9180	0x1801f9180	40 55 53 48 8D AC 24 38 F0 FF FF B8 C8 10 00 00
 FUN_180017150	0x180017150	[IFACE] BaseClientState (x64) = %p (last=0x20B84 choked=0x20B88) 
@@ -439,7 +439,7 @@ FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_Head1
 FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_R_Calvicle
 FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_R_UpperArm
 FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_R_Forearm
-FUN_1800a7c00	0x1800a7c00	ValveBiped.Bip01_R_Hand
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	ValveBiped.Bip01_R_Hand
 FUN_1800a7210	0x1800a7210	ValveBiped.Bip01_R_Hand
 FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_R_Hand
 FUN_180096280	0x180096280	ValveBiped.Bip01_R_Hand
@@ -454,7 +454,7 @@ FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_R_Toe0
 FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_L_Thigh
 FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_L_Calf
 FUN_1800cb360	0x1800cb360	ValveBiped.Bip01_L_Foot
-FUN_180103fe0	0x180103fe0	DT_HL2MP_Player
+Features_NoVisualRecoil_NoVisualRecoilFeature_vfunc01	0x180103fe0	DT_HL2MP_Player
 FUN_18001d350	0x18001d350	DT_HL2MP_Player
 FUN_1800b3c00	0x1800b3c00	DT_BaseEntity
 FUN_18001bef0	0x18001bef0	DT_BaseEntity
@@ -541,7 +541,7 @@ FUN_18001fcf0	0x18001fcf0	DT_GMOD_Player
 FUN_18001de40	0x18001de40	DT_GMOD_Player
 FUN_18001d180	0x18001d180	DT_GMOD_Player
 FUN_18001d180	0x18001d180	m_iMaxArmor
-FUN_180103fe0	0x180103fe0	m_angEyeAngles[0]
+Features_NoVisualRecoil_NoVisualRecoilFeature_vfunc01	0x180103fe0	m_angEyeAngles[0]
 FUN_18001d350	0x18001d350	m_angEyeAngles[0]
 FUN_1800e5240	0x1800e5240	m_vecMins
 FUN_1800e5410	0x1800e5410	m_vecMaxs
@@ -622,7 +622,7 @@ FUN_18001f7d0	0x18001f7d0	%02X
 FUN_18006c720	0x18006c720	%02X 
 FUN_18001f7d0	0x18001f7d0	[DIAG] raw: %s 
 FUN_18001f960	0x18001f960	UserGroup
-FUN_1800f5a50	0x1800f5a50	UserGroup
+Features_Spectators_SpectatorsFeature_vfunc06	0x1800f5a50	UserGroup
 FUN_18001f9d0	0x18001f9d0	m_vecPunchAngle
 FUN_18001fad0	0x18001fad0	m_iObserverMode
 FUN_18001fbc0	0x18001fbc0	m_hObserverTarget
@@ -639,9 +639,9 @@ FUN_1801073d0	0x1801073d0	Model textures
 FUN_180106ec0	0x180106ec0	Model textures
 FUN_180020280	0x180020280	Model textures
 FUN_180053f40	0x180053f40	RandomFloat
-FUN_18007ee50	0x18007ee50	RandomFloat
-FUN_180079040	0x180079040	RandomFloat
-FUN_18007c0e0	0x18007c0e0	RandomFloat
+Features_Weapons_Backends_FAS2WeaponBackend_vfunc23	0x18007ee50	RandomFloat
+vfunc_shared_180079040	0x180079040	RandomFloat
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc04	0x18007c0e0	RandomFloat
 FUN_180163260	0x180163260	models/player/group01/male_07.mdl
 FUN_180022740	0x180022740	0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 FUN_180022850	0x180022850	luaL_loadbufferx
@@ -1169,7 +1169,7 @@ FUN_18003bb10	0x18003bb10	IsValid
 FUN_18002e230	0x18002e230	IsValid
 FUN_18005e350	0x18005e350	IsValid
 FUN_180041dc0	0x180041dc0	IsValid
-FUN_180081490	0x180081490	IsValid
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	IsValid
 FUN_18002e230	0x18002e230	persist
 FUN_18002e230	0x18002e230	REGISTRY (fallback)
 FUN_18002e230	0x18002e230	cfunc+native
@@ -1183,14 +1183,14 @@ FUN_180030030	0x180030030	[TRAMP] Late-init Teams table found at upvalue %d, ref
 FUN_180030510	0x180030510	RPExtraTeams
 FUN_1800307f0	0x1800307f0	RPExtraTeams
 FUN_18017e8a0	0x18017e8a0	Color
-FUN_18016aa90	0x18016aa90	Color
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Color
 FUN_1801a2180	0x1801a2180	Color
 FUN_1802be530	0x1802be530	Color
-FUN_180169a60	0x180169a60	Color
-FUN_18016d2d0	0x18016d2d0	Color
-FUN_180169760	0x180169760	Color
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	Color
+Features_Visual_ESP_Editor_Elements_TextElement_vfunc04	0x18016d2d0	Color
+Features_Visual_ESP_Editor_Elements_BoxElement_vfunc04	0x180169760	Color
 FUN_180030a70	0x180030a70	Color
-FUN_180170610	0x180170610	Color
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Color
 FUN_1800307f0	0x1800307f0	Color
 FUN_1801768e0	0x1801768e0	color
 FUN_180176440	0x180176440	color
@@ -1457,14 +1457,14 @@ FUN_180041dc0	0x180041dc0	[LUASTACK] api table unavailable -- persist not ready
 FUN_180041dc0	0x180041dc0	stack
 FUN_180041dc0	0x180041dc0	[LUASTACK] warning: _G.stack exists (type %d) -- scripts in the sandbox will see ours 
 FUN_180041dc0	0x180041dc0	PushValue
-FUN_1800af1c0	0x1800af1c0	GetValue
+Features_Autowall_TacRPAutowall_vfunc03	0x1800af1c0	GetValue
 FUN_18008aae0	0x18008aae0	GetValue
 FUN_18008ac10	0x18008ac10	GetValue
 FUN_18008ad70	0x18008ad70	GetValue
 FUN_180041dc0	0x180041dc0	GetValue
 FUN_180041dc0	0x180041dc0	[LUASTACK] stack table registered (depth limit %d) 
 FUN_180003f30	0x180003f30	Default
-FUN_18016c230	0x18016c230	Default
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Default
 FUN_180047090	0x180047090	CloseCaption_Normal
 FUN_180047090	0x180047090	DebugFixedSmall
 FUN_180047bf0	0x180047bf0	SetMaterial
@@ -1703,10 +1703,10 @@ FUN_18004a530	0x18004a530	[LUAIMGUI] ImGui table registered
 FUN_1800b3c00	0x1800b3c00	m_hGroundEntity
 FUN_180192700	0x180192700	m_hGroundEntity
 FUN_1800b3c00	0x1800b3c00	m_flFallVelocity
-FUN_180105c80	0x180105c80	m_bDucked
-FUN_180105c80	0x180105c80	m_bDucking
-FUN_180106b80	0x180106b80	m_flDucktime
-FUN_180105c80	0x180105c80	m_flDucktime
+Features_JumpBug_JumpBugFeature_vfunc01	0x180105c80	m_bDucked
+Features_JumpBug_JumpBugFeature_vfunc01	0x180105c80	m_bDucking
+Features_JumpBug_JumpBugFeature_vfunc02	0x180106b80	m_flDucktime
+Features_JumpBug_JumpBugFeature_vfunc01	0x180105c80	m_flDucktime
 FUN_1800b3c00	0x1800b3c00	m_vecBaseVelocity
 FUN_1801ee530	0x1801ee530	[LUAMOVESIM] transaction left open by a script after %d tick(s) -- closed automatically 
 FUN_180052340	0x180052340	[LUAMOVESIM] tick budget (%d) exhausted in one transaction -- extra RunTick calls ignored 
@@ -1746,7 +1746,7 @@ FUN_1800525b0	0x1800525b0	GetAngles
 FUN_1800525b0	0x1800525b0	OnGround
 FUN_1800525b0	0x1800525b0	GetStepHeight
 FUN_1800525b0	0x1800525b0	GetMaxSpeed
-FUN_1800841b0	0x1800841b0	GetMaxSpeed
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetMaxSpeed
 FUN_1801ee530	0x1801ee530	Start
 FUN_1800525b0	0x1800525b0	Start
 FUN_1800525b0	0x1800525b0	movement_sim
@@ -2009,7 +2009,7 @@ FUN_18005e350	0x18005e350	[LUABF] api table unavailable -- persist not ready
 FUN_18005e350	0x18005e350	Create
 FUN_180069950	0x180069950	Create
 FUN_18005e350	0x18005e350	Close
-FUN_1800f1200	0x1800f1200	Close
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Close
 FUN_18005e350	0x18005e350	IsReader
 FUN_18005e350	0x18005e350	IsWriter
 FUN_18005e350	0x18005e350	Reset
@@ -2251,12 +2251,12 @@ FUN_180076b50	0x180076b50	CBaseEntity
 FUN_180122bf0	0x180122bf0	CBaseEntity
 FUN_180194900	0x180194900	CBaseEntity
 FUN_180076b50	0x180076b50	[UpdateCache] Backends: %d, Base: '%s', Class: '%s', Matched: %s 
-FUN_180077880	0x180077880	Generic
-FUN_180083920	0x180083920	Primary
-FUN_180077cc0	0x180077cc0	Primary
-FUN_18007e950	0x18007e950	Primary
-FUN_18009aea0	0x18009aea0	Primary
-FUN_18007e100	0x18007e100	Primary
+Features_Weapons_Backends_GenericWeaponBackend_vfunc00	0x180077880	Generic
+Features_Weapons_Backends_CSGOWeaponBackend_vfunc32	0x180083920	Primary
+vfunc_shared_180077cc0	0x180077cc0	Primary
+Features_Weapons_Backends_HVH2WeaponBackend_vfunc32	0x18007e950	Primary
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	Primary
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	Primary
 FUN_1801a6210	0x1801a6210	Primary
 FUN_180096280	0x180096280	Primary
 FUN_1800da650	0x1800da650	Primary
@@ -2265,150 +2265,150 @@ FUN_1800a5030	0x1800a5030	Primary
 FUN_18007d060	0x18007d060	Primary
 FUN_1800a5150	0x1800a5150	Primary
 FUN_1800a1280	0x1800a1280	Primary
-FUN_180091350	0x180091350	Primary
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	Primary
 FUN_1800996a0	0x1800996a0	Primary
 FUN_1800ac860	0x1800ac860	Primary
 FUN_1800ac980	0x1800ac980	Primary
-FUN_1800a0530	0x1800a0530	Primary
-FUN_180077cc0	0x180077cc0	Automatic
-FUN_18009aea0	0x18009aea0	Automatic
-FUN_18007d830	0x18007d830	Automatic
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc29	0x1800a0530	Primary
+vfunc_shared_180077cc0	0x180077cc0	Automatic
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	Automatic
+Features_Weapons_Backends_M9KWeaponBackend_vfunc25	0x18007d830	Automatic
 FUN_1800a5150	0x1800a5150	Automatic
 FUN_1800a1280	0x1800a1280	Automatic
-FUN_180091350	0x180091350	Automatic
-FUN_1800a0530	0x1800a0530	Automatic
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	Automatic
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc29	0x1800a0530	Automatic
 FUN_180078070	0x180078070	DT_WeaponPistol
 FUN_180078070	0x180078070	m_flAccuracyPenalty
-FUN_1800781d0	0x1800781d0	weapon_pistol
-FUN_180078300	0x180078300	weapon_pistol
-FUN_180078300	0x180078300	weapon_357
+Features_Weapons_Backends_HL2WeaponBackend_vfunc32	0x1800781d0	weapon_pistol
+vfunc_shared_180078300	0x180078300	weapon_pistol
+vfunc_shared_180078300	0x180078300	weapon_357
 FUN_18008fbf0	0x18008fbf0	randomseed
 FUN_18007af40	0x18007af40	randomseed
 FUN_180082310	0x180082310	randomseed
 FUN_180078520	0x180078520	randomseed
-FUN_18007b7b0	0x18007b7b0	CurCone
-FUN_1800869c0	0x1800869c0	CurCone
-FUN_1800794a0	0x1800794a0	CurCone
-FUN_180078c00	0x180078c00	CurCone
-FUN_18007c5e0	0x18007c5e0	CurCone
-FUN_18007b7b0	0x18007b7b0	MaxSpreadInc
-FUN_180078c00	0x180078c00	MaxSpreadInc
-FUN_18007b7b0	0x18007b7b0	ViewAff
-FUN_18007a3f0	0x18007a3f0	ViewAff
-FUN_18007a750	0x18007a750	ViewAff
-FUN_180079e70	0x180079e70	ViewAff
-FUN_1800794a0	0x1800794a0	ViewAff
-FUN_180078c00	0x180078c00	ViewAff
-FUN_18007c5e0	0x18007c5e0	ViewAff
-FUN_18007b7b0	0x18007b7b0	LastView
-FUN_180079e70	0x180079e70	LastView
-FUN_180078c00	0x180078c00	LastView
-FUN_180079260	0x180079260	FireMode
-FUN_1800794a0	0x1800794a0	[CW20-DIAG] cone(cached=%.4f proj=%.4f live=%.4f) viewaff(cached=%.4f live=%.4f) maxinc=%.3f | rcs=%d nvr=(%.3f,%.3f) punchNow=(%.3f,%.3f) drift=(%.3f,%.3f) 
-FUN_18007a750	0x18007a750	AddSpread
-FUN_180079e70	0x180079e70	AddSpread
-FUN_18007a750	0x18007a750	[%s-DIAG] lerp(measured=%.4f default=%.4f used=%.4f) snapscale=%.3f viewaff(cached=%.5f proj=%.5f live=%.5f snap=%.5f needed=%.5f) addspread(prev=%.5f cached=%.5f live=%.5f step=%.5f) seen=%d 
-FUN_18007b620	0x18007b620	sv_ut_swb_bullet_debug
-FUN_18007b6a0	0x18007b6a0	sv_ut_swb_bullet_debug
-FUN_18007b7b0	0x18007b7b0	sv_ut_swb_bullet_debug
-FUN_18007c5e0	0x18007c5e0	sv_ut_swb_bullet_debug
-FUN_18007b7b0	0x18007b7b0	IsM9KRework
-FUN_18007b7b0	0x18007b7b0	_curSpreadCone
-FUN_18007c5e0	0x18007c5e0	_curSpreadCone
-FUN_18007b7b0	0x18007b7b0	BaseSpreadMultiplier
-FUN_18007b7b0	0x18007b7b0	Shots
-FUN_18007b7b0	0x18007b7b0	ClumpSpread
-FUN_18007b7b0	0x18007b7b0	VerticalClumpSpread
-FUN_18007b7b0	0x18007b7b0	HorizontalClumpSpread
-FUN_18007b7b0	0x18007b7b0	swb_ViewAff
-FUN_18007c5e0	0x18007c5e0	swb_ViewAff
-FUN_18007b7b0	0x18007b7b0	swb_LastView
-FUN_18007b7b0	0x18007b7b0	legacy
-FUN_180091350	0x180091350	legacy
-FUN_18007c5e0	0x18007c5e0	legacy
-FUN_18007b7b0	0x18007b7b0	[UTSWB] cache: convar=%d confirmed=%d m9k=%d viewaff=%d lastview=%d layout=%s cone=%.4f maxinc=%.3f basemul=%.3f 
-FUN_18007c5e0	0x18007c5e0	[UTSWB-DIAG] NOT CONFIRMED (convar=%d) -- stock CW20 fallback active 
-FUN_18007c5e0	0x18007c5e0	[UTSWB] seed calibrated: offset now %d ticks 
-FUN_18007c5e0	0x18007c5e0	[UTSWB-DIAG] layout=%s m9k=%d predCT=%.17g actualCT=%.17g dTicks=%.3f cone(cached=%.4f proj=%.4f live=%.4f basemul=%.3f) viewaff(proj=%.4f live=%.4f) 
-FUN_18007cb60	0x18007cb60	GetPrimaryCone
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	CurCone
+Features_Weapons_Backends_CombineWeapWeaponBackend_vfunc32	0x1800869c0	CurCone
+vfunc_shared_1800794a0	0x1800794a0	CurCone
+vfunc_shared_180078c00	0x180078c00	CurCone
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	CurCone
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	MaxSpreadInc
+vfunc_shared_180078c00	0x180078c00	MaxSpreadInc
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	ViewAff
+vfunc_shared_18007a3f0	0x18007a3f0	ViewAff
+vfunc_shared_18007a750	0x18007a750	ViewAff
+vfunc_shared_180079e70	0x180079e70	ViewAff
+vfunc_shared_1800794a0	0x1800794a0	ViewAff
+vfunc_shared_180078c00	0x180078c00	ViewAff
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	ViewAff
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	LastView
+vfunc_shared_180079e70	0x180079e70	LastView
+vfunc_shared_180078c00	0x180078c00	LastView
+vfunc_shared_180079260	0x180079260	FireMode
+vfunc_shared_1800794a0	0x1800794a0	[CW20-DIAG] cone(cached=%.4f proj=%.4f live=%.4f) viewaff(cached=%.4f live=%.4f) maxinc=%.3f | rcs=%d nvr=(%.3f,%.3f) punchNow=(%.3f,%.3f) drift=(%.3f,%.3f) 
+vfunc_shared_18007a750	0x18007a750	AddSpread
+vfunc_shared_180079e70	0x180079e70	AddSpread
+vfunc_shared_18007a750	0x18007a750	[%s-DIAG] lerp(measured=%.4f default=%.4f used=%.4f) snapscale=%.3f viewaff(cached=%.5f proj=%.5f live=%.5f snap=%.5f needed=%.5f) addspread(prev=%.5f cached=%.5f live=%.5f step=%.5f) seen=%d 
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc01	0x18007b620	sv_ut_swb_bullet_debug
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc02	0x18007b6a0	sv_ut_swb_bullet_debug
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	sv_ut_swb_bullet_debug
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	sv_ut_swb_bullet_debug
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	IsM9KRework
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	_curSpreadCone
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	_curSpreadCone
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	BaseSpreadMultiplier
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	Shots
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	ClumpSpread
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	VerticalClumpSpread
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	HorizontalClumpSpread
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	swb_ViewAff
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	swb_ViewAff
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	swb_LastView
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	legacy
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	legacy
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	legacy
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc25	0x18007b7b0	[UTSWB] cache: convar=%d confirmed=%d m9k=%d viewaff=%d lastview=%d layout=%s cone=%.4f maxinc=%.3f basemul=%.3f 
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	[UTSWB-DIAG] NOT CONFIRMED (convar=%d) -- stock CW20 fallback active 
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	[UTSWB] seed calibrated: offset now %d ticks 
+Features_Weapons_Backends_UTSWBWeaponBackend_vfunc30	0x18007c5e0	[UTSWB-DIAG] layout=%s m9k=%d predCT=%.17g actualCT=%.17g dTicks=%.3f cone(cached=%.4f proj=%.4f live=%.4f basemul=%.3f) viewaff(proj=%.4f live=%.4f) 
+Features_Weapons_Backends_TTTWeaponBackend_vfunc25	0x18007cb60	GetPrimaryCone
 FUN_18007ce40	0x18007ce40	weapon_m9k
 FUN_18007dbc0	0x18007dbc0	Ironsights
 FUN_18007d480	0x18007d480	Ironsights
 FUN_18007d480	0x18007d480	M9K_Ironsights
-FUN_18007d830	0x18007d830	IronAccuracy
-FUN_180083920	0x180083920	Spread
-FUN_1800a7c00	0x1800a7c00	Spread
+Features_Weapons_Backends_M9KWeaponBackend_vfunc25	0x18007d830	IronAccuracy
+Features_Weapons_Backends_CSGOWeaponBackend_vfunc32	0x180083920	Spread
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	Spread
 FUN_1801c3ef0	0x1801c3ef0	Spread
-FUN_180087090	0x180087090	Spread
-FUN_18007e950	0x18007e950	Spread
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	Spread
+Features_Weapons_Backends_HVH2WeaponBackend_vfunc32	0x18007e950	Spread
 FUN_1800da650	0x1800da650	Spread
-FUN_18007d830	0x18007d830	Spread
+Features_Weapons_Backends_M9KWeaponBackend_vfunc25	0x18007d830	Spread
 FUN_1801c8950	0x1801c8950	Spread
-FUN_18007d830	0x18007d830	HipCone
+Features_Weapons_Backends_M9KWeaponBackend_vfunc25	0x18007d830	HipCone
 FUN_18007de30	0x18007de30	ptp_weapon_base
-FUN_18007e100	0x18007e100	ptp_scoped_base
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	ptp_scoped_base
 FUN_18007de30	0x18007de30	ptp_scoped_base
-FUN_18007e100	0x18007e100	StandCone
-FUN_18007e100	0x18007e100	WalkCone
-FUN_18007e100	0x18007e100	CrouchCone
-FUN_18007e100	0x18007e100	CrouchWalkCone
-FUN_18007e100	0x18007e100	AirCone
-FUN_18007e100	0x18007e100	IronSightsCone
-FUN_18007e100	0x18007e100	SetNextFireMode
-FUN_18007e100	0x18007e100	BurstCounter
-FUN_18007e100	0x18007e100	DeadEyed
-FUN_18007e5c0	0x18007e5c0	shotgun
-FUN_18007e5c0	0x18007e5c0	scoped
-FUN_18007e5c0	0x18007e5c0	[PTP] cone=%.5f derived=%d live=%.5f iron=%d dead=%d ground=%d dialect=%s 
-FUN_18007e8d0	0x18007e8d0	HVH2/CSS
-FUN_18007e950	0x18007e950	css_m249
-FUN_18007ee50	0x18007ee50	Status
-FUN_18007ee50	0x18007ee50	AimRecoil
-FUN_18007ee50	0x18007ee50	HipRecoil
-FUN_18007fdb0	0x18007fdb0	CalculateConeRecoil
-FUN_18007f4d0	0x18007f4d0	CalculateConeRecoil
-FUN_1800aff90	0x1800aff90	GetStatL
-FUN_18007f4d0	0x18007f4d0	GetStatL
-FUN_18007f4d0	0x18007f4d0	Primary.SpreadBiasYaw
-FUN_18007f4d0	0x18007f4d0	Primary.SpreadBiasPitch
-FUN_18007f4d0	0x18007f4d0	Primary.NumShots
-FUN_18007f4d0	0x18007f4d0	GetViewPunchP
-FUN_18007f4d0	0x18007f4d0	GetViewPunchY
-FUN_18007f4d0	0x18007f4d0	sv_tfa_recoil_legacy
-FUN_18007fdb0	0x18007fdb0	ComputeBulletDeviation
-FUN_180080980	0x180080980	GetAimAngle
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	StandCone
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	WalkCone
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	CrouchCone
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	CrouchWalkCone
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	AirCone
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	IronSightsCone
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	SetNextFireMode
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	BurstCounter
+Features_Weapons_Backends_PTPWeaponBackend_vfunc25	0x18007e100	DeadEyed
+Features_Weapons_Backends_PTPWeaponBackend_vfunc32	0x18007e5c0	shotgun
+Features_Weapons_Backends_PTPWeaponBackend_vfunc32	0x18007e5c0	scoped
+Features_Weapons_Backends_PTPWeaponBackend_vfunc32	0x18007e5c0	[PTP] cone=%.5f derived=%d live=%.5f iron=%d dead=%d ground=%d dialect=%s 
+Features_Weapons_Backends_HVH2WeaponBackend_vfunc00	0x18007e8d0	HVH2/CSS
+Features_Weapons_Backends_HVH2WeaponBackend_vfunc32	0x18007e950	css_m249
+Features_Weapons_Backends_FAS2WeaponBackend_vfunc23	0x18007ee50	Status
+Features_Weapons_Backends_FAS2WeaponBackend_vfunc23	0x18007ee50	AimRecoil
+Features_Weapons_Backends_FAS2WeaponBackend_vfunc23	0x18007ee50	HipRecoil
+Features_Weapons_Backends_TFAWeaponBackend_vfunc04	0x18007fdb0	CalculateConeRecoil
+Features_Weapons_Backends_TFAWeaponBackend_vfunc25	0x18007f4d0	CalculateConeRecoil
+Features_Autowall_TFAAutowall_vfunc03	0x1800aff90	GetStatL
+Features_Weapons_Backends_TFAWeaponBackend_vfunc25	0x18007f4d0	GetStatL
+Features_Weapons_Backends_TFAWeaponBackend_vfunc25	0x18007f4d0	Primary.SpreadBiasYaw
+Features_Weapons_Backends_TFAWeaponBackend_vfunc25	0x18007f4d0	Primary.SpreadBiasPitch
+Features_Weapons_Backends_TFAWeaponBackend_vfunc25	0x18007f4d0	Primary.NumShots
+Features_Weapons_Backends_TFAWeaponBackend_vfunc25	0x18007f4d0	GetViewPunchP
+Features_Weapons_Backends_TFAWeaponBackend_vfunc25	0x18007f4d0	GetViewPunchY
+Features_Weapons_Backends_TFAWeaponBackend_vfunc25	0x18007f4d0	sv_tfa_recoil_legacy
+Features_Weapons_Backends_TFAWeaponBackend_vfunc04	0x18007fdb0	ComputeBulletDeviation
+Features_Weapons_Backends_TFAWeaponBackend_vfunc05	0x180080980	GetAimAngle
 FUN_1800da4c0	0x1800da4c0	GetOwner
-FUN_180089640	0x180089640	GetOwner
-FUN_180080980	0x180080980	GetOwner
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetOwner
+Features_Weapons_Backends_TFAWeaponBackend_vfunc05	0x180080980	GetOwner
 FUN_180098e60	0x180098e60	GetOwner
 FUN_180098080	0x180098080	GetOwner
 FUN_180098400	0x180098400	GetOwner
-FUN_180080980	0x180080980	GetAimVector
-FUN_180080980	0x180080980	Angle
-FUN_180080e50	0x180080e50	[TFA-DIAG] predCT=%.17g actualCT=%.17g dTicks=%.3f cone=%.5f dev(yaw=%.3f pitch=%.3f) shots=%d ownPunch=(%.3f,%.3f) punchIsEngine=%d 
-FUN_180080f40	0x180080f40	GetStat
-FUN_180080f40	0x180080f40	Primary.Automatic
-FUN_180081490	0x180081490	GetBurstCount
-FUN_180081490	0x180081490	GetDispersion
-FUN_180081490	0x180081490	MOAToAcc
-FUN_180083110	0x180083110	GetBuff
-FUN_1800ae6e0	0x1800ae6e0	GetBuff
-FUN_180081490	0x180081490	GetBuff
-FUN_180081490	0x180081490	AccuracyMOA
-FUN_180081490	0x180081490	StrafeTilt
-FUN_180081490	0x180081490	GetFreeAimOffset
-FUN_180089640	0x180089640	GetFreeAimOffset
-FUN_180081490	0x180081490	GetWeaponOpDelay
-FUN_180081490	0x180081490	GetNextPrimaryFire
-FUN_180081490	0x180081490	GetHolster_Time
-FUN_180081490	0x180081490	GetHolster_Entity
-FUN_180081490	0x180081490	GetState
-FUN_180081490	0x180081490	GetNeedCycle
-FUN_180081490	0x180081490	GetPriorityAnim
-FUN_180081490	0x180081490	GetHeatLocked
-FUN_180081490	0x180081490	GetInUBGL
-FUN_180081490	0x180081490	GetNWState
-FUN_180081490	0x180081490	CanShootWhileSprint
+Features_Weapons_Backends_TFAWeaponBackend_vfunc05	0x180080980	GetAimVector
+Features_Weapons_Backends_TFAWeaponBackend_vfunc05	0x180080980	Angle
+Features_Weapons_Backends_TFAWeaponBackend_vfunc30	0x180080e50	[TFA-DIAG] predCT=%.17g actualCT=%.17g dTicks=%.3f cone=%.5f dev(yaw=%.3f pitch=%.3f) shots=%d ownPunch=(%.3f,%.3f) punchIsEngine=%d 
+Features_Weapons_Backends_TFAWeaponBackend_vfunc09	0x180080f40	GetStat
+Features_Weapons_Backends_TFAWeaponBackend_vfunc09	0x180080f40	Primary.Automatic
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetBurstCount
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetDispersion
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	MOAToAcc
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc09	0x180083110	GetBuff
+Features_Autowall_ArcCWAutowall_vfunc03	0x1800ae6e0	GetBuff
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetBuff
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	AccuracyMOA
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	StrafeTilt
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetFreeAimOffset
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetFreeAimOffset
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetWeaponOpDelay
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetNextPrimaryFire
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetHolster_Time
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetHolster_Entity
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetState
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetNeedCycle
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetPriorityAnim
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetHeatLocked
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetInUBGL
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	GetNWState
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc25	0x180081490	CanShootWhileSprint
 FUN_180082310	0x180082310	SinglePlayer
 FUN_180082310	0x180082310	[NS-SEED] pcall SinglePlayer FAILED: %s 
 FUN_180082310	0x180082310	Round
@@ -2420,35 +2420,35 @@ FUN_180082310	0x180082310	[NS-SEED] pcall SharedRandom FAILED: %s
 FUN_180082310	0x180082310	[NS-SEED] pcall randomseed FAILED: %s 
 FUN_180082310	0x180082310	[NS-SEED] OK: sr=%.4f modulo=%d rounded=%.0f seed='%s' addSeed=%.0f 
 FUN_1802e0fac	0x1802e0fac	[NS-SEED] EXCEPTION 
-FUN_180083110	0x180083110	GetCurrentFiremode
-FUN_180089640	0x180089640	GetCurrentFiremode
-FUN_180083110	0x180083110	Autmatic
-FUN_180083110	0x180083110	Autofire
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc09	0x180083110	GetCurrentFiremode
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetCurrentFiremode
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc09	0x180083110	Autmatic
+Features_Weapons_Backends_ArcCWWeaponBackend_vfunc09	0x180083110	Autofire
 FUN_180083f00	0x180083f00	weapon_swcs_
-FUN_180083f80	0x180083f80	weapon_swcs_
-FUN_180084050	0x180084050	weapon_swcs_
-FUN_180084110	0x180084110	weapon_swcs_
-FUN_1800841b0	0x1800841b0	GetInaccuracy
-FUN_180089640	0x180089640	GetSpread
-FUN_1800841b0	0x1800841b0	GetSpread
-FUN_1800841b0	0x1800841b0	GetRecoilIndex
-FUN_1800841b0	0x1800841b0	GetWeaponMode
-FUN_1800841b0	0x1800841b0	GetBullets
-FUN_1800841b0	0x1800841b0	GetBurstShotsRemaining
-FUN_1800841b0	0x1800841b0	GetInReload
-FUN_1800841b0	0x1800841b0	GetIsRevolver
-FUN_1800841b0	0x1800841b0	GetHasBurstMode
-FUN_1800841b0	0x1800841b0	GetInaccuracyMove
-FUN_1800841b0	0x1800841b0	GetInaccuracyJumpInitial
-FUN_1800841b0	0x1800841b0	GetInaccuracyJumpApex
-FUN_1800841b0	0x1800841b0	GetJumpPower
-FUN_1800841b0	0x1800841b0	GetUninterpolatedAimPunchAngle
-FUN_1800841b0	0x1800841b0	IsNegev
-FUN_1800841b0	0x1800841b0	IsR8Revolver
-FUN_1800841b0	0x1800841b0	ItemAttributes
-FUN_1800841b0	0x1800841b0	spread seed
-FUN_1800841b0	0x1800841b0	is full auto
-FUN_1800860c0	0x1800860c0	swcs_weapon_sync_seed
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc01	0x180083f80	weapon_swcs_
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc02	0x180084050	weapon_swcs_
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc03	0x180084110	weapon_swcs_
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetInaccuracy
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetSpread
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetSpread
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetRecoilIndex
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetWeaponMode
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetBullets
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetBurstShotsRemaining
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetInReload
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetIsRevolver
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetHasBurstMode
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetInaccuracyMove
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetInaccuracyJumpInitial
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetInaccuracyJumpApex
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetJumpPower
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	GetUninterpolatedAimPunchAngle
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	IsNegev
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	IsR8Revolver
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	ItemAttributes
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	spread seed
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc25	0x1800841b0	is full auto
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc04	0x1800860c0	swcs_weapon_sync_seed
 FUN_1800859c0	0x1800859c0	swcs_weapon_max_spread_seed
 FUN_1800855f0	0x1800855f0	weapon_air_spread_scale
 FUN_180085870	0x180085870	weapon_accuracy_nospread
@@ -2456,9 +2456,9 @@ FUN_180085870	0x180085870	weapon_accuracy_forcespread
 FUN_1800859c0	0x1800859c0	weapon_debug_max_inaccuracy
 FUN_1800859c0	0x1800859c0	weapon_debug_inaccuracy_only_up
 FUN_1800859c0	0x1800859c0	weapon_accuracy_shotgun_spread_patterns
-FUN_1800860c0	0x1800860c0	[SWCS-NS] swcs_weapon_sync_seed 0 -- server and client seed the spread from unshared table CRCs, cone not predictable 
-FUN_1800860c0	0x1800860c0	[SWCS-NS] inacc=%.5f(cached %.5f) spread=%.5f recoilIdx=%.2f mode=%d bullets=%d pat=%d ground=%d/%d vz=%.0f/%.0f spd=%.0f/%.0f off=(%.5f,%.5f) punch=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
-FUN_180086920	0x180086920	CombineWeaponry
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc04	0x1800860c0	[SWCS-NS] swcs_weapon_sync_seed 0 -- server and client seed the spread from unshared table CRCs, cone not predictable 
+Features_Weapons_Backends_SWCSWeaponBackend_vfunc04	0x1800860c0	[SWCS-NS] inacc=%.5f(cached %.5f) spread=%.5f recoilIdx=%.2f mode=%d bullets=%d pat=%d ground=%d/%d vz=%.0f/%.0f spd=%.0f/%.0f off=(%.5f,%.5f) punch=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
+Features_Weapons_Backends_CombineWeapWeaponBackend_vfunc00	0x180086920	CombineWeaponry
 FUN_180086e00	0x180086e00	DoProjectileAttack
 FUN_180086e00	0x180086e00	CalcSpreadDir
 FUN_180086e00	0x180086e00	LUA CalcSpreadDir (current ARC9)
@@ -2467,77 +2467,77 @@ FUN_180086e00	0x180086e00	UNKNOWN (upvalue names stripped)
 FUN_180086e00	0x180086e00	[ARC9-NS] spread path = %s 
 FUN_180087940	0x180087940	GetProcessedValue
 FUN_180087a70	0x180087a70	GetProcessedValue
-FUN_1800aecf0	0x1800aecf0	GetProcessedValue
-FUN_180087090	0x180087090	AlwaysPhysBullet
-FUN_180087090	0x180087090	NeverPhysBullet
-FUN_180087090	0x180087090	UseDispersion
-FUN_180087090	0x180087090	DispersionSpread
-FUN_180087090	0x180087090	GetShootPos
-FUN_180087090	0x180087090	Recoil
-FUN_180087090	0x180087090	RecoilUp
-FUN_180087090	0x180087090	RecoilSide
-FUN_180087090	0x180087090	RecoilRandomUp
-FUN_180087090	0x180087090	RecoilRandomSide
-FUN_180087090	0x180087090	Jammed
-FUN_180087090	0x180087090	HeatLockout
-FUN_180087090	0x180087090	Reloading
+Features_Autowall_ARC9Autowall_vfunc03	0x1800aecf0	GetProcessedValue
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	AlwaysPhysBullet
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	NeverPhysBullet
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	UseDispersion
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	DispersionSpread
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	GetShootPos
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	Recoil
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	RecoilUp
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	RecoilSide
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	RecoilRandomUp
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	RecoilRandomSide
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	Jammed
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	HeatLockout
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	Reloading
 FUN_1800a1280	0x1800a1280	Reloading
-FUN_180087090	0x180087090	GetCurrentFiremodeTable
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc25	0x180087090	GetCurrentFiremodeTable
 FUN_180087eb0	0x180087eb0	arc9_physbullet3
 FUN_180087eb0	0x180087eb0	arc9_physbullet4
 FUN_180087eb0	0x180087eb0	arc9_physbullet
 FUN_180087eb0	0x180087eb0	arc9_physbullet2
-FUN_180088980	0x180088980	arc9_bullet_physics
-FUN_180088980	0x180088980	arc9_bullet_physics_shotguns
-FUN_180088980	0x180088980	LUACONE
-FUN_180088980	0x180088980	[ARC9-NS] %s dist=%.1f baseTick=%d bestTick=%d luaTick=%d tickoff=%d lat=%d choke=%d win=%d spread=%.4f dbldisp=%d shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
-FUN_180088980	0x180088980	[ARC9-NS] HITSCAN(engine cone) dist=%.1f baseTick=%d bestTick=%d luaTick=%d lat=%d choke=%d win=%d spread=%.4f shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
-FUN_1800892f0	0x1800892f0	[ARC9-NS] lua tick offset calibrated: now %d (measured %+d) 
-FUN_1800893a0	0x1800893a0	[ARC9-DIAG] predTick=%d actualTick=%d off=%d luaTickOffset=%d loopback=%d path=%d 
-FUN_1800df780	0x1800df780	tacrp_
-FUN_180089640	0x180089640	ShotgunPelletSpread
-FUN_180089640	0x180089640	MuzzleVelocity
-FUN_180089640	0x180089640	IsShotgun
-FUN_180089640	0x180089640	ShootEnt
-FUN_180089640	0x180089640	GetSwayAngles
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc04	0x180088980	arc9_bullet_physics
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc04	0x180088980	arc9_bullet_physics_shotguns
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc04	0x180088980	LUACONE
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc04	0x180088980	[ARC9-NS] %s dist=%.1f baseTick=%d bestTick=%d luaTick=%d tickoff=%d lat=%d choke=%d win=%d spread=%.4f dbldisp=%d shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc04	0x180088980	[ARC9-NS] HITSCAN(engine cone) dist=%.1f baseTick=%d bestTick=%d luaTick=%d lat=%d choke=%d win=%d spread=%.4f shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc31	0x1800892f0	[ARC9-NS] lua tick offset calibrated: now %d (measured %+d) 
+Features_Weapons_Backends_ARC9WeaponBackend_vfunc30	0x1800893a0	[ARC9-DIAG] predTick=%d actualTick=%d off=%d luaTickOffset=%d loopback=%d path=%d 
+Features_Nospread_NospreadFeature_vfunc10	0x1800df780	tacrp_
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	ShotgunPelletSpread
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	MuzzleVelocity
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	IsShotgun
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	ShootEnt
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetSwayAngles
 FUN_18008ad70	0x18008ad70	ShootOffsetAngle
 FUN_18008a940	0x18008a940	GetMuzzleOrigin
-FUN_180089640	0x180089640	GetShootDir
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetShootDir
 FUN_1800a7660	0x1800a7660	EyeAngles
 FUN_180096280	0x180096280	EyeAngles
-FUN_180089640	0x180089640	EyeAngles
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	EyeAngles
 FUN_180098080	0x180098080	EyeAngles
-FUN_180089640	0x180089640	FreeAim
-FUN_180089640	0x180089640	tacrp_freeaim
-FUN_180089640	0x180089640	ClientFreeAimAng
-FUN_180089640	0x180089640	GetFreeAimAngle
-FUN_180089640	0x180089640	GetReloading
-FUN_180089640	0x180089640	GetJammed
-FUN_180089640	0x180089640	GetSafe
-FUN_180089640	0x180089640	GetCustomize
-FUN_180089640	0x180089640	GetRPM
-FUN_180089640	0x180089640	PostBurstDelay
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	FreeAim
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	tacrp_freeaim
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	ClientFreeAimAng
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetFreeAimAngle
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetReloading
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetJammed
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetSafe
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetCustomize
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	GetRPM
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc25	0x180089640	PostBurstDelay
 FUN_18008b160	0x18008b160	tacrp_randomspread
 FUN_18008b160	0x18008b160	tacrp_randomspread2
-FUN_18008bdf0	0x18008bdf0	tacrp_physbullet
-FUN_18008bdf0	0x18008bdf0	tacrp_fixedspread
-FUN_18008bdf0	0x18008bdf0	tacrp_pelletspread
-FUN_18008bdf0	0x18008bdf0	tacrp_client_damage
-FUN_18008bdf0	0x18008bdf0	[CVAR-LAYOUT] xorOk=%d (str@0x48 plain, f@0x54/n@0x58 xor low32(obj)) valueObj=%p this=%p 
-FUN_18008bdf0	0x18008bdf0	[CVAR-DUMP] +0x%02X: %016llX %016llX %016llX %016llX | ints: %d %d %d %d %d %d %d %d 
-FUN_18008bdf0	0x18008bdf0	[CVAR-DUMP] +0x%02X -> str "%.24s" 
-FUN_18008bdf0	0x18008bdf0	[TacRP-FINDVAR] OK slot17=%p phys=%p name='%s' str='%s' float=%.3f int=%d fixed=%p name='%s' int=%d pellet=%p name='%s' int=%d client=%p name='%s' int=%d 
-FUN_18008bdf0	0x18008bdf0	[TacRP-FINDVAR] MISS attempt=%d phys=%p fixed=%p pellet=%p client=%p 
-FUN_18008bdf0	0x18008bdf0	[TacRP-CVAR] native physbullet=%d fixedspread=%d pelletspread=%d clientdamage=%d (xorOk=%d) 
-FUN_18008bdf0	0x18008bdf0	[TacRP-NS] RAND dist=%.1f baseTick=%d bestTick=%d lat=%d choke=%d win=%d spread=%.4f shoot=(%.3f,%.3f) faCorr=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
-FUN_18008bdf0	0x18008bdf0	[TacRP-NS] HITSCAN dist=%.1f spread=%.4f shoot=(%.3f,%.3f) faCorr=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
-FUN_18008d3f0	0x18008d3f0	ZS/SunRust
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	tacrp_physbullet
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	tacrp_fixedspread
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	tacrp_pelletspread
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	tacrp_client_damage
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	[CVAR-LAYOUT] xorOk=%d (str@0x48 plain, f@0x54/n@0x58 xor low32(obj)) valueObj=%p this=%p 
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	[CVAR-DUMP] +0x%02X: %016llX %016llX %016llX %016llX | ints: %d %d %d %d %d %d %d %d 
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	[CVAR-DUMP] +0x%02X -> str "%.24s" 
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	[TacRP-FINDVAR] OK slot17=%p phys=%p name='%s' str='%s' float=%.3f int=%d fixed=%p name='%s' int=%d pellet=%p name='%s' int=%d client=%p name='%s' int=%d 
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	[TacRP-FINDVAR] MISS attempt=%d phys=%p fixed=%p pellet=%p client=%p 
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	[TacRP-CVAR] native physbullet=%d fixedspread=%d pelletspread=%d clientdamage=%d (xorOk=%d) 
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	[TacRP-NS] RAND dist=%.1f baseTick=%d bestTick=%d lat=%d choke=%d win=%d spread=%.4f shoot=(%.3f,%.3f) faCorr=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
+Features_Weapons_Backends_TacRPWeaponBackend_vfunc04	0x18008bdf0	[TacRP-NS] HITSCAN dist=%.1f spread=%.4f shoot=(%.3f,%.3f) faCorr=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d 
+Features_Weapons_Backends_ZSWeaponBackend_vfunc00	0x18008d3f0	ZS/SunRust
 FUN_18008dc10	0x18008dc10	weapon_zs_base
 FUN_18008d400	0x18008d400	weapon_zs_basemelee
 FUN_18008d400	0x18008d400	weapon_zs_baseknife
-FUN_180091350	0x180091350	weapon_zs_baseshotgun
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	weapon_zs_baseshotgun
 FUN_18008d400	0x18008d400	weapon_zs_baseshotgun
-FUN_180091350	0x180091350	weapon_zs_base_akimbo
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	weapon_zs_base_akimbo
 FUN_18008d400	0x18008d400	weapon_zs_base_akimbo
 FUN_18008d400	0x18008d400	weapon_zs_basedeployer
 FUN_18008d400	0x18008d400	weapon_zs_baseflask
@@ -2548,10 +2548,10 @@ FUN_18008d400	0x18008d400	weapon_zs_base_twobuildup
 FUN_18008d400	0x18008d400	weapon_zs_basemelee_thrown
 FUN_18008d400	0x18008d400	weapon_zs_basemelee_twobuildup
 FUN_18008d400	0x18008d400	weapon_zs_basetrinket
-FUN_18008d860	0x18008d860	weapon_zs_
-FUN_180091350	0x180091350	weapon_zs_bigglock3
-FUN_180091350	0x180091350	weapon_zs_blackrock
-FUN_180091350	0x180091350	weapon_zs_hurricane
+Features_Weapons_Backends_ZSWeaponBackend_vfunc01	0x18008d860	weapon_zs_
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	weapon_zs_bigglock3
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	weapon_zs_blackrock
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	weapon_zs_hurricane
 FUN_18008dda0	0x18008dda0	weapon_zs_amigo
 FUN_18008dda0	0x18008dda0	weapon_zs_annabelle
 FUN_18008dda0	0x18008dda0	weapon_zs_paintballgun
@@ -2571,68 +2571,68 @@ FUN_18008eb80	0x18008eb80	PLAYER_WeaponMeta
 FUN_18008eb80	0x18008eb80	BulletNum
 FUN_18008f000	0x18008f000	Deliberation
 FUN_18008f000	0x18008f000	GetCone
-FUN_180091350	0x180091350	GetCone
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	GetCone
 FUN_1801bfd20	0x1801bfd20	Right
 FUN_18008f4c0	0x18008f4c0	Right
 FUN_1802d2b60	0x1802d2b60	Right
 FUN_18017ac80	0x18017ac80	Right
 FUN_1802896c0	0x1802896c0	Right
-FUN_18016c230	0x18016c230	Right
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Right
 FUN_180174640	0x180174640	Right
 FUN_18008f4c0	0x18008f4c0	[ZS-BASIS] Angle:Right dot=%.3f sign=%+.0f | Angle:Up dot=%.3f sign=%+.0f (read %d/%d) 
 FUN_18008f970	0x18008f970	PLAYER_RandomSeed
-FUN_180091350	0x180091350	PLAYER_RandomSeed
-FUN_180092570	0x180092570	bulletrotate0
-FUN_180092570	0x180092570	bulletangle0
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	PLAYER_RandomSeed
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	bulletrotate0
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	bulletangle0
 FUN_180090f30	0x180090f30	GetBurstShotsLeft
 FUN_180090f30	0x180090f30	GetNextBurstShot
 FUN_180090f30	0x180090f30	GetReloadFinish
 FUN_180090f30	0x180090f30	NoTakeAmmoOnBurst
-FUN_180091350	0x180091350	IsGun
-FUN_180091350	0x180091350	IsMelee
-FUN_180091350	0x180091350	IsMeleeWeapon
-FUN_180091350	0x180091350	ProjectileWeapon
-FUN_180091350	0x180091350	IsAkimbo
-FUN_180091350	0x180091350	NotFirearm
-FUN_180091350	0x180091350	CustomAimVec
-FUN_180091350	0x180091350	CustomShootPos
-FUN_180091350	0x180091350	AdditionalShootBulletsFunc
-FUN_180091350	0x180091350	BaseQuality
-FUN_180091350	0x180091350	Branch
-FUN_180091350	0x180091350	ShootBullets
-FUN_180091350	0x180091350	PrimaryAttack
-FUN_180091350	0x180091350	Projectile
-FUN_1800a7c00	0x1800a7c00	NumShots
-FUN_180091350	0x180091350	NumShots
-FUN_180091350	0x180091350	SpreadMultiHor
-FUN_180091350	0x180091350	SpreadMultiVer
-FUN_180091350	0x180091350	SpreadPattern
-FUN_180091350	0x180091350	WeaponBuildup
-FUN_180091350	0x180091350	Fracture Wave
-FUN_180091350	0x180091350	NameFull
-FUN_180091350	0x180091350	SpreadPatternHorizontal
-FUN_180091350	0x180091350	FireBulletsInfo
-FUN_180091350	0x180091350	FireBulletsLua
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	IsGun
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	IsMelee
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	IsMeleeWeapon
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	ProjectileWeapon
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	IsAkimbo
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	NotFirearm
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	CustomAimVec
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	CustomShootPos
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	AdditionalShootBulletsFunc
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	BaseQuality
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	Branch
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	ShootBullets
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	PrimaryAttack
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	Projectile
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	NumShots
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	NumShots
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	SpreadMultiHor
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	SpreadMultiVer
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	SpreadPattern
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	WeaponBuildup
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	Fracture Wave
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	NameFull
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	SpreadPatternHorizontal
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	FireBulletsInfo
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	FireBulletsLua
 FUN_18008e6d0	0x18008e6d0	chance_double_shot
 FUN_18008e6d0	0x18008e6d0	GetModVal
-FUN_180091350	0x180091350	ShootBulletsPreShot
-FUN_180091350	0x180091350	sunrust
-FUN_180091350	0x180091350	midnight
-FUN_180091350	0x180091350	[ZS] dialect=%s (fbi=%d seedTable=%d preShot=%d legacy=%d) 
-FUN_180091350	0x180091350	[ZS-NS] class=%s profile=%s branch=%d mode=%d gun=%d legacygun=%d melee=%d projectile=%d primaryproj=%d akimbo=%d customaim=%d custompos=%d multibullets=%d basebullets=%d audited=%d baseprimary=%d context=%d countsafe=%d getcone=%d enabled=%d 
-FUN_180092570	0x180092570	[ZS-SHOT] SKIP (%s) mode=%d class=%s 
-FUN_180092570	0x180092570	disabled
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	ShootBulletsPreShot
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	sunrust
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	midnight
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	[ZS] dialect=%s (fbi=%d seedTable=%d preShot=%d legacy=%d) 
+Features_Weapons_Backends_ZSWeaponBackend_vfunc25	0x180091350	[ZS-NS] class=%s profile=%s branch=%d mode=%d gun=%d legacygun=%d melee=%d projectile=%d primaryproj=%d akimbo=%d customaim=%d custompos=%d multibullets=%d basebullets=%d audited=%d baseprimary=%d context=%d countsafe=%d getcone=%d enabled=%d 
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	[ZS-SHOT] SKIP (%s) mode=%d class=%s 
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	disabled
 FUN_1801d0270	0x1801d0270	disabled
-FUN_180092570	0x180092570	not-ready
-FUN_180092570	0x180092570	no-cone
-FUN_180092570	0x180092570	sunrust-sample
-FUN_180092570	0x180092570	midnight-pattern
-FUN_180092570	0x180092570	midnight-sample
-FUN_180092570	0x180092570	legacy-sample
-FUN_180092570	0x180092570	no-dialect
-FUN_180092570	0x180092570	[ZS-SHOT] #%d cmd=%d tick=%d luaSeed=%s%.0f gap=%+.0f ourSeed=%d next=%+.4f cone=%.5f snap=%d h=%.6f v=%.6f comp=(%.4f,%.4f) resid=%.5f 
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	not-ready
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	no-cone
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	sunrust-sample
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	midnight-pattern
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	midnight-sample
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	legacy-sample
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	no-dialect
+Features_Weapons_Backends_ZSWeaponBackend_vfunc04	0x180092570	[ZS-SHOT] #%d cmd=%d tick=%d luaSeed=%s%.0f gap=%+.0f ourSeed=%d next=%+.4f cone=%.5f snap=%d h=%.6f v=%.6f comp=(%.4f,%.4f) resid=%.5f 
 FUN_180093400	0x180093400	abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_
-FUN_18009ad30	0x18009ad30	homigrad_base
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc02	0x18009ad30	homigrad_base
 FUN_1800952f0	0x1800952f0	homigrad_base
 FUN_180095440	0x180095440	homigrad_base
 FUN_1800985f0	0x1800985f0	last_transform
@@ -2654,7 +2654,7 @@ FUN_1800985f0	0x1800985f0	LocalMuzzleAng
 FUN_1800985f0	0x1800985f0	WorldModel_Transform
 FUN_1800985f0	0x1800985f0	PosAngChanges
 FUN_1800985f0	0x1800985f0	GetTrace
-FUN_1800dbc70	0x1800dbc70	recoilmul
+Features_ZCityCompat_ZCityCompatFeature_vfunc13	0x1800dbc70	recoilmul
 FUN_180095c30	0x180095c30	recoilmul
 FUN_180096280	0x180096280	RHPos
 FUN_180096280	0x180096280	AdditionalPos
@@ -2670,12 +2670,12 @@ FUN_180098080	0x180098080	posture
 FUN_180096280	0x180096280	lerped_positioning
 FUN_180096280	0x180096280	lerped_angle
 FUN_180096280	0x180096280	GunPositions
-FUN_18009aea0	0x18009aea0	reload
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	reload
 FUN_180096280	0x180096280	reload
-FUN_1800a0530	0x1800a0530	reload
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc29	0x1800a0530	reload
 FUN_180096280	0x180096280	SysTime
 FUN_180096280	0x180096280	timetick2
-FUN_18009a8c0	0x18009a8c0	lastShoot
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc24	0x18009a8c0	lastShoot
 FUN_180096280	0x180096280	lastShoot
 FUN_180096280	0x180096280	angle_difference
 FUN_180096280	0x180096280	weight
@@ -2699,65 +2699,65 @@ FUN_1800985f0	0x1800985f0	cache_trace
 FUN_1800985f0	0x1800985f0	cachedeyetrace
 FUN_180099c70	0x180099c70	bullet
 FUN_1800996a0	0x1800996a0	bullet
-FUN_1800af1c0	0x1800af1c0	Penetration
-FUN_1800aecf0	0x1800aecf0	Penetration
-FUN_1800ae6e0	0x1800ae6e0	Penetration
+Features_Autowall_TacRPAutowall_vfunc03	0x1800af1c0	Penetration
+Features_Autowall_ARC9Autowall_vfunc03	0x1800aecf0	Penetration
+Features_Autowall_ArcCWAutowall_vfunc03	0x1800ae6e0	Penetration
 FUN_1800996a0	0x1800996a0	Penetration
-FUN_1800b0790	0x1800b0790	Penetration
+Features_Autowall_M9KAutowall_vfunc03	0x1800b0790	Penetration
 FUN_1801e7a50	0x1801e7a50	Damage
-FUN_1800ae6e0	0x1800ae6e0	Damage
-FUN_1800b10e0	0x1800b10e0	Damage
+Features_Autowall_ArcCWAutowall_vfunc03	0x1800ae6e0	Damage
+Features_Autowall_FAS2Autowall_vfunc03	0x1800b10e0	Damage
 FUN_1800996a0	0x1800996a0	Damage
 FUN_1800ac860	0x1800ac860	Damage
-FUN_1800b0bd0	0x1800b0bd0	Damage
+vfunc_shared_1800b0bd0	0x1800b0bd0	Damage
 FUN_1800996a0	0x1800996a0	noricochet
 FUN_1800996a0	0x1800996a0	PenetrationMultiplier
 FUN_180099f60	0x180099f60	DrumLastPredicted
 FUN_180099f60	0x180099f60	1 1 1 1 1 1
 FUN_18009a2f0	0x18009a2f0	weapon_ags_30_handheld
-FUN_18009aea0	0x18009aea0	Shoot
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	Shoot
 FUN_18009a490	0x18009a490	Shoot
-FUN_18009aea0	0x18009aea0	FireBullet
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	FireBullet
 FUN_18009a490	0x18009a490	FireBullet
 FUN_1800d6550	0x1800d6550	Z-City/Homigrad
-FUN_1800b1230	0x1800b1230	Z-City/Homigrad
-FUN_18009a8b0	0x18009a8b0	Z-City/Homigrad
-FUN_18009aea0	0x18009aea0	weapon_doublebarrel_short
-FUN_18009aea0	0x18009aea0	weapon_revolver2
-FUN_18009aea0	0x18009aea0	weapon_tranquilizer
+Features_Autowall_HomigradAutowall_vfunc02	0x1800b1230	Z-City/Homigrad
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc00	0x18009a8b0	Z-City/Homigrad
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	weapon_doublebarrel_short
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	weapon_revolver2
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	weapon_tranquilizer
 FUN_180099e30	0x180099e30	CanUse
-FUN_18009aea0	0x18009aea0	RealAutomatic
-FUN_1800a0530	0x1800a0530	RealAutomatic
-FUN_18009aea0	0x18009aea0	NextFire
-FUN_1800a0530	0x1800a0530	NextFire
-FUN_18009aea0	0x18009aea0	drawBullet
-FUN_1800a0530	0x1800a0530	drawBullet
-FUN_18009aea0	0x18009aea0	not present - barrel solver
-FUN_18009aea0	0x18009aea0	[ZCITY-EYE] bullet redirect %s (weapon method) 
-FUN_18009aea0	0x18009aea0	[ZCITY-OFF] r=%.4f u=%.4f  innov=(%.4f,%.4f) est=(%.4f,%.4f) vel=(%.4f,%.4f) out=(%.4f,%.4f) prank=(%.4f,%.4f) resid=(%.4f,%.4f) post=%.0f n=%d sane=%d tracked=%d hold=%d/%d 
-FUN_18009aea0	0x18009aea0	model
-FUN_18009aea0	0x18009aea0	[ZCITY-MUZZLE] rel=(%.1f,%.1f,%.1f) len=%.1fu eye=(%.2f,%.2f) raw=(%.2f,%.2f) trk=(%.2f,%.2f) rawVsTrk=(%.3f,%.3f) bob=(%.4f,%.4f/%s) steer=%s run=%d 
-FUN_18009aea0	0x18009aea0	[ZCITY-MUZZLE] solver OFF: offValid=%d converged=%d(run=%d innov=%.4f) pivot=%d fwd=%d faked=%d 
-FUN_18009aea0	0x18009aea0	[ZCITY-FIRE] err=%.3fdeg d=(%.3f,%.3f) wanted=(%.2f,%.2f) shot=(%.2f,%.2f) comp=(%.4f,%.4f) solveAge=%.3f pitchBias=%+.2f/n%d muzAge=%.3f pscale=%.2f spd=%.0f tgt=%d/%d bias=(%.4f,%.4f) 
-FUN_18009aea0	0x18009aea0	[ZCITY-FIRE] STALE-SOLVE age=%.3f (not a miss) shot=(%.2f,%.2f) 
-FUN_18009aea0	0x18009aea0	[ZCITY-FIRE] comp=off residual=(%.2f,%.2f) shot=(%.2f,%.2f) eye=(%.2f,%.2f) kill=%d 
-FUN_18009aea0	0x18009aea0	[ZCITY-FIRE] NO-COMP shot=(%.2f,%.2f) offValid=%d fresh=%d busy=%d chamber=%d canuse=%d cyl=%d clip=%d next=%.3f now=%.3f 
-FUN_18009aea0	0x18009aea0	[ZCITY-NS] class=%s standard=%d offset=%d local=(%.5f,%.5f) auto=%d busy=%d chambered=%d canUse=%d cylinder=%d/%d enabled=%d ready=%d a2s=%d 
-FUN_18009f1a0	0x18009f1a0	[ZCITY-TICK] HELD slew=%.2f d=(%.4f,%.4f) band=%.4f est=(%.4f,%.4f) got=(%.4f,%.4f) hold=%d 
-FUN_18009f1a0	0x18009f1a0	official-pose
-FUN_18009f1a0	0x18009f1a0	pack-trace
-FUN_18009f1a0	0x18009f1a0	[ZCITY-TICK] r=%.4f u=%.4f bias=(%.4f,%.4f) prank=(%.4f,%.4f) unexp=%.4f post=%.0f eye=(%.2f,%.2f) raw=(%.2f,%.2f) cmd#%d method=%s animAge=%.3f 
-FUN_1800a0530	0x1800a0530	[ZCITY-TSTATE] busy=%d chamber=%d canuse=%d auto=%d cyl=%d next=%.3f now=%.3f cmd#%d 
-FUN_1800a22e0	0x1800a22e0	TPIK_CamPos
-FUN_1800a1c20	0x1800a1c20	TPIK_CamPos
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	RealAutomatic
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc29	0x1800a0530	RealAutomatic
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	NextFire
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc29	0x1800a0530	NextFire
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	drawBullet
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc29	0x1800a0530	drawBullet
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	not present - barrel solver
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-EYE] bullet redirect %s (weapon method) 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-OFF] r=%.4f u=%.4f  innov=(%.4f,%.4f) est=(%.4f,%.4f) vel=(%.4f,%.4f) out=(%.4f,%.4f) prank=(%.4f,%.4f) resid=(%.4f,%.4f) post=%.0f n=%d sane=%d tracked=%d hold=%d/%d 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	model
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-MUZZLE] rel=(%.1f,%.1f,%.1f) len=%.1fu eye=(%.2f,%.2f) raw=(%.2f,%.2f) trk=(%.2f,%.2f) rawVsTrk=(%.3f,%.3f) bob=(%.4f,%.4f/%s) steer=%s run=%d 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-MUZZLE] solver OFF: offValid=%d converged=%d(run=%d innov=%.4f) pivot=%d fwd=%d faked=%d 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-FIRE] err=%.3fdeg d=(%.3f,%.3f) wanted=(%.2f,%.2f) shot=(%.2f,%.2f) comp=(%.4f,%.4f) solveAge=%.3f pitchBias=%+.2f/n%d muzAge=%.3f pscale=%.2f spd=%.0f tgt=%d/%d bias=(%.4f,%.4f) 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-FIRE] STALE-SOLVE age=%.3f (not a miss) shot=(%.2f,%.2f) 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-FIRE] comp=off residual=(%.2f,%.2f) shot=(%.2f,%.2f) eye=(%.2f,%.2f) kill=%d 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-FIRE] NO-COMP shot=(%.2f,%.2f) offValid=%d fresh=%d busy=%d chamber=%d canuse=%d cyl=%d clip=%d next=%.3f now=%.3f 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc25	0x18009aea0	[ZCITY-NS] class=%s standard=%d offset=%d local=(%.5f,%.5f) auto=%d busy=%d chambered=%d canUse=%d cylinder=%d/%d enabled=%d ready=%d a2s=%d 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc28	0x18009f1a0	[ZCITY-TICK] HELD slew=%.2f d=(%.4f,%.4f) band=%.4f est=(%.4f,%.4f) got=(%.4f,%.4f) hold=%d 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc28	0x18009f1a0	official-pose
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc28	0x18009f1a0	pack-trace
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc28	0x18009f1a0	[ZCITY-TICK] r=%.4f u=%.4f bias=(%.4f,%.4f) prank=(%.4f,%.4f) unexp=%.4f post=%.0f eye=(%.2f,%.2f) raw=(%.2f,%.2f) cmd#%d method=%s animAge=%.3f 
+Features_Weapons_Backends_ZCityWeaponBackend_vfunc29	0x1800a0530	[ZCITY-TSTATE] busy=%d chamber=%d canuse=%d auto=%d cyl=%d next=%.3f now=%.3f cmd#%d 
+Features_Weapons_Backends_ORPWeaponBackend_vfunc24	0x1800a22e0	TPIK_CamPos
+Features_Weapons_Backends_ORPWeaponBackend_vfunc23	0x1800a1c20	TPIK_CamPos
 FUN_1800a0dd0	0x1800a0dd0	TPIK_CamPos
-FUN_1800a22e0	0x1800a22e0	TPIK_CamAng
-FUN_1800a1c20	0x1800a1c20	TPIK_CamAng
+Features_Weapons_Backends_ORPWeaponBackend_vfunc24	0x1800a22e0	TPIK_CamAng
+Features_Weapons_Backends_ORPWeaponBackend_vfunc23	0x1800a1c20	TPIK_CamAng
 FUN_1800a0dd0	0x1800a0dd0	TPIK_CamAng
 FUN_1800a1280	0x1800a1280	DoAnimation
 FUN_1800a1280	0x1800a1280	Otrub
 FUN_1800a1280	0x1800a1280	TazerFake
-FUN_1800a16e0	0x1800a16e0	ORP/TPIK camera
+Features_Weapons_Backends_ORPWeaponBackend_vfunc00	0x1800a16e0	ORP/TPIK camera
 FUN_1800a4c80	0x1800a4c80	[OCTO-FIT] n=%d d(off.p)/d(eye.p)=%+.3f -> pitch response %.3f, g_MuzzlePitchScale=%.3f (intercept %+.2f, spread %.1fdeg) 
 FUN_1800a5270	0x1800a5270	GetNetVar
 FUN_1800a5380	0x1800a5380	currentFireMode
@@ -2779,40 +2779,40 @@ FUN_1802e1f30	0x1802e1f30	eyepos
 FUN_1800a6200	0x1800a6200	reach
 FUN_1800a6200	0x1800a6200	reversed
 FUN_1800a67a0	0x1800a67a0	[OCTO-LIVE] live-vs-mean %.2f deg (this is what the average used to eat) 
-FUN_1800a8910	0x1800a8910	sample too old
-FUN_1800a8910	0x1800a8910	pitch drift
-FUN_1800a8910	0x1800a8910	ads changed
+Features_Weapons_Backends_OctoWeaponBackend_vfunc28	0x1800a8910	sample too old
+Features_Weapons_Backends_OctoWeaponBackend_vfunc28	0x1800a8910	pitch drift
+Features_Weapons_Backends_OctoWeaponBackend_vfunc28	0x1800a8910	ads changed
 FUN_1800a7210	0x1800a7210	VisualRecoilState
 FUN_1800a7210	0x1800a7210	UpdateVisualRecoil
 FUN_1800a7210	0x1800a7210	ManipulateBoneAngles
-FUN_1800a7c00	0x1800a7c00	ValveBiped.Bip01_R_Clavicle
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	ValveBiped.Bip01_R_Clavicle
 FUN_1800a7210	0x1800a7210	ValveBiped.Bip01_R_Clavicle
 FUN_1800a7210	0x1800a7210	ManipulateBonePosition
 FUN_1800a78a0	0x1800a78a0	weapon_octo_base
-FUN_1800a7960	0x1800a7960	weapon_octo_base
-FUN_1800a7a10	0x1800a7a10	weapon_octo_base
-FUN_1800a7960	0x1800a7960	weapon_octo_
-FUN_1800d9940	0x1800d9940	weapon_octo_
-FUN_1800d9710	0x1800d9710	weapon_octo_
-FUN_1800d8bc0	0x1800d8bc0	weapon_octo_
-FUN_1800a7c00	0x1800a7c00	Distance
+Features_Weapons_Backends_OctoWeaponBackend_vfunc02	0x1800a7960	weapon_octo_base
+Features_Weapons_Backends_OctoWeaponBackend_vfunc03	0x1800a7a10	weapon_octo_base
+Features_Weapons_Backends_OctoWeaponBackend_vfunc02	0x1800a7960	weapon_octo_
+Features_OctoCompat_OctoCompatFeature_vfunc07	0x1800d9940	weapon_octo_
+Features_OctoCompat_OctoCompatFeature_vfunc02	0x1800d9710	weapon_octo_
+Features_OctoCompat_OctoTickFeature_vfunc06	0x1800d8bc0	weapon_octo_
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	Distance
 FUN_18017f530	0x18017f530	Distance
 FUN_18017e8a0	0x18017e8a0	Distance
 FUN_180002fc0	0x180002fc0	Distance
 FUN_1801e2220	0x1801e2220	Distance
-FUN_1800a7c00	0x1800a7c00	WeaponCategory
-FUN_1800a7c00	0x1800a7c00	IsStockHidden
-FUN_1800a7c00	0x1800a7c00	IsReady
-FUN_1800a7c00	0x1800a7c00	CanSetReady
-FUN_1800a7c00	0x1800a7c00	nextFire
-FUN_1800a87d0	0x1800a87d0	nextFire
-FUN_1800a7c00	0x1800a7c00	RENDER
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	WeaponCategory
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	IsStockHidden
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	IsReady
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	CanSetReady
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	nextFire
+Features_Weapons_Backends_OctoWeaponBackend_vfunc29	0x1800a87d0	nextFire
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	RENDER
 FUN_1800a6200	0x1800a6200	RENDER
 FUN_1802e1f30	0x1802e1f30	RENDER
-FUN_1800a7c00	0x1800a7c00	accumulatables.dbgWeapons.suppression
-FUN_1800a7c00	0x1800a7c00	accumulatables.dbgWeapons.scare
-FUN_1800a8910	0x1800a8910	[OCTO-TICK] probe tick=(%.2f,%.2f) render=(%.2f,%.2f) delta=(%.2f,%.2f) eye=(%.2f,%.2f) ready=%d cmd#%d 
-FUN_1800a9130	0x1800a9130	[OCTO] cone=%.5f base=%.5f stock=%d supp=%.2f ready=%d auto=%d 
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	accumulatables.dbgWeapons.suppression
+Features_Weapons_Backends_OctoWeaponBackend_vfunc25	0x1800a7c00	accumulatables.dbgWeapons.scare
+Features_Weapons_Backends_OctoWeaponBackend_vfunc28	0x1800a8910	[OCTO-TICK] probe tick=(%.2f,%.2f) render=(%.2f,%.2f) delta=(%.2f,%.2f) eye=(%.2f,%.2f) ready=%d cmd#%d 
+Features_Weapons_Backends_OctoWeaponBackend_vfunc32	0x1800a9130	[OCTO] cone=%.5f base=%.5f stock=%d supp=%.2f ready=%d auto=%d 
 FUN_1800aced0	0x1800aced0	pack has no autowall
 FUN_1800aced0	0x1800aced0	pack penetration unavailable
 FUN_1800aced0	0x1800aced0	no penetration budget
@@ -2826,52 +2826,52 @@ FUN_1800ad090	0x1800ad090	[Autowall] model: %s (backend %s)
 FUN_1800ae2d0	0x1800ae2d0	[Autowall] %s: HIT through %d wall(s), %.1f dmg left 
 FUN_1800ae2d0	0x1800ae2d0	[Autowall] %s: no - %s (surface %d, mat %c, budget %.1f, allowed %.1f, wall %.1f) 
 FUN_1800ae2d0	0x1800ae2d0	[Autowall] %s: no - %s (surface %d, mat %c, budget %.1f, allowed %.1f, wall thicker than that) 
-FUN_1800ae6e0	0x1800ae6e0	arccw_enable_penetration
-FUN_1800ae6e0	0x1800ae6e0	arccw_mult_penetration
-FUN_1800aecf0	0x1800aecf0	arc9_mod_penetration
-FUN_1800aecf0	0x1800aecf0	PenetrationDelta
-FUN_1800af1c0	0x1800af1c0	Damage_Max
-FUN_1800aecf0	0x1800aecf0	Damage_Max
-FUN_1800aecf0	0x1800aecf0	MaxPenetrationLayers
-FUN_1800af1c0	0x1800af1c0	tacrp_penetration
+Features_Autowall_ArcCWAutowall_vfunc03	0x1800ae6e0	arccw_enable_penetration
+Features_Autowall_ArcCWAutowall_vfunc03	0x1800ae6e0	arccw_mult_penetration
+Features_Autowall_ARC9Autowall_vfunc03	0x1800aecf0	arc9_mod_penetration
+Features_Autowall_ARC9Autowall_vfunc03	0x1800aecf0	PenetrationDelta
+Features_Autowall_TacRPAutowall_vfunc03	0x1800af1c0	Damage_Max
+Features_Autowall_ARC9Autowall_vfunc03	0x1800aecf0	Damage_Max
+Features_Autowall_ARC9Autowall_vfunc03	0x1800aecf0	MaxPenetrationLayers
+Features_Autowall_TacRPAutowall_vfunc03	0x1800af1c0	tacrp_penetration
 FUN_1801e3830	0x1801e3830	default
 FUN_1800af7b0	0x1800af7b0	default
 FUN_1801a93b0	0x1801a93b0	default
 FUN_1800af7b0	0x1800af7b0	default_silent
 FUN_180141c00	0x180141c00	weapon
-FUN_1800af890	0x1800af890	swcs_penetration_type
-FUN_1800af890	0x1800af890	GetPenetration
-FUN_1800af890	0x1800af890	GetDamage
-FUN_1800af890	0x1800af890	GetRange
-FUN_1800af890	0x1800af890	GetRangeModifier
-FUN_1800afb90	0x1800afb90	tools/toolsblockbullets
-FUN_1800aff90	0x1800aff90	sv_tfa_bullet_penetration
-FUN_1800aff90	0x1800aff90	sv_tfa_bullet_penetration_power_mul
-FUN_1800aff90	0x1800aff90	sv_tfa_penetration_hardlimit
-FUN_1800aff90	0x1800aff90	Primary.PenetrationPower
-FUN_1800aff90	0x1800aff90	Primary.PenetrationMultiplier
-FUN_1800aff90	0x1800aff90	Primary.Damage
-FUN_1800aff90	0x1800aff90	Primary.MaxSurfacePenetrationCount
+Features_Autowall_SWCSAutowall_vfunc03	0x1800af890	swcs_penetration_type
+Features_Autowall_SWCSAutowall_vfunc03	0x1800af890	GetPenetration
+Features_Autowall_SWCSAutowall_vfunc03	0x1800af890	GetDamage
+Features_Autowall_SWCSAutowall_vfunc03	0x1800af890	GetRange
+Features_Autowall_SWCSAutowall_vfunc03	0x1800af890	GetRangeModifier
+Features_Autowall_SWCSAutowall_vfunc11	0x1800afb90	tools/toolsblockbullets
+Features_Autowall_TFAAutowall_vfunc03	0x1800aff90	sv_tfa_bullet_penetration
+Features_Autowall_TFAAutowall_vfunc03	0x1800aff90	sv_tfa_bullet_penetration_power_mul
+Features_Autowall_TFAAutowall_vfunc03	0x1800aff90	sv_tfa_penetration_hardlimit
+Features_Autowall_TFAAutowall_vfunc03	0x1800aff90	Primary.PenetrationPower
+Features_Autowall_TFAAutowall_vfunc03	0x1800aff90	Primary.PenetrationMultiplier
+Features_Autowall_TFAAutowall_vfunc03	0x1800aff90	Primary.Damage
+Features_Autowall_TFAAutowall_vfunc03	0x1800aff90	Primary.MaxSurfacePenetrationCount
 FUN_1800b0540	0x1800b0540	SniperPenetratedRound
 FUN_1800b0540	0x1800b0540	pistol
 FUN_1800b0540	0x1800b0540	buckshot
 FUN_1800b0540	0x1800b0540	AirboatGun
-FUN_1800b0790	0x1800b0790	M9KDisablePenetration
-FUN_1800b0790	0x1800b0790	M9KDamageMultiplier
-FUN_1800b0b70	0x1800b0b70	CW 2.0
-FUN_1800b10e0	0x1800b10e0	PenStr
-FUN_1800b0bd0	0x1800b0bd0	PenStr
-FUN_1800b10e0	0x1800b10e0	PenMod
-FUN_1800b0bd0	0x1800b0bd0	PenMod
-FUN_1800b0bd0	0x1800b0bd0	PenetrativeRange
-FUN_1800b0bd0	0x1800b0bd0	CanPenetrate
-FUN_1800b10a0	0x1800b10a0	FA:S 2.0
-FUN_1800b10e0	0x1800b10e0	PenetrationEnabled
-FUN_1800b1220	0x1800b1220	Homigrad
+Features_Autowall_M9KAutowall_vfunc03	0x1800b0790	M9KDisablePenetration
+Features_Autowall_M9KAutowall_vfunc03	0x1800b0790	M9KDamageMultiplier
+Features_Autowall_CW20Autowall_vfunc01	0x1800b0b70	CW 2.0
+Features_Autowall_FAS2Autowall_vfunc03	0x1800b10e0	PenStr
+vfunc_shared_1800b0bd0	0x1800b0bd0	PenStr
+Features_Autowall_FAS2Autowall_vfunc03	0x1800b10e0	PenMod
+vfunc_shared_1800b0bd0	0x1800b0bd0	PenMod
+vfunc_shared_1800b0bd0	0x1800b0bd0	PenetrativeRange
+vfunc_shared_1800b0bd0	0x1800b0bd0	CanPenetrate
+Features_Autowall_FAS2Autowall_vfunc01	0x1800b10a0	FA:S 2.0
+Features_Autowall_FAS2Autowall_vfunc03	0x1800b10e0	PenetrationEnabled
+Features_Autowall_HomigradAutowall_vfunc01	0x1800b1220	Homigrad
 FUN_1802e2bd0	0x1802e2bd0	[Autowall] Render2D cache update crashed 
 FUN_1800b2c30	0x1800b2c30	server.dll
 FUN_1801ee530	0x1801ee530	server.dll
-FUN_1800bdd80	0x1800bdd80	server.dll
+Features_HVH_AntiAim_AntiAimFeature_vfunc02	0x1800bdd80	server.dll
 FUN_1800b25c0	0x1800b25c0	NOT ENOUGH DATA - move around on a live map first
 FUN_1800b25c0	0x1800b25c0	PER USERCMD - choked commands DO steer the server body (design holds)
 FUN_1800b25c0	0x1800b25c0	PER FRAME - choke does NOT steer the body (anti-aim design must change)
@@ -2889,32 +2889,32 @@ FUN_1800b2c30	0x1800b2c30	[ANIMPROBE] MH_CreateHook failed on %p
 FUN_1800b2c30	0x1800b2c30	[ANIMPROBE] MH_EnableHook failed on %p 
 FUN_1800b2c30	0x1800b2c30	[ANIMPROBE] armed on server.dll %s::Update %p (rva +0x%zX, module %p, slot %d). A verdict line prints every 2s while a map runs. 
 FUN_1800b2eb0	0x1800b2eb0	disarmed
-FUN_1800bdd80	0x1800bdd80	[ANIMPROBE] server.dll went away or moved (%p -> %p) - disarming 
+Features_HVH_AntiAim_AntiAimFeature_vfunc02	0x1800bdd80	[ANIMPROBE] server.dll went away or moved (%p -> %p) - disarming 
 FUN_1800bb8a0	0x1800bb8a0	rotate
 FUN_1800bbcc0	0x1800bbcc0	rotate
-FUN_1800bf160	0x1800bf160	rotate
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	rotate
 FUN_1800bb8a0	0x1800bb8a0	alternate
 FUN_1800bbcc0	0x1800bbcc0	alternate
-FUN_1800bf160	0x1800bf160	alternate
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	alternate
 FUN_1800bb8a0	0x1800bb8a0	repeat
 FUN_1800bbcc0	0x1800bbcc0	repeat
-FUN_1800bf160	0x1800bf160	repeat
-FUN_1800bf160	0x1800bf160	legit
-FUN_18013ffc0	0x18013ffc0	sv_maxusrcmdprocessticks
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	repeat
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	legit
+Features_Warp_WarpFeature_vfunc02	0x18013ffc0	sv_maxusrcmdprocessticks
 FUN_1800b3740	0x1800b3740	sv_maxusrcmdprocessticks
 FUN_1800b3920	0x1800b3920	[EXPLOIT] burst DISCARDED: asked %d ticks, travelled %.0fu of %.0fu expected (%.0f%%) - bank zeroed, rejections=%d 
 FUN_1800b3920	0x1800b3920	[EXPLOIT] burst ok: %d ticks, %.0fu of %.0fu (%.0f%%) bank=%d/%d 
-FUN_1800d5310	0x1800d5310	cl_lagcompensation 0
-FUN_1800d64c0	0x1800d64c0	cl_lagcompensation 1
-FUN_1800d5310	0x1800d5310	cl_lagcompensation 1
-FUN_1800d5310	0x1800d5310	[EXPLOIT] cl_lagcompensation -> %d 
-FUN_1800d64c0	0x1800d64c0	[EXPLOIT] cl_lagcompensation restored on teardown 
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	cl_lagcompensation 0
+Features_RageAim_RageAimFeature_vfunc16	0x1800d64c0	cl_lagcompensation 1
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	cl_lagcompensation 1
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	[EXPLOIT] cl_lagcompensation -> %d 
+Features_RageAim_RageAimFeature_vfunc16	0x1800d64c0	[EXPLOIT] cl_lagcompensation restored on teardown 
 FUN_1800b3c00	0x1800b3c00	m_vecVelocity
 FUN_1800b3c00	0x1800b3c00	m_vecBaseVelocity[0]
 FUN_1800b3c00	0x1800b3c00	[EXTRAP] fields origin=+0x%X vel=+0x%X flags=+0x%X view=+0x%X base=+0x%X ground=+0x%X fall=+0x%X water=+0x%X valid=%d 
 FUN_1800b4790	0x1800b4790	[EXTRAP] prediction datamap %p -> %d flattened fields 
-FUN_1800d5310	0x1800d5310	velocity turned
-FUN_1800d5310	0x1800d5310	strafing
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	velocity turned
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	strafing
 FUN_1800b5200	0x1800b5200	48 83 EC 38 83 3D ? ? ? ? 06 75 ? 83 3D ? ? ? ? 00 7C ? 48 8B 0D ? ? ? ? 48 8B 01 FF 50 48
 FUN_1800b5200	0x1800b5200	48 83 EC 48 48 89 5C 24 50 48 8D 0D ? ? ? ? 0F 29 74 24 30 0F 29 7C 24 20 E8
 FUN_1800b5200	0x1800b5200	48 83 EC 38 48 8B 0D ? ? ? ? 48 89 74 24 48 48 89 7C 24 30 8B B1 0C 10 00 00
@@ -2939,7 +2939,7 @@ FUN_1800b6c60	0x1800b6c60	reliable guard
 FUN_1800b6c60	0x1800b6c60	no history match
 FUN_1801e3830	0x1801e3830	active
 FUN_1800b6c60	0x1800b6c60	active
-FUN_1800b7d00	0x1800b7d00	[FAKEPING] %s: +%dms achieved of %dms wanted, real %.0fms (target total %dms) -> band centres at cmd age %dms, records=%d armed=%d 
+Features_FakePing_FakePingFeature_vfunc01	0x1800b7d00	[FAKEPING] %s: +%dms achieved of %dms wanted, real %.0fms (target total %dms) -> band centres at cmd age %dms, records=%d armed=%d 
 FUN_18015a210	0x18015a210	player_hurt
 FUN_180205720	0x180205720	player_hurt
 FUN_1801df8b0	0x1801df8b0	player_hurt
@@ -2985,32 +2985,32 @@ FUN_1800bc110	0x1800bc110	[RESOLVER] idx=%d late player_hurt -> undo miss, latch
 FUN_1800bc360	0x1800bc360	[RESOLVER] player_hurt subscribed but never delivered on this server -- verdicts come from the health poll (kills always count) 
 FUN_1800bdcb0	0x1800bdcb0	cl_updaterate
 FUN_1800c5790	0x1800c5790	cl_updaterate
-FUN_1800bdd80	0x1800bdd80	NO (Lua clock -- this option cannot help here)
-FUN_1800bdd80	0x1800bdd80	[AA-COOLDOWN] retook %d of %d attack ticks | engine fire clock: %s 
-FUN_1800bdd80	0x1800bdd80	batch
-FUN_1800bdd80	0x1800bdd80	mirror
-FUN_1800bdd80	0x1800bdd80	[AA-DESYNC] cmd=%u base=%.2f pull=%.2f shown=%.2f | body batch=%.2f mirror=%.2f src=%s | bodyOff raw=%.1f used=%.1f | batch=%d steps=%d skips=%d 
-FUN_1800bf160	0x1800bf160	LBY  cur %.0f  goal %.0f  d %.0f  eye %.0f
-FUN_1800bf160	0x1800bf160	LBY  cur %.0f  (calibrating field offsets, turn around)
-FUN_1800bf160	0x1800bf160	LBY unavailable (animstate pointer unresolved)
-FUN_1800bf160	0x1800bf160	  %s %.0f%%
-FUN_1800bf160	0x1800bf160	%s  chk %.1f/%.1f  dy %.0f  pitch %d%s
-FUN_1800bf160	0x1800bf160	 LATCH
-FUN_1800bf160	0x1800bf160	%s %d/%d  off %+.0f%s  m%d h%d  %s%s
+Features_HVH_AntiAim_AntiAimFeature_vfunc02	0x1800bdd80	NO (Lua clock -- this option cannot help here)
+Features_HVH_AntiAim_AntiAimFeature_vfunc02	0x1800bdd80	[AA-COOLDOWN] retook %d of %d attack ticks | engine fire clock: %s 
+Features_HVH_AntiAim_AntiAimFeature_vfunc02	0x1800bdd80	batch
+Features_HVH_AntiAim_AntiAimFeature_vfunc02	0x1800bdd80	mirror
+Features_HVH_AntiAim_AntiAimFeature_vfunc02	0x1800bdd80	[AA-DESYNC] cmd=%u base=%.2f pull=%.2f shown=%.2f | body batch=%.2f mirror=%.2f src=%s | bodyOff raw=%.1f used=%.1f | batch=%d steps=%d skips=%d 
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	LBY  cur %.0f  goal %.0f  d %.0f  eye %.0f
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	LBY  cur %.0f  (calibrating field offsets, turn around)
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	LBY unavailable (animstate pointer unresolved)
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	  %s %.0f%%
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	%s  chk %.1f/%.1f  dy %.0f  pitch %d%s
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	 LATCH
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	%s %d/%d  off %+.0f%s  m%d h%d  %s%s
 FUN_1800c0920	0x1800c0920	DID NOT TAKE
 FUN_1800c0920	0x1800c0920	[LAGCOMP] %s -> %.3f : string="%s" float=%.3f %s 
 FUN_1800c10c0	0x1800c10c0	cl_interpolate
 FUN_1800c5790	0x1800c5790	cl_interpolate
-FUN_1800c0b20	0x1800c0b20	cl_interpolate
+Features_HVH_LagComp_LagCompFeature_vfunc16	0x1800c0b20	cl_interpolate
 FUN_1800c5790	0x1800c5790	cl_interp
-FUN_1800c0b20	0x1800c0b20	cl_interp
-FUN_1800c0db0	0x1800c0db0	cl_interp
+Features_HVH_LagComp_LagCompFeature_vfunc16	0x1800c0b20	cl_interp
+Features_HVH_LagComp_LagCompFeature_vfunc01	0x1800c0db0	cl_interp
 FUN_1800c5790	0x1800c5790	cl_interp_ratio
-FUN_1800c0b20	0x1800c0b20	cl_interp_ratio
-FUN_1800c0db0	0x1800c0db0	cl_interp_ratio
-FUN_1800c0b20	0x1800c0b20	[LAGCOMP] interp abuse restored on shutdown (%.3f / %.1f) 
-FUN_1800c0db0	0x1800c0db0	[LAGCOMP] interp abuse ON (was %.3f / %.1f) 
-FUN_1800c0db0	0x1800c0db0	[LAGCOMP] interp abuse OFF (restored %.3f / %.1f) 
+Features_HVH_LagComp_LagCompFeature_vfunc16	0x1800c0b20	cl_interp_ratio
+Features_HVH_LagComp_LagCompFeature_vfunc01	0x1800c0db0	cl_interp_ratio
+Features_HVH_LagComp_LagCompFeature_vfunc16	0x1800c0b20	[LAGCOMP] interp abuse restored on shutdown (%.3f / %.1f) 
+Features_HVH_LagComp_LagCompFeature_vfunc01	0x1800c0db0	[LAGCOMP] interp abuse ON (was %.3f / %.1f) 
+Features_HVH_LagComp_LagCompFeature_vfunc01	0x1800c0db0	[LAGCOMP] interp abuse OFF (restored %.3f / %.1f) 
 FUN_1800c10c0	0x1800c10c0	as it was
 FUN_1800c10c0	0x1800c10c0	restored
 FUN_1800c10c0	0x1800c10c0	[LAGCOMP] interpolation %s (cl_interpolate %.0f) 
@@ -3021,12 +3021,12 @@ FUN_1800c15f0	0x1800c15f0	Pre_AnimUpdate
 FUN_1801f9180	0x1801f9180	48 89 5C 24 ? 57 48 83 EC ? 48 8B B9 ? ? ? ? 48 8B D9 0F 29 74 24
 FUN_1801f9180	0x1801f9180	[PAT] AnimState::Update  = %p %s 
 FUN_1801f9180	0x1801f9180	[MH] AnimState::Update: %s 
-FUN_1800c2970	0x1800c2970	[BHOP] sim said jumped, engine kept us grounded #%d -- gamemode blocks the jump from Lua; heuristic path for this contact 
+Features_BunnyHop_BunnyHopFeature_vfunc01	0x1800c2970	[BHOP] sim said jumped, engine kept us grounded #%d -- gamemode blocks the jump from Lua; heuristic path for this contact 
 FUN_1800c3270	0x1800c3270	[EDGEJUMP] probe: speed=%.0f nextDrop=%.1fu normal.z=%.2f support=%d/5 clipped=%d 
 FUN_1800c3270	0x1800c3270	[EDGEJUMP] skip #%d: walkable ground continues within %.0fu (stairs/terrace, not a ledge) speed=%.0f 
-FUN_1800c3bc0	0x1800c3bc0	engine sim
-FUN_1800c3bc0	0x1800c3bc0	traces
-FUN_1800c3bc0	0x1800c3bc0	[EDGEJUMP] fire #%d speed=%.0f source=%s at (%.0f %.0f %.0f) 
+Features_EdgeJump_EdgeJumpFeature_vfunc02	0x1800c3bc0	engine sim
+Features_EdgeJump_EdgeJumpFeature_vfunc02	0x1800c3bc0	traces
+Features_EdgeJump_EdgeJumpFeature_vfunc02	0x1800c3bc0	[EDGEJUMP] fire #%d speed=%.0f source=%s at (%.0f %.0f %.0f) 
 FUN_1800d2a70	0x1800d2a70	cl_forwardspeed
 FUN_1800e1d50	0x1800e1d50	cl_forwardspeed
 FUN_1800e0990	0x1800e0990	cl_forwardspeed
@@ -3051,13 +3051,13 @@ FUN_1800c7470	0x1800c7470	[BT-LSAC] budget spent: want=%d last=%d -> sending %d 
 FUN_1800c7b00	0x1800c7b00	manual
 FUN_1800c93d0	0x1800c93d0	cl_extrapolate_amount
 FUN_1800c93d0	0x1800c93d0	cl_extrapolate
-FUN_1800c95d0	0x1800c95d0	cl_extrapolate
+Features_Backtrack_BacktrackFeature_vfunc16	0x1800c95d0	cl_extrapolate
 FUN_1800c93d0	0x1800c93d0	[BT-EXTRAP] cl_extrapolate restored to %.0f 
 FUN_1800c93d0	0x1800c93d0	[BT-EXTRAP] cl_extrapolate -> 0 (was %.0f): entities now clamp to their last real snapshot instead of drifting up to %.0fms past it 
-FUN_1800c9910	0x1800c9910	[BT-CLOSED] no legal tick: floor %d > ceiling %d. band centre %.0fms +-%.0fms, restorable %.0fms, choke %d ticks -> margins eat %.0fms off the floor and %.0fms off the ceiling. fakeping %.0fms pushed the band out and lerp %.0fms spent the unlag budget it shares with the shift. Back off ONE of fakeping / interp abuse / fakelag and the window reopens 
-FUN_1800c9910	0x1800c9910	[BT] records=%d valid=%d shift=%d..%d ticks (%d usable) curtime=%.2f latestSim=%.2f diff=%.3f 
-FUN_1800c9910	0x1800c9910	worth building
-FUN_1800c9910	0x1800c9910	not worth building
+Features_Backtrack_BacktrackFeature_vfunc02	0x1800c9910	[BT-CLOSED] no legal tick: floor %d > ceiling %d. band centre %.0fms +-%.0fms, restorable %.0fms, choke %d ticks -> margins eat %.0fms off the floor and %.0fms off the ceiling. fakeping %.0fms pushed the band out and lerp %.0fms spent the unlag budget it shares with the shift. Back off ONE of fakeping / interp abuse / fakelag and the window reopens 
+Features_Backtrack_BacktrackFeature_vfunc02	0x1800c9910	[BT] records=%d valid=%d shift=%d..%d ticks (%d usable) curtime=%.2f latestSim=%.2f diff=%.3f 
+Features_Backtrack_BacktrackFeature_vfunc02	0x1800c9910	worth building
+Features_Backtrack_BacktrackFeature_vfunc02	0x1800c9910	not worth building
 FUN_1800cbbd0	0x1800cbbd0	[AIM-HB] untagged model: %d boxes, span=%.1f -> synthesized head/chest/stomach 
 FUN_1800cbbd0	0x1800cbbd0	[MULTIPOSE] idx=%d poses=%d spread=%.0fdeg reordered=%d groups 
 FUN_1800ce9b0	0x1800ce9b0	BuildMode
@@ -3081,25 +3081,25 @@ FUN_1800d34a0	0x1800d34a0	aimbot
 FUN_1800e8340	0x1800e8340	aimbot
 FUN_1800d34a0	0x1800d34a0	[AIM] shot held: tick %d could not be named, aim is on a pose the server will not restore (#%d) 
 FUN_1802e3ae6	0x1802e3ae6	[SAFE] Aimbot Render2D exception #%d 
-FUN_1800d3f50	0x1800d3f50	aim %.1f/%.1f  cam %.1f  ell %.2f
-FUN_1800d3f50	0x1800d3f50	aim --  cam %.1f  ell %.2f
-FUN_1800d5310	0x1800d5310	[RAGE] on: anti_lsac released (was %d) 
-FUN_1800d5310	0x1800d5310	[RAGE] off: anti_lsac restored to %d 
-FUN_1800d5310	0x1800d5310	no origin-derived velocity yet
-FUN_1800d5310	0x1800d5310	unpredictable
-FUN_1800d5310	0x1800d5310	[RAGE-EXT] not extrapolating idx=%d: %s 
-FUN_1800d5310	0x1800d5310	lagcomp break
-FUN_1800d5310	0x1800d5310	extrapolate
-FUN_1800d5310	0x1800d5310	named tick
-FUN_1800d5310	0x1800d5310	[RAGE-EXT] %d ticks (bundle %d, band %s) moved %.0fu age %.0f->%.0fms band=[%.0f..%.0f]ms via %s 
-FUN_1800d5310	0x1800d5310	[RAGE-EXT] refused: no band step (bundle %d, age %.0fms, band=[%.0f..%.0f]ms) and lagcomp break unavailable 
+Features_Aimbot_AimbotFeature_vfunc06	0x1800d3f50	aim %.1f/%.1f  cam %.1f  ell %.2f
+Features_Aimbot_AimbotFeature_vfunc06	0x1800d3f50	aim --  cam %.1f  ell %.2f
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	[RAGE] on: anti_lsac released (was %d) 
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	[RAGE] off: anti_lsac restored to %d 
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	no origin-derived velocity yet
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	unpredictable
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	[RAGE-EXT] not extrapolating idx=%d: %s 
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	lagcomp break
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	extrapolate
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	named tick
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	[RAGE-EXT] %d ticks (bundle %d, band %s) moved %.0fu age %.0f->%.0fms band=[%.0f..%.0f]ms via %s 
+Features_RageAim_RageAimFeature_vfunc02	0x1800d5310	[RAGE-EXT] refused: no band step (bundle %d, age %.0fms, band=[%.0f..%.0f]ms) and lagcomp break unavailable 
 FUN_1800d6720	0x1800d6720	[ZC-FRESH] allowed=%d blocked=%d native=%d applied=%d conv=%d sprint=%d held=%d unexp=%.4f/%.4f solveCmd=%d cmd#%d 
 FUN_1800d6c70	0x1800d6c70	[ZC-FIRE] dt=%.3f cps=%.1f off=%dtick floor=%.3f 
 FUN_1800d7f60	0x1800d7f60	weapon_ar2
 FUN_1800d7f60	0x1800d7f60	weapon_smg1
 FUN_1800d7f60	0x1800d7f60	CWeaponAR2
 FUN_1800d7f60	0x1800d7f60	CWeaponSMG1
-FUN_1800d7090	0x1800d7090	[AF-SEMI] dt=%.3f cps=%.1f readyLag=%.3f off=%dtick floor=%.3f 
+Features_AutoFire_AutoFireFeature_vfunc02	0x1800d7090	[AF-SEMI] dt=%.3f cps=%.1f readyLag=%.3f off=%dtick floor=%.3f 
 FUN_1800d81c0	0x1800d81c0	ptp_cs_ak47
 FUN_1800d81c0	0x1800d81c0	ptp_cs_deagle
 FUN_1800d81c0	0x1800d81c0	ptp_cs_autoshotgun
@@ -3108,7 +3108,7 @@ FUN_1800d81c0	0x1800d81c0	[PTP] spray reset: released IN_ATTACK for 1 cmd (%s cl
 FUN_1800d8960	0x1800d8960	[OCTO] m_flNextPrimaryAttack = +0x%X (weapon prediction datamap, %d fields) 
 FUN_1800d8960	0x1800d8960	m_flNext
 FUN_1800d8960	0x1800d8960	[OCTO]   +0x%X %s 
-FUN_1800d9160	0x1800d9160	[OCTO-IMPACT] candidate srcErr=%.1fu modelErr=%.3fdeg aimErr=%.3fdeg miss=%.1fu range=%.0fu lag=%.3fs pitchScale=%.3f cmd#%d tgt=%d 
+Features_OctoCompat_OctoTickFeature_vfunc00	0x1800d9160	[OCTO-IMPACT] candidate srcErr=%.1fu modelErr=%.3fdeg aimErr=%.3fdeg miss=%.1fu range=%.0fu lag=%.3fs pitchScale=%.3f cmd#%d tgt=%d 
 FUN_1800d9bf0	0x1800d9bf0	weapon_octo_grenade
 FUN_1800d9bf0	0x1800d9bf0	weapon_octo_fishing
 FUN_1800d9e00	0x1800d9e00	WeaponSelector
@@ -3132,11 +3132,11 @@ FUN_1800db480	0x1800db480	GetNWEntity
 FUN_1800db480	0x1800db480	[ZCITY-RAGDOLL] mapped %d/%d  pushed=%d scanned=%d 
 FUN_1800db480	0x1800db480	[ZCITY-RAGDOLL] field types: nil=%d bool=%d num=%d str=%d tbl=%d fn=%d userdata=%d other=%d 
 FUN_1800db480	0x1800db480	[ZCITY-RAGDOLL] fails: notEnt=%d notTransmitted=%d badBlock=%d badEnt=%d noNet=%d badIdx=%d listMismatch=%d exc=%d noTramp=%d 
-FUN_1800dc410	0x1800dc410	norecoil=1 (pack gate)
-FUN_1800dc410	0x1800dc410	fields (shared animation preserved)
-FUN_1800dc410	0x1800dc410	spray fields + scoped eye recoil
-FUN_1800dc410	0x1800dc410	RecoilMul=0
-FUN_1800dc410	0x1800dc410	[ZCITY-KILL] idx=%d spread=%d recoil=%d cone=%d gate=%d -> %s 
+Features_ZCityCompat_ZCityCompatFeature_vfunc06	0x1800dc410	norecoil=1 (pack gate)
+Features_ZCityCompat_ZCityCompatFeature_vfunc06	0x1800dc410	fields (shared animation preserved)
+Features_ZCityCompat_ZCityCompatFeature_vfunc06	0x1800dc410	spray fields + scoped eye recoil
+Features_ZCityCompat_ZCityCompatFeature_vfunc06	0x1800dc410	RecoilMul=0
+Features_ZCityCompat_ZCityCompatFeature_vfunc06	0x1800dc410	[ZCITY-KILL] idx=%d spread=%d recoil=%d cone=%d gate=%d -> %s 
 FUN_1800dd840	0x1800dd840	LeyHitreg
 FUN_1800ddaa0	0x1800ddaa0	LeyHitreg
 FUN_1800dd770	0x1800dd770	LeyHitreg
@@ -3151,32 +3151,32 @@ FUN_1800de120	0x1800de120	randgen
 FUN_1800de120	0x1800de120	MATCH
 FUN_1800de120	0x1800de120	differ
 FUN_1800de120	0x1800de120	[LEYHITREG] rng self-check %s live=%08X %08X %08X %08X newest=%08X %08X %08X %08X (ring=%d) 
-FUN_1800de5e0	0x1800de5e0	[LEYHITREG] applied dev=(%.4f,%.4f) curtime=%.4f cmd=%d clip-tick 
+Features_LeyHitregCompat_LeyHitregCompatFeature_vfunc02	0x1800de5e0	[LEYHITREG] applied dev=(%.4f,%.4f) curtime=%.4f cmd=%d clip-tick 
 FUN_1802e43a0	0x1802e43a0	[NS] Render2D cache update crashed 
-FUN_1800deb70	0x1800deb70	[LEYHITREG] shot-command dev=(%.4f,%.4f) curtime=%.4f cmd=%d 
+Features_Nospread_NospreadFeature_vfunc02	0x1800deb70	[LEYHITREG] shot-command dev=(%.4f,%.4f) curtime=%.4f cmd=%d 
 FUN_1802e4448	0x1802e4448	[NS] CRASH caught in nospread logic 
-FUN_1800df780	0x1800df780	[NS-VERIFY-PHYS] err=(%.3f,%.3f) flight=(%.3f,%.3f) want=(%.3f,%.3f) srcdist=%.1f dmg=%.1f tick=%d 
-FUN_1800df780	0x1800df780	[NS-VERIFY] skip non-shot FB srcdist=%.1f dmg=%.1f 
-FUN_1800df780	0x1800df780	[NS-VERIFY] err=(%.3f,%.3f) actual=(%.3f,%.3f) want=(%.3f,%.3f) dev=(%.3f,%.3f) punch=(%.2f,%.2f) eye=(%.2f,%.2f) fbspread=%.4f srcdist=%.1f tick=%d 
-FUN_1800df780	0x1800df780	[NS-SRCANG] bullet=(%.2f,%.2f) shipped=(%.2f,%.2f) view=(%.2f,%.2f) | bullet-vs-cmd=(%.2f,%.2f)=%.2fdeg bullet-vs-view=(%.2f,%.2f)=%.2fdeg | punch=(%.2f,%.2f) 
-FUN_1800df780	0x1800df780	[NS-VISDIR] visDir=(%.3f,%.3f) want=(%.3f,%.3f) nvr=(%.3f,%.3f) applied=%d dev=(%.3f,%.3f) cmdN=%d/%d 
+Features_Nospread_NospreadFeature_vfunc10	0x1800df780	[NS-VERIFY-PHYS] err=(%.3f,%.3f) flight=(%.3f,%.3f) want=(%.3f,%.3f) srcdist=%.1f dmg=%.1f tick=%d 
+Features_Nospread_NospreadFeature_vfunc10	0x1800df780	[NS-VERIFY] skip non-shot FB srcdist=%.1f dmg=%.1f 
+Features_Nospread_NospreadFeature_vfunc10	0x1800df780	[NS-VERIFY] err=(%.3f,%.3f) actual=(%.3f,%.3f) want=(%.3f,%.3f) dev=(%.3f,%.3f) punch=(%.2f,%.2f) eye=(%.2f,%.2f) fbspread=%.4f srcdist=%.1f tick=%d 
+Features_Nospread_NospreadFeature_vfunc10	0x1800df780	[NS-SRCANG] bullet=(%.2f,%.2f) shipped=(%.2f,%.2f) view=(%.2f,%.2f) | bullet-vs-cmd=(%.2f,%.2f)=%.2fdeg bullet-vs-view=(%.2f,%.2f)=%.2fdeg | punch=(%.2f,%.2f) 
+Features_Nospread_NospreadFeature_vfunc10	0x1800df780	[NS-VISDIR] visDir=(%.3f,%.3f) want=(%.3f,%.3f) nvr=(%.3f,%.3f) applied=%d dev=(%.3f,%.3f) cmdN=%d/%d 
 FUN_1800e0990	0x1800e0990	[STRAFE] AA tick: wish=%.2f view=%.2f rel=%.2f -> move=(%.1f,%.1f) exact, len=%.0f (lattice skipped) 
 FUN_1800e0990	0x1800e0990	[STRAFE] wish=%.2f view=%.2f rel=%.2f -> move=(%.0f,%.0f) solved=%.2f err=%.3f (fwd=%d side=%d min=%.0f) 
 FUN_1800e2280	0x1800e2280	[TB] weapon not ready (backend) 
 FUN_1800e2280	0x1800e2280	[TB] no ammo 
 FUN_1800e2280	0x1800e2280	[TB] weapon cooldown 
-FUN_1800e2580	0x1800e2580	Triggerbot_IgnoreEntities
-FUN_1800e2580	0x1800e2580	[TB] g_pEngineTrace is NULL! 
-FUN_1800e2580	0x1800e2580	MUZZLE
-FUN_1800e2580	0x1800e2580	[TB] trace: ray=%s frac=%.3f hitEnt=%p hitgroup=%d allsolid=%d startsolid=%d 
-FUN_1800e2580	0x1800e2580	[TB] start=(%.0f,%.0f,%.0f) angles=(%.1f,%.1f) fwd=(%.3f,%.3f,%.3f) 
-FUN_1800e2580	0x1800e2580	[TB] body %d -> player %d 
-FUN_1800e2580	0x1800e2580	[TB] REJECTED: ent=%p badRead=%d badVt=%d idx=%d dormant=%d hp=%d team=%d localTeam=%d 
-FUN_1800e2580	0x1800e2580	[TB] VALID target: ent=%p idx=%d hp=%d team=%d 
-FUN_1800e2580	0x1800e2580	[TB] WAITING: holdTicks=%d delay=%d 
-FUN_1800e2580	0x1800e2580	[TB] weapon does not fire bullets 
-FUN_1800e2580	0x1800e2580	[TB] auto: empty clip
-FUN_1800e2580	0x1800e2580	[TB] FIRE! burst=%d/%d 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	Triggerbot_IgnoreEntities
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] g_pEngineTrace is NULL! 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	MUZZLE
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] trace: ray=%s frac=%.3f hitEnt=%p hitgroup=%d allsolid=%d startsolid=%d 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] start=(%.0f,%.0f,%.0f) angles=(%.1f,%.1f) fwd=(%.3f,%.3f,%.3f) 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] body %d -> player %d 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] REJECTED: ent=%p badRead=%d badVt=%d idx=%d dormant=%d hp=%d team=%d localTeam=%d 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] VALID target: ent=%p idx=%d hp=%d team=%d 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] WAITING: holdTicks=%d delay=%d 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] weapon does not fire bullets 
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] auto: empty clip
+Features_Triggerbot_TriggerbotFeature_vfunc02	0x1800e2580	[TB] FIRE! burst=%d/%d 
 FUN_1800e9120	0x1800e9120	freecam
 FUN_1800e9200	0x1800e9200	freecam
 FUN_1800e8f00	0x1800e8f00	freecam
@@ -3340,7 +3340,7 @@ FUN_1800eab00	0x1800eab00	scripts
 FUN_1800eae40	0x1800eae40	scripts
 FUN_1802058b0	0x1802058b0	script.lua
 FUN_1800eabc0	0x1800eabc0	script.lua
-FUN_1800f1200	0x1800f1200	script.lua
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	script.lua
 FUN_1800eb7c0	0x1800eb7c0	Failed to create scripts folder.
 FUN_1800eae40	0x1800eae40	Failed to create scripts folder.
 FUN_1800eae40	0x1800eae40	Failed to read scripts folder.
@@ -3354,13 +3354,13 @@ FUN_1800eb7c0	0x1800eb7c0	Saved:
 FUN_1802058b0	0x1802058b0	Scripts folder: Documents/mayrrX64/scripts
 FUN_1800ef850	0x1800ef850	Client/shared
 FUN_1800efd50	0x1800efd50	Client/shared
-FUN_1800f1200	0x1800f1200	Client/shared
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Client/shared
 FUN_1800f0ab0	0x1800f0ab0	Client/shared
 FUN_1800f0630	0x1800f0630	Client/shared
 FUN_1800ef850	0x1800ef850	Server
 FUN_1800efd50	0x1800efd50	Server
 FUN_1800f65f0	0x1800f65f0	Server
-FUN_1800f1200	0x1800f1200	Server
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Server
 FUN_1800f0ab0	0x1800f0ab0	Server
 FUN_1800f0630	0x1800f0630	Server
 FUN_1800ef850	0x1800ef850	Unknown
@@ -3369,7 +3369,7 @@ FUN_1800efd50	0x1800efd50	Unknown
 FUN_18027b110	0x18027b110	Unknown
 FUN_18026ae50	0x18026ae50	Unknown
 FUN_18015d930	0x18015d930	Unknown
-FUN_1800f1200	0x1800f1200	Unknown
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Unknown
 FUN_18027d4f0	0x18027d4f0	Unknown
 FUN_1800f0ab0	0x1800f0ab0	Unknown
 FUN_1800f0630	0x1800f0630	Unknown
@@ -3416,49 +3416,49 @@ FUN_1800efd50	0x1800efd50	 Lua state is not ready
 FUN_1800f0630	0x1800f0630	 Lua state is not ready
 FUN_1800efd50	0x1800efd50	Lua editor state is not ready
 FUN_1800f0ab0	0x1800f0ab0	[LUAEDITOR] external %s chunk failed: %s 
-FUN_1800f1200	0x1800f1200	Failed on 
-FUN_1800f1200	0x1800f1200	Hook 
-FUN_1800f1200	0x1800f1200	 - OK
-FUN_1800f1200	0x1800f1200	Ran on 
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Failed on 
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Hook 
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	 - OK
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Ran on 
 FUN_1801e7a50	0x1801e7a50	Lua editor##AOS
-FUN_1800f1200	0x1800f1200	Lua editor##AOS
-FUN_1800f1200	0x1800f1200	LUA EDITOR
-FUN_1800f1200	0x1800f1200	##lua_state
-FUN_1800f1200	0x1800f1200	Run the buffer on the selected state  (Ctrl+Enter)
-FUN_1800f1200	0x1800f1200	##lua_scripts_panel
-FUN_1800f1200	0x1800f1200	SCRIPTS
-FUN_1800f1200	0x1800f1200	##lua_script_name
-FUN_1800f1200	0x1800f1200	File name Save writes to
-FUN_1800f1200	0x1800f1200	New script buffer.
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Lua editor##AOS
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	LUA EDITOR
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	##lua_state
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Run the buffer on the selected state  (Ctrl+Enter)
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	##lua_scripts_panel
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	SCRIPTS
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	##lua_script_name
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	File name Save writes to
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	New script buffer.
 FUN_1802d2b60	0x1802d2b60	Refresh
-FUN_1800f1200	0x1800f1200	Refresh
-FUN_1800f1200	0x1800f1200	##lua_script_list
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Refresh
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	##lua_script_list
 FUN_1802e5be2	0x1802e5be2	Crash loading script
-FUN_1800f1200	0x1800f1200	Find / replace  (Ctrl+F)
-FUN_1800f1200	0x1800f1200	Minimap
-FUN_1800f1200	0x1800f1200	Blanks
-FUN_1800f1200	0x1800f1200	Show spaces and tabs
-FUN_1800f1200	0x1800f1200	##lua_editor_surface
-FUN_1800f1200	0x1800f1200	Lua Loader
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Find / replace  (Ctrl+F)
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Minimap
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Blanks
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Show spaces and tabs
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	##lua_editor_surface
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Lua Loader
 FUN_180244270	0x180244270	Lua Loader
-FUN_1800f1200	0x1800f1200	line 
-FUN_1800f1200	0x1800f1200	##lua_status_jump
-FUN_1800f1200	0x1800f1200	%s  Click to jump to line %d
-FUN_1800f1200	0x1800f1200	[LUAEDITOR] queued %d bytes for %s 
-FUN_1800f1200	0x1800f1200	Queued for 
-FUN_1800f5e00	0x1800f5e00	Spectators
-FUN_1800f5e00	0x1800f5e00	No spectators
-FUN_1800f5e00	0x1800f5e00	[First-Person] 
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	line 
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	##lua_status_jump
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	%s  Click to jump to line %d
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	[LUAEDITOR] queued %d bytes for %s 
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Queued for 
+Features_Spectators_SpectatorsFeature_vfunc04	0x1800f5e00	Spectators
+Features_Spectators_SpectatorsFeature_vfunc04	0x1800f5e00	No spectators
+Features_Spectators_SpectatorsFeature_vfunc04	0x1800f5e00	[First-Person] 
 FUN_1800f65f0	0x1800f65f0	Local host
-FUN_1800f7020	0x1800f7020	%d RATE
-FUN_1800f7020	0x1800f7020	%d MS
-FUN_1800f7020	0x1800f7020	%d FPS
-FUN_1800f7020	0x1800f7020	%02d:%02d
+Features_Watermark_WatermarkFeature_vfunc04	0x1800f7020	%d RATE
+Features_Watermark_WatermarkFeature_vfunc04	0x1800f7020	%d MS
+Features_Watermark_WatermarkFeature_vfunc04	0x1800f7020	%d FPS
+Features_Watermark_WatermarkFeature_vfunc04	0x1800f7020	%02d:%02d
 FUN_1801410a0	0x1801410a0	%02d:%02d
-FUN_1800f7020	0x1800f7020	##mayrr_watermark
+Features_Watermark_WatermarkFeature_vfunc04	0x1800f7020	##mayrr_watermark
 FUN_1800f9930	0x1800f9930	Enemy
 FUN_1800f9930	0x1800f9930	74 hp
-FUN_1800f9f70	0x1800f9f70	##mayrr_damagefeed
+Features_DamageFeed_DamageFeedFeature_vfunc04	0x1800f9f70	##mayrr_damagefeed
 FUN_1801cb050	0x1801cb050	Team 
 FUN_1800fab80	0x1800fab80	Team 
 FUN_1800fb990	0x1800fb990	 # Team list 
@@ -3579,18 +3579,18 @@ FUN_180104260	0x180104260	[NVR-PUNCH] no verdict #%d: dNo=%.3f dWith=%.3f punch=
 FUN_180104260	0x180104260	NOT in
 FUN_180104260	0x180104260	[NVR-PUNCH] '%s': punch is %s the bullet dir (dNo=%.3f dWith=%.3f punch=(%.2f,%.2f)) -> RCS %s 
 FUN_1802e7f40	0x1802e7f40	[NVR] Render2D cache update crashed 
-FUN_180105c80	0x180105c80	m_flJumpTime
-FUN_180105c80	0x180105c80	m_flDuckJumpTime
-FUN_180105c80	0x180105c80	m_bInDuckJump
+Features_JumpBug_JumpBugFeature_vfunc01	0x180105c80	m_flJumpTime
+Features_JumpBug_JumpBugFeature_vfunc01	0x180105c80	m_flDuckJumpTime
+Features_JumpBug_JumpBugFeature_vfunc01	0x180105c80	m_bInDuckJump
 FUN_180105970	0x180105970	[JUMPBUG] fall #%d: %d tick(s), vz %.0f, ground never came within %.0f..%.0fu of the ducked feet -- no attempt 
 FUN_180105970	0x180105970	[JUMPBUG] fall #%d: %d tick(s), vz %.0f, step %.1fu/tick, closest gap %.1fu (window %.0f..%.0fu, miss %.1fu), fired=%d, unduck refused=%d, lockout=%.0fms inDuckJump=%d 
 FUN_180105970	0x180105970	%s%.1f
 FUN_180105970	0x180105970	[JUMPBUG]   ladder (last %d ticks, feet->floor): %s | window %.0f..%.0f 
-FUN_180105c80	0x180105c80	[JUMPBUG] result: dz=%.1f (unduck alone = -%.0f) onGround=%d ducked=%d vz=%.0f (fired at gap %.1f) | state: bDucked=%d bDucking=%d inDuckJump=%d ducktime=%.0f jumpTime=%.0f duckJumpTime=%.0f hull=%.0f/%.0f 
-FUN_180105c80	0x180105c80	[JUMPBUG] CanUnduck refused: frac=%.3f startsolid=%d n=(%.2f %.2f %.2f) stoppedAfter=%.1fu of %.0f (gap was %.1f) 
-FUN_180106b80	0x180106b80	[JUMPBUG] sent: IN_DUCK=%d IN_JUMP=%d (no sim, result next tick) 
-FUN_180106b80	0x180106b80	 -> reverting to ducked, fall stays alive
-FUN_180106b80	0x180106b80	[JUMPBUG] sim says: jumped=%d onGround=%d ducked=%d dz=%.1f (unduck alone = -%.0f) vz=%.0f | fired: hullGap=%.1f rayGap=%.1f n.z=%.2f ducktime=%.0f->%.0f sent(duck=%d jump=%d)%s 
+Features_JumpBug_JumpBugFeature_vfunc01	0x180105c80	[JUMPBUG] result: dz=%.1f (unduck alone = -%.0f) onGround=%d ducked=%d vz=%.0f (fired at gap %.1f) | state: bDucked=%d bDucking=%d inDuckJump=%d ducktime=%.0f jumpTime=%.0f duckJumpTime=%.0f hull=%.0f/%.0f 
+Features_JumpBug_JumpBugFeature_vfunc01	0x180105c80	[JUMPBUG] CanUnduck refused: frac=%.3f startsolid=%d n=(%.2f %.2f %.2f) stoppedAfter=%.1fu of %.0f (gap was %.1f) 
+Features_JumpBug_JumpBugFeature_vfunc02	0x180106b80	[JUMPBUG] sent: IN_DUCK=%d IN_JUMP=%d (no sim, result next tick) 
+Features_JumpBug_JumpBugFeature_vfunc02	0x180106b80	 -> reverting to ducked, fall stays alive
+Features_JumpBug_JumpBugFeature_vfunc02	0x180106b80	[JUMPBUG] sim says: jumped=%d onGround=%d ducked=%d dz=%.1f (unduck alone = -%.0f) vz=%.0f | fired: hullGap=%.1f rayGap=%.1f n.z=%.2f ducktime=%.0f->%.0f sent(duck=%d jump=%d)%s 
 FUN_1801073d0	0x1801073d0	models/debug/debugwhite
 FUN_180129b00	0x180129b00	models/debug/debugwhite
 FUN_1801073d0	0x1801073d0	debug/debugdrawflat
@@ -3618,14 +3618,14 @@ FUN_18010a0d0	0x18010a0d0	no stencil -> filled glow
 FUN_18010a0d0	0x18010a0d0	[GLOW] halo ready: mask=%dx%d soft='%s' %dx%d sharp='%s' %dx%d screen=%dx%d stencilBits=%d (%s) 
 FUN_18010c040	0x18010c040	[GLOW] composite #%d (ctx=%p) 
 FUN_18010c1b0	0x18010c1b0	[GLOW] render context = %p (global was %p) 
-FUN_18010cc70	0x18010cc70	sharp
-FUN_18010cc70	0x18010cc70	[GLOW] toggle -> %s (through walls=%d, style=%s, blur=%.1f, sharp=%dpx) 
+Features_ChamsGlow_ChamsGlowFeature_vfunc05	0x18010cc70	sharp
+Features_ChamsGlow_ChamsGlowFeature_vfunc05	0x18010cc70	[GLOW] toggle -> %s (through walls=%d, style=%s, blur=%.1f, sharp=%dpx) 
 FUN_180110d10	0x180110d10	[BP] view=(%.1f,%.1f) dRay=%.2fdeg org=(%.0f,%.0f,%.0f) pen=%.1f dmg=%.0f noric=%d segs=%d %dp %dr 
 FUN_180110d10	0x180110d10	[BP]   %c len=%.0fu end=(%.0f,%.0f,%.0f) dmg=%.0f ply=%d 
-FUN_180111370	0x180111370	cable/cable
-FUN_1801117e0	0x1801117e0	%.0f  %dp %dr
-FUN_180112e70	0x180112e70	%.2f deg  %.0fu  (eye)
-FUN_180112e70	0x180112e70	%.2f deg  %.0fu
+Features_BulletPath_BulletPathFeature_vfunc09	0x180111370	cable/cable
+Features_BulletPath_BulletPathFeature_vfunc06	0x1801117e0	%.0f  %dp %dr
+Features_AimPoint_AimPointFeature_vfunc06	0x180112e70	%.2f deg  %.0fu  (eye)
+Features_AimPoint_AimPointFeature_vfunc06	0x180112e70	%.2f deg  %.0fu
 FUN_180114b30	0x180114b30	OFFSCREEN
 FUN_180114b30	0x180114b30	FULLFB
 FUN_180114b30	0x180114b30	[SP] cleanRT created %dx%d %s (%p) 
@@ -3738,7 +3738,7 @@ FUN_18011cf40	0x18011cf40	if type(ST) ~= "table" then ST = {} rawset(_G, K, ST) 
 FUN_18011cf40	0x18011cf40	ST.on = 
 FUN_18011cf40	0x18011cf40	ST.url = "
 FUN_18011cf40	0x18011cf40	if type(GameDetails) == "function" and GameDetails ~= ST.wrap then  ST.orig = GameDetails  ST.wrap = function(servername, serverurl, mapname, maxplayers, ...)   if ST.on then    local u = ST.url    if type(u) == "string" and #u >= 5 then     local openable = (u:sub(1, 4) == "http" or u:sub(1, 8) == "asset://")     local mp = tonumber(maxplayers) or 0     local cv = GetConVar and GetConVar("cl_enable_loadingurl")     if openable and mp > 1 and cv and cv:GetBool() then      serverurl = u     else      pcall(function()       local pnl = GetLoadPanel and GetLoadPanel()       if pnl and IsValid(pnl) then pnl:ShowURL(u, true) end      end)      serverurl = ""     end    else     serverurl = ""    end   end   return ST.orig(servername, serverurl, mapname, maxplayers, ...)  end  GameDetails = ST.wrap end if type(ST.wrap) ~= "function" then return "GameDetails not found" end return "ok" 
-FUN_18011ca90	0x18011ca90	ThreadInMainThread
+Features_LoadingUrl_LoadingUrlFeature_vfunc04	0x18011ca90	ThreadInMainThread
 FUN_18011c8a0	0x18011c8a0	cl_enable_loadingurl
 FUN_18011c8f0	0x18011c8f0	LoadingDialog
 FUN_180220c70	0x180220c70	Web pages
@@ -3807,7 +3807,7 @@ FUN_180121100	0x180121100	Hands
 FUN_180121200	0x180121200	models/weapons/v_
 FUN_180121200	0x180121200	_arms
 FUN_180121200	0x180121200	models/weapons/c_
-FUN_180121360	0x180121360	[VMCHAMS] DME vm ent %d '%s' (pass=%d) 
+Features_VMChams_VMChamsFeature_vfunc15	0x180121360	[VMCHAMS] DME vm ent %d '%s' (pass=%d) 
 FUN_180123200	0x180123200	 # Entity list 
 FUN_180123200	0x180123200	entitylist.count
 FUN_1801258d0	0x1801258d0	entitylist.count
@@ -4301,13 +4301,13 @@ FUN_18013e870	0x18013e870	session is gone - log in again
 FUN_18013e870	0x18013e870	submitting code...
 FUN_18013eee0	0x18013eee0	logged off
 FUN_1801d3b90	0x1801d3b90	logging off...
-FUN_18013fa40	0x18013fa40	[AIRSTUCK] auto interval=%dms avgDrop=%.1fu 
+Features_Airstuck_AirstuckFeature_vfunc02	0x18013fa40	[AIRSTUCK] auto interval=%dms avgDrop=%.1fu 
 FUN_1801406e0	0x1801406e0	[WARP] bank short: asked %d, granted %d (bank %d/%d) - releasing the smaller burst 
 FUN_1801406e0	0x1801406e0	[WARP] release ticks=%d clChoked=%d nchChoked=%d outSeq=%d ack=%d 
-FUN_18013ffc0	0x18013ffc0	<not found>
-FUN_18013ffc0	0x18013ffc0	[WARP] charge=%d -> travelled %.0fu (%.1f u/tick) sv_maxusrcmdprocessticks=%s 
-FUN_18013ffc0	0x18013ffc0	[WARP] state key=%d down=%d tap=%d charging=%d ticks=%d 
-FUN_180140920	0x180140920	[SPEED] on=%d held=%d hooks=%d factor=%.2f frametime=%.5f 
+Features_Warp_WarpFeature_vfunc02	0x18013ffc0	<not found>
+Features_Warp_WarpFeature_vfunc02	0x18013ffc0	[WARP] charge=%d -> travelled %.0fu (%.1f u/tick) sv_maxusrcmdprocessticks=%s 
+Features_Warp_WarpFeature_vfunc02	0x18013ffc0	[WARP] state key=%d down=%d tap=%d charging=%d ticks=%d 
+Features_Speedhack_SpeedhackFeature_vfunc02	0x180140920	[SPEED] on=%d held=%d hooks=%d factor=%.2f frametime=%.5f 
 FUN_1801d5ef0	0x1801d5ef0	Victim's Steam nickname
 FUN_180141c00	0x180141c00	steamid
 FUN_180141c00	0x180141c00	kills
@@ -4318,7 +4318,7 @@ FUN_180141c00	0x180141c00	mygroup
 FUN_180141c00	0x180141c00	myteam
 FUN_180141c00	0x180141c00	myarmor
 FUN_18016f960	0x18016f960	weapon_
-FUN_18015ade0	0x18015ade0	weapon_
+Features_DamageLogger_DamageLoggerFeature_vfunc12	0x18015ade0	weapon_
 FUN_18015d930	0x18015d930	weapon_
 FUN_180159980	0x180159980	weapon_
 FUN_180140de0	0x180140de0	weapon_
@@ -4344,8 +4344,8 @@ FUN_180143040	0x180143040	killsay.
 FUN_1801433d0	0x1801433d0	killsay.
 FUN_1801436c0	0x1801436c0	[KILLSAY] player_death DELIVERED -- the health poll is off for this map 
 FUN_1801436c0	0x1801436c0	enemy
-FUN_180143970	0x180143970	say "
-FUN_180144390	0x180144390	say "
+Features_KillSay_KillSayFeature_vfunc01	0x180143970	say "
+Features_ChatSpam_ChatSpamFeature_vfunc01	0x180144390	say "
 FUN_180143d20	0x180143d20	 # Chat spam messages 
 FUN_180143d20	0x180143d20	chatspam.count
 FUN_180143d20	0x180143d20	chatspam.
@@ -4382,8 +4382,8 @@ FUN_180145f40	0x180145f40	 refused
 FUN_180145f40	0x180145f40	Not in a server - 
 FUN_180145f40	0x180145f40	 queued
 FUN_1801d5ef0	0x1801d5ef0	Name change
-FUN_1801465a0	0x1801465a0	net_SetConVar
-FUN_180146730	0x180146730	net_Disconnect
+vfunc_shared_1801465a0	0x1801465a0	net_SetConVar
+vfunc_shared_180146730	0x180146730	net_Disconnect
 FUN_1801d5ef0	0x1801d5ef0	models/player
 FUN_180147130	0x180147130	40 53 48 83 EC 20 66 89 91 ? ? ? ? 48 8B D9 83 FA FF
 FUN_1801f9180	0x1801f9180	40 53 48 83 EC 20 66 89 91 ? ? ? ? 48 8B D9 83 FA FF
@@ -4423,7 +4423,7 @@ FUN_18014a290	0x18014a290	Name sent via NET_SetConVar
 FUN_18014a290	0x18014a290	NET_SetConVar failed
 FUN_18014a690	0x18014a690	[Toolbox] restore idx=%d model=%p -> %s 
 FUN_18014a690	0x18014a690	[Toolbox] restore SKIPPED: no snapshot for this entity (owner=%p local=%p idx=%d) 
-FUN_18014b0a0	0x18014b0a0	UNAVAILABLE
+Features_Toolbox_ToolboxFeature_vfunc16	0x18014b0a0	UNAVAILABLE
 FUN_18014a690	0x18014a690	UNAVAILABLE
 FUN_18014a690	0x18014a690	[Toolbox] full-update requested -> %s 
 FUN_18014a690	0x18014a690	Model restored - server re-sync requested
@@ -4434,7 +4434,7 @@ FUN_18014a8f0	0x18014a8f0	Model loaded: %d acts only - client driver
 FUN_18014a8f0	0x18014a8f0	Model loaded (transplant fallback)
 FUN_18014a8f0	0x18014a8f0	Model not found / failed to load
 FUN_18014a8f0	0x18014a8f0	[Toolbox] real-model snapshot at first apply: idx=%d model=%p 
-FUN_18014b0a0	0x18014b0a0	[Toolbox] unload with override worn: delta reset -> %s 
+Features_Toolbox_ToolboxFeature_vfunc16	0x18014b0a0	[Toolbox] unload with override worn: delta reset -> %s 
 FUN_18014be40	0x18014be40	cannot open
 FUN_18014be40	0x18014be40	too large
 FUN_18014be40	0x18014be40	truncated
@@ -4506,11 +4506,11 @@ FUN_180150550	0x180150550	devicecookie
 FUN_180150550	0x180150550	%s: %d client-side BAN table(s) present (vcmod_cl_usersettings_*)
 FUN_180150550	0x180150550	%s: %d AC device cookie(s) present
 FUN_180150550	0x180150550	%s: %d table(s), %d cookie(s) - no known AC marker
-FUN_180154890	0x180154890	cl_timeout
-FUN_180154890	0x180154890	net_graph
-FUN_180154890	0x180154890	ConVars: %d reset, %d unavailable
-FUN_180154890	0x180154890	cl_timeout = %g (not 30) - this is where a ban marker is stored
-FUN_180154890	0x180154890	%s = %g (not 0) - counts as "advanced user"
+Features_DataCleaner_DataCleanerFeature_vfunc01	0x180154890	cl_timeout
+Features_DataCleaner_DataCleanerFeature_vfunc01	0x180154890	net_graph
+Features_DataCleaner_DataCleanerFeature_vfunc01	0x180154890	ConVars: %d reset, %d unavailable
+Features_DataCleaner_DataCleanerFeature_vfunc01	0x180154890	cl_timeout = %g (not 30) - this is where a ban marker is stored
+Features_DataCleaner_DataCleanerFeature_vfunc01	0x180154890	%s = %g (not 0) - counts as "advanced user"
 FUN_180150b90	0x180150b90	Game folder not found - file checks unavailable
 FUN_180152a90	0x180152a90	data
 FUN_180151b00	0x180151b00	data
@@ -4690,122 +4690,122 @@ FUN_18017ac80	0x18017ac80	Left Bottom
 FUN_18017ac80	0x18017ac80	Right Top
 FUN_18017ac80	0x18017ac80	Right Bottom
 FUN_180169100	0x180169100	Element
-FUN_180169760	0x180169760	##box_color
+Features_Visual_ESP_Editor_Elements_BoxElement_vfunc04	0x180169760	##box_color
 FUN_18017e8a0	0x18017e8a0	Rounding
-FUN_18016aa90	0x18016aa90	Rounding
-FUN_180169760	0x180169760	Rounding
-FUN_18016c230	0x18016c230	Rounding
-FUN_180169760	0x180169760	##box_rounding
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Rounding
+Features_Visual_ESP_Editor_Elements_BoxElement_vfunc04	0x180169760	Rounding
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Rounding
+Features_Visual_ESP_Editor_Elements_BoxElement_vfunc04	0x180169760	##box_rounding
 FUN_1801bb810	0x1801bb810	Filled
-FUN_180169760	0x180169760	Filled
+Features_Visual_ESP_Editor_Elements_BoxElement_vfunc04	0x180169760	Filled
 FUN_1801c3ef0	0x1801c3ef0	Thickness
-FUN_18016aa90	0x18016aa90	Thickness
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Thickness
 FUN_1801c23c0	0x1801c23c0	Thickness
-FUN_180169a60	0x180169a60	Thickness
-FUN_180169760	0x180169760	Thickness
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	Thickness
+Features_Visual_ESP_Editor_Elements_BoxElement_vfunc04	0x180169760	Thickness
 FUN_1801c8950	0x1801c8950	Thickness
-FUN_18016c230	0x18016c230	Thickness
-FUN_180169760	0x180169760	##box_thickness
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Thickness
+Features_Visual_ESP_Editor_Elements_BoxElement_vfunc04	0x180169760	##box_thickness
 FUN_1802138a0	0x1802138a0	Circle
-FUN_180169930	0x180169930	Circle
-FUN_180169a60	0x180169a60	##circle_color
-FUN_180169a60	0x180169a60	Radius
-FUN_180169a60	0x180169a60	##circle_radius
-FUN_180169a60	0x180169a60	Segments
-FUN_180169a60	0x180169a60	##circle_segments
-FUN_180169a60	0x180169a60	Filled##circ
-FUN_180169a60	0x180169a60	##circle_thickness
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc05	0x180169930	Circle
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	##circle_color
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	Radius
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	##circle_radius
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	Segments
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	##circle_segments
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	Filled##circ
+Features_Visual_ESP_Editor_Elements_CircleElement_vfunc04	0x180169a60	##circle_thickness
 FUN_18017f530	0x18017f530	ESP Box
 FUN_180213650	0x180213650	ESP Box
-FUN_180169c80	0x180169c80	ESP Box
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc05	0x180169c80	ESP Box
 FUN_18016a940	0x18016a940	AABB (collision)
 FUN_18016a940	0x18016a940	Legacy (0.55)
 FUN_18016a940	0x18016a940	Silhouette (hitboxes)
 FUN_18016a940	0x18016a940	Box size
 FUN_18016a940	0x18016a940	AABB - the player's collision box, axis-aligned, all 8 corners projected, then thinned. Follows crouching and model size.  Legacy - head and feet only, width = 55%% of height.  Silhouette - the model itself: every hitbox corner, measured across your view axis. Tight to the actual model, exact at any angle, and nothing about it is a tuned constant. Costs one bone setup per player.  Applies to every player: the whole element layout anchors to this rect.
-FUN_18016aa90	0x18016aa90	##bbox_size_mode
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	##bbox_size_mode
 FUN_18017e8a0	0x18017e8a0	Full box
-FUN_18016aa90	0x18016aa90	Full box
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Full box
 FUN_18017e8a0	0x18017e8a0	Corner box
-FUN_18016aa90	0x18016aa90	Corner box
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Corner box
 FUN_18017e8a0	0x18017e8a0	Top + bottom
-FUN_18016aa90	0x18016aa90	Top + bottom
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Top + bottom
 FUN_18017e8a0	0x18017e8a0	Side rails
-FUN_18016aa90	0x18016aa90	Side rails
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Side rails
 FUN_18017e8a0	0x18017e8a0	Style
-FUN_18016aa90	0x18016aa90	Style
-FUN_18016aa90	0x18016aa90	##bbox_style
-FUN_18016aa90	0x18016aa90	Color by Job
-FUN_18016d2d0	0x18016d2d0	Color by Job
-FUN_180170610	0x180170610	Color by Job
-FUN_18016aa90	0x18016aa90	##bbox_color
-FUN_18016aa90	0x18016aa90	Show Protected
-FUN_18016aa90	0x18016aa90	Protected color
-FUN_18016aa90	0x18016aa90	##bbox_protected
-FUN_18016aa90	0x18016aa90	Outline
-FUN_18016aa90	0x18016aa90	Outline color
-FUN_18016aa90	0x18016aa90	##bbox_outline
-FUN_18016aa90	0x18016aa90	##bbox_rounding
-FUN_18016aa90	0x18016aa90	Filled##bbox
-FUN_18016aa90	0x18016aa90	##bbox_thickness
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Style
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	##bbox_style
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Color by Job
+Features_Visual_ESP_Editor_Elements_TextElement_vfunc04	0x18016d2d0	Color by Job
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Color by Job
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	##bbox_color
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Show Protected
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Protected color
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	##bbox_protected
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Outline
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Outline color
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	##bbox_outline
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	##bbox_rounding
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	Filled##bbox
+Features_Visual_ESP_Editor_Elements_BBoxElement_vfunc04	0x18016aa90	##bbox_thickness
 FUN_18016ad80	0x18016ad80	Health Bar
-FUN_18016ae70	0x18016ae70	Health Bar
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc05	0x18016ae70	Health Bar
 FUN_1801e2220	0x1801e2220	Vertical
-FUN_18016c230	0x18016c230	Vertical
-FUN_18016c230	0x18016c230	horizontal
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Vertical
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	horizontal
 FUN_1801768e0	0x1801768e0	vertical
-FUN_18016c230	0x18016c230	vertical
-FUN_18016c230	0x18016c230	Direction: %s
-FUN_18016c230	0x18016c230	##hbar_thickness
-FUN_18016c230	0x18016c230	Outline##hbar_outline
-FUN_18016c230	0x18016c230	%.1f px
-FUN_18016c230	0x18016c230	##hbar_rounding
-FUN_18016c230	0x18016c230	Corner radius of the track. 0 = square ends, which is what lines up with a square ESP box - rounded tips read as "not flush" no matter how exact the length is.  This used to be forced to ~2.5px with no way out; the old look is 2.5 on this slider.
-FUN_18016c230	0x18016c230	Length trim
-FUN_18016c230	0x18016c230	##hbar_lentrim
-FUN_18016c230	0x18016c230	Shaves this many pixels off EACH end of the bar.  The box's stroke reach and its rounded corners are already accounted for; this is for the last pixel that depends on how a given box style reads. Negative makes the bar overhang.
-FUN_18016c230	0x18016c230	Background##hbar_bg
-FUN_18016c230	0x18016c230	The dark plate under the fill - the bar's version of a text shadow. Off leaves only the fill (and the outline, if it is on), which is what you want over a dark model or right against the box.
-FUN_18016c230	0x18016c230	Background color
-FUN_18016c230	0x18016c230	##hbar_bgcol
-FUN_18016c230	0x18016c230	Armor number
-FUN_18016c230	0x18016c230	Health number
-FUN_18016c230	0x18016c230	Only when damaged
-FUN_18016c230	0x18016c230	On bar
-FUN_18016c230	0x18016c230	Auto (outer side)
-FUN_18016c230	0x18016c230	Above
-FUN_18016c230	0x18016c230	Below
-FUN_18016c230	0x18016c230	Number position
-FUN_18016c230	0x18016c230	##hbar_textside
-FUN_18016c230	0x18016c230	Default keeps the old behaviour: on the track when the bar is vertical, outside it when horizontal.  Auto puts it outside on the side the bar is anchored to, so it never ends up squeezed between the bar and the ESP box.
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	vertical
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Direction: %s
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_thickness
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Outline##hbar_outline
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	%.1f px
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_rounding
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Corner radius of the track. 0 = square ends, which is what lines up with a square ESP box - rounded tips read as "not flush" no matter how exact the length is.  This used to be forced to ~2.5px with no way out; the old look is 2.5 on this slider.
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Length trim
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_lentrim
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Shaves this many pixels off EACH end of the bar.  The box's stroke reach and its rounded corners are already accounted for; this is for the last pixel that depends on how a given box style reads. Negative makes the bar overhang.
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Background##hbar_bg
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	The dark plate under the fill - the bar's version of a text shadow. Off leaves only the fill (and the outline, if it is on), which is what you want over a dark model or right against the box.
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Background color
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_bgcol
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Armor number
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Health number
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Only when damaged
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	On bar
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Auto (outer side)
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Above
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Below
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Number position
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_textside
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Default keeps the old behaviour: on the track when the bar is vertical, outside it when horizontal.  Auto puts it outside on the side the bar is anchored to, so it never ends up squeezed between the bar and the ESP box.
 FUN_18017e8a0	0x18017e8a0	Number color
-FUN_18016c230	0x18016c230	Number color
-FUN_18016c230	0x18016c230	##hbar_textcolor
-FUN_18016c230	0x18016c230	Number shadow##hbar_textshadow
-FUN_18016d2d0	0x18016d2d0	Shadow color
-FUN_18016c230	0x18016c230	Shadow color
-FUN_180170610	0x180170610	Shadow color
-FUN_18016c230	0x18016c230	##hbar_textshadowcol
-FUN_18016c230	0x18016c230	Full armor color
-FUN_18016c230	0x18016c230	Full HP color
-FUN_18016c230	0x18016c230	##hbar_full
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Number color
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_textcolor
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Number shadow##hbar_textshadow
+Features_Visual_ESP_Editor_Elements_TextElement_vfunc04	0x18016d2d0	Shadow color
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Shadow color
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Shadow color
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_textshadowcol
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Full armor color
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Full HP color
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_full
 FUN_18017e8a0	0x18017e8a0	Low armor color
-FUN_18016c230	0x18016c230	Low armor color
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Low armor color
 FUN_18017e8a0	0x18017e8a0	Low HP color
-FUN_18016c230	0x18016c230	Low HP color
-FUN_18016c230	0x18016c230	##hbar_low
-FUN_18016c230	0x18016c230	Background
-FUN_18016c230	0x18016c230	##hbar_bg
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Low HP color
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_low
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	Background
+Features_Visual_ESP_Editor_Elements_HealthBarElement_vfunc04	0x18016c230	##hbar_bg
 FUN_180213950	0x180213950	Armor Bar
 FUN_18017f530	0x18017f530	Armor Bar
-FUN_18016c810	0x18016c810	Armor Bar
-FUN_18016c890	0x18016c890	Combine with HP bar
-FUN_18016c890	0x18016c890	Shares the HP bar's track (top half).
+Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc05	0x18016c810	Armor Bar
+Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc04	0x18016c890	Combine with HP bar
+Features_Visual_ESP_Editor_Elements_ArmorBarElement_vfunc04	0x18016c890	Shares the HP bar's track (top half).
 FUN_18016c930	0x18016c930	Sample text
-FUN_18016d2d0	0x18016d2d0	##txt_color
-FUN_18016d2d0	0x18016d2d0	Shadow##txt
-FUN_18016d2d0	0x18016d2d0	##txt_shadow
-FUN_18016d2d0	0x18016d2d0	##txt_text
+Features_Visual_ESP_Editor_Elements_TextElement_vfunc04	0x18016d2d0	##txt_color
+Features_Visual_ESP_Editor_Elements_TextElement_vfunc04	0x18016d2d0	Shadow##txt
+Features_Visual_ESP_Editor_Elements_TextElement_vfunc04	0x18016d2d0	##txt_shadow
+Features_Visual_ESP_Editor_Elements_TextElement_vfunc04	0x18016d2d0	##txt_text
 FUN_18017f530	0x18017f530	Nickname
 FUN_180002fc0	0x180002fc0	Nickname
 FUN_1801d0270	0x1801d0270	Nickname
@@ -4826,56 +4826,56 @@ FUN_180002fc0	0x180002fc0	Job custom
 FUN_180002fc0	0x180002fc0	Inventory
 FUN_180002fc0	0x180002fc0	Script
 FUN_18016d6f0	0x18016d6f0	Dynamic Text
-FUN_18016e200	0x18016e200	Dynamic Text
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc05	0x18016e200	Dynamic Text
 FUN_18016de30	0x18016de30	Script 
 FUN_1802f3b1d	0x1802f3b1d	Error
 FUN_18016e2a0	0x18016e2a0	PROTECTED
 FUN_18016e2a0	0x18016e2a0	Invalid
-FUN_180170610	0x180170610	##dyn_color
-FUN_180170610	0x180170610	Shadow##dyn
-FUN_180170610	0x180170610	##dyn_shadow
-FUN_180170610	0x180170610	##dyn_type
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_color
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Shadow##dyn
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_shadow
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_type
 FUN_18017e8a0	0x18017e8a0	Script slot
-FUN_180170610	0x180170610	Script slot
-FUN_180170610	0x180170610	##dyn_script_slot
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Script slot
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_script_slot
 FUN_18017e8a0	0x18017e8a0	Which row a script fills: mayrr.esp.SetPlayerText(index, slot, text). Empty slot draws nothing.
-FUN_180170610	0x180170610	Which row a script fills: mayrr.esp.SetPlayerText(index, slot, text). Empty slot draws nothing.
-FUN_180170610	0x180170610	Netvar template
-FUN_180170610	0x180170610	##dyn_netvar
-FUN_180170610	0x180170610	e.g. {job}  or  {UserGroup@ba.ranks.Stored.Name}
-FUN_180170610	0x180170610	Reads the sources in Network > Netvars.
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Which row a script fills: mayrr.esp.SetPlayerText(index, slot, text). Empty slot draws nothing.
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Netvar template
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_netvar
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	e.g. {job}  or  {UserGroup@ba.ranks.Stored.Name}
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Reads the sources in Network > Netvars.
 FUN_18017e8a0	0x18017e8a0	Max lines
-FUN_180170610	0x180170610	Max lines
-FUN_180170610	0x180170610	##dyn_inv_max
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Max lines
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_inv_max
 FUN_18017e8a0	0x18017e8a0	Hard ceiling on printed rows. With more weapons than fit, the last row becomes "+N".
-FUN_180170610	0x180170610	Hard ceiling on printed rows. With more weapons than fit, the last row becomes "+N".
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Hard ceiling on printed rows. With more weapons than fit, the last row becomes "+N".
 FUN_18017e8a0	0x18017e8a0	Align
-FUN_180170610	0x180170610	Align
-FUN_180170610	0x180170610	##dyn_inv_align
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Align
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_inv_align
 FUN_18017e8a0	0x18017e8a0	Weapon name
-FUN_180170610	0x180170610	Weapon name
-FUN_180170610	0x180170610	##dyn_inv_name
-FUN_180170610	0x180170610	Show ammo##dyn_inv
-FUN_180170610	0x180170610	Mark held weapon##dyn_inv
-FUN_180170610	0x180170610	Hide held weapon##dyn_inv
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Weapon name
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_inv_name
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Show ammo##dyn_inv
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Mark held weapon##dyn_inv
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Hide held weapon##dyn_inv
 FUN_18017e8a0	0x18017e8a0	Ignore
-FUN_180170610	0x180170610	Ignore
-FUN_180170610	0x180170610	##dyn_inv_ignore
-FUN_180170610	0x180170610	e.g. physgun, camera, keys
-FUN_180170610	0x180170610	Name or class, anywhere. * ? = mask.
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Ignore
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_inv_ignore
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	e.g. physgun, camera, keys
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Name or class, anywhere. * ? = mask.
 FUN_18017e8a0	0x18017e8a0	Highlight
-FUN_180170610	0x180170610	Highlight
-FUN_180170610	0x180170610	##dyn_inv_watch
-FUN_180170610	0x180170610	e.g. knife, ttt_, c4, awp
-FUN_180170610	0x180170610	Only these##dyn_inv
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Highlight
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_inv_watch
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	e.g. knife, ttt_, c4, awp
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Only these##dyn_inv
 FUN_18017e8a0	0x18017e8a0	Highlight color
-FUN_180170610	0x180170610	Highlight color
-FUN_180170610	0x180170610	##dyn_inv_watch_col
-FUN_180170610	0x180170610	Prefix
-FUN_180170610	0x180170610	##dyn_prefix
-FUN_180170610	0x180170610	Suffix
-FUN_180170610	0x180170610	##dyn_suffix
-FUN_180170610	0x180170610	Both go on EVERY row of the list.
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Highlight color
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_inv_watch_col
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Prefix
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_prefix
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Suffix
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	##dyn_suffix
+Features_Visual_ESP_Editor_Elements_DynamicTextElement_vfunc04	0x180170610	Both go on EVERY row of the list.
 FUN_180176440	0x180176440	shadow_enabled
 FUN_180175fd0	0x180175fd0	shadow_enabled
 FUN_1801768e0	0x1801768e0	color_by_job
@@ -7264,17 +7264,17 @@ FUN_18026ea90	0x18026ea90	SetActiveID() cancel MovingWindow
 FUN_18026e500	0x18026e500	#MOVE
 FUN_18026ee60	0x18026ee60	Invalid flags for IsItemHovered()!
 FUN_18026ea90	0x18026ea90	SetActiveID() 0x%08X in "%s"%*s(previously 0x%08X in "%s") 
-FUN_1800bf160	0x1800bf160	##Background
+Features_HVH_Visualize_VisualizeFeature_vfunc06	0x1800bf160	##Background
 FUN_1802d3440	0x1802d3440	##Background
 FUN_180272510	0x180272510	##Background
-FUN_18010d320	0x18010d320	##Background
+Features_Radar_RadarFeature_vfunc04	0x18010d320	##Background
 FUN_180270230	0x180270230	NewFrame(): ClearActiveID() 0x%08X because it isn't marked alive anymore! 
 FUN_18019fbc0	0x18019fbc0	##Foreground
 FUN_18026f180	0x18026f180	##Foreground
 FUN_180287620	0x180287620	##Foreground
 FUN_18027e9c0	0x18027e9c0	##Foreground
 FUN_180272510	0x180272510	##Foreground
-FUN_18010d320	0x18010d320	##Foreground
+Features_Radar_RadarFeature_vfunc04	0x18010d320	##Foreground
 FUN_180289430	0x180289430	##Foreground
 FUN_1801e5510	0x1801e5510	##Foreground
 FUN_18026c700	0x18026c700	##Foreground
@@ -7313,7 +7313,7 @@ FUN_180279390	0x180279390	Calling PopTextWrapPos() too many times!
 FUN_180279af0	0x180279af0	Calling PopFocusScope() too many times!
 FUN_180279dc0	0x180279dc0	SetKeyboardFocusHere(%d) in window "%s" 
 FUN_1801e7a50	0x1801e7a50	Calling PopFont() too many times!
-FUN_1800f7020	0x1800f7020	Calling PopFont() too many times!
+Features_Watermark_WatermarkFeature_vfunc04	0x1800f7020	Calling PopFont() too many times!
 FUN_1801cb050	0x1801cb050	Calling PopFont() too many times!
 FUN_18017f530	0x18017f530	Calling PopFont() too many times!
 FUN_1801cee10	0x1801cee10	Calling PopFont() too many times!
@@ -7321,9 +7321,9 @@ FUN_180272030	0x180272030	Calling PopFont() too many times!
 FUN_1801e6010	0x1801e6010	Calling PopFont() too many times!
 FUN_18027e630	0x18027e630	Calling PopFont() too many times!
 FUN_1801cd9e0	0x1801cd9e0	Calling PopFont() too many times!
-FUN_1800f5e00	0x1800f5e00	Calling PopFont() too many times!
-FUN_1800f9f70	0x1800f9f70	Calling PopFont() too many times!
-FUN_1800f1200	0x1800f1200	Calling PopFont() too many times!
+Features_Spectators_SpectatorsFeature_vfunc04	0x1800f5e00	Calling PopFont() too many times!
+Features_DamageFeed_DamageFeedFeature_vfunc04	0x1800f9f70	Calling PopFont() too many times!
+Features_LuaLoader_LuaLoaderFeature_vfunc03	0x1800f1200	Calling PopFont() too many times!
 FUN_180279dc0	0x180279dc0	SetKeyboardFocusHere() ignored while DragDropActive! 
 FUN_1801df8b0	0x1801df8b0	Calling PopID() too many times!
 FUN_1802bf9e0	0x1802bf9e0	Calling PopID() too many times!

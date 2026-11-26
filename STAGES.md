@@ -36,7 +36,7 @@ Anything short of that would be a pile of `sub_140xxxx` that nobody can maintain
 |---|-------|--------|--------|
 | 0 | Toolchain + target profile | `re/tools/`, PE profile | **done** |
 | 1 | Binary dossier (RTTI, strings, imports, signatures) | `re/dump/*.tsv`, `re/REPORT.md` | **done** |
-| 2 | Symbolized decompilation corpus | `re/dump/inventory.tsv`, `re/dump/decompile/` | **done** (full pass 7,591 decompiled / 65 skipped / 2 timeout stubs, both recovered separately: `0x1801d5ef0` renderer and `0x180003f30` config defaults; no timeout stub remains) |
+| 2 | Symbolized decompilation corpus | `re/dump/inventory.tsv`, `re/dump/decompile/` | **done** (full pass 7,591 new bodies / 65 existing skipped / 2 timeout stubs, both recovered separately: `0x1801d5ef0` renderer and `0x180003f30` config defaults; current inventory is 7,656 functions, all with a readable body, including 110 thunks) |
 | 3 | Subsystem reconstruction | `src/features/**` | **3.1–3.13 addressed** (3.13 UI-helper source complete; external UI integration remains) |
 | 4 | Offset/signature database | `src/offsets/offsets.json` + resolver | **complete; 24 rows / 23 unique interface/slot entries wired and ABI-tested** |
 | 5 | Skyfall product (rebrand, auth, build) | `src/`, `build.bat` | **DLL builds and was live-injected in GMod x64; 24/24 descriptor rows installed; menu, ESP, command features and mouse-look restore verified in-game; 16 suites pass** |
@@ -165,7 +165,9 @@ required.
 
 `decompile/` then holds one `.c` per function, named `0xADDR_Class_method.c`,
 resumable (existing files are skipped, so an interrupted run is restarted with
-the same command).
+the same command). `py re/tools/check_corpus_coverage.py` checks that every
+inventory address has an `ok` body, using the recovered long bodies for the two
+timeout addresses.
 
 ## Stage 3 — Subsystem reconstruction
 

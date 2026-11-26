@@ -7,17 +7,20 @@ Everything below is generated from the unpacked PE plus the existing Ghidra
 exports by `re/tools/extract_core.py`, `re/tools/extract_assets.py`,
 `re/tools/finalize_dossier.py`, the checked-in container decoder
 `re/extract/decode_containers.py`, and the live-memory pass
-`re/tools/mine_runtime.py`. The original 7,023 decompiled function files remain
-in `re/dump/decompile/`.
+`re/tools/mine_runtime.py`. The corpus now has a readable body for all 7,656 inventory
+functions: 7,654 ok bodies in `re/dump/decompile/`, plus the two authoritative
+recovered copies under `re/dump/recovered_f30/` and `re/dump/renderer/` for the
+two addresses whose decompile files remain timeout stubs. The two stubs remain
+in `re/dump/decompile/` as history.
 
 ## Coverage
 
 | Dataset | Rows | File |
 |---|---:|---|
-| Functions (all inventory entries) | 7,654 | `functions.tsv` |
-| Decompiled function bodies | 7,023 | `re/dump/decompile/` |
-| Call-graph edges | 21,596 | `callgraph.tsv` |
-| Data references | 19,363 | `xrefs.tsv` |
+| Functions (all inventory entries) | 7,656 | `functions.tsv` |
+| Decompiled function bodies | 7,656 | `re/dump/decompile/` + recovered copies |
+| Call-graph edges | 23,444 | `callgraph.tsv` |
+| Data references | 22,280 | `xrefs.tsv` |
 | Runtime hooks | 24 | `hooks.tsv` |
 | Interfaces (resolved + versioned strings) | 27 | `interfaces.tsv` |
 | Signature patterns | 4,259 (4,238 function-entry + 6 external + 15 literal) | `signatures.tsv` |
@@ -38,7 +41,7 @@ in `re/dump/decompile/`.
 | Font codepoint→glyph map | 2,464 | `glyphs.tsv` |
 | Font glyph metrics (all glyphs) | 2,609 | `font_metrics.tsv` |
 | Asset paths | 78 | `asset_strings.tsv` |
-| Symbols (functions + vtables + RTTI + hooks) | 10,541 | `symbols.tsv` |
+| Symbols (functions + vtables + RTTI + hooks) | 10,543 | `symbols.tsv` |
 | Raw strings | 60,550 | `re/dump/strings_all.txt` |
 | Runtime `.data` regions (4 KiB pages) | 340 | `runtime_regions.tsv` |
 | Runtime IAT resolutions | 383 | `runtime_imports.tsv` |
@@ -53,8 +56,15 @@ All **31** TSVs in this directory are fully populated: the blank-cell audit is
 **0**. `n/a` is used only where the value is not applicable (for example an
 external signature that targets `client.dll`, or an unapplied VMT name), and
 the reason is recorded in the row. `functions.tsv` keeps every one of the
-7,654 inventory rows; 650 have an explicit `exclusion_reason` (109 `thunk`,
-541 `no-decompiled-body`/zero-size) and the other 7,004 are `none`.
+7,656 inventory rows and every one has a readable body: 110 are 3-byte thunks
+with their jump body, and the two long functions use the recovered bodies under
+`re/dump/recovered_f30/` and `re/dump/renderer/`. There are 0 rows with
+`no-decompiled-body` or a missing `decompile_file`.
+
+`py -3 re/tools/check_corpus_coverage.py` independently checks this: every
+inventory address has an `ok` body (including the two recovered bodies), every
+`functions.tsv` path exists, and every callgraph/xref caller is an inventory
+function. It exits PASS only when all 7,656 rows close.
 
 ## Hooks / offsets
 
@@ -295,7 +305,7 @@ and Adler-32, parses and checks every sfnt table, writes
 
 ## Code links
 
-`callgraph.tsv` has every `FUN_*` call found in the 7,023 decompiled bodies
+`callgraph.tsv` has every `FUN_*` call found in the 7,656 decompiled bodies
 (caller address, caller name, callee address/name, call-site count).
 `xrefs.tsv` has every `DAT_*`, `PTR_*`, `LAB_*` and `UNK_*` reference per
 function. `symbols.tsv` merges all function names, 2,680 VMT methods, 159 RTTI
@@ -309,6 +319,7 @@ classes and every hook stub/original into one address→name table.
 py -3 Gmod/Skyfall/re/tools/extract_core.py
 py -3 Gmod/Skyfall/re/tools/extract_assets.py
 py -3 Gmod/Skyfall/re/tools/finalize_dossier.py
+py -3 Gmod/Skyfall/re/tools/check_corpus_coverage.py
 py -3 Gmod/Skyfall/re/extract/decode_containers.py
 py -3 Gmod/Skyfall/re/tools/mine_runtime.py
 py -3 Gmod/Skyfall/re/tools/verify_runtime.py

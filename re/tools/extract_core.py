@@ -39,22 +39,33 @@ for r in strings_by_fn:
 call_re = re.compile(r"\b(FUN_[0-9a-fA-F]{8,})\s*\(")
 data_re = re.compile(r"\b(DAT|PTR|LAB|UNK)_([0-9a-fA-F]{8,})\b")
 call_rows, xref_rows, fn_rows = [], [], []
-decomp = sorted((DUMP / "decompile").glob("0x*_FUN_*.c"))
+# Ghidra renamed many bodies from FUN_* to class/vfunc names after the first
+# extraction pass. Scan every function file and key by its address header;
+# include the two recovered long bodies in preference to their timeout stubs.
+body_paths = sorted((DUMP / "decompile").glob("0x*.c"))
+body_paths += sorted((DUMP / "recovered_f30").glob("0x*.c"))
+body_paths += sorted((DUMP / "renderer").glob("0x*.c"))
 # Parse every decompiled body, then merge with the full inventory so the
 # inventory-only functions (thunks / zero-size / no body) keep their rows.
 decomp_by_addr = {}
-for p in decomp:
+for p in body_paths:
     text = p.read_text(encoding="utf-8", errors="replace")
-    m = re.search(r"//\s*(0x[0-9a-fA-F]+)\s+(FUN_[0-9a-fA-F]+)", text)
+    m = re.match(r"//\s*(?:0x)?([0-9a-fA-F]{8,})\s+(\S+)", text)
     if not m: continue
+    status_match = re.search(r"// status:\s*(\S+)", text[:500])
+    if status_match and not status_match.group(1).startswith("ok"):
+        continue
     addr, name = int(m.group(1), 16), m.group(2)
+    previous = decomp_by_addr.get(addr)
+    if previous is not None and len(previous[3]) >= len(text):
+        continue
     calls = collections.Counter(call_re.findall(text))
     for callee, count in sorted(calls.items()):
         call_rows.append([hex(addr), name, callee, callee, count])
     refs = collections.Counter(f"{k}_{v}" for k, v in data_re.findall(text))
     for ref, count in sorted(refs.items()):
         xref_rows.append([hex(addr), name, ref, ref, count])
-    decomp_by_addr[addr] = (name, calls, refs, p.name)
+    decomp_by_addr[addr] = (name, calls, refs, str(p.relative_to(DUMP)).replace("\\", "/"))
 for inv in inventory:
     addr = int(inv["address"], 16)
     strs = strings_by_addr.get(addr, [])
@@ -80,15 +91,22 @@ for h in offsets.get("hooks", []) + offsets.get("core_hooks", []):
                   h.get("purpose",""), h.get("abi",""), h.get("feature",""), h.get("runtime","")])
 write_tsv("hooks.tsv", ["id","interface","global","slot","vtable_offset","stub","original","purpose","abi","feature","runtime"], hooks)
 
-iface_rows = [[i.get("name",""), i.get("module",""), i.get("global",""), i.get("role","")] for i in offsets.get("interfaces", [])]
-iface_re = re.compile(r"^(V[A-Z][A-Za-z0-9_]{2,}|LUASHARED\d+|VGUI_Panel\d+|InputSystemVersion\d+|VEngine[A-Za-z]+\d+|VClient[A-Za-z]*\d+|VMaterialSystem\d+|VDebugOverlay\d+)$")
-# Reject the short mangled strings that also match the broad V... shape
-# (VWAVH, VUUU, VECTOR, VGui, ...). Keep only real CreateInterface names.
-iface_family = re.compile(r"^(?:VGUI_|VBaseFileSystem|VFileSystem|VEngine|VModelInfoClient|VPhysics|VClientDllSharedAppSystems|VENGINE_LAUNCHER)")
-seen = {r[0] for r in iface_rows}
-for s in all_strings:
-    if iface_re.match(s) and iface_family.match(s) and s not in seen:
-        seen.add(s); iface_rows.append([s, "", "", "string-only"])
+# The runtime pass resolves the CreateInterface call sites and owns the
+# authoritative module/global table. Preserve it when present; rebuilding it
+# from strings alone would regress the resolved rows to "string-only".
+if (OUT / "interfaces.tsv").exists():
+    iface_rows = [[r.get("name",""), r.get("module",""), r.get("global",""), r.get("role","")]
+                  for r in read_tsv(OUT / "interfaces.tsv")]
+else:
+    iface_rows = [[i.get("name",""), i.get("module",""), i.get("global",""), i.get("role","")] for i in offsets.get("interfaces", [])]
+    iface_re = re.compile(r"^(V[A-Z][A-Za-z0-9_]{2,}|LUASHARED\d+|VGUI_Panel\d+|InputSystemVersion\d+|VEngine[A-Za-z]+\d+|VClient[A-Za-z]*\d+|VMaterialSystem\d+|VDebugOverlay\d+)$")
+    # Reject the short mangled strings that also match the broad V... shape
+    # (VWAVH, VUUU, VECTOR, VGui, ...). Keep only real CreateInterface names.
+    iface_family = re.compile(r"^(?:VGUI_|VBaseFileSystem|VFileSystem|VEngine|VModelInfoClient|VPhysics|VClientDllSharedAppSystems|VENGINE_LAUNCHER)")
+    seen = {r[0] for r in iface_rows}
+    for s in all_strings:
+        if iface_re.match(s) and iface_family.match(s) and s not in seen:
+            seen.add(s); iface_rows.append([s, "", "", "string-only"])
 write_tsv("interfaces.tsv", ["name","module","global","role"], iface_rows)
 
 sig_rows = [[s.get("id",""), s.get("module",""), s.get("name",""), s.get("bytes",""), "offsets.json"] for s in offsets.get("signatures", [])]
@@ -145,7 +163,8 @@ summary = {"functions":len(fn_rows),"call_edges":len(call_rows),"xrefs":len(xref
            "hooks":len(hooks),"interfaces":len(iface_rows),"signatures":len(sig_rows),
            "vtables":len(vtable_methods),"rtti":len(rtti),"datatypes":len(datatypes),
            "netvars":len(netvars),"cvars":len(cvars),"lua":len(lua),"events":len(events),
-           "deps":len(dep_rows),"symbols":len(sym_rows),"decompiled":len(decomp),
+           "deps":len(dep_rows),"symbols":len(sym_rows),
+           "decompiled":sum(1 for a in decomp_by_addr if a in {int(r["address"],16) for r in inventory}),
            "strings":len(all_strings),"md5":hashlib.md5((ROOT/"m64.dll").read_bytes()).hexdigest()}
 (OUT/"core_summary.json").write_text(json.dumps(summary, indent=1), encoding="utf-8")
 print(json.dumps(summary, indent=1))

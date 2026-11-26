@@ -189,11 +189,22 @@ for name, fill in [("symbols.tsv", {"detail": "function"}),
 summary = {
     "functions": len(fns),
     "functions_no_decompile": sum(1 for r in fns if r["decompile_file"] == "n/a"),
-    "functions_thunks": sum(1 for r in fns if r["exclusion_reason"] == "thunk"),
+    "functions_thunks": sum(1 for r in fns if r.get("thunk") == "true"),
     "signatures": len(existing),
     "function_prologue_patterns": len(prologues),
     "interfaces": len(read_tsv("interfaces.tsv")),
     "icons": len(read_tsv("icons.tsv")),
 }
-(EX / "final_summary.json").write_text(json.dumps(summary, indent=1), encoding="utf-8")
+# The runtime pass adds fields to this summary. Preserve them when the core
+# extraction is rerun; otherwise a core-only finalize would erase its evidence.
+summary_path = EX / "final_summary.json"
+if summary_path.exists():
+    try:
+        previous = json.loads(summary_path.read_text(encoding="utf-8"))
+        for key in ("runtime", "runtime_closures", "runtime_summary_md5", "runtime_tsvs", "tsvs"):
+            if key in previous:
+                summary[key] = previous[key]
+    except (OSError, ValueError):
+        pass
+summary_path.write_text(json.dumps(summary, indent=1), encoding="utf-8")
 print(json.dumps(summary, indent=1))
