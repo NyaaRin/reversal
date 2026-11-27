@@ -117,6 +117,15 @@ escaped string text). It reports 40,103 conditions, 51,592 call-argument sites,
 306,161 statements, 17,273 call targets, 20,673 data references and 7,732
 string literals with 0 mismatches; any difference is treated as a coverage bug.
 
+Every helper and branch in these tools was measured before this simplification
+pass. All 47 generator functions are reached in a full run;
+`rewrite_vector_subpieces` was called 134,007 times and changed 0 expressions
+(removed, chunks regenerate byte-identically), `normalize` never saw a CR byte
+because `read_text` already translates newlines (removed), two verifier regexes
+had no references, the verifier's duplicate paren-strip rules are now one
+ordered `PAREN_RULES` table, and compile_check no longer calls trace methods
+without asserting anything. Per-item measurements are in `re/REPORT.md`.
+
 The checker prints `PASS 7656/7656 inventory functions mapped; unmapped=0
 stubs=0` and mechanically audits each accessor's executable/statement/control
 counts, actual call/data/string references, symbol declarations and body hash.

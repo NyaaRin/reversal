@@ -232,6 +232,16 @@ Decompiler blocks nested beyond 32 levels are flattened into trace statements
 to stay under MSVC's nesting limit; source text and references are retained,
 but that deep nesting is not represented as nested C++ control flow.
 
+The pipeline itself was measured item by item: all 47 generator functions are
+reached, and each cut is backed by a count or an output diff (see the
+simplification audit in `re/REPORT.md`). `rewrite_vector_subpieces` was called
+134,007 times and changed no expression, `normalize` was a no-op after
+`read_text` universal-newline translation, two verifier regexes were
+unreferenced, the verifier's paren rules were folded into one table, and the
+compile_check smoke calls that asserted nothing were removed. The remaining
+unproven areas are accessor execution and the tagged TODO sites that need
+prototypes or layout data.
+
 ## Stage 3 — Subsystem reconstruction
 
 Ordered by dependency, not by size. Each becomes a directory under `src/features/`

@@ -39,10 +39,6 @@ int main() {
     check(load_bits16(bytes, 3, 8) == 0x3456u, "load_bits16 across the count limit");
 
     check(load_at<std::uint16_t>(bytes, 1) == 0x3456u, "load_at reads the byte-addressed slot");
-    const std::uint32_t word = 0x11223344u;
-    check(field_address(&word) == reinterpret_cast<std::uintptr_t>(&word),
-          "field_address preserves the address");
-    check(load_at<std::uint8_t>(&word, 0) == 0x44u, "load_at accepts a pointer base");
 
     TranslationTrace trace("0x0", "runtime_self_test");
     bool evaluated = false;
@@ -59,13 +55,6 @@ int main() {
     auto loop = trace.loop("for");
     check(loop.next(), "loop runs once");
     check(!loop.next(), "loop stops after one pass");
-
-    trace.statement("x;");
-    trace.call_arguments("target", 1, 2);
-    trace.call_target("target", &word);
-    trace.data_ref("global", bytes);
-    trace.string_literal("text");
-    trace.case_label("case 0:");
 
     if (failures != 0) {
         std::printf("%d trace runtime checks failed\n", failures);

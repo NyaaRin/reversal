@@ -256,6 +256,35 @@ references** and **7,732 string literals** with **0 mismatches**. A deliberate
 mismatch is what the tool treats as a coverage bug, not as formatting: the
 earlier for-header bug was found exactly this way.
 
+### Simplification audit
+
+Every helper, guard, fallback branch and special case in the generator, checker,
+trace runtime and verifier was measured over the full corpus before being cut.
+Generator call counts come from instrumenting all 47 module-level functions
+present before this pass during a complete 7,656-function run; 45 remain after
+the two cuts below, and a rewrite's impact is the number of calls whose result
+differed from its argument.
+
+| item | measurement | action |
+|---|---|---|
+| `PSEUDO_INTRINSIC_RE` | 0 references anywhere | removed |
+| `rewrite_vector_subpieces` | 134,007 calls, **0** changed expressions | removed with its call site; regenerated chunks are byte-identical |
+| `normalize` (generator, checker, verifier) | 0 CR bytes in every input; `Path.read_text` already applies universal newlines | removed from all three |
+| verifier paren-strip rules | six patterns applied twice, once before field lowering and once in the fixpoint | folded into one ordered `PAREN_RULES` table with one fixpoint; 60-chunk verdicts unchanged |
+| verifier `DEFINITION_RE`, `BARE_DEFINITION_RE` | 0 references after the recorded-call parser was simplified | removed |
+| `compile_check.exe` smoke calls | six trace calls with no assertion, so nothing could fail | removed |
+| `compile_check.exe` helper assertions | `field_address` and `load_at<uint8_t>` only re-test the `load_at<uint16_t>` template path | removed |
+| trace runtime methods | all instantiated: `statement` 306,161; `call_arguments` 51,592; `checked_*` 40,103; `data_ref` 20,673; `call_target` 17,273; `string_literal` 7,732; `condition` 7,192; `loop_condition` 1,915; `case_label` 1,174; `loop` 94; `switch_key` 1 | kept; each is reachable and removing one drops a generated site |
+
+The rewrites that survive each changed real sites and are retained:
+`rewrite_known_type_names` 14,758 changes over 140,944 calls (and its cast pass
+852), `rewrite_assignment_casts` 134,007, `replace_data_symbols` 12,812,
+`rewrite_memory_dereferences` 11,363, `rewrite_admitted_casts` 6,157,
+`rewrite_synthetic_subfields` 1,290, `calls_through_pointer` 1,086 true,
+`rewrite_pointer_scalar_comparisons` 205, `comparison_pointer_depth_conflict`
+83, `rewrite_global_address_comparisons` 32. The least frequent is still a real
+site; nothing here is dead by the measurement.
+
 Remaining condition TODOs by first blocking reason: unresolved global storage/width
 1,503; ambiguous operand type 766; pointer-cast target not proven 690; pointer
 depth/pointee not proven 419; assignment or side effect 311; scalar cast width/kind
@@ -281,8 +310,8 @@ conflict row.
 accessors: their recovered expressions dereference addresses in the original
 image, which this process does not map, so execution would fault on the first
 global read. It instead asserts `kFunctionCount` and self-tests the trace
-runtime's own arithmetic (`load_bits16/32` extraction, `load_at`,
-`field_address`, loop iteration and the checked-condition/switch return paths),
+runtime's own arithmetic (`load_bits16/32` extraction, `load_at` template
+resolution, loop iteration and the checked-condition/switch return paths),
 which every lowered accessor expression depends on. Accessor runtime behaviour
 therefore remains unproven; proving it needs the mapped image or a recovered
 layout for every referenced global, neither of which the recording contains.

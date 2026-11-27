@@ -22,10 +22,6 @@ CHECKED_CONDITION_RE = re.compile(
 )
 
 
-def normalize(text: str) -> str:
-    return text.replace("\r\n", "\n").replace("\r", "\n")
-
-
 def extract_accessor_body(text: str, accessor: str) -> str | None:
     match = re.search(rf"\b{re.escape(accessor)}\(\)\s+noexcept\s*\{{", text)
     if not match:
@@ -259,7 +255,7 @@ def main() -> int:
             errors.append(f"{address}: no raw decompiled body in {row['source_file']}")
             stub_count += 1
             continue
-        body = normalize(body_match.group(2))
+        body = body_match.group(2)
         if not body.strip():
             errors.append(f"{address}: empty decompiled body")
             stub_count += 1
@@ -272,7 +268,7 @@ def main() -> int:
         decompiled_path = DUMP / expected["decompile_file"]
         expected_body = decompiled_texts.get(decompiled_path)
         if expected_body is None:
-            expected_body = normalize(decompiled_path.read_text(encoding="utf-8", errors="replace"))
+            expected_body = decompiled_path.read_text(encoding="utf-8", errors="replace")
             decompiled_texts[decompiled_path] = expected_body
         expected_digest = hashlib.sha256(expected_body.encode("utf-8")).hexdigest()
         if digest != expected_digest:
@@ -295,7 +291,7 @@ def main() -> int:
                 errors.append(f"{address}: record field {suffix} missing from {row['source_file']}")
                 fields[suffix] = ""
             else:
-                fields[suffix] = normalize(match.group(2))
+                fields[suffix] = match.group(2)
 
         for token in fields["C"].splitlines():
             if token and token not in body:

@@ -210,9 +210,6 @@ CALL_KEYWORDS = {
     "reinterpret_cast", "const_cast", "dynamic_cast", "alignof", "decltype",
     "load_at", "field_address", "load_bits32", "load_bits16",
 }
-PSEUDO_INTRINSIC_RE = re.compile(
-    r"^(?:SUB|CONCAT|ZEXT|SEXT|CARRY|SCARRY|SBORROW|BSWAP|POPCOUNT|LZCOUNT)\d*$"
-)
 CPP_RESERVED = {
     "alignas", "alignof", "and", "and_eq", "asm", "auto", "bitand", "bitor",
     "bool", "break", "case", "catch", "char", "char16_t", "char32_t", "class",
@@ -847,9 +844,6 @@ def rewrite_assignment_casts(
 
 
 KNOWN_CAST_RE = re.compile(r"\(\s*([A-Za-z_][A-Za-z0-9_ ]*(?:\*+)?)\s*\)")
-VECTOR_SUB_RE = re.compile(
-    r"\bSUB(32|16)1\(\s*([A-Za-z_][A-Za-z0-9_]*)\s*>>\s*(0[xX][0-9A-Fa-f]+|\d+)\s*,\s*0\s*\)"
-)
 SLOT_SHAPES: set[tuple[str, str, int]] | None = None
 
 
@@ -871,32 +865,6 @@ def load_slot_shapes() -> set[tuple[str, str, int]]:
     return SLOT_SHAPES
 
 
-def rewrite_vector_subpieces(expr: str, locals: dict[str, tuple[str, int | None]]) -> str:
-    """Lower Ghidra vector subpieces through table-admitted slot shapes.
-
-    `SUB321(auVar >> n,0)` extracts 32 bits starting at bit `n` from the
-    byte-array vector.  The slot table must record exactly one byte element
-    type and one element count for that slot; the generated helper then reads
-    those bits little-endian from the declared array.
-    """
-    shapes = load_slot_shapes()
-
-    def replace(match: re.Match[str]) -> str:
-        width = match.group(1)
-        name = match.group(2)
-        bit_offset = int(match.group(3), 0)
-        declaration = locals.get(name)
-        if not declaration:
-            return match.group(0)
-        element_type, count = declaration
-        if count is None or element_type != "std::uint8_t":
-            return match.group(0)
-        required = 4 if width == "32" else 2
-        if count < required or (name, element_type, count) not in shapes:
-            return match.group(0)
-        return f"load_bits{width}({name}, {count}, {bit_offset})"
-
-    return VECTOR_SUB_RE.sub(replace, expr)
 WINDOWS_POINTER_ALIASES = {
     "LPCSTR", "PCSTR", "LPSTR", "PSTR", "LPCWSTR", "PCWSTR", "LPWSTR",
     "PWSTR", "LPCVOID", "LPVOID", "PVOID", "LPBYTE", "PBYTE", "LPWORD",
@@ -1197,7 +1165,6 @@ def safe_expression(
         # A synthetic aggregate subfield on the left of an assignment has no
         # recoverable lvalue shape yet; keep the site explicit.
         return None
-    expr = rewrite_vector_subpieces(expr, locals)
     expr = rewrite_memory_dereferences(expr)
     expr = re.sub(
         r"load_at<void\*>\(&([A-Za-z_][A-Za-z0-9_]*), 0\)\s*([+\-])\s*(0x[0-9A-Fa-f]+|\d+)",
@@ -1720,10 +1687,6 @@ def read_rows() -> list[dict[str, str]]:
 
 def corpus_path(row: dict[str, str]) -> Path:
     return DUMP / row["decompile_file"]
-
-
-def normalize(text: str) -> str:
-    return text.replace("\r\n", "\n").replace("\r", "\n")
 
 
 def unique_sorted(values: list[str]) -> list[str]:
@@ -2447,7 +2410,7 @@ def main() -> int:
         if not path.is_file():
             unmapped.append(f"{address}: missing {path.relative_to(ROOT)}")
             continue
-        body = normalize(path.read_text(encoding="utf-8", errors="replace"))
+        body = path.read_text(encoding="utf-8", errors="replace")
         if not body.strip():
             unmapped.append(f"{address}: empty body {path.relative_to(ROOT)}")
             continue

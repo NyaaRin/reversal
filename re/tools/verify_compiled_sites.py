@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from gen_reconstructed_source import (  # noqa: E402
     CALL_KEYWORDS, CALL_RE, TYPE_ALIASES, TYPE_WORDS, code_for_translation,
     condition_expression, decode_c_string, for_condition_expression,
-    normalize, read_rows, recover_declarations, split_top_level,
+    read_rows, recover_declarations, split_top_level,
 )
 
 CHUNKS = ROOT / "src" / "reconstructed" / "chunks"
@@ -33,8 +33,6 @@ ACCESSOR_RE = re.compile(
     r"^const sf::reconstructed::FunctionTranslation& (Function_0x[0-9a-f]+)\(\) noexcept \{$",
     re.M,
 )
-DEFINITION_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_:<> ]*?[\s*]+[A-Za-z_][A-Za-z0-9_:]*\s*\([^;]*\)\s*$")
-BARE_DEFINITION_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_:]*\s*\([^;]*\)\s*$")
 
 CONDITION_FORMS = (
     ('if (trace.checked_condition("', "if", "bool"),
@@ -45,6 +43,17 @@ CONDITION_FORMS = (
 
 TYPE_CAST_RE = re.compile(r"\(\s*([A-Za-z_][A-Za-z0-9_:]*(?:\s*\*)*)\s*\)")
 CAST_OPEN_RE = re.compile(r"(?:static|reinterpret|const)_cast<[^<>]*>\s*\(")
+
+# Grouping that carries no value, applied repeatedly after cast removal.
+PAREN_RULES = (
+    (re.compile(r"\*\(\s*&\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)"), r"\1"),
+    (re.compile(r"\(\s*&\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)\["), r"\1["),
+    (re.compile(r"\(\s*&\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)"), r"&\1"),
+    (re.compile(r"\(\s*([A-Za-z_][A-Za-z0-9_]*|\d+|0[xX][0-9A-Fa-f]+)\s*\)"), r"\1"),
+    (re.compile(r"\(\s*(\*+[A-Za-z_][A-Za-z0-9_]*)\s*\)"), r"\1"),
+    (re.compile(r"\(\s*([A-Za-z_][A-Za-z0-9_]*(?:\[[^\[\]]*\])+)\s*\)"), r"\1"),
+    (re.compile(r"\(\(([^()]*)\)\)"), r"(\1)"),
+)
 
 
 def is_type_name(text: str) -> bool:
@@ -131,12 +140,6 @@ def canonical(text: str) -> str:
     value = re.sub(r"SUB(32|16)1\(\s*([^,]+?)\s*>>\s*(\S+?)\s*,\s*0\s*\)", r"BITS\1(\2,\3)", value)
     value = re.sub(r"load_bits(32|16)\(([^,]+),\s*[^,]+,\s*([^)]+)\)", r"BITS\1(\2,\3)", value)
     value = re.sub(r"(?<![&\w])(FUN_[0-9A-Fa-f]+)", r"&\1", value)
-    value = re.sub(r"\*\(\s*&\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)", r"\1", value)
-    value = re.sub(r"\(\s*&\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)\[", r"\1[", value)
-    value = re.sub(r"\(\s*&\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)", r"&\1", value)
-    value = re.sub(r"\(\s*([A-Za-z_][A-Za-z0-9_]*|\d+|0[xX][0-9A-Fa-f]+)\s*\)", r"\1", value)
-    value = re.sub(r"\(\s*(\*+[A-Za-z_][A-Za-z0-9_]*)\s*\)", r"\1", value)
-    value = re.sub(r"\(\s*([A-Za-z_][A-Za-z0-9_]*(?:\[[^\[\]]*\])+)\s*\)", r"\1", value)
     # Ghidra's 4-byte high-half field lowers to a 32-bit shift of the wide value.
     def lower_field(match: re.Match[str]) -> str:
         shift = int(match.group(2)) * 8
@@ -160,13 +163,11 @@ def canonical(text: str) -> str:
     value = re.sub(r"\s*>>\s*0(?![xX0-9A-Fa-f])", "", value)
     # Strip grouping that survives cast removal: `((x))` -> `x`, and the same
     # for a dereferenced or subscripted atom.  Iterate because each removal can
-    # expose another layer.
+    # expose another layer; the rule order matters (`(&x)[` before `(&x)`).
     for _ in range(8):
         before = value
-        value = re.sub(r"\(\s*([A-Za-z_][A-Za-z0-9_]*|\d+|0[xX][0-9A-Fa-f]+)\s*\)", r"\1", value)
-        value = re.sub(r"\(\s*(\*+[A-Za-z_][A-Za-z0-9_]*)\s*\)", r"\1", value)
-        value = re.sub(r"\(\s*([A-Za-z_][A-Za-z0-9_]*(?:\[[^\[\]]*\])+)\s*\)", r"\1", value)
-        value = re.sub(r"\(\(([^()]*)\)\)", r"(\1)", value)
+        for pattern, replacement in PAREN_RULES:
+            value = pattern.sub(replacement, value)
         if value == before:
             break
     while value.startswith("(") and value.endswith(")"):
@@ -279,10 +280,10 @@ def decompiled_body(accessor: str) -> str | None:
     path = BODIES.get(accessor.split("_", 1)[1].lower())
     if path is None or not path.is_file():
         return None
-    return normalize(path.read_text(encoding="utf-8", errors="replace"))
+    return path.read_text(encoding="utf-8", errors="replace")
 
 
-def condition_sites(body: str) -> tuple[list[tuple[str, str, str]], int]:
+def condition_sites(body: str) -> list[tuple[str, str, str]]:
     """Yield (kind, recorded expression, compiled expression) per checked site."""
     sites = []
     for line in body.splitlines():
