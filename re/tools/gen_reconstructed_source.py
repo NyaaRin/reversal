@@ -103,6 +103,7 @@ TYPE_WORDS = set(TYPE_ALIASES) | {
 CALL_KEYWORDS = {
     "if", "for", "while", "switch", "return", "sizeof", "static_cast",
     "reinterpret_cast", "const_cast", "dynamic_cast", "alignof", "decltype",
+    "load_at", "field_address",
 }
 CPP_RESERVED = {
     "alignas", "alignof", "and", "and_eq", "asm", "auto", "bitand", "bitor",
@@ -310,13 +311,146 @@ def pointer_shape(type_text: str) -> tuple[str, int] | None:
     return base, stars
 
 
+DEREFERENCE_RE = re.compile(r"(?<![A-Za-z0-9_\)\]])\*\s*\(")
+
+
+def matching_paren(text: str, start: int) -> int:
+    depth = 0
+    for index in range(start, len(text)):
+        if text[index] == "(":
+            depth += 1
+        elif text[index] == ")":
+            depth -= 1
+            if depth == 0:
+                return index
+    return -1
+
+
+def rewrite_memory_dereferences(expr: str) -> str:
+    """Turn Ghidra's `*(T *)(address)` into a typed field read.
+
+    The decompiler already supplies both the pointee type and the byte address.
+    `load_at` preserves those two facts as real C++ instead of leaving the whole
+    expression as a TODO.  Nothing is inferred about fields the decompiler did
+    not name.
+    """
+    result: list[str] = []
+    index = 0
+    while index < len(expr):
+        match = DEREFERENCE_RE.search(expr, index)
+        if not match:
+            result.append(expr[index:])
+            break
+        result.append(expr[index:match.start()])
+        cast_start = match.end()
+        cast_end = matching_paren(expr, cast_start - 1)
+        if cast_end < 0:
+            result.append(expr[match.start():])
+            break
+        if cast_end + 1 >= len(expr) or expr[cast_end + 1] != "(":
+            result.append(expr[match.start():cast_end + 1])
+            index = cast_end + 1
+            continue
+        address_end = matching_paren(expr, cast_end + 1)
+        if address_end < 0:
+            result.append(expr[match.start():])
+            break
+        cast_type = cpp_type(expr[cast_start:cast_end])
+        if not cast_type or not cast_type.endswith("*") or cast_type.replace("*", "").strip() == "void":
+            result.append(expr[match.start():address_end + 1])
+            index = address_end + 1
+            continue
+        address = rewrite_memory_dereferences(expr[cast_end + 2:address_end])
+        pointee = cast_type[:-1].strip()
+        result.append(f"load_at<{pointee}>({address}, 0)")
+        index = address_end + 1
+    return "".join(result)
+
+
+SUBFIELD_RE = re.compile(r"\b([A-Za-z_][A-Za-z0-9_]*)\.(_(?:[0-9A-Fa-f]+_)+)\b")
+
+
+def scalar_width(type_name: str) -> int | None:
+    if "*" in type_name:
+        return 8
+    widths = {
+        "std::uint8_t": 1, "std::int8_t": 1, "char": 1, "bool": 1,
+        "std::uint16_t": 2, "std::int16_t": 2,
+        "std::uint32_t": 4, "std::int32_t": 4, "float": 4,
+        "std::uint64_t": 8, "std::int64_t": 8, "double": 8,
+        "std::uintptr_t": 8, "std::size_t": 8, "std::ptrdiff_t": 8,
+        "int": 4, "std::uint64_t": 8,
+    }
+    return widths.get(type_name)
+
+
+def rewrite_synthetic_subfields(
+    expr: str,
+    locals: dict[str, tuple[str, int | None]],
+) -> str:
+    """Recover Ghidra `name._offset_width_` scalar subfields.
+
+    Ghidra emits these for byte fields of a recovered scalar/aggregate.  The
+    declaration width and the synthetic offset/width are both present in the
+    decompiled text, so the extraction is exact rather than a guessed layout.
+    """
+    def replace(match: re.Match[str]) -> str:
+        name = match.group(1)
+        declaration = locals.get(name)
+        if declaration is None:
+            return match.group(0)
+        type_name, count = declaration
+        parts = match.group(2).strip("_").split("_")
+        if len(parts) != 2:
+            return match.group(0)
+        try:
+            offset = int(parts[0], 10)
+            width = int(parts[1], 10)
+        except ValueError:
+            return match.group(0)
+        if width < 1 or width > 8 or offset < 0 or offset * 8 + width * 8 > 64:
+            return match.group(0)
+        unsigned = {1: "std::uint8_t", 2: "std::uint16_t", 4: "std::uint32_t", 8: "std::uint64_t"}.get(width)
+        if count is not None or "*" not in type_name and scalar_width(type_name) is None:
+            # Aggregate/array bytes need an address; only declared scalars are
+            # handled by bit extraction.  Non-power-of-two slices on aggregates
+            # stay TODO because no C++ scalar type has that width.
+            if count is None or unsigned is None:
+                return match.group(0)
+            address = f"&{name}"
+            bits = offset * 8
+            if bits == 0 and width == 8:
+                return f"load_at<std::uint64_t>({address}, 0)"
+            if bits == 0:
+                return f"load_at<{unsigned}>({address}, 0)"
+            return f"load_at<{unsigned}>({address}, {offset})"
+        source_width = scalar_width(type_name)
+        if source_width is None:
+            return match.group(0)
+        if "*" in type_name:
+            value = f"reinterpret_cast<std::uintptr_t>({name})"
+        else:
+            value = f"std::uint64_t({name})"
+        bits = offset * 8
+        if bits == 0 and width == source_width:
+            return name
+        shifted = f"({value} >> {bits})"
+        if unsigned is None:
+            mask = (1 << (width * 8)) - 1
+            return f"static_cast<std::uint64_t>({shifted} & 0x{mask:x})"
+        return f"static_cast<{unsigned}>({shifted})"
+
+    return SUBFIELD_RE.sub(replace, expr)
+
+
 def safe_expression(
     expr: str,
     locals: dict[str, tuple[str, int | None]],
     allow_data: bool,
     data_types: dict[int, str] | None = None,
 ) -> str | None:
-    expr = expr.strip()
+    expr = rewrite_memory_dereferences(expr.strip())
+    expr = rewrite_synthetic_subfields(expr, locals)
     if not expr or expr in TYPE_WORDS or any(char in expr for char in ";{}"):
         return None
     if '"' in expr:
@@ -341,8 +475,10 @@ def safe_expression(
         return None
     if not re.search(r"[A-Za-z0-9_]", expr):
         return None
-    if re.search(r"\b\d+[A-Za-z]+\b", expr):
+    without_hex = re.sub(r"\b0[xX][0-9A-Fa-f]+\b", "0", expr)
+    if re.search(r"\b\d+[A-Za-z]+\b", without_hex):
         # Malformed decompiler literals such as `3D` are not C++ numbers.
+        # Valid hexadecimal tokens ending in a-f were removed above.
         return None
     if re.search(r"\([^()]*\[[^\]]*\][^()]*\)\s*(?:0x[0-9A-Fa-f]+|\d+|\w+)", expr):
         # C-style casts to array types are not valid C++ expressions.
@@ -422,13 +558,13 @@ def safe_expression(
                 other_pointer = pointer_shape(other_type)
                 if local_pointer and other_pointer:
                     if "void" not in local_pointer[0] and "void" not in other_pointer[0] and local_pointer != other_pointer:
-                        comparison = rf"\b{re.escape(name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(name)}\b"
+                        comparison = rf"\b{re.escape(name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(name)}\b"
                         if re.search(comparison, expr):
                             return None
                     continue
                 if bool(local_pointer) == bool(other_pointer):
                     continue
-                comparison = rf"\b{re.escape(name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(name)}\b"
+                comparison = rf"\b{re.escape(name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(name)}\b"
                 if re.search(comparison, expr):
                     return None
         if local_pointer:
@@ -474,7 +610,7 @@ def safe_expression(
                 pointer_shape(analysis_locals[name][0])
                 for name in identifier_set
                 if name in analysis_locals
-            )
+            ) or bool(re.search(r"load_at<[^>]*\*>", expr))
             if not pointer_present:
                 for cast_match in re.finditer(r"\(([^()]*)\)", expr):
                     cast_type = cpp_type(cast_match.group(1))
@@ -505,6 +641,23 @@ def safe_expression(
             return None
         if not re.search(address_of, expr):
             return None
+        if "load_at<" in expr and re.search(r"==|!=", expr):
+            # A recovered field read may have a pointee type while the other
+            # operand is an untyped byte-array global.  Without a width/kind
+            # agreement for that global, the comparison has no safe type.
+            return None
+    if re.search(r"load_at<[^>]*\*>", expr):
+        for name, (type_name, _) in analysis_locals.items():
+            if not pointer_shape(type_name) or re.search(rf"\b{re.escape(name)}\s*\(", expr):
+                continue
+            if re.search(
+                rf"\b{re.escape(name)}\b\s*(?:<=|>=|==|!=|<|>)\s*load_at<|load_at<[^>]*>\s*\([^;]*?\)\s*(?:<=|>=|==|!=|<|>)\s*\b{re.escape(name)}\b",
+                expr,
+            ):
+                # The decompiler's cast depth and the recovered variable depth
+                # disagree in a few mechanically emitted loops; keep the shape
+                # as a TODO instead of inventing a reinterpret_cast.
+                return None
     # A nested call is only safe when it is a type cast or sizeof; function
     # calls remain trace-only unless their own arguments are resolved.
     for match in CALL_RE.finditer(expr):

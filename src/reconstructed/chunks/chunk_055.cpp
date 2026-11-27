@@ -58,7 +58,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7068() noexcept {
     // body sha256: 902a1b704567cd2d9497fe3d0ccc208d54a9ab52a03420a6955ec2f84ff9a5e2
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x4000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x4000) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x4000) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 0x4000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffbfff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x368);");
             }
@@ -119,7 +119,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7096() noexcept {
     // body sha256: e1428d2b7ea309f317433800ed503504c88b555831f9b535390200450438d6f3
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x8000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x8000) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x8000) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 0x8000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffff7fff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x388);");
             }
@@ -1978,7 +1978,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f77a6() noexcept {
     // body sha256: 1c180aac4cd88dcf3cebb7de2ba2f2acfc39e9cdc8f0eab059afb3764cb02ec8
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x70);");
             }
@@ -2039,7 +2039,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f77d8() noexcept {
     // body sha256: c110d27d120c7a54ea7e82ce6ddfe049cda96be0eb94d441f563a16c9959d454
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x50);");
             }
@@ -2577,11 +2577,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7a78() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x80));
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", load_at<std::uint64_t>(param_2 + 0x80, 0));
     // body sha256: 9101e6ce879621932b20528971647c48afab4efc5cb5dc4e52073bdab295d499
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 8) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x80));");
             }
@@ -2638,11 +2638,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7aa1() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x80));
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", load_at<std::uint64_t>(param_2 + 0x80, 0));
     // body sha256: fa15f9bd19592015de098c27dd98dcbc22e5093618268abedbe7355f577228f3
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x80));");
             }
@@ -2699,11 +2699,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7ad0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x88));
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", load_at<std::uint64_t>(param_2 + 0x88, 0));
     // body sha256: 5be2d8ee8014c2b91f6b881af9c5f1fe0990b2d7f855341de685d49af92771ca
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x88));");
             }
@@ -2764,7 +2764,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7b11() noexcept {
     // body sha256: 3e133555177e6d04fc83515dc76818645c394556a68926d455172eb7f541e33a
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 8) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x68);");
             }
@@ -2825,7 +2825,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7b37() noexcept {
     // body sha256: dd0cecbea811e3dd47ada5a915d5480fb78c4128bc21e0759e5e1a34503fe496
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x10) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 0x10) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffffef;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x48);");
             }
@@ -2886,7 +2886,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7b5d() noexcept {
     // body sha256: 4fcab2423124a24c58290ed0a4ed62a0782ac1e638db69a81bfe9ceadcbd03c6
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x20) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 0x20) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffffdf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x28);");
             }
@@ -2947,7 +2947,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7b83() noexcept {
     // body sha256: f4bb4cc6966847a366565f48cccb976cea557ad0ce8259424222e32867c2f8a2
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xb0);");
             }
@@ -3008,7 +3008,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7bac() noexcept {
     // body sha256: c8c1494093247bb065fc714780694a4c6be0de21ba092a3996381a3e05dd4e9b
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 4) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x90);");
             }
@@ -3065,11 +3065,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7c4c() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x38));
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", load_at<std::uint64_t>(param_2 + 0x38, 0));
     // body sha256: a7386209a8ffba70b6f7192e8cd3895bfa9205ffae0c0c35a7cb63d4d4e0c2d3
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x38));");
             }
@@ -3228,7 +3228,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7d48() noexcept {
     // body sha256: 956cf83d8085b6e7c2c7e2cff0e8f64fed8ae0aafab118285dc2af46c2fc1672
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffe;");
                 trace.statement("thunk_FUN_18021e290(param_2 + 0x58);");
             }
@@ -3289,7 +3289,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7d6e() noexcept {
     // body sha256: a5a4a4168b58fbca438747fef94b8208766bf90de1f5ded1f7b7b658e5f7d30b
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffd;");
                 trace.statement("thunk_FUN_18021e290(param_2 + 0x80);");
             }
@@ -3350,7 +3350,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7da3() noexcept {
     // body sha256: 1ac869f9ab6a3508dcf380a9848b32bb21a1e4dfa36ada6d9dd29621b9909551
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 4) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 4) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffb;");
                 trace.statement("thunk_FUN_18021e290(param_2 + 0xa0);");
             }
@@ -3411,7 +3411,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7dd8() noexcept {
     // body sha256: 1c8dcb6159bfe532446003e9e1e7e53261c6e309a7d708f260eb9cce2c362759
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 8) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 8) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffff7;");
                 trace.statement("thunk_FUN_18021e290(param_2 + 0x38);");
             }
@@ -3468,11 +3468,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7e22() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("thunk_FUN_18021e290", *(undefined8 *)(param_2 + 0x58));
+    trace.call_arguments("thunk_FUN_18021e290", load_at<std::uint64_t>(param_2 + 0x58, 0));
     // body sha256: e59d1b226402c722d64a5285d512e949027e1760a7964336c25e9194afd98b55
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 0x20) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 0x20) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xffffffdf;");
                 trace.statement("thunk_FUN_18021e290(*(undefined8 *)(param_2 + 0x58));");
             }
@@ -3529,11 +3529,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7e48() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("thunk_FUN_18021e290", *(undefined8 *)(param_2 + 0x58));
+    trace.call_arguments("thunk_FUN_18021e290", load_at<std::uint64_t>(param_2 + 0x58, 0));
     // body sha256: 306e2aa45435ec0ce810404d5d31efee47d94f3873eb9889c39a5f7e8dcd0e90
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 0x40) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 0x40) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xffffffbf;");
                 trace.statement("thunk_FUN_18021e290(*(undefined8 *)(param_2 + 0x58));");
             }
@@ -3693,7 +3693,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8080() noexcept {
     // body sha256: 42c9ffb7957f80ee2002e9199ba5cb311b2b0fe071104884e9865f7a89485b2a
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffe;");
                 trace.statement("FUN_18021b0b0(param_2 + 0x70);");
             }
@@ -3754,7 +3754,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8154() noexcept {
     // body sha256: 9e53164677a1a2f13503f2b4ce4ad740a23338596a0563ccb5c88e8e0128db79
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x68);");
             }
@@ -3815,7 +3815,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8192() noexcept {
     // body sha256: 891cc1c0622f530ec91c8201eb03af58502cd227bc3c26a4e05fb637fe18d105
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 4) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 4) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x68);");
             }
@@ -3937,7 +3937,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f81e0() noexcept {
     // body sha256: ffaae01287458b19b5dda517f68dde8a2db65273ed005c54c0051b918f52bb3d
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("FUN_1800668e0(param_2 + 0x80);");
             }
@@ -3994,11 +3994,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8215() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("thunk_FUN_18021e290", *(undefined8 *)(param_2 + 0x110));
+    trace.call_arguments("thunk_FUN_18021e290", load_at<std::uint64_t>(param_2 + 0x110, 0));
     // body sha256: 87cdfd985d1fe9550349c91c570e969114f4c96e21c9e9b97915f29c74cc615a
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
                 trace.statement("thunk_FUN_18021e290(*(undefined8 *)(param_2 + 0x110));");
             }
@@ -4055,11 +4055,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f823e() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("thunk_FUN_18021e290", *(undefined8 *)(param_2 + 0x110));
+    trace.call_arguments("thunk_FUN_18021e290", load_at<std::uint64_t>(param_2 + 0x110, 0));
     // body sha256: 41822c667c23ca834fddd17c2b3fba1b6dcfe54ff252fa97fbaa32adee786eff
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 4) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
                 trace.statement("thunk_FUN_18021e290(*(undefined8 *)(param_2 + 0x110));");
             }
@@ -4120,7 +4120,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f83e4() noexcept {
     // body sha256: 8c961a05015dd5ede73c551549a9e831b156da3d83ba074e28463d9f9faaf53b
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 0x200) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 0x200) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xfffffdff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x78);");
             }
@@ -4181,7 +4181,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8457() noexcept {
     // body sha256: 293443bf0f7c393750352aa2205f9ac8dabdfbd8403acd1a62d50ff5027cf1e6
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 0x100) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 0x100) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xfffffeff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2a0);");
             }
@@ -4242,7 +4242,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8485() noexcept {
     // body sha256: 0804a3751534925deb5bd3929b4e72dcaadf3fd5200e84ffd6f6b7dab8142b22
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 0x80) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 0x80) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xffffff7f;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x228);");
             }
@@ -4303,7 +4303,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f84b3() noexcept {
     // body sha256: b9fd97444ee138fdb6440ff130f47fa40ddd0a383140a9d64547d3c510372d7a
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 0x40) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 0x40) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xffffffbf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x248);");
             }
@@ -4364,7 +4364,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8524() noexcept {
     // body sha256: 5147b21173e73b56a2be1bd09d8e4dc7ac903e43e88014ead57c6e1beb4eaa46
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1c8);");
             }
@@ -4425,7 +4425,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f854d() noexcept {
     // body sha256: b90c74e2703e2b01ffb0bdb06410760ae9127946d0f212e2624e4ff1c6e189fe
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2e0);");
             }
@@ -4486,7 +4486,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8582() noexcept {
     // body sha256: 8cfda0786334c801ff0e7c3c9b1e66efc9bd165cd9370232c57e7d402c9eb1a1
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 8) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 8) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1e8);");
             }
@@ -4547,7 +4547,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f85ab() noexcept {
     // body sha256: f0d79721ce42946fbefc51ae38972cf47fcd4da439d4d025d75ba0b7808a9cc6
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 0x10) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 0x10) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xffffffef;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x208);");
             }
@@ -4608,7 +4608,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f85e0() noexcept {
     // body sha256: e5001b7ac47127eaf8accb31328ee00d2bc6fc308180c1ab1452ee5250f12124
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 4) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 4) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x268);");
             }
@@ -4665,11 +4665,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f86a4() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x40));
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", load_at<std::uint64_t>(param_2 + 0x40, 0));
     // body sha256: c872eac18c57d9ec6a41c9c739d17d44c379c33db91064dbadd8a932b5ed7294
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x30, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x40));");
             }
@@ -4726,12 +4726,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f87d4() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("FUN_1800668e0", *(undefined8 *)(param_2 + 0x100));
+    trace.call_arguments("FUN_1800668e0", load_at<std::uint64_t>(param_2 + 0x100, 0));
     trace.call_target("FUN_1800668e0", reinterpret_cast<const void*>(&image::FUN_1800668e0));
     // body sha256: c48ed5b32ddc18495da7933d38597fda4b8f1838eea81a61de78160ff47eb4ab
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("FUN_1800668e0(*(undefined8 *)(param_2 + 0x100));");
             }
@@ -4792,7 +4792,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8820() noexcept {
     // body sha256: d89af0a33c45a311be6341a70914c254b8ab07478e056238c7fd4b4049c6bf87
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xe0);");
             }
@@ -4853,7 +4853,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8849() noexcept {
     // body sha256: 725fa0a02735e0560f61258f557313009f83b4241c0f8beee71d7fa163568e48
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xc0);");
             }
@@ -4910,11 +4910,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f890e() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("thunk_FUN_18021e290", *(undefined8 *)(param_2 + 0x38));
+    trace.call_arguments("thunk_FUN_18021e290", load_at<std::uint64_t>(param_2 + 0x38, 0));
     // body sha256: e4e26c49bbd93a81896cdcf07b14d78fe0156d9290792f7c81b96030948586dd
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 4) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
                 trace.statement("thunk_FUN_18021e290(*(undefined8 *)(param_2 + 0x38));");
             }
@@ -4971,11 +4971,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8934() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("thunk_FUN_18021e290", *(undefined8 *)(param_2 + 0x38));
+    trace.call_arguments("thunk_FUN_18021e290", load_at<std::uint64_t>(param_2 + 0x38, 0));
     // body sha256: a960e885087d24af3a090d1484aeab276869ea2a6b105279382fe17005e767b6
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 8) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffff7;");
                 trace.statement("thunk_FUN_18021e290(*(undefined8 *)(param_2 + 0x38));");
             }
@@ -5036,7 +5036,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8996() noexcept {
     // body sha256: 4f4849e4bddefdfbd2e38b8cf2e9d6d57af16273cb77562813e3a175ddcab77a
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x40) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x20, 0) & 0x40) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffffbf;");
                 trace.statement("thunk_FUN_18021e290(param_2 + 0x90);");
             }
@@ -5098,7 +5098,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8c88() noexcept {
     // body sha256: 3a7a9d3478d221d8d08374ea6a7f9445dcfec4e4a3ee091f65e8da16f829197a
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("FUN_1800668e0(param_2 + 0x90);");
             }
@@ -5159,7 +5159,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8cbd() noexcept {
     // body sha256: e59987e2a4b2b336cba0c3bb33fa1673981444c8fee6b7a129d27b485d9868c4
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x48);");
             }
@@ -5220,7 +5220,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8ce3() noexcept {
     // body sha256: 12bbc3fe40ee7825e4b2e99341fb9aeb936c072d25808e55fe7ab364bdb3d7c8
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 4) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x68);");
             }
@@ -5282,7 +5282,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8d10() noexcept {
     // body sha256: fe39a83f59f59da28eb14ce11624f46221798300baae92700c041512abb4ecb7
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x68) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x68) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x68) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x68, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x68) = *(uint *)(param_2 + 0x68) & 0xfffffffe;");
                 trace.statement("FUN_18022b4b0(param_2 + 0x78);");
             }
@@ -5505,7 +5505,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8d8c() noexcept {
     // body sha256: 629c302403022167a7167fa8559ec8e67466eaf2554fc778e0428d6297fda215
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x60);");
             }
@@ -5566,7 +5566,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8db2() noexcept {
     // body sha256: 6ae186e9b240aec0ea99167b32066b78d27e56d9c4d6c43ba7f5cf6099f011b4
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x98);");
             }
@@ -5627,7 +5627,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8eb0() noexcept {
     // body sha256: b16a24433ed93426a91b70663541209ea4df025a9b8e4fae6b50ceda14f77b17
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1e0);");
             }
@@ -5688,7 +5688,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8ed9() noexcept {
     // body sha256: f0d8437a64b5e3a5b1a9fafd8c06cdfe3f8458e86e39f592b344034a5176cac5
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1c0);");
             }
@@ -5749,7 +5749,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8f02() noexcept {
     // body sha256: b6613ba156190d0f5a4d99b3d1a6f268f4629d5377754f7ac7e1e37b52e6df37
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 4) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1a0);");
             }
@@ -5810,7 +5810,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8f2b() noexcept {
     // body sha256: 046b60c03f4e1e49f1f7c86218178beb88121855c5c733b2c0d6517c34dd57c0
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 8) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 8) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x100);");
             }
@@ -5871,7 +5871,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8f54() noexcept {
     // body sha256: 334dbaa6ce847cd984a37a9bffd46153cce6a602e22205b1bce7c3b74969fccb
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x10) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 0x10) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffef;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x180);");
             }
@@ -5932,7 +5932,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8f7d() noexcept {
     // body sha256: b4e06844ef8997654166e09ff0e0d721b21a9f6b42542a665adfa48996ad3908
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x20) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 0x20) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffdf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xd0);");
             }
@@ -5993,7 +5993,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8fa6() noexcept {
     // body sha256: 9ffd228ad239ab5eb400ac7d7f991e3e34681a97afb31edfaaa7ab3f4c9d722e
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x40) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 0x40) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffbf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x160);");
             }
@@ -6054,7 +6054,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8fcf() noexcept {
     // body sha256: a5c9fad216e4ed0e090b71e8c28d213127404547d197b35c9f4ba317238542cf
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x80) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 0x80) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffff7f;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x140);");
             }
@@ -6115,7 +6115,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f8ffd() noexcept {
     // body sha256: 8f3b2de152836571047f2bc7af6230b0f71118e333cf0049a6ac26a2ca046889
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x100) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 0x100) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffeff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x120);");
             }
@@ -6176,7 +6176,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f9037() noexcept {
     // body sha256: ddf2acd5ba88c7a4f1a34b1af45060a94ccb69129d4d4ed0ce842763323529c9
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x200) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x40, 0) & 0x200) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffdff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x98);");
             }
@@ -6291,7 +6291,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f90aa() noexcept {
     // body sha256: 513ae512fc07368d74565788e93408bd69f72081f0787446128c041c93990be0
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x70) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x70, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x80);");
             }
@@ -6352,7 +6352,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f90d3() noexcept {
     // body sha256: f3a93d0abc711e4e2423149629fdff18be54152d7821b253b1b1b2d68510a08e
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x70) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x70, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xe0);");
             }
@@ -6467,7 +6467,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f918a() noexcept {
     // body sha256: 4dfd2318ca2054a96d6db15d8c8e57b1699d0bb9f646cce518722b3eebe4e3b7
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 2) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 2) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x70);");
             }
@@ -6528,7 +6528,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f91b0() noexcept {
     // body sha256: 49b0da6c7df7ce4e93be6bbd486b24317821e60837584e81ca3c1a2b061009b8
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x60) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x60) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x60, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x60) = *(uint *)(param_2 + 0x60) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xd0);");
             }
@@ -6697,7 +6697,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f93bc() noexcept {
     // body sha256: a4b48dd739d7729f1d0c6709f473f35cc1b7c60ac3f0aaf1ed1675b17a7e4df0
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 100) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 100) & 0x100) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 100) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 100, 0) & 0x100) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 100) = *(uint *)(param_2 + 100) & 0xfffffeff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xe0);");
             }
@@ -6758,7 +6758,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f94ae() noexcept {
     // body sha256: a61160f352e0017e88f5f0cdd89c93a6e8da60ce99e6777a2364f5e9417e56a0
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 100) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 100) & 0x200) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 100) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 100, 0) & 0x200) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 100) = *(uint *)(param_2 + 100) & 0xfffffdff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x88);");
             }
@@ -6981,7 +6981,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f955e() noexcept {
     // body sha256: c131c1263281c09bfa686d515c9a9067b3187d26293311764d160b2c55c1722b
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x70) & 0x80) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x70, 0) & 0x80) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) & 0xffffff7f;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x100);");
             }
@@ -7042,7 +7042,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f9598() noexcept {
     // body sha256: a218d7d55b331e98587970e5deb4661659592899d61c6f92af0815c4f9723328
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x70) & 0x20) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x70, 0) & 0x20) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) & 0xffffffdf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x170);");
             }
@@ -7157,7 +7157,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f965b() noexcept {
     // body sha256: 06a978fa83c037ddebe390213aadc5432d7a3420a7f154c416dc6a62677ba746
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x70) & 1) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 1) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x70, 0) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x98);");
             }
@@ -7219,7 +7219,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f96fc() noexcept {
     // body sha256: 51d3a26e90b82658aaa7ae6f2e8f40030fee73a43d03fd005b6ddb1b21e408ec
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x70) & 8) != 0); })) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 8) != 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_2 + 0x70, 0) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) & 0xfffffff7;");
                 trace.statement("FUN_18022b4b0(param_2 + 0x50);");
             }
