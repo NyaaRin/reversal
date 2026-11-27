@@ -71,6 +71,8 @@ TODO: resolve the indirect call in body 25: (**(code **)*puVar4)(puVar4,1);.)F18
 const sf::reconstructed::FunctionTranslation& Function_0x180013f90() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180013f90", "std__Node_if_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint32_t param_2{};
     [[maybe_unused]] std::uint64_t * puVar1{};
     [[maybe_unused]] std::uint64_t * puVar2{};
     [[maybe_unused]] std::uint64_t * puVar3{};
@@ -79,9 +81,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180013f90() noexcept {
     // TODO: resolve the indirect call in body 25: (**(code **)*puVar4)(puVar4,1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_2 & 1) != 0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for std__Node_if_vfunc00: undefined8 *param_1,uint param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: param_1 [reason: ambiguous operand type]
+    trace.call_arguments("free", param_1);
     // body sha256: cacc4f74493b1cfe32d698cef042d1c68d3bd5dfd69332e3a6acfc0e811eac72
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 * std__Node_if_vfunc00(undefined8 *param_1,uint param_2)");
@@ -105,7 +105,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180013f90() noexcept {
                 }
             }
             trace.statement("*param_1 = vftable_std__Node_base;");
-            if (trace.condition("if ((param_2 & 1) != 0)")) {
+            if (trace.checked_condition("if ((param_2 & 1) != 0)", [&]() -> bool { return static_cast<bool>((param_2 & 1) != 0); })) {
                 trace.statement("free(param_1);");
             }
             trace.statement("return param_1;");
@@ -156,18 +156,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x180014030() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180014030", "std__Node_rep_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_2 & 1) != 0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for std__Node_rep_vfunc00: undefined8 *param_1,ulonglong param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: param_1 [reason: ambiguous operand type]
+    trace.call_arguments("free", param_1);
     // body sha256: dd53b780fdd983a851a15a44097a55920f54144e136ed604128dd8bbd98de5bd
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 * std__Node_rep_vfunc00(undefined8 *param_1,ulonglong param_2)");
         {
             trace.statement("*param_1 = vftable_std__Node_base;");
-            if (trace.condition("if ((param_2 & 1) != 0)")) {
+            if (trace.checked_condition("if ((param_2 & 1) != 0)", [&]() -> bool { return static_cast<bool>((param_2 & 1) != 0); })) {
                 trace.statement("free(param_1);");
             }
             trace.statement("return param_1;");
@@ -216,7 +216,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014060() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for std_bad_any_cast_vfunc01: void [reason: ambiguous operand type]
     trace.string_literal("Bad any_cast");
     // body sha256: 9da8d890ceceaf5c34fa917c55efaf6139f2e8180b00eced6e5b0d918bd11361
     // Structured control-flow trace derived from the decompiled body:
@@ -2058,12 +2057,14 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x180014c30() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180014c30", "SE_Exception_vfunc01");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::uint64_t param_3{};
     [[maybe_unused]] std::uint64_t * puVar1{};
     [[maybe_unused]] std::uint8_t local_28[32]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for SE_Exception_vfunc01: longlong param_1,undefined8 param_2,undefined8 param_3 [reason: ambiguous operand type]
     trace.call_arguments("FUN_18020e450", local_28);
     trace.call_target("FUN_180014520", reinterpret_cast<const void*>(&image::FUN_180014520));
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
@@ -2129,20 +2130,20 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x180014c70() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180014c70", "SE_Exception_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_2 & 1) != 0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SE_Exception_vfunc00: undefined8 *param_1,ulonglong param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for __std_exception_destroy: param_1 + 1 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: param_1 [reason: ambiguous operand type]
+    trace.call_arguments("__std_exception_destroy", param_1 + 1);
+    trace.call_arguments("free", param_1);
     // body sha256: 2a1886237ca393ae8a118f19e3a6836326efcea78f08dc5c1a6e487b6f682935
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 * SE_Exception_vfunc00(undefined8 *param_1,ulonglong param_2)");
         {
             trace.statement("*param_1 = vftable_std_exception;");
             trace.statement("__std_exception_destroy(param_1 + 1);");
-            if (trace.condition("if ((param_2 & 1) != 0)")) {
+            if (trace.checked_condition("if ((param_2 & 1) != 0)", [&]() -> bool { return static_cast<bool>((param_2 & 1) != 0); })) {
                 trace.statement("free(param_1);");
             }
             trace.statement("return param_1;");
@@ -16848,10 +16849,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18001bbb0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18001bbb0", "CUtlNoEscConversion_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::uint32_t * param_3{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for CUtlNoEscConversion_vfunc00: undefined8 param_1,undefined8 param_2,undefined4 *param_3 [reason: ambiguous operand type]
     // body sha256: bed16e39c0e31f6ca65ab8ef3f29aeca416e382495c6dcd5a37d2d28f5acb165
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined1 CUtlNoEscConversion_vfunc00(undefined8 param_1,undefined8 param_2,undefined4 *param_3)");
@@ -16901,10 +16904,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18001bbc0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18001bbc0", "CUtlCStringConversion_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::uint8_t * param_2{};
+    [[maybe_unused]] std::uint32_t * param_3{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for CUtlCStringConversion_vfunc00: longlong param_1,byte *param_2,uint *param_3 [reason: ambiguous operand type]
     // body sha256: dec4d4436557dcaff98d899df0aed044b91d64fa68c93cbbd03f7399c35d2a36
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void CUtlCStringConversion_vfunc00(longlong param_1,byte *param_2,uint *param_3)");
@@ -16981,6 +16986,9 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18001bbe0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18001bbe0", "CUtlCharConversion_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] char * param_2{};
+    [[maybe_unused]] std::uint32_t * param_3{};
     [[maybe_unused]] std::int32_t iVar1{};
     [[maybe_unused]] std::int32_t iVar2{};
     [[maybe_unused]] std::uint64_t in_RAX{};
@@ -16991,8 +16999,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001bbe0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for CUtlCharConversion_vfunc00: longlong param_1,char *param_2,undefined4 *param_3 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for strcmp: param_2,*(char **)(param_1 + (uVar5 + 0x13) * 0x10) [reason: pointer depth/pointee not proven]
+    trace.call_arguments("strcmp", param_2, load_at<char *>(param_1 + (uVar5 + 0x13) * 0x10, 0));
     trace.call_arguments("CONCAT44", extraout_var, iVar2);
     // body sha256: 3a52b92584cefd85e2f5105d1b0015ff710b62365a8b5fb1be2a7bb3f9062b5b
     // Structured control-flow trace derived from the decompiled body:
@@ -17308,18 +17315,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18001bd90() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18001bd90", "INetMessage_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_2 & 1) != 0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for INetMessage_vfunc00: undefined8 *param_1,ulonglong param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: param_1 [reason: ambiguous operand type]
+    trace.call_arguments("free", param_1);
     // body sha256: 772039c5b703952ff60c0c1a1146ae661bab1b1a52161b9503a1355f5509a163
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 * INetMessage_vfunc00(undefined8 *param_1,ulonglong param_2)");
         {
             trace.statement("*param_1 = vftable_INetMessage;");
-            if (trace.condition("if ((param_2 & 1) != 0)")) {
+            if (trace.checked_condition("if ((param_2 & 1) != 0)", [&]() -> bool { return static_cast<bool>((param_2 & 1) != 0); })) {
                 trace.statement("free(param_1);");
             }
             trace.statement("return param_1;");
@@ -23271,7 +23278,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001e2b0() noexcept {
     // TODO: resolve the indirect call in body 35: (**(code **)(*param_2 + 0x10))(param_2,1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((plVar3 != (longlong *)0x0) && (iVar2 = (**(code **)(*plVar3 + 0x48))(plVar3), -1 < iVar2)) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_18001e1b0");
     trace.call_arguments("FUN_180014410", &image::DAT_18033ffe0, image::DAT_1803fcf38, image::DAT_180426020);
     trace.call_arguments("FUN_180023e60", param_2, 0);

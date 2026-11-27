@@ -20219,10 +20219,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801cb050() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (*(float *)pplVar23 * DAT_1803810ec <= fVar54) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((*piVar43 == iVar22) && (*(longlong *)(piVar43 + 6) != 0)) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: if (*(longlong *)(uVar44 * 0x38 + DAT_1803edce0) == *(longlong *)(piVar41 + 4)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (((int)local_560 == 0) || ((int)local_558 == 0)) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (0 < (int)(DAT_1803edce8 - DAT_1803edce0 >> 3) * -0x49249249) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (*(longlong *)((longlong)iVar22 * 0x38 + DAT_1803edce0) == *(longlong *)(local_540 + 4)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (0 < (int)(DAT_1803edce8 - DAT_1803edce0 >> 3) * -0x49249249) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for CONCAT44: local_560._4_4_,4 [reason: unknown aggregate layout]
     // TODO: call arguments not type-recovered for FUN_18019fbc0: "Players",0xe,CONCAT44(DAT_180381384,DAT_180381384),0 [reason: unresolved global storage/width]
@@ -45240,13 +45238,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801d5ef0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803da6a4 <= 1.5) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (0.75 <= DAT_1803da6a4) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803da6a4 <= 1.5) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (*(char *)(*(longlong *)((longlong)ThreadLocalStoragePointer + uVar47 * 8) + 0x10) == '\0') [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (0.75 <= DAT_1803da6a4) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803da6a4 <= 1.5) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (*(char *)(*(longlong *)((longlong)ThreadLocalStoragePointer + uVar47 * 8) + 0x10) == '\0') [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (0.75 <= DAT_1803da6a4) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803da6a4 <= 1.5) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (*(char *)(*(longlong *)((longlong)ThreadLocalStoragePointer + uVar47 * 8) + 0x10) == '\0') [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (0 < (int)(DAT_1803e9df8 - DAT_1803e9df0 >> 3) * -0x33333333) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (0.75 <= DAT_1803da6a4) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803da6a4 <= 1.5) [reason: unresolved global storage/width]
@@ -61926,12 +61921,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801e5310() noexcept {
     // TODO: resolve the indirect call in body 102: (**(code **)(*DAT_1803fa668 + 0x28))(DAT_1803fa668,&local_28,&local_30);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803fa618 == (HWND)0x0) || (BVar4 = GetClientRect(DAT_1803fa618,&local_20), BVar4 == 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (local_28.x <= tVar1.x) [reason: unknown aggregate layout]
     // TODO: condition expression type not recovered: if (tVar1.x <= local_30.x) [reason: unknown aggregate layout]
     // TODO: condition expression type not recovered: if (local_28.y <= local_38.y) [reason: unknown aggregate layout]
     // TODO: condition expression type not recovered: if (local_38.y <= local_30.y + -1) [reason: unknown aggregate layout]
-    // TODO: call arguments not type-recovered for GetClientRect: DAT_1803fa618,&local_20 [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for ClientToScreen: DAT_1803fa618,&local_28 [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for ClientToScreen: DAT_1803fa618,&local_30 [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f00 [reason: ambiguous operand type]
@@ -67097,7 +67090,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801e7a50() noexcept {
     // TODO: condition expression type not recovered: if (param_1 <= 0.0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (_DAT_1803fa568 < (float)*(double *)(*(longlong *)(lVar2 + 0xec0) + 0x10)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803fa53c == 1.4013e-45) || (DAT_1803fa53c == 5.60519e-45)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((cVar4 != '\0') && (bVar19 = DAT_1803fa53c == 9.80909e-45, DAT_1803fa53c = 0.0, bVar19)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((fVar21 == 2.8026e-45) || (4 < (uint)fVar21)) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (fVar21 == 0.0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((DAT_1803fa53c == 1.4013e-45) && (DAT_1803fa560 == 0)) [reason: unresolved global storage/width]
@@ -74782,8 +74774,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ebf30() noexcept {
     // TODO: condition expression type not recovered: if (plVar9 == DAT_1803fa580) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fa580 != (longlong *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803fa580 != (longlong *)0x0) && (DAT_1803fa4f8 != 0)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((DAT_1803fea1c != 0) || ((0.0 < DAT_1803fea04 && (*DAT_1803fa608 < DAT_1803fea04)))) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((local_98 == '\0') || ((cVar4 != '\0' && (cVar6 = FUN_1801eb5c0(), cVar6 == '\0')))) [reason: assignment or side effect]
     // TODO: call arguments not type-recovered for FUN_1801e9960: param_1 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_1801e9890: param_1 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for buffer: %p -> %p [reason: unknown aggregate layout]
@@ -74809,7 +74799,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ebf30() noexcept {
     trace.call_arguments("FUN_180241610", &image::DAT_1803fadf0, 0x93fd561a96ab0c67);
     trace.call_arguments("FUN_180241610", uVar8, 0x8d6c6958b3bd884);
     trace.call_arguments("FUN_1801fcfc0", uVar8);
-    trace.call_arguments("FUN_1801eb5c0");
     trace.call_arguments("FUN_180115a50");
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
@@ -81617,7 +81606,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ee530() noexcept {
     // TODO: condition expression type not recovered: if (((ulonglong)local_888._16_8_ <= pHVar19) && (pHVar19 < local_870)) [reason: unknown aggregate layout]
     // TODO: condition expression type not recovered: if (DAT_1803fa678 == (longlong *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if ((plVar27 != (longlong *)0x0) && (iVar14 = (**(code **)*plVar27)(plVar27), iVar11 < iVar14)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: while (iVar14 = (**(code **)*plVar27)(plVar27), iVar11 < iVar14) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: while (iVar11 = (**(code **)*plVar27)(plVar27), (int)local_954 < iVar11) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((DAT_1803e8770 == *param_3) || (cVar8 != '\0')) [reason: unresolved global storage/width]

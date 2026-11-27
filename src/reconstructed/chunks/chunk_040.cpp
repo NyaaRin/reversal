@@ -26175,7 +26175,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7a0c() noexcept {
     trace.call_arguments("CloseHandle", pvVar3);
     trace.call_arguments("abort");
     trace.call_arguments("CloseHandle", pvVar3);
-    trace.call_arguments("CloseHandle", pvVar3);
     trace.call_arguments("CONCAT44", uStack_2b4, local_2b8);
     trace.call_arguments("CONCAT44", uStack_2b4, local_2b8);
     trace.call_arguments("abort");
@@ -26621,7 +26620,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7d9c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DStack_54 == 0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (((DStack_54 == 1) || (DStack_54 == 0x32)) || (DStack_54 == 0x57)) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if ((local_50 != (HANDLE)0xffffffffffffffff) && (BVar2 = CloseHandle(local_50), BVar2 == 0)) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if (DStack_54 == 5) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((local_50 != (HANDLE)0xffffffffffffffff) && (BVar2 = CloseHandle(local_50), BVar2 == 0)) [reason: assignment or side effect]
     // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: local_50,FileBasicInfo,local_40,0x28 [reason: ambiguous operand type]
@@ -26636,7 +26634,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7d9c() noexcept {
     trace.call_arguments("FUN_1802d74ec", local_50);
     trace.call_arguments("CONCAT31", static_cast<std::uint64_t>((std::uint64_t(local_58) >> 8) & 0xffffff), 1);
     trace.call_arguments("GetLastError");
-    trace.call_arguments("CloseHandle", local_50);
     trace.call_arguments("abort");
     trace.call_arguments("CONCAT31", static_cast<std::uint64_t>((std::uint64_t(local_58) >> 8) & 0xffffff), 1);
     trace.call_arguments("__std_fs_open_handle", &local_50, param_1, 0x10000, 0x2200000);
@@ -26983,7 +26980,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d80c4() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for LocalFree: HLOCAL hMem [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for LocalFree: hMem [reason: ambiguous operand type]
     // body sha256: 64e2fe5556fe1f72384afb082c671a1f0a636eb9940085a6a342a5157185502c
     // Structured control-flow trace derived from the decompiled body:
@@ -27192,7 +27188,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d81e0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _Xbad_alloc: void [reason: ambiguous operand type]
     trace.call_arguments("_Xbad_alloc");
     // body sha256: dc6564acaac5377e3459868f384999ec1dd9ea6f9dfea16ee5a7aaec65e0b5a3
     // Structured control-flow trace derived from the decompiled body:
@@ -27949,7 +27944,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8278() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for std_D___collate_vfunc01: facet *this [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Incref: this [reason: ambiguous operand type]
     // body sha256: 30aec5e32e8fc53d568a88b6d0fd7d2daa8592ee3116ed8428ffd35246f36df1
     // Structured control-flow trace derived from the decompiled body:
@@ -28007,6 +28001,10 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d8284() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d8284", "MSVCP140.DLL::__crtLCMapStringA");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int32_t _CchSrc{};
+    [[maybe_unused]] std::int32_t _CchDest{};
+    [[maybe_unused]] std::int32_t _Code_page{};
+    [[maybe_unused]] int _BError{};
     [[maybe_unused]] std::int32_t iVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
@@ -28083,6 +28081,8 @@ TODO: resolve the indirect call in body 19: (*(code *)PTR__guard_dispatch_icall_
 const sf::reconstructed::FunctionTranslation& Function_0x1802d828c() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d828c", "tls_callback_0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int32_t param_2{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int64_t * plVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -28092,7 +28092,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d828c() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (plVar2 = &DAT_18030d2b0; plVar2 != &DAT_18030d2b0; plVar2 = plVar2 + 1) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for tls_callback_0: undefined8 param_1,int param_2 [reason: ambiguous operand type]
     trace.data_ref("PTR__guard_dispatch_icall_18030cca8", static_cast<const void*>(&image::PTR__guard_dispatch_icall_18030cca8));
     trace.data_ref("DAT_18030d2b0", static_cast<const void*>(&image::DAT_18030d2b0));
     // body sha256: 5a3c93992d54b1c785f349a904ddb1e311bb9e1631e0c19c9134fedbedca38cf
@@ -28161,7 +28160,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d82f4() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __dyn_tls_on_demand_init: void [reason: ambiguous operand type]
     trace.call_arguments("tls_callback_0", 0, 2);
     // body sha256: 424cd141d609b5b7f5d05228736795ce7f5cdfd2e9d39e89790f23af85d8d132
     // Structured control-flow trace derived from the decompiled body:
@@ -28233,7 +28231,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8320() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((_StackCookie == DAT_1803da4c0) && ((short)(_StackCookie >> 0x30) == 0)) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for __security_check_cookie: uintptr_t _StackCookie [reason: ambiguous operand type]
     trace.call_arguments("swi", 0x29);
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
     // body sha256: 506e95663adc21d7b6473c161036a5229315cc53bf5a90bad0377db9753f3f20

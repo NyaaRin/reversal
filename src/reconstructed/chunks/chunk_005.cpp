@@ -14368,7 +14368,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800536c0() noexcept {
     // TODO: resolve the indirect call in body 37: plVar3 = (longlong *)(**(code **)(*DAT_1803fa360 + 0x18))(DAT_1803fa360,iVar1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((param_1 == (longlong *)0x0) || (DAT_1803fa668 == (longlong *)0x0)) || (DAT_1803fa608 == 0)) [reason: unresolved global storage/width]
     trace.data_ref("DAT_1803fa360", static_cast<const void*>(&image::DAT_1803fa360));
     trace.data_ref("DAT_1803fa608", static_cast<const void*>(&image::DAT_1803fa608));
     trace.data_ref("DAT_1803fa668", static_cast<const void*>(&image::DAT_1803fa668));
@@ -14709,7 +14708,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180053780() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((char)local_res18 != '\0') [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: if ((lVar9 == 0) || (pcVar8 = (code *)(lVar9 + -6), local_f0 = pcVar8, pcVar8 == (code *)0x0)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (DAT_1803fead8 != (code *)0x0) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for FUN_1802d3e00: (float)(double)local_res20 [reason: scalar cast width/kind mismatch]
     // TODO: call arguments not type-recovered for REJECTED: offsets outside the bone block [reason: ambiguous operand type]
@@ -17318,7 +17316,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180054e70() noexcept {
     // TODO: resolve the indirect call in body 26: (*pcVar1)(DAT_1803fa668,uVar3);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((plVar4 != (longlong *)0x0) && (plVar4[1] == param_1)) && (DAT_1803fa668 != (longlong *)0x0)) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180039770");
     trace.call_target("FUN_180039770", reinterpret_cast<const void*>(&image::FUN_180039770));
     trace.data_ref("DAT_1803fa668", static_cast<const void*>(&image::DAT_1803fa668));
@@ -17422,7 +17419,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180054ef0() noexcept {
     // TODO: resolve the indirect call in body 26: (*pcVar1)(DAT_1803fa668,uVar3);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((plVar4 != (longlong *)0x0) && (plVar4[1] == param_1)) && (DAT_1803fa668 != (longlong *)0x0)) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180039770");
     trace.call_target("FUN_180039770", reinterpret_cast<const void*>(&image::FUN_180039770));
     trace.data_ref("DAT_1803fa668", static_cast<const void*>(&image::DAT_1803fa668));
@@ -17700,7 +17696,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180055050() noexcept {
     // TODO: resolve the indirect call in body 52: (**(code **)(*DAT_1803fa668 + 0xa0))(DAT_1803fa668,&local_58);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((plVar2 != (longlong *)0x0) && (plVar2[1] == param_1)) && (DAT_1803fa668 != (longlong *)0x0)) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180039770");
     trace.call_target("FUN_180039770", reinterpret_cast<const void*>(&image::FUN_180039770));
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));

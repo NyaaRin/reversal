@@ -16296,7 +16296,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800ea200() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180409bc0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803e84f4 <= fStackX_1c) && (DAT_1803e84f4 = DAT_180381294, fStackX_1c <= DAT_180381294)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803e84f0 <= fVar3) && (DAT_1803e84f0 = DAT_18038129c, fVar3 <= DAT_18038129c)) [reason: unresolved global storage/width]
     trace.data_ref("DAT_180380b20", static_cast<const void*>(&image::DAT_180380b20));
     trace.data_ref("DAT_180380c50", static_cast<const void*>(&image::DAT_180380c50));

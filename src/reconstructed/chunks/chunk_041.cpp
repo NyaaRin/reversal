@@ -248,7 +248,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8468() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803f8f50.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __scrt_acquire_startup_lock: void [reason: ambiguous operand type]
     trace.call_arguments("__scrt_is_ucrt_dll_in_use");
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
@@ -353,7 +352,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d84a4() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __scrt_dllmain_after_initialize_c: void [reason: ambiguous operand type]
     trace.call_arguments("__scrt_is_ucrt_dll_in_use");
     trace.call_arguments("vfunc_shared_1800b0d60");
     trace.call_arguments("_configure_narrow_argv", uVar2);
@@ -714,7 +712,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8590() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803f8f60.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __scrt_dllmain_uninitialize_c: void [reason: ambiguous operand type]
     trace.call_arguments("__scrt_is_ucrt_dll_in_use");
     trace.call_arguments("_execute_onexit_table", &image::DAT_1803f8f60);
     trace.call_arguments("vfunc_shared_1800139e0");
@@ -1201,13 +1198,12 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x1802d8734() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d8734", "__scrt_release_startup_lock");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] char param_1{};
     [[maybe_unused]] std::int32_t iVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803f8f50.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((iVar1 != 0) && (param_1 == '\0')) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for __scrt_release_startup_lock: char param_1 [reason: ambiguous operand type]
     trace.call_arguments("__scrt_is_ucrt_dll_in_use");
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
@@ -1218,7 +1214,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8734() noexcept {
         {
             trace.statement("int iVar1;");
             trace.statement("iVar1 = __scrt_is_ucrt_dll_in_use();");
-            if (trace.condition("if ((iVar1 != 0) && (param_1 == '\\0'))")) {
+            if (trace.checked_condition("if ((iVar1 != 0) && (param_1 == '\\0'))", [&]() -> bool { return static_cast<bool>((iVar1 != 0) && (param_1 == '\0')); })) {
                 trace.statement("LOCK();");
                 trace.statement("DAT_1803f8f50 = 0;");
                 trace.statement("UNLOCK();");
@@ -1277,20 +1273,20 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x1802d8758() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d8758", "__scrt_uninitialize_crt");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint8_t param_1{};
+    [[maybe_unused]] char param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803f8f58.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803f8f58 == '\0') || (param_2 == '\0')) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for __scrt_uninitialize_crt: undefined1 param_1,char param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for vfunc_shared_180076390: param_1 [reason: ambiguous operand type]
     trace.call_arguments("vfunc_shared_180076390");
+    trace.call_arguments("vfunc_shared_180076390", param_1);
     trace.data_ref("DAT_1803f8f58", static_cast<const void*>(&image::DAT_1803f8f58));
     // body sha256: 7085b306720d10e4ea3793bcb1761a73df67b7af600323dd8bc7d3a69e46f275
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined1 __scrt_uninitialize_crt(undefined1 param_1,char param_2)");
         {
-            if (trace.condition("if ((DAT_1803f8f58 == '\\0') || (param_2 == '\\0'))")) {
+            if (trace.checked_condition("if ((DAT_1803f8f58 == '\\0') || (param_2 == '\\0'))", [&]() -> bool { return static_cast<bool>((image::DAT_1803f8f58 == '\0') || (param_2 == '\0')); })) {
                 trace.statement("vfunc_shared_180076390();");
                 trace.statement("vfunc_shared_180076390(param_1);");
             }
@@ -1364,7 +1360,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8784() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803f8f60.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _onexit: _onexit_t _Func [reason: ambiguous operand type]
     trace.call_arguments("_crt_atexit");
     trace.call_arguments("_register_onexit_function", &image::DAT_1803f8f60);
     trace.data_ref("DAT_1803f8f60", static_cast<const void*>(&image::DAT_1803f8f60));
@@ -1437,7 +1432,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d87c0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for atexit: _func_5014 *param_1 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _onexit: (_onexit_t)param_1 [reason: ambiguous operand type]
     // body sha256: 3e8d68167047c00be9e5c1520db5caeecd1ad170d371b3ebf2b331b3b34ec896
     // Structured control-flow trace derived from the decompiled body:
@@ -1491,11 +1485,11 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d87d8() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d87d8", "API-MS-WIN-CRT-HEAP-L1-1-0.DLL::free");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for free: void *_Memory [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: _Memory [reason: ambiguous operand type]
+    trace.call_arguments("free", _Memory);
     // body sha256: b698292d7fd7a79d5eef1d8bc6348a6ab4ddb53d273a9e02390fbf173a66ed6d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void __cdecl free(void *_Memory)");
@@ -1547,11 +1541,11 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d87e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d87e0", "API-MS-WIN-CRT-HEAP-L1-1-0.DLL::free");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for free: void *_Memory [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: _Memory [reason: ambiguous operand type]
+    trace.call_arguments("free", _Memory);
     // body sha256: aa19a46793383e3bb89768dba0a2a6d45d3653829f21dd91fb327d8efb665325
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void __cdecl free(void *_Memory)");
@@ -1605,18 +1599,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d87e8() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d87e8", "type_info_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_2 & 1) != 0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for type_info_vfunc00: undefined8 *param_1,ulonglong param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: param_1 [reason: ambiguous operand type]
+    trace.call_arguments("free", param_1);
     // body sha256: 9b17bc582df5b614ad75c391bab40b162f2e8653dea03d8ddddca113e334a8f0
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 * type_info_vfunc00(undefined8 *param_1,ulonglong param_2)");
         {
             trace.statement("*param_1 = vftable_type_info;");
-            if (trace.condition("if ((param_2 & 1) != 0)")) {
+            if (trace.checked_condition("if ((param_2 & 1) != 0)", [&]() -> bool { return static_cast<bool>((param_2 & 1) != 0); })) {
                 trace.statement("free(param_1);");
             }
             trace.statement("return param_1;");
@@ -1776,6 +1770,8 @@ TODO: resolve the indirect call in body 24: (*(code *)PTR__guard_dispatch_icall_
 const sf::reconstructed::FunctionTranslation& Function_0x1802d8884() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d8884", "type_info_vfunc01");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int32_t param_2{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::uint32_t * puVar2{};
     [[maybe_unused]] std::uint32_t uVar3{};
@@ -1786,9 +1782,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8884() noexcept {
     // TODO: resolve the indirect call in body 24: (*(code *)PTR__guard_dispatch_icall_18030cca8)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_2 == 3) || (param_2 == 0)) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for type_info_vfunc01: undefined8 param_1,int param_2 [reason: ambiguous operand type]
     trace.call_arguments("free", _Memory);
     trace.data_ref("PTR__guard_dispatch_icall_18030cca8", static_cast<const void*>(&image::PTR__guard_dispatch_icall_18030cca8));
     // body sha256: dbc7f8482a6f3eb15049fe11a99508a4d8d25df226ef5d8403bca2ab44e76ede
@@ -1800,7 +1794,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8884() noexcept {
             trace.statement("uint uVar3;");
             trace.statement("ulonglong uVar4;");
             trace.statement("uint *_Memory;");
-            if (trace.condition("if ((param_2 == 3) || (param_2 == 0))")) {
+            if (trace.checked_condition("if ((param_2 == 3) || (param_2 == 0))", [&]() -> bool { return static_cast<bool>((param_2 == 3) || (param_2 == 0)); })) {
                 trace.statement("lVar1 = *(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8);");
                 trace.statement("_Memory = *(uint **)(lVar1 + 0x20);");
                 if (trace.checked_condition("if (*(uint **)(lVar1 + 0x20) != (uint *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<std::uint32_t *>(lVar1 + 0x20, 0) != (uint *)0x0); })) {
@@ -2588,20 +2582,21 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d8ccc() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d8ccc", "entry");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int32_t param_2{};
+    [[maybe_unused]] std::uint64_t param_3{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == 1) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for entry: undefined8 param_1,int param_2,undefined8 param_3 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_1802d8ba4: param_1,param_2,param_3 [reason: ambiguous operand type]
     trace.call_arguments("FUN_1802d90e4");
+    trace.call_arguments("FUN_1802d8ba4", param_1, param_2, param_3);
     trace.call_target("FUN_1802d8ba4", reinterpret_cast<const void*>(&image::FUN_1802d8ba4));
     trace.call_target("FUN_1802d90e4", reinterpret_cast<const void*>(&image::FUN_1802d90e4));
     // body sha256: 6525ca1c19af56d6c2056ba709b391622d3cb9370b5734eb702267abc3a6ad0d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void entry(undefined8 param_1,int param_2,undefined8 param_3)");
         {
-            if (trace.condition("if (param_2 == 1)")) {
+            if (trace.checked_condition("if (param_2 == 1)", [&]() -> bool { return static_cast<bool>(param_2 == 1); })) {
                 trace.statement("FUN_1802d90e4();");
             }
             trace.statement("FUN_1802d8ba4(param_1,param_2,param_3);");
@@ -2805,7 +2800,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8da0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (local_res8 < in_RAX) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (puVar1 < StackLimit) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for __chkstk: void [reason: ambiguous operand type]
     // body sha256: 42f5f5779932af20b6080031f701d7cac0ee3347f2c8d838e46e514ccea0a501
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void __chkstk(void)");
@@ -3297,7 +3291,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d90d0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da530.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __scrt_is_ucrt_dll_in_use: void [reason: ambiguous operand type]
     trace.data_ref("DAT_1803da530", static_cast<const void*>(&image::DAT_1803da530));
     // body sha256: b7999cf803f03dea6749784aa658c087f0bbd08328e24d793512ffcd876d6056
     // Structured control-flow trace derived from the decompiled body:
@@ -3907,7 +3900,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9250() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __CxxFrameHandler4: void [reason: ambiguous operand type]
     trace.call_arguments("__CxxFrameHandler4");
     // body sha256: 5029792ee91bcecbad131464c4932dd2ac4d94958377652a82f84b6e2eb5ff0d
     // Structured control-flow trace derived from the decompiled body:
@@ -3967,6 +3959,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9256() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9256", "VCRUNTIME140.DLL::__C_specific_handler");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * EstablisherFrame{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -4029,7 +4022,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d925c() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for vfunc_shared_1802d925c: void [reason: ambiguous operand type]
     trace.call_arguments("_purecall");
     // body sha256: a9db5835bf3481137939ee3a837401cc86a06fe1ee8e12a8f7091504e7732540
     // Structured control-flow trace derived from the decompiled body:
@@ -4084,12 +4076,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9262() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9262", "VCRUNTIME140.DLL::memcpy");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * _Dst{};
+    [[maybe_unused]] void * _Src{};
+    [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] void * pvVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for memcpy: void *_Dst,void *_Src,size_t _Size [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memcpy: _Dst,_Src,_Size [reason: ambiguous operand type]
+    trace.call_arguments("memcpy", _Dst, _Src, _Size);
     // body sha256: 6ce5a33c167531cff77365597739f3abe416f8df987b3cd8b947ee548ae8a5ae
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void * __cdecl memcpy(void *_Dst,void *_Src,size_t _Size)");
@@ -4144,12 +4139,14 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9268() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9268", "VCRUNTIME140.DLL::memcmp");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * _Buf1{};
+    [[maybe_unused]] void * _Buf2{};
+    [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] std::int32_t iVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for memcmp: void *_Buf1,void *_Buf2,size_t _Size [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memcmp: _Buf1,_Buf2,_Size [reason: ambiguous operand type]
+    trace.call_arguments("memcmp", _Buf1, _Buf2, _Size);
     // body sha256: 6ae0a041addf266674f8eff19ddbbf6aa17a31b7de120a056ccdea1e9497bd76
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("int __cdecl memcmp(void *_Buf1,void *_Buf2,size_t _Size)");
@@ -4204,12 +4201,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d926e() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d926e", "VCRUNTIME140.DLL::memchr");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * _Buf{};
+    [[maybe_unused]] std::int32_t _Val{};
+    [[maybe_unused]] std::size_t _MaxCount{};
     [[maybe_unused]] void * pvVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for memchr: void *_Buf,int _Val,size_t _MaxCount [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memchr: _Buf,_Val,_MaxCount [reason: ambiguous operand type]
+    trace.call_arguments("memchr", _Buf, _Val, _MaxCount);
     // body sha256: 572be384c0b4cc54d1aedf09ca7d460e4827b7f772b0ef2a9b6d1f5bc3faae22
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void * __cdecl memchr(void *_Buf,int _Val,size_t _MaxCount)");
@@ -4264,12 +4264,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9274() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9274", "VCRUNTIME140.DLL::memmove");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * _Dst{};
+    [[maybe_unused]] void * _Src{};
+    [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] void * pvVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for memmove: void *_Dst,void *_Src,size_t _Size [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memmove: _Dst,_Src,_Size [reason: ambiguous operand type]
+    trace.call_arguments("memmove", _Dst, _Src, _Size);
     // body sha256: 61737c2dd324a8debfc201a62379febc5e3a5173ade73cfbf86762d67982f028
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void * __cdecl memmove(void *_Dst,void *_Src,size_t _Size)");
@@ -4324,12 +4327,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d927a() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d927a", "VCRUNTIME140.DLL::memset");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * _Dst{};
+    [[maybe_unused]] std::int32_t _Val{};
+    [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] void * pvVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for memset: void *_Dst,int _Val,size_t _Size [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memset: _Dst,_Val,_Size [reason: ambiguous operand type]
+    trace.call_arguments("memset", _Dst, _Val, _Size);
     // body sha256: d22150723f78c7d27d92e97276bad47c675376fd65eb3c66e4ed8c4a55989ba0
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void * __cdecl memset(void *_Dst,int _Val,size_t _Size)");
@@ -4385,7 +4391,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9280() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __current_exception: void [reason: ambiguous operand type]
     trace.call_arguments("__current_exception");
     // body sha256: 04509cb691caf5a5864625026a32fd8d4240e236928c442131b617557eb84604
     // Structured control-flow trace derived from the decompiled body:
@@ -4441,7 +4446,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9286() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __current_exception_context: void [reason: ambiguous operand type]
     trace.call_arguments("__current_exception_context");
     // body sha256: f8998c738fa3cd624ab07d61d7d3f7e635d7688dea89ad2abca5f4846c4cecc0
     // Structured control-flow trace derived from the decompiled body:
@@ -4495,10 +4499,10 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d928c() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d928c", "VCRUNTIME140.DLL::_CxxThrowException");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * pExceptionObject{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _CxxThrowException: void *pExceptionObject,ThrowInfo *pThrowInfo [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _CxxThrowException: pExceptionObject,pThrowInfo [reason: ambiguous operand type]
     // body sha256: ca0110737cca58ac426e5b614fd253ea5f46a540729bc0c9e549a035bce513e9
     // Structured control-flow trace derived from the decompiled body:
@@ -4554,7 +4558,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9292() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __std_type_info_destroy_list: void [reason: ambiguous operand type]
     trace.call_arguments("__std_type_info_destroy_list");
     // body sha256: f6b17154552ad4eb813682dec66625bcd014f03339e90f5f8130a51479465675
     // Structured control-flow trace derived from the decompiled body:
@@ -4611,7 +4614,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9298() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for terminate: void [reason: ambiguous operand type]
     trace.call_arguments("terminate");
     // body sha256: 27234ad7f4af730120812e87e3af19aea8f6187262f49d00f56a66a4b025086d
     // Structured control-flow trace derived from the decompiled body:
@@ -4664,11 +4666,11 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d929e() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d929e", "API-MS-WIN-CRT-HEAP-L1-1-0.DLL::free");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for free: void *_Memory [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: _Memory [reason: ambiguous operand type]
+    trace.call_arguments("free", _Memory);
     // body sha256: c46bf36953b0fb1e46c9d28956ab24f5bcc77fabfcf872a744afa3499ae5770b
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void __cdecl free(void *_Memory)");
@@ -4722,12 +4724,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92a4() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92a4", "API-MS-WIN-CRT-HEAP-L1-1-0.DLL::malloc");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] void * pvVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for malloc: size_t _Size [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for malloc: _Size [reason: ambiguous operand type]
+    trace.call_arguments("malloc", _Size);
     // body sha256: eebed3f7edb63da0914b610fd1c4ffdc52737374170877c6eb9e66b8f779ac8d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void * __cdecl malloc(size_t _Size)");
@@ -4782,12 +4785,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92aa() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92aa", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::cosf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for cosf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for cosf: _X [reason: ambiguous operand type]
+    trace.call_arguments("cosf", _X);
     // body sha256: 30a6e32e2ef8b3c38556cca1902ed76d3574c1a9cdf3f83aa9c20710dace9cb0
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl cosf(float _X)");
@@ -4842,12 +4845,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92b0", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::asin");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for asin: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for asin: _X [reason: ambiguous operand type]
+    trace.call_arguments("asin", _X);
     // body sha256: daa87e2c54e1d96fa43341c54b950805609457d5c86013ac450dfc2a49ebd341
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl asin(double _X)");
@@ -4902,12 +4905,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92b6() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92b6", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::atan");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for atan: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for atan: _X [reason: ambiguous operand type]
+    trace.call_arguments("atan", _X);
     // body sha256: 193603c11dd99f6cd3aee708903240f465f25608866811dd9608c2524a9f347a
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl atan(double _X)");
@@ -4962,12 +4965,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92bc() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92bc", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::atan2");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _Y{};
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for atan2: double _Y,double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for atan2: _Y,_X [reason: ambiguous operand type]
+    trace.call_arguments("atan2", _Y, _X);
     // body sha256: ca29a6396513eb3cf1e0b2fc193876e8b954499b541169223e85b6092fa51e1c
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl atan2(double _Y,double _X)");
@@ -5022,12 +5026,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92c2() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92c2", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::atan2f");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _Y{};
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for atan2f: float _Y,float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for atan2f: _Y,_X [reason: ambiguous operand type]
+    trace.call_arguments("atan2f", _Y, _X);
     // body sha256: b2d6eff500330bd7b46f693687cb0cfedaa6ac5e8fe2482f31f275ed3ba272ce
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl atan2f(float _Y,float _X)");
@@ -5082,12 +5087,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92c8() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92c8", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::cos");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for cos: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for cos: _X [reason: ambiguous operand type]
+    trace.call_arguments("cos", _X);
     // body sha256: 560add6274f24dd417f668256b61789827ce05fd02410794ba01cf60e5b13e53
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl cos(double _X)");
@@ -5142,12 +5147,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92ce() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92ce", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::floor");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for floor: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for floor: _X [reason: ambiguous operand type]
+    trace.call_arguments("floor", _X);
     // body sha256: fa888e7a322f829144a3cf71022457b33ab055fdbf5cd44e39d9323b0efa7fa8
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl floor(double _X)");
@@ -5202,12 +5207,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92d4() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92d4", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::fmodf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
+    [[maybe_unused]] float _Y{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for fmodf: float _X,float _Y [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for fmodf: _X,_Y [reason: ambiguous operand type]
+    trace.call_arguments("fmodf", _X, _Y);
     // body sha256: 45600b58d83c0019a36ef6e05dc5652cd48d0d06ca057c0f9682e60d625d35ac
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl fmodf(float _X,float _Y)");
@@ -5262,12 +5268,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92da() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92da", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::log");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for log: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for log: _X [reason: ambiguous operand type]
+    trace.call_arguments("log", _X);
     // body sha256: 4b71417a550e50c45a7d2c6caff8b842fb87d6078c0088af9064e28e70bca4f0
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl log(double _X)");
@@ -5322,12 +5328,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92e0", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::pow");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
+    [[maybe_unused]] double _Y{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for pow: double _X,double _Y [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for pow: _X,_Y [reason: ambiguous operand type]
+    trace.call_arguments("pow", _X, _Y);
     // body sha256: d2f1913eb5e21ea7e2f8655bf8c9ff858534563d943d3f2dcb729c7df47c4721
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl pow(double _X,double _Y)");
@@ -5382,12 +5389,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92e6() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92e6", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::powf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
+    [[maybe_unused]] float _Y{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for powf: float _X,float _Y [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for powf: _X,_Y [reason: ambiguous operand type]
+    trace.call_arguments("powf", _X, _Y);
     // body sha256: b81b72bec6e4921eb9e83397c96ba3ff584413d7ffb69da1077f806884b61d2c
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl powf(float _X,float _Y)");
@@ -5442,12 +5450,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92ec() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92ec", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::sin");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for sin: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for sin: _X [reason: ambiguous operand type]
+    trace.call_arguments("sin", _X);
     // body sha256: 20b9bf3155bd88ae8f30c51995518a7a1fbf85fa149a46a05e9b0acffa8994ff
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl sin(double _X)");
@@ -5502,12 +5510,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92f2() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92f2", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::sqrt");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for sqrt: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for sqrt: _X [reason: ambiguous operand type]
+    trace.call_arguments("sqrt", _X);
     // body sha256: 2483435f3ad7f73ff7fc3acf5b8c7212eea0640ecaa266149f4b8e1e7a29394d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl sqrt(double _X)");
@@ -5562,12 +5570,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92f8() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92f8", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::sqrtf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for sqrtf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for sqrtf: _X [reason: ambiguous operand type]
+    trace.call_arguments("sqrtf", _X);
     // body sha256: aa3ac5bfd2beea5aecf64287d6af8c171f0c78358983a57a84cae124e6ab2ed5
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl sqrtf(float _X)");
@@ -5622,12 +5630,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d92fe() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d92fe", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::tanf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for tanf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for tanf: _X [reason: ambiguous operand type]
+    trace.call_arguments("tanf", _X);
     // body sha256: 67851457b7fea2552bc36207abd2754bac455672a48b25c3e98b6852e221c916
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl tanf(float _X)");
@@ -5682,12 +5690,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9304() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9304", "API-MS-WIN-CRT-HEAP-L1-1-0.DLL::_callnewh");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] std::int32_t iVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _callnewh: size_t _Size [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for _callnewh: _Size [reason: ambiguous operand type]
+    trace.call_arguments("_callnewh", _Size);
     // body sha256: 4de257b74d0c8fefb6de2e57f61bd6f7ca31299c2dfddc1379fecbbf96b4c892
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("int __cdecl _callnewh(size_t _Size)");
@@ -5743,7 +5751,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d930a() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _seh_filter_dll: void [reason: ambiguous operand type]
     trace.call_arguments("_seh_filter_dll");
     // body sha256: 93b45f45fceb6b135bd7626d4a9fc4e0bce29bcabfe53d624b616ab91c60f53c
     // Structured control-flow trace derived from the decompiled body:
@@ -5799,7 +5806,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9310() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _configure_narrow_argv: void [reason: ambiguous operand type]
     trace.call_arguments("_configure_narrow_argv");
     // body sha256: ffd937dfeda3a8fbab9b58645ef5da1c0b064fe252a2fc6fe91720edc52e684b
     // Structured control-flow trace derived from the decompiled body:
@@ -5855,7 +5861,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9316() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _initialize_narrow_environment: void [reason: ambiguous operand type]
     trace.call_arguments("_initialize_narrow_environment");
     // body sha256: fa41302d8e3f5aae358d5e49e74d9a660a9cb760c87d4147a6dbeda82ce1c72e
     // Structured control-flow trace derived from the decompiled body:
@@ -5911,7 +5916,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d931c() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _initialize_onexit_table: void [reason: ambiguous operand type]
     trace.call_arguments("_initialize_onexit_table");
     // body sha256: 6b7bab9224d8708c30a1d323650a7ba078f0fb1e27841e5f19fab1fad698fc47
     // Structured control-flow trace derived from the decompiled body:
@@ -5967,7 +5971,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9322() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _register_onexit_function: void [reason: ambiguous operand type]
     trace.call_arguments("_register_onexit_function");
     // body sha256: 595103bbbefc53482893aa46f9236838820c89fd1ece38ee68b0e911c2fcede1
     // Structured control-flow trace derived from the decompiled body:
@@ -6023,7 +6026,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9328() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _execute_onexit_table: void [reason: ambiguous operand type]
     trace.call_arguments("_execute_onexit_table");
     // body sha256: 8e82298427af5cd5a421fe1e8935b12b3b453ead7eaad0345b999c11519ff888
     // Structured control-flow trace derived from the decompiled body:
@@ -6079,7 +6081,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d932e() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _crt_atexit: void [reason: ambiguous operand type]
     trace.call_arguments("_crt_atexit");
     // body sha256: ee2ad11086761f3f0c9ab9543ed418d066d86293db5171f323f448da38c13de8
     // Structured control-flow trace derived from the decompiled body:
@@ -6135,7 +6136,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9334() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _cexit: void [reason: ambiguous operand type]
     trace.call_arguments("_cexit");
     // body sha256: 7a68dee3fc6aa64c75e9e02f1ad5d31ce4917c6bb520d4326ea6f9694b728b3f
     // Structured control-flow trace derived from the decompiled body:
@@ -6191,7 +6191,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d933a() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _initterm: void [reason: ambiguous operand type]
     trace.call_arguments("_initterm");
     // body sha256: 6e35b198bea67b8d0f905fca87e9457a6961904f2bbffd05a53229161d0bcefb
     // Structured control-flow trace derived from the decompiled body:
@@ -6247,7 +6246,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9340() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _initterm_e: void [reason: ambiguous operand type]
     trace.call_arguments("_initterm_e");
     // body sha256: fda66b3ad2c4b562a57cf77df4fa14e11da8e45e93c26f94d52dd944d7e231c4
     // Structured control-flow trace derived from the decompiled body:
@@ -6457,7 +6455,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d944d() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _dclass: void [reason: ambiguous operand type]
     trace.call_arguments("_dclass");
     // body sha256: 25d87f51c55a98160ddd743af62345e01acb0818a4ff7aa942d68159ed8c3e5b
     // Structured control-flow trace derived from the decompiled body:
@@ -6513,7 +6510,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9453() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _fdclass: void [reason: ambiguous operand type]
     trace.call_arguments("_fdclass");
     // body sha256: 3034563ae45663510ea18d2aa37e59cc6bd79fb03b525464a9adb3a7731d4ad6
     // Structured control-flow trace derived from the decompiled body:
@@ -6568,12 +6564,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9459() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9459", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::_hypotf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
+    [[maybe_unused]] float _Y{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _hypotf: float _X,float _Y [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for _hypotf: _X,_Y [reason: ambiguous operand type]
+    trace.call_arguments("_hypotf", _X, _Y);
     // body sha256: 7fd9da393e902dbc687e683490027e057c8968d3c94a5c4a40e883fa63c43a0f
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl _hypotf(float _X,float _Y)");
@@ -6628,12 +6625,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d945f() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d945f", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::acosf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for acosf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for acosf: _X [reason: ambiguous operand type]
+    trace.call_arguments("acosf", _X);
     // body sha256: f5bb1776c603eac3c35cd6ffbb4fc38b9c62347b97c715fb170e3c4e0342d1f3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl acosf(float _X)");
@@ -6688,12 +6685,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9465() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9465", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::asinf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for asinf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for asinf: _X [reason: ambiguous operand type]
+    trace.call_arguments("asinf", _X);
     // body sha256: aeb0b2715b669c0810ab92b54f86092245dca4fa27920575f471e2119e2172f3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl asinf(float _X)");
@@ -6748,12 +6745,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d946b() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d946b", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::atanf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for atanf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for atanf: _X [reason: ambiguous operand type]
+    trace.call_arguments("atanf", _X);
     // body sha256: c99cc3f89ca0ddb223aec6efef5a44cffdd8eb4b2205bc76c1fbae645883ccaa
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl atanf(float _X)");
@@ -6808,12 +6805,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9471() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9471", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::ceil");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for ceil: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for ceil: _X [reason: ambiguous operand type]
+    trace.call_arguments("ceil", _X);
     // body sha256: 02356c9868294b62b8587de491d194645db12e0babb7b5b44684f662e307f163
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl ceil(double _X)");
@@ -6868,12 +6865,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9477() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9477", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::ceilf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for ceilf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for ceilf: _X [reason: ambiguous operand type]
+    trace.call_arguments("ceilf", _X);
     // body sha256: f17b5750657d00143255cf84c4da4b2095d8a8cd708070966c54d0a03e191394
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl ceilf(float _X)");
@@ -6928,12 +6925,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d947d() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d947d", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::exp");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for exp: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for exp: _X [reason: ambiguous operand type]
+    trace.call_arguments("exp", _X);
     // body sha256: 3013e591cb71da098c2ffc9b57add40656dc94c13eaecdcb71516fe6dc8d2eb4
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl exp(double _X)");
@@ -6988,12 +6985,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9483() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9483", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::expf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for expf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for expf: _X [reason: ambiguous operand type]
+    trace.call_arguments("expf", _X);
     // body sha256: fd4831a0e2832e01e3e628276295d4b6b9d404c938101a52f401b3e31ff9fb22
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl expf(float _X)");
@@ -7048,12 +7045,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9489() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9489", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::floorf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for floorf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for floorf: _X [reason: ambiguous operand type]
+    trace.call_arguments("floorf", _X);
     // body sha256: ff29fe4d8e49e04280aa90acdbadea74c65a17b9435a98bf953c548a5cc88544
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl floorf(float _X)");
@@ -7108,12 +7105,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d948f() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d948f", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::log10");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] double _X{};
     [[maybe_unused]] double dVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for log10: double _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for log10: _X [reason: ambiguous operand type]
+    trace.call_arguments("log10", _X);
     // body sha256: 9fd58204f59f150cd072e47a9bcbf8a705f92042b78500de594f47ef71d26662
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("double __cdecl log10(double _X)");
@@ -7168,12 +7165,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9495() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9495", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::log10f");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for log10f: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for log10f: _X [reason: ambiguous operand type]
+    trace.call_arguments("log10f", _X);
     // body sha256: 1aac23eb95d141256a0d5c0dba4511a9d7a4b5f8926ee3662bc397aa818c8a92
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl log10f(float _X)");
@@ -7228,12 +7225,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d949b() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d949b", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::logf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for logf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for logf: _X [reason: ambiguous operand type]
+    trace.call_arguments("logf", _X);
     // body sha256: 6eaa85e440cdbff5f74018290eb7c1ca57dc668c05473d0d6da62183b30d7a36
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl logf(float _X)");
@@ -7289,7 +7286,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d94a1() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for roundf: void [reason: ambiguous operand type]
     trace.call_arguments("roundf");
     // body sha256: c8e1b591b4c81d4e560af3acb29f59244f110bde16617e83ba2b885d98493b38
     // Structured control-flow trace derived from the decompiled body:
@@ -7344,12 +7340,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d94a7() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d94a7", "API-MS-WIN-CRT-MATH-L1-1-0.DLL::sinf");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float _X{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for sinf: float _X [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for sinf: _X [reason: ambiguous operand type]
+    trace.call_arguments("sinf", _X);
     // body sha256: 73706d4c9aafdca30c390822c1b976577cbbbb26cc0092a829b9d07970df1821
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("float __cdecl sinf(float _X)");
@@ -7404,12 +7400,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d94ad() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d94ad", "API-MS-WIN-CRT-STRING-L1-1-0.DLL::strcmp");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] char * _Str1{};
+    [[maybe_unused]] char * _Str2{};
     [[maybe_unused]] std::int32_t iVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for strcmp: char *_Str1,char *_Str2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for strcmp: _Str1,_Str2 [reason: ambiguous operand type]
+    trace.call_arguments("strcmp", _Str1, _Str2);
     // body sha256: 19f03f878da256068a05a16c79926adea82fa344a0d6c2cee80540aa1744b5f6
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("int __cdecl strcmp(char *_Str1,char *_Str2)");
@@ -7464,12 +7461,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d94b3() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d94b3", "API-MS-WIN-CRT-STRING-L1-1-0.DLL::strlen");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] char * _Str{};
     [[maybe_unused]] std::size_t sVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for strlen: char *_Str [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for strlen: _Str [reason: ambiguous operand type]
+    trace.call_arguments("strlen", _Str);
     // body sha256: f3baac9f02f4e2e4b3b1403682f2e2a66bc16d1f8d8b2594e3f8a4134f21df5e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("size_t __cdecl strlen(char *_Str)");
@@ -7524,12 +7521,14 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d94b9() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d94b9", "API-MS-WIN-CRT-STRING-L1-1-0.DLL::strncmp");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] char * _Str1{};
+    [[maybe_unused]] char * _Str2{};
+    [[maybe_unused]] std::size_t _MaxCount{};
     [[maybe_unused]] std::int32_t iVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for strncmp: char *_Str1,char *_Str2,size_t _MaxCount [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for strncmp: _Str1,_Str2,_MaxCount [reason: ambiguous operand type]
+    trace.call_arguments("strncmp", _Str1, _Str2, _MaxCount);
     // body sha256: 6f657f71effcfbb81ef20702ba7ae9dda083159c0fc060841a5a2f2d40d6d72e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("int __cdecl strncmp(char *_Str1,char *_Str2,size_t _MaxCount)");
@@ -7584,12 +7583,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d94bf() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d94bf", "API-MS-WIN-CRT-STRING-L1-1-0.DLL::strncpy");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] char * _Dest{};
+    [[maybe_unused]] char * _Source{};
+    [[maybe_unused]] std::size_t _Count{};
     [[maybe_unused]] char * pcVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for strncpy: char *_Dest,char *_Source,size_t _Count [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for strncpy: _Dest,_Source,_Count [reason: ambiguous operand type]
+    trace.call_arguments("strncpy", _Dest, _Source, _Count);
     // body sha256: a8f43ce631f9d0fd82de96b396b141d32c48e1af6ca73eddc8de831290ade325
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("char * __cdecl strncpy(char *_Dest,char *_Source,size_t _Count)");
@@ -7648,7 +7650,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d94c5() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for wcslen: wchar_t *_Str [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for wcslen: _Str [reason: ambiguous operand type]
     // body sha256: f0223810b8757d4a379f999b378daa1ab1b4f4a3f1a8064dc9d387ce73cde521
     // Structured control-flow trace derived from the decompiled body:
@@ -7712,7 +7713,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d94e0() noexcept {
     // TODO: resolve the indirect call in body 16: (*UNRECOVERED_JUMPTABLE)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _guard_dispatch_icall: void [reason: ambiguous operand type]
     // body sha256: 0299807909918158590c5945d38be67d910394de1c4c729dbae3241e851af512
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void _guard_dispatch_icall(void)");
@@ -7776,7 +7776,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d9500() noexcept {
     // TODO: resolve the indirect call in body 17: (*UNRECOVERED_JUMPTABLE)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _guard_dispatch_icall: void [reason: ambiguous operand type]
     // body sha256: 6be86d406667ab44421c572a2586ce66a255b2accf3a7c11bc55e9825aae9b7b
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void _guard_dispatch_icall(void)");
