@@ -3445,16 +3445,19 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d90e4() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d90e4", "FUN_1802d90e4");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint32_t DVar1{};
+    [[maybe_unused]] std::uint64_t local_res8{};
+    [[maybe_unused]] std::uint64_t local_res10{};
+    [[maybe_unused]] std::uint64_t local_18[2]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: recover global/data declaration, type, value and runtime page/layout for _DAT_1803da500.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for GetSystemTimeAsFileTime: &local_res8 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for QueryPerformanceCounter: &local_res10 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for CONCAT44: local_res10.s.HighPart,local_res10.s.LowPart [reason: unknown aggregate layout]
+    trace.call_arguments("GetSystemTimeAsFileTime", &local_res8);
     trace.call_arguments("GetCurrentThreadId");
     trace.call_arguments("GetCurrentProcessId");
+    trace.call_arguments("QueryPerformanceCounter", &local_res10);
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
     trace.data_ref("_DAT_1803da500", static_cast<const void*>(&image::_DAT_1803da500));
     // body sha256: 1911e625a970ca2e01923b6c68fe9f5641ea519c3f8f361653be424f3b304975
@@ -3971,11 +3974,14 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d9256() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d9256", "VCRUNTIME140.DLL::__C_specific_handler");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint8_t * ExceptionRecord{};
     [[maybe_unused]] void * EstablisherFrame{};
+    [[maybe_unused]] std::uint8_t * ContextRecord{};
+    [[maybe_unused]] std::uint8_t * DispatcherContext{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __C_specific_handler: ExceptionRecord,EstablisherFrame,ContextRecord,DispatcherContext [reason: ambiguous operand type]
+    trace.call_arguments("__C_specific_handler", ExceptionRecord, EstablisherFrame, ContextRecord, DispatcherContext);
     // body sha256: 3527a3f4169c7feace9f1583ad2464d0fbe01b0126e7af24571015a3fa73f832
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("EXCEPTION_DISPOSITION");
@@ -6395,15 +6401,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d93c8() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d93c8", "__GSHandlerCheck_SEH");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint8_t * param_1{};
     [[maybe_unused]] void * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
+    [[maybe_unused]] std::uint8_t * param_4{};
     [[maybe_unused]] std::uint32_t uVar1{};
     [[maybe_unused]] std::uint32_t * puVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((puVar2[(ulonglong)uVar1 * 4 + 1] & ((param_1->ExceptionFlags & 0x66) != 0) + 1) != 0) [reason: unknown aggregate layout]
-    // TODO: call arguments not type-recovered for FUN_1802d8d2c: param_2,param_4,puVar2 + (ulonglong)uVar1 * 4 + 1 [reason: scalar cast width/kind mismatch]
-    // TODO: call arguments not type-recovered for __C_specific_handler: param_1,param_2,param_3,param_4 [reason: ambiguous operand type]
+    trace.call_arguments("FUN_1802d8d2c", param_2, param_4, puVar2 + static_cast<std::uint64_t>(uVar1) * 4 + 1);
+    trace.call_arguments("__C_specific_handler", param_1, param_2, param_3, param_4);
     trace.call_target("FUN_1802d8d2c", reinterpret_cast<const void*>(&image::FUN_1802d8d2c));
     // body sha256: af1fffc385b3bbc9cf4c82666e0970e1fe4a9568e37501b1879bb27de9879391
     // Structured control-flow trace derived from the decompiled body:

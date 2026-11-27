@@ -72,19 +72,19 @@ function. It exits PASS only when all 7,656 rows close.
 
 `src/reconstructed/` maps **7,656/7,656 inventory addresses** to compiled
 C++17 accessors, with **0 unmapped** and **0 stubs**. The generator
-`re/tools/gen_reconstructed_source.py` writes 60 chunks (**85,429,026 bytes**,
-81.47 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
+`re/tools/gen_reconstructed_source.py` writes 60 chunks (**85,291,199 bytes**,
+81.34 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
 source file and a unique `Function_0x...` accessor. Accessors contain
-**462,448 audited executable statement/reference lines**, **306,161
+**462,457 audited executable statement/reference lines**, **306,161
 `trace.statement` calls**, **49,305 real C++ control nodes**, **7,732 actual
 string-literal calls**, and resolved references to **4,331 extern call thunks**
 plus **5,414 extern data symbols** in `src/reconstructed/symbols.h`.
 Recovered declarations, whole-array argument decay, typed field reads and
 synthetic scalar subfields, admitted scalar/pointer casts, global decay, typed
-assignments, multiline signatures, Windows/CRT typedefs and table-admitted
-vector slots produce **34,221 compiler-checked condition expressions** and
-**51,300 `trace.call_arguments` sites**; **7,164 condition sites** and
-**2,878 call-argument sites** remain explicit TODOs where the
+assignments, multiline signatures, Windows/CRT typedefs, decimal-literal
+typing and table-admitted vector slots produce **35,489 compiler-checked
+condition expressions** and **51,309 `trace.call_arguments` sites**;
+**5,853 condition sites** and **1,998 call-argument sites** remain explicit TODOs where the
 evidence is insufficient. Global scalar types are mined from the actual memory
 operands in `m64.dll` by `re/tools/mine_data_types.py`; only slots whose
 observed accesses agree on one width/kind are typed, via

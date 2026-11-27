@@ -17962,7 +17962,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800670a0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for _CxxThrowException: local_a8,(ThrowInfo *)&DAT_1803d5ab8 [reason: unresolved global storage/width]
     trace.call_arguments("FUN_18001d010", local_c8, "current_path()");
-    trace.call_arguments("current_path");
     trace.call_arguments("FUN_180066ad0", local_a8, local_c8, &local_d8);
     trace.call_target("FUN_18001d010", reinterpret_cast<const void*>(&image::FUN_18001d010));
     trace.call_target("FUN_180066ad0", reinterpret_cast<const void*>(&image::FUN_180066ad0));
@@ -19928,15 +19927,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180067970() noexcept {
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (param_1[3] - uVar2 < uVar6) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((7 < *puVar1) && (iVar4 = FUN_180012bf0(puVar7,L"\\\\?\\UNC\\",8), iVar4 == 0)) [reason: assignment or side effect]
-    // TODO: call arguments not type-recovered for FUN_180012bf0: puVar7,L"\\\\?\\",4 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180012bf0: puVar7,L"\\\\?\\UNC\\",8 [reason: ambiguous operand type]
     trace.call_arguments("__std_fs_open_handle", &local_38, param_2, 0x80, 0x2000000);
     trace.call_arguments("FUN_1802d75c4", local_38);
     trace.call_arguments("FUN_18022a480", param_1);
     trace.call_arguments("FUN_1802d79dc", local_38, puVar7, static_cast<std::uint32_t>(uVar9), iVar4);
     trace.call_arguments("FUN_18022a480", param_1, uVar6);
     trace.call_arguments("FUN_1802d75c4", local_38);
+    trace.call_arguments("FUN_180012bf0", puVar7, L"\\\\?\\", 4);
     trace.call_arguments("memmove", param_1, (void *)(reinterpret_cast<std::int64_t>(param_1) + uVar5 * 2), (uVar9 - uVar5) * 2 + 2);
+    trace.call_arguments("FUN_180012bf0", puVar7, L"\\\\?\\UNC\\", 8);
     trace.call_arguments("FUN_18022ec00");
     trace.call_arguments("FUN_180211640", param_1);
     trace.call_target("FUN_180012bf0", reinterpret_cast<const void*>(&image::FUN_180012bf0));
@@ -21508,7 +21507,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800681f0() noexcept {
     // TODO: call arguments not type-recovered for CONCAT44: uStack_104,CONCAT22(uStack_106,local_108) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_18021e290: local_e8 + 7 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_18021e290: local_e8 + 1 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180012bf0: puVar6,L"\\\\?\\",4 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for CONCAT44: uStack_104,CONCAT22(uStack_106,local_108) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_18021e290: local_e8 + 7 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_18021e290: local_e8 + 1 [reason: ambiguous operand type]
@@ -21528,6 +21526,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800681f0() noexcept {
     trace.call_arguments("FUN_1802d75c4", local_110);
     trace.call_arguments("FUN_18022a480", &local_130, uVar8, uVar10, uVar8);
     trace.call_arguments("FUN_1802d75c4", local_110);
+    trace.call_arguments("FUN_180012bf0", puVar6, L"\\\\?\\", 4);
     trace.call_arguments("memmove", puVar6, (undefined2 *)(reinterpret_cast<std::int64_t>(puVar6) + uVar5 * 2), uVar10 * 2 + 2);
     trace.call_arguments("FUN_180211640", &local_130);
     trace.call_arguments("CONCAT22", uStack_106, local_108);
@@ -22920,22 +22919,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x180068ea0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((iVar1 < 0) || (local_458[0] == L'\0')) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((DVar2 == 0) || (local_248[0] == L'\0')) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_500,L"scriptdata",10 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_4e0,L"mayrrX64",8 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_500,L"scriptdata",10 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_4e0,L"mayrrX64",8 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_4c0,L"scriptdata",10 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_4e0,L"mayrrX64",8 [reason: ambiguous operand type]
     trace.call_arguments("memset", local_458, 0, 0x208);
     trace.call_arguments("SHGetFolderPathW", 0, 0x8005, 0, 0);
     trace.call_arguments("memset", local_248, 0, 0x208);
     trace.call_arguments("GetTempPathW", 0x104, local_248);
+    trace.call_arguments("FUN_180211510", &local_500, L"scriptdata", 10);
+    trace.call_arguments("FUN_180211510", &local_4e0, L"mayrrX64", 8);
     trace.call_arguments("FUN_180211510", &local_4c0, &image::DAT_180345b1c, 1);
     trace.call_arguments("FUN_180066720", local_488, &local_4c0, &local_4e0);
     trace.call_arguments("FUN_180066720", param_1, uVar4, &local_500);
     trace.call_arguments("FUN_18021e290", local_488);
     trace.call_arguments("FUN_18021e290", &local_4c0);
     trace.call_arguments("FUN_18021e290", &local_4e0);
+    trace.call_arguments("FUN_180211510", &local_500, L"scriptdata", 10);
+    trace.call_arguments("FUN_180211510", &local_4e0, L"mayrrX64", 8);
     trace.call_arguments("wcslen", local_248);
     trace.call_arguments("FUN_180211510", &local_4c0, local_248, sVar3);
     trace.call_arguments("FUN_180066720", local_488, &local_4c0, &local_4e0);
@@ -22943,6 +22940,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x180068ea0() noexcept {
     trace.call_arguments("FUN_18021e290", local_488);
     trace.call_arguments("FUN_18021e290", &local_4c0);
     trace.call_arguments("FUN_18021e290", &local_4e0);
+    trace.call_arguments("FUN_180211510", &local_4c0, L"scriptdata", 10);
+    trace.call_arguments("FUN_180211510", &local_4e0, L"mayrrX64", 8);
     trace.call_arguments("wcslen", local_458);
     trace.call_arguments("FUN_180211510", &local_500, local_458, sVar3);
     trace.call_arguments("FUN_180066720", local_488, &local_500, &local_4e0);

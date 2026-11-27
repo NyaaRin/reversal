@@ -10,8 +10,12 @@ from __future__ import annotations
 
 import csv
 import re
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from gen_reconstructed_source import recover_declarations
 
 ROOT = Path(__file__).resolve().parents[2]
 DECOMPILE = ROOT / "re" / "dump" / "decompile"
@@ -20,6 +24,9 @@ FIELD_TYPES = ROOT / "re" / "dump" / "field_types.tsv"
 OUT_SLOTS = ROOT / "re" / "dump" / "slot_types.tsv"
 OUT_GLOBALS = ROOT / "re" / "dump" / "global_agreement.tsv"
 OUT_POINTERS = ROOT / "re" / "dump" / "pointer_agreement.tsv"
+OUT_CANDIDATES = ROOT / "re" / "dump" / "operand_candidates.tsv"
+OUT_POINTER_SITES = ROOT / "re" / "dump" / "pointer_sites.tsv"
+CHUNKS = ROOT / "src" / "reconstructed" / "chunks"
 
 TYPE_ALIASES = {
     "undefined": "std::uint8_t", "undefined1": "std::uint8_t",
@@ -201,13 +208,123 @@ def mine_pointers() -> None:
                                  ";".join(sorted(details[name]))])
 
 
+def mine_operand_candidates() -> None:
+    """Record every candidate type for each ambiguous TODO operand.
+
+    Sources are the recorded local/parameter declaration, the typed-global
+    table, the callee's own decompiled prototype, and recovered field rows.
+    No candidate is synthesized: absent evidence produces `no-record`.
+    """
+    data_types = load_data_types()
+    field_rows: dict[tuple[str, int], set[str]] = defaultdict(set)
+    if FIELD_TYPES.exists():
+        with FIELD_TYPES.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle, delimiter="\t"):
+                try:
+                    field_rows[(row["function"], int(row["offset"], 16))].add(
+                        f"{row['kind']}{row['width']}")
+                except (KeyError, ValueError):
+                    continue
+    prototypes: dict[str, dict[int, str]] = {}
+    for path in sorted(DECOMPILE.glob("*.c")):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        lines = text.splitlines()
+        name = function_name(text)
+        header = ""
+        for line in lines[:20]:
+            if "(" in line and not line.strip().startswith("//"):
+                header = line
+                break
+        params = re.search(r"\((.*)\)", header)
+        if not params:
+            continue
+        for index, param in enumerate(params.group(1).split(","), start=1):
+            match = re.match(r"(.+?)(?:\s+)([A-Za-z_][A-Za-z0-9_]*)$", param.strip())
+            if not match:
+                continue
+            mapped = cpp_type(match.group(1).strip())
+            if mapped:
+                prototypes.setdefault(name, {})[index] = mapped
+
+    rows: list[list[str]] = []
+    for chunk in sorted(CHUNKS.glob("chunk_*.cpp")):
+        declarations: dict[str, tuple[str, int | None]] = {}
+        source = ""
+        for line in chunk.read_text(encoding="utf-8", errors="replace").splitlines():
+            match = re.search(r"// source: (re/dump/decompile/\S+)", line)
+            if match:
+                source = match.group(1)
+                try:
+                    body = (ROOT / source).read_text(encoding="utf-8", errors="replace")
+                    declarations = recover_declarations(body)
+                except OSError:
+                    declarations = {}
+            if "// TODO: condition expression type not recovered:" in line:
+                site_type = "condition"
+                site = line.split("not recovered:", 1)[1].split("[reason:", 1)[0].strip()
+            elif "// TODO: call arguments not type-recovered for " in line:
+                site_type = "call"
+                site = line.split("for ", 1)[1].split("[reason:", 1)[0].strip()
+            else:
+                continue
+            operand_text = site.split(": ", 1)[1] if site_type == "call" and ": " in site else site
+            tokens = sorted(set(re.findall(r"\b[A-Za-z_][A-Za-z0-9_]*\b", operand_text)))
+            for token in tokens:
+                if token in {"if", "while", "for", "return", "static_cast", "reinterpret_cast", "load_at"}:
+                    continue
+                candidates: set[str] = set()
+                sources: set[str] = set()
+                if token in declarations:
+                    candidates.add(declarations[token][0])
+                    sources.add("declaration")
+                global_type = None
+                suffix = re.search(r"_([0-9A-Fa-f]{8,})$", token)
+                if suffix:
+                    record = data_types.get(int(suffix.group(1), 16))
+                    if record:
+                        global_type = f"{record[1]}{record[0]}"
+                        candidates.add(global_type)
+                        sources.add("typed-global")
+                # A `base + 0xoffset` access can be matched to a recovered field.
+                for field_match in re.finditer(r"([A-Za-z_][A-Za-z0-9_]*)\s*\+\s*(0[xX][0-9A-Fa-f]+)", operand_text):
+                    if field_match.group(1) == token:
+                        field_candidates = field_rows.get((source, int(field_match.group(2), 16)), set())
+                        for candidate in field_candidates:
+                            candidates.add(candidate)
+                            sources.add("field-layout")
+                if token.startswith("param_"):
+                    try:
+                        index = int(token.split("_", 1)[1])
+                    except ValueError:
+                        index = 0
+                    for function, params in prototypes.items():
+                        if function in site and index in params:
+                            candidates.add(params[index])
+                            sources.add(f"prototype:{function}")
+                if not candidates:
+                    status = "no-record"
+                elif len(candidates) == 1:
+                    status = "consistent"
+                else:
+                    status = "conflict"
+                rows.append([site_type, site[:180], token, ",".join(sorted(candidates)),
+                             ",".join(sorted(sources)), status])
+
+    with OUT_CANDIDATES.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.writer(handle, delimiter="\t", lineterminator="\n")
+        writer.writerow(["site_type", "site", "token", "candidate_types", "sources", "status"])
+        writer.writerows(rows)
+
+
 def main() -> None:
     mine_slots()
     mine_globals()
     mine_pointers()
+    mine_operand_candidates()
     print(f"wrote {OUT_SLOTS.relative_to(ROOT)}")
     print(f"wrote {OUT_GLOBALS.relative_to(ROOT)}")
     print(f"wrote {OUT_POINTERS.relative_to(ROOT)}")
+    print(f"wrote {OUT_CANDIDATES.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

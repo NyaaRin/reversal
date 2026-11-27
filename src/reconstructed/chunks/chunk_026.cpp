@@ -6828,7 +6828,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180208f20() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803ff978 != (code *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for function: ref=%d, slot holds %s [type %d], state=%p, listeners=%d [reason: assignment or side effect]
     trace.call_arguments("FUN_18003a090", &image::DAT_18037a130);
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180039a50", 0);

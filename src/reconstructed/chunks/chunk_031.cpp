@@ -4302,10 +4302,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233fb0() noexcept {
     [[maybe_unused]] wchar_t * pwVar2{};
     [[maybe_unused]] std::int64_t * plVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint8_t * p_Var5{};
     [[maybe_unused]] char * pcVar6{};
+    [[maybe_unused]] std::uint8_t * p_Var7{};
     [[maybe_unused]] std::uint8_t auStack_108[32]{};
     [[maybe_unused]] std::uint32_t local_e8{};
+    [[maybe_unused]] std::uint8_t * local_e0{};
+    [[maybe_unused]] std::uint8_t local_d8{};
     [[maybe_unused]] std::uint8_t local_c8[32]{};
+    [[maybe_unused]] std::uint8_t local_40[8]{};
     [[maybe_unused]] std::uint64_t local_38{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180234022.
@@ -4315,15 +4320,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233fb0() noexcept {
     // TODO: resolve the indirect call in body 77: (**(code **)(*(longlong *)this + 8))(this);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (uVar4 < *(ulonglong *)(p_Var5 + 0x18)) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for _Lockit: local_40,0 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_1802106d0: id_exref [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Locinfo: local_a8,pcVar6 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for facet: this,0 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Getcoll: this_00,&local_d8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Locinfo: local_a8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_1802d81e8: this [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for _Lockit: local_40 [reason: ambiguous operand type]
     trace.call_arguments("_Getgloballocale");
     trace.call_arguments("FUN_1802d8350", 0x20);
     trace.call_arguments("FUN_180013a20", param_1, local_c8);
@@ -4370,7 +4371,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233fb0() noexcept {
                     LAB_18023406c: ;
                     if (trace.condition("if (this != (facet *)0x0) goto LAB_180234022; } else")) {
                         trace.statement("p_Var5 = std::locale::_Getgloballocale();");
-                        if (trace.condition("if (uVar4 < *(ulonglong *)(p_Var5 + 0x18))")) {
+                        if (trace.checked_condition("if (uVar4 < *(ulonglong *)(p_Var5 + 0x18))", [&]() -> bool { return static_cast<bool>(uVar4 < load_at<std::uint64_t>(p_Var5 + 0x18, 0)); })) {
                             trace.statement("this = *(facet **)(uVar4 * 8 + *(longlong *)(p_Var5 + 0x10));");
                             trace.statement("goto LAB_18023406c;");
                         }

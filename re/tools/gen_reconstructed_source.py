@@ -105,6 +105,42 @@ TYPE_ALIASES = {
     "LRESULT": "std::intptr_t",
     "HRESULT": "std::int32_t",
     "ATOM": "std::uint16_t",
+    "locale": "std::uint8_t",
+    "facet": "std::uint8_t",
+    "TypeDescriptor": "std::uint8_t",
+    "_Locimp": "std::uint8_t",
+    "codecvt_base": "std::uint8_t",
+    "_Collvec": "std::uint8_t",
+    "_Cvtvec": "std::uint8_t",
+    "_Lockit": "std::uint8_t",
+    "_EXCEPTION_RECORD": "std::uint8_t",
+    "_CONTEXT": "std::uint8_t",
+    "_DISPATCHER_CONTEXT": "std::uint8_t",
+    "_MEMORY_BASIC_INFORMATION": "std::uint8_t",
+    "DATA_BLOB": "std::uint8_t",
+    "tagPOINT": "std::uint8_t",
+    "tagRECT": "std::uint8_t",
+    "LARGE_INTEGER": "std::uint64_t",
+    "_FILETIME": "std::uint64_t",
+    "FILETIME": "std::uint64_t",
+    "HKEY": "void*",
+    "HMONITOR": "void*",
+    "HDESK": "void*",
+    "HHOOK": "void*",
+    "HKL": "void*",
+    "HRSRC": "void*",
+    "HGDIOBJ": "void*",
+    "HPEN": "void*",
+    "HFONT": "void*",
+    "HRGN": "void*",
+    "HPALETTE": "void*",
+    "HENHMETAFILE": "void*",
+    "HMETAFILE": "void*",
+    "HCOLORSPACE": "void*",
+    "HTASK": "void*",
+    "HSPACE": "void*",
+    "HTHEME": "void*",
+    "HWINEVENTHOOK": "void*",
     "WCHAR": "wchar_t",
     "CHAR": "char",
     "SHORT": "std::int16_t",
@@ -718,14 +754,20 @@ WINDOWS_POINTER_ALIASES = {
     "PWSTR", "LPCVOID", "LPVOID", "PVOID", "LPBYTE", "PBYTE", "LPWORD",
     "PWORD", "LPDWORD", "PDWORD", "LPHANDLE", "PHANDLE", "HANDLE",
     "FARPROC", "HLOCAL", "HWND", "HINSTANCE", "HICON", "HCURSOR",
-    "HMENU", "HBRUSH", "HDC", "HBITMAP", "HGLOBAL",
+    "HMENU", "HBRUSH", "HDC", "HBITMAP", "HGLOBAL", "HKEY", "HMONITOR",
+    "HDESK", "HHOOK", "HKL", "HRSRC", "HGDIOBJ", "HPEN", "HFONT", "HRGN",
+    "HPALETTE", "HENHMETAFILE", "HMETAFILE", "HCOLORSPACE", "HTASK",
+    "HSPACE", "HTHEME", "HWINEVENTHOOK", "locale", "facet", "TypeDescriptor",
+    "_Locimp", "codecvt_base", "_Collvec", "_Cvtvec", "_Lockit",
+    "_EXCEPTION_RECORD", "_CONTEXT", "_DISPATCHER_CONTEXT",
+    "_MEMORY_BASIC_INFORMATION", "DATA_BLOB", "tagPOINT", "tagRECT",
 }
 WINDOWS_SCALAR_ALIASES = {
     "DWORD", "DWORD64", "UINT", "UINT64", "WORD", "BYTE", "ULONG",
     "ULONGLONG", "WPARAM", "LPARAM", "LRESULT", "HRESULT", "ATOM",
     "WCHAR", "CHAR", "SHORT", "USHORT", "INT", "LONG", "LONGLONG",
     "SIZE_T", "INT_PTR", "UINT_PTR", "LSTATUS", "sbyte", "__uint64",
-    "__time64_t",
+    "__time64_t", "LARGE_INTEGER", "_FILETIME", "FILETIME",
 }
 
 
@@ -762,6 +804,14 @@ def safe_expression(
         return None
     if not expr or expr in TYPE_WORDS or any(char in expr for char in ";{}"):
         return None
+    if re.search(r"\bthis\b", expr):
+        # The generated accessors are free functions; a decompiled method
+        # pseudo-`this` has no declared object parameter here.
+        return None
+    if re.fullmatch(r'L"(?:[^"\\]|\\.)*"', expr):
+        return expr
+    if re.fullmatch(r'[#%][-+ #0-9.diouxXeEfFgGaAcspn%]*', expr) and '%' in expr:
+        return cpp_string(expr)
     if '"' in expr:
         # A pure literal (or adjacent literals) has a known `const char*`
         # argument type.  Re-escape it through the same encoder used by the
@@ -774,7 +824,9 @@ def safe_expression(
         first = expr.split()[0]
         if first in TYPE_WORDS or first in TYPE_ALIASES:
             return None
-    if "->" in expr or "." in expr or "/*" in expr or "//" in expr:
+    if "->" in expr or re.search(r"\b[A-Za-z_][A-Za-z0-9_]*\s*\.", expr) or "/*" in expr or "//" in expr:
+        # A decimal literal (`0.0`, `1.5`) is not member access; only a dotted
+        # identifier is.
         return None
     if expr.count("(") != expr.count(")") or expr.count("[") != expr.count("]"):
         return None
@@ -1004,6 +1056,27 @@ def safe_expression(
     return translated
 
 
+def string_literal_ranges(line: str) -> list[tuple[int, int]]:
+    ranges: list[tuple[int, int]] = []
+    quote: str | None = None
+    escaped = False
+    start = 0
+    for index, char in enumerate(line):
+        if quote:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == quote:
+                ranges.append((start, index + 1))
+                quote = None
+            continue
+        if char in ('"', "'"):
+            quote = char
+            start = index
+    return ranges
+
+
 def header_key(header: str) -> str:
     return re.sub(r"\s+", " ", header.strip())
 
@@ -1058,7 +1131,10 @@ def recover_typed_sites(
         # Scan direct call expressions on this line.  Calls nested in another
         # call are intentionally left unresolved until their own signatures are
         # recovered; simple casts are not calls.
+        quoted = string_literal_ranges(line)
         for match in CALL_RE.finditer(line):
+            if any(start <= match.start() < end for start, end in quoted):
+                continue
             target = match.group(1)
             if target in CALL_KEYWORDS or target in TYPE_WORDS or target in declarations:
                 continue
