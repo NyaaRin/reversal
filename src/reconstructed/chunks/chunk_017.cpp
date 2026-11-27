@@ -20492,7 +20492,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180113550() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (((((uint)fVar5 & 0x7f800000) != 0x7f800000) && (((uint)param_2[1] & 0x7f800000) != 0x7f800000)
     // TODO: condition expression type not recovered: if ((fVar5 != 0.0) || (fVar3 != 0.0))
-    // TODO: call arguments not type-recovered for FUN_1802d3e00: param_2[1] - *(float *)(param_1 + 0x40)
+    trace.call_arguments("FUN_1802d3e00", param_2[1] - load_at<float>(param_1 + 0x40, 0));
     trace.call_arguments("FUN_1802d3e00", fVar3 + load_at<float>(param_1 + 0x24, 0));
     trace.call_target("FUN_1802d3e00", reinterpret_cast<const void*>(&image::FUN_1802d3e00));
     trace.data_ref("DAT_180381108", static_cast<const void*>(&image::DAT_180381108));
@@ -36138,7 +36138,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18011a5c0() noexcept {
     // TODO: condition expression type not recovered: if (lVar7 + 6U < 0x10)
     // TODO: condition expression type not recovered: for (; pbVar2 < pbVar8 + lVar7; pbVar2 = pbVar2 + 1)
     // TODO: condition expression type not recovered: if (lVar10 + 7U < 0x10)
-    // TODO: condition expression type not recovered: if (*(ulonglong *)(param_2 + 0x10) < uVar3)
     trace.call_arguments("memset", local_148, 0, 0x100);
     trace.call_arguments("FUN_1802d6fd0", pbVar8, lVar7, &image::DAT_18035160c, 6);
     trace.call_arguments("memset", local_148, 0, 0x100);
@@ -36232,7 +36231,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18011a5c0() noexcept {
                             trace.statement("param_1[1] = 0;");
                             trace.statement("param_1[2] = 0;");
                             trace.statement("param_1[3] = 0;");
-                            if (trace.condition("if (*(ulonglong *)(param_2 + 0x10) < uVar3)")) {
+                            if (trace.checked_condition("if (*(ulonglong *)(param_2 + 0x10) < uVar3)", [&]() -> bool { return static_cast<bool>(load_at<std::uint64_t>(param_2 + 0x10, 0) < uVar3); })) {
                                 trace.statement("FUN_18022ec00();");
                             }
                             trace.statement("uVar9 = (lVar7 - uVar3) + 1;");

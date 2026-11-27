@@ -9818,7 +9818,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800bdd80() noexcept {
     // TODO: call arguments not type-recovered for moved: %p -> %p
     // TODO: call arguments not type-recovered for FUN_1800bda90: lVar14,*param_3
     // TODO: call arguments not type-recovered for NO: Lua clock -- this option cannot help here
-    // TODO: call arguments not type-recovered for FUN_1802d3e00: (float)(int)*pfVar20 + *(float *)(local_118 + 8)
     // TODO: call arguments not type-recovered for FUN_1802d3e00: fVar31 + DAT_180381188 + 0.0 + fVar32
     trace.call_arguments("FUN_1800b21b0");
     trace.call_arguments("FUN_1800b2c30");
@@ -9854,6 +9853,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800bdd80() noexcept {
     trace.call_arguments("FUN_1800bdcb0");
     trace.call_arguments("FUN_1802d3e00", fVar31 + image::DAT_180381188);
     trace.call_arguments("FUN_1802d3e00", fVar31 + image::DAT_180381188 + fVar32);
+    trace.call_arguments("FUN_1802d3e00", (float)(int)*pfVar20 + load_at<float>(local_118 + 8, 0));
     trace.call_arguments("FUN_1802d3e00", fVar28);
     trace.call_arguments("FUN_1800bdcb0");
     trace.call_arguments("FUN_180241610", &image::DAT_1803fadf0, 0x2d8f695138585a77);
@@ -16092,7 +16092,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800c1c30() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for CONCAT44: local_80._4_4_,iVar5
-    // TODO: call arguments not type-recovered for FUN_1802d3e00: local_78._4_4_ - *pfVar1
     trace.call_arguments("FUN_18001d620");
     trace.call_arguments("FUN_1802d3e00", param_3);
     trace.call_arguments("FUN_180241610", &image::DAT_1803fadf0, 0x2d8f695138585a77);
@@ -16103,6 +16102,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800c1c30() noexcept {
     trace.call_arguments("FUN_1800ba0f0", uVar7, &local_60);
     trace.call_arguments("FUN_18001d350", param_1);
     trace.call_arguments("FUN_1800ba390", param_1, iVar5, local_58, &local_a4);
+    trace.call_arguments("FUN_1802d3e00", static_cast<std::uint32_t>((std::uint64_t(local_78) >> 32)) - *pfVar1);
     trace.call_arguments("FUN_1800ba3d0", uVar7, &local_60);
     trace.call_arguments("FUN_1800ba3b0", param_1, iVar5, iVar2, uVar12);
     trace.call_arguments("FUN_1800c1c10", param_1);
@@ -28591,7 +28591,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800c79f0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (fVar3 < 0.0)
-    // TODO: condition expression type not recovered: if (fVar3 < *(float *)param_1[2])
     trace.call_arguments("FUN_1802d4540", &local_48, &local_38);
     trace.call_arguments("FUN_1800221c0", &local_38);
     trace.call_arguments("FUN_180022110", local_38, *puVar2);
@@ -28634,7 +28633,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800c79f0() noexcept {
             } else {
             trace.statement("fVar3 = SQRT(fVar3);");
             }
-            if (trace.condition("if (fVar3 < *(float *)param_1[2])")) {
+            if (trace.checked_condition("if (fVar3 < *(float *)param_1[2])", [&]() -> bool { return static_cast<bool>(fVar3 < *(float *)param_1[2]); })) {
                 trace.statement("*(float *)param_1[2] = fVar3;");
             }
             trace.statement("return;");

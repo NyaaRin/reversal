@@ -5729,7 +5729,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18004fe90() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar7 != (longlong *)0x0) && (plVar7[1] == param_1))
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar3 + 0xd1) == '\0')
-    // TODO: condition expression type not recovered: if (*(int *)(*plVar3 + 0x1578) == iVar6)
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("FUN_1802899e0", iVar6, 0xb, puVar9);
@@ -5788,7 +5787,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18004fe90() noexcept {
                 if (trace.condition("if (*(char *)((longlong)plVar3 + 0xd1) == '\\0')")) {
                     trace.statement("iVar6 = FUN_180268980(puVar9,0,*(undefined4 *)");
                     trace.statement("(plVar3[0x22] + -4 + (longlong)(int)plVar3[0x21] * 4));");
-                    if (trace.condition("if (*(int *)(*plVar3 + 0x1578) == iVar6)")) {
+                    if (trace.checked_condition("if (*(int *)(*plVar3 + 0x1578) == iVar6)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(*plVar3 + 0x1578, 0) == iVar6); })) {
                         trace.statement("FUN_1802899e0(iVar6,0xb,puVar9);");
                     }
                     trace.statement("uVar5 = FUN_1802bff90(iVar6,uVar10 | 0x1a,puVar9,0);");
@@ -5950,7 +5949,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180050040() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar5 != (longlong *)0x0) && (plVar5[1] == param_1))
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar2 + 0xd1) == '\0')
-    // TODO: condition expression type not recovered: if (*(int *)(*plVar2 + 0x1578) == iVar4)
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("FUN_1802899e0", iVar4, 0xb, puVar7);
@@ -6008,7 +6006,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180050040() noexcept {
                 if (trace.condition("if (*(char *)((longlong)plVar2 + 0xd1) == '\\0')")) {
                     trace.statement("iVar4 = FUN_180268980(puVar7,0,*(undefined4 *)");
                     trace.statement("(plVar2[0x22] + -4 + (longlong)(int)plVar2[0x21] * 4));");
-                    if (trace.condition("if (*(int *)(*plVar2 + 0x1578) == iVar4)")) {
+                    if (trace.checked_condition("if (*(int *)(*plVar2 + 0x1578) == iVar4)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(*plVar2 + 0x1578, 0) == iVar4); })) {
                         trace.statement("FUN_1802899e0(iVar4,0xb,puVar7);");
                     }
                     trace.statement("cVar3 = FUN_1802bff90(iVar4,iVar8,puVar7,0);");
@@ -6296,7 +6294,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180050250() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar6 != (longlong *)0x0) && (plVar6[1] == param_2))
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar3 + 0xd1) == '\0')
-    // TODO: condition expression type not recovered: if (*(int *)(*plVar3 + 0x1578) == iVar5)
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("FUN_1802899e0", iVar5, 0xb, pcVar10);
@@ -6366,7 +6363,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180050250() noexcept {
                 if (trace.condition("if (*(char *)((longlong)plVar3 + 0xd1) == '\\0')")) {
                     trace.statement("iVar5 = FUN_180268980(pcVar10,0,");
                     trace.statement("*(undefined4 *)(plVar3[0x22] + -4 + (longlong)(int)plVar3[0x21] * 4));");
-                    if (trace.condition("if (*(int *)(*plVar3 + 0x1578) == iVar5)")) {
+                    if (trace.checked_condition("if (*(int *)(*plVar3 + 0x1578) == iVar5)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(*plVar3 + 0x1578, 0) == iVar5); })) {
                         trace.statement("FUN_1802899e0(iVar5,0xb,pcVar10);");
                     }
                     trace.statement("piVar8 = (int *)FUN_180269290(lVar2 + 0x23e8,iVar5);");

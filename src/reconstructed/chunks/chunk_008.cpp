@@ -5518,9 +5518,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18006be90() noexcept {
     // TODO: condition expression type not recovered: if ((char)local_300[0] != '\0')
     // TODO: condition expression type not recovered: if ((int)local_300[0] < (int)(&DAT_1803fd378)[uVar18 * 4])
     // TODO: condition expression type not recovered: if (*(char *)((longlong)puVar19 + 0x19) == '\0')
-    // TODO: condition expression type not recovered: if ((int)uVar17 <= *(int *)(puVar19 + 4))
     // TODO: condition expression type not recovered: if ((*(char *)((longlong)puVar12 + 0x19) != '\0') || ((int)uVar17 < *(int *)(puVar12 + 4)))
-    // TODO: condition expression type not recovered: if ((int)uVar5 < *(int *)(puVar12 + 6))
     // TODO: call arguments not type-recovered for message: s
     // TODO: call arguments not type-recovered for CURSOR: +0x%X word / +0x%X avail / +0x%X in
     // TODO: call arguments not type-recovered for FUN_18006bbb0: param_1,local_198 + 0x40,0x100,local_300
@@ -5778,7 +5776,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18006be90() noexcept {
             if (trace.condition("if (*(int *)(&DAT_1803fd37c + uVar18 * 0x10) < (int)local_300[0]) goto LAB_18006c143; } (&DAT_1803fd370)[uVar18 * 2] = lVar15 + 1; puVar7 = DAT_1805c7c50; if ((int)uVar17 < 0) goto LAB_18006c295; puVar19 = (undefined8 *)DAT_1805c7c50[1]; puVar11 = puVar19; puVar12 = DAT_1805c7c50; if (*(char *)((longlong)puVar19 + 0x19) == '\\0')")) {
                 do {
                     trace.statement("puVar19 = puVar11;");
-                    if (trace.condition("if ((int)uVar17 <= *(int *)(puVar19 + 4))")) {
+                    if (trace.checked_condition("if ((int)uVar17 <= *(int *)(puVar19 + 4))", [&]() -> bool { return static_cast<bool>((int)uVar17 <= load_at<std::int32_t>(puVar19 + 4, 0)); })) {
                         trace.statement("puVar11 = (undefined8 *)*puVar19;");
                         trace.statement("puVar12 = puVar19;");
                     } else {
@@ -5820,7 +5818,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18006be90() noexcept {
                 LAB_18006c259: ;
                 trace.statement("*(uint *)((longlong)puVar12 + 0x34) = uVar5;");
             } else {
-            if (trace.condition("if ((int)uVar5 < *(int *)(puVar12 + 6))")) {
+            if (trace.checked_condition("if ((int)uVar5 < *(int *)(puVar12 + 6))", [&]() -> bool { return static_cast<bool>((int)uVar5 < load_at<std::int32_t>(puVar12 + 6, 0)); })) {
                 trace.statement("*(uint *)(puVar12 + 6) = uVar5;");
             }
             if (trace.condition("if (*(int *)((longlong)puVar12 + 0x34) < (int)uVar5) goto LAB_18006c259; } puVar12[5] = puVar12[5] + 1; if ((*(char *)(puVar12 + 7) == '\\0') && (local_198[0] != '\\0'))")) {

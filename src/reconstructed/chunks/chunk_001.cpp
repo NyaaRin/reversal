@@ -5530,7 +5530,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180016410() noexcept {
     // TODO: condition expression type not recovered: if ('F' < (char)(*(byte *)((longlong)plVar7 + uVar10 + 1) & 0xdf))
     // TODO: condition expression type not recovered: for (; local_80 = pHVar4, pHVar4 < pHVar9; pHVar4 = (HMODULE)((longlong)&pHVar4->unused + 1)
     // TODO: condition expression type not recovered: if (uVar10 == (longlong)puVar12 - (longlong)puVar11 >> 2)
-    // TODO: condition expression type not recovered: if (puVar1 == (ulonglong *)param_1[2])
     // TODO: call arguments not type-recovered for GetModuleHandleA: param_2
     trace.call_arguments("GetCurrentProcess");
     trace.call_arguments("K32GetModuleInformation", pvVar5, pHVar4, &local_58, 0x18);
@@ -5728,7 +5727,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180016410() noexcept {
                                 do {
                                     if (trace.condition("if ((-1 < (int)puVar11[uVar10]) && (*(char *)((longlong)&pHVar4->unused + uVar10) != (char)puVar11[uVar10])) goto LAB_18001677f; uVar10 = uVar10 + 1; } while (uVar10 < uVar8); } if (uVar10 == (longlong)puVar12 - (longlong)puVar11 >> 2)")) {
                                         trace.statement("puVar1 = (ulonglong *)param_1[1];");
-                                        if (trace.condition("if (puVar1 == (ulonglong *)param_1[2])")) {
+                                        if (trace.checked_condition("if (puVar1 == (ulonglong *)param_1[2])", [&]() -> bool { return static_cast<bool>(puVar1 == (ulonglong *)param_1[2]); })) {
                                             trace.statement("FUN_180221c00(param_1,puVar1,&local_80);");
                                         } else {
                                         trace.statement("*puVar1 = (ulonglong)pHVar4;");
@@ -9903,7 +9902,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180018990() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803f9278 != (longlong *)0x0)
-    // TODO: condition expression type not recovered: if (puVar1 == (undefined8 *)param_1[2])
     trace.call_arguments("FUN_180221c00", param_1, puVar1, &local_res10);
     trace.call_target("FUN_180221c00", reinterpret_cast<const void*>(&image::FUN_180221c00));
     trace.data_ref("DAT_1803f9278", static_cast<const void*>(&image::DAT_1803f9278));
@@ -9925,7 +9923,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180018990() noexcept {
                 for (auto loop = trace.checked_loop("for (lVar3 = (**(code **)(*plVar2 + 0x40))(); lVar3 != 0; lVar3 = *(longlong *)(lVar3 + 0x20))", [&]() -> bool { return static_cast<bool>(lVar3 != 0); }); loop.next(); ) {
                     trace.statement("local_res10 = *(undefined8 *)(lVar3 + 0x18);");
                     trace.statement("puVar1 = (undefined8 *)param_1[1];");
-                    if (trace.condition("if (puVar1 == (undefined8 *)param_1[2])")) {
+                    if (trace.checked_condition("if (puVar1 == (undefined8 *)param_1[2])", [&]() -> bool { return static_cast<bool>(puVar1 == (undefined8 *)param_1[2]); })) {
                         trace.statement("FUN_180221c00(param_1,puVar1,&local_res10);");
                     } else {
                     trace.statement("*puVar1 = local_res10;");
@@ -13163,7 +13161,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180019e10() noexcept {
     // TODO: condition expression type not recovered: for (; (((ulonglong)param_2 & 3) != 0 && (7 < param_3)); param_3 = param_3 + -8)
     // TODO: condition expression type not recovered: for (; 7 < param_3; param_3 = param_3 + -8)
     // TODO: condition expression type not recovered: if ((int)(*(int *)((longlong)param_1 + 0xc) - uVar4) < param_3)
-    // TODO: call arguments not type-recovered for memcpy: (void *)(((longlong)(int)uVar4 >> 3) + *param_1),param_2,(longlong)iVar2
+    trace.call_arguments("memcpy", (void *)(((longlong)(int)uVar4 >> 3) + *param_1), param_2, (longlong)iVar2);
     trace.data_ref("DAT_1803f92a0", static_cast<const void*>(&image::DAT_1803f92a0));
     trace.data_ref("DAT_1803f9320", static_cast<const void*>(&image::DAT_1803f9320));
     // body sha256: d1e134e110d55c70e70934d13bf794deaa0e528325620ad9ca524d8c761bbdec

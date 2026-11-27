@@ -23481,7 +23481,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180035bb0() noexcept {
     // TODO: condition expression type not recovered: if ((DAT_1803fb088 == (code *)0x0) || (plVar12[1] == 0))
     // TODO: condition expression type not recovered: if (iVar4 - 3U < 2)
     // TODO: condition expression type not recovered: if (&local_c8 != puVar16)
-    // TODO: condition expression type not recovered: if (puVar10 == (ulonglong *)local_120[2])
     // TODO: condition expression type not recovered: while( true )
     // TODO: condition expression type not recovered: if ((DAT_1803fb088 == (code *)0x0) || (*plVar18 == 0))
     // TODO: condition expression type not recovered: if (((DAT_1803fb088 == (code *)0x0) || (DAT_1803faf10 == (code *)0x0)) || (*plVar18 == 0))
@@ -23708,7 +23707,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180035bb0() noexcept {
                                         trace.statement("FUN_18020e450(local_e8);");
                                         }
                                         trace.statement("puVar10 = (ulonglong *)local_120[1];");
-                                        if (trace.condition("if (puVar10 == (ulonglong *)local_120[2])")) {
+                                        if (trace.checked_condition("if (puVar10 == (ulonglong *)local_120[2])", [&]() -> bool { return static_cast<bool>(puVar10 == (ulonglong *)local_120[2]); })) {
                                             trace.statement("FUN_1802293c0(local_120,puVar10,&local_c8);");
                                         } else {
                                         trace.statement("*puVar10 = local_c8;");

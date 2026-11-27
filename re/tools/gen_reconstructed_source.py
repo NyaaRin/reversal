@@ -558,13 +558,13 @@ def safe_expression(
                 other_pointer = pointer_shape(other_type)
                 if local_pointer and other_pointer:
                     if "void" not in local_pointer[0] and "void" not in other_pointer[0] and local_pointer != other_pointer:
-                        comparison = rf"\b{re.escape(name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(name)}\b"
+                        comparison = rf"\b{re.escape(name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(name)}\b"
                         if re.search(comparison, expr):
                             return None
                     continue
                 if bool(local_pointer) == bool(other_pointer):
                     continue
-                comparison = rf"\b{re.escape(name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(name)}\b"
+                comparison = rf"\b{re.escape(name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(name)}\b"
                 if re.search(comparison, expr):
                     return None
         if local_pointer:
@@ -646,6 +646,18 @@ def safe_expression(
             # operand is an untyped byte-array global.  Without a width/kind
             # agreement for that global, the comparison has no safe type.
             return None
+    if re.search(r"load_at<[^>]*\*>", expr):
+        for name, (type_name, _) in analysis_locals.items():
+            if not pointer_shape(type_name) or re.search(rf"\b{re.escape(name)}\s*\(", expr):
+                continue
+            if re.search(
+                rf"\b{re.escape(name)}\b\s*(?:<=|>=|==|!=|<|>)\s*load_at<|load_at<[^>]*>\s*\([^;]*?\)\s*(?:<=|>=|==|!=|<|>)\s*\b{re.escape(name)}\b",
+                expr,
+            ):
+                # The decompiler's cast depth and the recovered variable depth
+                # disagree in a few mechanically emitted loops; keep the shape
+                # as a TODO instead of inventing a reinterpret_cast.
+                return None
     # A nested call is only safe when it is a type cast or sizeof; function
     # calls remain trace-only unless their own arguments are resolved.
     for match in CALL_RE.finditer(expr):

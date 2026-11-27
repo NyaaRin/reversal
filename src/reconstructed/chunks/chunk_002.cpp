@@ -1512,7 +1512,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001ed70() noexcept {
     // TODO: resolve the indirect call in body 62: cVar3 = (*pcVar2)(plVar7,local_450[iVar11],local_438,0x200);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (iVar11 = 0; iVar11 < (int)((pcVar8 != param_1) + 1); iVar11 = iVar11 + 1)
     // TODO: condition expression type not recovered: if ((cVar3 != '\0') && (local_438[0] != L'\0'))
     trace.call_arguments("FUN_18001eac0");
     trace.call_arguments("FUN_180014410", "[WEAP] localize '%s' -> %s\n", param_1, pcVar8);
@@ -1568,7 +1567,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001ed70() noexcept {
                 }
                 trace.statement("local_450[0] = pcVar8;");
                 trace.statement("local_450[1] = param_1;");
-                for (auto loop = trace.loop("for (iVar11 = 0; iVar11 < (int)((pcVar8 != param_1) + 1); iVar11 = iVar11 + 1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (iVar11 = 0; iVar11 < (int)((pcVar8 != param_1) + 1); iVar11 = iVar11 + 1)", [&]() -> bool { return static_cast<bool>(iVar11 < (int)((pcVar8 != param_1) + 1)); }); loop.next(); ) {
                     trace.statement("local_438[0] = L'\\0';");
                     trace.statement("cVar3 = (*pcVar2)(plVar7,local_450[iVar11],local_438,0x200);");
                     if (trace.condition("if ((cVar3 != '\\0') && (local_438[0] != L'\\0'))")) {
@@ -24276,7 +24275,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180028c30() noexcept {
     // TODO: condition expression type not recovered: if (lVar7 + 2U < 0x10)
     // TODO: condition expression type not recovered: for (; pbVar2 < pbVar8 + lVar7; pbVar2 = pbVar2 + 1)
     // TODO: condition expression type not recovered: if (lVar10 + 3U < 0x10)
-    // TODO: condition expression type not recovered: if (*(ulonglong *)(param_3 + 0x10) < uVar3)
     trace.call_arguments("memset", local_148, 0, 0x100);
     trace.call_arguments("FUN_1802d6fd0", pbVar8, lVar7, &image::DAT_180340eb4, 2);
     trace.call_arguments("memset", local_148, 0, 0x100);
@@ -24368,7 +24366,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180028c30() noexcept {
                             trace.statement("param_2[1] = 0;");
                             trace.statement("param_2[2] = 0;");
                             trace.statement("param_2[3] = 0;");
-                            if (trace.condition("if (*(ulonglong *)(param_3 + 0x10) < uVar3)")) {
+                            if (trace.checked_condition("if (*(ulonglong *)(param_3 + 0x10) < uVar3)", [&]() -> bool { return static_cast<bool>(load_at<std::uint64_t>(param_3 + 0x10, 0) < uVar3); })) {
                                 trace.statement("FUN_18022ec00();");
                             }
                             trace.statement("uVar9 = (lVar7 - uVar3) + 1;");

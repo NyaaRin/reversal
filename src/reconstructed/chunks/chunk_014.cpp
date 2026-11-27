@@ -37711,7 +37711,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800deb70() noexcept {
     // TODO: condition expression type not recovered: if ((param_3[2] & 0x7f800000) == 0x7f800000)
     // TODO: condition expression type not recovered: if ((bVar3) || (fVar4 < (float)(uVar20 & _DAT_1803817c0)))
     // TODO: call arguments not type-recovered for FUN_1802d4540: param_3 + 0x10,&local_a0
-    // TODO: call arguments not type-recovered for CONCAT44: local_a0._4_4_ - pfVar15[1],(float)local_a0 - *pfVar15
     // TODO: call arguments not type-recovered for FUN_1802d4050: &local_a0,param_3 + 0x10
     // TODO: call arguments not type-recovered for CONCAT44: local_140._4_4_,DAT_1803db4b8
     // TODO: call arguments not type-recovered for CONCAT44: local_138._4_4_,DAT_1803db4bc
@@ -37744,6 +37743,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800deb70() noexcept {
     trace.call_arguments("FUN_180076750", dVar14);
     trace.call_arguments("CONCAT44", local_148, local_148);
     trace.call_arguments("FUN_1800deac0", extraout_XMM0_Qa, local_160);
+    trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((std::uint64_t(local_a0) >> 32)) - pfVar15[1], (float)local_a0 - *pfVar15);
     trace.call_arguments("FUN_180022190", &local_a0);
     trace.call_arguments("FUN_1800deac0");
     trace.call_arguments("FUN_180076b00", plVar11);

@@ -8968,7 +8968,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800a0d60() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_1[3])
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar1 == (longlong *)param_2[1])
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)plVar1[3])
     // body sha256: f45beb1a26def56ef20166f8b9d2d498378ffaeddba53f17df267f9e041504d9
     // Structured control-flow trace derived from the decompiled body:
@@ -8984,7 +8983,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800a0d60() noexcept {
             }
             trace.statement("plVar1 = (longlong *)*param_2;");
             while (trace.loop_condition("while( true )")) {
-                if (trace.condition("if (plVar1 == (longlong *)param_2[1])")) {
+                if (trace.checked_condition("if (plVar1 == (longlong *)param_2[1])", [&]() -> bool { return static_cast<bool>(plVar1 == (longlong *)param_2[1]); })) {
                     trace.statement("return false;");
                 }
                 trace.statement("plVar2 = plVar1;");
@@ -27433,7 +27432,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800aa340() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((int)fVar8 <= *piVar1)
-    // TODO: condition expression type not recovered: if ((*(longlong *)(param_3 + 8) != 0) && (local_250 == *(longlong *)(param_3 + 8)))
     // TODO: condition expression type not recovered: if ((fVar11 <= DAT_180380bb0) && (fVar9 = DAT_180381384, DAT_180381384 <= fVar11))
     // TODO: condition expression type not recovered: if ((fVar17 <= DAT_180381120) && (fVar9 = fVar17, fVar17 <= DAT_180380f00))
     // TODO: condition expression type not recovered: while( true )

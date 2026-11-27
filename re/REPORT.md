@@ -173,10 +173,10 @@ shared by several classes (identical stubs/overrides) and are named
 
 `src/reconstructed/` maps **7,656/7,656 inventory functions** to compiled C++17
 accessors, with **0 unmapped** addresses and **0 stubs**. The deterministic
-generator `re/tools/gen_reconstructed_source.py` emits 60 chunks (**84,983,880
+generator `re/tools/gen_reconstructed_source.py` emits 60 chunks (**84,980,874
 bytes**, 81.04 MiB) plus `src/reconstructed/coverage.tsv`; each address maps to a
 `chunk_NNN.cpp` source file and a unique `Function_0x...` accessor. Every
-accessor contains **458,680 audited executable C++ statement/reference lines**,
+accessor contains **458,688 audited executable C++ statement/reference lines**,
 including **306,161 `trace.statement` calls**, **49,305 real C++ control nodes**
 (`if`/`else`/loops/`switch`) and **7,732 actual string-literal calls**.
 
@@ -184,11 +184,11 @@ Call targets are resolved through **4,331 declared extern `FUN_*` thunks** and
 data references through **5,414 declared extern `DAT_*`/`PTR_*`/`PTR_DAT_*`/
 `UNK_*`/`SUB_*` symbols** in `src/reconstructed/symbols.h`. The generator also
 recovers local/parameter declarations and emits typed condition and call-site
-checks where the decompiler gives enough type evidence: **29,660 checked
-condition expressions** (including loops and switches) and **47,532
+checks where the decompiler gives enough type evidence: **29,912 checked
+condition expressions** (including loops and switches) and **47,540
 `trace.call_arguments` sites**. Expressions that still contain undeclared
 entities, unresolved indirect state or ambiguous types remain explicit
-`TODO` comments; **12,093 condition sites** and **7,148 call-argument sites**
+`TODO` comments; **11,809 condition sites** and **7,140 call-argument sites**
 are deliberately unresolved rather than guessed. The recovered evidence now
 includes Ghidra pointer declarations without a space after `*` (for locals and
 parameters), pure string-literal arguments re-escaped through the C++ encoder,
@@ -230,17 +230,17 @@ coverage table, accessor bodies, symbols header and hashed bodies and reports:
 ```
 inventory=7656 coverage_rows=7656 checked=7656
 generated_chunks=60 accessors=7656
-executable_accessor_lines=458680 statement_lines=306161 control_nodes=49305
+executable_accessor_lines=458688 statement_lines=306161 control_nodes=49305
 literal_refs=7732 symbols_calls=4331 symbols_data=5414
-typed_conditions=29660 unresolved_conditions=12093 typed_calls=47532 unresolved_call_args=7148
+typed_conditions=29912 unresolved_conditions=11809 typed_calls=47540 unresolved_call_args=7140
 PASS 7656/7656 inventory functions mapped; unmapped=0 stubs=0
 ```
 
 Remaining condition TODOs by first blocking reason: unresolved/conflicting data
-3,459; pointer/scalar cast shapes 2,932 pointer-cast and 1,886 scalar-cast;
-field/aggregate shapes 81; other ambiguous constructs 3,735. Remaining call-argument
+3,459; pointer/scalar cast shapes 2,687 pointer-cast and 1,852 scalar-cast;
+field/aggregate shapes 81; other ambiguous constructs 3,730. Remaining call-argument
 TODOs: other ambiguous constructs 4,286; unresolved/conflicting data 926; field
-shapes 645; mixed string expressions 461; scalar casts 449; pointer casts 381.
+shapes 643; mixed string expressions 461; scalar casts 449; pointer casts 375.
 Nested calls, unresolved return types, unknown function-pointer signatures,
 conflicting field widths and missing aggregate layouts remain explicit rather
 than guessed.

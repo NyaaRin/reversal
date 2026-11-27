@@ -5494,7 +5494,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d1540() noexcept {
     // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0'))
     // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0'))
     // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0'))
-    // TODO: condition expression type not recovered: if (*(int *)(puVar7 + 5) != iVar10)
     // TODO: call arguments not type-recovered for GetClientRect: (HWND)*puVar7,&local_68
     // TODO: call arguments not type-recovered for QueryPerformanceCounter: &local_50
     // TODO: call arguments not type-recovered for ClientToScreen: (HWND)*puVar3,&local_58
@@ -5640,7 +5639,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d1540() noexcept {
                 } else {
                 trace.statement("iVar10 = -1;");
                 }
-                if (trace.condition("if (*(int *)(puVar7 + 5) != iVar10)")) {
+                if (trace.checked_condition("if (*(int *)(puVar7 + 5) != iVar10)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(puVar7 + 5, 0) != iVar10); })) {
                     trace.statement("*(int *)(puVar7 + 5) = iVar10;");
                     trace.statement("FUN_1802d0d70(lVar11);");
                 }
@@ -9951,7 +9950,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d35e0() noexcept {
     // TODO: condition expression type not recovered: if ((puVar10 < puVar14) && ((uint)uVar3 != (uint)(byte)local_70.BaseAddress))
     // TODO: condition expression type not recovered: if (7 < *(uint *)((longlong)param_1 + 0x24))
     // TODO: condition expression type not recovered: for (; uVar3 != 0; uVar3 = uVar3 - 1)
-    // TODO: condition expression type not recovered: if (*(char *)((uVar3 - 5) + *param_1) != cVar1)
     // TODO: call arguments not type-recovered for FUN_180242250: puVar10,&local_70
     // TODO: call arguments not type-recovered for VirtualQuery: (LPCVOID)(lVar6 + -5),&local_70,0x30
     // TODO: call arguments not type-recovered for CONCAT31: local_70.State._1_3_,(undefined1)local_70.State
@@ -10147,7 +10145,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d35e0() noexcept {
                     if (trace.checked_condition("if ((cVar1 == '\\0') || ((cVar1 == -0x70 || (cVar1 == -0x34))))", [&]() -> bool { return static_cast<bool>((cVar1 == '\0') || ((cVar1 == -0x70 || (cVar1 == -0x34)))); })) {
                         trace.statement("uVar3 = 1;");
                         do {
-                            if (trace.condition("if (*(char *)((uVar3 - 5) + *param_1) != cVar1)")) {
+                            if (trace.checked_condition("if (*(char *)((uVar3 - 5) + *param_1) != cVar1)", [&]() -> bool { return static_cast<bool>(load_at<char>((uVar3 - 5) + *param_1, 0) != cVar1); })) {
                                 trace.statement("return 0;");
                             }
                             trace.statement("uVar4 = (int)uVar3 + 1;");
@@ -19862,7 +19860,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6d50() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*(undefined1 (*) [32])((ulonglong)uVar5 + lVar3) == *(undefined1 (*) [32])(param_1 + 4))
     // TODO: call arguments not type-recovered for CONCAT71: (int7)(CONCAT44(extraout_var,iVar4) >> 8),1
     trace.call_arguments("LZCOUNT", param_2);
     trace.call_arguments("memcmp", (void *)(lVar1 + 0x20), (void *)param_1[8], param_1[9] - 0x20);
@@ -19883,7 +19880,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6d50() noexcept {
                 do {
                     trace.statement("uVar5 = 0x1f - LZCOUNT(param_2);");
                     trace.statement("lVar1 = (ulonglong)uVar5 + lVar3;");
-                    if (trace.condition("if (*(undefined1 (*) [32])((ulonglong)uVar5 + lVar3) == *(undefined1 (*) [32])(param_1 + 4))")) {
+                    if (trace.checked_condition("if (*(undefined1 (*) [32])((ulonglong)uVar5 + lVar3) == *(undefined1 (*) [32])(param_1 + 4))", [&]() -> bool { return static_cast<bool>(*(undefined1 (*) [32])((ulonglong)uVar5 + lVar3) == *(undefined1 (*) [32])(param_1 + 4)); })) {
                         trace.statement("iVar4 = memcmp((void *)(lVar1 + 0x20),(void *)param_1[8],param_1[9] - 0x20);");
                         if (trace.checked_condition("if (iVar4 == 0)", [&]() -> bool { return static_cast<bool>(iVar4 == 0); })) {
                             trace.statement("*plVar2 = lVar1;");
