@@ -14,6 +14,7 @@ src/features/ are never touched.
 
 from __future__ import annotations
 
+import csv
 import hashlib
 import json
 import os
@@ -27,10 +28,11 @@ DUMP = ROOT / "re" / "dump"
 OUT = ROOT / "src" / "reconstructed"
 CHUNKS = OUT / "chunks"
 CHUNK_SIZE = 128
+DATA_TYPES_TSV = DUMP / "data_types.tsv"
 
 TOKEN_RE = re.compile(
-    r"\b(?:FUN|DAT|LAB|UNK|SUB)_[0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)?\b"
-    r"|\bPTR_[A-Za-z0-9_]*[0-9A-Fa-f]{4,}\b"
+    r"\b_?(?:FUN|DAT|LAB|UNK|SUB)_[0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)?\b"
+    r"|\b_?PTR_[A-Za-z0-9_]*[0-9A-Fa-f]{4,}\b"
 )
 SIGNATURE_RE = re.compile(r"^//\s*signature:\s*(.*)$", re.MULTILINE)
 STRING_RE = re.compile(r'"((?:[^"\\]|\\.)*)"')
@@ -219,9 +221,10 @@ def split_top_level(text: str, separator: str) -> list[str]:
 def replace_data_symbols(expr: str, allow_fun: bool = False) -> str | None:
     def replace(match: re.Match[str]) -> str:
         token = match.group(0)
-        if token.startswith("LAB_"):
+        base = token.lstrip("_")
+        if base.startswith("LAB_"):
             return token
-        if token.startswith("FUN_"):
+        if base.startswith("FUN_"):
             return f"&image::{token}" if allow_fun else token
         return f"image::{token}"
 
@@ -268,6 +271,37 @@ def encode_string_literals(expr: str) -> str:
     return STRING_RE.sub(lambda match: cpp_string(decode_c_string(match.group(1))), expr)
 
 
+def data_symbol_type(name: str, data_types: dict[int, str]) -> str | None:
+    if not TOKEN_RE.fullmatch(name):
+        return None
+    suffix = re.search(r"_([0-9A-Fa-f]{8,})$", name)
+    if not suffix:
+        return None
+    return data_types.get(int(suffix.group(1), 16))
+
+
+def load_data_types() -> dict[int, str]:
+    if not DATA_TYPES_TSV.exists():
+        return {}
+    widths = {1: "std::uint8_t", 2: "std::uint16_t", 4: "std::uint32_t", 8: "std::uint64_t"}
+    result: dict[int, str] = {}
+    with DATA_TYPES_TSV.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle, delimiter="\t"):
+            try:
+                address = int(row["address"], 16)
+                width = int(row["width"])
+            except (KeyError, ValueError):
+                continue
+            kind = row.get("kind", "int")
+            if kind == "float" and width == 4:
+                result[address] = "float"
+            elif kind == "double" and width == 8:
+                result[address] = "double"
+            elif kind == "int" and width in widths:
+                result[address] = widths[width]
+    return result
+
+
 def pointer_shape(type_text: str) -> tuple[str, int] | None:
     if "*" not in type_text:
         return None
@@ -276,7 +310,12 @@ def pointer_shape(type_text: str) -> tuple[str, int] | None:
     return base, stars
 
 
-def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_data: bool) -> str | None:
+def safe_expression(
+    expr: str,
+    locals: dict[str, tuple[str, int | None]],
+    allow_data: bool,
+    data_types: dict[int, str] | None = None,
+) -> str | None:
     expr = expr.strip()
     if not expr or expr in TYPE_WORDS or any(char in expr for char in ";{}"):
         return None
@@ -318,8 +357,27 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
         return None
 
     identifiers = IDENT_RE.findall(expr)
-    for name in set(identifiers):
-        declaration = locals.get(name)
+    identifier_set = set(identifiers)
+    if data_types:
+        for token in identifier_set:
+            if data_symbol_type(token, data_types) and re.search(rf"(?<!&)\b{re.escape(token)}\b\s*\[", expr):
+                # A typed global is declared as one scalar slot.  Preserve the
+                # decompiler's direct-index meaning by taking the slot address
+                # explicitly; this is the same byte location, not a new guess.
+                expr = re.sub(rf"(?<!&)\b{re.escape(token)}\b\s*\[", f"(&{token})[", expr)
+    analysis_locals = locals
+    if data_types:
+        extras = {
+            name: (data_symbol_type(name, data_types), None)
+            for name in identifier_set
+            if data_symbol_type(name, data_types)
+        }
+        if extras:
+            analysis_locals = dict(locals)
+            for name, declaration in extras.items():
+                analysis_locals.setdefault(name, declaration)
+    for name in identifier_set:
+        declaration = analysis_locals.get(name)
         if declaration is None:
             continue
         type_name, count = declaration
@@ -328,7 +386,7 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
             # decompiler actually declared a pointer/array.
             return None
         if count is None and "*" not in type_name:
-            dereferenced = re.search(rf"(?:^|[\(\[=,+\-/%<>!?:&|])\s*\*\s*{re.escape(name)}\b", expr)
+            dereferenced = re.search(rf"(?:^|[\(\)\[\]=,+\-/%<>!?:&|])\s*\*\s*{re.escape(name)}\b", expr)
             if dereferenced:
                 # Unary `*scalar` is not valid C++; `a * b` multiplication is
                 # left alone because its left operand is not an operator.
@@ -341,6 +399,10 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
             ):
                 return None
         if count is not None:
+            # A whole array argument is a valid lvalue-to-pointer decay.  Other
+            # whole-array shifts/arithmetic remain invalid C++.
+            if expr == name:
+                continue
             # Arrays may be addressed or indexed, but decompiler scalar shifts
             # and arithmetic on a whole array are not valid C++.
             if not re.search(rf"&\s*{re.escape(name)}\b|\b{re.escape(name)}\s*\[", expr):
@@ -352,7 +414,7 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
                 if cast_type and not pointer_shape(cast_type):
                     return None
         if "*" in type_name or "*" in expr:
-            for other_name, (other_type, _) in locals.items():
+            for other_name, (other_type, _) in analysis_locals.items():
                 if other_name == name:
                     continue
                 if name not in expr or other_name not in expr:
@@ -382,12 +444,13 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
                         if local_pointer != cast_pointer:
                             return None
     for word in identifiers:
-        if word in locals or word in TYPE_WORDS or word in CALL_KEYWORDS:
+        if word in analysis_locals or word in TYPE_WORDS or word in CALL_KEYWORDS:
             continue
-        if word.startswith(("DAT_", "PTR_", "UNK_", "SUB_")):
+        base_word = word.lstrip("_")
+        if base_word.startswith(("DAT_", "PTR_", "UNK_", "SUB_")):
             if allow_data:
                 continue
-        if word.startswith("FUN_") and allow_data and not re.search(rf"\b{re.escape(word)}\s*\(", expr):
+        if base_word.startswith("FUN_") and allow_data and not re.search(rf"\b{re.escape(word)}\s*\(", expr):
             continue
         return None
     if re.search(r"\b(?:__|NAN|INFINITY)", expr):
@@ -395,9 +458,40 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
     data_tokens = [
         match.group(0)
         for match in TOKEN_RE.finditer(expr)
-        if match.group(0).startswith(("DAT_", "PTR_", "UNK_", "SUB_"))
+        if match.group(0).lstrip("_").startswith(("DAT_", "PTR_", "UNK_", "SUB_"))
     ]
     for token in data_tokens:
+        typed = data_symbol_type(token, data_types) if data_types else None
+        if typed:
+            # The mined access width determines a scalar storage type.  Its
+            # address and `(&DAT)[i]` forms remain valid; only operations that
+            # are invalid for that scalar are rejected.
+            for cast_match in re.finditer(rf"\(([^()]*)\)\s*&?\s*{re.escape(token)}\b", expr):
+                cast_type = cpp_type(cast_match.group(1))
+                if cast_type and pointer_shape(cast_type):
+                    return None
+            pointer_present = any(
+                pointer_shape(analysis_locals[name][0])
+                for name in identifier_set
+                if name in analysis_locals
+            )
+            if not pointer_present:
+                for cast_match in re.finditer(r"\(([^()]*)\)", expr):
+                    cast_type = cpp_type(cast_match.group(1))
+                    if cast_type and pointer_shape(cast_type):
+                        pointer_present = True
+                        break
+            if pointer_present and re.search(r"<=|>=|==|!=|<|>", expr):
+                return None
+            if typed in ("float", "double"):
+                without_address = re.sub(rf"&\s*{re.escape(token)}\b", "", expr)
+                if re.search(r"[&|^~]|<<|>>|%", without_address):
+                    return None
+                for cast_match in re.finditer(rf"\(([^()]*)\)\s*&?\s*{re.escape(token)}\b", expr):
+                    cast_type = cpp_type(cast_match.group(1))
+                    if cast_type and pointer_shape(cast_type):
+                        return None
+            continue
         # A bare data token is an array lvalue and is safe only when the whole
         # expression is that token.  Indexing a byte-array symbol or applying
         # arithmetic/casts to the array itself produces invalid C++ or changes
@@ -406,9 +500,10 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
             continue
         if re.search(rf"\b{re.escape(token)}\s*\[", expr):
             return None
-        if re.search(rf"&\s*{re.escape(token)}\b\s*\)\s*\[", expr):
+        address_of = rf"(?<![A-Za-z0-9_\)\]\s])\s*&\s*{re.escape(token)}\b"
+        if re.search(rf"{address_of}\s*\)\s*\[", expr):
             return None
-        if not re.search(rf"&\s*{re.escape(token)}\b", expr):
+        if not re.search(address_of, expr):
             return None
     # A nested call is only safe when it is a type cast or sizeof; function
     # calls remain trace-only unless their own arguments are resolved.
@@ -443,6 +538,7 @@ def for_condition_expression(header: str) -> str | None:
 def recover_typed_sites(
     code_lines: list[tuple[int, str]],
     declarations: dict[str, tuple[str, int | None]],
+    data_types: dict[int, str],
 ) -> tuple[dict[str, str], list[str], list[tuple[str, list[str]]], list[tuple[str, str]]]:
     typed_conditions: dict[str, str] = {}
     unresolved_conditions: list[str] = []
@@ -460,7 +556,7 @@ def recover_typed_sites(
             header = re.sub(r"\s*\{$", "", stripped).strip()
             condition = for_condition_expression(header) if kind == "for" else condition_expression(header)
             if condition is not None:
-                translated = safe_expression(condition, declarations, allow_data=False)
+                translated = safe_expression(condition, declarations, allow_data=False, data_types=data_types)
                 if translated:
                     typed_conditions[re.sub(r"\s+", " ", header)] = translated
                 else:
@@ -505,7 +601,7 @@ def recover_typed_sites(
             args = split_top_level(args_text, ",") if args_text.strip() else []
             translated_args: list[str] = []
             for arg in args:
-                translated = safe_expression(arg, declarations, allow_data=True)
+                translated = safe_expression(arg, declarations, allow_data=True, data_types=data_types)
                 if translated is None:
                     break
                 translated_args.append(translated)
@@ -1076,11 +1172,18 @@ def record_identifier(address: str) -> str:
     return "kFunction_0x" + address[2:].lower()
 
 
-def build_accessor(address: str, row: dict[str, str], facts: dict[str, object], body: str, digest: str) -> tuple[list[str], int, int, int, int, int, int, int]:
+def build_accessor(
+    address: str,
+    row: dict[str, str],
+    facts: dict[str, object],
+    body: str,
+    digest: str,
+    data_types: dict[int, str],
+) -> tuple[list[str], int, int, int, int, int, int, int]:
     code = code_for_translation(body)
     declarations = recover_declarations(body)
     typed_conditions, unresolved_conditions, typed_calls, unresolved_calls = recover_typed_sites(
-        list(enumerate(code, 1)), declarations
+        list(enumerate(code, 1)), declarations, data_types
     )
     translator = ControlTranslator(code, typed_conditions)
     translator.parse()
@@ -1206,6 +1309,7 @@ def main() -> int:
     unmapped: list[str] = []
     call_symbols: set[str] = set()
     data_symbols: set[str] = set()
+    data_types = load_data_types()
 
     for row in rows:
         address = row["address"].lower()
@@ -1253,7 +1357,7 @@ def main() -> int:
             unresolved_conditions,
             typed_calls,
             unresolved_calls,
-        ) = build_accessor(address, row, facts, body, digest)
+        ) = build_accessor(address, row, facts, body, digest, data_types)
 
         record_lines = [
             f"// {address} {row['name']}",
@@ -1323,7 +1427,11 @@ def main() -> int:
     for name in sorted(call_symbols, key=lambda value: (int(value.split("_")[-1], 16), value)):
         symbol_lines.append(f"void {name}() noexcept;")
     for name in sorted(data_symbols, key=lambda value: (int(value.split("_")[-1], 16), value)):
-        symbol_lines.append(f"extern std::byte {name}[0x20];")
+        inferred = data_symbol_type(name, data_types)
+        if inferred:
+            symbol_lines.append(f"extern {inferred} {name};")
+        else:
+            symbol_lines.append(f"extern std::byte {name}[0x20];")
     symbol_lines.extend(["}", "", "}  // namespace sf::reconstructed::image", ""])
     atomic_write_text(OUT / "symbols.h", "\n".join(symbol_lines))
 

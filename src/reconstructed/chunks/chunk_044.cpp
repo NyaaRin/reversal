@@ -5165,7 +5165,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0fac() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fd040.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fd040 < 4)
     trace.call_arguments("FUN_180014410", "[NS-SEED] EXCEPTION\n");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1803fd040", static_cast<const void*>(&image::DAT_1803fd040));
@@ -5174,7 +5173,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0fac() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("DAT_1803fd040 = DAT_1803fd040 + 1;");
-            if (trace.condition("if (DAT_1803fd040 < 4)")) {
+            if (trace.checked_condition("if (DAT_1803fd040 < 4)", [&]() -> bool { return static_cast<bool>(image::DAT_1803fd040 < 4); })) {
                 trace.statement("FUN_180014410(\"[NS-SEED] EXCEPTION\\n\");");
             }
             trace.statement("return 0;");

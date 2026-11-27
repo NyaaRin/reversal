@@ -6277,6 +6277,8 @@ undefined8 FUN_1802df940(void)
     "0780226eb606526766da3a8ad7168aa2e181d50f1b31361a60bf767db67d0436",
     R"F1802df940C()F1802df940C",
     R"F1802df940D(DAT_1803eb838
+_DAT_1803eb838
+_DAT_1803eb848
 DAT_1803eb850)F1802df940D",
     R"F1802df940T()F1802df940T",
     R"F1802df940F(16: if (0xf < DAT_1803eb850) {
@@ -6285,6 +6287,8 @@ DAT_1803eb850)F1802df940D",
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
 TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb838.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference _DAT_1803eb838.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference _DAT_1803eb848.
 TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb850.)F1802df940U",
 };
 }  // namespace
@@ -6295,11 +6299,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802df940() noexcept {
     [[maybe_unused]] std::uint8_t * puVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb838.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for _DAT_1803eb838.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for _DAT_1803eb848.
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb850.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < DAT_1803eb850)
     trace.data_ref("DAT_1803eb838", static_cast<const void*>(&image::DAT_1803eb838));
+    trace.data_ref("_DAT_1803eb838", static_cast<const void*>(&image::_DAT_1803eb838));
+    trace.data_ref("_DAT_1803eb848", static_cast<const void*>(&image::_DAT_1803eb848));
     trace.data_ref("DAT_1803eb850", static_cast<const void*>(&image::DAT_1803eb850));
     // body sha256: 0780226eb606526766da3a8ad7168aa2e181d50f1b31361a60bf767db67d0436
     // Structured control-flow trace derived from the decompiled body:

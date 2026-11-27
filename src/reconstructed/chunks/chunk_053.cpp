@@ -2418,13 +2418,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f3180() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180423a88.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803eb360 != DAT_1803eb368)
-    // TODO: condition expression type not recovered: if (DAT_1803e9a68 != DAT_1803e9a70)
-    // TODO: condition expression type not recovered: if (DAT_1803e9a80 != DAT_1803e9a88)
-    // TODO: condition expression type not recovered: if (DAT_1803ea2c0 != DAT_1803ea2c8)
-    // TODO: condition expression type not recovered: if (DAT_1803eb808 != DAT_1803eb810)
-    // TODO: condition expression type not recovered: if (DAT_1803e9a50 != DAT_1803e9a58)
-    // TODO: condition expression type not recovered: if (DAT_1803edd30 != DAT_1803edd38)
     trace.call_arguments("FUN_180014410", "[MP] model parse faulted - preview disabled\n");
     trace.call_arguments("FUN_18020e450", lVar2);
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
@@ -2453,30 +2446,30 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f3180() noexcept {
             trace.statement("longlong lVar2;");
             trace.statement("FUN_180014410(\"[MP] model parse faulted - preview disabled\\n\");");
             trace.statement("lVar1 = DAT_1803ea2c8;");
-            if (trace.condition("if (DAT_1803eb360 != DAT_1803eb368)")) {
+            if (trace.checked_condition("if (DAT_1803eb360 != DAT_1803eb368)", [&]() -> bool { return static_cast<bool>(image::DAT_1803eb360 != image::DAT_1803eb368); })) {
                 trace.statement("DAT_1803eb368 = DAT_1803eb360;");
             }
-            if (trace.condition("if (DAT_1803e9a68 != DAT_1803e9a70)")) {
+            if (trace.checked_condition("if (DAT_1803e9a68 != DAT_1803e9a70)", [&]() -> bool { return static_cast<bool>(image::DAT_1803e9a68 != image::DAT_1803e9a70); })) {
                 trace.statement("DAT_1803e9a70 = DAT_1803e9a68;");
             }
-            if (trace.condition("if (DAT_1803e9a80 != DAT_1803e9a88)")) {
+            if (trace.checked_condition("if (DAT_1803e9a80 != DAT_1803e9a88)", [&]() -> bool { return static_cast<bool>(image::DAT_1803e9a80 != image::DAT_1803e9a88); })) {
                 trace.statement("DAT_1803e9a88 = DAT_1803e9a80;");
             }
             trace.statement("lVar2 = DAT_1803ea2c0;");
-            if (trace.condition("if (DAT_1803ea2c0 != DAT_1803ea2c8)")) {
+            if (trace.checked_condition("if (DAT_1803ea2c0 != DAT_1803ea2c8)", [&]() -> bool { return static_cast<bool>(image::DAT_1803ea2c0 != image::DAT_1803ea2c8); })) {
                 do {
                     trace.statement("FUN_18020e450(lVar2);");
                     trace.statement("lVar2 = lVar2 + 0x20;");
                 } while (trace.loop_condition("while (lVar2 != lVar1);"));
                 trace.statement("DAT_1803ea2c8 = DAT_1803ea2c0;");
             }
-            if (trace.condition("if (DAT_1803eb808 != DAT_1803eb810)")) {
+            if (trace.checked_condition("if (DAT_1803eb808 != DAT_1803eb810)", [&]() -> bool { return static_cast<bool>(image::DAT_1803eb808 != image::DAT_1803eb810); })) {
                 trace.statement("DAT_1803eb810 = DAT_1803eb808;");
             }
-            if (trace.condition("if (DAT_1803e9a50 != DAT_1803e9a58)")) {
+            if (trace.checked_condition("if (DAT_1803e9a50 != DAT_1803e9a58)", [&]() -> bool { return static_cast<bool>(image::DAT_1803e9a50 != image::DAT_1803e9a58); })) {
                 trace.statement("DAT_1803e9a58 = DAT_1803e9a50;");
             }
-            if (trace.condition("if (DAT_1803edd30 != DAT_1803edd38)")) {
+            if (trace.checked_condition("if (DAT_1803edd30 != DAT_1803edd38)", [&]() -> bool { return static_cast<bool>(image::DAT_1803edd30 != image::DAT_1803edd38); })) {
                 trace.statement("DAT_1803edd38 = DAT_1803edd30;");
             }
             trace.statement("DAT_180423a6c = 0;");
