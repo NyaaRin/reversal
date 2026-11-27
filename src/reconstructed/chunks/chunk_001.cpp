@@ -1583,12 +1583,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014520() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for GetModuleHandleExW: 4,*(LPCWSTR *)(*param_2 + 0x10),&local_260 [reason: pointer depth/pointee not proven]
     // TODO: call arguments not type-recovered for FUN_1801fc280: pbVar6," inside " [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_1801fc280: pbVar6,&DAT_18033e92c [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for prevention: DEP [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_1801fc280: pbVar6,&DAT_18033e92c [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for FUN_1801fc280: pbVar6,&DAT_18033e92c [reason: unresolved global storage/width]
+    trace.call_arguments("GetModuleHandleExW", 4, load_at<wchar_t *>(*param_2 + 0x10, 0), &local_260);
     trace.call_arguments("GetCurrentProcess");
     trace.call_arguments("K32GetModuleInformation", pvVar3, pHVar2, local_258, 0x18);
     trace.call_arguments("GetCurrentProcess");
@@ -2490,7 +2490,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014d70() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180014d70", "FUN_180014d70");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] char* lpModuleName{};
     [[maybe_unused]] std::int32_t * piVar1{};
+    [[maybe_unused]] std::uint32_t DVar2{};
     [[maybe_unused]] int BVar3{};
     [[maybe_unused]] char * pcVar4{};
     [[maybe_unused]] std::int32_t iVar5{};
@@ -2499,6 +2501,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014d70() noexcept {
     [[maybe_unused]] std::uint8_t auStack_2e8[32]{};
     [[maybe_unused]] std::int64_t local_2c8{};
     [[maybe_unused]] std::uint8_t * local_2c0{};
+    [[maybe_unused]] std::uint32_t local_2b8{};
     [[maybe_unused]] std::int32_t local_2b0{};
     [[maybe_unused]] std::uintptr_t local_2a8[2]{};
     [[maybe_unused]] std::uint8_t local_298{};
@@ -2522,16 +2525,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014d70() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1804258dc.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((iVar5 < 9) || (1000 < DVar2 - _DAT_1803ff790)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DVar2 != 0) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for memset: local_128 + 2,0,0x102 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for GetModuleHandleExA: 6,lpModuleName,local_2a8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GetModuleFileNameA: local_2a8[0],&local_238,0x104 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for strrchr: &local_238,0x5c [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for s: thread %lu, total: %d [reason: ambiguous operand type]
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
     trace.call_arguments("GetTickCount");
+    trace.call_arguments("GetModuleHandleExA", 6, lpModuleName, local_2a8);
     trace.call_arguments("memset", local_237, 0, 0x103);
     trace.call_arguments("strncpy_s", local_128, 0x104, pcVar7, 0xffffffffffffffff);
     trace.call_arguments("FUN_1801fc620", &local_298, " %s 0x%p", pcVar7, load_at<std::uint64_t>(piVar1 + 10, 0));
@@ -2587,7 +2588,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014d70() noexcept {
             trace.statement("iVar5 = DAT_1804258dc + 1;");
             trace.statement("DAT_1804258dc = DAT_1804258dc + 1;");
             trace.statement("DVar2 = GetTickCount();");
-            if (trace.condition("if ((iVar5 < 9) || (1000 < DVar2 - _DAT_1803ff790))")) {
+            if (trace.checked_condition("if ((iVar5 < 9) || (1000 < DVar2 - _DAT_1803ff790))", [&]() -> bool { return static_cast<bool>((iVar5 < 9) || (1000 < DVar2 - image::_DAT_1803ff790)); })) {
                 trace.statement("lpModuleName = *(LPCSTR *)(*param_1 + 0x10);");
                 trace.statement("local_128[0] = '?';");
                 trace.statement("local_128[1] = '\\0';");
@@ -2600,7 +2601,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014d70() noexcept {
                     trace.statement("local_238 = '\\0';");
                     trace.statement("memset(local_237,0,0x103);");
                     trace.statement("DVar2 = GetModuleFileNameA(local_2a8[0],&local_238,0x104);");
-                    if (trace.condition("if (DVar2 != 0)")) {
+                    if (trace.checked_condition("if (DVar2 != 0)", [&]() -> bool { return static_cast<bool>(DVar2 != 0); })) {
                         trace.statement("pcVar4 = strrchr(&local_238,0x5c);");
                         trace.statement("pcVar7 = pcVar4 + 1;");
                         if (trace.checked_condition("if (pcVar4 == (char *)0x0)", [&]() -> bool { return static_cast<bool>(pcVar4 == (char *)0x0); })) {
@@ -3281,6 +3282,12 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x180015270() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180015270", "FUN_180015270");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint64_t * param_3{};
+    [[maybe_unused]] std::uint64_t param_4{};
+    [[maybe_unused]] std::uint64_t param_5{};
+    [[maybe_unused]] std::uint64_t * param_6{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::uint8_t *** pppuVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
@@ -3304,10 +3311,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015270() noexcept {
     // TODO: condition expression type not recovered: if (param_3[1] <= uVar4) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (param_2[1] <= uVar6) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (pppuVar2 == *(undefined ****)(param_1 + 0x368)) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for FUN_180262c20: (longlong *)(param_1 + 0x358),pppuVar2,&local_a0,local_a8,param_6 [reason: pointer-cast target not proven]
-    // TODO: call arguments not type-recovered for FUN_18001d080: pppuVar2 + 2,*param_6,param_6[1] [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180255080: (longlong *)(param_1 + 0x50),&local_88,&local_98,&local_78 [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_180262180");
+    trace.call_arguments("FUN_180262c20", (longlong *)(param_1 + 0x358), pppuVar2, &local_a0, local_a8, param_6);
+    trace.call_arguments("FUN_18001d080", pppuVar2 + 2, *param_6, param_6[1]);
+    trace.call_arguments("FUN_180255080", (longlong *)(param_1 + 0x50), &local_88, &local_98, &local_78);
     trace.call_target("FUN_18001d080", reinterpret_cast<const void*>(&image::FUN_18001d080));
     trace.call_target("FUN_180255080", reinterpret_cast<const void*>(&image::FUN_180255080));
     trace.call_target("FUN_180262180", reinterpret_cast<const void*>(&image::FUN_180262180));
@@ -3530,6 +3537,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015490() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint16_t param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
+    [[maybe_unused]] std::uint32_t DVar2{};
+    [[maybe_unused]] void* pvVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803f9288.
@@ -3537,12 +3546,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015490() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (hResInfo != (HRSRC)0x0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (hResData != (HGLOBAL)0x0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FindResourceW: DAT_1803f9288,(LPCWSTR)(ulonglong)param_1,(LPCWSTR)0xa [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for LoadResource: DAT_1803f9288,hResInfo [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for SizeofResource: DAT_1803f9288,hResInfo [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for LockResource: hResData [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180298b30: uVar4,pvVar3,DVar2 [reason: ambiguous operand type]
+    trace.call_arguments("FindResourceW", image::DAT_1803f9288, (wchar_t*)static_cast<std::uint64_t>(param_1), (wchar_t*)0xa);
     trace.call_arguments("__dyn_tls_on_demand_init");
+    trace.call_arguments("FUN_180298b30", uVar4, pvVar3, DVar2);
     trace.call_target("FUN_180298b30", reinterpret_cast<const void*>(&image::FUN_180298b30));
     trace.data_ref("DAT_1803f9288", static_cast<const void*>(&image::DAT_1803f9288));
     // body sha256: a662ab2abc6a45db010ae099af716454ca53880f08634900fe8f414d6a2e486c
@@ -4411,6 +4420,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x180015f40() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180015f40", "FUN_180015f40");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] char* param_1{};
     [[maybe_unused]] std::uint8_t * param_2{};
     [[maybe_unused]] std::uint8_t bVar1{};
     [[maybe_unused]] std::uint8_t bVar2{};
@@ -4419,10 +4429,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015f40() noexcept {
     [[maybe_unused]] void* pvVar5{};
     [[maybe_unused]] std::uintptr_t pHVar6{};
     [[maybe_unused]] std::uint32_t uVar7{};
+    [[maybe_unused]] char* lpModuleName{};
     [[maybe_unused]] std::uint8_t * pbVar8{};
     [[maybe_unused]] std::uintptr_t pHVar9{};
     [[maybe_unused]] std::uintptr_t pHVar10{};
     [[maybe_unused]] std::uint8_t auStack_68[32]{};
+    [[maybe_unused]] char* local_48{};
     [[maybe_unused]] std::uint8_t * local_40{};
     [[maybe_unused]] std::uint8_t local_38[8]{};
     [[maybe_unused]] std::uint32_t local_30{};
@@ -4433,13 +4445,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015f40() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0xf < *(ulonglong *)(param_1 + 0x18)) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for GetModuleHandleA: lpModuleName [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18020e450: param_1 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18020e450: param_1 [reason: ambiguous operand type]
+    trace.call_arguments("GetModuleHandleA", lpModuleName);
     trace.call_arguments("GetCurrentProcess");
     trace.call_arguments("K32GetModuleInformation", pvVar5, pHVar4, local_38, 0x18);
+    trace.call_arguments("FUN_18020e450", param_1);
     trace.call_arguments("FUN_18020e450", param_2);
+    trace.call_arguments("FUN_18020e450", param_1);
     trace.call_arguments("FUN_18020e450", param_2);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
@@ -4469,7 +4480,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015f40() noexcept {
                 trace.statement("pbVar8 = *(byte **)param_2;");
             }
             trace.statement("lpModuleName = param_1;");
-            if (trace.condition("if (0xf < *(ulonglong *)(param_1 + 0x18))")) {
+            if (trace.checked_condition("if (0xf < *(ulonglong *)(param_1 + 0x18))", [&]() -> bool { return static_cast<bool>(0xf < load_at<std::uint64_t>(param_1 + 0x18, 0)); })) {
                 trace.statement("lpModuleName = *(LPCSTR *)param_1;");
             }
             trace.statement("local_48 = param_1;");
@@ -4848,6 +4859,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x1800160e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800160e0", "FUN_1800160e0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] char* param_1{};
     [[maybe_unused]] std::int64_t * param_2{};
     [[maybe_unused]] std::int32_t iVar1{};
     [[maybe_unused]] std::uintptr_t pHVar2{};
@@ -4878,12 +4890,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800160e0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0xf < *(ulonglong *)(param_1 + 0x18)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((char)(*(byte *)((longlong)plVar5 + uVar8) & 0xdf) < 'A') [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((char)(*(byte *)((longlong)plVar5 + uVar8 + 1) & 0xdf) < 'A') [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ('F' < (char)(*(byte *)((longlong)plVar5 + uVar8 + 1) & 0xdf)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: for (; pHVar2 < pHVar10; pHVar2 = (HMODULE)((longlong)&pHVar2->unused + 1)) [reason: unknown aggregate layout]
-    // TODO: call arguments not type-recovered for GetModuleHandleA: param_1 [reason: ambiguous operand type]
+    trace.call_arguments("GetModuleHandleA", param_1);
     trace.call_arguments("GetCurrentProcess");
     trace.call_arguments("K32GetModuleInformation", pvVar3, pHVar2, &local_48, 0x18);
     trace.call_arguments("FUN_180229d20", &local_60, puVar9, local_68);
@@ -4915,7 +4926,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800160e0() noexcept {
             trace.statement("undefined8 local_38;");
             trace.statement("ulonglong local_30;");
             trace.statement("local_30 = DAT_1803da4c0 ^ (ulonglong)auStack_88;");
-            if (trace.condition("if (0xf < *(ulonglong *)(param_1 + 0x18))")) {
+            if (trace.checked_condition("if (0xf < *(ulonglong *)(param_1 + 0x18))", [&]() -> bool { return static_cast<bool>(0xf < load_at<std::uint64_t>(param_1 + 0x18, 0)); })) {
                 trace.statement("param_1 = *(LPCSTR *)param_1;");
             }
             trace.statement("pHVar2 = GetModuleHandleA(param_1);");
@@ -5468,6 +5479,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180016410() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180016410", "FUN_180016410");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] char* param_2{};
     [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] std::uint64_t param_4{};
     [[maybe_unused]] std::uint64_t * puVar1{};
@@ -5503,12 +5515,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180016410() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0xf < *(ulonglong *)(param_2 + 0x18)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((char)(*(byte *)((longlong)plVar7 + uVar10) & 0xdf) < 'A') [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((char)(*(byte *)((longlong)plVar7 + uVar10 + 1) & 0xdf) < 'A') [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ('F' < (char)(*(byte *)((longlong)plVar7 + uVar10 + 1) & 0xdf)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: for (; local_80 = pHVar4, pHVar4 < pHVar9; pHVar4 = (HMODULE)((longlong)&pHVar4->unused + 1) [reason: unknown aggregate layout]
-    // TODO: call arguments not type-recovered for GetModuleHandleA: param_2 [reason: ambiguous operand type]
+    trace.call_arguments("GetModuleHandleA", param_2);
     trace.call_arguments("GetCurrentProcess");
     trace.call_arguments("K32GetModuleInformation", pvVar5, pHVar4, &local_58, 0x18);
     trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((std::uint64_t(local_80) >> 32)), 0xffffffff);
@@ -5556,7 +5567,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180016410() noexcept {
             trace.statement("param_1[1] = 0;");
             trace.statement("param_1[2] = 0;");
             trace.statement("local_88 = 1;");
-            if (trace.condition("if (0xf < *(ulonglong *)(param_2 + 0x18))")) {
+            if (trace.checked_condition("if (0xf < *(ulonglong *)(param_2 + 0x18))", [&]() -> bool { return static_cast<bool>(0xf < load_at<std::uint64_t>(param_2 + 0x18, 0)); })) {
                 trace.statement("param_2 = *(LPCSTR *)param_2;");
             }
             trace.statement("local_78 = param_1;");
@@ -6729,6 +6740,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180016e10() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180016e10", "FUN_180016e10");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void* param_2{};
     [[maybe_unused]] std::int32_t iVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
@@ -8911,208 +8923,208 @@ const sf::reconstructed::FunctionTranslation& Function_0x180017150() noexcept {
             trace.statement("local_48 = DAT_1803da4c0 ^ (ulonglong)auStack_448;");
             trace.statement("pHVar6 = GetModuleHandleA(\"client.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_348);");
                 trace.statement("_CxxThrowException(local_348,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803f9278 = (longlong *)(*pFVar7)(\"VClient017\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_3a8);");
                 trace.statement("_CxxThrowException(local_3a8,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa668 = (*pFVar7)(\"VEngineClient015\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"client.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_330);");
                 trace.statement("_CxxThrowException(local_330,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa360 = (*pFVar7)(\"VClientEntityList003\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vgui2.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_318);");
                 trace.statement("_CxxThrowException(local_318,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa600 = (*pFVar7)(\"VGUI_Panel009\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vgui2.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_300);");
                 trace.statement("_CxxThrowException(local_300,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa350 = (*pFVar7)(\"VGUI_ivgui008\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vgui2.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_2e8);");
                 trace.statement("_CxxThrowException(local_2e8,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("(*pFVar7)(\"VGUI_System010\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vguimatsurface\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_2d0);");
                 trace.statement("_CxxThrowException(local_2d0,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("_DAT_1803f9298 = (*pFVar7)(\"VGUI_Surface030\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vgui2.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_2b8);");
                 trace.statement("_CxxThrowException(local_2b8,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("(*pFVar7)(\"VGUI_Scheme010\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vgui2.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_2a0);");
                 trace.statement("_CxxThrowException(local_2a0,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("_DAT_1803fa328 = (*pFVar7)(\"VGUI_Input005\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vgui2.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_288);");
                 trace.statement("_CxxThrowException(local_288,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("(*pFVar7)(\"VGUI_InputInternal001\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"filesystem_stdio.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_270);");
                 trace.statement("_CxxThrowException(local_270,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803f9248 = (*pFVar7)(\"VBaseFileSystem011\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"filesystem_stdio.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_258);");
                 trace.statement("_CxxThrowException(local_258,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa358 = (*pFVar7)(\"VFileSystem022\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 != (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 != (void*)0x0); })) {
                 trace.statement("(*pFVar7)(\"VEngineClientStringTable001\",0);");
             }
             trace.statement("pHVar6 = GetModuleHandleA(\"client.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_240);");
                 trace.statement("_CxxThrowException(local_240,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("(*pFVar7)(\"VClientDllSharedAppSystems001\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_228);");
                 trace.statement("_CxxThrowException(local_228,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("(*pFVar7)(\"VENGINE_LAUNCHER_API_VERSION004\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_210);");
                 trace.statement("_CxxThrowException(local_210,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa348 = (*pFVar7)(\"VEngineVGui001\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_1f8);");
                 trace.statement("_CxxThrowException(local_1f8,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803f9250 = (*pFVar7)(\"VModelInfoClient006\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_1e0);");
                 trace.statement("_CxxThrowException(local_1e0,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803f9280 = (*pFVar7)(\"VEngineRenderView014\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"materialsystem.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_1c8);");
                 trace.statement("_CxxThrowException(local_1c8,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa640 = (*pFVar7)(\"VMaterialSystem080\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"inputsystem.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_1b0);");
                 trace.statement("_CxxThrowException(local_1b0,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa5a8 = (*pFVar7)(\"InputSystemVersion001\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_198);");
                 trace.statement("_CxxThrowException(local_198,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa598 = (*pFVar7)(\"VEngineModel016\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_180);");
                 trace.statement("_CxxThrowException(local_180,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa610 = (*pFVar7)(\"EngineTraceClient003\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_168);");
                 trace.statement("_CxxThrowException(local_168,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("(*pFVar7)(\"VPhysicsDebugOverlay001\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vphysics.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_3c0);");
                 trace.statement("_CxxThrowException(local_3c0,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa650 = (*pFVar7)(\"VPhysicsSurfaceProps001\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"vstdlib.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_150);");
                 trace.statement("_CxxThrowException(local_150,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa340 = (*pFVar7)(\"VEngineCvar007\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"shaderapidx9.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_138);");
                 trace.statement("_CxxThrowException(local_138,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("(*pFVar7)(\"ShaderApi030\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"engine.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_3f0);");
                 trace.statement("_CxxThrowException(local_3f0,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa320 = (*pFVar7)(\"GAMEEVENTSMANAGER002\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"client.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_3d8);");
                 trace.statement("_CxxThrowException(local_3d8,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803fa658 = (*pFVar7)(\"GameMovement001\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"client.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_360);");
                 trace.statement("_CxxThrowException(local_360,(ThrowInfo *)&DAT_1803d5b48);");
             }
             trace.statement("DAT_1803f9290 = (*pFVar7)(\"VClientPrediction001\",0);");
             trace.statement("pHVar6 = GetModuleHandleA(\"datacache.dll\");");
             trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+            if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                 trace.statement("FUN_180013100(local_390);");
                 trace.statement("_CxxThrowException(local_390,(ThrowInfo *)&DAT_1803d5b48);");
             }
@@ -9210,7 +9222,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180017150() noexcept {
                                 trace.statement("pHVar6 = GetModuleHandleA(\"lua_shared.dll\");");
                                 trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180017b60;");
                                 trace.statement("pFVar7 = GetProcAddress(pHVar6,\"CreateInterface\");");
-                                if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (FARPROC)0x0); })) {
+                                if (trace.checked_condition("if (pFVar7 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 == (void*)0x0); })) {
                                     trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1800186b5;");
                                     trace.statement("FUN_180013100(puVar15 + 0xd0);");
                                     trace.statement("*(undefined **)(puVar15 + -8) = &UNK_1800186c9;");
@@ -9422,7 +9434,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180017150() noexcept {
                                                         trace.statement("pHVar6 = GetModuleHandleA(\"vstdlib.dll\");");
                                                         trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180018242;");
                                                         trace.statement("pFVar7 = GetProcAddress(pHVar6,\"RandomSeed\");");
-                                                        if (trace.checked_condition("if (pFVar7 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 != (FARPROC)0x0); })) {
+                                                        if (trace.checked_condition("if (pFVar7 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar7 != (void*)0x0); })) {
                                                             do {
                                                                 if (trace.condition("if (((pFVar7[uVar19] == (FARPROC)0x48) && (pFVar7[uVar19 + 1] == (FARPROC)0x8b)) && (pFVar7[uVar19 + 2] == (FARPROC)0xd))")) {
                                                                     trace.statement("iVar20 = *(int *)(pFVar7 + uVar19 + 3);");
@@ -9535,6 +9547,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800186d0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800186d0", "FUN_1800186d0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void* param_2{};
     [[maybe_unused]] std::uint64_t * puVar1{};
     [[maybe_unused]] std::uint8_t auStack_68[32]{};
     [[maybe_unused]] std::uint64_t local_18{};
@@ -19339,6 +19352,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001c860() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18001c860", "FUN_18001c860");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::uint32_t DVar2{};
     [[maybe_unused]] std::int32_t iVar3{};
     [[maybe_unused]] int BVar4{};
     [[maybe_unused]] std::int64_t * plVar5{};
@@ -19371,7 +19385,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001c860() noexcept {
     // TODO: resolve the indirect call in body 111: (pvVar6 = (void *)(**(code **)(*plVar5 + 0x78))(plVar5), pvVar6 != (void *)0x0)) &&.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803fcf84 == 0) || (999 < DVar2 - DAT_1803fcf84)) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for found: high=%d, maxClients=%d [reason: assignment or side effect]
     trace.call_arguments("FUN_18001ccb0");
     trace.call_arguments("GetTickCount");
@@ -19443,7 +19456,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001c860() noexcept {
                 trace.statement("DAT_1803e9958 = -1;");
             }
             trace.statement("DVar2 = GetTickCount();");
-            if (trace.condition("if ((DAT_1803fcf84 == 0) || (999 < DVar2 - DAT_1803fcf84))")) {
+            if (trace.checked_condition("if ((DAT_1803fcf84 == 0) || (999 < DVar2 - DAT_1803fcf84))", [&]() -> bool { return static_cast<bool>((image::DAT_1803fcf84 == 0) || (999 < DVar2 - image::DAT_1803fcf84)); })) {
                 trace.statement("DAT_1803fcf84 = DVar2;");
                 trace.statement("iVar3 = (**(code **)(*DAT_1803fa360 + 0x30))();");
                 if (trace.checked_condition("if (DAT_1804260c8 == '\\0')", [&]() -> bool { return static_cast<bool>(image::DAT_1804260c8 == '\0'); })) {
@@ -19822,8 +19835,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001cdd0() noexcept {
     [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int32_t iVar2{};
+    [[maybe_unused]] std::uint32_t DVar3{};
     [[maybe_unused]] std::int32_t iVar4{};
     [[maybe_unused]] std::uint32_t uVar5{};
+    [[maybe_unused]] std::uint32_t DVar6{};
     [[maybe_unused]] std::int64_t * plVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
@@ -19858,7 +19873,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001cdd0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (iVar2 - 1U < 0x80) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (DVar3 != 0) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for d: ok=%d [reason: assignment or side effect]
     trace.call_arguments("GetTickCount");
     trace.call_arguments("FUN_18001d080", &local_d8, "DT_PlayerResource", 0x11);
@@ -19962,7 +19976,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001cdd0() noexcept {
                         trace.statement("uVar13);");
                     }
                     trace.statement("DVar6 = 1;");
-                    if (trace.condition("if (DVar3 != 0)")) {
+                    if (trace.checked_condition("if (DVar3 != 0)", [&]() -> bool { return static_cast<bool>(DVar3 != 0); })) {
                         trace.statement("DVar6 = DVar3;");
                     }
                     trace.statement("*(DWORD *)(&DAT_1803fd130 + lVar1) = DVar6;");
@@ -20484,10 +20498,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001d180() noexcept {
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] bool bVar2{};
     [[maybe_unused]] std::int32_t iVar3{};
+    [[maybe_unused]] std::uint32_t DVar4{};
     [[maybe_unused]] std::uint32_t uVar5{};
     [[maybe_unused]] std::int64_t * plVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint32_t DVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
     [[maybe_unused]] std::uint64_t local_d8{};
@@ -20515,7 +20531,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001d180() noexcept {
     // TODO: resolve the indirect call in body 76: (uVar5 = (*DAT_1803fd0d0)(uVar11 & 0xffffffff,0xffffffff), 0 < (int)uVar5)) {.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DVar4 != 0) [reason: ambiguous operand type]
     trace.call_arguments("GetTickCount");
     trace.call_arguments("GetTickCount");
     trace.call_arguments("FUN_18001d080", &local_d8, "DT_GMOD_Player", 0xe);
@@ -20608,7 +20623,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001d180() noexcept {
                     LAB_18001d30e: ;
                     trace.statement("lVar1 = (longlong)(int)uVar11 * 4;");
                     trace.statement("DVar9 = 1;");
-                    if (trace.condition("if (DVar4 != 0)")) {
+                    if (trace.checked_condition("if (DVar4 != 0)", [&]() -> bool { return static_cast<bool>(DVar4 != 0); })) {
                         trace.statement("DVar9 = DVar4;");
                     }
                     trace.statement("*(DWORD *)(&DAT_1803f8fe0 + lVar1) = DVar9;");
