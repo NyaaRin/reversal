@@ -418,6 +418,38 @@ def data_symbol_type(name: str, data_types: dict[int, str]) -> str | None:
     return data_types.get(int(suffix.group(1), 16))
 
 
+def load_site_global_types() -> dict[str, dict[str, str]]:
+    """Load function-scoped, instruction-derived global access types."""
+    path = DUMP / "global_accesses.tsv"
+    result: dict[str, dict[str, str]] = {}
+    if not path.exists():
+        return result
+    widths = {1: "std::uint8_t", 2: "std::uint16_t", 4: "std::uint32_t", 8: "std::uint64_t"}
+    with path.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle, delimiter="\t"):
+            if row.get("status") != "consistent":
+                continue
+            try:
+                width = int(row["width"])
+                target = int(row["target"], 16)
+            except (KeyError, ValueError):
+                continue
+            kind = row.get("kind", "int")
+            if kind == "float" and width == 4:
+                mapped = "float"
+            elif kind == "double" and width == 8:
+                mapped = "double"
+            else:
+                mapped = widths.get(width)
+            if not mapped:
+                continue
+            function = row["function_address"].lower()
+            symbol = f"DAT_{target:x}"
+            result.setdefault(function, {})[symbol] = mapped
+            result[function][f"_DAT_{target:x}"] = mapped
+    return result
+
+
 def load_data_types() -> dict[int, str]:
     widths = {1: "std::uint8_t", 2: "std::uint16_t", 4: "std::uint32_t", 8: "std::uint64_t"}
     data_types: dict[int, str] = {}
@@ -793,8 +825,51 @@ def safe_expression(
     locals: dict[str, tuple[str, int | None]],
     allow_data: bool,
     data_types: dict[int, str] | None = None,
+    site_types: dict[str, str] | None = None,
 ) -> str | None:
     expr = rewrite_known_type_names(expr.strip())
+    if site_types:
+        for token, type_name in sorted(site_types.items(), key=lambda item: len(item[0]), reverse=True):
+            pointer_context = bool(re.search(
+                rf"\b{re.escape(token)}\b\s*(?:==|!=)\s*\([^()]*\*", expr
+            ))
+            global_type = data_symbol_type(token, data_types) if data_types else None
+            if global_type and not pointer_context:
+                continue
+            if pointer_context and type_name == "std::uint64_t":
+                # An 8-byte access compared against a typed null pointer is a
+                # pointer-valued slot.  Dereferenced and bare occurrences need
+                # different compiler-visible pointer depths.
+                deref_target = re.search(
+                    rf"\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*\*\s*{re.escape(token)}\b", expr
+                )
+                deref_type = "void**"
+                if deref_target and deref_target.group(1) in locals:
+                    deref_type = locals[deref_target.group(1)][0] + "*"
+                expr = re.sub(
+                    rf"\*\s*{re.escape(token)}\b",
+                    f"*load_at<{deref_type}>(&{token}, 0)",
+                    expr,
+                )
+                assign_target = re.search(
+                    rf"\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*{re.escape(token)}\b", expr
+                )
+                bare_type = "void*"
+                if assign_target and assign_target.group(1) in locals:
+                    declared = locals[assign_target.group(1)][0]
+                    if pointer_shape(declared):
+                        bare_type = declared
+                expr = re.sub(
+                    rf"(?<![&\w*])\b{re.escape(token)}\b(?!\s*\[)",
+                    f"load_at<{bare_type}>(&{token}, 0)",
+                    expr,
+                )
+                continue
+            expr = re.sub(
+                rf"(?<!&)\b{re.escape(token)}\b(?!\s*\[)",
+                f"load_at<{type_name}>(&{token}, 0)",
+                expr,
+            )
     expr = rewrite_vector_subpieces(expr, locals)
     expr = rewrite_memory_dereferences(expr)
     expr = rewrite_synthetic_subfields(expr, locals)
@@ -802,6 +877,8 @@ def safe_expression(
     expr, invalid_assignment = rewrite_assignment_casts(expr, locals)
     if invalid_assignment:
         return None
+    if expr in ("true", "false"):
+        return expr
     if not expr or expr in TYPE_WORDS or any(char in expr for char in ";{}"):
         return None
     if re.search(r"\bthis\b", expr):
@@ -994,7 +1071,10 @@ def safe_expression(
                     if cast_type and pointer_shape(cast_type):
                         pointer_present = True
                         break
-            if pointer_present and re.search(r"<=|>=|==|!=|<|>", expr):
+            pointer_slot = bool(re.search(
+                rf"load_at<[^>]*\*+>\(&\s*{re.escape(token)}\b", expr
+            ))
+            if pointer_present and not pointer_slot and re.search(r"<=|>=|==|!=|<|>", expr):
                 return None
             if typed in ("float", "double"):
                 without_address = re.sub(rf"&\s*{re.escape(token)}\b", "", expr)
@@ -1098,6 +1178,7 @@ def recover_typed_sites(
     code_lines: list[tuple[int, str]],
     declarations: dict[str, tuple[str, int | None]],
     data_types: dict[int, str],
+    site_types: dict[str, str] | None = None,
 ) -> tuple[dict[str, str], list[str], list[tuple[str, list[str]]], list[tuple[str, str]]]:
     typed_conditions: dict[str, str] = {}
     unresolved_conditions: list[str] = []
@@ -1122,7 +1203,7 @@ def recover_typed_sites(
             header = re.sub(r"\s*\{$", "", stripped).strip()
             condition = for_condition_expression(header) if kind == "for" else condition_expression(header)
             if condition is not None:
-                translated = safe_expression(condition, declarations, allow_data=False, data_types=data_types)
+                translated = safe_expression(condition, declarations, allow_data=False, data_types=data_types, site_types=site_types)
                 if translated:
                     typed_conditions[re.sub(r"\s+", " ", header)] = translated
                 else:
@@ -1187,7 +1268,7 @@ def recover_typed_sites(
                             continue
             translated_args: list[str] = []
             for arg in args:
-                translated = safe_expression(arg, declarations, allow_data=True, data_types=data_types)
+                translated = safe_expression(arg, declarations, allow_data=True, data_types=data_types, site_types=site_types)
                 if translated is None:
                     break
                 translated_args.append(translated)
@@ -1786,11 +1867,13 @@ def build_accessor(
     body: str,
     digest: str,
     data_types: dict[int, str],
+    site_global_types: dict[str, dict[str, str]] | None = None,
 ) -> tuple[list[str], int, int, int, int, int, int, int]:
     code = code_for_translation(body)
     declarations = recover_declarations(body)
+    site_types = (site_global_types or {}).get(address.lower(), {})
     typed_conditions, unresolved_conditions, typed_calls, unresolved_calls = recover_typed_sites(
-        list(enumerate(code, 1)), declarations, data_types
+        list(enumerate(code, 1)), declarations, data_types, site_types
     )
     translator = ControlTranslator(code, typed_conditions)
     translator.parse()
@@ -1919,6 +2002,7 @@ def main() -> int:
     call_symbols: set[str] = set()
     data_symbols: set[str] = set()
     data_types = load_data_types()
+    site_global_types = load_site_global_types()
 
     for row in rows:
         address = row["address"].lower()
@@ -1966,7 +2050,7 @@ def main() -> int:
             unresolved_conditions,
             typed_calls,
             unresolved_calls,
-        ) = build_accessor(address, row, facts, body, digest, data_types)
+        ) = build_accessor(address, row, facts, body, digest, data_types, site_global_types)
 
         record_lines = [
             f"// {address} {row['name']}",

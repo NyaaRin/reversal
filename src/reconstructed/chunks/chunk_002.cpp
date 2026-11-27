@@ -109,12 +109,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001e3f0() noexcept {
     // TODO: resolve the indirect call in body 13: (*DAT_1803fae80)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fae80 == (code *)0x0) [reason: unresolved global storage/width]
     trace.data_ref("DAT_1803fae80", static_cast<const void*>(&image::DAT_1803fae80));
     // body sha256: 6a165f501bb1b75aa73c697596331604dc7fb301cb44f294dfa214a1bfda8089
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.condition("if (DAT_1803fae80 == (code *)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fae80 == (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fae80, 0) == (code *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("(*DAT_1803fae80)();");
@@ -2873,7 +2872,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001f750() noexcept {
     // TODO: resolve the indirect call in body 23: cVar1 = (**(code **)(*DAT_1803fa668 + 0x40))(DAT_1803fa668,uVar2,pcVar5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fa668 != (longlong *)0x0) [reason: unresolved global storage/width]
     trace.data_ref("DAT_1803fa668", static_cast<const void*>(&image::DAT_1803fa668));
     trace.string_literal("unknown");
     // body sha256: 0b42e7cb3c133690f23362214bcf98dfc456466da390d2bb5ffde7d9f37776b6
@@ -2887,7 +2885,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001f750() noexcept {
             trace.statement("plVar3 = (longlong *)(**(code **)(*param_1 + 0x20))();");
             if (trace.checked_condition("if (plVar3 != (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar3 != (longlong *)0x0); })) {
                 trace.statement("uVar2 = (**(code **)(*plVar3 + 0x48))(plVar3);");
-                if (trace.condition("if (DAT_1803fa668 != (longlong *)0x0)")) {
+                if (trace.checked_condition("if (DAT_1803fa668 != (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa668, 0) != (longlong *)0x0); })) {
                     trace.statement("pcVar5 = (char *)(*(longlong *)");
                     trace.statement("((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8) + 0x1fb0)");
                     trace.statement(";");
@@ -3199,7 +3197,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001f960() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar2 != (longlong *)0x0) && (iVar1 = (**(code **)(*plVar2 + 0x48))(plVar2), 0 < iVar1)) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: if (DAT_1803fe9e8 != (code *)0x0) [reason: unresolved global storage/width]
     trace.data_ref("DAT_180340268", static_cast<const void*>(&image::DAT_180340268));
     trace.data_ref("DAT_1803fe9e8", static_cast<const void*>(&image::DAT_1803fe9e8));
     trace.data_ref("DAT_180426150", static_cast<const void*>(&image::DAT_180426150));
@@ -3216,7 +3213,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18001f960() noexcept {
                 if (trace.condition("if ((DAT_180426150 != (code *)0x0) && ((pcVar3 = (char *)(*DAT_180426150)(iVar1), pcVar3 != (char *)0x0 && (*pcVar3 != '\\0'))))")) {
                     trace.statement("return pcVar3;");
                 }
-                if (trace.condition("if (DAT_1803fe9e8 != (code *)0x0)")) {
+                if (trace.checked_condition("if (DAT_1803fe9e8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fe9e8, 0) != (code *)0x0); })) {
                     trace.statement("pcVar3 = (char *)(*DAT_1803fe9e8)(iVar1,\"UserGroup\",&DAT_180340268);");
                     trace.statement("return pcVar3;");
                 }
@@ -4844,7 +4841,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180020280() noexcept {
     // TODO: resolve the indirect call in body 46: (**(code **)(*(longlong *)(&DAT_1803fe830)[lVar4 * 0x11] + 0x68))();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((DAT_1803fa640 != (longlong *)0x0) && (param_1 != (char *)0x0)) && (*param_1 != '\0')) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((longlong *)(&DAT_1803fe830)[lVar4 * 0x11] != (longlong *)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("strcmp", pcVar5, param_1);
     trace.call_arguments("strncpy_s", pcVar5, 0x80, param_1, 0x7f);
@@ -4863,7 +4859,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180020280() noexcept {
             trace.statement("longlong lVar4;");
             trace.statement("char *pcVar5;");
             trace.statement("plVar3 = DAT_1803fa640;");
-            if (trace.condition("if (((DAT_1803fa640 != (longlong *)0x0) && (param_1 != (char *)0x0)) && (*param_1 != '\\0'))")) {
+            if (trace.checked_condition("if (((DAT_1803fa640 != (longlong *)0x0) && (param_1 != (char *)0x0)) && (*param_1 != '\\0'))", [&]() -> bool { return static_cast<bool>(((load_at<void*>(&image::DAT_1803fa640, 0) != (longlong *)0x0) && (param_1 != (char *)0x0)) && (*param_1 != '\0')); })) {
                 trace.statement("pcVar5 = &DAT_1803fe7b0;");
                 do {
                     trace.statement("lVar4 = *(longlong *)(pcVar5 + 0x80);");
@@ -5140,8 +5136,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800203f0() noexcept {
     // TODO: resolve the indirect call in body 105: (*DAT_1803f9260)(local_5c8);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803f9268 != (code *)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803f9260 != (code *)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("memset", local_5c8, 0, 0x500);
     trace.call_arguments("FUN_1800200b0");
     trace.call_target("FUN_1800200b0", reinterpret_cast<const void*>(&image::FUN_1800200b0));
@@ -5202,7 +5196,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800203f0() noexcept {
                 trace.statement("memset(local_5c8,0,0x500);");
                 trace.statement("FUN_1800200b0();");
                 if (trace.checked_condition("if (DAT_1803f9259 != '\\0')", [&]() -> bool { return static_cast<bool>(image::DAT_1803f9259 != '\0'); })) {
-                    if (trace.condition("if (DAT_1803f9268 != (code *)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1803f9268 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803f9268, 0) != (code *)0x0); })) {
                         trace.statement("local_600 = 0;");
                         trace.statement("local_608 = 0;");
                         trace.statement("(*DAT_1803f9268)(local_5c8,lVar3,iVar5,param_9);");
@@ -5248,7 +5242,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800203f0() noexcept {
                             trace.statement("iVar4 = iVar4 + 1;");
                         } while (trace.loop_condition("while (iVar4 < iVar5);"));
                     }
-                    if (trace.condition("if (DAT_1803f9260 != (code *)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1803f9260 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803f9260, 0) != (code *)0x0); })) {
                         trace.statement("(*DAT_1803f9260)(local_5c8);");
                     }
                 }
@@ -5321,7 +5315,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180020770() noexcept {
     // TODO: resolve the indirect call in body 18: (*DAT_180427618)((ulonglong)(uint)(int)param_1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_180427618 != (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "vstdlib.dll");
     trace.call_arguments("GetProcAddress", hModule, "RandomSeed");
     trace.data_ref("DAT_180426240", static_cast<const void*>(&image::DAT_180426240));
@@ -5337,7 +5330,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180020770() noexcept {
                 trace.statement("hModule = GetModuleHandleA(\"vstdlib.dll\");");
                 trace.statement("DAT_180427618 = GetProcAddress(hModule,\"RandomSeed\");");
             }
-            if (trace.condition("if (DAT_180427618 != (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_180427618 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180427618, 0) != (void*)0x0); })) {
                 trace.statement("(*DAT_180427618)((ulonglong)(uint)(int)param_1);");
             }
             trace.statement("return;");
@@ -10272,7 +10265,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022850() noexcept {
     // TODO: resolve the indirect call in body 18: (*DAT_1803feb68)(param_1,param_2,param_3,param_4);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803feb68 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "luaL_loadbufferx");
     trace.data_ref("DAT_1803feb68", static_cast<const void*>(&image::DAT_1803feb68));
@@ -10282,7 +10274,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022850() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("HMODULE hModule;");
-            if (trace.condition("if (DAT_1803feb68 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803feb68 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803feb68, 0) == (void*)0x0); })) {
                 trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_1803feb68 = GetProcAddress(hModule,\"luaL_loadbufferx\");");
             }
@@ -11208,7 +11200,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022eb0() noexcept {
     // TODO: resolve the indirect call in body 18: (*DAT_180425fe8)(param_1,0xffffffff,0);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_180425fe8 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "luaL_checklstring");
     trace.data_ref("DAT_180425fe8", static_cast<const void*>(&image::DAT_180425fe8));
@@ -11218,7 +11209,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022eb0() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("HMODULE hModule;");
-            if (trace.condition("if (DAT_180425fe8 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_180425fe8 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425fe8, 0) == (void*)0x0); })) {
                 trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_180425fe8 = GetProcAddress(hModule,\"luaL_checklstring\");");
             }
@@ -11287,7 +11278,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022f00() noexcept {
     // TODO: resolve the indirect call in body 18: (*DAT_180423ad0)(param_1,(ulonglong)param_2);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_180423ad0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_pushvalue");
     trace.data_ref("DAT_180423ad0", static_cast<const void*>(&image::DAT_180423ad0));
@@ -11297,7 +11287,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022f00() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("HMODULE hModule;");
-            if (trace.condition("if (DAT_180423ad0 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_180423ad0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180423ad0, 0) == (void*)0x0); })) {
                 trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_180423ad0 = GetProcAddress(hModule,\"lua_pushvalue\");");
             }
@@ -11365,7 +11355,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022f60() noexcept {
     // TODO: resolve the indirect call in body 18: (*DAT_1803fcfa0)(param_1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_gettop");
     trace.data_ref("DAT_1803fcfa0", static_cast<const void*>(&image::DAT_1803fcfa0));
@@ -11375,7 +11364,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022f60() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("HMODULE hModule;");
-            if (trace.condition("if (DAT_1803fcfa0 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fcfa0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fcfa0, 0) == (void*)0x0); })) {
                 trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_1803fcfa0 = GetProcAddress(hModule,\"lua_gettop\");");
             }
@@ -11444,7 +11433,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022fb0() noexcept {
     // TODO: resolve the indirect call in body 18: (*DAT_180425540)(param_1,(ulonglong)param_2);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_settop");
     trace.data_ref("DAT_180425540", static_cast<const void*>(&image::DAT_180425540));
@@ -11454,7 +11442,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180022fb0() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("HMODULE hModule;");
-            if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                 trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_180425540 = GetProcAddress(hModule,\"lua_settop\");");
             }
@@ -11686,12 +11674,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023150() noexcept {
     // TODO: resolve the indirect call in body 11: (*DAT_1803fae90)(*param_1,param_1[1],*(undefined4 *)(param_1 + 2),.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*(char *)(param_1 + 3) != '\0') && (DAT_1803fae90 != (code *)0x0)) [reason: unresolved global storage/width]
     trace.data_ref("DAT_1803fae90", static_cast<const void*>(&image::DAT_1803fae90));
     // body sha256: a4b0719740429b6294f1e49dca5674a8128757155a822459625131ef0d570212
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.condition("if ((*(char *)(param_1 + 3) != '\\0') && (DAT_1803fae90 != (code *)0x0))")) {
+            if (trace.checked_condition("if ((*(char *)(param_1 + 3) != '\\0') && (DAT_1803fae90 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<char>(param_1 + 3, 0) != '\0') && (load_at<void*>(&image::DAT_1803fae90, 0) != (code *)0x0)); })) {
                 trace.statement("(*DAT_1803fae90)(*param_1,param_1[1],*(undefined4 *)(param_1 + 2),");
                 trace.statement("*(undefined4 *)((longlong)param_1 + 0x14));");
             }
@@ -11787,9 +11774,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023180() noexcept {
     // TODO: resolve the indirect call in body 28: (*DAT_1803fae90)(local_28,local_20,local_18,local_14);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_180426008 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180426008 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((local_10 != '\0') && (DAT_1803fae90 != (code *)0x0)) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_pcall");
     trace.call_arguments("FUN_180023010", &local_28, param_1);
@@ -11808,16 +11792,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023180() noexcept {
             trace.statement("undefined4 local_18;");
             trace.statement("undefined4 local_14;");
             trace.statement("char local_10;");
-            if (trace.condition("if (DAT_180426008 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_180426008 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180426008, 0) == (void*)0x0); })) {
                 trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_180426008 = GetProcAddress(hModule,\"lua_pcall\");");
-                if (trace.condition("if (DAT_180426008 == (FARPROC)0x0)")) {
+                if (trace.checked_condition("if (DAT_180426008 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180426008, 0) == (void*)0x0); })) {
                     trace.statement("return 0xffffffff;");
                 }
             }
             trace.statement("FUN_180023010(&local_28,param_1);");
             trace.statement("uVar1 = (*DAT_180426008)(param_1,(ulonglong)param_2,(ulonglong)param_3,0);");
-            if (trace.condition("if ((local_10 != '\\0') && (DAT_1803fae90 != (code *)0x0))")) {
+            if (trace.checked_condition("if ((local_10 != '\\0') && (DAT_1803fae90 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((local_10 != '\0') && (load_at<void*>(&image::DAT_1803fae90, 0) != (code *)0x0)); })) {
                 trace.statement("(*DAT_1803fae90)(local_28,local_20,local_18,local_14);");
             }
             trace.statement("return uVar1 & 0xffffffff;");
@@ -11883,7 +11867,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023240() noexcept {
     // TODO: resolve the indirect call in body 18: (*DAT_1803ff2a8)(param_1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803ff2a8 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_pushnil");
     trace.data_ref("DAT_1803ff2a8", static_cast<const void*>(&image::DAT_1803ff2a8));
@@ -11893,7 +11876,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023240() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("HMODULE hModule;");
-            if (trace.condition("if (DAT_1803ff2a8 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803ff2a8 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff2a8, 0) == (void*)0x0); })) {
                 trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_1803ff2a8 = GetProcAddress(hModule,\"lua_pushnil\");");
             }
@@ -12189,7 +12172,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023330() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (puVar4 != DAT_1803fac68) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((DAT_1803fb0a8 != (FARPROC)0x0) && (0 < *(int *)(puVar4 + 5))) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "luaL_ref");
     trace.call_arguments("GetProcAddress", hModule, "luaL_unref");
@@ -12242,7 +12224,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023330() noexcept {
                 trace.statement("puVar4 = DAT_1803fac68;");
             }
             if (trace.condition("if (puVar4 != DAT_1803fac68)")) {
-                if (trace.condition("if ((DAT_1803fb0a8 != (FARPROC)0x0) && (0 < *(int *)(puVar4 + 5)))")) {
+                if (trace.checked_condition("if ((DAT_1803fb0a8 != (FARPROC)0x0) && (0 < *(int *)(puVar4 + 5)))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803fb0a8, 0) != (void*)0x0) && (0 < load_at<std::int32_t>(puVar4 + 5, 0))); })) {
                     trace.statement("(*DAT_1803fb0a8)(param_1,0xffffd8f0);");
                 }
                 trace.statement("_Memory = (void *)FUN_18022e0e0(&DAT_1803fac68,puVar4);");
@@ -12460,7 +12442,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800235f0() noexcept {
     // TODO: resolve the indirect call in body 18: (*DAT_1803fe490)(param_1,(ulonglong)param_2);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_type");
     trace.data_ref("DAT_1803fe490", static_cast<const void*>(&image::DAT_1803fe490));
@@ -12470,7 +12451,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800235f0() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("HMODULE hModule;");
-            if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fe490 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fe490, 0) == (void*)0x0); })) {
                 trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
             }
@@ -12598,7 +12579,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023650() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (plVar5 != DAT_1803fa7f0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fa5b8 != (code *)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_1800234d0", uVar6);
     trace.call_arguments("FUN_18021db70");
     trace.call_arguments("FUN_180023290");
@@ -12646,7 +12626,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023650() noexcept {
                 trace.statement("(*pcVar3)(param_1,uVar6);");
                 }
             }
-            if (trace.condition("if (DAT_1803fa5b8 != (code *)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fa5b8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa5b8, 0) != (code *)0x0); })) {
                 trace.statement("(*DAT_1803fa5b8)(param_1);");
             }
             trace.statement("return;");
@@ -13220,7 +13200,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023720() noexcept {
     // TODO: resolve the indirect call in body 327: cVar3 = (**(code **)(*param_1 + 0x260))(param_1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_1 == (longlong *)0x0) || (DAT_1803fa648 == (code *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((puVar10 != DAT_1803fa7f0) && (puVar1 = puVar10 + 5, puVar1 != (ulonglong *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (ppuVar9[4] < puVar5) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((*(char *)((longlong)local_70 + 0x19) != '\0') && (puVar5 < ppuVar9[4])) [reason: pointer depth/pointee not proven]
@@ -13228,13 +13207,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023720() noexcept {
     // TODO: condition expression type not recovered: if (ppuVar9[4] < puVar5) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((*(char *)((longlong)local_70 + 0x19) != '\0') && (puVar5 < ppuVar9[4])) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (puVar5 < ppuVar13[4]) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803fa56c != '\0') && (lVar6 = FUN_180023290(), lVar6 != 0)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fb0b0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fb0b0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((undefined8 *)param_1[1] <= ppuVar13[4]) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((*(char *)((longlong)ppuVar11 + 0x19) != '\0') || ((undefined8 *)param_1[1] < ppuVar11[4]) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_180014410", "[LUA] persist init skipped: lua=%p index2adr=%p\n", param_1);
@@ -13325,7 +13298,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023720() noexcept {
             trace.statement("longlong local_58;");
             trace.statement("ulonglong local_50;");
             trace.statement("local_50 = DAT_1803da4c0 ^ (ulonglong)auStack_98;");
-            if (trace.condition("if ((param_1 == (longlong *)0x0) || (DAT_1803fa648 == (code *)0x0))")) {
+            if (trace.checked_condition("if ((param_1 == (longlong *)0x0) || (DAT_1803fa648 == (code *)0x0))", [&]() -> bool { return static_cast<bool>((param_1 == (longlong *)0x0) || (load_at<void*>(&image::DAT_1803fa648, 0) == (code *)0x0)); })) {
                 trace.statement("FUN_180014410(\"[LUA] persist init skipped: lua=%p index2adr=%p\\n\",param_1);");
                 trace.statement("return 0;");
             }
@@ -13451,7 +13424,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023720() noexcept {
                 trace.statement("puVar5 = (undefined8 *)(*DAT_1803fa648)(param_1[1],0xffffffff);");
                 if (trace.checked_condition("if (puVar5 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(puVar5 == (undefined8 *)0x0); })) {
                     trace.statement("lVar6 = param_1[1];");
-                    if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                         trace.statement("pHVar7 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_180425540 = GetProcAddress(pHVar7,\"lua_settop\");");
                     }
@@ -13477,7 +13450,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023720() noexcept {
                     trace.statement("puVar5 = (undefined8 *)FUN_18020cfa0();");
                     trace.statement("*puVar5 = uVar2;");
                     trace.statement("lVar6 = param_1[1];");
-                    if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                         trace.statement("pHVar7 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_180425540 = GetProcAddress(pHVar7,\"lua_settop\");");
                     }
@@ -13499,15 +13472,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023720() noexcept {
                     trace.statement(";");
                     trace.statement("return 1;");
                 }
-                if (trace.condition("if (DAT_1803fb0b0 == (FARPROC)0x0)")) {
+                if (trace.checked_condition("if (DAT_1803fb0b0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fb0b0, 0) == (void*)0x0); })) {
                     trace.statement("pHVar7 = GetModuleHandleA(\"lua_shared.dll\");");
                     if (trace.checked_condition("if (pHVar7 != (HMODULE)0x0)", [&]() -> bool { return static_cast<bool>(pHVar7 != (HMODULE)0x0); })) {
                         trace.statement("DAT_1803fb0b0 = GetProcAddress(pHVar7,\"luaL_ref\");");
                         trace.statement("DAT_1803fb0a8 = GetProcAddress(pHVar7,\"luaL_unref\");");
                     }
-                    if (trace.condition("if (DAT_1803fb0b0 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1803fb0b0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fb0b0, 0) == (void*)0x0); })) {
                         trace.statement("lVar6 = param_1[1];");
-                        if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                             trace.statement("pHVar7 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_180425540 = GetProcAddress(pHVar7,\"lua_settop\");");
                         }
@@ -13520,7 +13493,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023720() noexcept {
                 trace.statement("puVar5 = DAT_1803fac68;");
                 if (trace.checked_condition("if ((int)uVar8 < 1)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(uVar8) < 1); })) {
                     trace.statement("lVar6 = param_1[1];");
-                    if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                         trace.statement("pHVar7 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_180425540 = GetProcAddress(pHVar7,\"lua_settop\");");
                     }
@@ -13998,7 +13971,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023fc0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar7 != DAT_1803fa7f0) && (plVar7 != (longlong *)0xffffffffffffffd8)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180423ad0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_pushvalue");
     trace.call_arguments("FUN_180014410", "[LUA] persist object '%s' skipped: cache is not ready\n", "COPYCACHE");
@@ -14044,7 +14016,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180023fc0() noexcept {
                     trace.statement("plVar7 = DAT_1803fa7f0;");
                 }
                 if (trace.condition("if ((plVar7 != DAT_1803fa7f0) && (plVar7 != (longlong *)0xffffffffffffffd8))")) {
-                    if (trace.condition("if (DAT_180423ad0 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_180423ad0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180423ad0, 0) == (void*)0x0); })) {
                         trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_180423ad0 = GetProcAddress(hModule,\"lua_pushvalue\");");
                     }
@@ -14220,7 +14192,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800240f0() noexcept {
     // TODO: resolve the indirect call in body 62: (**(code **)(*param_1 + 0x78))(param_1,uVar9);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_type");
     trace.call_arguments("FUN_180024400", param_1);
@@ -14251,7 +14222,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800240f0() noexcept {
                     trace.statement("uVar9 = param_2 + 1 + iVar5;");
                 }
                 trace.statement("lVar1 = param_1[1];");
-                if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
+                if (trace.checked_condition("if (DAT_1803fe490 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fe490, 0) == (void*)0x0); })) {
                     trace.statement("hModule = GetModuleHandleA(\"lua_shared.dll\");");
                     trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
                 }
@@ -14781,9 +14752,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024540() noexcept {
     // TODO: resolve the indirect call in body 21: (cVar1 = (**(code **)(*DAT_1803fa668 + 0xd0))(), cVar1 == '\0')) {.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fa618 != (HWND)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (pHVar3 != DAT_1803fa618) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fa618 != (HWND)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (((BVar2 != 0) && ((local_28._4_8_ & 1) != 0)) && (DAT_1803fa545 == '\0')) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for GetCursorInfo: &local_28 [reason: ambiguous operand type]
     trace.call_arguments("GetForegroundWindow");
@@ -14804,12 +14773,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024540() noexcept {
             if (trace.condition("if ((DAT_1803fa668 == (longlong *)0x0) || (cVar1 = (**(code **)(*DAT_1803fa668 + 0xd0))(), cVar1 == '\\0'))")) {
                 trace.statement("return 0;");
             }
-            if (trace.condition("if (DAT_1803fa618 != (HWND)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fa618 != (HWND)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa618, 0) != (void*)0x0); })) {
                 trace.statement("pHVar3 = GetForegroundWindow();");
                 if (trace.condition("if (pHVar3 != DAT_1803fa618)")) {
                     trace.statement("return 0;");
                 }
-                if (trace.condition("if (DAT_1803fa618 != (HWND)0x0)")) {
+                if (trace.checked_condition("if (DAT_1803fa618 != (HWND)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa618, 0) != (void*)0x0); })) {
                     trace.statement("local_28.cbSize = 0x18;");
                     trace.statement("local_28._4_8_ = 0;");
                     trace.statement("local_28._12_8_ = 0;");
@@ -15540,7 +15509,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024860() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180425430.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fa618 != (HWND)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((&DAT_180425430)[wParam] != '\0') [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for CONCAT22: (undefined2)local_28.y,(undefined2)local_28.x [reason: unknown aggregate layout]
     trace.call_arguments("GetCursorPos", &local_28);
@@ -15571,7 +15539,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024860() noexcept {
             trace.statement("tagPOINT local_28;");
             trace.statement("ulonglong local_20;");
             trace.statement("local_20 = DAT_1803da4c0 ^ (ulonglong)auStack_48;");
-            if (trace.condition("if (DAT_1803fa618 != (HWND)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fa618 != (HWND)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa618, 0) != (void*)0x0); })) {
                 trace.statement("local_28.x = 0;");
                 trace.statement("local_28.y = 0;");
                 trace.statement("GetCursorPos(&local_28);");
@@ -15775,9 +15743,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024b50() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fa368.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fa368 == (undefined8 *)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fa368 == (undefined8 *)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fa368 != (undefined8 *)0xffffffffffffffff) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_18001d080", &local_48, "48 8B 0D ? ? ? ? 48 83 3D ? ? ? ? 00 75 ? 48 8D 0D ? ? ? ? FF 15", 0x40);
     trace.call_arguments("FUN_18001d080", &local_28, "client.dll", 10);
     trace.call_arguments("FUN_180015f40", &local_28, &local_48);
@@ -15806,7 +15771,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024b50() noexcept {
             trace.statement("undefined8 local_10;");
             trace.statement("*param_1 = 0;");
             trace.statement("*(undefined1 *)(param_1 + 1) = 0;");
-            if (trace.condition("if (DAT_1803fa368 == (undefined8 *)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fa368 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa368, 0) == (undefined8 *)0x0); })) {
                 trace.statement("local_48 = 0;");
                 trace.statement("uStack_40 = 0;");
                 trace.statement("local_38 = 0;");
@@ -15826,12 +15791,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024b50() noexcept {
                 trace.statement("DAT_1803fa368 = (undefined8 *)((longlong)*(int *)(lVar2 + 10) + lVar2 + 0xf);");
                 trace.statement("FUN_180014410(\"[LuaHooks] x64 gGM = %p\\n\");");
                 }
-                if (trace.condition("if (DAT_1803fa368 == (undefined8 *)0x0)")) {
+                if (trace.checked_condition("if (DAT_1803fa368 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa368, 0) == (undefined8 *)0x0); })) {
                     trace.statement("return param_1;");
                 }
             }
             trace.statement("puVar1 = DAT_1803fa368;");
-            if (trace.condition("if (DAT_1803fa368 != (undefined8 *)0xffffffffffffffff)")) {
+            if (trace.checked_condition("if (DAT_1803fa368 != (undefined8 *)0xffffffffffffffff)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa368, 0) != (undefined8 *)0xffffffffffffffff); })) {
                 trace.statement("*param_1 = *DAT_1803fa368;");
                 trace.statement("*puVar1 = 0;");
                 trace.statement("*(undefined1 *)(param_1 + 1) = 1;");
@@ -16470,8 +16435,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024f00() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((param_2 != (int *)0x0) && (DAT_1803fa608 != 0)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803de058 != (uint *)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1805c7af8 != (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (((char)uStack_98 != '\0') && ((longlong)DAT_1803fa368 - 1U < 0xfffffffffffffffe)) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180025360");
     trace.call_arguments("FUN_18001d080", &local_70, "48 85 C9 75 0B C7 05 ?? ?? ?? ?? FF FF FF FF C3", 0x2f);
@@ -16610,7 +16573,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024f00() noexcept {
                         }
                     }
                     trace.statement("uVar9 = FUN_180015e50(*param_2);");
-                    if (trace.condition("if (DAT_1803de058 != (uint *)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1803de058 != (uint *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803de058, 0) != (uint *)0x0); })) {
                         trace.statement("DAT_1803de060 = *DAT_1803de058;");
                         trace.statement("DAT_1803de064 = 1;");
                         trace.statement("*DAT_1803de058 = uVar9 & 0x7fffffff;");
@@ -16620,7 +16583,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180024f00() noexcept {
                         trace.statement("hModule = GetModuleHandleA(\"vstdlib.dll\");");
                         trace.statement("DAT_1805c7af8 = GetProcAddress(hModule,\"RandomSeed\");");
                     }
-                    if (trace.condition("if (DAT_1805c7af8 != (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1805c7af8 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1805c7af8, 0) != (void*)0x0); })) {
                         trace.statement("(*DAT_1805c7af8)((ulonglong)(uVar9 & 0x7fffffff));");
                     }
                     trace.statement("piVar12 = (int *)FUN_18001dfb0(lVar10);");
@@ -16810,7 +16773,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025360() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803de066 != '\0') [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((lVar3 != 0) && (DAT_1803fa658 != (longlong *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803de064 != '\0') && (DAT_1803de058 != (undefined4 *)0x0)) [reason: unresolved global storage/width]
     trace.data_ref("DAT_1803ddea0", static_cast<const void*>(&image::DAT_1803ddea0));
     trace.data_ref("DAT_1803ddea8", static_cast<const void*>(&image::DAT_1803ddea8));
@@ -16836,7 +16798,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025360() noexcept {
                 trace.statement("pcVar1 = *(code **)(*DAT_1803fa360 + 0x18);");
                 trace.statement("uVar2 = (**(code **)(*DAT_1803fa668 + 0x60))();");
                 trace.statement("lVar3 = (*pcVar1)(DAT_1803fa360,uVar2);");
-                if (trace.condition("if ((lVar3 != 0) && (DAT_1803fa658 != (longlong *)0x0))")) {
+                if (trace.checked_condition("if ((lVar3 != 0) && (DAT_1803fa658 != (longlong *)0x0))", [&]() -> bool { return static_cast<bool>((lVar3 != 0) && (load_at<void*>(&image::DAT_1803fa658, 0) != (longlong *)0x0)); })) {
                     trace.statement("(**(code **)(*DAT_1803fa658 + 0x18))(DAT_1803fa658,lVar3);");
                 }
             }
@@ -17617,13 +17579,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025890() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((param_2 == 0) || (cVar1 = FUN_180025450(), cVar1 == '\0')) [reason: assignment or side effect]
-    // TODO: condition expression type not recovered: if (DAT_180425550 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425550 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180426148 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803ff2a8 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180025450");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", pHVar2, "luaL_ref");
@@ -17667,29 +17622,29 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025890() noexcept {
             if (trace.condition("if ((param_2 == 0) || (cVar1 = FUN_180025450(), cVar1 == '\\0'))")) {
                 trace.statement("return param_1;");
             }
-            if (trace.condition("if (DAT_180425550 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_180425550 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425550, 0) == (void*)0x0); })) {
                 trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                 if (trace.checked_condition("if (pHVar2 == (HMODULE)0x0)", [&]() -> bool { return static_cast<bool>(pHVar2 == (HMODULE)0x0); })) {
                     trace.statement("return param_1;");
                 }
                 trace.statement("DAT_180425550 = GetProcAddress(pHVar2,\"luaL_ref\");");
                 trace.statement("DAT_180426148 = GetProcAddress(pHVar2,\"luaL_unref\");");
-                if (trace.condition("if (DAT_180425550 == (FARPROC)0x0)")) {
+                if (trace.checked_condition("if (DAT_180425550 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425550, 0) == (void*)0x0); })) {
                     trace.statement("return param_1;");
                 }
             }
-            if (trace.condition("if (DAT_180426148 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_180426148 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180426148, 0) == (void*)0x0); })) {
                 trace.statement("return param_1;");
             }
             trace.statement("lVar5 = *param_1;");
-            if (trace.condition("if (DAT_1803fcfa0 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fcfa0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fcfa0, 0) == (void*)0x0); })) {
                 trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_1803fcfa0 = GetProcAddress(pHVar2,\"lua_gettop\");");
             }
             trace.statement("uVar3 = (*DAT_1803fcfa0)(lVar5);");
             trace.statement("(*DAT_1803fcba8)(*param_1,0xffffd8f0,\"_VMEVENTS\");");
             trace.statement("lVar5 = *param_1;");
-            if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_1803fe490 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fe490, 0) == (void*)0x0); })) {
                 trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_1803fe490 = GetProcAddress(pHVar2,\"lua_type\");");
             }
@@ -17700,7 +17655,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025890() noexcept {
                 trace.statement("lVar5 = *param_1;");
                 trace.statement("*(int *)(param_1 + 1) = (int)IVar4;");
                 if (trace.checked_condition("if (0 < (int)IVar4)", [&]() -> bool { return static_cast<bool>(0 < static_cast<std::int32_t>(IVar4)); })) {
-                    if (trace.condition("if (DAT_1803ff2a8 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1803ff2a8 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff2a8, 0) == (void*)0x0); })) {
                         trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_1803ff2a8 = GetProcAddress(pHVar2,\"lua_pushnil\");");
                     }
@@ -17710,7 +17665,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025890() noexcept {
                     trace.statement("*(undefined1 *)((longlong)param_1 + 0xc) = 1;");
                 }
             }
-            if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+            if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                 trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                 trace.statement("DAT_180425540 = GetProcAddress(pHVar2,\"lua_settop\");");
             }
@@ -17836,9 +17791,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025a90() noexcept {
     // TODO: resolve the indirect call in body 40: (*DAT_180425540)(lVar1,uVar3 & 0xffffffff);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1804277b0 != (FARPROC)0x0) && (DAT_180426250 != (FARPROC)0x0)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", pHVar2, "luaL_unref");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
@@ -17876,9 +17828,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025a90() noexcept {
                     trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                     trace.statement("DAT_180426250 = GetProcAddress(pHVar2,\"lua_rawgeti\");");
                 }
-                if (trace.condition("if ((DAT_1804277b0 != (FARPROC)0x0) && (DAT_180426250 != (FARPROC)0x0))")) {
+                if (trace.checked_condition("if ((DAT_1804277b0 != (FARPROC)0x0) && (DAT_180426250 != (FARPROC)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1804277b0, 0) != (void*)0x0) && (load_at<void*>(&image::DAT_180426250, 0) != (void*)0x0)); })) {
                     trace.statement("lVar1 = *param_1;");
-                    if (trace.condition("if (DAT_1803fcfa0 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1803fcfa0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fcfa0, 0) == (void*)0x0); })) {
                         trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_1803fcfa0 = GetProcAddress(pHVar2,\"lua_gettop\");");
                     }
@@ -17887,7 +17839,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180025a90() noexcept {
                     trace.statement("(*DAT_1803fcbe0)(*param_1,0xffffd8f0,\"_VMEVENTS\");");
                     trace.statement("(*DAT_1804277b0)(*param_1,0xffffd8f0,(ulonglong)*(uint *)(param_1 + 1));");
                     trace.statement("lVar1 = *param_1;");
-                    if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                         trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_180425540 = GetProcAddress(pHVar2,\"lua_settop\");");
                     }
@@ -18810,13 +18762,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800260c0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar8 != DAT_1803fa7f0) && (plVar8 != (longlong *)0xffffffffffffffd8)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180423ad0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fd0f8 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180423ad0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180025450");
     trace.call_arguments("FUN_180025620", param_2);
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
@@ -18879,12 +18824,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800260c0() noexcept {
                 }
                 if (trace.condition("if ((plVar8 != DAT_1803fa7f0) && (plVar8 != (longlong *)0xffffffffffffffd8))")) {
                     trace.statement("puVar4 = (undefined8 *)FUN_180025620(param_2);");
-                    if (trace.condition("if (DAT_180423ad0 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_180423ad0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180423ad0, 0) == (void*)0x0); })) {
                         trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_180423ad0 = GetProcAddress(pHVar5,\"lua_pushvalue\");");
                     }
                     trace.statement("(*DAT_180423ad0)(param_1,0xffffd8ed);");
-                    if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1803fe490 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fe490, 0) == (void*)0x0); })) {
                         trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_1803fe490 = GetProcAddress(pHVar5,\"lua_type\");");
                     }
@@ -18895,23 +18840,23 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800260c0() noexcept {
                             trace.statement("puVar9 = (undefined8 *)*puVar4;");
                         }
                         trace.statement("(*DAT_1803fcba8)(param_1,0xffffffff,puVar9);");
-                        if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_1803fe490 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fe490, 0) == (void*)0x0); })) {
                             trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_1803fe490 = GetProcAddress(pHVar5,\"lua_type\");");
                         }
                         trace.statement("IVar6 = (*DAT_1803fe490)(param_1,0xffffffff);");
                         if (trace.checked_condition("if ((int)IVar6 != 5)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar6) != 5); })) {
-                            if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                            if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                                 trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                                 trace.statement("DAT_180425540 = GetProcAddress(pHVar5,\"lua_settop\");");
                             }
                             trace.statement("(*DAT_180425540)(param_1,0xfffffffe);");
-                            if (trace.condition("if (DAT_1803fd0f8 == (FARPROC)0x0)")) {
+                            if (trace.checked_condition("if (DAT_1803fd0f8 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fd0f8, 0) == (void*)0x0); })) {
                                 trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                                 trace.statement("DAT_1803fd0f8 = GetProcAddress(pHVar5,\"lua_createtable\");");
                             }
                             trace.statement("(*DAT_1803fd0f8)(param_1,0,8);");
-                            if (trace.condition("if (DAT_180423ad0 == (FARPROC)0x0)")) {
+                            if (trace.checked_condition("if (DAT_180423ad0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180423ad0, 0) == (void*)0x0); })) {
                                 trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                                 trace.statement("DAT_180423ad0 = GetProcAddress(pHVar5,\"lua_pushvalue\");");
                             }
@@ -18924,7 +18869,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800260c0() noexcept {
                         trace.statement("(*DAT_1803fcba0)(param_1,0xfffffffe);");
                         trace.statement("return 1;");
                     }
-                    if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                         trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_180425540 = GetProcAddress(pHVar5,\"lua_settop\");");
                     }
@@ -19073,8 +19018,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180026360() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((cVar1 != '\0') && (iVar2 = FUN_180022f60(param_1), 1 < iVar2)) [reason: assignment or side effect]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180025450");
     trace.call_arguments("FUN_180022f60", param_1);
     trace.call_arguments("FUN_1800260c0", param_1, 0xa66cb242adaa3914);
@@ -19119,7 +19062,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180026360() noexcept {
                             trace.statement("(*DAT_1803fcba0)(param_1,0xfffffffe);");
                             trace.statement("return 1;");
                         }
-                        if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                             trace.statement("pHVar3 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_180425540 = GetProcAddress(pHVar3,\"lua_settop\");");
                         }
@@ -19133,7 +19076,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180026360() noexcept {
                             trace.statement("(*DAT_1803fcba0)(param_1,0xfffffffe);");
                             trace.statement("return 1;");
                         }
-                        if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                             trace.statement("pHVar3 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_180425540 = GetProcAddress(pHVar3,\"lua_settop\");");
                         }
@@ -19450,13 +19393,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800265c0() noexcept {
     // TODO: resolve the indirect call in body 71: (*DAT_1803fcba0)(param_1,uVar3 & 0xffffffff);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fd0f8 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1803fd0f8 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_180423ad0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180025450");
     trace.call_arguments("FUN_1800260c0", param_1, 0x20cf586ef656cb7a);
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
@@ -19512,14 +19448,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800265c0() noexcept {
                 if (trace.checked_condition("if (cVar1 != '\\0')", [&]() -> bool { return static_cast<bool>(cVar1 != '\0'); })) {
                     trace.statement("cVar1 = FUN_1800260c0(param_1,0x20cf586ef656cb7a);");
                     if (trace.checked_condition("if (cVar1 != '\\0')", [&]() -> bool { return static_cast<bool>(cVar1 != '\0'); })) {
-                        if (trace.condition("if (DAT_1803fcfa0 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_1803fcfa0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fcfa0, 0) == (void*)0x0); })) {
                             trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_1803fcfa0 = GetProcAddress(pHVar2,\"lua_gettop\");");
                         }
                         trace.statement("uVar3 = (*DAT_1803fcfa0)(param_1);");
                         trace.statement("(*DAT_1803fcb98)(param_1,0);");
                         trace.statement("(*DAT_1803fcbb0)(param_1,uVar3 & 0xffffffff);");
-                        if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_1803fe490 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fe490, 0) == (void*)0x0); })) {
                             trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_1803fe490 = GetProcAddress(pHVar2,\"lua_type\");");
                         }
@@ -19528,22 +19464,22 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800265c0() noexcept {
                             trace.statement("(*DAT_1803fcba0)(param_1,uVar3 & 0xffffffff);");
                             trace.statement("return 1;");
                         }
-                        if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_180425540 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180425540, 0) == (void*)0x0); })) {
                             trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_180425540 = GetProcAddress(pHVar2,\"lua_settop\");");
                         }
                         trace.statement("(*DAT_180425540)(param_1,0xfffffffe);");
-                        if (trace.condition("if (DAT_1803fd0f8 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_1803fd0f8 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fd0f8, 0) == (void*)0x0); })) {
                             trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_1803fd0f8 = GetProcAddress(pHVar2,\"lua_createtable\");");
                         }
                         trace.statement("(*DAT_1803fd0f8)(param_1,0,8);");
-                        if (trace.condition("if (DAT_1803fcfa0 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_1803fcfa0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fcfa0, 0) == (void*)0x0); })) {
                             trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_1803fcfa0 = GetProcAddress(pHVar2,\"lua_gettop\");");
                         }
                         trace.statement("uVar5 = (*DAT_1803fcfa0)(param_1);");
-                        if (trace.condition("if (DAT_1803fd0f8 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_1803fd0f8 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fd0f8, 0) == (void*)0x0); })) {
                             trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_1803fd0f8 = GetProcAddress(pHVar2,\"lua_createtable\");");
                         }
@@ -19556,7 +19492,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800265c0() noexcept {
                         trace.statement("(*DAT_1803fcbe0)(param_1,0xfffffffe,\"__metatable\");");
                         trace.statement("(*DAT_1803fcb90)(param_1,uVar5 & 0xffffffff);");
                         trace.statement("(*DAT_1803fcb98)(param_1,0);");
-                        if (trace.condition("if (DAT_180423ad0 == (FARPROC)0x0)")) {
+                        if (trace.checked_condition("if (DAT_180423ad0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_180423ad0, 0) == (void*)0x0); })) {
                             trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                             trace.statement("DAT_180423ad0 = GetProcAddress(pHVar2,\"lua_pushvalue\");");
                         }
@@ -19661,8 +19597,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180026890() noexcept {
     // TODO: resolve the indirect call in body 29: IVar3 = (*DAT_1804253c0)(param_1,0xfffffffe);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (DAT_1804253c0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180025450");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", pHVar2, "lua_type");
@@ -19685,7 +19619,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180026890() noexcept {
             if (trace.checked_condition("if (param_1 != 0)", [&]() -> bool { return static_cast<bool>(param_1 != 0); })) {
                 trace.statement("cVar1 = FUN_180025450();");
                 if (trace.checked_condition("if (cVar1 != '\\0')", [&]() -> bool { return static_cast<bool>(cVar1 != '\0'); })) {
-                    if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
+                    if (trace.checked_condition("if (DAT_1803fe490 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fe490, 0) == (void*)0x0); })) {
                         trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_1803fe490 = GetProcAddress(pHVar2,\"lua_type\");");
                     }
@@ -19693,7 +19627,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180026890() noexcept {
                     if (trace.checked_condition("if ((int)IVar3 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar3) == 6); })) {
                         trace.statement("cVar1 = FUN_1800265c0(param_1);");
                         if (trace.checked_condition("if (cVar1 != '\\0')", [&]() -> bool { return static_cast<bool>(cVar1 != '\0'); })) {
-                            if (trace.condition("if (DAT_1804253c0 == (FARPROC)0x0)")) {
+                            if (trace.checked_condition("if (DAT_1804253c0 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1804253c0, 0) == (void*)0x0); })) {
                                 trace.statement("pHVar2 = GetModuleHandleA(\"lua_shared.dll\");");
                                 trace.statement("DAT_1804253c0 = GetProcAddress(pHVar2,\"lua_setfenv\");");
                             }
@@ -21332,7 +21266,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180027310() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (*piVar8 != param_2) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("FUN_180026bc0", piVar8 + 2, &local_98, &local_80);
     trace.call_arguments("FUN_18020e450", &local_80);
     trace.call_arguments("FUN_18020d5c0", &local_98);
@@ -21398,7 +21331,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180027310() noexcept {
                             trace.statement("FUN_18020d5c0(&local_98);");
                             trace.statement("return 1;");
                         }
-                        while (trace.loop_condition("while( true )")) {
+                        while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                             trace.statement("_Buf2 = puVar9;");
                             if (trace.checked_condition("if (0xf < (ulonglong)puVar9[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar9[3])); })) {
                                 trace.statement("_Buf2 = (undefined8 *)*puVar9;");
@@ -25150,7 +25083,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180028f70() noexcept {
     // TODO: condition expression type not recovered: if (&local_c0 != param_2) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((char ***)0xf < param_2[3]) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((0 < iVar16) && (puVar15 = auStack_248, (int)local_b0 < iVar16)) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("FUN_180212700", &local_c0, param_2);
     trace.call_arguments("FUN_18020ea80", local_e0, (longlong)(iVar16 - static_cast<std::int32_t>(local_b0)), 0x20);
     trace.call_arguments("FUN_18021aef0", uVar12, ppppcVar5, local_b0);

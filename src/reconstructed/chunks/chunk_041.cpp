@@ -74,7 +74,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d83a0() noexcept {
     // TODO: resolve the indirect call in body 24: (*(code *)PTR__guard_dispatch_icall_18030cca8)(pvVar1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.data_ref("PTR__guard_dispatch_icall_18030cca8", static_cast<const void*>(&image::PTR__guard_dispatch_icall_18030cca8));
     // body sha256: cbb9749427a88cc865ea42acba82f1de3c2c9af3a292556529835d0db1bcdd3a
     // Structured control-flow trace derived from the decompiled body:
@@ -84,7 +83,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d83a0() noexcept {
         {
             trace.statement("void *pvVar1;");
             trace.statement("pvVar1 = (void *)(param_2 * param_3 + (longlong)param_1);");
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 if (trace.condition("if (param_3 == 0) break; pvVar1 = (void *)((longlong)pvVar1 - param_2); (*(code *)PTR__guard_dispatch_icall_18030cca8)(pvVar1); param_3 = param_3 - 1; } return; }")) {
                 }
             }
@@ -1793,7 +1792,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8884() noexcept {
     // TODO: resolve the indirect call in body 24: (*(code *)PTR__guard_dispatch_icall_18030cca8)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("free", _Memory);
     trace.data_ref("PTR__guard_dispatch_icall_18030cca8", static_cast<const void*>(&image::PTR__guard_dispatch_icall_18030cca8));
     // body sha256: dbc7f8482a6f3eb15049fe11a99508a4d8d25df226ef5d8403bca2ab44e76ede
@@ -1809,7 +1807,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8884() noexcept {
                 trace.statement("lVar1 = *(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8);");
                 trace.statement("_Memory = *(uint **)(lVar1 + 0x20);");
                 if (trace.checked_condition("if (*(uint **)(lVar1 + 0x20) != (uint *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<std::uint32_t *>(lVar1 + 0x20, 0) != (uint *)0x0); })) {
-                    while (trace.loop_condition("while( true )")) {
+                    while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                         trace.statement("uVar4 = (ulonglong)*_Memory;");
                         while (trace.checked_loop_condition("while (uVar3 = (int)uVar4 - 1, uVar4 = (ulonglong)uVar3, -1 < (int)uVar3)", [&]() -> bool { return static_cast<bool>(uVar3 = static_cast<std::int32_t>(uVar4) - 1, uVar4 = static_cast<std::uint64_t>(uVar3), -1 < static_cast<std::int32_t>(uVar3)); })) {
                             if (trace.checked_condition("if (*(longlong *)(_Memory + uVar4 * 2 + 4) != 0)", [&]() -> bool { return static_cast<bool>(load_at<std::int64_t>(_Memory + uVar4 * 2 + 4, 0) != 0); })) {

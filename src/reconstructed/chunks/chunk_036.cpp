@@ -12381,7 +12381,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180281560() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("FUN_180289170", "[popup] CloseCurrentPopup %d -> %d\n", iVar6, uVar5 & 0xffffffff);
     trace.call_arguments("FUN_180281430", uVar5 & 0xffffffff, 1);
@@ -12408,7 +12407,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180281560() noexcept {
                 trace.statement("lVar2 = *(longlong *)(lVar1 + 0x2030);");
                 if (trace.checked_condition("if (*(int *)(uVar5 * 0x38 + *(longlong *)(lVar1 + 0x2040)) == *(int *)(uVar5 * 0x38 + lVar2))", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(uVar5 * 0x38 + load_at<std::int64_t>(lVar1 + 0x2040, 0), 0) == load_at<std::int32_t>(uVar5 * 0x38 + lVar2, 0)); })) {
                     if (trace.checked_condition("if (0 < iVar6)", [&]() -> bool { return static_cast<bool>(0 < iVar6); })) {
-                        while (trace.loop_condition("while( true )")) {
+                        while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                             trace.statement("lVar3 = *(longlong *)((uVar5 & 0xffffffff) * 0x38 + 8 + lVar2);");
                             if (trace.condition("if (((lVar3 == 0) || ((*(uint *)(lVar3 + 0x14) & 0x10000000) == 0)) || (lVar3 = *(longlong *)((uVar5 & 0xffffffff) * 0x38 + -0x30 + lVar2), lVar3 == 0)) break; if (((*(uint *)(lVar3 + 0x14) & 0x400) != 0) || (uVar4 = (int)uVar5 - 1, uVar5 = (ulonglong)uVar4, (int)uVar4 < 1)) break; } } if ((*(byte *)(lVar1 + 0x28e4) & 8) != 0)")) {
                                 trace.statement("FUN_180289170(\"[popup] CloseCurrentPopup %d -> %d\\n\",iVar6,uVar5 & 0xffffffff);");
@@ -14187,7 +14186,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802822b0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
     // body sha256: e32308261d5d147f1941ca1c15f25255ea4395d0685a1d3643e39e703deb58e1
     // Structured control-flow trace derived from the decompiled body:
@@ -14236,7 +14234,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802822b0() noexcept {
                 } while (trace.loop_condition("while (bVar5);"));
                 }
                 if (trace.checked_condition("if (lVar2 != lVar4)", [&]() -> bool { return static_cast<bool>(lVar2 != lVar4); })) {
-                    while (trace.loop_condition("while( true )")) {
+                    while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                         if (trace.checked_condition("if (lVar3 == lVar4)", [&]() -> bool { return static_cast<bool>(lVar3 == lVar4); })) {
                             trace.statement("return true;");
                         }
@@ -24501,7 +24499,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180287c20() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180380bb0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (*pcVar12 == '\n') [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180287bb0: "%*s%.*s",iVar11,&DAT_18033e5ea,(int)pcVar12 - (int)param_2,param_2 [reason: unresolved global storage/width]
     trace.call_arguments("__dyn_tls_on_demand_init");
@@ -24576,7 +24573,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180287c20() noexcept {
                                 trace.statement("iVar8 = iVar1;");
                             }
                             trace.statement("iVar1 = *(int *)(lVar5 + 0x1a0);");
-                            while (trace.loop_condition("while( true )")) {
+                            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                                 trace.statement("pcVar10 = memchr(param_2,10,(longlong)param_3 - (longlong)param_2);");
                                 trace.statement("pcVar12 = param_3;");
                                 if (trace.checked_condition("if (pcVar10 != (char *)0x0)", [&]() -> bool { return static_cast<bool>(pcVar10 != (char *)0x0); })) {
@@ -25045,7 +25042,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288070() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180331380.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.data_ref("DAT_180331380", static_cast<const void*>(&image::DAT_180331380));
     // body sha256: cae7be14dc6ef52bb4fac93ca972a5dda85f4064725724f1feab85b5d7eb5b85
@@ -25081,7 +25077,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288070() noexcept {
             }
             trace.statement("lVar4 = *(longlong *)(lVar2 + 0x27c0);");
             trace.statement("lVar2 = lVar4 + (longlong)*(int *)(lVar2 + 0x27b8) * 0x48;");
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 if (trace.checked_condition("if (lVar4 == lVar2)", [&]() -> bool { return static_cast<bool>(lVar4 == lVar2); })) {
                     trace.statement("return 0;");
                 }
@@ -25886,7 +25882,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288660() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
     // body sha256: 9d8c1da79eacbbd3320fe949a599dd0749dc949dcd293e97ac29338b9aa3aa1d
     // Structured control-flow trace derived from the decompiled body:
@@ -25905,7 +25900,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288660() noexcept {
             if (trace.checked_condition("if (lVar2 != 0)", [&]() -> bool { return static_cast<bool>(lVar2 != 0); })) {
                 trace.statement("piVar3 = (int *)(lVar2 + 4);");
             }
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 if (trace.checked_condition("if (piVar3 == (int *)0x0)", [&]() -> bool { return static_cast<bool>(piVar3 == (int *)0x0); })) {
                     trace.statement("return (int *)0x0;");
                 }
