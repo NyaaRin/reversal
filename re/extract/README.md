@@ -72,8 +72,8 @@ function. It exits PASS only when all 7,656 rows close.
 
 `src/reconstructed/` maps **7,656/7,656 inventory addresses** to compiled
 C++17 accessors, with **0 unmapped** and **0 stubs**. The generator
-`re/tools/gen_reconstructed_source.py` writes 60 chunks (**85,238,684 bytes**,
-81.29 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
+`re/tools/gen_reconstructed_source.py` writes 60 chunks (**86,125,935 bytes**,
+82.13 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
 source file and a unique `Function_0x...` accessor. Accessors contain
 **462,614 audited executable statement/reference lines**, **306,161
 `trace.statement` calls**, **49,305 real C++ control nodes**, **7,732 actual
