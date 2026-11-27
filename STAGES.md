@@ -63,6 +63,7 @@ Scripts in `re/tools/`:
 | `gen_reconstructed_source.py` | writes the complete 7,656-record C++ translation corpus and coverage table from `functions.tsv` |
 | `check_reconstructed_source.py` | verifies 7,656/7,656 address→source→accessor coverage, body hashes, calls, refs and TODOs |
 | `build_reconstructed_check.bat` | compiles all generated C++17 chunks and `src/reconstructed/compile_check.cpp` |
+| `verify_compiled_sites.py` | proves corpus-wide that every compiled condition lambda, call argument and record text equals the recording modulo the documented normalizations (0 mismatches) |
 
 ## Stage 1 — Binary dossier
 
@@ -213,7 +214,17 @@ not the executable accessor payload.
 functions mapped; unmapped=0 stubs=0` and mechanically checks each accessor's
 executable/control/statement counts, symbol resolution and body hash.
 `re/tools/build_reconstructed_check.bat` compiles all 60 chunks plus
-`src/reconstructed/compile_check.cpp` with MSVC C++17. The executable hand
+`src/reconstructed/compile_check.cpp` with MSVC C++17. That executable asserts
+the coverage count and self-tests the trace runtime's helpers (`load_bits16/32`
+bit extraction, `load_at`, loop iteration, checked-condition/switch returns);
+it does not execute accessors, because their recovered expressions dereference
+unmapped image addresses. Accessor runtime behaviour is therefore unproven and
+needs the mapped image or a recovered layout for every referenced global.
+`re/tools/verify_compiled_sites.py` proves the coverage numbers site by site:
+all 40,103 checked conditions, 51,592 call-argument sites (including 934
+`load_bits` subpieces), 306,161 statement texts, 17,273 call targets, 20,673 data
+references and 7,732 string literals are compared with the recorded text after
+the documented normalizations, with 0 mismatches. The executable hand
 translations in `src/features/**` are unchanged. This closes source-tree
 coverage, not semantic parity: the generated accessors are structural traces
 and do not invent runnable semantics where the decompiler data is unknown.

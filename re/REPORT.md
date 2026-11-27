@@ -234,11 +234,27 @@ coverage table, accessor bodies, symbols header and hashed bodies and reports:
 ```
 inventory=7656 coverage_rows=7656 checked=7656
 generated_chunks=60 accessors=7656
-executable_accessor_lines=462469 statement_lines=306161 control_nodes=49305
+executable_accessor_lines=462740 statement_lines=306161 control_nodes=49305
 literal_refs=7732 symbols_calls=4331 symbols_data=5414
-typed_conditions=37341 unresolved_conditions=3923 typed_calls=51321 unresolved_call_args=1986
+typed_conditions=40103 unresolved_conditions=4584 typed_calls=51592 unresolved_call_args=1715
 PASS 7656/7656 inventory functions mapped; unmapped=0 stubs=0
 ```
+
+Those numbers are not just counts. `re/tools/verify_compiled_sites.py` proves
+them corpus-wide, site by site: for every checked condition the emitted lambda
+is compared against the header recorded in the same line, and every compiled
+call-argument tuple must occur in the decompiled body at the same target. Both
+sides pass through the documented normalizations (Ghidra/Windows type
+spellings, `image::` qualification, explicit cast operators,
+`load_at`/`load_bits` lowering, Ghidra `_N_M_` subfields, redundant grouping
+parentheses and escaped string text) and are otherwise compared exactly. Over
+all 60 chunks it reports **40,103 conditions** (37,852 `if`, 1,086 `for`,
+1,077 `while`, 88 `switch`), **51,592 call-argument sites** (including 934
+`load_bits32/16` subpieces matched against the recorded `SUB321`/`SUB161`),
+**306,161 statement texts**, **17,273 call targets**, **20,673 data
+references** and **7,732 string literals** with **0 mismatches**. A deliberate
+mismatch is what the tool treats as a coverage bug, not as formatting: the
+earlier for-header bug was found exactly this way.
 
 Remaining condition TODOs by first blocking reason: unresolved global storage/width
 1,503; ambiguous operand type 766; pointer-cast target not proven 690; pointer
@@ -260,6 +276,16 @@ and prototype candidates with conflict/no-record status) and
 slot table to lower 934 `SUB321`/`SUB161` vector subpieces through
 `load_bits32`/`load_bits16`; it reads only consistent global rows, never a
 conflict row.
+
+`src/reconstructed/compile_check.cpp` is the coverage executable. It cannot run
+accessors: their recovered expressions dereference addresses in the original
+image, which this process does not map, so execution would fault on the first
+global read. It instead asserts `kFunctionCount` and self-tests the trace
+runtime's own arithmetic (`load_bits16/32` extraction, `load_at`,
+`field_address`, loop iteration and the checked-condition/switch return paths),
+which every lowered accessor expression depends on. Accessor runtime behaviour
+therefore remains unproven; proving it needs the mapped image or a recovered
+layout for every referenced global, neither of which the recording contains.
 
 The hand-translated executable reconstruction under `src/features/` is
 unchanged. The generated accessors are compile-checked **structural traces**,

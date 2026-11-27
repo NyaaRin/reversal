@@ -105,14 +105,29 @@ SHA-256-verified audit payload, not the executable accessor payload.
 ```
 py -3 re/tools/gen_reconstructed_source.py
 py -3 re/tools/check_reconstructed_source.py
+py -3 re/tools/verify_compiled_sites.py
 ```
+
+`verify_compiled_sites.py` re-reads every accessor and its decompiled body and
+compares each compiled condition lambda, call-argument tuple, statement text,
+call target, data reference and string literal with the recording after the
+documented normalizations (type spellings, `image::`, cast operators,
+`load_at`/`load_bits` lowering, Ghidra `_N_M_` subfields, redundant grouping,
+escaped string text). It reports 40,103 conditions, 51,592 call-argument sites,
+306,161 statements, 17,273 call targets, 20,673 data references and 7,732
+string literals with 0 mismatches; any difference is treated as a coverage bug.
 
 The checker prints `PASS 7656/7656 inventory functions mapped; unmapped=0
 stubs=0` and mechanically audits each accessor's executable/statement/control
 counts, actual call/data/string references, symbol declarations and body hash.
 `re/tools/build_reconstructed_check.bat` compiles all 60 chunks and
-`src/reconstructed/compile_check.cpp` with MSVC C++17. The hand-translated
-executable code under `src/features/**` is unchanged. The generated accessors
+`src/reconstructed/compile_check.cpp` with MSVC C++17. That executable asserts
+the coverage count and self-tests the trace runtime helpers (`load_bits16/32`,
+`load_at`, loop iteration, checked-condition/switch returns); it never executes
+an accessor, whose recovered expressions would dereference unmapped image
+addresses. Accessor runtime behaviour remains unproven and would need the
+mapped image or a recovered layout for every referenced global. The
+hand-translated executable code under `src/features/**` is unchanged. The generated accessors
 are compiled structural traces, not behaviorally equivalent implementations:
 unknown globals, indirect calls, calling conventions and object layouts remain
 explicitly TODO. Decompiler blocks nested beyond 32 levels are flattened into
