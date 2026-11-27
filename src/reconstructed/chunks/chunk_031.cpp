@@ -3901,6 +3901,12 @@ TODO: resolve the indirect call in body 88: (*pcVar6)(5);.)F180233da0U",
 const sf::reconstructed::FunctionTranslation& Function_0x180233da0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180233da0", "FUN_180233da0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] std::uint64_t param_4{};
+    [[maybe_unused]] void * param_5{};
+    [[maybe_unused]] std::size_t param_6{};
     [[maybe_unused]] std::uint64_t uVar1{};
     [[maybe_unused]] std::uint64_t * puVar2{};
     [[maybe_unused]] void * pvVar3{};
@@ -3924,14 +3930,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233da0() noexcept {
     // TODO: resolve the indirect call in body 88: (*pcVar6)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0x7fffffffffffffffU - lVar4 < param_2) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memcpy: unaff_RDI,param_5,param_6 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memcpy: (void *)((longlong)unaff_RDI + param_6),param_1,lVar4 + 1 [reason: pointer-cast target not proven]
-    // TODO: call arguments not type-recovered for memcpy: unaff_RDI,param_5,param_6 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memcpy: (void *)((longlong)unaff_RDI + param_6),_Src,lVar4 + 1 [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_1800130a0");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350", uVar1);
+    trace.call_arguments("memcpy", unaff_RDI, param_5, param_6);
+    trace.call_arguments("memcpy", (void *)(reinterpret_cast<std::int64_t>(unaff_RDI) + param_6), param_1, lVar4 + 1);
+    trace.call_arguments("memcpy", unaff_RDI, param_5, param_6);
+    trace.call_arguments("memcpy", (void *)(reinterpret_cast<std::int64_t>(unaff_RDI) + param_6), _Src, lVar4 + 1);
     trace.call_arguments("free", (void *)*puVar2);
     trace.call_arguments("FUN_1802d8350", uVar9);
     trace.call_arguments("swi", 0x29);
@@ -3961,7 +3966,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233da0() noexcept {
             trace.statement("puVar10 = auStack_48;");
             trace.statement("lVar4 = param_1[2];");
             trace.statement("_Src = (void *)0x7fffffffffffffff;");
-            if (trace.condition("if (0x7fffffffffffffffU - lVar4 < param_2)")) {
+            if (trace.checked_condition("if (0x7fffffffffffffffU - lVar4 < param_2)", [&]() -> bool { return static_cast<bool>(0x7fffffffffffffffU - lVar4 < param_2); })) {
                 trace.statement("FUN_1800130a0();");
             }
             trace.statement("uVar5 = param_1[3];");
@@ -4294,6 +4299,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233fb0() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
+    [[maybe_unused]] wchar_t * pwVar2{};
     [[maybe_unused]] std::int64_t * plVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
     [[maybe_unused]] char * pcVar6{};
@@ -19711,6 +19717,8 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18023a470() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18023a470", "Features_Visual_ESP_Editor_Elements_CircleElement_vfunc11");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
     [[maybe_unused]] std::uint64_t uVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.

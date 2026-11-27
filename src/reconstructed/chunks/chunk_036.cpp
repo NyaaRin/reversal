@@ -13376,6 +13376,13 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x180281aa0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180281aa0", "FUN_180281aa0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float * param_1{};
+    [[maybe_unused]] float * param_2{};
+    [[maybe_unused]] float * param_3{};
+    [[maybe_unused]] std::uint32_t * param_4{};
+    [[maybe_unused]] float * param_5{};
+    [[maybe_unused]] float * param_6{};
+    [[maybe_unused]] std::uint32_t param_7{};
     [[maybe_unused]] float fVar1{};
     [[maybe_unused]] float fVar2{};
     [[maybe_unused]] float fVar3{};
@@ -13402,9 +13409,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180281aa0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((fVar3 <= fVar9) && (fVar10 = param_5[3] - fVar1, fVar9 <= param_5[3] - fVar1)) [reason: assignment or side effect]
-    // TODO: condition expression type not recovered: if (param_7 == 1) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if ((param_7 & 0xfffffffd) == 0) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (param_7 == 2) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (param_5[2] <= fVar9) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (fVar9 <= *param_5) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (param_5[3] <= fVar7) [reason: ambiguous operand type]
@@ -13450,7 +13454,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180281aa0() noexcept {
             if (trace.checked_condition("if ((fVar9 <= fVar12) && (fVar14 = fVar7 - fVar2, fVar12 <= fVar7 - fVar2))", [&]() -> bool { return static_cast<bool>((fVar9 <= fVar12) && (fVar14 = fVar7 - fVar2, fVar12 <= fVar7 - fVar2)); })) {
                 trace.statement("fVar14 = fVar12;");
             }
-            if (trace.condition("if (param_7 == 1)")) {
+            if (trace.checked_condition("if (param_7 == 1)", [&]() -> bool { return static_cast<bool>(param_7 == 1); })) {
                 trace.statement("uVar4 = *param_4;");
                 trace.statement("local_88[0] = _DAT_180381500;");
                 trace.statement("iVar6 = -(uint)(uVar4 != 0xffffffff);");
@@ -13488,7 +13492,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180281aa0() noexcept {
         trace.statement("*param_4 = 0xffffffff;");
         trace.statement("fVar9 = *param_2;");
         trace.statement("else {");
-        if (trace.condition("if ((param_7 & 0xfffffffd) == 0)")) {
+        if (trace.checked_condition("if ((param_7 & 0xfffffffd) == 0)", [&]() -> bool { return static_cast<bool>((param_7 & 0xfffffffd) == 0); })) {
             trace.statement("uVar4 = *param_4;");
             trace.statement("local_88[0]._4_4_ = _UNK_180381494;");
             trace.statement("local_88[0]._0_4_ = _DAT_180381490;");
@@ -13541,7 +13545,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180281aa0() noexcept {
         }
         trace.statement("*param_4 = 0xffffffff;");
         trace.statement("fVar9 = *param_2;");
-        if (trace.condition("if (param_7 == 2)")) {
+        if (trace.checked_condition("if (param_7 == 2)", [&]() -> bool { return static_cast<bool>(param_7 == 2); })) {
             trace.statement("fVar7 = param_2[1] + DAT_180380d30;");
             trace.statement("*param_1 = fVar9 + DAT_180380d30;");
             trace.statement("goto LAB_180281c50;");
@@ -26952,12 +26956,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288cb0() noexcept {
     [[maybe_unused]] int BVar1{};
     [[maybe_unused]] std::int32_t cbMultiByte{};
     [[maybe_unused]] void* hMem{};
+    [[maybe_unused]] wchar_t* lpWideCharStr{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (lpWideCharStr != (LPCWSTR)0x0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for OpenClipboard: (HWND)0x0 [reason: ambiguous operand type]
     trace.call_arguments("FUN_18026f680");
+    trace.call_arguments("OpenClipboard", (void*)0x0);
     trace.call_arguments("GetClipboardData", 0xd);
     trace.call_arguments("GlobalLock", hMem);
     trace.call_arguments("FUN_18028a8d0", param_1 + 0x26e0, cbMultiByte);
@@ -26981,9 +26985,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288cb0() noexcept {
             trace.statement("BVar1 = OpenClipboard((HWND)0x0);");
             if (trace.checked_condition("if (BVar1 != 0)", [&]() -> bool { return static_cast<bool>(BVar1 != 0); })) {
                 trace.statement("hMem = GetClipboardData(0xd);");
-                if (trace.checked_condition("if (hMem != (HANDLE)0x0)", [&]() -> bool { return static_cast<bool>(hMem != (HANDLE)0x0); })) {
+                if (trace.checked_condition("if (hMem != (HANDLE)0x0)", [&]() -> bool { return static_cast<bool>(hMem != (void*)0x0); })) {
                     trace.statement("lpWideCharStr = GlobalLock(hMem);");
-                    if (trace.condition("if (lpWideCharStr != (LPCWSTR)0x0)")) {
+                    if (trace.checked_condition("if (lpWideCharStr != (LPCWSTR)0x0)", [&]() -> bool { return static_cast<bool>(lpWideCharStr != (wchar_t*)0x0); })) {
                         trace.statement("cbMultiByte = WideCharToMultiByte(0xfde9,0,lpWideCharStr,-1,(LPSTR)0x0,0,(LPCSTR)0x0,");
                         trace.statement("(LPBOOL)0x0);");
                         trace.statement("FUN_18028a8d0(param_1 + 0x26e0,cbMultiByte);");
@@ -27066,21 +27070,23 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288de0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180288de0", "FUN_180288de0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] char* param_2{};
     [[maybe_unused]] int BVar1{};
     [[maybe_unused]] std::int32_t cchWideChar{};
+    [[maybe_unused]] wchar_t* lpWideCharStr{};
     [[maybe_unused]] void* pvVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (hMem != (HGLOBAL)0x0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for OpenClipboard: (HWND)0x0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,param_2,-1,(LPWSTR)0x0,0 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GlobalLock: hMem [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,param_2,-1,lpWideCharStr,cchWideChar [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GlobalUnlock: hMem [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for SetClipboardData: 0xd,hMem [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GlobalFree: hMem [reason: ambiguous operand type]
+    trace.call_arguments("OpenClipboard", (void*)0x0);
+    trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, param_2, -1, (wchar_t*)0x0, 0);
     trace.call_arguments("GlobalAlloc", 2, static_cast<std::int64_t>(cchWideChar) * 2);
+    trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, param_2, -1, lpWideCharStr, cchWideChar);
     trace.call_arguments("EmptyClipboard");
     trace.call_arguments("CloseClipboard");
     // body sha256: b6496c2f567be008b7a8d064b3f224b79751bcea454a9f746318d957a770015a
@@ -27101,7 +27107,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288de0() noexcept {
                     trace.statement("GlobalUnlock(hMem);");
                     trace.statement("EmptyClipboard();");
                     trace.statement("pvVar2 = SetClipboardData(0xd,hMem);");
-                    if (trace.checked_condition("if (pvVar2 == (HANDLE)0x0)", [&]() -> bool { return static_cast<bool>(pvVar2 == (HANDLE)0x0); })) {
+                    if (trace.checked_condition("if (pvVar2 == (HANDLE)0x0)", [&]() -> bool { return static_cast<bool>(pvVar2 == (void*)0x0); })) {
                         trace.statement("GlobalFree(hMem);");
                     }
                 }
@@ -27205,22 +27211,24 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288eb0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180288eb0", "FUN_180288eb0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] char* param_2{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::int32_t iVar3{};
+    [[maybe_unused]] wchar_t* lpWideCharStr{};
+    [[maybe_unused]] void* pHVar4{};
     [[maybe_unused]] std::int16_t sVar5{};
     [[maybe_unused]] std::int32_t * piVar6{};
     [[maybe_unused]] std::int32_t iVar7{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (lpWideCharStr != (LPCWSTR)0x0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,param_2,-1,(LPWSTR)0x0,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,param_2,-1,lpWideCharStr,iVar3 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for ShellExecuteW: (HWND)0x0,L"open",lpWideCharStr,(LPCWSTR)0x0,(LPCWSTR)0x0,10 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: lpWideCharStr [reason: ambiguous operand type]
+    trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, param_2, -1, (wchar_t*)0x0, 0);
     trace.call_arguments("FUN_18026f580", static_cast<std::int64_t>(iVar7) * 2);
+    trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, param_2, -1, lpWideCharStr, iVar3);
     trace.call_arguments("__dyn_tls_on_demand_init");
+    trace.call_arguments("free", lpWideCharStr);
     trace.call_target("FUN_18026f580", reinterpret_cast<const void*>(&image::FUN_18026f580));
     trace.string_literal("open");
     // body sha256: 016f600ff74eaeed395f06e51591a8a424ce5ce26507362752fe7ed3237b5d68
@@ -27248,7 +27256,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288eb0() noexcept {
             }
             trace.statement("MultiByteToWideChar(0xfde9,0,param_2,-1,lpWideCharStr,iVar3);");
             trace.statement("pHVar4 = ShellExecuteW((HWND)0x0,L\"open\",lpWideCharStr,(LPCWSTR)0x0,(LPCWSTR)0x0,10);");
-            if (trace.condition("if (lpWideCharStr != (LPCWSTR)0x0)")) {
+            if (trace.checked_condition("if (lpWideCharStr != (LPCWSTR)0x0)", [&]() -> bool { return static_cast<bool>(lpWideCharStr != (wchar_t*)0x0); })) {
                 trace.statement("lVar1 = *(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8);");
                 if (trace.checked_condition("if (*(char *)(lVar1 + 0x10) == '\\0')", [&]() -> bool { return static_cast<bool>(load_at<char>(lVar1 + 0x10, 0) == '\0'); })) {
                     trace.statement("__dyn_tls_on_demand_init();");

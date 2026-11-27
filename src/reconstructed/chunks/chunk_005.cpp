@@ -4510,13 +4510,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18004f4f0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar6 == (longlong *)0x0) || (plVar6[1] != param_2)) [reason: pointer-cast target not proven]
-    // TODO: call arguments not type-recovered for CONCAT44: local_68._4_4_,iVar10 [reason: unknown aggregate layout]
-    // TODO: call arguments not type-recovered for CONCAT44: local_68._4_4_,iVar10 [reason: unknown aggregate layout]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_18004a240", param_2);
     trace.call_arguments("FUN_18004a120", plVar6);
     trace.call_arguments("FUN_18020cc60", &local_60, reinterpret_cast<std::int64_t>(plStack_40) - reinterpret_cast<std::int64_t>(local_48) >> 5);
     trace.call_arguments("FUN_180221c00", &local_60, puStack_58, &local_68);
+    trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((reinterpret_cast<std::uintptr_t>(local_68) >> 32)), iVar10);
+    trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((reinterpret_cast<std::uintptr_t>(local_68) >> 32)), iVar10);
     trace.call_arguments("FUN_1802b1200", pcVar9, &local_68);
     trace.call_arguments("swi", 0x29);
     trace.call_arguments("free", _Memory);
@@ -4923,13 +4923,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18004f7a0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar7 == (longlong *)0x0) || (plVar7[1] != param_2)) [reason: pointer-cast target not proven]
-    // TODO: call arguments not type-recovered for CONCAT44: local_68._4_4_,iVar11 [reason: unknown aggregate layout]
-    // TODO: call arguments not type-recovered for CONCAT44: local_68._4_4_,iVar11 [reason: unknown aggregate layout]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_18004a240", param_2);
     trace.call_arguments("FUN_18004a120", plVar7);
     trace.call_arguments("FUN_18020cc60", &local_60, reinterpret_cast<std::int64_t>(plStack_40) - reinterpret_cast<std::int64_t>(local_48) >> 5);
     trace.call_arguments("FUN_180221c00", &local_60, puStack_58, &local_68);
+    trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((reinterpret_cast<std::uintptr_t>(local_68) >> 32)), iVar11);
+    trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((reinterpret_cast<std::uintptr_t>(local_68) >> 32)), iVar11);
     trace.call_arguments("FUN_1802c3bd0", puVar10, &local_68);
     trace.call_arguments("swi", 0x29);
     trace.call_arguments("free", _Memory);
@@ -15814,7 +15814,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180053f40() noexcept {
                     trace.statement("DAT_1805c51e8 = pFVar5;");
                 }
                 trace.statement("fVar11 = fVar2;");
-                if (trace.checked_condition("if (pFVar5 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar5 != (FARPROC)0x0); })) {
+                if (trace.checked_condition("if (pFVar5 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar5 != (void*)0x0); })) {
                     trace.statement("(*pFVar5)((ulonglong)(uint)fVar2,fVar1);");
                     trace.statement("pFVar5 = DAT_1805c51e8;");
                     trace.statement("fVar11 = extraout_XMM0_Da;");
@@ -15826,7 +15826,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180053f40() noexcept {
                     trace.statement("DAT_1805c51e8 = pFVar5;");
                 }
                 trace.statement("fVar10 = fVar2;");
-                if (trace.checked_condition("if (pFVar5 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar5 != (FARPROC)0x0); })) {
+                if (trace.checked_condition("if (pFVar5 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar5 != (void*)0x0); })) {
                     trace.statement("(*pFVar5)((ulonglong)(uint)fVar2,fVar1);");
                     trace.statement("pFVar5 = DAT_1805c51e8;");
                     trace.statement("fVar10 = extraout_XMM0_Da_00;");
@@ -15838,7 +15838,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180053f40() noexcept {
                     trace.statement("DAT_1805c51e8 = pFVar5;");
                 }
                 trace.statement("fVar12 = fVar2;");
-                if (trace.checked_condition("if (pFVar5 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar5 != (FARPROC)0x0); })) {
+                if (trace.checked_condition("if (pFVar5 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar5 != (void*)0x0); })) {
                     trace.statement("(*pFVar5)((ulonglong)(uint)fVar2,fVar1);");
                     trace.statement("pFVar5 = DAT_1805c51e8;");
                     trace.statement("fVar12 = extraout_XMM0_Da_01;");
@@ -15850,7 +15850,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180053f40() noexcept {
                     trace.statement("DAT_1805c51e8 = pFVar5;");
                 }
                 trace.statement("fVar9 = fVar2;");
-                if (trace.checked_condition("if (pFVar5 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar5 != (FARPROC)0x0); })) {
+                if (trace.checked_condition("if (pFVar5 != (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar5 != (void*)0x0); })) {
                     trace.statement("(*pFVar5)((ulonglong)(uint)fVar2,fVar1);");
                     trace.statement("pFVar5 = DAT_1805c51e8;");
                     trace.statement("fVar9 = extraout_XMM0_Da_02;");
@@ -15958,7 +15958,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800542b0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for OpenClipboard: (HWND)0x0 [reason: ambiguous operand type]
+    trace.call_arguments("OpenClipboard", (void*)0x0);
     trace.call_arguments("GetClipboardData", 1);
     trace.call_arguments("GlobalLock", hMem);
     trace.call_arguments("strlen", _Str);
@@ -15983,7 +15983,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800542b0() noexcept {
             trace.statement("uVar3 = 0;");
             trace.statement("uVar4 = 0;");
             trace.statement("hMem = GetClipboardData(1);");
-            if (trace.checked_condition("if (hMem != (HANDLE)0x0)", [&]() -> bool { return static_cast<bool>(hMem != (HANDLE)0x0); })) {
+            if (trace.checked_condition("if (hMem != (HANDLE)0x0)", [&]() -> bool { return static_cast<bool>(hMem != (void*)0x0); })) {
                 trace.statement("_Str = GlobalLock(hMem);");
                 if (trace.checked_condition("if (_Str != (char *)0x0)", [&]() -> bool { return static_cast<bool>(_Str != (char *)0x0); })) {
                     trace.statement("sVar2 = strlen(_Str);");

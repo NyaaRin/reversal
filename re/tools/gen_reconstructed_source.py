@@ -70,13 +70,66 @@ TYPE_ALIASES = {
     "float": "float",
     "double": "double",
     "size_t": "std::size_t",
+    "rsize_t": "std::size_t",
     "ssize_t": "std::ptrdiff_t",
+    "errno_t": "int",
+    "intptr_t": "std::intptr_t",
+    "uintptr_t": "std::uintptr_t",
+    "wchar_t": "wchar_t",
+    "char16_t": "char16_t",
+    "char32_t": "char32_t",
+    "wint_t": "std::uint32_t",
+    "DWORD": "std::uint32_t",
+    "DWORD64": "std::uint64_t",
+    "UINT": "std::uint32_t",
+    "UINT64": "std::uint64_t",
+    "WORD": "std::uint16_t",
+    "BYTE": "std::uint8_t",
+    "ULONG": "std::uint32_t",
+    "ULONGLONG": "std::uint64_t",
+    "__int64": "std::int64_t",
+    "__int32": "std::int32_t",
+    "__int16": "std::int16_t",
+    "__int8": "std::int8_t",
+    "HLOCAL": "void*",
+    "HWND": "void*",
+    "HINSTANCE": "void*",
+    "HICON": "void*",
+    "HCURSOR": "void*",
+    "HMENU": "void*",
+    "HBRUSH": "void*",
+    "HDC": "void*",
+    "HBITMAP": "void*",
+    "WPARAM": "std::uintptr_t",
+    "LPARAM": "std::intptr_t",
+    "LRESULT": "std::intptr_t",
+    "HRESULT": "std::int32_t",
+    "ATOM": "std::uint16_t",
     "BOOL": "int",
     "HMODULE": "std::uintptr_t",
     "HANDLE": "void*",
     "FARPROC": "void*",
     "FILE": "void*",
     "code": "void*",
+    "LPCSTR": "char*",
+    "PCSTR": "char*",
+    "LPSTR": "char*",
+    "PSTR": "char*",
+    "LPCWSTR": "wchar_t*",
+    "PCWSTR": "wchar_t*",
+    "LPWSTR": "wchar_t*",
+    "PWSTR": "wchar_t*",
+    "LPCVOID": "void*",
+    "LPVOID": "void*",
+    "PVOID": "void*",
+    "LPBYTE": "std::uint8_t*",
+    "PBYTE": "std::uint8_t*",
+    "LPWORD": "std::uint16_t*",
+    "PWORD": "std::uint16_t*",
+    "LPDWORD": "std::uint32_t*",
+    "PDWORD": "std::uint32_t*",
+    "LPHANDLE": "void**",
+    "PHANDLE": "void**",
     "void": "void",
     "uint64": "std::uint64_t",
     "uint32": "std::uint32_t",
@@ -142,11 +195,29 @@ def recover_declarations(body: str) -> dict[str, tuple[str, int | None]]:
 
     # Function parameters are part of the recovered signature even when Ghidra
     # reports the return type as simply `undefined`.
-    for line in lines:
+    line_index = 0
+    while line_index < len(lines):
+        line = lines[line_index]
+        line_index += 1
         stripped = line.strip()
-        if "(" not in line or ")" not in line or stripped.endswith(";"):
+        # Ghidra sometimes puts the function name on its own line and the
+        # parenthesized parameter list on the next.
+        if "(" not in line and line_index < len(lines):
+            following = lines[line_index].lstrip()
+            if following.startswith("(") and re.search(r"[A-Za-z_][A-Za-z0-9_]*\s*$", stripped):
+                line = stripped + following
+                line_index += 1
+                stripped = line.strip()
+        if "(" not in line or stripped.endswith(";"):
             continue
         if re.match(r"^(?:if|for|while|switch|return|else|do)\b", stripped):
+            continue
+        # Ghidra wraps long parameter lists.  Join continuation lines before
+        # reading the signature so every declared parameter is available.
+        while ")" not in line and line_index < len(lines):
+            line = line.rstrip() + " " + lines[line_index].strip()
+            line_index += 1
+        if ")" not in line:
             continue
         start = line.find("(")
         end = line.rfind(")")
@@ -547,13 +618,45 @@ def rewrite_assignment_casts(
     return SIMPLE_ASSIGN_RE.sub(replace, expr), invalid
 
 
+KNOWN_CAST_RE = re.compile(r"\(\s*([A-Za-z_][A-Za-z0-9_ ]*(?:\*+)?)\s*\)")
+WINDOWS_POINTER_ALIASES = {
+    "LPCSTR", "PCSTR", "LPSTR", "PSTR", "LPCWSTR", "PCWSTR", "LPWSTR",
+    "PWSTR", "LPCVOID", "LPVOID", "PVOID", "LPBYTE", "PBYTE", "LPWORD",
+    "PWORD", "LPDWORD", "PDWORD", "LPHANDLE", "PHANDLE", "HANDLE",
+    "FARPROC", "HLOCAL", "HWND", "HINSTANCE", "HICON", "HCURSOR",
+    "HMENU", "HBRUSH", "HDC", "HBITMAP",
+}
+WINDOWS_SCALAR_ALIASES = {
+    "DWORD", "DWORD64", "UINT", "UINT64", "WORD", "BYTE", "ULONG",
+    "ULONGLONG", "WPARAM", "LPARAM", "LRESULT", "HRESULT", "ATOM",
+}
+
+
+def rewrite_known_type_names(expr: str) -> str:
+    """Normalize the Windows pointer typedefs used by the recorded ABI.
+
+    Only exact one-level typedefs are rewritten here; decompiler-width types
+    keep their existing evidence path so no pointer depth becomes admissible
+    merely by spelling it as a fixed-width integer.
+    """
+    def replace(match: re.Match[str]) -> str:
+        base = match.group(1).replace("*", "").strip()
+        if base not in WINDOWS_POINTER_ALIASES and base not in WINDOWS_SCALAR_ALIASES:
+            return match.group(0)
+        mapped = cpp_type(match.group(1))
+        return f"({mapped})" if mapped else match.group(0)
+
+    return KNOWN_CAST_RE.sub(replace, expr)
+
+
 def safe_expression(
     expr: str,
     locals: dict[str, tuple[str, int | None]],
     allow_data: bool,
     data_types: dict[int, str] | None = None,
 ) -> str | None:
-    expr = rewrite_memory_dereferences(expr.strip())
+    expr = rewrite_known_type_names(expr.strip())
+    expr = rewrite_memory_dereferences(expr)
     expr = rewrite_synthetic_subfields(expr, locals)
     expr = rewrite_admitted_casts(expr, locals)
     expr, invalid_assignment = rewrite_assignment_casts(expr, locals)

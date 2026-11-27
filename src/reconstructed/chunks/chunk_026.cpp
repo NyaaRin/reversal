@@ -4342,7 +4342,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180207bb0() noexcept {
                                         }
                                         if (trace.checked_condition("if (iVar10 == 0)", [&]() -> bool { return static_cast<bool>(iVar10 == 0); })) {
                                             trace.statement("*(undefined4 *)((longlong)puVar25 + 0x24) = 0;");
-                                            if (trace.checked_condition("if (pFVar20 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar20 == (FARPROC)0x0); })) {
+                                            if (trace.checked_condition("if (pFVar20 == (FARPROC)0x0)", [&]() -> bool { return static_cast<bool>(pFVar20 == (void*)0x0); })) {
                                                 trace.statement("pHVar15 = GetModuleHandleA(\"lua_shared.dll\");");
                                                 trace.statement("pFVar20 = GetProcAddress(pHVar15,\"lua_type\");");
                                                 trace.statement("DAT_1803fe490 = pFVar20;");
@@ -5025,6 +5025,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180208320() noexcept {
     [[maybe_unused]] void* * local_60{};
     [[maybe_unused]] std::uint64_t local_58{};
     [[maybe_unused]] std::uint8_t * local_48{};
+    [[maybe_unused]] std::uint32_t local_40[2]{};
     [[maybe_unused]] std::uint64_t local_38{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802084a2.
@@ -5049,7 +5050,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180208320() noexcept {
     // TODO: condition expression type not recovered: if ((plVar11 != (longlong *)0x0) && (plVar11 != DAT_1804ecae8)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (plVar11 != DAT_1804ecae8) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (*(longlong **)(lVar14 + DAT_1804ecaf8) == _Memory) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for VirtualProtect: plVar1,8,0x40,local_40 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for VirtualProtect: plVar1,8,local_40[0],local_40 + 1 [reason: ambiguous operand type]
     trace.call_arguments("IsBadReadPtr", param_1, 8);
     trace.call_arguments("IsBadReadPtr", plVar1, 8);
@@ -5060,6 +5060,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180208320() noexcept {
     trace.call_arguments("_Mtx_unlock", &image::DAT_1803e8860);
     trace.call_arguments("FUN_180190ef0", uVar13);
     trace.call_arguments("FUN_180190ef0", pcVar5);
+    trace.call_arguments("VirtualProtect", plVar1, 8, 0x40, local_40);
     trace.call_arguments("FUN_180213d00");
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
@@ -5455,6 +5456,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180208710() noexcept {
     [[maybe_unused]] void* * local_60{};
     [[maybe_unused]] std::uint64_t local_58{};
     [[maybe_unused]] std::uint8_t * local_48{};
+    [[maybe_unused]] std::uint32_t local_40[2]{};
     [[maybe_unused]] std::uint64_t local_38{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180208892.
@@ -5479,7 +5481,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180208710() noexcept {
     // TODO: condition expression type not recovered: if ((plVar11 != (longlong *)0x0) && (plVar11 != DAT_180458aa8)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (plVar11 != DAT_180458aa8) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (*(longlong **)(lVar14 + DAT_180458ab8) == _Memory) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for VirtualProtect: plVar1,8,0x40,local_40 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for VirtualProtect: plVar1,8,local_40[0],local_40 + 1 [reason: ambiguous operand type]
     trace.call_arguments("IsBadReadPtr", param_1, 8);
     trace.call_arguments("IsBadReadPtr", plVar1, 8);
@@ -5490,6 +5491,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180208710() noexcept {
     trace.call_arguments("_Mtx_unlock", &image::DAT_1803e8860);
     trace.call_arguments("FUN_180190ef0", uVar13);
     trace.call_arguments("FUN_180190ef0", pcVar5);
+    trace.call_arguments("VirtualProtect", plVar1, 8, 0x40, local_40);
     trace.call_arguments("FUN_180214000");
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
@@ -7227,6 +7229,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180209520() noexcept {
     [[maybe_unused]] std::int32_t local_38[2]{};
     [[maybe_unused]] std::uint64_t local_30{};
     [[maybe_unused]] std::int64_t local_28[2]{};
+    [[maybe_unused]] std::uint32_t local_18[2]{};
     [[maybe_unused]] std::uint64_t local_10{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.

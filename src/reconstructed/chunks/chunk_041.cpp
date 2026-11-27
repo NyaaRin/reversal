@@ -65,6 +65,7 @@ TODO: resolve the indirect call in body 24: (*(code *)PTR__guard_dispatch_icall_
 const sf::reconstructed::FunctionTranslation& Function_0x1802d83a0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d83a0", "`eh_vector_destructor_iterator'");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * param_1{};
     [[maybe_unused]] void * pvVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for PTR__guard_dispatch_icall_18030cca8.
@@ -622,15 +623,20 @@ TODO: resolve the indirect call in body 21: (*(code *)PTR__guard_dispatch_icall_
 const sf::reconstructed::FunctionTranslation& Function_0x1802d8530() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d8530", "__scrt_dllmain_exception_filter");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int32_t param_2{};
+    [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] std::uint64_t param_4{};
+    [[maybe_unused]] std::uint32_t param_5{};
+    [[maybe_unused]] std::uint64_t param_6{};
     [[maybe_unused]] std::int32_t iVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for PTR__guard_dispatch_icall_18030cca8.
     // TODO: resolve the indirect call in body 21: (*(code *)PTR__guard_dispatch_icall_18030cca8)(param_1,0,param_3);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((iVar1 == 0) && (param_2 == 1)) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for _seh_filter_dll: param_5,param_6 [reason: ambiguous operand type]
     trace.call_arguments("__scrt_is_ucrt_dll_in_use");
+    trace.call_arguments("_seh_filter_dll", param_5, param_6);
     trace.data_ref("PTR__guard_dispatch_icall_18030cca8", static_cast<const void*>(&image::PTR__guard_dispatch_icall_18030cca8));
     // body sha256: dbe81b6909ce76b7f5ebc9ee80b045899ec97814e061e6f4da470074dd27e813
     // Structured control-flow trace derived from the decompiled body:
@@ -640,7 +646,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8530() noexcept {
         {
             trace.statement("int iVar1;");
             trace.statement("iVar1 = __scrt_is_ucrt_dll_in_use();");
-            if (trace.condition("if ((iVar1 == 0) && (param_2 == 1))")) {
+            if (trace.checked_condition("if ((iVar1 == 0) && (param_2 == 1))", [&]() -> bool { return static_cast<bool>((iVar1 == 0) && (param_2 == 1)); })) {
                 trace.statement("(*(code *)PTR__guard_dispatch_icall_18030cca8)(param_1,0,param_3);");
             }
             trace.statement("_seh_filter_dll(param_5,param_6);");
@@ -1674,6 +1680,7 @@ TODO: resolve the indirect call in body 22: (*(code *)PTR__guard_dispatch_icall_
 const sf::reconstructed::FunctionTranslation& Function_0x1802d8814() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d8814", "`eh_vector_constructor_iterator'");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for PTR__guard_dispatch_icall_18030cca8.
     // TODO: resolve the indirect call in body 22: (*(code *)PTR__guard_dispatch_icall_18030cca8)(param_1);.
@@ -3433,6 +3440,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x1802d90e4() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d90e4", "FUN_1802d90e4");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint32_t DVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: recover global/data declaration, type, value and runtime page/layout for _DAT_1803da500.
@@ -6383,6 +6391,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d93c8() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d93c8", "__GSHandlerCheck_SEH");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] void * param_2{};
     [[maybe_unused]] std::uint32_t uVar1{};
     [[maybe_unused]] std::uint32_t * puVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -7646,11 +7655,12 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802d94c5() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d94c5", "API-MS-WIN-CRT-STRING-L1-1-0.DLL::wcslen");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] wchar_t * _Str{};
     [[maybe_unused]] std::size_t sVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for wcslen: _Str [reason: ambiguous operand type]
+    trace.call_arguments("wcslen", _Str);
     // body sha256: f0223810b8757d4a379f999b378daa1ab1b4f4a3f1a8064dc9d387ce73cde521
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("size_t __cdecl wcslen(wchar_t *_Str)");

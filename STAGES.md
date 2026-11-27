@@ -177,17 +177,17 @@ timeout addresses.
 
 `src/reconstructed/` covers **7,656/7,656 inventory functions** with compiled
 C++17 accessors: **0 unmapped, 0 stubs**. `re/tools/gen_reconstructed_source.py`
-deterministically writes 60 chunks (85,492,273 bytes; 81.53 MiB) and
+deterministically writes 60 chunks (85,479,249 bytes; 81.52 MiB) and
 `src/reconstructed/coverage.tsv`; every address maps to a chunk source file and
-a unique `Function_0x...` accessor. The accessors contain **459,561 executable
+a unique `Function_0x...` accessor. The accessors contain **461,411 executable
 statement/reference lines**, **306,161 `trace.statement` calls**, **49,305 real
 C++ `if`/`else`/loop/`switch` control nodes**, **7,732 actual string-literal
 calls**, plus resolved references to **4,331 extern call thunks** and **5,414
 extern data symbols** in `src/reconstructed/symbols.h`. Recovered local/parameter
 declarations, whole-array argument decay, typed field reads and synthetic scalar
-subfields, admitted scalar/pointer casts, global decay, typed assignments and
-named-function parameters feed **33,015 compiler-checked condition expressions**
-and **48,413 `trace.call_arguments` sites**; **8,418 condition sites** and **5,765
+subfields, admitted scalar/pointer casts, global decay, typed assignments,
+multiline signatures and Windows pointer typedefs feed **34,090 compiler-checked
+condition expressions** and **50,263 `trace.call_arguments` sites**; **7,296 condition sites** and **3,915
 call-argument sites** remain explicit TODOs because their types or referenced
 entities are not recoverable from the available evidence. Global scalar types
 come from disassembling every non-LEA memory access to each slot and accepting

@@ -31398,15 +31398,19 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1800136f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800136f0", "std__Generic_error_category_vfunc02");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::int32_t param_3{};
+    [[maybe_unused]] std::uint64_t param_4{};
     [[maybe_unused]] char * _Str{};
     [[maybe_unused]] std::size_t sVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _Syserror_map: param_3 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001d080: param_2,_Str,sVar1,param_4,uVar2 [reason: ambiguous operand type]
+    trace.call_arguments("_Syserror_map", param_3);
     trace.call_arguments("strlen", _Str);
+    trace.call_arguments("FUN_18001d080", param_2, _Str, sVar1, param_4, uVar2);
     trace.call_target("FUN_18001d080", reinterpret_cast<const void*>(&image::FUN_18001d080));
     // body sha256: 329400a27ee9f1a32243d5c564581dcf9ac358399b847b3abe2a732628cab959
     // Structured control-flow trace derived from the decompiled body:
@@ -31620,17 +31624,17 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800137a0() noexcept {
     [[maybe_unused]] std::uint8_t auStack_58[32]{};
     [[maybe_unused]] std::uint32_t local_38{};
     [[maybe_unused]] std::uint64_t * local_30{};
+    [[maybe_unused]] void* local_28{};
     [[maybe_unused]] std::int64_t local_20{};
     [[maybe_unused]] std::uint64_t local_18{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((local_28 == (HLOCAL)0x0) || (local_20 == 0)) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_1802d7ff4: param_3,&local_28 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for LocalFree: local_28 [reason: ambiguous operand type]
+    trace.call_arguments("FUN_1802d7ff4", param_3, &local_28);
     trace.call_arguments("FUN_18001d080", param_2, "unknown error", 0xd);
     trace.call_arguments("FUN_18001d080", param_2);
+    trace.call_arguments("LocalFree", local_28);
     trace.call_target("FUN_18001d080", reinterpret_cast<const void*>(&image::FUN_18001d080));
     trace.call_target("FUN_1802d7ff4", reinterpret_cast<const void*>(&image::FUN_1802d7ff4));
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
@@ -31651,7 +31655,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800137a0() noexcept {
             trace.statement("local_28 = (HLOCAL)0x0;");
             trace.statement("local_30 = param_2;");
             trace.statement("local_20 = FUN_1802d7ff4(param_3,&local_28);");
-            if (trace.condition("if ((local_28 == (HLOCAL)0x0) || (local_20 == 0))")) {
+            if (trace.checked_condition("if ((local_28 == (HLOCAL)0x0) || (local_20 == 0))", [&]() -> bool { return static_cast<bool>((local_28 == (void*)0x0) || (local_20 == 0)); })) {
                 trace.statement("*param_2 = 0;");
                 trace.statement("param_2[1] = 0;");
                 trace.statement("param_2[2] = 0;");
