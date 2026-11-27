@@ -1899,6 +1899,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021e730() noexcept {
     [[maybe_unused]] char * param_2{};
     [[maybe_unused]] bool bVar1{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint8_t * this_00{};
     [[maybe_unused]] std::uint64_t * puVar4{};
     [[maybe_unused]] std::uint8_t auStack_88[32]{};
     [[maybe_unused]] std::uint32_t local_68{};
@@ -1919,10 +1920,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021e730() noexcept {
     // TODO: call arguments not type-recovered for _Init: this [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _get_stream_buffer_pointers: p_Var2,&local_48,&local_40,&local_38 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for getloc: this [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for always_noconv: this_00 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Init: this [reason: ambiguous operand type]
     trace.call_arguments("_Fiopen", param_2, 0x21, 0x40);
     trace.call_arguments("FUN_18021af80", uVar3);
+    trace.call_arguments("always_noconv", this_00);
     trace.call_target("FUN_18021af80", reinterpret_cast<const void*>(&image::FUN_18021af80));
     trace.data_ref("DAT_18033d798", static_cast<const void*>(&image::DAT_18033d798));
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
@@ -8423,7 +8424,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180220e70() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((BVar1 != 0) && (local_228[0] != L'\0')) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for Texture: *.vtf [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GetOpenFileNameW: &local_2c8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for WideCharToMultiByte: 0xfde9,0,local_228,-1,&DAT_180400ec0,0x200,(LPCSTR)0x0,(LPBOOL)0x0 [reason: unresolved global storage/width]
     trace.call_arguments("memset", local_228, 0, 0x208);

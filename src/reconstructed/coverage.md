@@ -5,11 +5,11 @@
 - Unmapped: **0**
 - Stubs: **0** (every accessor contains executable C++ and statement/trace code)
 - Compiled accessors: **7656**
-- Executable accessor lines: **462448**
+- Executable accessor lines: **462457**
 - Structured control nodes: **49305**
-- Type-checked recovered condition expressions: **34221**
-- Type-checked recovered call-argument sites: **51300**
-- Generated chunks: **60** (85429026 bytes; at most 128 functions per chunk)
+- Type-checked recovered condition expressions: **35489**
+- Type-checked recovered call-argument sites: **51309**
+- Generated chunks: **60** (85291199 bytes; at most 128 functions per chunk)
 - Resolved call-thunk declarations: **4331**
 - Resolved data-table declarations: **5414**
 - Mapping table: `src/reconstructed/coverage.tsv` (one row per inventory address)

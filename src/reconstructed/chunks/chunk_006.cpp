@@ -3997,7 +3997,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180057f20() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar2 == (longlong *)0x0) || (plVar2[1] != param_1)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((DAT_1803ff8d0 != '\0') && (DAT_1803ff8c8 != (code *)0x0)) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for cap: %d per model [reason: ambiguous operand type]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180014410", "[LUAHOOKS] DrawModelExecute re-issue cap (%d per model) hit\n", 8);
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
@@ -5387,7 +5386,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180058850() noexcept {
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803faff8 == (code *)0x0) || (param_1[1] == 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for hook: s [reason: ambiguous operand type]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", pHVar3, "lua_gettop");
     trace.call_arguments("FUN_180023e60", param_1, 0);
@@ -6287,7 +6285,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180058f10() noexcept {
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for environment: s [reason: ambiguous operand type]
     trace.call_arguments("FUN_180025450");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", pHVar5, "lua_next");
@@ -14252,7 +14249,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18005c210() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar1 != (longlong *)0x0) && (plVar1[1] == param_1)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (DAT_1803fa668 == (longlong *)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for d: stalls the reliable stream if this disagrees with the server [reason: ambiguous operand type]
     trace.call_arguments("FUN_180039770");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.call_target("FUN_180039770", reinterpret_cast<const void*>(&image::FUN_180039770));
@@ -14383,7 +14379,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18005c2b0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar1 != (longlong *)0x0) && (plVar1[1] == param_1)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (DAT_1803fa668 == (longlong *)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for d: stalls the reliable stream if this disagrees with the server [reason: ambiguous operand type]
     trace.call_arguments("FUN_180039770");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.call_target("FUN_180039770", reinterpret_cast<const void*>(&image::FUN_180039770));
@@ -15753,7 +15748,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18005ca40() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar1 != (longlong *)0x0) && (plVar1[1] == param_1)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (DAT_1803fa668 == (longlong *)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for d: was %d [reason: ambiguous operand type]
     trace.call_arguments("FUN_180039770");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.call_target("FUN_180039770", reinterpret_cast<const void*>(&image::FUN_180039770));
@@ -16984,7 +16978,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18005d170() noexcept {
     // TODO: condition expression type not recovered: if ((plVar2 == (longlong *)0x0) || (plVar2[1] != param_1)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (DAT_1803fa668 == (longlong *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fa668 == (longlong *)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for cmd: %s [reason: ambiguous operand type]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180014410", "[LUANET] script SENT string cmd (%s): %s\n", pcVar5, lVar4);
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
@@ -17315,7 +17308,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18005d280() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar2 == (longlong *)0x0) || (plVar2[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (DAT_1803ff920 == (code *)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for d: %s [reason: ambiguous operand type]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((std::uint64_t(local_38) >> 32)), (int)static_cast<std::int64_t>(dVar7));
     trace.call_arguments("CONCAT44", static_cast<std::int32_t>(dVar7), static_cast<std::uint32_t>(local_38));
@@ -18136,7 +18128,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18005d9b0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((plVar4 != (longlong *)0x0) && (plVar4[1] == param_1)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (DAT_1803fa668 == (longlong *)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for transmit: onlyReliable=%s [reason: assignment or side effect]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180014410", "[LUANET] script forced a transmit (onlyReliable=%s)\n", pcVar6);
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
@@ -20731,9 +20722,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18005e350() noexcept {
     // TODO: condition expression type not recovered: if (&local_68 != puVar6) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for buffer: s [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for state: %u of them script-owned [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for registered: %d slots [reason: ambiguous operand type]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", pHVar4, "lua_gettop");
     trace.call_arguments("FUN_1800260c0", lVar1, 0x2736efefe1fb290);

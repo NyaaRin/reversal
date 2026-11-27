@@ -2884,6 +2884,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18020df40() noexcept {
     [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] char * param_2{};
     [[maybe_unused]] std::int64_t * plVar1{};
+    [[maybe_unused]] std::uint8_t * p_Var2{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::size_t sVar4{};
     [[maybe_unused]] std::uint8_t auStack_108[32]{};
@@ -3487,6 +3488,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18020e2c0() noexcept {
     [[maybe_unused]] std::uint64_t uVar3{};
     [[maybe_unused]] std::size_t sVar4{};
     [[maybe_unused]] std::uint64_t _Size{};
+    [[maybe_unused]] std::uint8_t * in_stack_ffffffffffffffa8{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -3612,7 +3614,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18020e3f0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _Strcoll: param_2,param_3,param_4,param_5,(_Collvec *)(param_1 + 0x10) [reason: pointer-cast target not proven]
+    trace.call_arguments("_Strcoll", param_2, param_3, param_4, param_5, (std::uint8_t *)(param_1 + 0x10));
     // body sha256: 5ecd93838d2315261863f3fa7819a8a991cf5d53610004d15d1bf44687803e95
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("ulonglong std_D___collate_vfunc03");
@@ -10318,13 +10320,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802106d0() noexcept {
     [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::uint8_t auStack_38[32]{};
+    [[maybe_unused]] std::uint8_t local_18[8]{};
     [[maybe_unused]] std::uint64_t local_10{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _Lockit: local_18,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for _Lockit: local_18 [reason: ambiguous operand type]
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
     // body sha256: ca5c4ed0e74fb17db5da9a37b5a3ed4c3229257b2cd5300eec285c02eff315d6
     // Structured control-flow trace derived from the decompiled body:

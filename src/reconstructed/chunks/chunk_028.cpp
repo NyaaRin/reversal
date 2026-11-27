@@ -12921,10 +12921,16 @@ TODO: resolve the indirect call in body 56: (**(code **)(*(longlong *)pfVar5 + 8
 const sf::reconstructed::FunctionTranslation& Function_0x18021af80() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021af80", "FUN_18021af80");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint8_t * param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
+    [[maybe_unused]] std::uint8_t * p_Var3{};
     [[maybe_unused]] std::uint64_t _Var4{};
+    [[maybe_unused]] std::uint8_t * pfVar5{};
     [[maybe_unused]] std::uint8_t auStack_68[32]{};
+    [[maybe_unused]] std::uint8_t * local_48{};
+    [[maybe_unused]] std::uint8_t * local_40{};
+    [[maybe_unused]] std::uint8_t local_38[8]{};
     [[maybe_unused]] std::uint64_t local_30{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021b001.
@@ -12934,15 +12940,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021af80() noexcept {
     // TODO: resolve the indirect call in body 56: (**(code **)(*(longlong *)pfVar5 + 8))(pfVar5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (uVar2 < *(ulonglong *)(p_Var3 + 0x18)) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: if (local_40 == (facet *)0x0) [reason: pointer-cast target not proven]
-    // TODO: call arguments not type-recovered for _Lockit: local_38,0 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_1802106d0: id_exref [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for _Getcat: &local_40,param_1 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_1802d81e8: local_40 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for _Lockit: local_38 [reason: ambiguous operand type]
     trace.call_arguments("_Getgloballocale");
+    trace.call_arguments("_Getcat", &local_40, param_1);
     trace.call_arguments("FUN_180013970");
+    trace.call_arguments("FUN_1802d81e8", local_40);
     trace.call_target("FUN_180013970", reinterpret_cast<const void*>(&image::FUN_180013970));
     trace.call_target("FUN_1802106d0", reinterpret_cast<const void*>(&image::FUN_1802106d0));
     trace.call_target("FUN_1802d81e8", reinterpret_cast<const void*>(&image::FUN_1802d81e8));
@@ -12975,13 +12977,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021af80() noexcept {
                     LAB_18021b001: ;
                     if (trace.condition("if (pfVar5 != (facet *)0x0) goto LAB_18021b05d; } else")) {
                         trace.statement("p_Var3 = std::locale::_Getgloballocale();");
-                        if (trace.condition("if (uVar2 < *(ulonglong *)(p_Var3 + 0x18))")) {
+                        if (trace.checked_condition("if (uVar2 < *(ulonglong *)(p_Var3 + 0x18))", [&]() -> bool { return static_cast<bool>(uVar2 < load_at<std::uint64_t>(p_Var3 + 0x18, 0)); })) {
                             trace.statement("pfVar5 = *(facet **)(uVar2 * 8 + *(longlong *)(p_Var3 + 0x10));");
                             trace.statement("goto LAB_18021b001;");
                         }
                     }
                     trace.statement("pfVar5 = local_40;");
-                    if (trace.condition("if (local_40 == (facet *)0x0)")) {
+                    if (trace.checked_condition("if (local_40 == (facet *)0x0)", [&]() -> bool { return static_cast<bool>(local_40 == (std::uint8_t *)0x0); })) {
                         trace.statement("_Var4 = std::codecvt<char,char,_Mbstatet>::_Getcat(&local_40,param_1);");
                         trace.statement("pfVar5 = local_40;");
                         if (trace.checked_condition("if (_Var4 == 0xffffffffffffffff)", [&]() -> bool { return static_cast<bool>(_Var4 == 0xffffffffffffffff); })) {

@@ -14631,6 +14631,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_19a1c{};
     [[maybe_unused]] std::uint64_t uStack_19a14{};
     [[maybe_unused]] std::uint32_t uStack_19a0c{};
+    [[maybe_unused]] std::uint8_t * pTStack_19a08{};
     [[maybe_unused]] std::uint32_t uStack_19a00{};
     [[maybe_unused]] std::uint64_t uStack_199fc{};
     [[maybe_unused]] std::uint64_t uStack_199f4{};
@@ -14639,6 +14640,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_199dc{};
     [[maybe_unused]] std::uint64_t uStack_199d4{};
     [[maybe_unused]] std::uint32_t uStack_199cc{};
+    [[maybe_unused]] std::uint8_t * pTStack_199c8{};
     [[maybe_unused]] std::uint32_t uStack_199c0{};
     [[maybe_unused]] std::uint64_t uStack_199bc{};
     [[maybe_unused]] std::uint64_t uStack_199b4{};
@@ -14647,6 +14649,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_1999c{};
     [[maybe_unused]] std::uint64_t uStack_19994{};
     [[maybe_unused]] std::uint32_t uStack_1998c{};
+    [[maybe_unused]] std::uint8_t * pTStack_19988{};
     [[maybe_unused]] std::uint64_t uStack_19980{};
     [[maybe_unused]] std::uint64_t uStack_19978{};
     [[maybe_unused]] std::uint64_t uStack_19970{};
@@ -14654,6 +14657,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_19960{};
     [[maybe_unused]] std::uint64_t uStack_19958{};
     [[maybe_unused]] std::uint64_t uStack_19950{};
+    [[maybe_unused]] std::uint8_t * pTStack_19948{};
     [[maybe_unused]] std::uint64_t uStack_19940{};
     [[maybe_unused]] std::uint64_t uStack_19938{};
     [[maybe_unused]] std::uint64_t uStack_19930{};
@@ -14661,6 +14665,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_19920{};
     [[maybe_unused]] std::uint64_t uStack_19918{};
     [[maybe_unused]] std::uint64_t uStack_19910{};
+    [[maybe_unused]] std::uint8_t * pTStack_19908{};
     [[maybe_unused]] std::uint64_t uStack_19900{};
     [[maybe_unused]] std::uint64_t uStack_198f8{};
     [[maybe_unused]] std::uint64_t uStack_198f0{};
@@ -14668,6 +14673,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_198e0{};
     [[maybe_unused]] std::uint64_t uStack_198d8{};
     [[maybe_unused]] std::uint64_t uStack_198d0{};
+    [[maybe_unused]] std::uint8_t * pTStack_198c8{};
     [[maybe_unused]] std::uint32_t * puStack_198c0{};
     [[maybe_unused]] std::int64_t * plStack_198b8{};
     [[maybe_unused]] std::uint64_t uStack_198b0{};
@@ -14677,6 +14683,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_19890{};
     [[maybe_unused]] std::uint64_t uStack_19888{};
     [[maybe_unused]] std::uint64_t uStack_19880{};
+    [[maybe_unused]] std::uint8_t * pTStack_19878{};
     [[maybe_unused]] std::uint64_t uStack_19870{};
     [[maybe_unused]] std::uint64_t uStack_19868{};
     [[maybe_unused]] std::uint64_t uStack_19860{};
@@ -14684,6 +14691,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_19850{};
     [[maybe_unused]] std::uint64_t uStack_19848{};
     [[maybe_unused]] std::uint64_t uStack_19840{};
+    [[maybe_unused]] std::uint8_t * pTStack_19838{};
     [[maybe_unused]] std::uint64_t uStack_19830{};
     [[maybe_unused]] std::uint64_t uStack_19828{};
     [[maybe_unused]] std::uint64_t uStack_19820{};
@@ -14691,6 +14699,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_19810{};
     [[maybe_unused]] std::uint64_t uStack_19808{};
     [[maybe_unused]] std::uint64_t uStack_19800{};
+    [[maybe_unused]] std::uint8_t * pTStack_197f8{};
     [[maybe_unused]] std::uint64_t uStack_197f0{};
     [[maybe_unused]] std::uint64_t uStack_197e8{};
     [[maybe_unused]] std::uint64_t uStack_197e0{};
@@ -14698,6 +14707,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180003f30() noexcept {
     [[maybe_unused]] std::uint64_t uStack_197d0{};
     [[maybe_unused]] std::uint64_t uStack_197c8{};
     [[maybe_unused]] std::uint64_t uStack_197c0{};
+    [[maybe_unused]] std::uint8_t * pTStack_197b8{};
     [[maybe_unused]] std::uint8_t auStack_197b0[32]{};
     [[maybe_unused]] std::uint8_t auStack_19790[32]{};
     [[maybe_unused]] std::uint8_t auStack_19770[32]{};
@@ -26305,6 +26315,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_127c{};
     [[maybe_unused]] std::uint64_t uStack_1274{};
     [[maybe_unused]] std::uint32_t local_126c{};
+    [[maybe_unused]] std::uint8_t * local_1268{};
     [[maybe_unused]] std::uint64_t local_1260{};
     [[maybe_unused]] std::uint64_t uStack_1258{};
     [[maybe_unused]] std::uint64_t local_1250{};
@@ -26312,6 +26323,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_1240{};
     [[maybe_unused]] std::uint64_t uStack_1238{};
     [[maybe_unused]] std::uint64_t local_1230{};
+    [[maybe_unused]] std::uint8_t * pTStack_1228{};
     [[maybe_unused]] std::uint64_t local_1220{};
     [[maybe_unused]] std::uint64_t uStack_1218{};
     [[maybe_unused]] std::uint64_t local_1210{};
@@ -26319,6 +26331,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_1200{};
     [[maybe_unused]] std::uint64_t uStack_11f8{};
     [[maybe_unused]] std::uint64_t local_11f0{};
+    [[maybe_unused]] std::uint8_t * pTStack_11e8{};
     [[maybe_unused]] std::uint32_t local_11e0{};
     [[maybe_unused]] std::uint64_t local_11dc{};
     [[maybe_unused]] std::uint64_t uStack_11d4{};
@@ -26327,6 +26340,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_11bc{};
     [[maybe_unused]] std::uint64_t uStack_11b4{};
     [[maybe_unused]] std::uint32_t local_11ac{};
+    [[maybe_unused]] std::uint8_t * local_11a8{};
     [[maybe_unused]] std::uint32_t local_11a0{};
     [[maybe_unused]] std::uint64_t local_119c{};
     [[maybe_unused]] std::uint64_t uStack_1194{};
@@ -26335,6 +26349,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_117c{};
     [[maybe_unused]] std::uint64_t uStack_1174{};
     [[maybe_unused]] std::uint32_t local_116c{};
+    [[maybe_unused]] std::uint8_t * local_1168{};
     [[maybe_unused]] std::uint32_t local_1160{};
     [[maybe_unused]] std::uint64_t local_115c{};
     [[maybe_unused]] std::uint64_t uStack_1154{};
@@ -26343,6 +26358,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_113c{};
     [[maybe_unused]] std::uint64_t uStack_1134{};
     [[maybe_unused]] std::uint32_t local_112c{};
+    [[maybe_unused]] std::uint8_t * local_1128{};
     [[maybe_unused]] std::uint32_t local_1120{};
     [[maybe_unused]] std::uint64_t local_111c{};
     [[maybe_unused]] std::uint64_t uStack_1114{};
@@ -26351,6 +26367,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_10fc{};
     [[maybe_unused]] std::uint64_t uStack_10f4{};
     [[maybe_unused]] std::uint32_t local_10ec{};
+    [[maybe_unused]] std::uint8_t * local_10e8{};
     [[maybe_unused]] std::uint32_t local_10e0{};
     [[maybe_unused]] std::uint64_t local_10dc{};
     [[maybe_unused]] std::uint64_t uStack_10d4{};
@@ -26359,6 +26376,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_10bc{};
     [[maybe_unused]] std::uint64_t uStack_10b4{};
     [[maybe_unused]] std::uint32_t local_10ac{};
+    [[maybe_unused]] std::uint8_t * local_10a8{};
     [[maybe_unused]] std::uint32_t local_10a0{};
     [[maybe_unused]] std::uint64_t local_109c{};
     [[maybe_unused]] std::uint64_t uStack_1094{};
@@ -26367,6 +26385,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_107c{};
     [[maybe_unused]] std::uint64_t uStack_1074{};
     [[maybe_unused]] std::uint32_t local_106c{};
+    [[maybe_unused]] std::uint8_t * local_1068{};
     [[maybe_unused]] std::uint32_t local_1060{};
     [[maybe_unused]] std::uint64_t local_105c{};
     [[maybe_unused]] std::uint64_t uStack_1054{};
@@ -26375,6 +26394,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_103c{};
     [[maybe_unused]] std::uint64_t uStack_1034{};
     [[maybe_unused]] std::uint32_t local_102c{};
+    [[maybe_unused]] std::uint8_t * local_1028{};
     [[maybe_unused]] std::uint32_t local_1020{};
     [[maybe_unused]] std::uint64_t local_101c{};
     [[maybe_unused]] std::uint64_t uStack_1014{};
@@ -26383,6 +26403,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_ffc{};
     [[maybe_unused]] std::uint64_t uStack_ff4{};
     [[maybe_unused]] std::uint32_t local_fec{};
+    [[maybe_unused]] std::uint8_t * local_fe8{};
     [[maybe_unused]] std::uint32_t local_fe0{};
     [[maybe_unused]] std::uint64_t local_fdc{};
     [[maybe_unused]] std::uint64_t uStack_fd4{};
@@ -26391,6 +26412,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_fbc{};
     [[maybe_unused]] std::uint64_t uStack_fb4{};
     [[maybe_unused]] std::uint32_t local_fac{};
+    [[maybe_unused]] std::uint8_t * local_fa8{};
     [[maybe_unused]] std::uint8_t * local_fa0{};
     [[maybe_unused]] std::uint8_t * local_f98{};
     [[maybe_unused]] std::uint32_t * local_f90{};
@@ -26467,6 +26489,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_cb8{};
     [[maybe_unused]] std::uint64_t uStack_cb0{};
     [[maybe_unused]] std::uint64_t local_ca8{};
+    [[maybe_unused]] std::uint8_t * pTStack_ca0{};
     [[maybe_unused]] std::uint64_t local_c98{};
     [[maybe_unused]] std::uint64_t uStack_c90{};
     [[maybe_unused]] std::uint64_t local_c88{};
@@ -26474,6 +26497,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_c78{};
     [[maybe_unused]] std::uint64_t uStack_c70{};
     [[maybe_unused]] std::uint64_t local_c68{};
+    [[maybe_unused]] std::uint8_t * pTStack_c60{};
     [[maybe_unused]] std::uint64_t local_c58{};
     [[maybe_unused]] std::uint64_t uStack_c50{};
     [[maybe_unused]] std::uint64_t local_c48{};
@@ -26481,6 +26505,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_c38{};
     [[maybe_unused]] std::uint64_t uStack_c30{};
     [[maybe_unused]] std::uint64_t local_c28{};
+    [[maybe_unused]] std::uint8_t * pTStack_c20{};
     [[maybe_unused]] std::uint64_t local_c18{};
     [[maybe_unused]] std::uint64_t uStack_c10{};
     [[maybe_unused]] std::uint64_t local_c08{};
@@ -26488,6 +26513,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_bf8{};
     [[maybe_unused]] std::uint64_t uStack_bf0{};
     [[maybe_unused]] std::uint64_t local_be8{};
+    [[maybe_unused]] std::uint8_t * pTStack_be0{};
     [[maybe_unused]] std::uint64_t local_bd8{};
     [[maybe_unused]] std::uint64_t uStack_bd0{};
     [[maybe_unused]] std::uint64_t local_bc8{};
@@ -26495,6 +26521,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180010c60() noexcept {
     [[maybe_unused]] std::uint64_t local_bb8{};
     [[maybe_unused]] std::uint64_t uStack_bb0{};
     [[maybe_unused]] std::uint64_t local_ba8{};
+    [[maybe_unused]] std::uint8_t * pTStack_ba0{};
     [[maybe_unused]] std::uint8_t local_b98[32]{};
     [[maybe_unused]] std::uint8_t local_b78[88]{};
     [[maybe_unused]] std::uint8_t local_b20[8]{};
