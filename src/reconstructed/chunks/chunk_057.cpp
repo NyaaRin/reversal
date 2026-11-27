@@ -3723,14 +3723,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fe3c0() noexcept {
     // TODO: resolve the indirect call in body 18: (*pcVar1)(lVar2 + (lVar3 + -1) * 0x18);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x20) == '\0') && (lVar3 = *(longlong *)(param_2 + 0x28), lVar3 != 0)) [reason: pointer depth/pointee not proven]
     // body sha256: 584413cd8aed7306bd5ae1a356601f6ce8b00218594e2e1161c31e131fc9fc7b
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("code *pcVar1;");
             trace.statement("longlong lVar2;");
             trace.statement("longlong lVar3;");
-            if (trace.condition("if ((*(char *)(param_2 + 0x20) == '\\0') && (lVar3 = *(longlong *)(param_2 + 0x28), lVar3 != 0))")) {
+            if (trace.checked_condition("if ((*(char *)(param_2 + 0x20) == '\\0') && (lVar3 = *(longlong *)(param_2 + 0x28), lVar3 != 0))", [&]() -> bool { return static_cast<bool>((load_at<char>(param_2 + 0x20, 0) == '\0') && (lVar3 = load_at<std::int64_t>(param_2 + 0x28, 0), lVar3 != 0)); })) {
                 trace.statement("pcVar1 = *(code **)(param_2 + 0x30);");
                 trace.statement("lVar2 = *(longlong *)(param_2 + 0x50);");
                 do {

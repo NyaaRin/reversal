@@ -176,6 +176,11 @@ def recover_declarations(body: str) -> dict[str, tuple[str, int | None]]:
         name = match.group(3)
         if mapped and name not in declarations:
             declarations[name] = (mapped, int(match.group(4)) if match.group(4) else None)
+    # Ghidra names direct stack-frame addresses but does not declare them.  A
+    # byte array gives `&stack0x...` a real address without claiming a scalar
+    # type for the slot.
+    for match in re.finditer(r"\b(stack0x[0-9A-Fa-f]+)\b", body):
+        declarations.setdefault(match.group(1), ("std::uint8_t", 0x1000))
     return declarations
 
 
@@ -347,23 +352,32 @@ def rewrite_memory_dereferences(expr: str) -> str:
         if cast_end < 0:
             result.append(expr[match.start():])
             break
-        if cast_end + 1 >= len(expr) or expr[cast_end + 1] != "(":
+        cast_type = cpp_type(expr[cast_start:cast_end])
+        if not cast_type or not cast_type.endswith("*") or cast_type.replace("*", "").strip() == "void":
             result.append(expr[match.start():cast_end + 1])
             index = cast_end + 1
             continue
-        address_end = matching_paren(expr, cast_end + 1)
-        if address_end < 0:
-            result.append(expr[match.start():])
-            break
-        cast_type = cpp_type(expr[cast_start:cast_end])
-        if not cast_type or not cast_type.endswith("*") or cast_type.replace("*", "").strip() == "void":
-            result.append(expr[match.start():address_end + 1])
+        pointee = cast_type[:-1].strip()
+        if cast_end + 1 < len(expr) and expr[cast_end + 1] == "(":
+            address_end = matching_paren(expr, cast_end + 1)
+            if address_end < 0:
+                result.append(expr[match.start():])
+                break
+            address = rewrite_memory_dereferences(expr[cast_end + 2:address_end])
+            result.append(f"load_at<{pointee}>({address}, 0)")
             index = address_end + 1
             continue
-        address = rewrite_memory_dereferences(expr[cast_end + 2:address_end])
-        pointee = cast_type[:-1].strip()
+        # Ghidra also emits `*(T *)*p` without wrapping the address.  Only a
+        # simple unary operand is accepted here; complex addresses already use
+        # parentheses and are handled above.
+        operand = re.match(r"\s*((?:\*+|&)?[A-Za-z_][A-Za-z0-9_]*(?:\[[^\]]*\])?|0x[0-9A-Fa-f]+|\d+)", expr[cast_end + 1:])
+        if not operand:
+            result.append(expr[match.start():cast_end + 1])
+            index = cast_end + 1
+            continue
+        address = operand.group(1)
         result.append(f"load_at<{pointee}>({address}, 0)")
-        index = address_end + 1
+        index = cast_end + 1 + operand.end()
     return "".join(result)
 
 
@@ -490,6 +504,43 @@ def rewrite_admitted_casts(
     return CAST_OPERAND_RE.sub(replace, expr)
 
 
+SIMPLE_ASSIGN_RE = re.compile(r"(?<![=!<>])\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*([A-Za-z_][A-Za-z0-9_]*)\b(?![\[(])")
+
+
+def rewrite_assignment_casts(
+    expr: str,
+    locals: dict[str, tuple[str, int | None]],
+) -> tuple[str, bool]:
+    """Make simple pointer/integer stores explicit when the lvalue proves width."""
+    invalid = False
+
+    def replace(match: re.Match[str]) -> str:
+        nonlocal invalid
+        left, right = match.group(1), match.group(2)
+        left_decl = locals.get(left)
+        right_decl = locals.get(right)
+        if not left_decl or not right_decl:
+            return match.group(0)
+        left_type, left_count = left_decl
+        right_type, right_count = right_decl
+        if left_count is not None or right_count is not None:
+            invalid = True
+            return match.group(0)
+        left_pointer = bool(pointer_shape(left_type)) or left_count is not None
+        right_pointer = bool(pointer_shape(right_type)) or right_count is not None
+        if left_pointer == right_pointer:
+            return match.group(0)
+        scalar_side = right_type if left_pointer else left_type
+        if scalar_width(scalar_side) != 8 or scalar_side in ("float", "double"):
+            invalid = True
+            return match.group(0)
+        if left_pointer:
+            return f"{left} = reinterpret_cast<{left_type}>({right})"
+        return f"{left} = reinterpret_cast<{left_type}>({right})"
+
+    return SIMPLE_ASSIGN_RE.sub(replace, expr), invalid
+
+
 def safe_expression(
     expr: str,
     locals: dict[str, tuple[str, int | None]],
@@ -499,6 +550,9 @@ def safe_expression(
     expr = rewrite_memory_dereferences(expr.strip())
     expr = rewrite_synthetic_subfields(expr, locals)
     expr = rewrite_admitted_casts(expr, locals)
+    expr, invalid_assignment = rewrite_assignment_casts(expr, locals)
+    if invalid_assignment:
+        return None
     if not expr or expr in TYPE_WORDS or any(char in expr for char in ";{}"):
         return None
     if '"' in expr:
@@ -517,10 +571,13 @@ def safe_expression(
         return None
     if expr.count("(") != expr.count(")") or expr.count("[") != expr.count("]"):
         return None
-    # Assignment is not a value-preserving comparison and the decompiler can
-    # place incompatible pointer/scalar pairs on either side of it.
-    if re.search(r"(?<![=!<>])=(?!=)", expr):
-        return None
+    # Assignments are admitted only when every left-hand side is a recovered
+    # local/parameter; the compiler then checks the store width and kind.  An
+    # unknown lvalue stays an explicit TODO.
+    assignment_names = re.findall(r"(?<![=!<>])\b([A-Za-z_][A-Za-z0-9_]*)\s*=(?!=)", expr)
+    if assignment_names:
+        if any(name not in locals for name in assignment_names):
+            return None
     if not re.search(r"[A-Za-z0-9_]", expr):
         return None
     without_hex = re.sub(r"\b0[xX][0-9A-Fa-f]+\b", "0", expr)
@@ -701,6 +758,14 @@ def safe_expression(
         if re.search(rf"{address_of}\s*\)\s*\[", expr):
             return None
         if not re.search(address_of, expr):
+            # An untyped global is a byte array.  Its lvalue-to-pointer decay is
+            # valid in null/equality tests and boolean contexts; arithmetic on
+            # the whole array is not.
+            residual = expr
+            for other in data_tokens:
+                residual = residual.replace(other, "")
+            if re.fullmatch(r"[\s()!&|=0x0-9A-Fa-f]*", residual) and re.search(r"==|!=|!|&&|\|\|", expr):
+                continue
             return None
         if "load_at<" in expr and re.search(r"==|!=", expr):
             # A recovered field read may have a pointee type while the other
