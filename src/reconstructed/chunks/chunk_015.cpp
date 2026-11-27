@@ -17096,6 +17096,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800ea630() noexcept {
     [[maybe_unused]] char* lpMultiByteStr{};
     [[maybe_unused]] wchar_t* lpWideCharStr{};
     [[maybe_unused]] std::uint8_t auStackY_98[32]{};
+    [[maybe_unused]] char local_48{};
     [[maybe_unused]] std::uint64_t uStack_40{};
     [[maybe_unused]] std::uint64_t local_38{};
     [[maybe_unused]] std::uint64_t uStack_30{};
@@ -17106,11 +17107,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800ea630() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_18020ea80: &local_48,(longlong)(cbMultiByte + -1),0 [reason: scalar cast width/kind mismatch]
     // TODO: call arguments not type-recovered for CONCAT71: uStack_47,local_48 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for WideCharToMultiByte: 0xfde9,0,param_2,-1,lpMultiByteStr,cbMultiByte,(LPCSTR)0x0,(LPBOOL)0x0 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for CONCAT71: uStack_47,local_48 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18020e450: &local_48 [reason: ambiguous operand type]
+    trace.call_arguments("FUN_18020ea80", &local_48, (longlong)(cbMultiByte + -1), 0);
+    trace.call_arguments("FUN_18020e450", &local_48);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     trace.call_target("FUN_18020ea80", reinterpret_cast<const void*>(&image::FUN_18020ea80));
     trace.data_ref("_DAT_1803814b0", static_cast<const void*>(&image::_DAT_1803814b0));
@@ -17358,24 +17359,25 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800ea7a0() noexcept {
     [[maybe_unused]] std::uint64_t local_488{};
     [[maybe_unused]] std::uint8_t local_480[40]{};
     [[maybe_unused]] wchar_t local_458[264]{};
+    [[maybe_unused]] wchar_t local_248[264]{};
     [[maybe_unused]] std::uint64_t local_38{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for memset: local_248,0,0x208 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GetEnvironmentVariableW: L"USERPROFILE",local_248,0x104 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_4c0,L"mayrrX64",8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_4c0,L"mayrrX64",8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_500,L"Documents",9 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for wcslen: local_248 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_4e0,local_248,sVar3 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_4e0,L"mayrrX64",8 [reason: ambiguous operand type]
     trace.call_arguments("memset", local_458, 0, 0x208);
     trace.call_arguments("SHGetFolderPathW", 0, 0x8005, 0, 0);
+    trace.call_arguments("memset", local_248, 0, 0x208);
     trace.call_arguments("FUN_180068190", local_480);
     trace.call_arguments("FUN_180066720", param_1, uVar4, &local_4c0);
     trace.call_arguments("FUN_18021e290", local_480);
+    trace.call_arguments("wcslen", local_248);
+    trace.call_arguments("FUN_180211510", &local_4e0, local_248, sVar3);
     trace.call_arguments("FUN_180066720", local_480, &local_4e0, &local_500);
     trace.call_arguments("FUN_180066720", param_1, uVar4, &local_4c0);
     trace.call_arguments("FUN_18021e290", local_480);

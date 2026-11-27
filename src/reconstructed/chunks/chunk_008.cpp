@@ -4631,6 +4631,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18006bbb0() noexcept {
     [[maybe_unused]] int BVar6{};
     [[maybe_unused]] std::int32_t iVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uintptr_t ucb{};
     [[maybe_unused]] std::int32_t iVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
     [[maybe_unused]] std::uint8_t * lp{};
@@ -4644,8 +4645,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x18006bbb0() noexcept {
     // TODO: condition expression type not recovered: if (iVar11 - 1U < 0x1000000) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (pbVar5 < lp + (longlong)iVar7 + 4U) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if ((ucb == 0) || (BVar6 = IsBadReadPtr(lp,ucb), BVar6 == 0)) [reason: assignment or side effect]
-    // TODO: call arguments not type-recovered for IsBadReadPtr: lp,ucb [reason: ambiguous operand type]
     trace.call_arguments("IsBadReadPtr", param_1, 0x58);
+    trace.call_arguments("IsBadReadPtr", lp, ucb);
     // body sha256: 0b847016265cd61fc4dd5a657f317be12a87b27eff0de3b365b2e4d7491b7a26
     // Structured control-flow trace derived from the decompiled body:
         {

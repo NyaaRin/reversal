@@ -5389,6 +5389,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18002dc30() noexcept {
     [[maybe_unused]] std::int64_t param_2{};
     [[maybe_unused]] std::uint32_t uVar1{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803faf20.
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803faf78.
@@ -34105,6 +34106,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003a310() noexcept {
     [[maybe_unused]] std::size_t sVar13{};
     [[maybe_unused]] std::uintptr_t pHVar14{};
     [[maybe_unused]] std::uint64_t uVar15{};
+    [[maybe_unused]] std::intptr_t IVar16{};
     [[maybe_unused]] char * pcVar17{};
     [[maybe_unused]] char * pcVar18{};
     [[maybe_unused]] void* pFVar19{};
@@ -34166,11 +34168,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003a310() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar16 == 6) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_180423ad0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar16 != 0) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar16 == 4) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_1803ff978 != (code *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for CallHook: %s [reason: ambiguous operand type]
@@ -34389,7 +34388,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003a310() noexcept {
                                         trace.statement("DAT_1803fe490 = GetProcAddress(pHVar14,\"lua_type\");");
                                     }
                                     trace.statement("IVar16 = (*DAT_1803fe490)(lVar1,0xffffffff);");
-                                    if (trace.condition("if ((int)IVar16 == 6)")) {
+                                    if (trace.checked_condition("if ((int)IVar16 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar16) == 6); })) {
                                         trace.statement("uVar25 = 2;");
                                         if (trace.checked_condition("if (1 < param_3)", [&]() -> bool { return static_cast<bool>(1 < param_3); })) {
                                             do {
@@ -34416,7 +34415,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003a310() noexcept {
                                                 trace.statement("DAT_1803fe490 = pFVar19;");
                                             }
                                             trace.statement("IVar16 = (*pFVar19)(lVar1,0xffffffff);");
-                                            if (trace.condition("if ((int)IVar16 != 0)")) {
+                                            if (trace.checked_condition("if ((int)IVar16 != 0)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar16) != 0); })) {
                                                 trace.statement("DAT_1803ff950 = DAT_1803ff950 + -1;");
                                                 trace.statement("return 1;");
                                             }
@@ -34426,7 +34425,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003a310() noexcept {
                                             trace.statement("DAT_1803fe490 = GetProcAddress(pHVar14,\"lua_type\");");
                                         }
                                         trace.statement("IVar16 = (*DAT_1803fe490)(lVar1,0xffffffff);");
-                                        if (trace.condition("if ((int)IVar16 == 4)")) {
+                                        if (trace.checked_condition("if ((int)IVar16 == 4)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar16) == 4); })) {
                                             trace.statement("pcVar17 = (char *)(**(code **)(*plVar12 + 0xb8))(plVar12,0xffffffff,0);");
                                         } else {
                                         trace.statement("pcVar17 = \"(non-string error)\";");
@@ -35639,6 +35638,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003aeb0() noexcept {
     [[maybe_unused]] std::uint32_t param_3{};
     [[maybe_unused]] std::uint64_t uVar1{};
     [[maybe_unused]] std::uintptr_t pHVar2{};
+    [[maybe_unused]] std::intptr_t IVar3{};
     [[maybe_unused]] std::int64_t lVar4{};
     [[maybe_unused]] std::uint8_t auStack_68[32]{};
     [[maybe_unused]] std::uint32_t local_48{};
@@ -35960,6 +35960,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b0b0() noexcept {
     [[maybe_unused]] std::int64_t * plVar3{};
     [[maybe_unused]] std::int32_t iVar4{};
     [[maybe_unused]] std::uintptr_t pHVar5{};
+    [[maybe_unused]] std::intptr_t IVar6{};
+    [[maybe_unused]] std::intptr_t IVar7{};
     [[maybe_unused]] std::int32_t iVar8{};
     [[maybe_unused]] char * pcVar9{};
     [[maybe_unused]] char * pcVar10{};
@@ -35981,12 +35983,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b0b0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar6 == 5) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_1803ff2d0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (IVar6 != 0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((DAT_1803faf38 == (code *)0x0) || (*(longlong *)(lVar2 + 8) == 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803ff2d0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((IVar7 != 0) && (IVar7 == IVar6)) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _G: %s [reason: ambiguous operand type]
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", pHVar5, "lua_type");
@@ -36031,14 +36030,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b0b0() noexcept {
                 trace.statement("DAT_1803fe490 = GetProcAddress(pHVar5,\"lua_type\");");
             }
             trace.statement("IVar6 = (*DAT_1803fe490)(uVar1,(ulonglong)param_2);");
-            if (trace.condition("if ((int)IVar6 == 5)")) {
+            if (trace.checked_condition("if ((int)IVar6 == 5)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar6) == 5); })) {
                 trace.statement("uVar1 = *(undefined8 *)(param_1 + 0x18);");
                 if (trace.condition("if (DAT_1803ff2d0 == (FARPROC)0x0)")) {
                     trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                     trace.statement("DAT_1803ff2d0 = GetProcAddress(pHVar5,\"lua_topointer\");");
                 }
                 trace.statement("IVar6 = (*DAT_1803ff2d0)(uVar1,(ulonglong)param_2);");
-                if (trace.condition("if (IVar6 != 0)")) {
+                if (trace.checked_condition("if (IVar6 != 0)", [&]() -> bool { return static_cast<bool>(IVar6 != 0); })) {
                     trace.statement("lVar2 = *(longlong *)(param_1 + 0x10);");
                     if (trace.checked_condition("if (lVar2 != 0)", [&]() -> bool { return static_cast<bool>(lVar2 != 0); })) {
                         if (trace.condition("if ((DAT_1803faf38 == (code *)0x0) || (*(longlong *)(lVar2 + 8) == 0))")) {
@@ -36066,7 +36065,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b0b0() noexcept {
                         trace.statement("(*DAT_1803faf10)(plVar3[1],iVar8);");
                         }
                     }
-                    if (trace.condition("if ((IVar7 != 0) && (IVar7 == IVar6))")) {
+                    if (trace.checked_condition("if ((IVar7 != 0) && (IVar7 == IVar6))", [&]() -> bool { return static_cast<bool>((IVar7 != 0) && (IVar7 == IVar6)); })) {
                         trace.statement("iVar8 = *(int *)(param_1 + 8);");
                         if (trace.checked_condition("if (iVar8 == 0)", [&]() -> bool { return static_cast<bool>(iVar8 == 0); })) {
                             trace.statement("pcVar9 = \"client\";");
@@ -36233,6 +36232,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b280() noexcept {
     [[maybe_unused]] std::int64_t * plVar2{};
     [[maybe_unused]] std::uintptr_t pHVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::intptr_t IVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint32_t * puVar7{};
     [[maybe_unused]] std::int32_t iVar8{};
@@ -36260,7 +36260,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b280() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar5 == 5) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for callback: s [reason: ambiguous operand type]
     trace.call_arguments("FUN_18003ae40", *puVar7);
@@ -36318,7 +36317,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b280() noexcept {
                             trace.statement("DAT_1803fe490 = GetProcAddress(pHVar3,\"lua_type\");");
                         }
                         trace.statement("IVar5 = (*DAT_1803fe490)(lVar6,0xffffffff);");
-                        if (trace.condition("if ((int)IVar5 == 5)")) {
+                        if (trace.checked_condition("if ((int)IVar5 == 5)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar5) == 5); })) {
                             trace.statement("(**(code **)(*plVar2 + 0xf8))(plVar2,0);");
                             trace.statement("(**(code **)(*plVar2 + 0x28))(plVar2,0xfffffffe,&DAT_180342144);");
                             trace.statement("(**(code **)(*plVar2 + 0xe0))(plVar2);");
@@ -36793,6 +36792,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b4b0() noexcept {
     [[maybe_unused]] std::int64_t * plVar7{};
     [[maybe_unused]] std::int64_t * plVar8{};
     [[maybe_unused]] std::uintptr_t pHVar9{};
+    [[maybe_unused]] std::intptr_t IVar10{};
     [[maybe_unused]] std::int64_t lVar11{};
     [[maybe_unused]] std::uint64_t uVar12{};
     [[maybe_unused]] std::uint8_t * puVar13{};
@@ -36873,19 +36873,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b4b0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (puVar16 == local_70 + 3) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar10 < 1) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar10 != 3) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803fb038 != (code *)0x0) && (iVar6 = (*DAT_1803fb038)(lVar1,0x24), iVar6 == 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((lVar11 != 0) && (DAT_1803fafd8 != (code *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar10 != 6) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar10 == 4) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
@@ -37002,7 +36998,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b4b0() noexcept {
                 trace.statement("DAT_1803fcfa0 = GetProcAddress(pHVar9,\"lua_gettop\");");
             }
             trace.statement("IVar10 = (*DAT_1803fcfa0)(param_1);");
-            if (trace.condition("if ((int)IVar10 < 1)")) {
+            if (trace.checked_condition("if ((int)IVar10 < 1)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar10) < 1); })) {
                 trace.statement("return 0;");
             }
             if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
@@ -37010,7 +37006,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b4b0() noexcept {
                 trace.statement("DAT_1803fe490 = GetProcAddress(pHVar9,\"lua_type\");");
             }
             trace.statement("IVar10 = (*DAT_1803fe490)(param_1,1);");
-            if (trace.condition("if ((int)IVar10 != 3)")) {
+            if (trace.checked_condition("if ((int)IVar10 != 3)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar10) != 3); })) {
                 trace.statement("return 0;");
             }
             trace.statement("lVar1 = plVar8[1];");
@@ -37075,7 +37071,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b4b0() noexcept {
                 trace.statement("DAT_1803fe490 = GetProcAddress(pHVar9,\"lua_type\");");
             }
             trace.statement("IVar10 = (*DAT_1803fe490)(lVar1,0xffffffff);");
-            if (trace.condition("if ((int)IVar10 != 6)")) {
+            if (trace.checked_condition("if ((int)IVar10 != 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar10) != 6); })) {
                 if (trace.condition("if (DAT_180425540 == (FARPROC)0x0)")) {
                     trace.statement("pHVar9 = GetModuleHandleA(\"lua_shared.dll\");");
                     trace.statement("DAT_180425540 = GetProcAddress(pHVar9,\"lua_settop\");");
@@ -37126,7 +37122,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003b4b0() noexcept {
                 trace.statement("DAT_1803fe490 = GetProcAddress(pHVar9,\"lua_type\");");
             }
             trace.statement("IVar10 = (*DAT_1803fe490)(lVar1,0xffffffff);");
-            if (trace.condition("if ((int)IVar10 == 4)")) {
+            if (trace.checked_condition("if ((int)IVar10 == 4)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar10) == 4); })) {
                 trace.statement("puVar13 = (undefined1 *)(**(code **)(*plVar8 + 0xb8))(plVar8,0xffffffff,0);");
             } else {
             trace.statement("puVar13 = &DAT_18033e9cc;");
@@ -37782,6 +37778,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003bb10() noexcept {
     [[maybe_unused]] std::uintptr_t pHVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::uint32_t * puVar7{};
+    [[maybe_unused]] std::intptr_t IVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::int32_t iVar10{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -37991,7 +37988,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003bb10() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803faf38 == (code *)0x0) || (param_1[1] == 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar8 != 0) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (((DAT_1803fb088 == (code *)0x0) || (DAT_1803faf10 == (code *)0x0)) || (param_1[1] == 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
@@ -38165,7 +38161,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003bb10() noexcept {
                     trace.statement("DAT_1803fe490 = GetProcAddress(pHVar5,\"lua_type\");");
                 }
                 trace.statement("IVar8 = (*DAT_1803fe490)(lVar1,0xffffffff);");
-                if (trace.condition("if ((int)IVar8 != 0)")) {
+                if (trace.checked_condition("if ((int)IVar8 != 0)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar8) != 0); })) {
                     if (trace.condition("if (DAT_1803fe490 == (FARPROC)0x0)")) {
                         trace.statement("pHVar5 = GetModuleHandleA(\"lua_shared.dll\");");
                         trace.statement("DAT_1803fe490 = GetProcAddress(pHVar5,\"lua_type\");");
@@ -38605,6 +38601,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003c650() noexcept {
     [[maybe_unused]] std::int64_t * plVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
     [[maybe_unused]] std::uintptr_t pHVar8{};
+    [[maybe_unused]] std::intptr_t IVar9{};
     [[maybe_unused]] std::int32_t iVar10{};
     [[maybe_unused]] std::int64_t lVar11{};
     [[maybe_unused]] std::int64_t lVar12{};
@@ -38659,7 +38656,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003c650() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar9 == 4) [reason: scalar cast width/kind mismatch]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_18002d4d0");
     trace.call_arguments("FUN_18002d180");
@@ -38824,7 +38820,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003c650() noexcept {
                     trace.statement("DAT_1803fe490 = GetProcAddress(pHVar8,\"lua_type\");");
                 }
                 trace.statement("IVar9 = (*DAT_1803fe490)(param_2,0xfffffffe);");
-                if (trace.condition("if ((int)IVar9 == 4)")) {
+                if (trace.checked_condition("if ((int)IVar9 == 4)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar9) == 4); })) {
                     trace.statement("(**(code **)(*plVar6 + 8))(plVar6,0xfffffffe);");
                 } else {
                 trace.statement("(**(code **)(*plVar6 + 0xe8))(plVar6,\"bridge callback failed\",0);");
@@ -42273,6 +42269,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e270() noexcept {
     [[maybe_unused]] std::int64_t * plVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar8{};
     [[maybe_unused]] std::uint32_t uVar9{};
     [[maybe_unused]] std::uint32_t uVar10{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -42299,7 +42296,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e270() noexcept {
     // TODO: condition expression type not recovered: if ((plVar6 == (longlong *)0x0) || (plVar6[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((*(int *)(&DAT_1803e75e0 + uVar7 * 0x30) < (int)uVar9) && ((int)uVar9 <= iVar5)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar8 != 3) [reason: scalar cast width/kind mismatch]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_type");
@@ -42359,7 +42355,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e270() noexcept {
                     }
                     trace.statement("IVar8 = (*DAT_1803fe490)(uVar2,(ulonglong)uVar9);");
                     trace.statement("lVar3 = *plVar6;");
-                    if (trace.condition("if ((int)IVar8 != 3)")) {
+                    if (trace.checked_condition("if ((int)IVar8 != 3)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar8) != 3); })) {
                         trace.statement("(**(code **)(lVar3 + 0xe0))(plVar6);");
                         trace.statement("return 1;");
                     }
@@ -42535,6 +42531,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e450() noexcept {
     [[maybe_unused]] std::int64_t * plVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar7{};
     [[maybe_unused]] std::int64_t lVar8{};
     [[maybe_unused]] std::uint32_t uVar9{};
     [[maybe_unused]] std::uint8_t auStack_48[32]{};
@@ -42565,7 +42562,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e450() noexcept {
     // TODO: condition expression type not recovered: if ((plVar5 == (longlong *)0x0) || (plVar5[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((*(int *)(&DAT_1803e75e0 + uVar6 * 0x30) < (int)uVar9) && ((int)uVar9 <= iVar4)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar7 != 4) [reason: scalar cast width/kind mismatch]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_type");
@@ -42626,7 +42622,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e450() noexcept {
                         trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
                     }
                     trace.statement("IVar7 = (*DAT_1803fe490)(uVar2,(ulonglong)uVar9);");
-                    if (trace.condition("if ((int)IVar7 != 4)")) {
+                    if (trace.checked_condition("if ((int)IVar7 != 4)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar7) != 4); })) {
                         trace.statement("(**(code **)(*plVar5 + 0xe0))(plVar5);");
                         trace.statement("return 1;");
                     }
@@ -42803,6 +42799,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e680() noexcept {
     [[maybe_unused]] std::int64_t * plVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
     [[maybe_unused]] std::uint32_t uVar9{};
     [[maybe_unused]] std::int64_t lVar10{};
@@ -42832,7 +42829,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e680() noexcept {
     // TODO: condition expression type not recovered: if ((plVar5 == (longlong *)0x0) || (plVar5[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((*(int *)(&DAT_1803e75e0 + lVar10) < (int)uVar9) && ((int)uVar9 <= iVar4)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (((int)IVar7 != 7) && ((int)IVar7 != 2)) [reason: scalar cast width/kind mismatch]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_type");
@@ -42894,7 +42890,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e680() noexcept {
                             trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
                         }
                         trace.statement("IVar7 = (*DAT_1803fe490)(uVar8,(ulonglong)uVar9);");
-                        if (trace.condition("if (((int)IVar7 != 7) && ((int)IVar7 != 2))")) {
+                        if (trace.checked_condition("if (((int)IVar7 != 7) && ((int)IVar7 != 2))", [&]() -> bool { return static_cast<bool>((static_cast<std::int32_t>(IVar7) != 7) && (static_cast<std::int32_t>(IVar7) != 2)); })) {
                             trace.statement("(**(code **)(*plVar5 + 0xe0))(plVar5);");
                             trace.statement("return 1;");
                         }
@@ -43069,6 +43065,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e860() noexcept {
     [[maybe_unused]] std::int64_t * plVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar7{};
     [[maybe_unused]] std::int64_t lVar8{};
     [[maybe_unused]] std::uint32_t uVar9{};
     [[maybe_unused]] std::int64_t lVar10{};
@@ -43097,7 +43094,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e860() noexcept {
     // TODO: condition expression type not recovered: if ((plVar5 == (longlong *)0x0) || (plVar5[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((*(int *)(&DAT_1803e75e0 + lVar10) < (int)uVar9) && ((int)uVar9 <= iVar4)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar7 != 6) [reason: scalar cast width/kind mismatch]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_type");
@@ -43159,7 +43155,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003e860() noexcept {
                             trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
                         }
                         trace.statement("IVar7 = (*DAT_1803fe490)(uVar2,(ulonglong)uVar9);");
-                        if (trace.condition("if ((int)IVar7 != 6)")) {
+                        if (trace.checked_condition("if ((int)IVar7 != 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar7) != 6); })) {
                             trace.statement("(**(code **)(*plVar5 + 0xe0))(plVar5);");
                             trace.statement("return 1;");
                         }
@@ -45824,6 +45820,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003fcf0() noexcept {
     [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::uint64_t uVar5{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
     [[maybe_unused]] std::uint32_t uVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
@@ -45854,7 +45851,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003fcf0() noexcept {
     // TODO: condition expression type not recovered: if ((plVar4 == (longlong *)0x0) || (plVar4[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((*(int *)(&DAT_1803e75e0 + uVar5 * 0x30) < (int)uVar8) && ((int)uVar8 <= iVar3)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar6 != 5) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (*(int *)(&DAT_1803e75e0 + uVar5 * 0x30) < iVar3) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
@@ -45914,7 +45910,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003fcf0() noexcept {
                     trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
                 }
                 trace.statement("IVar6 = (*DAT_1803fe490)(uVar9,(ulonglong)uVar8);");
-                if (trace.condition("if ((int)IVar6 != 5)")) {
+                if (trace.checked_condition("if ((int)IVar6 != 5)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar6) != 5); })) {
                     trace.statement("(**(code **)(*plVar4 + 0xf8))(plVar4,0);");
                     trace.statement("return 1;");
                 }
@@ -46119,6 +46115,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003ff00() noexcept {
     [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::uint64_t uVar5{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar6{};
     [[maybe_unused]] std::uint32_t uVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
     [[maybe_unused]] std::int64_t lVar9{};
@@ -46150,7 +46147,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003ff00() noexcept {
     // TODO: condition expression type not recovered: if ((plVar4 == (longlong *)0x0) || (plVar4[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((*(int *)(&DAT_1803e75e0 + lVar9) < (int)uVar7) && ((int)uVar7 <= iVar3)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar6 != 5) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (*(int *)(&DAT_1803e75e0 + lVar9) < iVar3 + -1) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
@@ -46212,7 +46208,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18003ff00() noexcept {
                     trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
                 }
                 trace.statement("IVar6 = (*DAT_1803fe490)(uVar8,(ulonglong)uVar7);");
-                if (trace.condition("if ((int)IVar6 != 5)")) {
+                if (trace.checked_condition("if ((int)IVar6 != 5)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar6) != 5); })) {
                     trace.statement("(**(code **)(*plVar4 + 0xf8))(plVar4,0);");
                     trace.statement("return 1;");
                 }
@@ -46522,6 +46518,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040120() noexcept {
     [[maybe_unused]] std::int64_t * plVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
     [[maybe_unused]] std::uintptr_t pHVar9{};
+    [[maybe_unused]] std::intptr_t IVar10{};
     [[maybe_unused]] std::int64_t lVar11{};
     [[maybe_unused]] std::uint32_t uVar12{};
     [[maybe_unused]] std::uint64_t uVar13{};
@@ -46574,7 +46571,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040120() noexcept {
     // TODO: condition expression type not recovered: if ((plVar7 == (longlong *)0x0) || (plVar7[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (((int)uVar12 <= *(int *)(&DAT_1803e75e0 + uVar8 * 0x30)) || (iVar4 < (int)uVar12)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar10 != 5) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if ((DAT_1803fb088 == (code *)0x0) || (puVar1[1] == 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803faf38 == (code *)0x0) || (plVar2[1] == 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_1803faf38 == (code *)0x0) || (plVar2[1] == 0)) [reason: unresolved global storage/width]
@@ -46657,7 +46653,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040120() noexcept {
             trace.statement("DAT_1803fe490 = GetProcAddress(pHVar9,\"lua_type\");");
         }
         trace.statement("IVar10 = (*DAT_1803fe490)(uVar13,(ulonglong)uVar12);");
-        if (trace.condition("if ((int)IVar10 != 5)")) {
+        if (trace.checked_condition("if ((int)IVar10 != 5)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar10) != 5); })) {
             trace.statement("(**(code **)(*plVar7 + 0xf8))(plVar7,0);");
             trace.statement("return 1;");
         }
@@ -47143,6 +47139,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040660() noexcept {
     [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::uint64_t uVar5{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
     [[maybe_unused]] std::uint32_t uVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
@@ -47175,7 +47172,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040660() noexcept {
     // TODO: condition expression type not recovered: if ((*(int *)(&DAT_1803e75e0 + uVar5 * 0x30) < iVar10) && (iVar10 <= iVar3)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((int)uVar8 <= *(int *)(&DAT_1803e75e0 + uVar5 * 0x30)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if (((int)IVar6 == 5) || ((int)IVar6 == 0)) [reason: scalar cast width/kind mismatch]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
     trace.call_arguments("GetProcAddress", hModule, "lua_type");
@@ -47245,7 +47241,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040660() noexcept {
                     trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
                 }
                 trace.statement("IVar6 = (*DAT_1803fe490)(uVar9,(ulonglong)uVar8);");
-                if (trace.condition("if (((int)IVar6 == 5) || ((int)IVar6 == 0))")) {
+                if (trace.checked_condition("if (((int)IVar6 == 5) || ((int)IVar6 == 0))", [&]() -> bool { return static_cast<bool>((static_cast<std::int32_t>(IVar6) == 5) || (static_cast<std::int32_t>(IVar6) == 0)); })) {
                     trace.statement("(**(code **)(*(longlong *)(&DAT_1803e75d0)[uVar5 * 6] + 0x40))");
                     trace.statement("((longlong *)(&DAT_1803e75d0)[uVar5 * 6],iVar10);");
                     trace.statement("lVar7 = *plVar4;");
@@ -47528,6 +47524,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040890() noexcept {
     [[maybe_unused]] std::uint64_t uVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar9{};
     [[maybe_unused]] char * pcVar10{};
     [[maybe_unused]] std::size_t sVar11{};
     [[maybe_unused]] std::uint32_t uVar12{};
@@ -47583,7 +47580,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040890() noexcept {
     // TODO: condition expression type not recovered: if ((plVar6 == (longlong *)0x0) || (plVar6[1] != param_2)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (iVar5 - *(int *)(&DAT_1803e75e0 + lVar16) < iVar14 + 1) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar9 == 4) [reason: scalar cast width/kind mismatch]
     // TODO: call arguments not type-recovered for FUN_180023180: (&DAT_1803e75d8)[uVar7 * 6],iVar14,iVar15 [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("GetModuleHandleA", "lua_shared.dll");
@@ -47686,7 +47682,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180040890() noexcept {
                         trace.statement("DAT_1803fe490 = GetProcAddress(hModule,\"lua_type\");");
                     }
                     trace.statement("IVar9 = (*DAT_1803fe490)(uVar8,0xffffffff);");
-                    if (trace.condition("if ((int)IVar9 == 4)")) {
+                    if (trace.checked_condition("if ((int)IVar9 == 4)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar9) == 4); })) {
                         trace.statement("pcVar10 = (char *)(**(code **)(*(longlong *)(&DAT_1803e75d0)[uVar7 * 6] + 0xb8))");
                         trace.statement("((longlong *)(&DAT_1803e75d0)[uVar7 * 6],0xffffffff,0);");
                     } else {

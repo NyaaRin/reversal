@@ -38751,6 +38751,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180182a10() noexcept {
     [[maybe_unused]] void* pFVar1{};
     [[maybe_unused]] void* pFVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] std::intptr_t IVar4{};
     [[maybe_unused]] std::int32_t iVar5{};
     [[maybe_unused]] char * local_58[4]{};
     [[maybe_unused]] char * local_38{};

@@ -2516,6 +2516,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014d70() noexcept {
     [[maybe_unused]] std::uint64_t local_257{};
     [[maybe_unused]] std::uint8_t uStack_248{};
     [[maybe_unused]] std::uint64_t uStack_240{};
+    [[maybe_unused]] char local_238{};
     [[maybe_unused]] std::uint8_t local_237[271]{};
     [[maybe_unused]] char local_128[272]{};
     [[maybe_unused]] std::uint64_t local_18{};
@@ -2526,14 +2527,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x180014d70() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: call arguments not type-recovered for memset: local_128 + 2,0,0x102 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for GetModuleFileNameA: local_2a8[0],&local_238,0x104 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for strrchr: &local_238,0x5c [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for s: thread %lu, total: %d [reason: ambiguous operand type]
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
     trace.call_arguments("GetTickCount");
     trace.call_arguments("GetModuleHandleExA", 6, lpModuleName, local_2a8);
     trace.call_arguments("memset", local_237, 0, 0x103);
+    trace.call_arguments("GetModuleFileNameA", local_2a8[0], &local_238, 0x104);
+    trace.call_arguments("strrchr", &local_238, 0x5c);
     trace.call_arguments("strncpy_s", local_128, 0x104, pcVar7, 0xffffffffffffffff);
     trace.call_arguments("FUN_1801fc620", &local_298, " %s 0x%p", pcVar7, load_at<std::uint64_t>(piVar1 + 10, 0));
     trace.call_arguments("GetCurrentThreadId");
@@ -3538,6 +3539,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015490() noexcept {
     [[maybe_unused]] std::uint16_t param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::uint32_t DVar2{};
+    [[maybe_unused]] void* hResData{};
     [[maybe_unused]] void* pvVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -3545,12 +3547,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015490() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (hResInfo != (HRSRC)0x0) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (hResData != (HGLOBAL)0x0) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for LoadResource: DAT_1803f9288,hResInfo [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for SizeofResource: DAT_1803f9288,hResInfo [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for LockResource: hResData [reason: ambiguous operand type]
     trace.call_arguments("FindResourceW", image::DAT_1803f9288, (wchar_t*)static_cast<std::uint64_t>(param_1), (wchar_t*)0xa);
     trace.call_arguments("__dyn_tls_on_demand_init");
+    trace.call_arguments("LockResource", hResData);
     trace.call_arguments("FUN_180298b30", uVar4, pvVar3, DVar2);
     trace.call_target("FUN_180298b30", reinterpret_cast<const void*>(&image::FUN_180298b30));
     trace.data_ref("DAT_1803f9288", static_cast<const void*>(&image::DAT_1803f9288));
@@ -3566,7 +3567,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180015490() noexcept {
             trace.statement("hResInfo = FindResourceW(DAT_1803f9288,(LPCWSTR)(ulonglong)param_1,(LPCWSTR)0xa);");
             if (trace.condition("if (hResInfo != (HRSRC)0x0)")) {
                 trace.statement("hResData = LoadResource(DAT_1803f9288,hResInfo);");
-                if (trace.condition("if (hResData != (HGLOBAL)0x0)")) {
+                if (trace.checked_condition("if (hResData != (HGLOBAL)0x0)", [&]() -> bool { return static_cast<bool>(hResData != (void*)0x0); })) {
                     trace.statement("lVar1 = *(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8);");
                     if (trace.checked_condition("if (*(char *)(lVar1 + 0x10) == '\\0')", [&]() -> bool { return static_cast<bool>(load_at<char>(lVar1 + 0x10, 0) == '\0'); })) {
                         trace.statement("__dyn_tls_on_demand_init();");
@@ -6319,6 +6320,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180016940() noexcept {
     [[maybe_unused]] std::int32_t iVar7{};
     [[maybe_unused]] std::uintptr_t pHVar8{};
     [[maybe_unused]] void* pvVar9{};
+    [[maybe_unused]] std::size_t SVar10{};
     [[maybe_unused]] std::size_t sVar11{};
     [[maybe_unused]] std::uint32_t uVar12{};
     [[maybe_unused]] std::int64_t lVar13{};
@@ -11687,6 +11689,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180019320() noexcept {
     [[maybe_unused]] std::uint8_t local_1b8[24]{};
     [[maybe_unused]] std::uint8_t local_1a0[40]{};
     [[maybe_unused]] void* * local_178[2]{};
+    [[maybe_unused]] char local_168[272]{};
     [[maybe_unused]] std::uint64_t local_58{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18033e92c.
@@ -11707,17 +11710,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x180019320() noexcept {
     // TODO: condition expression type not recovered: if ((undefined4 *)(lVar6 + 0x18) != (undefined4 *)&DAT_1803fac98) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (((puVar7 != (undefined8 *)0x0) && (_Str1 = (char *)*puVar7, _Str1 != (char *)0x0)) [reason: pointer-cast target not proven]
     // TODO: call arguments not type-recovered for free: (void *)local_1b8._8_8_ [reason: unknown aggregate layout]
-    // TODO: call arguments not type-recovered for GetTempPathA: 0x104,local_168 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for strcat_s: local_168,0x104,"mayrrx64_netvars.txt" [reason: unknown aggregate layout]
-    // TODO: call arguments not type-recovered for fopen_s: local_178,local_168,"w" [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for s: %d props [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180014410: "[NVMGR] Netvar dump written to %s\n",local_168 [reason: ambiguous operand type]
     trace.call_arguments("FUN_180018dd0", local_1d0);
     trace.call_arguments("FUN_1800191d0", &image::DAT_1803fac80, lVar6);
     trace.call_arguments("FUN_18022e830");
     trace.call_arguments("FUN_180209700", local_1a0);
     trace.call_arguments("FUN_18022a370");
     trace.call_arguments("FUN_180209700", local_1d0);
+    trace.call_arguments("GetTempPathA", 0x104, local_168);
+    trace.call_arguments("strcat_s", local_168, 0x104, "mayrrx64_netvars.txt");
+    trace.call_arguments("fopen_s", local_178, local_168, "w");
     trace.call_arguments("FUN_1800129b0", local_178[0], "=== mayrrX64 Netvar Dump ===\n\n");
     trace.call_arguments("FUN_1800129b0", local_178[0], "--- %s (%d props) ---\n", plVar1[3], static_cast<std::int32_t>(plVar1[1]));
     trace.call_arguments("strcmp", _Str1, "baseclass");
@@ -11727,6 +11729,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180019320() noexcept {
     trace.call_arguments("FUN_180018ad0");
     trace.call_arguments("FUN_1800129b0", local_178[0], &image::DAT_18033e92c);
     trace.call_arguments("fclose", local_178[0]);
+    trace.call_arguments("FUN_180014410", "[NVMGR] Netvar dump written to %s\n", local_168);
     trace.call_target("FUN_1800129b0", reinterpret_cast<const void*>(&image::FUN_1800129b0));
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.call_target("FUN_180018ad0", reinterpret_cast<const void*>(&image::FUN_180018ad0));

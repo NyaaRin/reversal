@@ -66,6 +66,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d83a0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d83a0", "`eh_vector_destructor_iterator'");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] void * param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::uint64_t param_3{};
     [[maybe_unused]] void * pvVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for PTR__guard_dispatch_icall_18030cca8.
@@ -1681,12 +1683,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8814() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802d8814", "`eh_vector_constructor_iterator'");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] void * param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] std::uint64_t _Var1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for PTR__guard_dispatch_icall_18030cca8.
     // TODO: resolve the indirect call in body 22: (*(code *)PTR__guard_dispatch_icall_18030cca8)(param_1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (_Var1 = 0; _Var1 != param_3; _Var1 = _Var1 + 1) [reason: assignment or side effect]
     trace.data_ref("PTR__guard_dispatch_icall_18030cca8", static_cast<const void*>(&image::PTR__guard_dispatch_icall_18030cca8));
     // body sha256: 19457878f3c76b297f570716d2ec2a967c35422e4dfc5af946c855e9d0d26aae
     // Structured control-flow trace derived from the decompiled body:
@@ -1696,7 +1700,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8814() noexcept {
         trace.statement("_func_void_void_ptr *param_5)");
         {
             trace.statement("__uint64 _Var1;");
-            for (auto loop = trace.loop("for (_Var1 = 0; _Var1 != param_3; _Var1 = _Var1 + 1)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (_Var1 = 0; _Var1 != param_3; _Var1 = _Var1 + 1)", [&]() -> bool { return static_cast<bool>(_Var1 != param_3); }); loop.next(); ) {
                 trace.statement("(*(code *)PTR__guard_dispatch_icall_18030cca8)(param_1);");
                 trace.statement("param_1 = (void *)((longlong)param_1 + param_2);");
             }

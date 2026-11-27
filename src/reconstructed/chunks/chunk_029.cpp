@@ -8199,6 +8199,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180220c70() noexcept {
     [[maybe_unused]] std::uint64_t local_260{};
     [[maybe_unused]] std::uint64_t local_258{};
     [[maybe_unused]] std::uint64_t local_250{};
+    [[maybe_unused]] wchar_t local_248[264]{};
     [[maybe_unused]] std::uint64_t local_38{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
@@ -8208,10 +8209,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180220c70() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((BVar1 != 0) && (local_248[0] != L'\0')) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (pppCVar3 != local_278) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memset: local_248,0,0x208 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GetOpenFileNameW: &local_318 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for WideCharToMultiByte: 0xfde9,0,local_248,-1,(LPSTR)0x0,0,(LPCSTR)0x0,(LPBOOL)0x0 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for WideCharToMultiByte: 0xfde9,0,local_248,-1,(LPSTR)pppCVar3,cbMultiByte,(LPCSTR)0x0,(LPBOOL)0x0 [reason: ambiguous operand type]
+    trace.call_arguments("memset", local_248, 0, 0x208);
     trace.call_arguments("FUN_18020ea80", local_278, static_cast<std::int64_t>(cbMultiByte) + -1, 0);
     trace.call_arguments("FUN_180241a30", &image::DAT_1803fadf0, local_340, &local_258);
     trace.call_arguments("FUN_180241a30", *plVar2 + 0x28, local_330, &local_250);
@@ -8413,6 +8414,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180220e70() noexcept {
     [[maybe_unused]] void * param_1{};
     [[maybe_unused]] int BVar1{};
     [[maybe_unused]] std::uint8_t auStackY_318[32]{};
+    [[maybe_unused]] wchar_t local_228[264]{};
     [[maybe_unused]] std::uint64_t local_18{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
@@ -8421,10 +8423,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180220e70() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((BVar1 != 0) && (local_228[0] != L'\0')) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memset: local_228,0,0x208 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for Texture: *.vtf [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GetOpenFileNameW: &local_2c8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for WideCharToMultiByte: 0xfde9,0,local_228,-1,&DAT_180400ec0,0x200,(LPCSTR)0x0,(LPBOOL)0x0 [reason: unresolved global storage/width]
+    trace.call_arguments("memset", local_228, 0, 0x208);
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
     trace.call_arguments("_Cnd_do_broadcast_at_thread_exit");

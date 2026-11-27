@@ -29030,51 +29030,51 @@ const sf::reconstructed::FunctionTranslation& Function_0x180012bf0() noexcept {
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (*(ushort *)(*param_1 + uVar3 * 2) < *(ushort *)(*param_2 + uVar3 * 2)) [reason: pointer depth/pointee not proven]
     // TODO: call arguments not type-recovered for vpcmpeqw_avx2: *pauVar8,*pauVar10 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 7,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0xf,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x17,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x1f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x27,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x2f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x37,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x3f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x47,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x4f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x57,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x5f,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x67,0 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SUB161: auVar11 >> 0x6f,0 [reason: ambiguous operand type]
+    trace.call_arguments("load_bits32", auVar2, 32, 7);
+    trace.call_arguments("load_bits32", auVar2, 32, 15);
+    trace.call_arguments("load_bits32", auVar2, 32, 23);
+    trace.call_arguments("load_bits32", auVar2, 32, 31);
+    trace.call_arguments("load_bits32", auVar2, 32, 39);
+    trace.call_arguments("load_bits32", auVar2, 32, 47);
+    trace.call_arguments("load_bits32", auVar2, 32, 55);
+    trace.call_arguments("load_bits32", auVar2, 32, 63);
+    trace.call_arguments("load_bits32", auVar2, 32, 71);
+    trace.call_arguments("load_bits32", auVar2, 32, 79);
+    trace.call_arguments("load_bits32", auVar2, 32, 87);
+    trace.call_arguments("load_bits32", auVar2, 32, 95);
+    trace.call_arguments("load_bits32", auVar2, 32, 103);
+    trace.call_arguments("load_bits32", auVar2, 32, 111);
+    trace.call_arguments("load_bits32", auVar2, 32, 119);
+    trace.call_arguments("load_bits32", auVar2, 32, 127);
+    trace.call_arguments("load_bits32", auVar2, 32, 135);
+    trace.call_arguments("load_bits32", auVar2, 32, 143);
+    trace.call_arguments("load_bits32", auVar2, 32, 151);
+    trace.call_arguments("load_bits32", auVar2, 32, 159);
+    trace.call_arguments("load_bits32", auVar2, 32, 167);
+    trace.call_arguments("load_bits32", auVar2, 32, 175);
+    trace.call_arguments("load_bits32", auVar2, 32, 183);
+    trace.call_arguments("load_bits32", auVar2, 32, 191);
+    trace.call_arguments("load_bits32", auVar2, 32, 199);
+    trace.call_arguments("load_bits32", auVar2, 32, 207);
+    trace.call_arguments("load_bits32", auVar2, 32, 215);
+    trace.call_arguments("load_bits32", auVar2, 32, 223);
+    trace.call_arguments("load_bits32", auVar2, 32, 231);
+    trace.call_arguments("load_bits32", auVar2, 32, 239);
+    trace.call_arguments("load_bits32", auVar2, 32, 247);
+    trace.call_arguments("load_bits16", auVar11, 16, 7);
+    trace.call_arguments("load_bits16", auVar11, 16, 15);
+    trace.call_arguments("load_bits16", auVar11, 16, 23);
+    trace.call_arguments("load_bits16", auVar11, 16, 31);
+    trace.call_arguments("load_bits16", auVar11, 16, 39);
+    trace.call_arguments("load_bits16", auVar11, 16, 47);
+    trace.call_arguments("load_bits16", auVar11, 16, 55);
+    trace.call_arguments("load_bits16", auVar11, 16, 63);
+    trace.call_arguments("load_bits16", auVar11, 16, 71);
+    trace.call_arguments("load_bits16", auVar11, 16, 79);
+    trace.call_arguments("load_bits16", auVar11, 16, 87);
+    trace.call_arguments("load_bits16", auVar11, 16, 95);
+    trace.call_arguments("load_bits16", auVar11, 16, 103);
+    trace.call_arguments("load_bits16", auVar11, 16, 111);
     trace.data_ref("DAT_1803feb18", static_cast<const void*>(&image::DAT_1803feb18));
     // body sha256: c99e1522d605ba50e99ce368140827fbf07e02f60207c63f776f6eab6662ac14
     // Structured control-flow trace derived from the decompiled body:

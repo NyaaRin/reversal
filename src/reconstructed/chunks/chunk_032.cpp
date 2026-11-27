@@ -10402,6 +10402,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18023f4f0() noexcept {
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::uint32_t * puVar7{};
     [[maybe_unused]] std::uint8_t bVar8{};
+    [[maybe_unused]] std::int8_t sVar9{};
     [[maybe_unused]] std::uint8_t bVar10{};
     [[maybe_unused]] std::int64_t lVar11{};
     [[maybe_unused]] std::uint64_t uVar12{};
@@ -14689,6 +14690,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180241010() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint32_t uVar1{};
+    [[maybe_unused]] std::size_t SVar2{};
     [[maybe_unused]] std::uint64_t * puVar3{};
     [[maybe_unused]] std::uint64_t * puVar4{};
     [[maybe_unused]] std::uint64_t * lpAddress{};
@@ -14707,7 +14709,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180241010() noexcept {
     // TODO: condition expression type not recovered: if (param_1 + 0x8000000 < local_58.lpMaximumApplicationAddress) [reason: unknown aggregate layout]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (SVar2 == 0) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for GetSystemInfo: &local_58 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for VirtualQuery: lpAddress,&local_88,0x30 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for VirtualQuery: param_1,&local_88,0x30 [reason: ambiguous operand type]
@@ -14777,7 +14778,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180241010() noexcept {
                         trace.statement("return puVar4;");
                     }
                     trace.statement("SVar2 = VirtualQuery(param_1,&local_88,0x30);");
-                    if (trace.condition("if (SVar2 == 0)")) {
+                    if (trace.checked_condition("if (SVar2 == 0)", [&]() -> bool { return static_cast<bool>(SVar2 == 0); })) {
                         trace.statement("return puVar4;");
                     }
                     if (trace.condition("if (local_88.State == 0x10000) break; uVar6 = (uVar1 - 1) + local_88.RegionSize + (longlong)local_88.BaseAddress; param_1 = (undefined8 *)(uVar6 - uVar6 % (ulonglong)uVar1); } if (param_1 == (undefined8 *)0x0)")) {
@@ -19240,6 +19241,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180242d60() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::int32_t param_2{};
+    [[maybe_unused]] std::size_t dwSize{};
     [[maybe_unused]] int BVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
     [[maybe_unused]] void* hProcess{};
@@ -19254,10 +19256,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180242d60() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1805c8470.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for VirtualProtect: lpAddress,dwSize,0x40,local_38 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for VirtualProtect: lpAddress,dwSize,local_38[0],local_38 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FlushInstructionCache: hProcess,lpAddress,dwSize [reason: ambiguous operand type]
+    trace.call_arguments("VirtualProtect", lpAddress, dwSize, 0x40, local_38);
+    trace.call_arguments("VirtualProtect", lpAddress, dwSize, local_38[0], local_38);
     trace.call_arguments("GetCurrentProcess");
+    trace.call_arguments("FlushInstructionCache", hProcess, lpAddress, dwSize);
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
     trace.data_ref("DAT_1805c8470", static_cast<const void*>(&image::DAT_1805c8470));
     // body sha256: a34a48714fbc257293585fffd4d642c12e4b16a7815f1356868a99bc73080cb9
@@ -19754,6 +19756,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180242fc0() noexcept {
     [[maybe_unused]] bool bVar10{};
     [[maybe_unused]] std::uint8_t auStack_98[40]{};
     [[maybe_unused]] std::uint8_t local_70[24]{};
+    [[maybe_unused]] std::size_t local_58{};
     [[maybe_unused]] std::uint32_t local_50{};
     [[maybe_unused]] std::uint32_t local_4c{};
     [[maybe_unused]] std::uint64_t local_48{};
