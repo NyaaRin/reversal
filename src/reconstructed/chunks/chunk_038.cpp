@@ -9728,7 +9728,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18029da90() noexcept {
     // TODO: resolve the indirect call in body 31: (cVar3 = (**(code **)(lVar4 + 0x28))(lVar2,*plVar5,param_2), cVar3 != '\0')) break;.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("FUN_180269200", (int *)(param_1 + 0x38), param_2, param_2);
     trace.call_target("FUN_180269200", reinterpret_cast<const void*>(&image::FUN_180269200));
     // body sha256: 2cfcae00d769a900a2efd51df420f4d085d9abce36c556c829e2e3f0a9a73ee2
@@ -9745,7 +9744,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18029da90() noexcept {
             }
             trace.statement("plVar5 = *(longlong **)(param_1 + 0x28);");
             trace.statement("plVar1 = plVar5 + *(int *)(param_1 + 0x20);");
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 if (trace.checked_condition("if (plVar5 == plVar1)", [&]() -> bool { return static_cast<bool>(plVar5 == plVar1); })) {
                     trace.statement("return 0;");
                 }
@@ -17313,7 +17312,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a21d0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802a228e.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // body sha256: 54547b0a61e3e556132a8df651d146eafda8bb1951f2803deaa5bb5912b7c924
     // Structured control-flow trace derived from the decompiled body:
         {
@@ -17353,7 +17351,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a21d0() noexcept {
                 if (trace.checked_condition("if (iVar4 < iVar1)", [&]() -> bool { return static_cast<bool>(iVar4 < iVar1); })) {
                     trace.statement("iVar3 = 1;");
                 }
-                while (trace.loop_condition("while( true )")) {
+                while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                     if (trace.condition("if (((iVar1 <= iVar4) || (iVar1 < iVar2)) && ((iVar4 <= iVar1 || (iVar2 < iVar1)))) goto LAB_1802a228e; if ((*(byte *)((longlong)*(short *)(*(longlong *)(param_1 + 0x28) + (longlong)iVar2 * 2) * 0x74 + *(longlong *)(param_1 + 0x18)) & 0x40) != 0) break; iVar2 = iVar2 + iVar3; } iVar1 = iVar2 - iVar3; if (iVar2 == iVar4)")) {
                         trace.statement("iVar1 = iVar4;");
                     }
@@ -28775,9 +28773,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a81b0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180381384.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((*(byte *)((longlong)*(short *)(*(longlong *)(param_1 + 0x28) + (longlong)iVar12 * 2) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((*(byte *)((longlong)*(short *)(*(longlong *)(param_1 + 0x28) + (longlong)iVar13 * 2) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (fVar25 < (fVar1 + fVar2) * fVar8) [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
@@ -28969,7 +28965,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a81b0() noexcept {
                     if (trace.checked_condition("if (iVar23 < iVar11)", [&]() -> bool { return static_cast<bool>(iVar23 < iVar11); })) {
                         trace.statement("iVar13 = 1;");
                     }
-                    while (trace.loop_condition("while( true )")) {
+                    while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                         if (trace.condition("if (((iVar11 <= iVar23) || (iVar11 < iVar12)) && ((iVar20 = iVar11, iVar23 <= iVar11 || (iVar12 < iVar11)))) goto LAB_1802a84ee; if ((*(byte *)((longlong)*(short *)(*(longlong *)(param_1 + 0x28) + (longlong)iVar12 * 2) * 0x74 + *(longlong *)(param_1 + 0x18)) & 0x40) != 0) break; iVar12 = iVar12 + iVar13; } iVar20 = iVar12 - iVar13; if (iVar12 == iVar23)")) {
                             trace.statement("iVar20 = iVar23;");
                         }
@@ -29002,7 +28998,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a81b0() noexcept {
                         if (trace.checked_condition("if (iVar23 < iVar12)", [&]() -> bool { return static_cast<bool>(iVar23 < iVar12); })) {
                             trace.statement("iVar24 = 1;");
                         }
-                        while (trace.loop_condition("while( true )")) {
+                        while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                             if (trace.condition("if (((iVar12 <= iVar23) || (iVar12 < iVar13)) && ((iVar11 = iVar12, iVar23 <= iVar12 || (iVar13 < iVar12)))) goto LAB_1802a85ca; if ((*(byte *)((longlong)*(short *)(*(longlong *)(param_1 + 0x28) + (longlong)iVar13 * 2) * 0x74 + *(longlong *)(param_1 + 0x18)) & 0x40) != 0) break; iVar13 = iVar13 + iVar24; } iVar11 = iVar13 - iVar24; if (iVar13 == iVar23)")) {
                                 trace.statement("iVar11 = iVar23;");
                             }
@@ -29369,7 +29365,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a89b0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
     // body sha256: 3023784cc14769efa5de514f08bb174c0ca3e057edcabe7532ab2fed7afa373e
     // Structured control-flow trace derived from the decompiled body:
@@ -29388,7 +29383,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a89b0() noexcept {
             if (trace.checked_condition("if (lVar2 != 0)", [&]() -> bool { return static_cast<bool>(lVar2 != 0); })) {
                 trace.statement("piVar3 = (int *)(lVar2 + 4);");
             }
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 if (trace.checked_condition("if (piVar3 == (int *)0x0)", [&]() -> bool { return static_cast<bool>(piVar3 == (int *)0x0); })) {
                     trace.statement("return (int *)0x0;");
                 }
@@ -31583,7 +31578,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a9b30() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
     // body sha256: d7ef82d2c31d538487f204825f4d43761c20164c4e2dba8f05a9bed38383fe3f
     // Structured control-flow trace derived from the decompiled body:
@@ -31603,7 +31597,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802a9b30() noexcept {
             trace.statement("float fVar13;");
             trace.statement("lVar2 = *(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8);");
             trace.statement("lVar3 = *(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8);");
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 if (trace.checked_condition("if (*(char *)(lVar2 + 0x10) == '\\0')", [&]() -> bool { return static_cast<bool>(load_at<char>(lVar2 + 0x10, 0) == '\0'); })) {
                     trace.statement("__dyn_tls_on_demand_init();");
                 }

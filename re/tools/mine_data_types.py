@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DLL = ROOT / "m64.dll"
 INVENTORY = ROOT / "re" / "dump" / "inventory.tsv"
 OUTPUT = ROOT / "re" / "dump" / "data_types.tsv"
+OUTPUT_SITES = ROOT / "re" / "dump" / "global_accesses.tsv"
 
 FLOAT_MNEMONICS = (
     "movss",
@@ -94,6 +95,9 @@ def main() -> int:
     disassembler = Cs(CS_ARCH_X86, CS_MODE_64)
     disassembler.detail = True
     accesses: dict[int, Counter[tuple[int, str]]] = defaultdict(Counter)
+    function_accesses: dict[tuple[int, str], dict[int, Counter[tuple[int, str, str]]]] = defaultdict(
+        lambda: defaultdict(Counter)
+    )
     seen: set[int] = set()
 
     for row in rows:
@@ -126,7 +130,11 @@ def main() -> int:
                 width = operand.size
                 if width not in (1, 2, 4, 8):
                     continue
-                accesses[target][(width, kind_for(instruction.mnemonic, width))] += 1
+                kind = kind_for(instruction.mnemonic, width)
+                accesses[target][(width, kind)] += 1
+                function_accesses[(address, row["name"])][target][
+                    (width, kind, instruction.mnemonic)
+                ] += 1
 
     output = [["address", "width", "kind", "accesses"]]
     for target in sorted(accesses):
@@ -141,7 +149,29 @@ def main() -> int:
         encoding="utf-8",
         newline="\n",
     )
+    site_output = [["function_address", "function_name", "target", "width", "kind",
+                    "accesses", "mnemonics", "status"]]
+    for (function_address, function_name), targets in sorted(function_accesses.items()):
+        for target, records in sorted(targets.items()):
+            shapes = {(width, kind) for (width, kind, _) in records}
+            mnemonics = ",".join(sorted({mnemonic for (_, _, mnemonic) in records}))
+            if len(shapes) == 1:
+                (width, kind), = shapes
+                site_output.append([f"0x{function_address:x}", function_name, f"0x{target:x}",
+                                    str(width), kind, str(sum(records.values())), mnemonics,
+                                    "consistent"])
+            else:
+                detail = ";".join(f"{width}:{kind}" for width, kind in sorted(shapes))
+                site_output.append([f"0x{function_address:x}", function_name, f"0x{target:x}",
+                                    "", "", str(sum(records.values())), mnemonics,
+                                    f"conflict:{detail}"])
+    OUTPUT_SITES.write_text(
+        "\n".join("\t".join(row) for row in site_output) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(f"mined {len(output) - 1} consistent global slots from {len(seen)} instructions")
+    print(f"wrote {len(site_output) - 1} function-scoped global access rows to {OUTPUT_SITES}")
     return 0
 
 

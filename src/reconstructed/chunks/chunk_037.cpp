@@ -7609,7 +7609,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18028bb00() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((((*pcVar17 == 'C') && (pcVar17[1] == 'F')) && (pcVar17[2] == 'F')) && (pcVar17[3] == ' ')) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((((*pcVar17 == 'm') && (pcVar17[1] == 'a')) && (pcVar17[2] == 'x')) && (pcVar17[3] == 'p') [reason: ambiguous operand type]
     trace.call_arguments("FUN_18028b8e0", param_2, param_3, &image::DAT_18037f7a4);
@@ -7735,7 +7734,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18028bb00() noexcept {
             if (trace.checked_condition("if (iVar7 == 0)", [&]() -> bool { return static_cast<bool>(iVar7 == 0); })) {
                 trace.statement("return 0;");
             }
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 trace.statement("pcVar17 = (char *)((ulonglong)((int)uVar15 * 0x10 + param_3 + 0xc) + param_2);");
                 if (trace.condition("if ((((*pcVar17 == 'C') && (pcVar17[1] == 'F')) && (pcVar17[2] == 'F')) && (pcVar17[3] == ' ')) break; uVar16 = (int)uVar15 + 1; uVar15 = (ulonglong)uVar16; if (iVar7 <= (int)uVar16)")) {
                     trace.statement("return 0;");
@@ -14410,7 +14409,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18028fa20() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (*pfVar2 <= fVar3 && fVar3 != *pfVar2) [reason: ambiguous operand type]
     trace.call_arguments("FUN_18028fa20", puVar11, uVar9);
     // body sha256: 6e1529d2b8b0182d7de678fc628b9935f130ff2a7ec51d8298daa3335e946ce4
@@ -14473,7 +14471,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18028fa20() noexcept {
                     trace.statement("puVar1[1] = uVar8;");
                     trace.statement("*(undefined4 *)((longlong)param_1 + uVar9 * 0x14 + 0x10) = uVar5;");
                     trace.statement("iVar15 = 1;");
-                    while (trace.loop_condition("while( true )")) {
+                    while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                         trace.statement("fVar3 = *(float *)((longlong)param_1 + 4);");
                         trace.statement("pfVar2 = (float *)((longlong)param_1 + (longlong)iVar15 * 0x14 + 4);");
                         if (trace.condition("if (*pfVar2 <= fVar3 && fVar3 != *pfVar2)")) {
@@ -15084,7 +15082,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180290050() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180380ac0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     trace.call_arguments("sqrtf", fVar2);
     trace.call_arguments("SQRT", fVar2);
     trace.call_arguments("sqrtf", fVar4);
@@ -15141,7 +15138,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180290050() noexcept {
             trace.statement("fVar2 = SQRT(fVar2);");
             }
             trace.statement("fVar2 = fVar6 * fVar6 - fVar2 * fVar2;");
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 if (trace.checked_condition("if (0x10 < param_12)", [&]() -> bool { return static_cast<bool>(0x10 < param_12); })) {
                     trace.statement("return;");
                 }

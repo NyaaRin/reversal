@@ -29054,7 +29054,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180012bf0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (*(ulonglong *)*pauVar8 != *(ulonglong *)*pauVar10) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (*(ushort *)(*param_1 + uVar3 * 2) < *(ushort *)(*param_2 + uVar3 * 2)) [reason: pointer depth/pointee not proven]
     // TODO: call arguments not type-recovered for vpcmpeqw_avx2: *pauVar8,*pauVar10 [reason: ambiguous operand type]
     trace.call_arguments("load_bits32", auVar2, 32, 7);
@@ -29228,7 +29227,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180012bf0() noexcept {
                     trace.statement("return uVar9;");
                 }
             }
-            while (trace.loop_condition("while( true )")) {
+            while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                 if (trace.checked_condition("if (param_3 <= uVar3)", [&]() -> bool { return static_cast<bool>(param_3 <= uVar3); })) {
                     trace.statement("return 0;");
                 }
