@@ -95,7 +95,9 @@ counts, actual call/data/string references, symbol declarations and body hash.
 executable code under `src/features/**` is unchanged. The generated accessors
 are compiled structural traces, not behaviorally equivalent implementations:
 unknown globals, indirect calls, calling conventions and object layouts remain
-explicitly TODO.
+explicitly TODO. Decompiler blocks nested beyond 32 levels are flattened into
+executable trace statements to stay under MSVC's nesting limit; source text and
+references are retained, but that deep nesting is not nested C++ control flow.
 
 ## Hooks / offsets
 

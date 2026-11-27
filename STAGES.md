@@ -195,6 +195,9 @@ executable/control/statement counts, symbol resolution and body hash.
 translations in `src/features/**` are unchanged. This closes source-tree
 coverage, not semantic parity: the generated accessors are structural traces
 and do not invent runnable semantics where the decompiler data is unknown.
+Decompiler blocks nested beyond 32 levels are flattened into trace statements
+to stay under MSVC's nesting limit; source text and references are retained,
+but that deep nesting is not represented as nested C++ control flow.
 
 ## Stage 3 — Subsystem reconstruction
 

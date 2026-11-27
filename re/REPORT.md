@@ -217,4 +217,7 @@ not executable parity.
 * The complete-coverage accessors are compiled structural traces, not semantic
   equivalents. Unknown globals, indirect calls, calling conventions and object
   layouts remain marked with specific TODOs; they are not a runnable
-  reimplementation of every body.
+  reimplementation of every body. Decompiler blocks nested more than 32 levels
+  are flattened into executable trace statements to stay under MSVC's nesting
+  limit; no source text or reference is dropped, but that deep nesting is not
+  represented as nested C++ control flow.
