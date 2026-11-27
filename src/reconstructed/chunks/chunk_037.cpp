@@ -4646,7 +4646,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18028aac0() noexcept {
                     trace.statement("pbVar1 = (byte *)(param_1 + 2);");
                     trace.statement("_Dst_00 = (byte *)(uVar6 + *(longlong *)pbVar1);");
                     trace.statement("pbVar4 = (byte *)((longlong)(param_2 + -1) + *(longlong *)pbVar1);");
-                    if (trace.checked_condition("if (((pbVar1 < _Dst_00) || (pbVar4 < pbVar1)) && ((param_3 < _Dst_00 || (pbVar4 < param_3))))", [&]() -> bool { return static_cast<bool>(((pbVar1 < _Dst_00) || (pbVar4 < pbVar1)) && ((param_3 < _Dst_00 || (pbVar4 < param_3)))); })) {
+                    if (trace.condition("if (((pbVar1 < _Dst_00) || (pbVar4 < pbVar1)) && ((param_3 < _Dst_00 || (pbVar4 < param_3))))")) {
                         trace.statement("uVar8 = param_2 - iVar3 & 0x8000000f;");
                         if (trace.checked_condition("if ((int)uVar8 < 0)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(uVar8) < 0); })) {
                             trace.statement("uVar8 = (uVar8 - 1 | 0xfffffff0) + 1;");

@@ -500,6 +500,8 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x180086bf0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180086bf0", "Features_Weapons_Backends_ARC9WeaponBackend_vfunc01");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] bool bVar2{};
     [[maybe_unused]] std::int32_t * piVar3{};
@@ -516,8 +518,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180086bf0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ARC9WeaponBackend_vfunc01: undefined8 param_1,undefined8 param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001f260: param_2,local_30 [reason: ambiguous operand type]
+    trace.call_arguments("FUN_18001f260", param_2, local_30);
     trace.call_arguments("FUN_18020e670", local_30, local_50, 0, 5);
     trace.call_arguments("FUN_18020e450", local_50);
     trace.call_arguments("FUN_18020e450", local_30);
@@ -619,7 +620,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180086cc0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180347c20.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for vfunc_shared_180086cc0: void [reason: ambiguous operand type]
     trace.data_ref("DAT_180347c20", static_cast<const void*>(&image::DAT_180347c20));
     // body sha256: 1070f12af6a929eba1c85be8dc89a7c402626e4c5be0e07da435341cb5c7f090
     // Structured control-flow trace derived from the decompiled body:
@@ -1599,6 +1599,8 @@ TODO: resolve the indirect call in body 250: (**(code **)*local_78)();.)F1800870
 const sf::reconstructed::FunctionTranslation& Function_0x180087090() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180087090", "Features_Weapons_Backends_ARC9WeaponBackend_vfunc25");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] bool bVar2{};
     [[maybe_unused]] char cVar3{};
@@ -1702,28 +1704,27 @@ const sf::reconstructed::FunctionTranslation& Function_0x180087090() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803fa668 != (longlong *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((dVar13 < 0.0) || (DAT_180380d08 < dVar13)) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ARC9WeaponBackend_vfunc25: longlong param_1,undefined8 param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180086e00: param_1,local_78 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087a70: &local_110,"Spread",param_1 + 8 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087940: &local_138,"AlwaysPhysBullet",param_1 + 0x2c [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087940: &local_138,"NeverPhysBullet",param_1 + 0x2d [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087940: &local_138,"UseDispersion",param_1 + 0x34 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087a70: &local_110,"DispersionSpread",param_1 + 0x38 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180022190: param_1 + 0x3c [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087a70: &local_110,"Recoil",param_1 + 0xc [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087a70: &local_110,"RecoilUp",param_1 + 0x10 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087a70: &local_110,"RecoilSide",param_1 + 0x14 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087a70: &local_110,"RecoilRandomUp",param_1 + 0x18 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180087a70: &local_110,"RecoilRandomSide",param_1 + 0x1c [reason: ambiguous operand type]
     trace.call_arguments("FUN_18001bcd0", 0, &local_78);
     trace.call_arguments("FUN_18001e2b0", local_80, local_78);
+    trace.call_arguments("FUN_180086e00", param_1, local_78);
+    trace.call_arguments("FUN_180087a70", &local_110, "Spread", param_1 + 8);
+    trace.call_arguments("FUN_180087940", &local_138, "AlwaysPhysBullet", param_1 + 0x2c);
+    trace.call_arguments("FUN_180087940", &local_138, "NeverPhysBullet", param_1 + 0x2d);
     trace.call_arguments("FUN_180087a70", &local_110, &image::DAT_180347d28, &local_128);
+    trace.call_arguments("FUN_180087940", &local_138, "UseDispersion", param_1 + 0x34);
+    trace.call_arguments("FUN_180087a70", &local_110, "DispersionSpread", param_1 + 0x38);
     trace.call_arguments("FUN_18002d9c0", local_78[1], 0xffffffff, "GetShootPos");
     trace.call_arguments("FUN_18001e2b0", local_80, local_78);
     trace.call_arguments("FUN_180023180", local_78[1], 1, 2);
     trace.call_arguments("FUN_18001d350", lVar8);
     trace.call_arguments("CONCAT44", fVar14, fVar15);
     trace.call_arguments("CONCAT44", fStack_5c, local_60);
+    trace.call_arguments("FUN_180022190", param_1 + 0x3c);
+    trace.call_arguments("FUN_180087a70", &local_110, "Recoil", param_1 + 0xc);
+    trace.call_arguments("FUN_180087a70", &local_110, "RecoilUp", param_1 + 0x10);
+    trace.call_arguments("FUN_180087a70", &local_110, "RecoilSide", param_1 + 0x14);
+    trace.call_arguments("FUN_180087a70", &local_110, "RecoilRandomUp", param_1 + 0x18);
+    trace.call_arguments("FUN_180087a70", &local_110, "RecoilRandomSide", param_1 + 0x1c);
     trace.call_arguments("FUN_18002d9c0", local_78[1], 0xffffffff, &image::DAT_180347258);
     trace.call_arguments("FUN_18002d9c0", local_78[1], 0xffffffff, "Jammed");
     trace.call_arguments("FUN_18002d9c0", local_78[1], 0xffffffff, "HeatLockout");
@@ -4876,6 +4877,8 @@ TODO: resolve the indirect call in body 17: lVar3 = (*pcVar1)(DAT_1803fa360,uVar
 const sf::reconstructed::FunctionTranslation& Function_0x180089250() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180089250", "Features_Weapons_Backends_ARC9WeaponBackend_vfunc05");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
     [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
@@ -4887,8 +4890,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180089250() noexcept {
     // TODO: resolve the indirect call in body 17: lVar3 = (*pcVar1)(DAT_1803fa360,uVar2);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ARC9WeaponBackend_vfunc05: undefined8 param_1,undefined8 *param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001f9d0: lVar3,param_2 [reason: ambiguous operand type]
+    trace.call_arguments("FUN_18001f9d0", lVar3, param_2);
     trace.call_target("FUN_18001f9d0", reinterpret_cast<const void*>(&image::FUN_18001f9d0));
     trace.data_ref("DAT_1803fa360", static_cast<const void*>(&image::DAT_1803fa360));
     trace.data_ref("DAT_1803fa668", static_cast<const void*>(&image::DAT_1803fa668));
@@ -4957,16 +4959,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1800892c0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800892c0", "Features_Weapons_Backends_ARC9WeaponBackend_vfunc07");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*(char *)(param_1 + 0x2a) == '\0') && (*(char *)(param_1 + 0x28) == '\0')) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ARC9WeaponBackend_vfunc07: longlong param_1 [reason: ambiguous operand type]
     // body sha256: 265142dc525fe506311cd0f97c4c558d15a55c97253396b8c747e54d3fa7daed
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("bool Features_Weapons_Backends_ARC9WeaponBackend_vfunc07(longlong param_1)");
         {
-            if (trace.condition("if ((*(char *)(param_1 + 0x2a) == '\\0') && (*(char *)(param_1 + 0x28) == '\\0'))")) {
+            if (trace.checked_condition("if ((*(char *)(param_1 + 0x2a) == '\\0') && (*(char *)(param_1 + 0x28) == '\\0'))", [&]() -> bool { return static_cast<bool>((load_at<char>(param_1 + 0x2a, 0) == '\0') && (load_at<char>(param_1 + 0x28, 0) == '\0')); })) {
                 trace.statement("return *(char *)(param_1 + 0x29) != '\\0';");
             }
             trace.statement("return true;");
@@ -5012,10 +5013,10 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1800892e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800892e0", "Features_Weapons_Backends_ARC9WeaponBackend_vfunc09");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ARC9WeaponBackend_vfunc09: longlong param_1 [reason: ambiguous operand type]
     // body sha256: 9f609ee17a0a75dcc9b8e2c05442dd81c30ce35be5580cef0d445dc23c26aa20
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined1 Features_Weapons_Backends_ARC9WeaponBackend_vfunc09(longlong param_1)");
@@ -5099,6 +5100,7 @@ TODO: resolve the indirect call in body 15: (cVar1 = (**(code **)(*DAT_1803f9290
 const sf::reconstructed::FunctionTranslation& Function_0x1800892f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800892f0", "Features_Weapons_Backends_ARC9WeaponBackend_vfunc31");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     [[maybe_unused]] char cVar1{};
     [[maybe_unused]] std::int32_t iVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -5108,9 +5110,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800892f0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (((iVar2 == 0) || (*(char *)(param_1 + 0x5c) == '\0')) || (8 < iVar2 + 4U)) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: if (iVar2 != *(int *)(param_1 + 0x50)) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: if (1 < *(int *)(param_1 + 0x54)) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ARC9WeaponBackend_vfunc31: longlong param_1 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for d: measured %+d [reason: ambiguous operand type]
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1803f9290", static_cast<const void*>(&image::DAT_1803f9290));
@@ -5128,13 +5127,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800892f0() noexcept {
                     trace.statement("*(undefined8 *)(param_1 + 0x50) = 0;");
                     trace.statement("return;");
                 }
-                if (trace.condition("if (iVar2 != *(int *)(param_1 + 0x50))")) {
+                if (trace.checked_condition("if (iVar2 != *(int *)(param_1 + 0x50))", [&]() -> bool { return static_cast<bool>(iVar2 != load_at<std::int32_t>(param_1 + 0x50, 0)); })) {
                     trace.statement("*(int *)(param_1 + 0x50) = iVar2;");
                     trace.statement("*(undefined4 *)(param_1 + 0x54) = 1;");
                     trace.statement("return;");
                 }
                 trace.statement("*(int *)(param_1 + 0x54) = *(int *)(param_1 + 0x54) + 1;");
-                if (trace.condition("if (1 < *(int *)(param_1 + 0x54))")) {
+                if (trace.checked_condition("if (1 < *(int *)(param_1 + 0x54))", [&]() -> bool { return static_cast<bool>(1 < load_at<std::int32_t>(param_1 + 0x54, 0)); })) {
                     trace.statement("*(int *)(param_1 + 0x4c) = *(int *)(param_1 + 0x4c) + iVar2;");
                     trace.statement("*(undefined8 *)(param_1 + 0x50) = 0;");
                     trace.statement("FUN_180014410(\"[ARC9-NS] lua tick offset calibrated: now %d (measured %+d)\\n\",");
@@ -5209,13 +5208,13 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x1800893a0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800893a0", "Features_Weapons_Backends_ARC9WeaponBackend_vfunc30");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     [[maybe_unused]] std::uint32_t uVar1{};
     [[maybe_unused]] std::int32_t iVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fa608.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ARC9WeaponBackend_vfunc30: longlong param_1 [reason: ambiguous operand type]
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1803fa608", static_cast<const void*>(&image::DAT_1803fa608));
     trace.string_literal("[ARC9-DIAG] predTick=%d actualTick=%d off=%d luaTickOffset=%d loopback=%d path=%d\\n");
@@ -5401,6 +5400,8 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x180089430() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180089430", "Features_Weapons_Backends_TacRPWeaponBackend_vfunc01");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] bool bVar2{};
     [[maybe_unused]] std::int32_t * piVar3{};
@@ -5417,8 +5418,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180089430() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_TacRPWeaponBackend_vfunc01: undefined8 param_1,undefined8 param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001f260: param_2,local_30 [reason: ambiguous operand type]
+    trace.call_arguments("FUN_18001f260", param_2, local_30);
     trace.call_arguments("FUN_18020e670", local_30, local_50, 0, 6);
     trace.call_arguments("FUN_18020e450", local_50);
     trace.call_arguments("FUN_18020e450", local_30);
@@ -5520,7 +5520,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180089500() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18034809c.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for vfunc_shared_180089500: void [reason: ambiguous operand type]
     trace.data_ref("DAT_18034809c", static_cast<const void*>(&image::DAT_18034809c));
     // body sha256: b71ba2c565853a1d5b2212e1403569f30ef7cabad414cd02aff4cc1dda6c2c75
     // Structured control-flow trace derived from the decompiled body:
@@ -6358,6 +6357,8 @@ TODO: resolve the indirect call in body 439: (**(code **)*local_c0)();.)F1800896
 const sf::reconstructed::FunctionTranslation& Function_0x180089640() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180089640", "Features_Weapons_Backends_TacRPWeaponBackend_vfunc25");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t uVar1{};
     [[maybe_unused]] char cVar2{};
     [[maybe_unused]] char cVar3{};
@@ -6501,29 +6502,18 @@ const sf::reconstructed::FunctionTranslation& Function_0x180089640() noexcept {
     // TODO: resolve the indirect call in body 439: (**(code **)*local_c0)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*(int *)(param_1 + 0x14) < 2) || (local_2a8 != '\0')) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_TacRPWeaponBackend_vfunc25: longlong param_1,undefined8 param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008a570: &local_210,"GetSpread",param_1 + 8 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008aae0: &local_168,"ShotgunPelletSpread",param_1 + 0xc [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008aae0: &local_168,"MuzzleVelocity",param_1 + 0x10 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008ac10: &local_288,"ShootEnt",param_1 + 0x19 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180022190: param_1 + 0x34 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180022190: param_1 + 0x1c [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180022190: param_1 + 0x28 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008a690: &local_1d8,"GetReloading",param_1 + 0x5d [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008a690: &local_1d8,"GetJammed",param_1 + 0x5e [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008a690: &local_1d8,"GetSafe",param_1 + 0x5f [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008a690: &local_1d8,"GetCustomize",param_1 + 0x60 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008a570: &local_210,"GetCurrentFiremode",param_1 + 100 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008a570: &local_210,"GetRPM",param_1 + 0x68 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008aae0: &local_168,"PostBurstDelay",param_1 + 0x6c [reason: ambiguous operand type]
     trace.call_arguments("FUN_18001bcd0", 0, &local_c0);
     trace.call_arguments("FUN_18001e2b0", local_c8, local_c0);
+    trace.call_arguments("FUN_18008a570", &local_210, "GetSpread", param_1 + 8);
+    trace.call_arguments("FUN_18008aae0", &local_168, "ShotgunPelletSpread", param_1 + 0xc);
+    trace.call_arguments("FUN_18008aae0", &local_168, "MuzzleVelocity", param_1 + 0x10);
     trace.call_arguments("FUN_18008aae0", &local_168, &image::DAT_180347d28, local_2a0);
     trace.call_arguments("FUN_18008a690", &local_1d8, "IsShotgun", &local_2a8);
+    trace.call_arguments("FUN_18008ac10", &local_288, "ShootEnt", param_1 + 0x19);
     trace.call_arguments("FUN_18008a7a0", &local_f0, "GetFreeAimOffset", &local_240);
     trace.call_arguments("FUN_18008a7a0", &local_f0, "GetSwayAngles", &local_230);
     trace.call_arguments("FUN_18008ad70", &local_d8);
+    trace.call_arguments("FUN_180022190", param_1 + 0x34);
     trace.call_arguments("FUN_18008a940", &local_158);
     trace.call_arguments("FUN_18002d9c0", local_c0[1], 0xffffffff, "GetShootDir");
     trace.call_arguments("FUN_18001e2b0", local_c8, local_c0);
@@ -6533,6 +6523,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180089640() noexcept {
     trace.call_arguments("FUN_180023180", local_c0[1], 1, 1);
     trace.call_arguments("FUN_18002d9c0", local_c0[1], 0xffffffff, "EyeAngles");
     trace.call_arguments("FUN_180023180", local_c0[1], 1, 1);
+    trace.call_arguments("FUN_180022190", param_1 + 0x1c);
     trace.call_arguments("FUN_18008ac10", &local_288, "FreeAim", &local_2a7);
     trace.call_arguments("FUN_180016fb0", "tacrp_freeaim");
     trace.call_arguments("FUN_1800197a0", lVar9);
@@ -6541,6 +6532,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x180089640() noexcept {
     trace.call_arguments("FUN_18001e2b0", local_c8, local_c0);
     trace.call_arguments("FUN_180023180", local_c0[1], 1, 1);
     trace.call_arguments("FUN_180022190", &local_298);
+    trace.call_arguments("FUN_180022190", param_1 + 0x28);
+    trace.call_arguments("FUN_18008a690", &local_1d8, "GetReloading", param_1 + 0x5d);
+    trace.call_arguments("FUN_18008a690", &local_1d8, "GetJammed", param_1 + 0x5e);
+    trace.call_arguments("FUN_18008a690", &local_1d8, "GetSafe", param_1 + 0x5f);
+    trace.call_arguments("FUN_18008a690", &local_1d8, "GetCustomize", param_1 + 0x60);
+    trace.call_arguments("FUN_18008a570", &local_210, "GetCurrentFiremode", param_1 + 100);
+    trace.call_arguments("FUN_18008a570", &local_210, "GetRPM", param_1 + 0x68);
+    trace.call_arguments("FUN_18008aae0", &local_168, "PostBurstDelay", param_1 + 0x6c);
     trace.call_target("FUN_180016fb0", reinterpret_cast<const void*>(&image::FUN_180016fb0));
     trace.call_target("FUN_1800197a0", reinterpret_cast<const void*>(&image::FUN_1800197a0));
     trace.call_target("FUN_18001bcd0", reinterpret_cast<const void*>(&image::FUN_18001bcd0));
@@ -12118,10 +12117,10 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18008d310() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18008d310", "Features_Weapons_Backends_TacRPWeaponBackend_vfunc07");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_TacRPWeaponBackend_vfunc07: longlong param_1 [reason: ambiguous operand type]
     // body sha256: 6b4192d72f982e7cd0c099d55bd25cdb193033ad743d442b378033db79a06a93
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined1 Features_Weapons_Backends_TacRPWeaponBackend_vfunc07(longlong param_1)");
@@ -12172,10 +12171,10 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18008d330() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18008d330", "Features_Weapons_Backends_TacRPWeaponBackend_vfunc09");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_TacRPWeaponBackend_vfunc09: longlong param_1 [reason: ambiguous operand type]
     // body sha256: d96cc266109c89dba129687dcb21a2d0b6f01c5bccef1dc0c6b1fbee6495e737
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined1 Features_Weapons_Backends_TacRPWeaponBackend_vfunc09(longlong param_1)");
@@ -12241,6 +12240,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x18008d340() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18008d340", "Features_Weapons_Backends_TacRPWeaponBackend_vfunc11");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180380984.
@@ -12250,7 +12250,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18008d340() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((*(float *)(param_1 + 100) < 0.0) && (0.0 < *(float *)(param_1 + 0x68))) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((DAT_1803fa608 != 0) && (0.0 < *(double *)(DAT_1803fa608 + 0x28))) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_TacRPWeaponBackend_vfunc11: longlong param_1 [reason: ambiguous operand type]
     trace.data_ref("DAT_180380984", static_cast<const void*>(&image::DAT_180380984));
     trace.data_ref("DAT_1803810c8", static_cast<const void*>(&image::DAT_1803810c8));
     trace.data_ref("DAT_1803fa608", static_cast<const void*>(&image::DAT_1803fa608));
@@ -12331,6 +12330,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x18008d3a0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18008d3a0", "Features_Weapons_Backends_TacRPWeaponBackend_vfunc12");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     [[maybe_unused]] float fVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for _DAT_1803809b0.
@@ -12340,7 +12340,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18008d3a0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (*(float *)(param_1 + 100) <= 0.0 && *(float *)(param_1 + 100) != 0.0) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (0.0 < *(float *)(param_1 + 0x68)) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_TacRPWeaponBackend_vfunc12: longlong param_1 [reason: ambiguous operand type]
     trace.data_ref("_DAT_1803809b0", static_cast<const void*>(&image::_DAT_1803809b0));
     trace.data_ref("DAT_1803809ec", static_cast<const void*>(&image::DAT_1803809ec));
     trace.data_ref("DAT_1803810c8", static_cast<const void*>(&image::DAT_1803810c8));
@@ -12403,7 +12402,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18008d3f0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ZSWeaponBackend_vfunc00: void [reason: ambiguous operand type]
     trace.string_literal("ZS/SunRust");
     // body sha256: f240495030bf5f6ab669afebccdc623109bea89876df085135bd1760d585d889
     // Structured control-flow trace derived from the decompiled body:
@@ -12733,7 +12731,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18008d400() noexcept {
     // TODO: condition expression type not recovered: if ((lVar2 == 0x19) && (iVar3 = memcmp(plVar4,"weapon_zs_base_medicalkit",0x19), iVar3 == 0)) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((lVar2 == 0x19) && (iVar3 = memcmp(plVar4,"weapon_zs_base_twobuildup",0x19), iVar3 == 0)) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((lVar2 == 0x1a) && (iVar3 = memcmp(plVar4,"weapon_zs_basemelee_thrown",0x1a), iVar3 == 0)) [reason: assignment or side effect]
-    // TODO: condition expression type not recovered: if ((lVar2 == 0x1e) && (iVar3 = memcmp(plVar4,"weapon_zs_basemelee_twobuildup",0x1e), iVar3 == 0)) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((lVar2 == 0x15) && (iVar3 = memcmp(param_1,"weapon_zs_basetrinket",0x15), iVar3 == 0)) [reason: assignment or side effect]
     trace.call_arguments("memcmp", plVar4, "weapon_zs_basemelee", 0x13);
     trace.call_arguments("memcmp", plVar4, "weapon_zs_baseknife", 0x13);
@@ -12746,7 +12743,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18008d400() noexcept {
     trace.call_arguments("memcmp", plVar4, "weapon_zs_base_medicalkit", 0x19);
     trace.call_arguments("memcmp", plVar4, "weapon_zs_base_twobuildup", 0x19);
     trace.call_arguments("memcmp", plVar4, "weapon_zs_basemelee_thrown", 0x1a);
-    trace.call_arguments("memcmp", plVar4, "weapon_zs_basemelee_twobuildup", 0x1e);
     trace.call_arguments("memcmp", param_1, "weapon_zs_basetrinket", 0x15);
     trace.string_literal("weapon_zs_baseflask");
     trace.string_literal("weapon_zs_baseknife");
@@ -13178,6 +13174,8 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x18008d860() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18008d860", "Features_Weapons_Backends_ZSWeaponBackend_vfunc01");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     [[maybe_unused]] bool bVar1{};
     [[maybe_unused]] char cVar2{};
     [[maybe_unused]] char * _Str{};
@@ -13201,10 +13199,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x18008d860() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == 0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ZSWeaponBackend_vfunc01: undefined8 param_1,longlong param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001f260: param_2,local_30 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001e4e0: param_2 [reason: ambiguous operand type]
+    trace.call_arguments("FUN_18001f260", param_2, local_30);
+    trace.call_arguments("FUN_18001e4e0", param_2);
     trace.call_arguments("FUN_18008d400", local_30);
     trace.call_arguments("strlen", _Str);
     trace.call_arguments("FUN_18001d080", &local_70, _Str, sVar3);
@@ -13242,7 +13238,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18008d860() noexcept {
             trace.statement("local_10 = DAT_1803da4c0 ^ (ulonglong)auStack_98;");
             trace.statement("bVar1 = false;");
             trace.statement("local_78 = 0;");
-            if (trace.condition("if (param_2 == 0)")) {
+            if (trace.checked_condition("if (param_2 == 0)", [&]() -> bool { return static_cast<bool>(param_2 == 0); })) {
                 trace.statement("return local_10 & 0xffffffffffffff00;");
             }
             trace.statement("FUN_18001f260(param_2,local_30);");
@@ -20928,6 +20924,8 @@ TODO: resolve the indirect call in body 551: (**(code **)*local_f8)();.)F1800913
 const sf::reconstructed::FunctionTranslation& Function_0x180091350() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180091350", "Features_Weapons_Backends_ZSWeaponBackend_vfunc25");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::uint8_t bVar2{};
     [[maybe_unused]] std::uint8_t bVar3{};
@@ -21095,32 +21093,19 @@ const sf::reconstructed::FunctionTranslation& Function_0x180091350() noexcept {
     // TODO: resolve the indirect call in body 551: (**(code **)*local_f8)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == 0) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if ((local_f8 != (longlong *)0x0) && (iVar9 = (**(code **)*local_f8)(local_f8), iVar8 < iVar9)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (DAT_1803faee8 != (code *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((local_b0 != '\0') && (DAT_1803fae90 != (code *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803faee8 != (code *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((local_b0 != '\0') && (DAT_1803fae90 != (code *)0x0)) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((*(char *)(param_1 + 0xf) == '\0') && (bVar26)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((iVar8 - 1U & 0xfffffffd) == 0) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (((iVar8 == 2) && (*(char *)(param_1 + 0x2c) == '\0')) && (*(int *)(param_1 + 0x20) - 2U < 2)) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: if ((local_f8 != (longlong *)0x0) && (iVar8 = (**(code **)*local_f8)(local_f8), local_8c < iVar8)) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ZSWeaponBackend_vfunc25: longlong param_1,longlong param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001e2b0: param_2,local_f8 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001f260: param_2,local_58 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for CONCAT17: uStack_b9,CONCAT25(uStack_bb,CONCAT41(uStack_bf,local_c0)) [reason: nested call/return type unresolved]
     // TODO: call arguments not type-recovered for CONCAT25: uStack_bb,CONCAT41(uStack_bf,local_c0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18007daf0: local_f8,uVar10,"SpreadMultiHor",param_1 + 0x18 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18007daf0: local_f8,uVar10,"SpreadMultiVer",param_1 + 0x1c [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008ed00: local_f8,uVar10,"SpreadPattern",param_1 + 0x10 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for CONCAT25: uStack_bb,CONCAT41(uStack_bf,local_c0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008ed00: local_f8,uVar10,"SpreadPatternHorizontal",param_1 + 0x10 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18008eb80: local_f8,uVar11,param_1 + 0x28 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for s: fbi=%d seedTable=%d preShot=%d legacy=%d [reason: assignment or side effect]
-    // TODO: call arguments not type-recovered for FUN_18008dda0: *(undefined4 *)(param_1 + 8),local_78,(int)local_d4 [reason: pointer depth/pointee not proven]
     // TODO: call arguments not type-recovered for atexit: (_func_5014 *)&LAB_180309860 [reason: pointer-cast target not proven]
-    // TODO: call arguments not type-recovered for CONCAT44: local_198._4_4_,*(undefined4 *)(param_1 + 8) [reason: unknown aggregate layout]
     trace.call_arguments("FUN_18001bcd0", 0, &local_f8);
+    trace.call_arguments("FUN_18001e2b0", param_2, local_f8);
+    trace.call_arguments("FUN_18001f260", param_2, local_58);
     trace.call_arguments("FUN_18008d9b0", local_f8, uVar10, "IsGun");
     trace.call_arguments("FUN_18008d9b0", local_f8, uVar10, "IsMelee");
     trace.call_arguments("FUN_18008d9b0", local_f8, uVar10, "IsMeleeWeapon");
@@ -21146,14 +21131,19 @@ const sf::reconstructed::FunctionTranslation& Function_0x180091350() noexcept {
     trace.call_arguments("FUN_18008d9b0", local_f8, uVar11, "Automatic");
     trace.call_arguments("FUN_18008da70", local_f8, uVar11, "Projectile");
     trace.call_arguments("FUN_18007daf0", local_f8, uVar11, "NumShots", &local_dc);
+    trace.call_arguments("FUN_18007daf0", local_f8, uVar10, "SpreadMultiHor", param_1 + 0x18);
+    trace.call_arguments("FUN_18007daf0", local_f8, uVar10, "SpreadMultiVer", param_1 + 0x1c);
+    trace.call_arguments("FUN_18008ed00", local_f8, uVar10, "SpreadPattern", param_1 + 0x10);
     trace.call_arguments("FUN_18002d9c0", local_f8[1], uVar10, "WeaponBuildup");
     trace.call_arguments("FUN_180023010", &local_c8, lVar15);
     trace.call_arguments("CONCAT41", uStack_bf, local_c0);
     trace.call_arguments("strcmp", pcVar13, "Fracture Wave");
+    trace.call_arguments("FUN_18008ed00", local_f8, uVar10, "SpreadPatternHorizontal", param_1 + 0x10);
     trace.call_arguments("FUN_18001e2b0", lVar15, local_f8);
     trace.call_arguments("FUN_18008db50", local_f8, uVar11, "FireBulletsInfo");
     trace.call_arguments("FUN_18008db50", local_f8, uVar11, "FireBulletsLua");
     trace.call_arguments("FUN_18008e6d0", local_f8, uVar11);
+    trace.call_arguments("FUN_18008eb80", local_f8, uVar11, param_1 + 0x28);
     trace.call_arguments("FUN_180023e60", local_f8, 0);
     trace.call_arguments("FUN_18002db10", local_f8[1], 0xffffffff, "PLAYER_RandomSeed");
     trace.call_arguments("FUN_18008db50", local_f8, uVar10, "ShootBulletsPreShot");
@@ -21161,8 +21151,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180091350() noexcept {
     trace.call_arguments("strlen", pcVar13);
     trace.call_arguments("memcmp", ppppppplVar17, pcVar13, local_68);
     trace.call_arguments("memcmp", ppppppplVar17, "weapon_zs_hurricane", 0x13);
+    trace.call_arguments("FUN_18008dda0", load_at<std::uint32_t>(param_1 + 8, 0), local_78, static_cast<std::int32_t>(local_d4));
     trace.call_arguments("memcmp", ppppppplVar17, "weapon_zs_baseshotgun", 0x15);
     trace.call_arguments("memcmp", _Buf1, puVar20, image::DAT_1803e94b0);
+    trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((std::uint64_t(local_198) >> 32)), load_at<std::uint32_t>(param_1 + 8, 0));
     trace.call_arguments("FUN_180212700", &image::DAT_1803e94a0, puVar25, image::DAT_1803de128);
     trace.call_arguments("FUN_18020e450", local_78);
     trace.call_arguments("FUN_18020e450", local_58);
@@ -21363,7 +21355,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180091350() noexcept {
             if (trace.checked_condition("if (DAT_1803fa678 == 0)", [&]() -> bool { return static_cast<bool>(image::DAT_1803fa678 == 0); })) {
                 trace.statement("return;");
             }
-            if (trace.condition("if (param_2 == 0)")) {
+            if (trace.checked_condition("if (param_2 == 0)", [&]() -> bool { return static_cast<bool>(param_2 == 0); })) {
                 trace.statement("return;");
             }
             trace.statement("local_f8 = (longlong *)0x0;");
@@ -23384,6 +23376,8 @@ TODO: resolve the indirect call in body 19: lVar3 = (*pcVar1)(DAT_1803fa360,uVar
 const sf::reconstructed::FunctionTranslation& Function_0x180093310() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180093310", "Features_Weapons_Backends_ZSWeaponBackend_vfunc05");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
     [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
@@ -23397,8 +23391,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180093310() noexcept {
     // TODO: resolve the indirect call in body 19: lVar3 = (*pcVar1)(DAT_1803fa360,uVar2);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*(char *)(param_1 + 0xc) != '\0') && (*(int *)(param_1 + 8) == 2)) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ZSWeaponBackend_vfunc05: longlong param_1,undefined8 *param_2 [reason: ambiguous operand type]
     trace.call_arguments("FUN_18001f9d0", lVar3, local_18);
     trace.call_target("FUN_18001f9d0", reinterpret_cast<const void*>(&image::FUN_18001f9d0));
     trace.data_ref("DAT_1803fa360", static_cast<const void*>(&image::DAT_1803fa360));
@@ -23412,7 +23404,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180093310() noexcept {
             trace.statement("longlong lVar3;");
             trace.statement("undefined8 *puVar4;");
             trace.statement("undefined1 local_18 [16];");
-            if (trace.condition("if ((*(char *)(param_1 + 0xc) != '\\0') && (*(int *)(param_1 + 8) == 2))")) {
+            if (trace.checked_condition("if ((*(char *)(param_1 + 0xc) != '\\0') && (*(int *)(param_1 + 8) == 2))", [&]() -> bool { return static_cast<bool>((load_at<char>(param_1 + 0xc, 0) != '\0') && (load_at<std::int32_t>(param_1 + 8, 0) == 2)); })) {
                 trace.statement("pcVar1 = *(code **)(*DAT_1803fa360 + 0x18);");
                 trace.statement("uVar2 = (**(code **)(*DAT_1803fa668 + 0x60))();");
                 trace.statement("lVar3 = (*pcVar1)(DAT_1803fa360,uVar2);");
@@ -23472,10 +23464,10 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1800933d0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800933d0", "Features_Weapons_Backends_ZSWeaponBackend_vfunc14");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ZSWeaponBackend_vfunc14: longlong param_1 [reason: ambiguous operand type]
     // body sha256: 90339d21d37ba0db8391ca566eb6fb7fa3ab987e75df892b1e191090b754810a
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("bool Features_Weapons_Backends_ZSWeaponBackend_vfunc14(longlong param_1)");
@@ -23523,10 +23515,10 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1800933e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800933e0", "vfunc_shared_1800933e0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for vfunc_shared_1800933e0: longlong param_1 [reason: ambiguous operand type]
     // body sha256: 38f1520504e6e8417ac4d3e4c0bc0c997f2904fc9c4b88ba452af7a3d0765d98
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("bool vfunc_shared_1800933e0(longlong param_1)");
@@ -23574,10 +23566,10 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1800933f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1800933f0", "Features_Weapons_Backends_ZSWeaponBackend_vfunc09");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ZSWeaponBackend_vfunc09: longlong param_1 [reason: ambiguous operand type]
     // body sha256: 6c6fafc7f3ff63f60c67270c10c97b8a2519b8f27ff747313a5936d2761c98cb
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined1 Features_Weapons_Backends_ZSWeaponBackend_vfunc09(longlong param_1)");
@@ -36942,7 +36934,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18009a8b0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ZCityWeaponBackend_vfunc00: void [reason: ambiguous operand type]
     trace.string_literal("Z-City/Homigrad");
     // body sha256: 44283892056c5f2e01c494a6d333121385f0c0404e0a3c4cdd32f1fd254aff28
     // Structured control-flow trace derived from the decompiled body:
@@ -37058,6 +37049,8 @@ TODO: resolve the indirect call in body 41: (**(code **)*local_28)();.)F18009a8c
 const sf::reconstructed::FunctionTranslation& Function_0x18009a8c0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18009a8c0", "Features_Weapons_Backends_ZCityWeaponBackend_vfunc24");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] char cVar2{};
     [[maybe_unused]] std::int32_t iVar3{};
@@ -37081,11 +37074,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x18009a8c0() noexcept {
     // TODO: resolve the indirect call in body 41: (**(code **)*local_28)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_2 == *(longlong *)(param_1 + 8)) && (DAT_1803fa678 != 0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((local_28 != (longlong *)0x0) && (iVar5 = (**(code **)*local_28)(local_28), iVar3 < iVar5) [reason: pointer depth/pointee not proven]
-    // TODO: call arguments not type-recovered for Features_Weapons_Backends_ZCityWeaponBackend_vfunc24: longlong param_1,longlong param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001e2b0: param_2,local_28 [reason: ambiguous operand type]
     trace.call_arguments("FUN_18001bcd0", 0, &local_28);
+    trace.call_arguments("FUN_18001e2b0", param_2, local_28);
     trace.call_arguments("FUN_180095e30", local_28, uVar4, "lastShoot", 0);
     trace.call_arguments("FUN_1800950e0", uVar4, uVar4);
     trace.call_target("FUN_18001bcd0", reinterpret_cast<const void*>(&image::FUN_18001bcd0));
@@ -37112,7 +37103,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18009a8c0() noexcept {
             trace.statement("undefined8 uStack_20;");
             trace.statement("longlong *local_18;");
             trace.statement("int local_10;");
-            if (trace.condition("if ((param_2 == *(longlong *)(param_1 + 8)) && (DAT_1803fa678 != 0))")) {
+            if (trace.checked_condition("if ((param_2 == *(longlong *)(param_1 + 8)) && (DAT_1803fa678 != 0))", [&]() -> bool { return static_cast<bool>((param_2 == load_at<std::int64_t>(param_1 + 8, 0)) && (image::DAT_1803fa678 != 0)); })) {
                 trace.statement("local_28 = (longlong *)0x0;");
                 trace.statement("uStack_20 = 0;");
                 trace.statement("local_18 = (longlong *)0x0;");

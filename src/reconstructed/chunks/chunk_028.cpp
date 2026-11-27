@@ -8341,7 +8341,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219100() noexcept {
             if (trace.checked_condition("if (param_3 < 0x333333333333334)", [&]() -> bool { return static_cast<bool>(param_3 < 0x333333333333334); })) {
                 trace.statement("uVar3 = 0x333333333333333 - (uVar5 >> 1);");
                 trace.statement("uVar11 = 0x333333333333333;");
-                if (trace.checked_condition("if ((uVar5 < uVar3 || uVar5 - uVar3 == 0) && (uVar11 = uVar5 + (uVar5 >> 1), uVar11 < param_3))", [&]() -> bool { return static_cast<bool>((uVar5 < uVar3 || uVar5 - uVar3 == 0) && (uVar11 = uVar5 + (uVar5 >> 1), uVar11 < param_3)); })) {
+                if (trace.condition("if ((uVar5 < uVar3 || uVar5 - uVar3 == 0) && (uVar11 = uVar5 + (uVar5 >> 1), uVar11 < param_3))")) {
                     trace.statement("uVar11 = param_3;");
                 }
                 if (trace.checked_condition("if (puVar10 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(puVar10 != (undefined8 *)0x0); })) {

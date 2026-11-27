@@ -23560,7 +23560,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802bab60() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180380bb0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*param_3 == 0.0) || ((*param_2 == 0.0 && (*(float *)(lVar2 + 0x2658) == DAT_180380bb0)))) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (*param_4 == 0.0) [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("FUN_180268ed0", &local_48);
@@ -24596,7 +24595,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802bac60() noexcept {
     // TODO: condition expression type not recovered: if (0.0 <= fVar34) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (0.0 <= fVar35) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (fVar30 < 0.0) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: while ((*pbVar20 < 0x24 && ((0x900000200U >> ((longlong)(char)*pbVar20 & 0x3fU) & 1) != 0))) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if ((float)(int)(fVar34 / fVar35) <= (float)(int)(local_180 + DAT_180380ba8)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (local_180 == 0.0) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_1802bf4d0: param_2,uVar22 [reason: ambiguous operand type]
@@ -27345,7 +27343,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802bbfc0() noexcept {
     // TODO: condition expression type not recovered: if (0.0 <= fVar30) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (0.0 <= fVar24) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (fVar23 < 0.0) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (fVar30 * local_1c0[2] - (fVar32 - local_244) * (local_1c0[0] - local_1e8) < 0.0 == bVar5) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (bVar5 == (fVar28 - local_1c0[0]) * fVar31 - (fVar32 - 0.0) * fVar30 < 0.0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((DAT_180380948 <= fVar30) && (local_274 = fVar8, fVar30 <= fVar8)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((DAT_180380948 <= fVar27) && (fVar33 = fVar8, fVar27 <= fVar8)) [reason: unresolved global storage/width]
@@ -28396,7 +28393,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802bbfc0() noexcept {
                         }
                         trace.statement("fVar28 = (float)(int)(fVar28 * local_268 + fVar25 + fVar34);");
                         trace.statement("fVar33 = fVar25 + fVar27;");
-                        if (trace.checked_condition("if ((fVar25 + fVar27 <= fVar28) && (fVar33 = (fVar25 + local_268) - fVar27, fVar28 <= fVar33))", [&]() -> bool { return static_cast<bool>((fVar25 + fVar27 <= fVar28) && (fVar33 = (fVar25 + local_268) - fVar27, fVar28 <= fVar33)); })) {
+                        if (trace.condition("if ((fVar25 + fVar27 <= fVar28) && (fVar33 = (fVar25 + local_268) - fVar27, fVar28 <= fVar33))")) {
                             trace.statement("fVar33 = fVar28;");
                         }
                         trace.statement("local_274 = fVar8 - local_274;");
@@ -29916,7 +29913,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802be530() noexcept {
                                     }
                                     trace.statement("*(undefined4 *)(lVar17 + 0x22a0) = *(undefined4 *)(lVar17 + 4);");
                                     trace.statement("*(undefined1 *)(lVar17 + 0x2299) = 1;");
-                                    if (trace.checked_condition("if ((*(int *)(lVar17 + 0x2320) == 0) || ((*(uint *)(lVar17 + 0x2314) & 0x1000) == 0))", [&]() -> bool { return static_cast<bool>((load_at<std::int32_t>(lVar17 + 0x2320, 0) == 0) || ((load_at<std::uint32_t>(lVar17 + 0x2314, 0) & 0x1000) == 0)); })) {
+                                    if (trace.condition("if ((*(int *)(lVar17 + 0x2320) == 0) || ((*(uint *)(lVar17 + 0x2314) & 0x1000) == 0))")) {
                                         trace.statement("FUN_180280a90(0);");
                                     } else {
                                     if (trace.checked_condition("if (*(char *)(lVar3 + 0x10) == '\\0')", [&]() -> bool { return static_cast<bool>(load_at<char>(lVar3 + 0x10, 0) == '\0'); })) {
@@ -42342,7 +42339,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802c4ee0() noexcept {
             if (trace.checked_condition("if (0 < iVar15)", [&]() -> bool { return static_cast<bool>(0 < iVar15); })) {
                 do {
                     trace.statement("piVar29 = (int *)((longlong)iVar32 * 0x2c + *(longlong *)(param_1 + 0x10));");
-                    if (trace.checked_condition("if (((piVar17 == (int *)0x0) || (piVar17[3] < piVar29[3])) && ((piVar29[1] & 0x200000U) == 0))", [&]() -> bool { return static_cast<bool>(((piVar17 == (int *)0x0) || (piVar17[3] < piVar29[3])) && ((piVar29[1] & 0x200000U) == 0)); })) {
+                    if (trace.condition("if (((piVar17 == (int *)0x0) || (piVar17[3] < piVar29[3])) && ((piVar29[1] & 0x200000U) == 0))")) {
                         trace.statement("piVar17 = piVar29;");
                     }
                     trace.statement("iVar15 = *piVar29;");
@@ -49280,7 +49277,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802c95d0() noexcept {
     // TODO: condition expression type not recovered: if (param_3 <= *(float *)(&DAT_1803806c0 + (longlong)iVar7 * 4)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (param_3 <= fVar14) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((param_7 & 0x100000) != 0) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (((uVar11 != 0) && (fVar14 = param_5 - param_4, fVar14 < fVar15)) && (DAT_180380938 < fVar14)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((bVar3) && ((param_7 & 0x40) == 0)) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (fVar15 == 0.0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (fVar15 < param_4) [reason: ambiguous operand type]
@@ -49943,7 +49939,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802c9c10() noexcept {
     // TODO: condition expression type not recovered: if (param_3 <= *(float *)(&DAT_1803806c0 + (longlong)iVar8 * 4)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (param_3 <= fVar15) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((param_7 & 0x100000) != 0) [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (((uVar10 != 0) && (dVar17 = param_5 - param_4, dVar17 < dVar4)) && (_DAT_180380a78 < dVar17)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((bVar3) && ((param_7 & 0x40) == 0)) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (dVar4 == 0.0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (dVar4 < param_4) [reason: ambiguous operand type]

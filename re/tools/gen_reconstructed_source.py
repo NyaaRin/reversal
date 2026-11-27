@@ -143,10 +143,16 @@ def recover_declarations(body: str) -> dict[str, tuple[str, int | None]]:
     # Function parameters are part of the recovered signature even when Ghidra
     # reports the return type as simply `undefined`.
     for line in lines:
-        if "FUN_" not in line or "(" not in line or ")" not in line:
+        stripped = line.strip()
+        if "(" not in line or ")" not in line or stripped.endswith(";"):
+            continue
+        if re.match(r"^(?:if|for|while|switch|return|else|do)\b", stripped):
             continue
         start = line.find("(")
         end = line.rfind(")")
+        prefix = line[:start].split()
+        if not prefix or not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_:]*", prefix[-1]):
+            continue
         if start < 0 or end <= start:
             continue
         params = line[start + 1:end].strip()
@@ -824,11 +830,18 @@ def recover_typed_sites(
     typed_calls: list[tuple[str, list[str]]] = []
     unresolved_calls: list[tuple[str, str]] = []
 
-    for _, line in code_lines:
+    for line_index, (_, line) in enumerate(code_lines):
         stripped = line.strip()
-        # The decompiler's own function signature is not a call site.
-        if re.match(r"^[A-Za-z_][A-Za-z0-9_ ]*?\*?\s+FUN_[0-9A-Fa-f]+\s*\(", stripped):
+        # The decompiler's own function signature is not a call site.  Named
+        # methods (std_exception_vfunc00 etc.) use the same definition shape.
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_:<> ]*?[\s*]+[A-Za-z_][A-Za-z0-9_:]*\s*\([^;]*\)\s*$", stripped):
             continue
+        # A definition can put the return type on the previous line, leaving
+        # `name(params)` at column zero.  The following non-empty line is `{`.
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_:]*\s*\([^;]*\)\s*$", stripped):
+            following = next((other.strip() for _, other in code_lines[line_index + 1:] if other.strip()), "")
+            if following.startswith("{"):
+                continue
         header_match = re.match(r"(if|for|while|switch)\s*\(.*\)\s*\{?\s*$", stripped)
         if header_match:
             kind = header_match.group(1)

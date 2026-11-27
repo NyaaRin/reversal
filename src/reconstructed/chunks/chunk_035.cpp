@@ -2107,7 +2107,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180269ce0() noexcept {
                             trace.statement("*(int *)(lVar7 + 0x18) = *(int *)(lVar7 + 0x18) + 1;");
                         }
                     }
-                    if (trace.checked_condition("if ((*(int *)(lVar18 + 0x206c) != 0) && (*(int *)(lVar8 + 0x3f0) == *(int *)(lVar18 + 0x206c)))", [&]() -> bool { return static_cast<bool>((load_at<std::int32_t>(lVar18 + 0x206c, 0) != 0) && (load_at<std::int32_t>(lVar8 + 0x3f0, 0) == load_at<std::int32_t>(lVar18 + 0x206c, 0))); })) {
+                    if (trace.condition("if ((*(int *)(lVar18 + 0x206c) != 0) && (*(int *)(lVar8 + 0x3f0) == *(int *)(lVar18 + 0x206c)))")) {
                         trace.statement("fVar23 = *(float *)(lVar8 + 300);");
                         trace.statement("iVar12 = *(int *)(lVar7 + 0x1c);");
                         trace.statement("fVar22 = *(float *)(lVar8 + 0x3fc);");
@@ -18022,10 +18022,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180272510() noexcept {
                         trace.statement("FUN_1802716b0(lVar10,*(uint *)(lVar10 + 0x14) >> 0x19 & 1);");
                     }
                 }
-                if (trace.checked_condition("if (((lVar12 != 0) && (*(char *)(lVar12 + 0xcc) != '\\0')) && (*(char *)(lVar12 + 0xd4) == '\\0'))", [&]() -> bool { return static_cast<bool>(((lVar12 != 0) && (load_at<char>(lVar12 + 0xcc, 0) != '\0')) && (load_at<char>(lVar12 + 0xd4, 0) == '\0')); })) {
+                if (trace.condition("if (((lVar12 != 0) && (*(char *)(lVar12 + 0xcc) != '\\0')) && (*(char *)(lVar12 + 0xd4) == '\\0'))")) {
                     trace.statement("FUN_1802716b0(lVar12,*(uint *)(lVar12 + 0x14) >> 0x19 & 1);");
                 }
-                if (trace.checked_condition("if (((lVar13 != 0) && (*(char *)(lVar13 + 0xcc) != '\\0')) && (*(char *)(lVar13 + 0xd4) == '\\0'))", [&]() -> bool { return static_cast<bool>(((lVar13 != 0) && (load_at<char>(lVar13 + 0xcc, 0) != '\0')) && (load_at<char>(lVar13 + 0xd4, 0) == '\0')); })) {
+                if (trace.condition("if (((lVar13 != 0) && (*(char *)(lVar13 + 0xcc) != '\\0')) && (*(char *)(lVar13 + 0xd4) == '\\0'))")) {
                     trace.statement("FUN_1802716b0(lVar13,*(uint *)(lVar13 + 0x14) >> 0x19 & 1);");
                 }
                 if (trace.checked_condition("if ((*(char *)(lVar4 + 0x78) != '\\0') && (*(int *)(lVar4 + 0x2508) != -1))", [&]() -> bool { return static_cast<bool>((load_at<char>(lVar4 + 0x78, 0) != '\0') && (load_at<std::int32_t>(lVar4 + 0x2508, 0) != -1)); })) {

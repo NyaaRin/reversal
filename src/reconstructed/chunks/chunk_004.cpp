@@ -24806,7 +24806,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18004ce60() noexcept {
                 }
                 trace.statement("lVar3 = *(longlong *)(lVar3 + 0xec0);");
                 trace.statement("lVar4 = *(longlong *)(lVar3 + 0x1520);");
-                if (trace.checked_condition("if ((*(longlong *)(lVar4 + 0x1c8) != 0) || (lVar6 = 0x280, *(longlong *)(lVar3 + 0x2368) != 0))", [&]() -> bool { return static_cast<bool>((load_at<std::int64_t>(lVar4 + 0x1c8, 0) != 0) || (lVar6 = 0x280, load_at<std::int64_t>(lVar3 + 0x2368, 0) != 0)); })) {
+                if (trace.condition("if ((*(longlong *)(lVar4 + 0x1c8) != 0) || (lVar6 = 0x280, *(longlong *)(lVar3 + 0x2368) != 0))")) {
                     trace.statement("lVar6 = 0x250;");
                 }
                 trace.statement("fVar1 = *(float *)(lVar4 + 4 + lVar6);");

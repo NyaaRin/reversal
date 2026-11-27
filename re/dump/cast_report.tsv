@@ -1,23 +1,23 @@
 site_type	decision	reason	count
-condition	admitted	declared pointer-to-64-bit integer	693
-condition	admitted	declared scalar or indexed element	2176
-condition	rejected	ambiguous operand type	2638
-condition	rejected	assignment or side effect	353
+condition	admitted	declared pointer-to-64-bit integer	692
+condition	admitted	declared scalar or indexed element	2194
+condition	rejected	ambiguous operand type	2564
+condition	rejected	assignment or side effect	341
 condition	rejected	nested call/return type unresolved	7
-condition	rejected	pointer depth/pointee not proven	978
-condition	rejected	pointer-cast target not proven	848
-condition	rejected	scalar cast of pointer element	115
-condition	rejected	scalar cast width/kind mismatch	354
-condition	rejected	unknown aggregate layout	52
-condition	rejected	unresolved global storage/width	3417
-call	admitted	declared pointer-to-64-bit integer	362
-call	admitted	declared scalar or indexed element	1302
-call	rejected	ambiguous operand type	4545
+condition	rejected	pointer depth/pointee not proven	823
+condition	rejected	pointer-cast target not proven	836
+condition	rejected	scalar cast of pointer element	91
+condition	rejected	scalar cast width/kind mismatch	352
+condition	rejected	unknown aggregate layout	51
+condition	rejected	unresolved global storage/width	3353
+call	admitted	declared pointer-to-64-bit integer	371
+call	admitted	declared scalar or indexed element	1311
+call	rejected	ambiguous operand type	3662
 call	rejected	assignment or side effect	104
-call	rejected	nested call/return type unresolved	13
-call	rejected	pointer depth/pointee not proven	167
-call	rejected	pointer-cast target not proven	91
+call	rejected	nested call/return type unresolved	11
+call	rejected	pointer depth/pointee not proven	117
+call	rejected	pointer-cast target not proven	85
 call	rejected	scalar cast of pointer element	10
-call	rejected	scalar cast width/kind mismatch	257
-call	rejected	unknown aggregate layout	538
-call	rejected	unresolved global storage/width	1020
+call	rejected	scalar cast width/kind mismatch	242
+call	rejected	unknown aggregate layout	532
+call	rejected	unresolved global storage/width	1002

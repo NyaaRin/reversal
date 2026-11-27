@@ -2879,7 +2879,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f84d0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803fa408 == (code *)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((DAT_1804099b0 != 0) && (UVar6 = GetTickCount64(), cVar2 = DAT_1804099b8, UVar6 < uVar1)) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for s: GetName idx %d [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for d: expected small ints at +0x24/+0x20 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for sent: #%d [reason: ambiguous operand type]
@@ -2889,7 +2888,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f84d0() noexcept {
     trace.call_arguments("FUN_1801f8180", param_2);
     trace.call_arguments("FUN_1801f81f0", param_2);
     trace.call_arguments("FUN_180014410", "[CLCMOVE] type=%d name=%s (GetName idx %d)\n", 9, pcVar8, 9);
-    trace.call_arguments("GetTickCount64");
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
     trace.call_arguments("FUN_1801f8230", param_1, param_2);
@@ -32377,7 +32375,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802055d0() noexcept {
             trace.statement("uVar1 = lVar8 + 1;");
             trace.statement("uVar4 = param_1[2] - *param_1 >> 5;");
             trace.statement("uVar7 = 0x7ffffffffffffff;");
-            if (trace.checked_condition("if ((uVar4 <= 0x7ffffffffffffff - (uVar4 >> 1)) && (uVar7 = uVar4 + (uVar4 >> 1), uVar7 < uVar1))", [&]() -> bool { return static_cast<bool>((uVar4 <= 0x7ffffffffffffff - (uVar4 >> 1)) && (uVar7 = uVar4 + (uVar4 >> 1), uVar7 < uVar1)); })) {
+            if (trace.condition("if ((uVar4 <= 0x7ffffffffffffff - (uVar4 >> 1)) && (uVar7 = uVar4 + (uVar4 >> 1), uVar7 < uVar1))")) {
                 trace.statement("uVar7 = uVar1;");
             }
             trace.statement("puVar3 = (undefined8 *)FUN_18020dbc0(uVar4,uVar7);");

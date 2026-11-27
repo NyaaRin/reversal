@@ -9397,7 +9397,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236370() noexcept {
             trace.statement("FUN_18022a210(*(undefined8 *)(param_1 + 0x18),*(undefined8 *)(param_1 + 0x20));");
             trace.statement("_Memory = *(void **)(param_1 + 8);");
             if (trace.checked_condition("if (0xfff < (ulonglong)(*(longlong *)(param_1 + 0x10) * 0xb0))", [&]() -> bool { return static_cast<bool>(0xfff < (ulonglong)(load_at<std::int64_t>(param_1 + 0x10, 0) * 0xb0)); })) {
-                if (trace.checked_condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)", [&]() -> bool { return static_cast<bool>((ulonglong)(reinterpret_cast<std::int64_t>(_Memory) + (-8 - (longlong)*(void **)(reinterpret_cast<std::int64_t>(_Memory) + -8))) < 0x20); })) {
+                if (trace.condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)")) {
                     trace.statement("free(*(void **)((longlong)_Memory + -8));");
                     trace.statement("return;");
                 }
@@ -10081,7 +10081,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802367e0() noexcept {
             }
             trace.statement("_Memory = *(void **)(param_1 + 8);");
             if (trace.checked_condition("if (0xfff < (ulonglong)(*(longlong *)(param_1 + 0x10) * 8))", [&]() -> bool { return static_cast<bool>(0xfff < (ulonglong)(load_at<std::int64_t>(param_1 + 0x10, 0) * 8)); })) {
-                if (trace.checked_condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)", [&]() -> bool { return static_cast<bool>((ulonglong)(reinterpret_cast<std::int64_t>(_Memory) + (-8 - (longlong)*(void **)(reinterpret_cast<std::int64_t>(_Memory) + -8))) < 0x20); })) {
+                if (trace.condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)")) {
                     trace.statement("free(*(void **)((longlong)_Memory + -8));");
                     trace.statement("return;");
                 }
@@ -14596,7 +14596,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180238500() noexcept {
             }
             trace.statement("_Memory = *(void **)(param_1 + 8);");
             if (trace.checked_condition("if (0xfff < (ulonglong)(*(longlong *)(param_1 + 0x10) << 6))", [&]() -> bool { return static_cast<bool>(0xfff < (ulonglong)(load_at<std::int64_t>(param_1 + 0x10, 0) << 6)); })) {
-                if (trace.checked_condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)", [&]() -> bool { return static_cast<bool>((ulonglong)(reinterpret_cast<std::int64_t>(_Memory) + (-8 - (longlong)*(void **)(reinterpret_cast<std::int64_t>(_Memory) + -8))) < 0x20); })) {
+                if (trace.condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)")) {
                     trace.statement("free(*(void **)((longlong)_Memory + -8));");
                     trace.statement("return;");
                 }
@@ -15230,7 +15230,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802388a0() noexcept {
             trace.statement("FUN_180218ad0(*(undefined8 *)(param_1 + 0x18),*(undefined8 *)(param_1 + 0x20));");
             trace.statement("_Memory = *(void **)(param_1 + 8);");
             if (trace.checked_condition("if (0xfff < (ulonglong)(*(longlong *)(param_1 + 0x10) * 0x98))", [&]() -> bool { return static_cast<bool>(0xfff < (ulonglong)(load_at<std::int64_t>(param_1 + 0x10, 0) * 0x98)); })) {
-                if (trace.checked_condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)", [&]() -> bool { return static_cast<bool>((ulonglong)(reinterpret_cast<std::int64_t>(_Memory) + (-8 - (longlong)*(void **)(reinterpret_cast<std::int64_t>(_Memory) + -8))) < 0x20); })) {
+                if (trace.condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)")) {
                     trace.statement("free(*(void **)((longlong)_Memory + -8));");
                     trace.statement("return;");
                 }
@@ -17552,7 +17552,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180239700() noexcept {
             }
             trace.statement("_Memory = *(void **)(param_1 + 8);");
             if (trace.checked_condition("if (0xfff < (ulonglong)(*(longlong *)(param_1 + 0x10) << 5))", [&]() -> bool { return static_cast<bool>(0xfff < (ulonglong)(load_at<std::int64_t>(param_1 + 0x10, 0) << 5)); })) {
-                if (trace.checked_condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)", [&]() -> bool { return static_cast<bool>((ulonglong)(reinterpret_cast<std::int64_t>(_Memory) + (-8 - (longlong)*(void **)(reinterpret_cast<std::int64_t>(_Memory) + -8))) < 0x20); })) {
+                if (trace.condition("if ((ulonglong)((longlong)_Memory + (-8 - (longlong)*(void **)((longlong)_Memory + -8))) < 0x20)")) {
                     trace.statement("free(*(void **)((longlong)_Memory + -8));");
                     trace.statement("return;");
                 }
@@ -19545,23 +19545,23 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18023a350() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18023a350", "std_std_D_DV?$regex_traits_?$_Node_class_vfunc00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint32_t param_2{};
     [[maybe_unused]] void * pvVar1{};
     [[maybe_unused]] void * pvVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_2 & 1) != 0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for std_std_D_DV__regex_traits____Node_class_vfunc00: undefined8 *param_1,uint param_2 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for free: (void *)param_1[5] [reason: pointer-cast target not proven]
-    // TODO: call arguments not type-recovered for free: param_1 [reason: ambiguous operand type]
     trace.call_arguments("free", *(void **)(reinterpret_cast<std::int64_t>(pvVar2) + 0x10));
     trace.call_arguments("free", pvVar2);
+    trace.call_arguments("free", (void *)param_1[5]);
     trace.call_arguments("free", *(void **)(reinterpret_cast<std::int64_t>(pvVar2) + 8));
     trace.call_arguments("free", pvVar2);
     trace.call_arguments("free", *(void **)(reinterpret_cast<std::int64_t>(pvVar2) + 8));
     trace.call_arguments("free", pvVar2);
     trace.call_arguments("free", *(void **)(reinterpret_cast<std::int64_t>(pvVar2) + 0x10));
     trace.call_arguments("free", pvVar2);
+    trace.call_arguments("free", param_1);
     // body sha256: 0e17124a7594fee55e81b07e4804e3dcdd1b34b17640dc1286ce8403d74d42f3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 * std_std_D_DV__regex_traits____Node_class_vfunc00(undefined8 *param_1,uint param_2)");
@@ -19595,7 +19595,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18023a350() noexcept {
                 trace.statement("pvVar2 = pvVar1;");
             }
             trace.statement("*param_1 = vftable_std__Node_base;");
-            if (trace.condition("if ((param_2 & 1) != 0)")) {
+            if (trace.checked_condition("if ((param_2 & 1) != 0)", [&]() -> bool { return static_cast<bool>((param_2 & 1) != 0); })) {
                 trace.statement("free(param_1);");
             }
             trace.statement("return param_1;");
@@ -19645,7 +19645,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18023a460() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for Features_Visual_ESP_Editor_Elements_CircleElement_vfunc10: void [reason: ambiguous operand type]
     trace.call_arguments("FUN_18016d4c0");
     trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
     // body sha256: a6c475afe2445c7ab594124dadab8825d2b9709b9cbdf77675f382a25c25247c
