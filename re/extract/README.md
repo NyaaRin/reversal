@@ -72,26 +72,31 @@ function. It exits PASS only when all 7,656 rows close.
 
 `src/reconstructed/` maps **7,656/7,656 inventory addresses** to compiled
 C++17 accessors, with **0 unmapped** and **0 stubs**. The generator
-`re/tools/gen_reconstructed_source.py` writes 60 chunks (**84,928,705 bytes**,
-80.99 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
+`re/tools/gen_reconstructed_source.py` writes 60 chunks (**84,983,880 bytes**,
+81.04 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
 source file and a unique `Function_0x...` accessor. Accessors contain
-**457,271 audited executable statement/reference lines**, **306,161
+**458,680 audited executable statement/reference lines**, **306,161
 `trace.statement` calls**, **49,305 real C++ control nodes**, **7,732 actual
 string-literal calls**, and resolved references to **4,331 extern call thunks**
 plus **5,414 extern data symbols** in `src/reconstructed/symbols.h`.
-Recovered declarations and whole-array argument decay produce **27,539
-compiler-checked condition expressions** and **46,123 `trace.call_arguments`
-sites**; **14,481 condition sites** and **8,557 call-argument sites** remain
-explicit TODOs where the evidence is insufficient. Global scalar types are
-mined from the actual memory operands in `m64.dll` by
-`re/tools/mine_data_types.py`; only slots whose observed accesses agree on one
-width/kind are typed, via `re/dump/data_types.tsv`, and the rest stay byte
-arrays. The recoverer also accepts Ghidra pointer declarations with no space
-after `*` for both locals and parameters, safely re-encodes pure string-literal
-arguments, rejects pointer/scalar and pointer-depth mismatches, skips function
-signatures mistaken for calls, and replaces chunks atomically so an interrupted
-run leaves the prior complete set intact. The complete decompiled body remains
-a SHA-256-verified audit payload, not the executable accessor payload.
+Recovered declarations, whole-array argument decay, typed field reads and
+synthetic scalar subfields produce **29,660 compiler-checked condition
+expressions** and **47,532 `trace.call_arguments` sites**; **12,093 condition
+sites** and **7,148 call-argument sites** remain explicit TODOs where the
+evidence is insufficient. Global scalar types are mined from the actual memory
+operands in `m64.dll` by `re/tools/mine_data_types.py`; only slots whose
+observed accesses agree on one width/kind are typed, via
+`re/dump/data_types.tsv`, and the rest stay byte arrays. Constant-offset field
+accesses are inventoried by `re/tools/mine_field_types.py`; the committed
+`re/dump/field_types.tsv` records 44,457 function/base/offset slots whose width
+and kind agree. Generated field reads use `load_at<T>(base, offset)`, preserving
+Ghidra's explicit pointee type and byte address in compiler-checked C++. The
+recoverer also accepts Ghidra pointer declarations with no space after `*` for
+both locals and parameters, safely re-encodes pure string-literal arguments,
+rejects pointer/scalar and pointer-depth mismatches, skips function signatures
+mistaken for calls, and replaces chunks atomically so an interrupted run leaves
+the prior complete set intact. The complete decompiled body remains a
+SHA-256-verified audit payload, not the executable accessor payload.
 
 ```
 py -3 re/tools/gen_reconstructed_source.py
