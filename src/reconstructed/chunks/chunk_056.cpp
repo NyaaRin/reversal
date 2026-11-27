@@ -2391,7 +2391,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fa0c8() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_180014410: "[UNLOAD-WARN] render target release faulted; surfaces leaked\n"
+    // TODO: call arguments not type-recovered for FUN_180014410: "[UNLOAD-WARN] render target release faulted; surfaces leaked\n" [reason: ambiguous operand type]
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.string_literal("[UNLOAD-WARN] render target release faulted; surfaces leaked\\n");
     // body sha256: c7ae561cf0b087966ecab0c4cb0dfcc7bb4515d3b54064ae0846c3ed627b4d7f
@@ -4814,10 +4814,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802faf60() noexcept {
     // TODO: resolve the indirect call in body 27: (**(code **)(*DAT_1803fa630 + 0x240))(DAT_1803fa630,0,1);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x40) != '\0') && (DAT_1803fa598 != (longlong *)0x0))
-    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x41) != '\0') && (DAT_1803f9280 != (longlong *)0x0))
-    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x42) != '\0') && (DAT_1803fa630 != (longlong *)0x0))
-    // TODO: condition expression type not recovered: if (*(longlong *)(*(longlong *)((longlong)ThreadLocalStoragePointer + uVar4 * 8) + 0xed8) != 0)
+    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x40) != '\0') && (DAT_1803fa598 != (longlong *)0x0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x41) != '\0') && (DAT_1803f9280 != (longlong *)0x0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x42) != '\0') && (DAT_1803fa630 != (longlong *)0x0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (*(longlong *)(*(longlong *)((longlong)ThreadLocalStoragePointer + uVar4 * 8) + 0xed8) != 0) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_1801e95c0", lVar2, uVar1);
     trace.call_arguments("FUN_180114540", uVar1);
     trace.call_target("FUN_180114540", reinterpret_cast<const void*>(&image::FUN_180114540));

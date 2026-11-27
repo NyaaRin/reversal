@@ -2377,7 +2377,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fd178() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0
+    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0 [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_180220190", lVar3 * 0x98 + lVar1, lVar3 * 0x130 + lVar1, lVar1);
     trace.call_arguments("FUN_180220200", lVar3 * 0x130 + lVar1, *puVar4, lVar3 * 0x98 + lVar1);
     trace.call_arguments("FUN_180217fc0");
@@ -2469,7 +2469,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fd229() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0
+    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0 [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_180220190", load_at<std::uint64_t>(param_2 + 0x30, 0), *puVar2);
     trace.call_arguments("FUN_180217fc0");
     trace.call_target("FUN_180217fc0", reinterpret_cast<const void*>(&image::FUN_180217fc0));
@@ -2560,7 +2560,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fd35c() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0
+    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0 [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_180220bc0", lVar3 + lVar1, lVar1 + lVar3 * 2, lVar1);
     trace.call_arguments("FUN_180220c00", lVar1 + lVar3 * 2, *puVar4, lVar3 + lVar1);
     trace.call_target("FUN_180220bc0", reinterpret_cast<const void*>(&image::FUN_180220bc0));
@@ -2647,7 +2647,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fd3d8() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0
+    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0 [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_180220bc0");
     trace.call_target("FUN_180220bc0", reinterpret_cast<const void*>(&image::FUN_180220bc0));
     // body sha256: 2fb141d6bee523a312a300ed88264754eaa9344ec227bda6a2cf0955646a2d3e
@@ -3723,7 +3723,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fe3c0() noexcept {
     // TODO: resolve the indirect call in body 18: (*pcVar1)(lVar2 + (lVar3 + -1) * 0x18);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x20) == '\0') && (lVar3 = *(longlong *)(param_2 + 0x28), lVar3 != 0))
+    // TODO: condition expression type not recovered: if ((*(char *)(param_2 + 0x20) == '\0') && (lVar3 = *(longlong *)(param_2 + 0x28), lVar3 != 0)) [reason: pointer depth/pointee not proven]
     // body sha256: 584413cd8aed7306bd5ae1a356601f6ce8b00218594e2e1161c31e131fc9fc7b
     // Structured control-flow trace derived from the decompiled body:
         {
@@ -3962,7 +3962,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802ffb01() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _Locinfo: (_Locinfo *)(param_2 + 0x60)
+    // TODO: call arguments not type-recovered for _Locinfo: (_Locinfo *)(param_2 + 0x60) [reason: pointer-cast target not proven]
     // body sha256: 8ea32a98430d7d113048a8f3c66014ed6950324e617daaa71c18dbfb975a0377
     // Structured control-flow trace derived from the decompiled body:
         {
@@ -7438,7 +7438,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1803071ec() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0
+    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0 [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_18023a4a0", lVar3 * 0x10 + lVar1, lVar3 * 0x20 + lVar1, lVar1);
     trace.call_arguments("FUN_180220c00", lVar1 + lVar3 * 0x20, *puVar4, lVar3 * 0x10 + lVar1);
     trace.call_target("FUN_180220c00", reinterpret_cast<const void*>(&image::FUN_180220c00));
@@ -7525,7 +7525,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180307284() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0
+    // TODO: call arguments not type-recovered for _CxxThrowException: (void *)0x0,(ThrowInfo *)0x0 [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_18023a4a0");
     trace.call_target("FUN_18023a4a0", reinterpret_cast<const void*>(&image::FUN_18023a4a0));
     // body sha256: c1b300f7f73a92e967e8bb6a3f2379e560b611f4e86b429e580cb326957cdd59

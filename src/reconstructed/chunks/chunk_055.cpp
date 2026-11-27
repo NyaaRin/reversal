@@ -2444,14 +2444,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f79e0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0xf < (ulonglong)puVar1[3])
     // body sha256: da0878abca549352ef47c3de9ec2e725d1b8915dc27e340736fbd13f99b8731d
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("puVar1 = *(undefined8 **)(param_2 + 0x40);");
             trace.statement("puVar1[2] = 0;");
-            if (trace.condition("if (0xf < (ulonglong)puVar1[3])")) {
+            if (trace.checked_condition("if (0xf < (ulonglong)puVar1[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar1[3])); })) {
                 trace.statement("puVar1 = (undefined8 *)*puVar1;");
             }
             trace.statement("*(undefined1 *)puVar1 = 0;");
@@ -2513,14 +2512,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802f7a20() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0xf < (ulonglong)puVar1[3])
     // body sha256: 14c2e84c0ca0ab7809325f15ca67ab9e5da788d1e3297e13d46f49361f49aac2
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("puVar1 = *(undefined8 **)(param_2 + 0x60);");
             trace.statement("puVar1[2] = 0;");
-            if (trace.condition("if (0xf < (ulonglong)puVar1[3])")) {
+            if (trace.checked_condition("if (0xf < (ulonglong)puVar1[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar1[3])); })) {
                 trace.statement("puVar1 = (undefined8 *)*puVar1;");
             }
             trace.statement("*(undefined1 *)puVar1 = 0;");

@@ -443,6 +443,53 @@ def rewrite_synthetic_subfields(
     return SUBFIELD_RE.sub(replace, expr)
 
 
+CAST_OPERAND_RE = re.compile(r"\(([^()]*)\)\s*([A-Za-z_][A-Za-z0-9_]*)(\s*\[[^\]]*\])?")
+
+
+def rewrite_admitted_casts(
+    expr: str,
+    locals: dict[str, tuple[str, int | None]],
+) -> str:
+    """Replace scalar C-style casts on recovered locals with explicit C++ casts.
+
+    The local/parameter declaration supplies the source kind.  Pointer-to-
+    integer is emitted as `reinterpret_cast` and only at 64-bit width; indexed
+    pointer elements are scalars and use `static_cast`.  Unknown operands and
+    pointer targets are left untouched for the normal evidence checks.
+    """
+    def replace(match: re.Match[str]) -> str:
+        target = cpp_type(match.group(1))
+        name = match.group(2)
+        index = match.group(3) or ""
+        if not target or pointer_shape(target):
+            return match.group(0)
+        declaration = locals.get(name)
+        if declaration is None:
+            return match.group(0)
+        source_type, count = declaration
+        operand = name + index
+        if index:
+            stars = source_type.count("*")
+            if count is not None:
+                # An array's indexed element has exactly the declared type,
+                # including a pointer element type such as `undefined *[2]`.
+                element = source_type
+            elif stars == 1:
+                element = source_type.rsplit("*", 1)[0].strip()
+            else:
+                return match.group(0)
+            if pointer_shape(element):
+                return match.group(0)
+            return f"static_cast<{target}>({operand})"
+        if pointer_shape(source_type) or count is not None:
+            if scalar_width(target) != 8 or target in ("float", "double"):
+                return match.group(0)
+            return f"reinterpret_cast<{target}>({operand})"
+        return f"static_cast<{target}>({operand})"
+
+    return CAST_OPERAND_RE.sub(replace, expr)
+
+
 def safe_expression(
     expr: str,
     locals: dict[str, tuple[str, int | None]],
@@ -451,6 +498,7 @@ def safe_expression(
 ) -> str | None:
     expr = rewrite_memory_dereferences(expr.strip())
     expr = rewrite_synthetic_subfields(expr, locals)
+    expr = rewrite_admitted_casts(expr, locals)
     if not expr or expr in TYPE_WORDS or any(char in expr for char in ";{}"):
         return None
     if '"' in expr:
@@ -544,11 +592,24 @@ def safe_expression(
             if not re.search(rf"&\s*{re.escape(name)}\b|\b{re.escape(name)}\s*\[", expr):
                 return None
         local_pointer = pointer_shape(type_name)
+        if (count is not None and "*" in type_name) or type_name.count("*") > 1:
+            # Indexing an array of pointers (or a pointer-to-pointer) still
+            # yields a pointer.  Narrow integer casts of that element have no
+            # same-width evidence.
+            for cast_match in re.finditer(rf"\(([^()]*)\)\s*{re.escape(name)}\s*\[", expr):
+                cast_type = cpp_type(cast_match.group(1))
+                if cast_type and not pointer_shape(cast_type) and scalar_width(cast_type) != 8:
+                    return None
         if local_pointer or count is not None:
-            for cast_match in re.finditer(rf"\(([^()]*)\)\s*\b{re.escape(name)}\b", expr):
+            # A cast applied to `ptr[i]` targets the element, not the pointer.
+            # Only a direct `(integer)ptr` cast needs pointer-width evidence.
+            for cast_match in re.finditer(rf"\(([^()]*)\)\s*\b{re.escape(name)}\b(?!\s*\[)", expr):
                 cast_type = cpp_type(cast_match.group(1))
                 if cast_type and not pointer_shape(cast_type):
-                    return None
+                    # Pointer-to-integer is admitted only at the machine pointer
+                    # width; a narrower/float conversion has no evidence here.
+                    if scalar_width(cast_type) != 8 or cast_type in ("float", "double"):
+                        return None
         if "*" in type_name or "*" in expr:
             for other_name, (other_type, _) in analysis_locals.items():
                 if other_name == name:
@@ -1321,6 +1382,27 @@ def comment_text(text: str) -> str:
     return text.replace("*/", "* /").replace("\r", " ").replace("\n", " ").strip()
 
 
+def rejection_reason(text: str) -> str:
+    """Name the first static-evidence rule that blocked an expression."""
+    if re.search(r"\b_?(?:DAT|UNK|SUB|PTR)_[0-9A-Fa-f]+", text):
+        return "unresolved global storage/width"
+    if "->" in text or re.search(r"\b[A-Za-z_]\w*\.[A-Za-z_]\w*", text):
+        return "unknown aggregate layout"
+    if re.search(r"\*\s*\(\s*[A-Za-z_][\w: ]*\*+", text):
+        return "pointer depth/pointee not proven"
+    if re.search(r"\(\s*[A-Za-z_][\w: ]*\*+\s*\)", text):
+        return "pointer-cast target not proven"
+    if re.search(r"\(\s*(?:char|short|int|long|float|double|byte|word|dword|qword|uint|ulong|ulonglong|longlong|HMODULE)\s*\)\s*\w+\s*\[", text):
+        return "scalar cast of pointer element"
+    if re.search(r"\(\s*(?:char|short|int|long|float|double|byte|word|dword|qword|uint|ulong|ulonglong|longlong|HMODULE)\s*\)", text):
+        return "scalar cast width/kind mismatch"
+    if re.search(r"\w+\s*\([^()]*\w+\s*\(", text):
+        return "nested call/return type unresolved"
+    if re.search(r"(?<![=!<>])=(?!=)", text):
+        return "assignment or side effect"
+    return "ambiguous operand type"
+
+
 def record_identifier(address: str) -> str:
     return "kFunction_0x" + address[2:].lower()
 
@@ -1368,10 +1450,12 @@ def build_accessor(
     lines.append("    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.")
     lines.append("    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.")
     for header in unresolved_conditions:
-        lines.append(f"    // TODO: condition expression type not recovered: {comment_text(header)}")
+        reason = rejection_reason(header)
+        lines.append(f"    // TODO: condition expression type not recovered: {comment_text(header)}" + (f" [reason: {reason}]" if reason else ""))
     for target, args in unresolved_calls:
+        reason = rejection_reason(args)
         lines.append(
-            f"    // TODO: call arguments not type-recovered for {comment_text(target)}: {comment_text(args)}"
+            f"    // TODO: call arguments not type-recovered for {comment_text(target)}: {comment_text(args)}" + (f" [reason: {reason}]" if reason else "")
         )
 
     # Type-check recovered arguments independently of the unresolved target
