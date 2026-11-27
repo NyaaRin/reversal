@@ -1,0 +1,13 @@
+stage	status	document	source_dir	source_files	cited_function_bodies	decompiled_present	status_ok	missing	missing_addresses
+3.1	complete	src/features/nospread/README.md	src/features/nospread	6	8	8	8	0	
+3.2	complete	docs/stage-03.2-weapon-backends.md	src/features/weapon	4	12	12	12	0	
+3.3	complete	docs/stage-03.3-seed-prediction.md	src/features/prediction	2	13	13	13	0	
+3.4	complete	docs/stage-03.4-autowall.md	src/features/autowall	4	46	46	46	0	
+3.5	complete	docs/stage-03.5-aim.md	src/features/aim	5	19	19	19	0	
+3.6	complete	docs/stage-03.6-esp.md	src/features/visual	6	55	55	55	0	
+3.7	complete	docs/stage-03.7-movement.md	src/features/movement	3	20	20	20	0	
+3.8	complete	docs/stage-03.8-hvh.md	src/features/hvh	5	74	74	74	0	
+3.9	complete	docs/stage-03.9-backtrack.md	src/features/backtrack	2	53	53	53	0	
+3.10	complete	docs/stage-03.10-lua.md	src/features/lua	3	163	163	163	0	
+3.11	complete	docs/stage-03.11-resolver.md	src/features/resolver	6	48	48	48	0	
+3.12	complete	docs/stage-03.12-account-switcher.md	src/features/account	2	63	63	63	0	

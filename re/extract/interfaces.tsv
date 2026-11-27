@@ -1,0 +1,28 @@
+name	module	global	role
+VClient017	client.dll	0x1803f9278	CHLClient
+VClientPrediction001	client.dll	0x1803f9290	CPrediction
+VClientEntityList003	client.dll	0x1803fa360	IClientEntityList
+VEngineClient015	engine.dll	0x1803fa668	IEngineClient
+VEngineRenderView014	engine.dll	0x1803f9280	CViewRender (VEngineRenderView014)
+VMaterialSystem080	materialsystem.dll	0x1803fa640	IMaterialSystem
+VEngineModel016	engine.dll	0x1803fa598	CModelRender
+InputSystemVersion001	inputsystem.dll	0x1803fa5a8	IInputSystem
+VGUI_Panel009	vgui2.dll	0x1803fa600	VPanelWrapper
+LUASHARED003	lua_shared.dll	0x1803fa678	ILuaShared
+IDirect3DDevice9 (pattern)	shaderapidx9.dll	0x1803fa5e0	D3D9 device
+VGUI_ivgui008	vgui2.dll	0x1803fa350	vgui::IVGui; CreateInterface@0x180017150; pointer stored
+VGUI_System010	vgui2.dll	discarded	vgui::ISystem; CreateInterface@0x180017150; return discarded
+VGUI_Surface030	vguimatsurface.dll	0x1803f9298	vgui::ISurface; CreateInterface@0x180017150; pointer stored
+VGUI_Scheme010	vgui2.dll	discarded	vgui::ISchemeManager; CreateInterface@0x180017150; return discarded
+VGUI_Input005	vgui2.dll	0x1803fa328	vgui::IInput; CreateInterface@0x180017150; pointer stored
+VGUI_InputInternal001	vgui2.dll	discarded	vgui::IInputInternal; CreateInterface@0x180017150; return discarded
+VBaseFileSystem011	filesystem_stdio.dll	0x1803f9248	IBaseFileSystem; CreateInterface@0x180017150; pointer stored
+VFileSystem022	filesystem_stdio.dll	0x1803fa358	IFileSystem; CreateInterface@0x180017150; pointer stored
+VEngineClientStringTable001	engine.dll	discarded	INetworkStringTableContainer; CreateInterface@0x180017150; return discarded
+VClientDllSharedAppSystems001	client.dll	discarded	IClientDllSharedAppSystems; CreateInterface@0x180017150; return discarded
+VENGINE_LAUNCHER_API_VERSION004	engine.dll	discarded	ILauncherAPI; CreateInterface@0x180017150; return discarded
+VEngineVGui001	engine.dll	0x1803fa348	IEngineVGui; CreateInterface@0x180017150; pointer stored
+VModelInfoClient006	engine.dll	0x1803f9250	IModelInfo; CreateInterface@0x180017150; pointer stored
+VPhysicsDebugOverlay001	engine.dll	discarded	IPhysicsDebugOverlay; CreateInterface@0x180017150; return discarded
+VPhysicsSurfaceProps001	vphysics.dll	0x1803fa650	IPhysicsSurfaceProps; CreateInterface@0x180017150; pointer stored
+VEngineCvar007	vstdlib.dll	0x1803fa340	ICvar; CreateInterface@0x180017150; pointer stored

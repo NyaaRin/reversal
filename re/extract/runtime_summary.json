@@ -1,0 +1,119 @@
+{
+ "source": {
+  "dll_md5": "3d9ad8894d9d55e4212b7d800119aaa7",
+  "original_virtual_md5": "7dc09a7552f831a17fdc9a391a6b8f3b",
+  "unrelocated_md5": "6204591cce3ba96d5f54f6d9210cb923",
+  "full_dump_md5": "f725340cd6f0d6156e9fbbb95bb658d3",
+  "mapped_base": "0x27708f10000",
+  "preferred_base": "0x180000000",
+  "image_size": 6377472
+ },
+ "data_delta": {
+  "section_rva": "0x3da000",
+  "section_size": 2024584,
+  "diff_bytes": 297352,
+  "diff_ranges": 72199,
+  "pages": 340,
+  "changed_qwords": 72411,
+  "clusters_gap16": 16981,
+  "clusters_gap64": 698
+ },
+ "runtime": {
+  "regions": 340,
+  "region_classes": {
+   "config/string-objects": 1,
+   "constructed-vtable-state": 1,
+   "esp-entity-cache-0x940": 47,
+   "external-object-state": 96,
+   "heap-pointer-state": 13,
+   "interface/object-globals": 2,
+   "m64-pointer-state": 1,
+   "mixed-runtime-state": 13,
+   "object-pointer-array": 4,
+   "resolved-external-pointer-state": 2,
+   "scalar/bitmask-state": 5,
+   "scalar/flag-array-state": 54,
+   "sparse-scalar-state": 99,
+   "stl-tail-globals": 2
+  },
+  "imports": 383,
+  "imports_changed": 383,
+  "import_ranges": 386,
+  "imports_matched": 383,
+  "modules": 185,
+  "objects": 54,
+  "constructed_vtables": 5,
+  "vtables_patched": 5,
+  "strings": 29,
+  "strings_runtime_only": 15,
+  "strings_static_copy": 14,
+  "strings_with_refs": 23,
+  "strings_without_refs": 6,
+  "guids": 1,
+  "text_guids": 1,
+  "com_guids": 0,
+  "binary_guid_candidates_rejected": 3,
+  "hooks": 24,
+  "hooks_matched": 24,
+  "interfaces_total": 27,
+  "interfaces_resolved": 27,
+  "interfaces_call_site_only": 16
+ },
+ "matches": {
+  "rtti_static_classes": 159,
+  "hook_sites_matched": 24,
+  "iat_slots_matched": 383,
+  "interface_globals_matched": 11,
+  "contradictions": 10
+ },
+ "open_questions": [],
+ "outputs": {
+  "runtime_regions.tsv": {
+   "size": 126295,
+   "md5": "b72c1d7f65fcbbace5dcc25d0d04cac8",
+   "rows": 340
+  },
+  "runtime_imports.tsv": {
+   "size": 108174,
+   "md5": "500320f0dce66a3402403c03290d8e63",
+   "rows": 383
+  },
+  "runtime_modules.tsv": {
+   "size": 25225,
+   "md5": "31c730b770bbc40725542b4b6e1fc78a",
+   "rows": 185
+  },
+  "runtime_objects.tsv": {
+   "size": 18160,
+   "md5": "aaa6aaabbce174029437a22f5b79cf81",
+   "rows": 54
+  },
+  "runtime_vtables.tsv": {
+   "size": 2785,
+   "md5": "6fd2d924ff3efcea74b5a3f77bbc30e1",
+   "rows": 5
+  },
+  "runtime_strings.tsv": {
+   "size": 7817,
+   "md5": "72b2d18dbebeaa3f67a09e867c4b6a45",
+   "rows": 29
+  },
+  "runtime_guids.tsv": {
+   "size": 335,
+   "md5": "1f3a4492690b9feff40859726ca142d0",
+   "rows": 1
+  },
+  "runtime_hooks.tsv": {
+   "size": 7009,
+   "md5": "ea43a849aa8a049c96961d757e18f61e",
+   "rows": 24
+  }
+ },
+ "closures": {
+  "v005": "V005 = 6-slot std::Z_NG::P6A_NG::?$_Func_impl_no_alloc vtable (runtime heap copy 0x2770928D698 of static .rdata source 0x37D698; RTTI COL 0x386FF0); object O017 = static std::function at 0x5C81B0 initialized by FUN_180260220 with lambda LAB_1802600C0. Old 12-slot count over-read the adjacent _Ref_count_obj2 vtable.",
+  "esp_entity_cache": "ESP entity cache: DAT_180458AE0..DAT_1804ECAE0, 256 records x 0x940. reset FUN_180191a10 copies a partially initialized stack template; copy helper FUN_18018a8f0; cache writer/reader FUN_18018b900; renderer FUN_18018aee0. Layout: +0x00 entity pointer; +0x08..+0x28 nine box dwords; +0x2C valid byte; +0x2D flag byte; +0x30..+0x92F 0x60 line segments (0x18 bytes each); +0x930 segment count; +0x934 segments-valid byte; +0x938 float; +0x93C padding (not copied). Page R171 is record[178]+0x6A0 (0x4C0000-0x458AE0=0x67520; 178*0x940=0x66E80); its first full record is page+0x2A0, so the page-first 'Valve001' bytes are at page+0x2E0. 'Valve001' is record+0x40 inside line segment 0; it is uninitialized stack-template residue until FUN_18018aee0 overwrites the segment buffer.",
+  "theme_map": "DAT_1803FADA0 = std::map<std::string,std::string>; created by static initializer FUN_180010C60, inserted by FUN_180241340 with key \"theme name\" and value \"Default\" (S028/S029); destroyed by atexit FUN_18030B740; no static readers.",
+  "interfaces": "16 former string-only interfaces are CreateInterface calls in FUN_180017150 (9 stored, 7 discarded). Corrections: VDebugOverlay003 removed (no such string in m64.dll; 0x3FA650 is VPhysicsSurfaceProps001), and VEngineRenderView014 moved to 0x3F9280/O036, not 0x3FA680/O027 (CViewRender/g_pRender). Total 27.",
+  "pointerless_strings": "S012/S013, S014, S018, S023, S025 are closed as object-owned or ephemeral; all retain refs=n/a by design."
+ }
+}

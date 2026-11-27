@@ -1,0 +1,25 @@
+id	interface	global	slot	vtable_offset	stub	original	purpose	abi	feature	runtime
+D3dSetRenderTarget	D3D	0x1803fa5e0	37	0x128	0x1801f5ad0	0x1803fa370	SetRenderTarget	HRESULT(void* this, DWORD index, void* target)	tracks the active render target and the back buffer	True
+D3dStretchRect	D3D	0x1803fa5e0	34	0x110	0x1801ebcd0	0x1803fa4f8	StretchRect	HRESULT(void* this, void* source, const RECT* sourceRect, void* destination, const RECT* destinationRect, int filter)	tracks back-buffer copies	True
+D3dGetRenderTargetData	D3D	0x1803fa5e0	32	0x100	0x180118fa0	0x1804235a0	GetRenderTargetData	HRESULT(void* this, void* renderTarget, void* destinationSurface)	render-target read tracking	True
+D3dPresent	D3D	0x1803fa5e0	17	0x088	0x1801ebf30	0x1803fa4e0	Present	HRESULT(void* this, const RECT* source, const RECT* destination, HWND window, const RGNDATA* dirty)	present counter	True
+D3dReset	D3D	0x1803fa5e0	16	0x080	0x1801ebe00	0x1803fa4d8	Reset	HRESULT(void* this, D3DPRESENT_PARAMETERS* parameters)	resize / device-state reset	True
+MaterialSystem	MaterialSystem	0x1803fa640	20	0x0a0	0x1801ed5d0	0x1803fa3d8	OverrideConfig	bool(void* this, void* config, bool forceUpdate)	fullbright config byte at +0x49	True
+ChlVr	CHLClient	0x1803f9278	26	0x0d0	0x1801f6a20	0x1803fa440	View_Render	void(void* this, void* view)	view-render counter	True
+ChlWriteUsercmd	CHLClient	0x1803f9278	23	0x0b8	0x1801f3490	0x1803fa438	WriteUsercmdDeltaToBuffer	bool(void* this, void* buffer, int from, int to, bool isNewCommand)	command-write counter	True
+ChlHudUpdate	CHLClient	0x1803f9278	11	0x058	0x1801f6950	0x1803fa388	HudUpdate	void(void* this, bool active)	HUD-update counter	True
+ChlLevelInit	CHLClient	0x1803f9278	5	0x028	0x1801f6840	0x1803fa410	LevelInitPreEntity	void(void* this, const char* levelName)	resets aim/trigger/backtrack/antiaim state	True
+ChlLevelShutdown	CHLClient	0x1803f9278	7	0x038	0x1801f68d0	0x1803fa420	LevelShutdown	void(void* this)	resets aim/trigger/backtrack/antiaim state	True
+ClientMode	ClientMode	0x1803fa638	21	0x0a8	0x1801ee530	0x1803fa3d0	CreateMove	bool(void* this, float sampleTime, CUserCmd* command)	bunnyhop, autostrafe, aimbot, triggerbot, anti-aim, no-spread, backtrack	True
+Panel	Panel	0x1803fa600	41	0x148	0x1801ed360	0x1803fa508	PaintTraverse	void(void* this, unsigned int panel, bool forceRepaint, bool allowForce)	paint counter	True
+ViewRender	ViewRender	0x1803fa680	6	0x030	0x1801f1b80	0x1803fa478	RenderView	void(void* this, void* view, int clearFlags, int whatToDraw)	render-view counter	True
+ViewRenderPreHud	ViewRender	0x1803fa680	37	0x128	0x1801f32a0	0x1803fa3a0	PreHUD	void(void* this, void* view)	pre-HUD stage	True
+ViewRenderDrawModel	ViewRender	0x1803fa680	40	0x140	0x1801f73b0	0x1803fa498	DrawModel	void(void* this, void* renderable)	view draw-model stage	True
+EngineServerViewAngles	Engine	0x1803fa668	20	n/a	0x1801f3360	0x1803fa380	SetViewAngles	void(void* this, QAngle* angles)	blocks non-finite view angles	True
+EngineGetViewAngles	Engine	0x1803fa668	19	n/a	0x1801f3440	0x1803fa3f0	GetViewAngles	void(void* this, QAngle* angles)	anti-aim fake view angles	True
+ModelRenderDrawModelExecute	ModelRender	0x1803fa598	20	0x0a0	0x1801f5340	0x1803fa378	DrawModelExecute	void(void* this, const void* state, const void* info, void* bones)	model pass-through	True
+LuaShared	LuaShared	0x1803fa678	5	0x028	0x1801f6f60	0x1803fa3c0	CloseLuaInterface	void(void* this, void* luaInterface)	Lua interface close tracking	True
+InputSystem	InputSystem	0x1803fa5a8	15	0x078	0x1801f7440	0x1803fa3c8	IsButtonDown	bool(void* this, int buttonCode)	input state pass-through	True
+ClientModeCreateMove	ClientMode	0x1803fa638	21	0x0a8	0x1801ee530	0x1803fa3d0	CreateMove	bool(void* this, float sampleTime, CUserCmd* command)	bunnyhop, autostrafe, aimbot, triggerbot, anti-aim, no-spread, backtrack	True
+FrameStageNotify	CHLClient	0x1803f9278	35	0x118	0x1801ec910	0x1803ff900	FrameStageNotify	void(void* this, int stage)	ESP at FRAME_RENDER_START	True
+PredictionRunCommand	CPrediction	0x1803f9290	17	0x088	0x1801ec9d0	0x1803ff8f8	RunCommand	void(void* this, void* player, CUserCmd* command, void* moveHelper)	pass-through command stage	True

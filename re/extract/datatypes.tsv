@@ -1,0 +1,461 @@
+kind	name	length	path
+TypedefDB	__int64	8	/
+StructureDB	__lc_time_data	704	/crtdefs.h
+PointerDB	__lc_time_data *	8	/crtdefs.h
+TypedefDB	__time64_t	8	/crtdefs.h
+PointerDB	__time64_t *	8	/crtdefs.h
+TypedefDB	__uint64	8	/
+StructureDB	_Collvec	16	/xlocinfo.h
+PointerDB	_Collvec *	8	/xlocinfo.h
+StructureDB	_CONTEXT	1232	/excpt.h
+PointerDB	_CONTEXT *	8	/excpt.h
+StructureDB	_CRYPTOAPI_BLOB	16	/wincrypt.h
+StructureDB	_CRYPTPROTECT_PROMPTSTRUCT	24	/wincrypt.h
+StructureDB	_DISPATCHER_CONTEXT	1	/excpt.h
+PointerDB	_DISPATCHER_CONTEXT *	8	/excpt.h
+EnumDB	_EXCEPTION_DISPOSITION	4	/excpt.h
+StructureDB	_EXCEPTION_POINTERS	16	/excpt.h
+PointerDB	_EXCEPTION_POINTERS *	8	/excpt.h
+StructureDB	_EXCEPTION_RECORD	152	/excpt.h
+PointerDB	_EXCEPTION_RECORD *	8	/excpt.h
+StructureDB	_Facet_base	1	/Demangler/std
+PointerDB	_Facet_base *	8	/Demangler/std
+EnumDB	_FILE_INFO_BY_HANDLE_CLASS	4	/winbase.h
+StructureDB	_FILETIME	8	/WinDef.h
+PointerDB	_FILETIME *	8	/WinDef.h
+EnumDB	_FINDEX_INFO_LEVELS	4	/winbase.h
+EnumDB	_FINDEX_SEARCH_OPS	4	/winbase.h
+FunctionDefinitionDB	_func_5014	-1	/stdlib.h/functions
+PointerDB	_func_5014 *	8	/stdlib.h/functions
+FunctionDefinitionDB	_func_ios_base_ptr_ios_base_ptr	-1	/Demangler/!_anon_funcs_
+PointerDB	_func_ios_base_ptr_ios_base_ptr *	8	/Demangler/!_anon_funcs_
+FunctionDefinitionDB	_func_void_void_ptr	-1	/Demangler/!_anon_funcs_
+PointerDB	_func_void_void_ptr *	8	/Demangler/!_anon_funcs_
+EnumDB	_GET_FILEEX_INFO_LEVELS	4	/winbase.h
+StructureDB	_IMAGE_RUNTIME_FUNCTION_ENTRY	12	/PE
+StructureDB	_iobuf	48	/mbstring.h
+PointerDB	_iobuf *	8	/mbstring.h
+UnionDB	_LARGE_INTEGER	8	/winnt.h
+TypedefDB	_locale_t	8	/crtdefs.h
+StructureDB	_Locimp	1	/Demangler/std/locale
+PointerDB	_Locimp *	8	/Demangler/std/locale
+StructureDB	_Locinfo	1	/Demangler/std
+StructureDB	_Lockit	1	/Demangler/std
+StructureDB	_M128A	16	/winnt.h
+StructureDB	_Mbstatet	1	/Demangler
+PointerDB	_Mbstatet *	8	/Demangler
+StructureDB	_MEMORY_BASIC_INFORMATION	48	/winnt.h
+PointerDB	_MEMORY_BASIC_INFORMATION *	8	/winnt.h
+TypedefDB	_onexit_t	8	/stdlib.h
+FunctionDefinitionDB	_onexit_t	-1	/stdlib.h/functions
+PointerDB	_onexit_t *	8	/stdlib.h/functions
+StructureDB	_OVERLAPPED	32	/winbase.h
+PointerDB	_OVERLAPPED *	8	/winbase.h
+StructureDB	_PROCESS_INFORMATION	24	/winbase.h
+PointerDB	_PROCESS_INFORMATION *	8	/winbase.h
+FunctionDefinitionDB	_PtFuncCompare	-1	/search.h/functions
+PointerDB	_PtFuncCompare *	8	/search.h/functions
+StructureDB	_RTL_SRWLOCK	8	/winnt.h
+StructureDB	_RUNTIME_FUNCTION	12	/winnt.h
+PointerDB	_RUNTIME_FUNCTION *	8	/winnt.h
+StructureDB	_s__RTTIBaseClassDescriptor	28	/
+StructureDB	_s__RTTIClassHierarchyDescriptor	16	/
+StructureDB	_s__RTTICompleteObjectLocator	20	/
+StructureDB	_s_ThrowInfo	16	/ehdata.h
+StructureDB	_SECURITY_ATTRIBUTES	24	/winbase.h
+PointerDB	_SECURITY_ATTRIBUTES *	8	/winbase.h
+FunctionDefinitionDB	_StartAddress	-1	/process.h/functions
+PointerDB	_StartAddress *	8	/process.h/functions
+StructureDB	_STARTUPINFOW	104	/winbase.h
+PointerDB	_STARTUPINFOW *	8	/winbase.h
+StructureDB	_struct_19	8	/winnt.h
+StructureDB	_struct_20	8	/winnt.h
+StructureDB	_struct_541	8	/winbase.h
+StructureDB	_struct_55	416	/winnt.h
+StructureDB	_struct_553	4	/winbase.h
+StructureDB	_SYSTEM_INFO	48	/winbase.h
+PointerDB	_SYSTEM_INFO *	8	/winbase.h
+StructureDB	_SYSTEMTIME	16	/winbase.h
+PointerDB	_SYSTEMTIME *	8	/winbase.h
+UnionDB	_union_54	512	/winnt.h
+UnionDB	_union_540	8	/winbase.h
+UnionDB	_union_552	4	/winbase.h
+StructureDB	_UNWIND_HISTORY_TABLE	216	/winnt.h
+PointerDB	_UNWIND_HISTORY_TABLE *	8	/winnt.h
+StructureDB	_UNWIND_HISTORY_TABLE_ENTRY	16	/winnt.h
+StructureDB	_WIN32_FIND_DATAA	320	/winbase.h
+PointerDB	_WIN32_FIND_DATAA *	8	/winbase.h
+StructureDB	_WIN32_FIND_DATAW	592	/winbase.h
+PointerDB	_WIN32_FIND_DATAW *	8	/winbase.h
+StructureDB	_XSAVE_FORMAT	512	/winnt.h
+StructureDB	basic_ios<char,std::char_traits<char>_>	1	/Demangler/std
+StructureDB	basic_iostream<char,std::char_traits<char>_>	1	/Demangler/std
+StructureDB	basic_istream<char,std::char_traits<char>_>	1	/Demangler/std
+StructureDB	basic_istream<char,struct_std::char_traits<char>_>	1	/Demangler/std
+PointerDB	basic_istream<char,struct_std::char_traits<char>_> *	8	/Demangler/std
+StructureDB	basic_ostream<char,std::char_traits<char>_>	1	/Demangler/std
+StructureDB	basic_ostream<char,struct_std::char_traits<char>_>	1	/Demangler/std
+PointerDB	basic_ostream<char,struct_std::char_traits<char>_> *	8	/Demangler/std
+StructureDB	basic_streambuf<char,std::char_traits<char>_>	1	/Demangler/std
+PointerDB	basic_streambuf<char,std::char_traits<char>_> *	8	/Demangler/std
+StructureDB	basic_streambuf<char,struct_std::char_traits<char>_>	1	/Demangler/std
+PointerDB	basic_streambuf<char,struct_std::char_traits<char>_> *	8	/Demangler/std
+TypedefDB	BOOL	4	/WinDef.h
+PointerDB	BOOL *	8	/WinDef.h
+BooleanDataType	bool	1	/
+TypedefDB	BYTE	1	/WinDef.h
+PointerDB	BYTE *	8	/WinDef.h
+ByteDataType	byte	1	/
+ArrayDB	byte[64]	64	/
+ArrayDB	byte[72724]	72724	/
+ArrayDB	byte[95584]	95584	/
+ArrayDB	BYTE[96]	96	/WinDef.h
+TypedefDB	CHAR	1	/winnt.h
+PointerDB	CHAR *	8	/winnt.h
+CharDataType	char	1	/
+PointerDB	char *	8	/
+PointerDB	char * *	8	/
+ArrayDB	char *[12]	96	/
+ArrayDB	char *[2]	16	/
+ArrayDB	char *[7]	56	/
+ArrayDB	char[0]	1	/
+ArrayDB	char[120]	120	/
+ArrayDB	CHAR[14]	14	/winnt.h
+ArrayDB	char[160]	160	/
+ArrayDB	char[168]	168	/
+ArrayDB	char[16]	16	/
+ArrayDB	char[24]	24	/
+ArrayDB	CHAR[260]	260	/winnt.h
+ArrayDB	char[2]	2	/
+ArrayDB	char[32]	32	/
+ArrayDB	char[40]	40	/
+ArrayDB	char[48]	48	/
+ArrayDB	char[4]	4	/
+ArrayDB	char[56]	56	/
+ArrayDB	char[64]	64	/
+ArrayDB	char[72]	72	/
+ArrayDB	char[80]	80	/
+ArrayDB	char[88]	88	/
+ArrayDB	char[8]	8	/
+ArrayDB	char[96]	96	/
+StructureDB	CLIENT_ID	16	/
+StructureDB	codecvt<char,char,_Mbstatet>	1	/Demangler/std
+StructureDB	codecvt_base	1	/Demangler/std
+TypedefDB	CONTEXT	1232	/winnt.h
+PointerDB	CONTEXT *	8	/winnt.h
+TypedefDB	CRYPTPROTECT_PROMPTSTRUCT	24	/wincrypt.h
+PointerDB	CRYPTPROTECT_PROMPTSTRUCT *	8	/wincrypt.h
+StructureDB	ctype<char>	1	/Demangler/std
+TypedefDB	DATA_BLOB	16	/wincrypt.h
+PointerDB	DATA_BLOB *	8	/wincrypt.h
+StructureDB	DotNetPdbInfo	122	/PDB
+DoubleDataType	double	8	/
+TypedefDB	DWORD	4	/WinDef.h
+PointerDB	DWORD *	8	/WinDef.h
+DWordDataType	dword	4	/
+TypedefDB	DWORD64	8	/basetsd.h
+ArrayDB	dword[26]	104	/
+ArrayDB	dword[5]	20	/
+TypedefDB	DWORD_PTR	8	/basetsd.h
+TypedefDB	errno_t	4	/crtdefs.h
+EnumDB	error_type	4	/Demangler/std/regex_constants
+TypedefDB	EXCEPTION_DISPOSITION	4	/excpt.h
+TypedefDB	EXCEPTION_RECORD	152	/winnt.h
+PointerDB	EXCEPTION_RECORD *	8	/winnt.h
+StructureDB	facet	1	/Demangler/std/locale
+PointerDB	facet *	8	/Demangler/std/locale
+PointerDB	facet * *	8	/Demangler/std/locale
+TypedefDB	FARPROC	8	/WinDef.h
+FunctionDefinitionDB	FARPROC	-1	/WinDef.h/functions
+PointerDB	FARPROC *	8	/WinDef.h/functions
+TypedefDB	FILE	48	/mbstring.h
+PointerDB	FILE *	8	/mbstring.h
+PointerDB	FILE * *	8	/mbstring.h
+TypedefDB	FILE_INFO_BY_HANDLE_CLASS	4	/winbase.h
+TypedefDB	FILETIME	8	/WinDef.h
+PointerDB	FILETIME *	8	/WinDef.h
+TypedefDB	FINDEX_INFO_LEVELS	4	/winbase.h
+TypedefDB	FINDEX_SEARCH_OPS	4	/winbase.h
+FloatDataType	float	4	/
+PointerDB	float *	8	/
+TypedefDB	fpos_t	8	/stdio.h
+PointerDB	fpos_t *	8	/stdio.h
+TypedefDB	GET_FILEEX_INFO_LEVELS	4	/winbase.h
+GuidDataType	GUID	16	/
+TypedefDB	HANDLE	8	/winnt.h
+TypedefDB	HCURSOR	8	/WinDef.h
+TypedefDB	HGLOBAL	8	/WinDef.h
+TypedefDB	HICON	8	/WinDef.h
+StructureDB	HICON__	4	/WinDef.h
+PointerDB	HICON__ *	8	/WinDef.h
+TypedefDB	HIMC	8	/imm.h
+StructureDB	HIMC__	4	/imm.h
+PointerDB	HIMC__ *	8	/imm.h
+TypedefDB	HINSTANCE	8	/WinDef.h
+StructureDB	HINSTANCE__	4	/WinDef.h
+PointerDB	HINSTANCE__ *	8	/WinDef.h
+TypedefDB	HKEY	8	/WinDef.h
+StructureDB	HKEY__	4	/WinDef.h
+PointerDB	HKEY__ *	8	/WinDef.h
+TypedefDB	HKL	8	/WinDef.h
+StructureDB	HKL__	4	/WinDef.h
+PointerDB	HKL__ *	8	/WinDef.h
+TypedefDB	HLOCAL	8	/WinDef.h
+TypedefDB	HMODULE	8	/WinDef.h
+PointerDB	HMODULE *	8	/WinDef.h
+TypedefDB	HRSRC	8	/WinDef.h
+StructureDB	HRSRC__	4	/WinDef.h
+PointerDB	HRSRC__ *	8	/WinDef.h
+TypedefDB	HWND	8	/WinDef.h
+StructureDB	HWND__	4	/WinDef.h
+PointerDB	HWND__ *	8	/WinDef.h
+StructureDB	id	1	/Demangler/std/locale
+StructureDB	IMAGE_BASE_RELOCATION	8	/PE
+StructureDB	IMAGE_DATA_DIRECTORY	8	/PE
+ArrayDB	IMAGE_DATA_DIRECTORY[16]	128	/PE
+StructureDB	IMAGE_DEBUG_DIRECTORY	28	/PE
+StructureDB	IMAGE_DOS_HEADER	128	/DOS
+StructureDB	IMAGE_FILE_HEADER	20	/PE
+EnumDB	IMAGE_GUARD_FLAGS	4	/PE
+StructureDB	IMAGE_LOAD_CONFIG_CODE_INTEGRITY	12	/PE
+StructureDB	IMAGE_LOAD_CONFIG_DIRECTORY64	256	/PE
+StructureDB	IMAGE_NT_HEADERS64	264	/PE
+StructureDB	IMAGE_OPTIONAL_HEADER64	240	/PE
+StructureDB	IMAGE_RESOURCE_DATA_ENTRY	16	/PE
+StructureDB	IMAGE_RESOURCE_DIRECTORY	16	/PE
+StructureDB	IMAGE_RESOURCE_DIRECTORY_ENTRY	8	/PE
+StructureDB	IMAGE_RESOURCE_DIRECTORY_ENTRY_DirectoryStruct	4	/
+UnionDB	IMAGE_RESOURCE_DIRECTORY_ENTRY_DirectoryUnion	4	/
+StructureDB	IMAGE_RESOURCE_DIRECTORY_ENTRY_NameStruct	4	/PE
+UnionDB	IMAGE_RESOURCE_DIRECTORY_ENTRY_NameUnion	4	/PE
+PERichTableDataType	IMAGE_RICH_HEADER	-1	/
+StructureDB	IMAGE_SECTION_HEADER	40	/PE
+StructureDB	IMAGE_THUNK_DATA64	40	/PE
+IBO32DataType	ImageBaseOffset32	4	/
+TypedefDB	INT	4	/WinDef.h
+IntegerDataType	int	4	/
+PointerDB	int *	8	/
+TypedefDB	INT_PTR	8	/basetsd.h
+StructureDB	ios_base	1	/Demangler/std
+PointerDB	ios_base *	8	/Demangler/std
+TypedefDB	LARGE_INTEGER	8	/winnt.h
+PointerDB	LARGE_INTEGER *	8	/winnt.h
+TypedefDB	LCID	4	/winnt.h
+StructureDB	lconv	152	/crtdefs.h
+PointerDB	lconv *	8	/crtdefs.h
+TypedefDB	LCTYPE	4	/winnls.h
+StructureDB	locale	1	/Demangler/std
+PointerDB	locale *	8	/Demangler/std
+StructureDB	localeinfo_struct	16	/crtdefs.h
+PointerDB	localeinfo_struct *	8	/crtdefs.h
+StructureDB	localerefcount	32	/crtdefs.h
+TypedefDB	locrefcount	32	/crtdefs.h
+ArrayDB	locrefcount[6]	192	/crtdefs.h
+TypedefDB	LONG	4	/winnt.h
+LongDataType	long	4	/
+TypedefDB	LONG_PTR	8	/basetsd.h
+TypedefDB	LONGLONG	8	/winnt.h
+LongLongDataType	longlong	8	/
+TypedefDB	LPARAM	8	/WinDef.h
+TypedefDB	LPBOOL	8	/WinDef.h
+TypedefDB	LPBYTE	8	/WinDef.h
+TypedefDB	LPCANDIDATEFORM	8	/imm.h
+TypedefDB	LPCOMPOSITIONFORM	8	/imm.h
+TypedefDB	LPCONTEXT	8	/winbase.h
+TypedefDB	LPCSTR	8	/winnt.h
+TypedefDB	LPCVOID	8	/WinDef.h
+TypedefDB	LPCWSTR	8	/winnt.h
+TypedefDB	LPDWORD	8	/WinDef.h
+TypedefDB	LPFILETIME	8	/WinDef.h
+TypedefDB	LPOFNHOOKPROC	8	/commdlg.h
+FunctionDefinitionDB	LPOFNHOOKPROC	-1	/commdlg.h/functions
+PointerDB	LPOFNHOOKPROC *	8	/commdlg.h/functions
+TypedefDB	LPOPENFILENAMEW	8	/commdlg.h
+TypedefDB	LPOVERLAPPED	8	/winbase.h
+TypedefDB	LPPOINT	8	/WinDef.h
+TypedefDB	LPPROCESS_INFORMATION	8	/winbase.h
+TypedefDB	LPRECT	8	/WinDef.h
+TypedefDB	LPSECURITY_ATTRIBUTES	8	/winbase.h
+TypedefDB	LPSTARTUPINFOW	8	/winbase.h
+TypedefDB	LPSTR	8	/winnt.h
+TypedefDB	LPSYSTEM_INFO	8	/winbase.h
+TypedefDB	LPSYSTEMTIME	8	/winbase.h
+TypedefDB	LPTOP_LEVEL_EXCEPTION_FILTER	8	/winbase.h
+TypedefDB	LPTRACKMOUSEEVENT	8	/winuser.h
+TypedefDB	LPVOID	8	/WinDef.h
+TypedefDB	LPWIN32_FIND_DATAA	8	/winbase.h
+TypedefDB	LPWIN32_FIND_DATAW	8	/winbase.h
+TypedefDB	LPWSTR	8	/winnt.h
+PointerDB	LPWSTR *	8	/winnt.h
+TypedefDB	LRESULT	8	/WinDef.h
+TypedefDB	LSTATUS	4	/winreg.h
+TypedefDB	M128A	16	/winnt.h
+ArrayDB	M128A[16]	256	/winnt.h
+ArrayDB	M128A[26]	416	/winnt.h
+ArrayDB	M128A[2]	32	/winnt.h
+ArrayDB	M128A[8]	128	/winnt.h
+UnionDB	Misc	4	/PE
+TypedefDB	PCONTEXT	8	/winnt.h
+TypedefDB	PCURSORINFO	8	/winuser.h
+TypedefDB	PDWORD	8	/WinDef.h
+TypedefDB	PDWORD64	8	/basetsd.h
+PEx64UnwindInfoDataType	PEx64_UnwindInfo	-1	/
+TypedefDB	PEXCEPTION_RECORD	8	/winnt.h
+TypedefDB	PLARGE_INTEGER	8	/winnt.h
+StructureDB	PMD	12	/ehdata.h
+TypedefDB	PMEMORY_BASIC_INFORMATION	8	/winnt.h
+TypedefDB	PMFN	4	/ehdata.h
+TypedefDB	POINT	8	/WinDef.h
+PointerDB	pointer	8	/
+PointerDB	pointer64	8	/
+ArrayDB	pointer[12]	96	/
+ArrayDB	pointer[13]	104	/
+ArrayDB	pointer[15]	120	/
+ArrayDB	pointer[17]	136	/
+ArrayDB	pointer[1]	8	/
+ArrayDB	pointer[2]	16	/
+ArrayDB	pointer[32]	256	/
+ArrayDB	pointer[33]	264	/
+ArrayDB	pointer[34]	272	/
+ArrayDB	pointer[37]	296	/
+ArrayDB	pointer[3]	24	/
+ArrayDB	pointer[4]	32	/
+ArrayDB	pointer[6]	48	/
+ArrayDB	pointer[9]	72	/
+TypedefDB	PRUNTIME_FUNCTION	8	/winnt.h
+TypedefDB	PSRWLOCK	8	/winbase.h
+TypedefDB	pthreadlocinfo	8	/crtdefs.h
+TypedefDB	pthreadmbcinfo	8	/crtdefs.h
+TypedefDB	PTOP_LEVEL_EXCEPTION_FILTER	8	/winbase.h
+FunctionDefinitionDB	PTOP_LEVEL_EXCEPTION_FILTER	-1	/winbase.h/functions
+PointerDB	PTOP_LEVEL_EXCEPTION_FILTER *	8	/winbase.h/functions
+TypedefDB	PUNWIND_HISTORY_TABLE	8	/winnt.h
+TypedefDB	PVECTORED_EXCEPTION_HANDLER	8	/winnt.h
+FunctionDefinitionDB	PVECTORED_EXCEPTION_HANDLER	-1	/winnt.h/functions
+PointerDB	PVECTORED_EXCEPTION_HANDLER *	8	/winnt.h/functions
+TypedefDB	PVOID	8	/winnt.h
+QWordDataType	qword	8	/
+TypedefDB	RECT	16	/WinDef.h
+TypedefDB	rsize_t	8	/crtdefs.h
+TypedefDB	RTL_SRWLOCK	8	/winnt.h
+PointerDB	RTL_SRWLOCK *	8	/winnt.h
+TypedefDB	RTTIBaseClassDescriptor	28	/
+PointerDB	RTTIBaseClassDescriptor *32	4	/
+TypedefDB	RTTIBaseClassDescriptor *32 __((image-base-relative))	4	/
+PointerDB	RTTIBaseClassDescriptor *32 __((image-base-relative)) *32	4	/
+TypedefDB	RTTIBaseClassDescriptor *32 __((image-base-relative)) *32 __((image-base-relative))	4	/
+ArrayDB	RTTIBaseClassDescriptor *32 __((image-base-relative))[10]	40	/
+ArrayDB	RTTIBaseClassDescriptor *32 __((image-base-relative))[1]	4	/
+ArrayDB	RTTIBaseClassDescriptor *32 __((image-base-relative))[2]	8	/
+ArrayDB	RTTIBaseClassDescriptor *32 __((image-base-relative))[3]	12	/
+ArrayDB	RTTIBaseClassDescriptor *32 __((image-base-relative))[4]	16	/
+ArrayDB	RTTIBaseClassDescriptor *32 __((image-base-relative))[5]	20	/
+ArrayDB	RTTIBaseClassDescriptor *32 __((image-base-relative))[9]	36	/
+TypedefDB	RTTIClassHierarchyDescriptor	16	/
+TypedefDB	RTTICompleteObjectLocator	20	/
+EnumDB	SectionFlags	4	/PE
+TypedefDB	SHORT	2	/winnt.h
+ShortDataType	short	2	/
+TypedefDB	SIZE_T	8	/basetsd.h
+TypedefDB	size_t	8	/crtdefs.h
+StringDataType	string	-1	/
+StructureDB	tagCANDIDATEFORM	32	/imm.h
+PointerDB	tagCANDIDATEFORM *	8	/imm.h
+StructureDB	tagCOMPOSITIONFORM	28	/imm.h
+PointerDB	tagCOMPOSITIONFORM *	8	/imm.h
+StructureDB	tagCURSORINFO	24	/winuser.h
+PointerDB	tagCURSORINFO *	8	/winuser.h
+StructureDB	tagOFNW	152	/commdlg.h
+PointerDB	tagOFNW *	8	/commdlg.h
+StructureDB	tagPOINT	8	/WinDef.h
+PointerDB	tagPOINT *	8	/WinDef.h
+StructureDB	tagRECT	16	/WinDef.h
+PointerDB	tagRECT *	8	/WinDef.h
+StructureDB	tagTRACKMOUSEEVENT	24	/winuser.h
+PointerDB	tagTRACKMOUSEEVENT *	8	/winuser.h
+TerminatedStringDataType	TerminatedCString	-1	/
+StructureDB	threadlocaleinfostruct	344	/crtdefs.h
+PointerDB	threadlocaleinfostruct *	8	/crtdefs.h
+StructureDB	threadmbcinfostruct	552	/crtdefs.h
+PointerDB	threadmbcinfostruct *	8	/crtdefs.h
+TypedefDB	ThrowInfo	16	/ehdata.h
+PointerDB	ThrowInfo *	8	/ehdata.h
+StructureDB	tm	36	/time.h
+PointerDB	tm *	8	/time.h
+StructureDB	TypeDescriptor	16	/ehdata.h
+UnsignedCharDataType	uchar	1	/
+PointerDB	uchar *	8	/
+ArrayDB	uchar[24]	24	/
+ArrayDB	uchar[256]	256	/
+ArrayDB	uchar[257]	257	/
+ArrayDB	uchar[2]	2	/
+TypedefDB	UINT	4	/WinDef.h
+UnsignedIntegerDataType	uint	4	/
+PointerDB	uint *	8	/
+TypedefDB	UINT_PTR	8	/basetsd.h
+TypedefDB	uintptr_t	8	/vadefs.h
+TypedefDB	ULONG	4	/WinDef.h
+UnsignedLongDataType	ulong	4	/
+TypedefDB	ULONG_PTR	8	/basetsd.h
+ArrayDB	ULONG_PTR[15]	120	/basetsd.h
+TypedefDB	ULONGLONG	8	/winnt.h
+UnsignedLongLongDataType	ulonglong	8	/
+PointerDB	ulonglong *	8	/
+PointerDB	undefined *	8	/
+PointerDB	undefined *64	8	/
+Undefined1DataType	undefined1	1	/
+ArrayDB	undefined1[10]	10	/
+ArrayDB	undefined1[12]	12	/
+ArrayDB	undefined1[14]	14	/
+ArrayDB	undefined1[16]	16	/
+ArrayDB	undefined1[19]	19	/
+ArrayDB	undefined1[20]	20	/
+ArrayDB	undefined1[22]	22	/
+ArrayDB	undefined1[24]	24	/
+ArrayDB	undefined1[28]	28	/
+ArrayDB	undefined1[32]	32	/
+Undefined2DataType	undefined2	2	/
+Undefined4DataType	undefined4	4	/
+Undefined8DataType	undefined8	8	/
+UnicodeDataType	unicode	-1	/
+TypedefDB	UNWIND_HISTORY_TABLE_ENTRY	16	/winnt.h
+ArrayDB	UNWIND_HISTORY_TABLE_ENTRY[12]	192	/winnt.h
+UnsignedShortDataType	ushort	2	/
+PointerDB	ushort *	8	/
+ArrayDB	ushort[6]	12	/
+TypedefDB	va_list	8	/vadefs.h
+PointerDB	va_list *	8	/vadefs.h
+VoidDataType	void	0	/
+PointerDB	void *	8	/
+PointerDB	void *64	8	/
+ArrayDB	void *64[11]	88	/
+ArrayDB	void *64[233]	1864	/
+ArrayDB	void *64[29]	232	/
+ArrayDB	void *64[2]	16	/
+ArrayDB	void *64[54]	432	/
+ArrayDB	void *64[62]	496	/
+ArrayDB	void *64[64]	512	/
+TypedefDB	WCHAR	2	/winnt.h
+PointerDB	WCHAR *	8	/winnt.h
+WideChar16DataType	wchar16	2	/
+ArrayDB	wchar16[261]	522	/
+ArrayDB	WCHAR[14]	28	/winnt.h
+ArrayDB	WCHAR[260]	520	/winnt.h
+WideCharDataType	wchar_t	2	/
+PointerDB	wchar_t *	8	/
+PointerDB	wchar_t * *	8	/
+ArrayDB	wchar_t *[12]	96	/
+ArrayDB	wchar_t *[2]	16	/
+ArrayDB	wchar_t *[6]	48	/
+ArrayDB	wchar_t *[7]	56	/
+TypedefDB	wint_t	2	/crtdefs.h
+TypedefDB	WNDPROC	8	/winuser.h
+FunctionDefinitionDB	WNDPROC	-1	/winuser.h/functions
+PointerDB	WNDPROC *	8	/winuser.h/functions
+TypedefDB	WORD	2	/WinDef.h
+WordDataType	word	2	/
+ArrayDB	word[10]	20	/
+ArrayDB	word[4]	8	/
+TypedefDB	WPARAM	8	/WinDef.h
+TypedefDB	XMM_SAVE_AREA32	512	/winnt.h
+TypedefDB	XSAVE_FORMAT	512	/winnt.h

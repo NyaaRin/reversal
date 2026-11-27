@@ -1,0 +1,160 @@
+class	own	inherited	total	note
+CDoubleTraceFilter	2	0	2	-
+CTraceFilter	1	0	1	-
+CTripleTraceFilter	3	0	3	-
+CUtlCStringConversion	0	2	2	inherited chain offsets only
+CUtlCharConversion	2	0	2	-
+CUtlNoEscConversion	0	2	2	inherited chain offsets only
+Core::GameEvents::Sink	1	0	1	-
+Features::AccountSwitcher::AccountSwitcherFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::AimPoint::AimPointFeature	9	0	9	-
+Features::Aimbot::AimbotFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::Airstuck::AirstuckFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::AutoFire::AutoFireFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::AutoReload::AutoReloadFeature	4	0	4	-
+Features::Autostrafe::AutostrafeFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::Autowall::ARC9Autowall	8	0	8	-
+Features::Autowall::ArcCWAutowall	8	0	8	-
+Features::Autowall::AutowallFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::Autowall::CW20Autowall	8	0	8	-
+Features::Autowall::FAS2Autowall	7	0	7	-
+Features::Autowall::HomigradAutowall	2	0	2	-
+Features::Autowall::M9KAutowall	10	0	10	-
+Features::Autowall::SWBAutowall	8	0	8	-
+Features::Autowall::SWCSAutowall	11	0	11	-
+Features::Autowall::TFAAutowall	12	0	12	-
+Features::Autowall::TacRPAutowall	7	0	7	-
+Features::Backtrack::BacktrackFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::BulletPath::BulletPathFeature	24	0	24	-
+Features::BulletTracers::BulletTracersFeature	11	0	11	-
+Features::BunnyHop::BunnyHopFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::CameraView::CameraViewFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::ChamsGlow::ChamsGlowFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::ChatSpam::ChatSpamFeature	2	3	5	-
+Features::DamageFeed::DamageFeedFeature	5	0	5	-
+Features::DamageLogger::DamageLoggerFeature	6	0	6	-
+Features::DataCleaner::DataCleanerFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::DoubleTap::DoubleTapFeature	1	3	4	-
+Features::EdgeJump::EdgeJumpFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::EntityChams::EntityChamsFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::FakeDuck::FakeDuckFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::FakeLag::FakeLagFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::FakePing::FakePingFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::ForceDraw::ForceDrawFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::FreeCam::FreeCamFeature	19	0	19	-
+Features::Fullbright::FullbrightFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::HVH::AntiAim::AntiAimFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::HVH::LagComp::LagCompFeature	10	0	10	-
+Features::HVH::Resolver::ResolverFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::HVH::Visualize::VisualizeFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::JumpBug::JumpBugFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::KillSay::KillSayFeature	1	3	4	-
+Features::LeyHitregCompat::LeyHitregCompatFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::LoadingUrl::LoadingUrlFeature	22	1	23	-
+Features::LookBeam::LookBeamFeature	10	1	11	-
+Features::LuaFileCloak::LuaFileCloakFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::LuaLoader::LuaLoaderFeature	39	2	41	-
+Features::MoveFix::MoveFixFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::NetVars::NetVarsFeature	40	4	44	-
+Features::NoVisualRecoil::NoVisualRecoilFeature	5	1	6	-
+Features::Nospread::NospreadFeature	15	0	15	-
+Features::OctoCompat::OctoCompatFeature	8	0	8	-
+Features::OctoCompat::OctoTickFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::PTPCompat::PTPCompatFeature	5	1	6	-
+Features::Radar::RadarFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::RageAim::RageAimFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::SetSkin::SetSkinFeature	6	1	7	-
+Features::SkyEditor::SkyEditorFeature	1	3	4	-
+Features::Spectators::SpectatorsFeature	3	1	4	-
+Features::Speedhack::SpeedhackFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::ThirdPerson::ThirdPersonFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::ThirdPerson::ThirdPersonFeature::CTraceFilterWorldOnly	0	0	0	no param_1+offset in 3 virtual bodies or 1-hop callees; bases (ITraceFilter) have no field evidence
+Features::Toolbox::RawDisconnectMessage	3	0	3	-
+Features::Toolbox::RawSetConVarMessage	4	0	4	-
+Features::Toolbox::ToolboxFeature	15	0	15	-
+Features::Triggerbot::TriggerbotFeature	6	0	6	-
+Features::VMChams::VMChamsFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::Visual::ESP::CGhostEntityListener	0	0	0	no param_1+offset in 2 virtual bodies or 1-hop callees; bases (none) have no field evidence
+Features::Visual::ESP::Editor::Elements::ArmorBarElement	13	10	23	-
+Features::Visual::ESP::Editor::Elements::BBoxElement	22	0	22	-
+Features::Visual::ESP::Editor::Elements::BaseElement	3	0	3	-
+Features::Visual::ESP::Editor::Elements::BoxElement	13	0	13	-
+Features::Visual::ESP::Editor::Elements::CircleElement	12	0	12	-
+Features::Visual::ESP::Editor::Elements::DynamicTextElement	50	0	50	-
+Features::Visual::ESP::Editor::Elements::HealthBarElement	22	0	22	-
+Features::Visual::ESP::Editor::Elements::TextElement	17	0	17	-
+Features::Visual::TeamList::TeamListFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::Visual::UserGroupList::GroupListFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::Warp::WarpFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::Watermark::WatermarkFeature	9	1	10	-
+Features::Weapons::Backends::ARC9WeaponBackend	24	0	24	-
+Features::Weapons::Backends::ArcCWWeaponBackend	21	0	21	-
+Features::Weapons::Backends::CSGOWeaponBackend	3	0	3	-
+Features::Weapons::Backends::CW20WeaponBackend	12	0	12	-
+Features::Weapons::Backends::CWBaseWeaponBackend	29	4	33	-
+Features::Weapons::Backends::CombineWeapWeaponBackend	3	0	3	-
+Features::Weapons::Backends::FAS2WeaponBackend	13	0	13	-
+Features::Weapons::Backends::GenericWeaponBackend	3	0	3	-
+Features::Weapons::Backends::HL2WeaponBackend	3	0	3	-
+Features::Weapons::Backends::HVH2WeaponBackend	3	0	3	-
+Features::Weapons::Backends::M9KWeaponBackend	10	0	10	-
+Features::Weapons::Backends::ORPWeaponBackend	28	1	29	-
+Features::Weapons::Backends::OctoWeaponBackend	41	1	42	-
+Features::Weapons::Backends::PTPWeaponBackend	18	0	18	-
+Features::Weapons::Backends::SWBWeaponBackend	28	5	33	-
+Features::Weapons::Backends::SWCSWeaponBackend	163	0	163	-
+Features::Weapons::Backends::TFAWeaponBackend	14	1	15	-
+Features::Weapons::Backends::TTTWeaponBackend	4	0	4	-
+Features::Weapons::Backends::TacRPWeaponBackend	31	0	31	-
+Features::Weapons::Backends::UTSWBWeaponBackend	38	2	40	-
+Features::Weapons::Backends::ZCityWeaponBackend	65	0	65	-
+Features::Weapons::Backends::ZSWeaponBackend	23	1	24	-
+Features::WorldTint::WorldTintFeature	0	4	4	no self access; inherited FeatureBase layout inferred from field-bearing siblings (0x08 25/26, 0x10 20/26, 0x18 20/26, 0x20 14/26)
+Features::ZCityCompat::ZCityCompatFeature	21	0	21	-
+IGameEventListener	0	0	0	no param_1+offset in 2 virtual bodies or 1-hop callees; bases (none) have no field evidence
+INetMessage	0	0	0	no param_1+offset in 12 virtual bodies or 1-hop callees; bases (none) have no field evidence
+ITraceFilter	0	0	0	no param_1+offset in 3 virtual bodies or 1-hop callees; bases (none) have no field evidence
+SE_Exception	2	1	3	-
+std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_istringstream	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::std::D::DU?$char_traits::?$basic_istream, std::std::D::DU?$char_traits::?$basic_ios, std::ios_base, std::H::?$_Iosb) have no field evidence
+std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_ostringstream	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::std::D::DU?$char_traits::?$basic_ostream, std::std::D::DU?$char_traits::?$basic_ios, std::ios_base, std::H::?$_Iosb) have no field evidence
+std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf	8	0	8	-
+std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringstream	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::std::D::DU?$char_traits::?$basic_iostream, std::std::D::DU?$char_traits::?$basic_istream, std::std::D::DU?$char_traits::?$basic_ios, std::ios_base, std::H::?$_Iosb, std::std::D::DU?$char_traits::?$basic_ostream, std::std::D::DU?$char_traits::?$basic_ios, std::ios_base, std::H::?$_Iosb) have no field evidence
+std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc	1	0	1	-
+std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?2??Read::V<lambda_1>::?$_Func_impl_no_alloc	4	0	4	-
+std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?7??Read::V<lambda_2>::?$_Func_impl_no_alloc	3	0	3	-
+std::AEA_K::V12::V12::ZV12::0AEA_K::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc	1	0	1	-
+std::D::?$_Node_str	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::D::?$collate	1	0	1	-
+std::TextEditor::VTransaction::?$_Ref_count_obj2	1	0	1	-
+std::V12::V12::ZV12::0::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc	1	0	1	-
+std::Z_NG::P6A_NG::?$_Func_impl_no_alloc	1	0	1	-
+std::_Generic_error_category	2	0	2	-
+std::_Node_assert	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_Node_back	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_Node_base	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (none) have no field evidence
+std::_Node_capture	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_Node_end_group	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_Node_end_rep	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_Node_endif	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_Node_if	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_Node_rep	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_Root_node	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::_System_error	1	0	1	-
+std::_System_error_category	2	0	2	-
+std::bad_alloc	1	0	1	-
+std::bad_any_cast	0	1	1	inherited chain offsets only
+std::bad_array_new_length	1	0	1	-
+std::bad_cast	1	0	1	-
+std::exception	1	0	1	-
+std::filesystem::filesystem_error	3	1	4	-
+std::invalid_argument	1	0	1	-
+std::logic_error	1	0	1	-
+std::runtime_error	1	0	1	-
+std::std::D::DU?$char_traits::?$basic_filebuf	13	0	13	-
+std::std::D::DU?$char_traits::?$basic_ifstream	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::std::D::DU?$char_traits::?$basic_istream, std::std::D::DU?$char_traits::?$basic_ios, std::ios_base, std::H::?$_Iosb) have no field evidence
+std::std::D::DU?$char_traits::?$basic_ofstream	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::std::D::DU?$char_traits::?$basic_ostream, std::std::D::DU?$char_traits::?$basic_ios, std::ios_base, std::H::?$_Iosb) have no field evidence
+std::std::D::DV?$regex_traits::?$_Node_class	0	0	0	no param_1+offset in 1 virtual bodies or 1-hop callees; bases (std::_Node_base) have no field evidence
+std::std::filesystem::U_Dir_enum_impl::?$_Ref_count_obj2	2	0	2	-
+std::std::std::TextEditor::ULineSection::V?$allocator::TextEditor::ULineSection::V?$vector::?$_Ref_count_obj2	1	0	1	-
+std::system_error	1	0	1	-
+type_info	0	0	0	no param_1+offset in 2 virtual bodies or 1-hop callees; bases (none) have no field evidence

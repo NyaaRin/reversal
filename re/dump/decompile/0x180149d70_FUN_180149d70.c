@@ -1,0 +1,197 @@
+// 0x180149d70  FUN_180149d70
+// size=1304 thunk=false
+// signature: undefined FUN_180149d70()
+// status: ok
+
+
+void FUN_180149d70(longlong param_1)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  int iVar4;
+  int iVar5;
+  undefined8 uVar6;
+  undefined8 uVar7;
+  undefined1 local_278 [32];
+  undefined1 local_258 [32];
+  undefined8 local_238;
+  undefined8 uStack_230;
+  undefined8 local_228;
+  undefined8 local_220;
+  undefined8 local_218;
+  undefined8 uStack_210;
+  undefined8 local_208;
+  undefined8 local_200;
+  undefined8 local_1f8;
+  undefined8 uStack_1f0;
+  undefined8 local_1e8;
+  undefined8 local_1e0;
+  undefined8 local_1d8;
+  undefined8 uStack_1d0;
+  undefined8 local_1c8;
+  undefined8 local_1c0;
+  undefined8 local_1b8;
+  undefined8 uStack_1b0;
+  undefined8 local_1a8;
+  undefined8 local_1a0;
+  undefined8 local_198;
+  undefined8 uStack_190;
+  undefined8 local_188;
+  undefined8 local_180;
+  undefined8 local_178;
+  undefined8 uStack_170;
+  undefined8 local_168;
+  undefined8 local_160;
+  undefined8 local_158;
+  undefined8 uStack_150;
+  undefined8 local_148;
+  undefined8 local_140;
+  undefined8 local_138;
+  undefined8 uStack_130;
+  undefined8 local_128;
+  undefined8 local_120;
+  undefined8 local_118;
+  undefined8 uStack_110;
+  undefined8 local_108;
+  undefined8 local_100;
+  undefined8 *local_f8;
+  undefined1 *local_f0;
+  undefined8 *local_e8;
+  undefined8 *local_e0;
+  undefined1 *local_d8;
+  undefined8 *local_d0;
+  undefined1 *local_c8;
+  undefined8 *local_c0;
+  undefined8 *local_b8;
+  undefined1 *local_b0;
+  undefined1 *local_a8;
+  undefined8 *local_a0;
+  undefined1 *local_98;
+  undefined8 *local_90;
+  undefined8 *local_88;
+  undefined1 *local_80;
+  undefined8 *local_78;
+  undefined1 *local_70;
+  undefined8 *local_68;
+  undefined8 *local_60;
+  undefined1 *local_58;
+  undefined8 *local_50;
+  
+  if (((param_1 != 0) && (DAT_1803fa608 != 0)) &&
+     (DAT_180380d08 <= *(double *)(DAT_1803fa608 + 0x10) - (double)DAT_180425b70)) {
+    DAT_180425b70 = (float)*(double *)(DAT_1803fa608 + 0x10);
+    FUN_180014410("[Toolbox-anim] reasserts/sec=%d guardRedirects/sec=%d guardIdx=%d srvIdx=%d\n",
+                  DAT_180409ae8,DAT_180409a90,DAT_1803e83a4,DAT_1803e8450);
+    DAT_180409ae8 = 0;
+    DAT_180409a90 = 0;
+    local_238 = 0;
+    uStack_230 = 0;
+    local_228 = 0;
+    local_220 = 0;
+    FUN_18001d080(&local_238,"DT_BasePlayer",0xd);
+    uVar6 = FUN_18016d4c0(local_258,&local_238);
+    uVar6 = FUN_180018ef0(&DAT_1803fac80,uVar6);
+    FUN_18020e450(&local_238);
+    local_218 = 0;
+    uStack_210 = 0;
+    local_208 = 0;
+    local_200 = 0;
+    FUN_18001d080(&local_218,"m_fFlags",8);
+    local_d0 = &local_218;
+    local_a8 = local_278;
+    uVar7 = FUN_18016d4c0(local_278,&local_218);
+    iVar1 = FUN_180018c10(uVar6,uVar7);
+    FUN_18020e450(&local_218);
+    local_1f8 = 0;
+    uStack_1f0 = 0;
+    local_1e8 = 0;
+    local_1e0 = 0;
+    FUN_18001d080(&local_1f8,"DT_BaseAnimating",0x10);
+    local_a0 = &local_1f8;
+    local_98 = local_278;
+    uVar6 = FUN_18016d4c0(local_278,&local_1f8);
+    uVar6 = FUN_180018ef0(&DAT_1803fac80,uVar6);
+    FUN_18020e450(&local_1f8);
+    local_90 = &local_1d8;
+    local_1d8 = 0;
+    uStack_1d0 = 0;
+    local_1c8 = 0;
+    local_1c0 = 0;
+    FUN_18001d080(&local_1d8,"m_bClientSideAnimation",0x16);
+    local_88 = &local_1d8;
+    local_80 = local_258;
+    uVar7 = FUN_18016d4c0(local_258,&local_1d8);
+    iVar2 = FUN_180018c10(uVar6,uVar7);
+    FUN_18020e450(&local_1d8);
+    local_1b8 = 0;
+    uStack_1b0 = 0;
+    local_1a8 = 0;
+    local_1a0 = 0;
+    FUN_18001d080(&local_1b8,"DT_BaseAnimating",0x10);
+    local_78 = &local_1b8;
+    local_70 = local_278;
+    uVar6 = FUN_18016d4c0(local_278,&local_1b8);
+    uVar6 = FUN_180018ef0(&DAT_1803fac80,uVar6);
+    FUN_18020e450(&local_1b8);
+    local_68 = &local_198;
+    local_198 = 0;
+    uStack_190 = 0;
+    local_188 = 0;
+    local_180 = 0;
+    FUN_18001d080(&local_198,"m_flPoseParameter",0x11);
+    local_60 = &local_198;
+    local_58 = local_258;
+    uVar7 = FUN_18016d4c0(local_258,&local_198);
+    iVar3 = FUN_180018c10(uVar6,uVar7);
+    FUN_18020e450(&local_198);
+    local_178 = 0;
+    uStack_170 = 0;
+    local_168 = 0;
+    local_160 = 0;
+    FUN_18001d080(&local_178,"DT_BaseAnimating",0x10);
+    local_f8 = &local_178;
+    local_f0 = local_278;
+    uVar6 = FUN_18016d4c0(local_278,&local_178);
+    uVar6 = FUN_180018ef0(&DAT_1803fac80,uVar6);
+    FUN_18020e450(&local_178);
+    local_e8 = &local_158;
+    local_158 = 0;
+    uStack_150 = 0;
+    local_148 = 0;
+    local_140 = 0;
+    FUN_18001d080(&local_158,"m_flCycle",9);
+    local_e0 = &local_158;
+    local_d8 = local_258;
+    uVar7 = FUN_18016d4c0(local_258,&local_158);
+    iVar4 = FUN_180018c10(uVar6,uVar7);
+    FUN_18020e450(&local_158);
+    local_138 = 0;
+    uStack_130 = 0;
+    local_128 = 0;
+    local_120 = 0;
+    FUN_18001d080(&local_138,"DT_BaseAnimating",0x10);
+    local_50 = &local_138;
+    local_c8 = local_278;
+    uVar6 = FUN_18016d4c0(local_278,&local_138);
+    uVar6 = FUN_180018ef0(&DAT_1803fac80,uVar6);
+    FUN_18020e450(&local_138);
+    local_c0 = &local_118;
+    local_118 = 0;
+    uStack_110 = 0;
+    local_108 = 0;
+    local_100 = 0;
+    FUN_18001d080(&local_118,"m_nSequence",0xb);
+    local_b8 = &local_118;
+    local_b0 = local_258;
+    uVar7 = FUN_18016d4c0(local_258,&local_118);
+    iVar5 = FUN_180018c10(uVar6,uVar7);
+    FUN_18020e450(&local_118);
+    FUN_180149bf0(param_1,(longlong)iVar5,(longlong)iVar4,(longlong)iVar3,(longlong)iVar2,
+                  (longlong)iVar1);
+  }
+  return;
+}
+
+

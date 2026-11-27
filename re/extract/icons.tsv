@@ -1,0 +1,21 @@
+id	string_va	utf8_hex	codepoint	font_awesome_name	decoded	glyph_id	advance_width	hand_codepoint	hand_name	codepoint_match	name_match	note
+0	0x180363bbc	ef8580	U+F140	bullseye		233	496	U+F140	n/a	yes	n/a	hand name absent; filled from decoded post table
+1	0x180363bc4	ef81ae	U+F06E	eye		94	576	U+F06E	eye	yes	yes	codepoint and name match hand list
+2	0x180363bc8	ef83a7	U+F0E7	bolt		169	320	U+F0E7	bolt	yes	yes	codepoint and name match hand list
+3	0x180363bcc	ef80bd	U+F03D	video		54	576	U+F03D	n/a	yes	n/a	hand name absent; filled from decoded post table
+4	0x180363bd0	ef8093	U+F013	cog		19	512	U+F013	cog	yes	yes	codepoint and name match hand list
+5	0x180363bd4	ef84a1	U+F121	code		209	640	U+F121	code	yes	yes	codepoint and name match hand list
+6	0x180363bd8	ef81bb	U+F07B	folder		106	512	U+F07B	folder	yes	yes	codepoint and name match hand list
+7	0x180363bdc	ef8387	U+F0C7	save		147	448	U+F0C7	n/a	yes	n/a	hand name absent; filled from decoded post table
+8	0x180363be0	ef8099	U+F019	download		23	512	U+F019	n/a	yes	n/a	hand name absent; filled from decoded post table
+9	0x180363be4	ef87b8	U+F1F8	trash		316	448	U+F1F8	n/a	yes	n/a	hand name absent; filled from decoded post table
+10	0x180363be8	ef81a7	U+F067	plus		87	448	U+F067	n/a	yes	n/a	hand name absent; filled from decoded post table
+11	0x18034f9e0	ef8bb1	U+F2F1	sync-alt		432	512	U+F2F1	n/a	yes	n/a	hand name absent; filled from decoded post table
+12	0x180363bec	ef879e	U+F1DE	sliders-h		304	512	U+F1DE	n/a	yes	n/a	hand name absent; filled from decoded post table
+13	0x180363bf0	ef818b	U+F04B	play		63	447	U+F04B	n/a	yes	n/a	hand name absent; filled from decoded post table
+14	0x180363bf4	ef8087	U+F007	user		8	448	U+F007	n/a	yes	n/a	hand name absent; filled from decoded post table
+15	0x180363bf8	ef8fad	U+F3ED	shield-alt		470	512	U+F3ED	shield-alt	yes	yes	codepoint and name match hand list
+16	0x180363bc0	ef819b	U+F05B	crosshairs		78	512	U+F05B	crosshairs	yes	yes	codepoint and name match hand list
+17	0x180363bfc	ef9590	U+F550	stream		627	512	U+F550	n/a	yes	n/a	hand name absent; filled from decoded post table
+18	0x180363c00	ef82ac	U+F0AC	globe		134	495	U+F0AC	globe	yes	yes	codepoint and name match hand list
+19	0x180363c04	ef978b	U+F5CB	vector-square		740	512	U+F5CB	n/a	yes	n/a	hand name absent; filled from decoded post table

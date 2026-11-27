@@ -1,0 +1,548 @@
+address,name,confidence,class,slot
+0x12e30,"Unknown exception",weak-inferred,std::_System_error,1
+0x12e50,"calls __std_exception_destroy, free",weak-inferred,std::exception,0
+0x12ea0,"calls __std_exception_destroy, free",weak-inferred,std::bad_alloc,0
+0x12f60,"calls __std_exception_destroy, free",weak-inferred,std::bad_any_cast,0
+0x131d0,"std::_Generic_error_category::leaf_stub",structural,std::_Generic_error_category,3
+0x131e0,"std::_Generic_error_category::field_compare_18",structural,std::_Generic_error_category,5
+0x13220,"std::_Generic_error_category::field_compare_08",structural,std::_Generic_error_category,4
+0x13260,"calls __std_exception_destroy, free",weak-inferred,std::_System_error,0
+0x13540,"calls __std_exception_destroy, free",weak-inferred,std::system_error,0
+0x136e0,"generic",weak-inferred,std::_Generic_error_category,1
+0x136f0,"calls strlen",weak-inferred,std::_Generic_error_category,2
+0x13760,"calls free",weak-inferred,Features::Autowall::HomigradAutowall,0
+0x13790,"system",weak-inferred,std::_System_error_category,1
+0x137a0,"unknown error",weak-inferred,std::_System_error_category,2
+0x13860,"std::_System_error_category::leaf_stub",structural,std::_System_error_category,3
+0x139e0,"returns 0 (xor eax,eax; ret)",strong-inferred,CDoubleTraceFilter,1
+0x13e50,"calls free",weak-inferred,std::_Node_base,0
+0x13e80,"calls free",weak-inferred,std::_Root_node,0
+0x13eb0,"calls free",weak-inferred,std::_Node_back,0
+0x13ee0,"calls free",weak-inferred,std::_Node_assert,0
+0x13f60,"calls free",weak-inferred,std::_Node_endif,0
+0x13f90,"calls free",weak-inferred,std::_Node_if,0
+0x14030,"calls free",weak-inferred,std::_Node_rep,0
+0x14060,"Bad any_cast",weak-inferred,std::bad_any_cast,1
+0x14c30,"""write""",weak-inferred,SE_Exception,1
+0x14c70,"calls __std_exception_destroy, free",weak-inferred,SE_Exception,0
+0x1bbb0,"CUtlNoEscConversion::returns_0",structural,CUtlNoEscConversion,0
+0x1bbc0,"CUtlCStringConversion::leaf_stub",structural,CUtlCStringConversion,0
+0x1bbe0,"calls strcmp",weak-inferred,CUtlCharConversion,0
+0x1bd90,"calls free",weak-inferred,INetMessage,0
+0x1e3e0,"no-op (ret 0)",strong-inferred,Features::AccountSwitcher::AccountSwitcherFeature,0
+0x20010,"returns false (xor al,al; ret)",strong-inferred,CDoubleTraceFilter,2
+0x20020,"CTraceFilter::field_compare_08",structural,CTraceFilter,0
+0x20030,"CDoubleTraceFilter::field_compare_08_10",structural,CDoubleTraceFilter,0
+0x20050,"CTripleTraceFilter::field_compare_08_10_18",structural,CTripleTraceFilter,0
+0x20080,"calls free",weak-inferred,IGameEventListener,0
+0x66c80,"std::filesystem::filesystem_error::field_leaf_68_80",structural,std::filesystem::filesystem_error,1
+0x66e70,"calls __std_exception_destroy, free",weak-inferred,std::filesystem::filesystem_error,0
+0x6daf0,"Core::GameEvents::Sink::field_compare_50",structural,Core::GameEvents::Sink,1
+0x6db50,"calls free",weak-inferred,Core::GameEvents::Sink,0
+0x76380,"Features::Weapons::Backends::ARC9WeaponBackend::get_field_10",structural,Features::Weapons::Backends::ARC9WeaponBackend,3
+0x76390,"returns 1 (mov al,imm; ret)",strong-inferred,Features::Toolbox::RawDisconnectMessage,3
+0x763a0,"""DT_BaseCombatWeapon""",weak-inferred,Features::Weapons::Backends::ARC9WeaponBackend,8
+0x76470,"""[WEAP] m_flNextPrimaryAttack netvar offset = 0x%X (hardcoded 0x%X) """,weak-inferred,Features::Weapons::Backends::ARC9WeaponBackend,10
+0x764a0,"Features::Visual::ESP::Editor::Elements::ArmorBarElement::returns_0",structural,Features::Visual::ESP::Editor::Elements::ArmorBarElement,6
+0x764b0,"Features::Weapons::Backends::ARC9WeaponBackend::leaf_stub",structural,Features::Weapons::Backends::ARC9WeaponBackend,13
+0x77880,"Generic",weak-inferred,Features::Weapons::Backends::GenericWeaponBackend,0
+0x77890,"calls strlen",weak-inferred,Features::Weapons::Backends::GenericWeaponBackend,32
+0x779b0,"Features::Weapons::Backends::ArcCWWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::ArcCWWeaponBackend,5
+0x779c0,"calls memset",weak-inferred,Features::Weapons::Backends::CSGOWeaponBackend,4
+0x77cc0,"Primary",weak-inferred,Features::Weapons::Backends::CSGOWeaponBackend,9
+0x77ff0,"calls strlen",weak-inferred,Features::Weapons::Backends::HL2WeaponBackend,1
+0x78040,"Features::Weapons::Backends::HL2WeaponBackend::leaf_stub",structural,Features::Weapons::Backends::HL2WeaponBackend,0
+0x78050,"Features::Weapons::Backends::HL2WeaponBackend::leaf_stub",structural,Features::Weapons::Backends::HL2WeaponBackend,2
+0x781d0,"weapon_pistol",weak-inferred,Features::Weapons::Backends::HL2WeaponBackend,32
+0x78300,"weapon_pistol",weak-inferred,Features::Weapons::Backends::HL2WeaponBackend,5
+0x783d0,"calls sqrtf",weak-inferred,Features::Weapons::Backends::CW20WeaponBackend,32
+0x789a0,"Features::Weapons::Backends::CW20WeaponBackend::leaf_stub",structural,Features::Weapons::Backends::CW20WeaponBackend,0
+0x789b0,"Features::Weapons::Backends::CW20WeaponBackend::leaf_stub",structural,Features::Weapons::Backends::CW20WeaponBackend,33
+0x789c0,"calls strlen",weak-inferred,Features::Weapons::Backends::CW20WeaponBackend,1
+0x78a70,"calls free",weak-inferred,Features::Weapons::Backends::CW20WeaponBackend,2
+0x78c00,"CurCone",weak-inferred,Features::Weapons::Backends::CW20WeaponBackend,25
+0x78fc0,"""DT_BasePlayer""",weak-inferred,Features::Weapons::Backends::CW20WeaponBackend,5
+0x79040,"vstdlib.dll",weak-inferred,Features::Weapons::Backends::CW20WeaponBackend,4
+0x79260,"FireMode",weak-inferred,Features::Weapons::Backends::CW20WeaponBackend,9
+0x794a0,"[CW20-DIAG] cone(cached=%.4f proj=%.4f live=%.4f) viewaff(cached=%.4f live=%.4f) maxinc=%.3f | rcs=%d nvr=(%.3f,%.3f) punchNow=(%.3f,%.3f) drift=(%.3f,%.3f)",strong-inferred,Features::Weapons::Backends::CW20WeaponBackend,30
+0x79b30,"Features::Weapons::Backends::CWBaseWeaponBackend::get_field_58",structural,Features::Weapons::Backends::CWBaseWeaponBackend,34
+0x79b80,"Features::Weapons::Backends::CWBaseWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::CWBaseWeaponBackend,36
+0x79d80,"Features::Weapons::Backends::CWBaseWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::CWBaseWeaponBackend,0
+0x79d90,"calls free",weak-inferred,Features::Weapons::Backends::CWBaseWeaponBackend,2
+0x79e70,"ViewAff",weak-inferred,Features::Weapons::Backends::CWBaseWeaponBackend,25
+0x7a240,"calls sqrtf",weak-inferred,Features::Weapons::Backends::CWBaseWeaponBackend,32
+0x7a3f0,"ViewAff",weak-inferred,Features::Weapons::Backends::CWBaseWeaponBackend,31
+0x7a750,"ViewAff",weak-inferred,Features::Weapons::Backends::CWBaseWeaponBackend,30
+0x7ad60,"Features::Weapons::Backends::SWBWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::SWBWeaponBackend,34
+0x7ad70,"Features::Autowall::SWBAutowall::leaf_stub",structural,Features::Autowall::SWBAutowall,1
+0x7ad80,"calls free",weak-inferred,Features::Weapons::Backends::SWBWeaponBackend,2
+0x7b580,"Features::Weapons::Backends::UTSWBWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::UTSWBWeaponBackend,0
+0x7b620,"sv_ut_swb_bullet_debug",weak-inferred,Features::Weapons::Backends::UTSWBWeaponBackend,1
+0x7b6a0,"sv_ut_swb_bullet_debug",weak-inferred,Features::Weapons::Backends::UTSWBWeaponBackend,2
+0x7b7b0,"[UTSWB] cache: convar=%d confirmed=%d m9k=%d viewaff=%d lastview=%d layout=%s cone=%.4f maxinc=%.3f basemul=%.3f",strong-inferred,Features::Weapons::Backends::UTSWBWeaponBackend,25
+0x7c030,"Features::Weapons::Backends::UTSWBWeaponBackend::field_compare_30_54",structural,Features::Weapons::Backends::UTSWBWeaponBackend,33
+0x7c0e0,"vstdlib.dll",weak-inferred,Features::Weapons::Backends::UTSWBWeaponBackend,4
+0x7c5e0,"[UTSWB-DIAG] NOT CONFIRMED (convar=%d) -- stock CW20 fallback active",strong-inferred,Features::Weapons::Backends::UTSWBWeaponBackend,30
+0x7ca80,"calls strlen",weak-inferred,Features::Weapons::Backends::TTTWeaponBackend,1
+0x7cb00,"Features::Weapons::Backends::TTTWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::TTTWeaponBackend,0
+0x7cb10,"Features::Weapons::Backends::TTTWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::TTTWeaponBackend,2
+0x7cb60,"GetPrimaryCone",weak-inferred,Features::Weapons::Backends::TTTWeaponBackend,25
+0x7cd00,"Features::Weapons::Backends::TFAWeaponBackend::get_field_08",structural,Features::Weapons::Backends::TFAWeaponBackend,32
+0x7cd20,"Features::Autowall::M9KAutowall::leaf_stub",structural,Features::Autowall::M9KAutowall,1
+0x7cf70,"calls strlen",weak-inferred,Features::Weapons::Backends::M9KWeaponBackend,1
+0x7cfe0,"Features::Weapons::Backends::M9KWeaponBackend::vfunc02",weak-inferred,Features::Weapons::Backends::M9KWeaponBackend,2
+0x7d830,"Automatic",weak-inferred,Features::Weapons::Backends::M9KWeaponBackend,25
+0x7d910,"calls strlen",weak-inferred,Features::Weapons::Backends::M9KWeaponBackend,32
+0x7dad0,"Features::Weapons::Backends::M9KWeaponBackend::field_compare_08_10_12",structural,Features::Weapons::Backends::M9KWeaponBackend,9
+0x7de20,"Features::Weapons::Backends::PTPWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::PTPWeaponBackend,0
+0x7df40,"calls strlen",weak-inferred,Features::Weapons::Backends::PTPWeaponBackend,1
+0x7df80,"""ptp_weapon_base""",weak-inferred,Features::Weapons::Backends::PTPWeaponBackend,2
+0x7e0a0,"""ptp_weapon_base""",weak-inferred,Features::Weapons::Backends::PTPWeaponBackend,3
+0x7e100,"Primary",weak-inferred,Features::Weapons::Backends::PTPWeaponBackend,25
+0x7e530,"""DT_BasePlayer""",weak-inferred,Features::Weapons::Backends::PTPWeaponBackend,27
+0x7e5c0,"[PTP] cone=%.5f derived=%d live=%.5f iron=%d dead=%d ground=%d dialect=%s",strong-inferred,Features::Weapons::Backends::PTPWeaponBackend,32
+0x7e730,"Features::Weapons::Backends::PTPWeaponBackend::field_compare_08_20",structural,Features::Weapons::Backends::PTPWeaponBackend,10
+0x7e760,"Features::Weapons::Backends::PTPWeaponBackend::field_compare_08_1c",structural,Features::Weapons::Backends::PTPWeaponBackend,7
+0x7e790,"calls strlen",weak-inferred,Features::Weapons::Backends::HVH2WeaponBackend,1
+0x7e8d0,"HVH2/CSS",weak-inferred,Features::Weapons::Backends::HVH2WeaponBackend,0
+0x7e8e0,"Features::Weapons::Backends::HVH2WeaponBackend::leaf_stub",structural,Features::Weapons::Backends::HVH2WeaponBackend,2
+0x7e950,"Primary",weak-inferred,Features::Weapons::Backends::HVH2WeaponBackend,32
+0x7ec80,"Features::Weapons::Backends::FAS2WeaponBackend::leaf_stub",structural,Features::Weapons::Backends::FAS2WeaponBackend,33
+0x7ecf0,"calls strlen",weak-inferred,Features::Weapons::Backends::FAS2WeaponBackend,1
+0x7ed60,"Features::Weapons::Backends::FAS2WeaponBackend::leaf_stub",structural,Features::Weapons::Backends::FAS2WeaponBackend,0
+0x7ed70,"calls free",weak-inferred,Features::Weapons::Backends::FAS2WeaponBackend,2
+0x7ee50,"vstdlib.dll",weak-inferred,Features::Weapons::Backends::FAS2WeaponBackend,23
+0x7f2a0,"Features::Autowall::TFAAutowall::leaf_stub",structural,Features::Autowall::TFAAutowall,1
+0x7f340,"calls strlen",weak-inferred,Features::Weapons::Backends::TFAWeaponBackend,1
+0x7f3d0,"calls free",weak-inferred,Features::Weapons::Backends::TFAWeaponBackend,2
+0x7f480,"Features::Weapons::Backends::TFAWeaponBackend::vfunc03",weak-inferred,Features::Weapons::Backends::TFAWeaponBackend,3
+0x7f4d0,"CalculateConeRecoil",weak-inferred,Features::Weapons::Backends::TFAWeaponBackend,25
+0x7fdb0,"CalculateConeRecoil",weak-inferred,Features::Weapons::Backends::TFAWeaponBackend,4
+0x80980,"GetAimAngle",weak-inferred,Features::Weapons::Backends::TFAWeaponBackend,5
+0x80e40,"Features::Weapons::Backends::TFAWeaponBackend::get_field_2c",structural,Features::Weapons::Backends::TFAWeaponBackend,19
+0x80e50,"[TFA-DIAG] predCT=%.17g actualCT=%.17g dTicks=%.3f cone=%.5f dev(yaw=%.3f pitch=%.3f) shots=%d ownPunch=(%.3f,%.3f) punchIsEngine=%d",strong-inferred,Features::Weapons::Backends::TFAWeaponBackend,30
+0x80f40,"GetStat",weak-inferred,Features::Weapons::Backends::TFAWeaponBackend,9
+0x81280,"calls strlen",weak-inferred,Features::Weapons::Backends::ArcCWWeaponBackend,1
+0x81350,"Features::Autowall::ArcCWAutowall::leaf_stub",structural,Features::Autowall::ArcCWAutowall,1
+0x81360,"calls free",weak-inferred,Features::Weapons::Backends::ArcCWWeaponBackend,2
+0x81490,"IsValid",weak-inferred,Features::Weapons::Backends::ArcCWWeaponBackend,25
+0x82ed0,"""lua_shared.dll""",weak-inferred,Features::Weapons::Backends::ArcCWWeaponBackend,4
+0x83110,"GetBuff",weak-inferred,Features::Weapons::Backends::ArcCWWeaponBackend,9
+0x83620,"Features::Weapons::Backends::ArcCWWeaponBackend::field_compare_48_58_60_64_68_69_6a_6b_6c",structural,Features::Weapons::Backends::ArcCWWeaponBackend,7
+0x83690,"""DT_BaseCombatWeapon""",weak-inferred,Features::Weapons::Backends::ArcCWWeaponBackend,8
+0x83720,"calls strlen",weak-inferred,Features::Weapons::Backends::CSGOWeaponBackend,1
+0x83880,"Features::Weapons::Backends::CSGOWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::CSGOWeaponBackend,0
+0x83890,"Features::Weapons::Backends::CSGOWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::CSGOWeaponBackend,2
+0x83920,"Primary",weak-inferred,Features::Weapons::Backends::CSGOWeaponBackend,32
+0x83b80,"""DT_BasePlayer""",weak-inferred,Features::Weapons::Backends::CSGOWeaponBackend,5
+0x83ef0,"Features::Autowall::SWCSAutowall::leaf_stub",structural,Features::Autowall::SWCSAutowall,1
+0x83f80,"weapon_swcs_",weak-inferred,Features::Weapons::Backends::SWCSWeaponBackend,1
+0x84050,"weapon_swcs_",weak-inferred,Features::Weapons::Backends::SWCSWeaponBackend,2
+0x84110,"weapon_swcs_",weak-inferred,Features::Weapons::Backends::SWCSWeaponBackend,3
+0x841b0,"GetMaxSpeed",weak-inferred,Features::Weapons::Backends::SWCSWeaponBackend,25
+0x857f0,"""DT_BasePlayer""",weak-inferred,Features::Weapons::Backends::SWCSWeaponBackend,27
+0x860c0,"[SWCS-NS] swcs_weapon_sync_seed 0 -- server and client seed the spread from unshared table CRCs, cone not predictable",strong-inferred,Features::Weapons::Backends::SWCSWeaponBackend,4
+0x86690,"""DT_BasePlayer""",weak-inferred,Features::Weapons::Backends::SWCSWeaponBackend,5
+0x86780,"Features::Weapons::Backends::SWCSWeaponBackend::get_field_21",structural,Features::Weapons::Backends::SWCSWeaponBackend,7
+0x86790,"Features::Weapons::Backends::SWCSWeaponBackend::get_field_22",structural,Features::Weapons::Backends::SWCSWeaponBackend,9
+0x867a0,"Features::Weapons::Backends::SWCSWeaponBackend::field_compare_1c_20",structural,Features::Weapons::Backends::SWCSWeaponBackend,10
+0x867c0,"calls strlen",weak-inferred,Features::Weapons::Backends::CombineWeapWeaponBackend,1
+0x86920,"CombineWeaponry",weak-inferred,Features::Weapons::Backends::CombineWeapWeaponBackend,0
+0x86930,"Features::Weapons::Backends::CombineWeapWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::CombineWeapWeaponBackend,2
+0x869c0,"CurCone",weak-inferred,Features::Weapons::Backends::CombineWeapWeaponBackend,32
+0x86bf0,"calls strlen",weak-inferred,Features::Weapons::Backends::ARC9WeaponBackend,1
+0x86cc0,"Features::Autowall::ARC9Autowall::leaf_stub",structural,Features::Autowall::ARC9Autowall,1
+0x86cd0,"calls free",weak-inferred,Features::Weapons::Backends::ARC9WeaponBackend,2
+0x87090,"Spread",weak-inferred,Features::Weapons::Backends::ARC9WeaponBackend,25
+0x88980,"[ARC9-NS] %s dist=%.1f baseTick=%d bestTick=%d luaTick=%d tickoff=%d lat=%d choke=%d win=%d spread=%.4f dbldisp=%d shoot=(%.3f,%.3f) rnd=(%.3f,%.3f) comp=(%.4f,%.4f) cmd#%d",strong-inferred,Features::Weapons::Backends::ARC9WeaponBackend,4
+0x89250,"""DT_BasePlayer""",weak-inferred,Features::Weapons::Backends::ARC9WeaponBackend,5
+0x892c0,"Features::Weapons::Backends::ARC9WeaponBackend::field_leaf_28_29_2a",structural,Features::Weapons::Backends::ARC9WeaponBackend,7
+0x892e0,"Features::Weapons::Backends::ARC9WeaponBackend::get_field_2b",structural,Features::Weapons::Backends::ARC9WeaponBackend,9
+0x892f0,"[ARC9-NS] lua tick offset calibrated: now %d (measured %+d)",strong-inferred,Features::Weapons::Backends::ARC9WeaponBackend,31
+0x893a0,"[ARC9-DIAG] predTick=%d actualTick=%d off=%d luaTickOffset=%d loopback=%d path=%d",strong-inferred,Features::Weapons::Backends::ARC9WeaponBackend,30
+0x89430,"calls strlen",weak-inferred,Features::Weapons::Backends::TacRPWeaponBackend,1
+0x89500,"Features::Autowall::TacRPAutowall::leaf_stub",structural,Features::Autowall::TacRPAutowall,1
+0x89510,"calls free",weak-inferred,Features::Weapons::Backends::TacRPWeaponBackend,2
+0x89640,"GetOwner",weak-inferred,Features::Weapons::Backends::TacRPWeaponBackend,25
+0x8bdf0,"[CVAR-LAYOUT] xorOk=%d (str@0x48 plain, f@0x54/n@0x58 xor low32(obj)) valueObj=%p this=%p",strong-inferred,Features::Weapons::Backends::TacRPWeaponBackend,4
+0x8d310,"Features::Weapons::Backends::TacRPWeaponBackend::field_leaf_5d_5e_60",structural,Features::Weapons::Backends::TacRPWeaponBackend,7
+0x8d330,"Features::Weapons::Backends::TacRPWeaponBackend::get_field_61",structural,Features::Weapons::Backends::TacRPWeaponBackend,9
+0x8d340,"Features::Weapons::Backends::TacRPWeaponBackend::field_leaf_64_68",structural,Features::Weapons::Backends::TacRPWeaponBackend,11
+0x8d3a0,"Features::Weapons::Backends::TacRPWeaponBackend::field_leaf_64_68_6c",structural,Features::Weapons::Backends::TacRPWeaponBackend,12
+0x8d3f0,"ZS/SunRust",weak-inferred,Features::Weapons::Backends::ZSWeaponBackend,0
+0x8d7f0,"""weapon_zs_basemelee""",weak-inferred,Features::Weapons::Backends::ZSWeaponBackend,2
+0x8d860,"weapon_zs_",weak-inferred,Features::Weapons::Backends::ZSWeaponBackend,1
+0x8ef90,"""Deliberation""",weak-inferred,Features::Weapons::Backends::ZSWeaponBackend,27
+0x91350,"[ZS] dialect=%s (fbi=%d seedTable=%d preShot=%d legacy=%d)",strong-inferred,Features::Weapons::Backends::ZSWeaponBackend,25
+0x92490,"""GetFireMode""",weak-inferred,Features::Weapons::Backends::ZSWeaponBackend,10
+0x92500,"""Deliberation""",weak-inferred,Features::Weapons::Backends::ZSWeaponBackend,32
+0x92570,"[ZS-SHOT] SKIP (%s) mode=%d class=%s",strong-inferred,Features::Weapons::Backends::ZSWeaponBackend,4
+0x93310,"""DT_BasePlayer""",weak-inferred,Features::Weapons::Backends::ZSWeaponBackend,5
+0x933d0,"Features::Weapons::Backends::ZSWeaponBackend::get_field_08",structural,Features::Weapons::Backends::ZSWeaponBackend,14
+0x933e0,"Features::Weapons::Backends::ZSWeaponBackend::get_field_08",structural,Features::Weapons::Backends::ZSWeaponBackend,6
+0x933f0,"Features::Weapons::Backends::ZSWeaponBackend::get_field_0d",structural,Features::Weapons::Backends::ZSWeaponBackend,9
+0x9a8b0,"Z-City/Homigrad",weak-inferred,Features::Weapons::Backends::ZCityWeaponBackend,0
+0x9a8c0,"lastShoot",weak-inferred,Features::Weapons::Backends::ZCityWeaponBackend,24
+0x9a9f0,"calls memset",weak-inferred,Features::Weapons::Backends::ZCityWeaponBackend,26
+0x9ac90,"calls strlen",weak-inferred,Features::Weapons::Backends::ZCityWeaponBackend,1
+0x9ad30,"homigrad_base",weak-inferred,Features::Weapons::Backends::ZCityWeaponBackend,2
+0x9ae90,"""homigrad_base""",weak-inferred,Features::Weapons::Backends::ZCityWeaponBackend,3
+0x9aea0,"[ZCITY-EYE] bullet redirect %s (weapon method)",strong-inferred,Features::Weapons::Backends::ZCityWeaponBackend,25
+0x9ea20,"Features::Weapons::Backends::ZCityWeaponBackend::field_compare_08_ab_ad_ae_b0_b1_b2",structural,Features::Weapons::Backends::ZCityWeaponBackend,7
+0x9ea70,"""DT_BaseCombatWeapon""",weak-inferred,Features::Weapons::Backends::ZCityWeaponBackend,8
+0x9eb90,"Features::Weapons::Backends::ZCityWeaponBackend::field_compare_a9",structural,Features::Weapons::Backends::ZCityWeaponBackend,10
+0x9ebc0,"""DT_BaseFlex""",weak-inferred,Features::Weapons::Backends::ZCityWeaponBackend,4
+0x9f1a0,"[ZCITY-TICK] HELD slew=%.2f d=(%.4f,%.4f) band=%.4f est=(%.4f,%.4f) got=(%.4f,%.4f) hold=%d",strong-inferred,Features::Weapons::Backends::ZCityWeaponBackend,28
+0xa0530,"[ZCITY-TSTATE] busy=%d chamber=%d canuse=%d auto=%d cyl=%d next=%.3f now=%.3f cmd#%d",strong-inferred,Features::Weapons::Backends::ZCityWeaponBackend,29
+0xa0bd0,"Features::Weapons::Backends::ZCityWeaponBackend::get_field_ac",structural,Features::Weapons::Backends::ZCityWeaponBackend,9
+0xa0dd0,"TPIK_CamPos",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,27
+0xa1280,"Primary",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,29
+0xa16e0,"ORP/TPIK camera",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,0
+0xa16f0,"Features::Weapons::Backends::ORPWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::ORPWeaponBackend,1
+0xa1770,"calls free",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,2
+0xa17d0,"Features::Weapons::Backends::ORPWeaponBackend::vfunc03",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,3
+0xa17e0,"Features::Weapons::Backends::ORPWeaponBackend::field_leaf_02_0b_0e_13_c0",structural,Features::Weapons::Backends::ORPWeaponBackend,26
+0xa1860,"""TPIK_CamPos""",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,25
+0xa19b0,"""DT_BaseFlex""",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,28
+0xa1bc0,"Features::Weapons::Backends::ORPWeaponBackend::field_compare_08_10_11_18",structural,Features::Weapons::Backends::ORPWeaponBackend,7
+0xa1c10,"Features::Weapons::Backends::ORPWeaponBackend::get_field_12",structural,Features::Weapons::Backends::ORPWeaponBackend,9
+0xa1c20,"TPIK_CamPos",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,23
+0xa22e0,"TPIK_CamPos",weak-inferred,Features::Weapons::Backends::ORPWeaponBackend,24
+0xa7890,"Features::Weapons::Backends::OctoWeaponBackend::leaf_stub",structural,Features::Weapons::Backends::OctoWeaponBackend,0
+0xa7920,"calls strlen",weak-inferred,Features::Weapons::Backends::OctoWeaponBackend,1
+0xa7960,"weapon_octo_base",weak-inferred,Features::Weapons::Backends::OctoWeaponBackend,2
+0xa7a10,"weapon_octo_base",weak-inferred,Features::Weapons::Backends::OctoWeaponBackend,3
+0xa7b50,"Features::Weapons::Backends::OctoWeaponBackend::field_leaf_08_10_18_20_28_30_5b_68_7c_98_a8_b0_b8_c0_c8_d0_d4",structural,Features::Weapons::Backends::OctoWeaponBackend,26
+0xa7c00,"ValveBiped.Bip01_R_Hand",weak-inferred,Features::Weapons::Backends::OctoWeaponBackend,25
+0xa87d0,"nextFire",weak-inferred,Features::Weapons::Backends::OctoWeaponBackend,29
+0xa8910,"[OCTO-TICK] probe tick=(%.2f,%.2f) render=(%.2f,%.2f) delta=(%.2f,%.2f) eye=(%.2f,%.2f) ready=%d cmd#%d",strong-inferred,Features::Weapons::Backends::OctoWeaponBackend,28
+0xa9130,"[OCTO] cone=%.5f base=%.5f stock=%d supp=%.2f ready=%d auto=%d",strong-inferred,Features::Weapons::Backends::OctoWeaponBackend,32
+0xa9290,"calls _dclass",weak-inferred,Features::Weapons::Backends::OctoWeaponBackend,13
+0xa92d0,"calls _dclass",weak-inferred,Features::Weapons::Backends::OctoWeaponBackend,7
+0xa9340,"calls _dclass",weak-inferred,Features::Weapons::Backends::OctoWeaponBackend,9
+0xacea0,"Features::Autowall::ARC9Autowall::leaf_stub",structural,Features::Autowall::ARC9Autowall,7
+0xaceb0,"returns 4",strong-inferred,Features::Autowall::ArcCWAutowall,8
+0xacec0,"Features::Autowall::ARC9Autowall::leaf_stub",structural,Features::Autowall::ARC9Autowall,10
+0xae6b0,"Features::Autowall::ArcCWAutowall::leaf_stub",structural,Features::Autowall::ArcCWAutowall,2
+0xae6e0,"GetBuff",weak-inferred,Features::Autowall::ArcCWAutowall,3
+0xae870,"Features::Autowall::ArcCWAutowall::field_leaf_08_11_14_18",structural,Features::Autowall::ArcCWAutowall,4
+0xae8a0,"Features::Autowall::ArcCWAutowall::field_leaf_0c_10",structural,Features::Autowall::ArcCWAutowall,5
+0xae8b0,"Features::Autowall::ARC9Autowall::get_field_08",structural,Features::Autowall::ARC9Autowall,6
+0xae8c0,"Features::Autowall::ArcCWAutowall::vfunc11",weak-inferred,Features::Autowall::ArcCWAutowall,11
+0xaecc0,"Features::Autowall::ARC9Autowall::leaf_stub",structural,Features::Autowall::ARC9Autowall,2
+0xaecf0,"GetProcessedValue",weak-inferred,Features::Autowall::ARC9Autowall,3
+0xaeeb0,"Features::Autowall::ARC9Autowall::field_leaf_08_1c_1d",structural,Features::Autowall::ARC9Autowall,4
+0xaeed0,"Features::Autowall::ARC9Autowall::field_leaf_10_14",structural,Features::Autowall::ARC9Autowall,5
+0xaeee0,"Features::Autowall::ARC9Autowall::get_field_18",structural,Features::Autowall::ARC9Autowall,8
+0xaef10,"Features::Autowall::ARC9Autowall::vfunc11",weak-inferred,Features::Autowall::ARC9Autowall,11
+0xaf190,"Features::Autowall::TacRPAutowall::leaf_stub",structural,Features::Autowall::TacRPAutowall,2
+0xaf1c0,"GetValue",weak-inferred,Features::Autowall::TacRPAutowall,3
+0xaf2a0,"Features::Autowall::TacRPAutowall::field_leaf_08_11_12",structural,Features::Autowall::TacRPAutowall,4
+0xaf2c0,"Features::Autowall::TacRPAutowall::vfunc11",weak-inferred,Features::Autowall::TacRPAutowall,11
+0xaf860,"Features::Autowall::SWCSAutowall::leaf_stub",structural,Features::Autowall::SWCSAutowall,2
+0xaf890,"swcs_penetration_type",weak-inferred,Features::Autowall::SWCSAutowall,3
+0xafa80,"Features::Autowall::SWCSAutowall::field_leaf_08_1c_20",structural,Features::Autowall::SWCSAutowall,4
+0xafaa0,"Features::Autowall::SWCSAutowall::get_field_14",structural,Features::Autowall::SWCSAutowall,7
+0xafae0,"Features::Autowall::SWCSAutowall::field_leaf_14_30_34_38",structural,Features::Autowall::SWCSAutowall,9
+0xafb30,"calls powf",weak-inferred,Features::Autowall::SWCSAutowall,10
+0xafb90,"tools/toolsblockbullets",weak-inferred,Features::Autowall::SWCSAutowall,11
+0xaff60,"Features::Autowall::TFAAutowall::leaf_stub",structural,Features::Autowall::TFAAutowall,2
+0xaff90,"GetStatL",weak-inferred,Features::Autowall::TFAAutowall,3
+0xb02c0,"Features::Autowall::TFAAutowall::field_leaf_08_24_25",structural,Features::Autowall::TFAAutowall,4
+0xb02e0,"Features::Autowall::TFAAutowall::get_field_20",structural,Features::Autowall::TFAAutowall,8
+0xb02f0,"Features::Autowall::TFAAutowall::vfunc11",weak-inferred,Features::Autowall::TFAAutowall,11
+0xb0760,"Features::Autowall::M9KAutowall::leaf_stub",structural,Features::Autowall::M9KAutowall,2
+0xb0790,"Penetration",weak-inferred,Features::Autowall::M9KAutowall,3
+0xb09d0,"Features::Autowall::M9KAutowall::field_leaf_08_11_12_15",structural,Features::Autowall::M9KAutowall,4
+0xb0a00,"Features::Autowall::M9KAutowall::vfunc11",weak-inferred,Features::Autowall::M9KAutowall,11
+0xb0b70,"CW 2.0",weak-inferred,Features::Autowall::CW20Autowall,1
+0xb0b80,"Features::Autowall::CW20Autowall::leaf_stub",structural,Features::Autowall::CW20Autowall,2
+0xb0bd0,"Damage",weak-inferred,Features::Autowall::CW20Autowall,3
+0xb0d30,"Features::Autowall::CW20Autowall::field_leaf_08_19_1a",structural,Features::Autowall::CW20Autowall,4
+0xb0d50,"Features::Autowall::CW20Autowall::field_leaf_14_18",structural,Features::Autowall::CW20Autowall,5
+0xb0d60,"returns 1",strong-inferred,Features::Autowall::CW20Autowall,8
+0xb0d70,"Features::Autowall::CW20Autowall::get_field_10",structural,Features::Autowall::CW20Autowall,7
+0xb0db0,"Features::Autowall::CW20Autowall::vfunc11",weak-inferred,Features::Autowall::CW20Autowall,11
+0xb1050,"Features::Autowall::SWBAutowall::leaf_stub",structural,Features::Autowall::SWBAutowall,2
+0xb10a0,"FA:S 2.0",weak-inferred,Features::Autowall::FAS2Autowall,1
+0xb10b0,"Features::Autowall::FAS2Autowall::leaf_stub",structural,Features::Autowall::FAS2Autowall,2
+0xb10e0,"Damage",weak-inferred,Features::Autowall::FAS2Autowall,3
+0xb1200,"Features::Autowall::FAS2Autowall::field_leaf_08_15_16",structural,Features::Autowall::FAS2Autowall,4
+0xb1220,"Homigrad",weak-inferred,Features::Autowall::HomigradAutowall,1
+0xb1230,"Z-City/Homigrad",weak-inferred,Features::Autowall::HomigradAutowall,2
+0xb1260,"Features::Autowall::HomigradAutowall::leaf_stub",structural,Features::Autowall::HomigradAutowall,4
+0xb12c0,"Features::Autowall::HomigradAutowall::leaf_stub",structural,Features::Autowall::HomigradAutowall,5
+0xb12d0,"Features::Autowall::HomigradAutowall::leaf_stub",structural,Features::Autowall::HomigradAutowall,6
+0xb12e0,"Features::Autowall::HomigradAutowall::field_compare_08",structural,Features::Autowall::HomigradAutowall,10
+0xb1350,"Features::Autowall::HomigradAutowall::set_field_08",structural,Features::Autowall::HomigradAutowall,9
+0xb1360,"calls asinf",weak-inferred,Features::Autowall::HomigradAutowall,11
+0xb1760,"""CWeaponSWEP""",weak-inferred,Features::Autowall::AutowallFeature,6
+0xb7ce0,"calls memset",weak-inferred,Features::FakePing::FakePingFeature,16
+0xb7d00,"[FAKEPING] %s: +%dms achieved of %dms wanted, real %.0fms (target total %dms) -> band centres at cmd age %dms, records=%d armed=%d",strong-inferred,Features::FakePing::FakePingFeature,1
+0xbc360,"[RESOLVER] player_hurt subscribed but never delivered on this server -- verdicts come from the health poll (kills always count)",strong-inferred,Features::HVH::Resolver::ResolverFeature,1
+0xbc790,"calls memset",weak-inferred,Features::HVH::Resolver::ResolverFeature,16
+0xbcc10,"calls IsBadReadPtr, _dclass",weak-inferred,Features::HVH::Resolver::ResolverFeature,11
+0xbccd0,"calls __std_type_info_compare",weak-inferred,Features::HVH::AntiAim::AntiAimFeature,1
+0xbdd80,"[ANIMPROBE] server.dll went away or moved (%p -> %p) - disarming",strong-inferred,Features::HVH::AntiAim::AntiAimFeature,2
+0xbf160,"rotate",weak-inferred,Features::HVH::Visualize::VisualizeFeature,6
+0xc0b20,"[LAGCOMP] interp abuse restored on shutdown (%.3f / %.1f)",strong-inferred,Features::HVH::LagComp::LagCompFeature,16
+0xc0db0,"[LAGCOMP] interp abuse ON (was %.3f / %.1f)",strong-inferred,Features::HVH::LagComp::LagCompFeature,1
+0xc2970,"[BHOP] sim said jumped, engine kept us grounded #%d -- gamemode blocks the jump from Lua; heuristic path for this contact",strong-inferred,Features::BunnyHop::BunnyHopFeature,1
+0xc2e90,"""DT_BaseEntity""",weak-inferred,Features::BunnyHop::BunnyHopFeature,2
+0xc3970,"""DT_BasePlayer""",weak-inferred,Features::EdgeJump::EdgeJumpFeature,1
+0xc3bc0,"[EDGEJUMP] fire #%d speed=%.0f source=%s at (%.0f %.0f %.0f)",strong-inferred,Features::EdgeJump::EdgeJumpFeature,2
+0xc95d0,"cl_extrapolate",weak-inferred,Features::Backtrack::BacktrackFeature,16
+0xc9640,"calls IsBadReadPtr",weak-inferred,Features::Backtrack::BacktrackFeature,1
+0xc9910,"[BT-CLOSED] no legal tick: floor %d > ceiling %d. band centre %.0fms +-%.0fms, restorable %.0fms, choke %d ticks -> margins eat %.0fms off the floor and %.0fms off the ceiling. fakeping %.0fms pushed the band out and lerp %.0fms spent the unlag budget it shares with the shift. Back off ONE of fakeping / interp abuse / fakelag and the window reopens",strong-inferred,Features::Backtrack::BacktrackFeature,2
+0xcb010,"calls memset",weak-inferred,Features::Aimbot::AimbotFeature,16
+0xd34a0,"[AIM] shot held: post-kill snap delay, no tick named, the round could not register (#%d)",strong-inferred,Features::Aimbot::AimbotFeature,2
+0xd3f50,"aim %.1f/%.1f  cam %.1f  ell %.2f",weak-inferred,Features::Aimbot::AimbotFeature,6
+0xd5310,"[EXPLOIT] cl_lagcompensation -> %d",strong-inferred,Features::RageAim::RageAimFeature,2
+0xd64c0,"[EXPLOIT] cl_lagcompensation restored on teardown",strong-inferred,Features::RageAim::RageAimFeature,16
+0xd7090,"[AF-SEMI] dt=%.3f cps=%.1f readyLag=%.3f off=%dtick floor=%.3f",strong-inferred,Features::AutoFire::AutoFireFeature,2
+0xd8040,"calls strncmp",weak-inferred,Features::PTPCompat::PTPCompatFeature,2
+0xd8bc0,"weapon_octo_",weak-inferred,Features::OctoCompat::OctoTickFeature,6
+0xd8d60,"""DT_BasePlayer""",weak-inferred,Features::OctoCompat::OctoTickFeature,2
+0xd9160,"[OCTO-IMPACT] candidate srcErr=%.1fu modelErr=%.3fdeg aimErr=%.3fdeg miss=%.1fu range=%.0fu lag=%.3fs pitchScale=%.3f cmd#%d tgt=%d",strong-inferred,Features::OctoCompat::OctoTickFeature,0
+0xd9710,"weapon_octo_",weak-inferred,Features::OctoCompat::OctoCompatFeature,2
+0xd9940,"weapon_octo_",weak-inferred,Features::OctoCompat::OctoCompatFeature,7
+0xdbc70,"recoilmul",weak-inferred,Features::ZCityCompat::ZCityCompatFeature,13
+0xdbeb0,"""recoilmul""",weak-inferred,Features::ZCityCompat::ZCityCompatFeature,14
+0xdc060,"""DT_BasePlayer""",weak-inferred,Features::ZCityCompat::ZCityCompatFeature,2
+0xdc410,"[ZCITY-KILL] idx=%d spread=%d recoil=%d cone=%d gate=%d -> %s",strong-inferred,Features::ZCityCompat::ZCityCompatFeature,6
+0xdc810,"""recoilmul""",weak-inferred,Features::ZCityCompat::ZCityCompatFeature,16
+0xde5c0,"Features::LeyHitregCompat::LeyHitregCompatFeature::leaf_stub",structural,Features::LeyHitregCompat::LeyHitregCompatFeature,1
+0xde5e0,"[LEYHITREG] applied dev=(%.4f,%.4f) curtime=%.4f cmd=%d clip-tick",strong-inferred,Features::LeyHitregCompat::LeyHitregCompatFeature,2
+0xde920,"""CWeaponSWEP""",weak-inferred,Features::Nospread::NospreadFeature,6
+0xde9b0,"""DT_BasePlayer""",weak-inferred,Features::Nospread::NospreadFeature,1
+0xdeb70,"[LEYHITREG] shot-command dev=(%.4f,%.4f) curtime=%.4f cmd=%d",strong-inferred,Features::Nospread::NospreadFeature,2
+0xdf780,"[NS-VERIFY-PHYS] err=(%.3f,%.3f) flight=(%.3f,%.3f) want=(%.3f,%.3f) srcdist=%.1f dmg=%.1f tick=%d",strong-inferred,Features::Nospread::NospreadFeature,10
+0xe0910,"Features::Nospread::NospreadFeature::vfunc14",weak-inferred,Features::Nospread::NospreadFeature,14
+0xe0950,"Features::Nospread::NospreadFeature::vfunc13",weak-inferred,Features::Nospread::NospreadFeature,13
+0xe1280,"calls asinf, atan2f, sqrtf",weak-inferred,Features::Autostrafe::AutostrafeFeature,1
+0xe2040,"calls cosf, sinf",weak-inferred,Features::MoveFix::MoveFixFeature,2
+0xe2580,"[TB] g_pEngineTrace is NULL!",strong-inferred,Features::Triggerbot::TriggerbotFeature,2
+0xf1200,"[LUAEDITOR] queued %d bytes for %s",strong-inferred,Features::LuaLoader::LuaLoaderFeature,3
+0xf5a50,"unknown",weak-inferred,Features::Spectators::SpectatorsFeature,6
+0xf5e00,"Spectators",weak-inferred,Features::Spectators::SpectatorsFeature,4
+0xf7020,"%d RATE",weak-inferred,Features::Watermark::WatermarkFeature,4
+0xf9f70,"##mayrr_damagefeed",weak-inferred,Features::DamageFeed::DamageFeedFeature,4
+0xfab80,"unknown",weak-inferred,Features::Visual::TeamList::TeamListFeature,6
+0xff190,"ESP_PlayerName",weak-inferred,Features::Visual::UserGroupList::GroupListFeature,6
+0x103eb0,"calls GetTickCount, _Mtx_lock, _Mtx_unlock",weak-inferred,Features::NetVars::NetVarsFeature,6
+0x103fe0,"DT_HL2MP_Player",weak-inferred,Features::NoVisualRecoil::NoVisualRecoilFeature,1
+0x104860,"""DT_BasePlayer""",weak-inferred,Features::NoVisualRecoil::NoVisualRecoilFeature,10
+0x1049f0,"""DT_BasePlayer""",weak-inferred,Features::NoVisualRecoil::NoVisualRecoilFeature,13
+0x104af0,"""CWeaponSWEP""",weak-inferred,Features::NoVisualRecoil::NoVisualRecoilFeature,6
+0x104b10,"calls rand",weak-inferred,Features::NoVisualRecoil::NoVisualRecoilFeature,2
+0x1050f0,"""DT_BasePlayer""",weak-inferred,Features::NoVisualRecoil::NoVisualRecoilFeature,7
+0x105310,"calls IsBadReadPtr",weak-inferred,Features::FakeDuck::FakeDuckFeature,1
+0x105470,"calls GetCursorInfo, GetForegroundWindow",weak-inferred,Features::DoubleTap::DoubleTapFeature,2
+0x105970,"[JUMPBUG] fall #%d: %d tick(s), vz %.0f, ground never came within %.0f..%.0fu of the ducked feet -- no attempt",strong-inferred,Features::JumpBug::JumpBugFeature,1
+0x106b80,"[JUMPBUG] sent: IN_DUCK=%d IN_JUMP=%d (no sim, result next tick)",strong-inferred,Features::JumpBug::JumpBugFeature,2
+0x1074d0,"""DT_BasePlayer""",weak-inferred,Features::LookBeam::LookBeamFeature,15
+0x107da0,"calls __std_type_info_compare",weak-inferred,Features::LookBeam::LookBeamFeature,5
+0x107f80,"calls AcquireSRWLockShared, ReleaseSRWLockShared, _fdclass",weak-inferred,Features::LookBeam::LookBeamFeature,6
+0x108370,"""Model textures""",weak-inferred,Features::LookBeam::LookBeamFeature,9
+0x108840,"Features::LookBeam::LookBeamFeature::set_field_1a70",structural,Features::LookBeam::LookBeamFeature,16
+0x10cc70,"[GLOW] toggle -> %s (through walls=%d, style=%s, blur=%.1f, sharp=%dpx)",strong-inferred,Features::ChamsGlow::ChamsGlowFeature,5
+0x10ceb0,"calls memset",weak-inferred,Features::ChamsGlow::ChamsGlowFeature,16
+0x10d320,"##Background",weak-inferred,Features::Radar::RadarFeature,4
+0x10dfd0,"calls cosf, sinf, sqrtf",weak-inferred,Features::Radar::RadarFeature,6
+0x10f600,"Features::BulletTracers::BulletTracersFeature::field_compare_20_24_28_2c",structural,Features::BulletTracers::BulletTracersFeature,12
+0x10f680,"calls rand",weak-inferred,Features::BulletTracers::BulletTracersFeature,11
+0x1103a0,"calls AcquireSRWLockShared, ReleaseSRWLockShared, _fdclass",weak-inferred,Features::BulletTracers::BulletTracersFeature,6
+0x110860,"""Model textures""",weak-inferred,Features::BulletTracers::BulletTracersFeature,9
+0x111370,"cable/cable",weak-inferred,Features::BulletPath::BulletPathFeature,9
+0x1117e0,"%.0f  %dp %dr",weak-inferred,Features::BulletPath::BulletPathFeature,6
+0x112e70,"%.2f deg  %.0fu  (eye)",weak-inferred,Features::AimPoint::AimPointFeature,6
+0x113730,"Features::FreeCam::FreeCamFeature::vfunc16",weak-inferred,Features::FreeCam::FreeCamFeature,16
+0x113770,"calls IsBadReadPtr, IsBadWritePtr, powf",weak-inferred,Features::FreeCam::FreeCamFeature,7
+0x113ff0,"calls memset",weak-inferred,Features::FreeCam::FreeCamFeature,2
+0x11a0c0,"""DT_BaseCombatCharacter""",weak-inferred,Features::AutoReload::AutoReloadFeature,2
+0x11ca90,"tier0.dll",weak-inferred,Features::LoadingUrl::LoadingUrlFeature,4
+0x11cf40,"[LOADURL] %s",strong-inferred,Features::LoadingUrl::LoadingUrlFeature,1
+0x120190,"Features::ThirdPerson::ThirdPersonFeature::vfunc16",weak-inferred,Features::ThirdPerson::ThirdPersonFeature,16
+0x120220,"calls __std_type_info_compare",weak-inferred,Features::ThirdPerson::ThirdPersonFeature,7
+0x120970,"calls IsBadReadPtr, IsBadWritePtr, _fdclass",weak-inferred,Features::CameraView::CameraViewFeature,7
+0x121360,"[VMCHAMS] DME vm ent %d '%s' (pass=%d)",strong-inferred,Features::VMChams::VMChamsFeature,15
+0x128e30,"calls IsBadReadPtr",weak-inferred,Features::EntityChams::EntityChamsFeature,15
+0x129810,"calls _Mtx_lock, _Mtx_unlock, __acrt_iob_func",weak-inferred,Features::ForceDraw::ForceDrawFeature,1
+0x12a3a0,"""models/debug/debugwhite""",weak-inferred,Features::Fullbright::FullbrightFeature,1
+0x12a870,"calls __std_type_info_compare",weak-inferred,Features::Fullbright::FullbrightFeature,7
+0x12f300,"[SKY] Update: want=%d sky='%s' src='%s' applied=%d texLoaded=%d",strong-inferred,Features::SkyEditor::SkyEditorFeature,1
+0x130140,"""sv_skyname""",weak-inferred,Features::SkyEditor::SkyEditorFeature,7
+0x130b50,"calls __std_type_info_compare",weak-inferred,Features::WorldTint::WorldTintFeature,1
+0x131080,"calls __std_type_info_compare",weak-inferred,Features::WorldTint::WorldTintFeature,7
+0x13f400,"calls __std_type_info_compare",weak-inferred,Features::FakeLag::FakeLagFeature,7
+0x13f560,"calls IsBadReadPtr, sqrtf",weak-inferred,Features::FakeLag::FakeLagFeature,1
+0x13fa40,"[AIRSTUCK] auto interval=%dms avgDrop=%.1fu",strong-inferred,Features::Airstuck::AirstuckFeature,2
+0x13ffc0,"[WARP] charge=%d -> travelled %.0fu (%.1f u/tick) sv_maxusrcmdprocessticks=%s",strong-inferred,Features::Warp::WarpFeature,2
+0x140920,"[SPEED] on=%d held=%d hooks=%d factor=%.2f frametime=%.5f",strong-inferred,Features::Speedhack::SpeedhackFeature,2
+0x1438c0,"calls _Mtx_lock, _Mtx_unlock",weak-inferred,Features::KillSay::KillSayFeature,16
+0x143970,"say """,weak-inferred,Features::KillSay::KillSayFeature,1
+0x144390,"say """,weak-inferred,Features::ChatSpam::ChatSpamFeature,1
+0x1463a0,"Features::Toolbox::RawSetConVarMessage::set_field_18",structural,Features::Toolbox::RawSetConVarMessage,1
+0x1463b0,"Features::Toolbox::RawSetConVarMessage::set_field_20",structural,Features::Toolbox::RawSetConVarMessage,2
+0x1463c0,"Features::Toolbox::RawSetConVarMessage::vfunc05",weak-inferred,Features::Toolbox::RawSetConVarMessage,5
+0x146580,"Features::Toolbox::RawSetConVarMessage::get_field_20",structural,Features::Toolbox::RawSetConVarMessage,6
+0x146590,"returns 5",strong-inferred,Features::Toolbox::RawSetConVarMessage,7
+0x1465a0,"net_SetConVar",weak-inferred,Features::Toolbox::RawSetConVarMessage,9
+0x1465b0,"Features::Toolbox::RawSetConVarMessage::get_field_18",structural,Features::Toolbox::RawSetConVarMessage,10
+0x1465c0,"calls free",weak-inferred,Features::Toolbox::RawSetConVarMessage,0
+0x146600,"Features::Toolbox::RawDisconnectMessage::set_field_10",structural,Features::Toolbox::RawDisconnectMessage,1
+0x146610,"Features::Toolbox::RawDisconnectMessage::set_field_18",structural,Features::Toolbox::RawDisconnectMessage,2
+0x146620,"Features::Toolbox::RawDisconnectMessage::vfunc05",weak-inferred,Features::Toolbox::RawDisconnectMessage,5
+0x146720,"Features::Toolbox::RawDisconnectMessage::get_field_18",structural,Features::Toolbox::RawDisconnectMessage,6
+0x146730,"net_Disconnect",weak-inferred,Features::Toolbox::RawDisconnectMessage,9
+0x146740,"Features::Toolbox::RawDisconnectMessage::get_field_10",structural,Features::Toolbox::RawDisconnectMessage,10
+0x146750,"calls free",weak-inferred,Features::Toolbox::RawDisconnectMessage,0
+0x14b0a0,"UNAVAILABLE",weak-inferred,Features::Toolbox::ToolboxFeature,16
+0x14b170,"calls _Mtx_lock, _Mtx_unlock",weak-inferred,Features::Toolbox::ToolboxFeature,1
+0x14b710,"""DT_BasePlayer""",weak-inferred,Features::Toolbox::ToolboxFeature,7
+0x14b7a0,"""DT_BaseAnimating""",weak-inferred,Features::Toolbox::ToolboxFeature,15
+0x154890,"cl_timeout",weak-inferred,Features::DataCleaner::DataCleanerFeature,1
+0x157e40,"client",weak-inferred,Features::LuaFileCloak::LuaFileCloakFeature,1
+0x159690,"""DT_BaseAnimating""",weak-inferred,Features::SetSkin::SetSkinFeature,1
+0x1596a0,"""DT_BaseAnimating""",weak-inferred,Features::SetSkin::SetSkinFeature,7
+0x15a3a0,"calls free",weak-inferred,Features::DamageLogger::DamageLoggerFeature,16
+0x15ade0,"weapon_",weak-inferred,Features::DamageLogger::DamageLoggerFeature,12
+0x15b320,"calls IsBadReadPtr, strlen",weak-inferred,Features::DamageLogger::DamageLoggerFeature,1
+0x169190,"Features::Visual::ESP::Editor::Elements::BaseElement::leaf_stub",structural,Features::Visual::ESP::Editor::Elements::BaseElement,2
+0x1691b0,"Features::Visual::ESP::Editor::Elements::BaseElement::leaf_stub",structural,Features::Visual::ESP::Editor::Elements::BaseElement,5
+0x1691c0,"Features::Visual::ESP::Editor::Elements::BBoxElement::leaf_stub",structural,Features::Visual::ESP::Editor::Elements::BBoxElement,6
+0x169260,"Features::Visual::ESP::Editor::Elements::ArmorBarElement::field_compare_02_0c_10_30",structural,Features::Visual::ESP::Editor::Elements::ArmorBarElement,8
+0x1694b0,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::BaseElement,0
+0x169500,"Features::Visual::ESP::Editor::Elements::BoxElement::leaf_stub",structural,Features::Visual::ESP::Editor::Elements::BoxElement,5
+0x169510,"Features::Visual::ESP::Editor::Elements::BoxElement::get_field_40",structural,Features::Visual::ESP::Editor::Elements::BoxElement,2
+0x169520,"calls malloc",weak-inferred,Features::Visual::ESP::Editor::Elements::BoxElement,3
+0x169760,"Color",weak-inferred,Features::Visual::ESP::Editor::Elements::BoxElement,4
+0x1698d0,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::BoxElement,0
+0x169920,"returns 2",strong-inferred,Features::Visual::ESP::Editor::Elements::CircleElement,1
+0x169930,"Circle",weak-inferred,Features::Visual::ESP::Editor::Elements::CircleElement,5
+0x169940,"Features::Visual::ESP::Editor::Elements::CircleElement::get_field_58",structural,Features::Visual::ESP::Editor::Elements::CircleElement,2
+0x169960,"calls ceilf, cosf, memcpy",weak-inferred,Features::Visual::ESP::Editor::Elements::CircleElement,3
+0x169a60,"Color",weak-inferred,Features::Visual::ESP::Editor::Elements::CircleElement,4
+0x169c20,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::CircleElement,0
+0x169c70,"returns 3",strong-inferred,Features::Visual::ESP::Editor::Elements::BBoxElement,1
+0x169c80,"ESP Box",weak-inferred,Features::Visual::ESP::Editor::Elements::BBoxElement,5
+0x169c90,"Features::Visual::ESP::Editor::Elements::BBoxElement::leaf_stub",structural,Features::Visual::ESP::Editor::Elements::BBoxElement,2
+0x169cc0,"""DT_BaseEntity""",weak-inferred,Features::Visual::ESP::Editor::Elements::BBoxElement,3
+0x16aa90,"Color",weak-inferred,Features::Visual::ESP::Editor::Elements::BBoxElement,4
+0x16ad30,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::BBoxElement,0
+0x16ae70,"Health Bar",weak-inferred,Features::Visual::ESP::Editor::Elements::HealthBarElement,5
+0x16ae80,"Features::Visual::ESP::Editor::Elements::ArmorBarElement::field_leaf_48_58",structural,Features::Visual::ESP::Editor::Elements::ArmorBarElement,7
+0x16af90,"Features::Visual::ESP::Editor::Elements::ArmorBarElement::vfunc02",weak-inferred,Features::Visual::ESP::Editor::Elements::ArmorBarElement,2
+0x16b1f0,"""DT_BaseEntity""",weak-inferred,Features::Visual::ESP::Editor::Elements::HealthBarElement,11
+0x16b220,"""DT_BaseEntity""",weak-inferred,Features::Visual::ESP::Editor::Elements::HealthBarElement,12
+0x16b260,"calls floorf",weak-inferred,Features::Visual::ESP::Editor::Elements::ArmorBarElement,3
+0x16c230,"Default",weak-inferred,Features::Visual::ESP::Editor::Elements::HealthBarElement,4
+0x16c770,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::HealthBarElement,0
+0x16c800,"returns 7",strong-inferred,Features::Visual::ESP::Editor::Elements::ArmorBarElement,1
+0x16c810,"Armor Bar",weak-inferred,Features::Visual::ESP::Editor::Elements::ArmorBarElement,5
+0x16c820,"Features::Visual::ESP::Editor::Elements::ArmorBarElement::get_field_b8",structural,Features::Visual::ESP::Editor::Elements::ArmorBarElement,10
+0x16c830,"""[ARMOR] DT_PlayerResource::m_iArmor offset = 0x%X """,weak-inferred,Features::Visual::ESP::Editor::Elements::ArmorBarElement,11
+0x16c860,"""DT_GMOD_Player""",weak-inferred,Features::Visual::ESP::Editor::Elements::ArmorBarElement,12
+0x16c890,"Combine with HP bar",weak-inferred,Features::Visual::ESP::Editor::Elements::ArmorBarElement,4
+0x16c8e0,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::ArmorBarElement,0
+0x16c9e0,"Features::Visual::ESP::Editor::Elements::TextElement::leaf_stub",structural,Features::Visual::ESP::Editor::Elements::TextElement,5
+0x16c9f0,"Features::Visual::ESP::Editor::Elements::DynamicTextElement::leaf_stub",structural,Features::Visual::ESP::Editor::Elements::DynamicTextElement,6
+0x16ca00,"Features::Visual::ESP::Editor::Elements::DynamicTextElement::get_field_70",structural,Features::Visual::ESP::Editor::Elements::DynamicTextElement,7
+0x16ca20,"returns 31",strong-inferred,Features::Visual::ESP::Editor::Elements::TextElement,9
+0x16cc90,"calls strlen",weak-inferred,Features::Visual::ESP::Editor::Elements::TextElement,2
+0x16ccc0,"""DT_BaseEntity""",weak-inferred,Features::Visual::ESP::Editor::Elements::TextElement,10
+0x16d150,"calls memchr, strlen",weak-inferred,Features::Visual::ESP::Editor::Elements::TextElement,11
+0x16d2d0,"Color",weak-inferred,Features::Visual::ESP::Editor::Elements::TextElement,4
+0x16d430,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::TextElement,0
+0x16d4c0,"calls memcpy",weak-inferred,Features::Visual::ESP::Editor::Elements::CircleElement,10
+0x16e1f0,"returns 6",strong-inferred,Features::Visual::ESP::Editor::Elements::DynamicTextElement,1
+0x16e200,"Dynamic Text",weak-inferred,Features::Visual::ESP::Editor::Elements::DynamicTextElement,5
+0x16e210,"Features::Visual::ESP::Editor::Elements::DynamicTextElement::get_field_c8",structural,Features::Visual::ESP::Editor::Elements::DynamicTextElement,9
+0x16e220,"""Script """,weak-inferred,Features::Visual::ESP::Editor::Elements::DynamicTextElement,2
+0x16fd10,"""DT_BaseEntity""",weak-inferred,Features::Visual::ESP::Editor::Elements::DynamicTextElement,10
+0x16ff90,"calls strlen",weak-inferred,Features::Visual::ESP::Editor::Elements::DynamicTextElement,11
+0x170610,"Color",weak-inferred,Features::Visual::ESP::Editor::Elements::DynamicTextElement,4
+0x170e20,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::DynamicTextElement,0
+0x1911e0,"calls IsBadReadPtr",weak-inferred,Features::Visual::ESP::CGhostEntityListener,0
+0x191320,"calls _Mtx_lock, _Mtx_unlock, free",weak-inferred,Features::Visual::ESP::CGhostEntityListener,1
+0x20e220,"calls free",weak-inferred,std::D::?$collate,5
+0x20e2c0,"calls _Strxfrm, memset",weak-inferred,std::D::?$collate,4
+0x20e3f0,"calls _Strcoll",weak-inferred,std::D::?$collate,3
+0x20e450,"calls free",weak-inferred,Features::Visual::ESP::Editor::Elements::CircleElement,9
+0x20ecb0,"calls _CxxThrowException",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,14
+0x20ed00,"calls fflush",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,13
+0x20ed50,"calls _get_stream_buffer_pointers, setvbuf",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,12
+0x20ee50,"calls fsetpos",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,11
+0x20ef30,"calls _fseeki64, fgetpos",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,10
+0x20f040,"calls fwrite, memcpy",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,9
+0x20f110,"calls fread, memcpy",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,8
+0x20f260,"calls fgetc, memmove, ungetc",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,7
+0x20f4f0,"std::std::D::DU?$char_traits::?$basic_filebuf::field_leaf_20_38",structural,std::std::D::DU?$char_traits::?$basic_filebuf,6
+0x20f560,"calls ungetc",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,4
+0x20f650,"calls fputc, fwrite",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,3
+0x20f810,"calls _unlock_file",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,2
+0x20f830,"calls _lock_file",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,1
+0x20fa30,"std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf::field_compare_18_20_38_40_50_58_68_70",structural,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,11
+0x20fb60,"std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf::field_compare_18_20_38_40_50_58_68_70",structural,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,10
+0x20fd00,"std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf::field_leaf_38_40_50_68_70",structural,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,6
+0x20fd60,"std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf::field_compare_18_38_50_70",structural,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,4
+0x20fdc0,"calls free, memcpy",weak-inferred,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,3
+0x2102d0,"calls free",weak-inferred,std::D::?$collate,0
+0x2103b0,"calls free",weak-inferred,std::std::D::DU?$char_traits::?$basic_filebuf,0
+0x210510,"calls free",weak-inferred,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,0
+0x21ec40,"calls free",weak-inferred,Features::Autowall::ArcCWAutowall,0
+0x21ec70,"calls free",weak-inferred,Features::Autowall::ARC9Autowall,0
+0x21eca0,"calls free",weak-inferred,Features::Autowall::CW20Autowall,0
+0x21ecd0,"calls free",weak-inferred,Features::Autowall::SWCSAutowall,0
+0x21ed00,"calls free",weak-inferred,Features::Autowall::FAS2Autowall,0
+0x22b4d0,"calls free",weak-inferred,std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?7??Read::V<lambda_2>::?$_Func_impl_no_alloc,4
+0x22b4e0,"std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc::get_field_08",structural,std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc,5
+0x22b4f0,"std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?7??Read::V<lambda_2>::?$_Func_impl_no_alloc::leaf_stub",structural,std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?7??Read::V<lambda_2>::?$_Func_impl_no_alloc,3
+0x22b500,"calls free",weak-inferred,std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?7??Read::V<lambda_2>::?$_Func_impl_no_alloc,2
+0x22b5b0,"std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?7??Read::V<lambda_2>::?$_Func_impl_no_alloc::field_leaf_08_10_18",structural,std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?7??Read::V<lambda_2>::?$_Func_impl_no_alloc,0
+0x22b5d0,"calls free",weak-inferred,std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?2??Read::V<lambda_1>::?$_Func_impl_no_alloc,4
+0x22b5e0,"std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?2??Read::V<lambda_1>::?$_Func_impl_no_alloc::leaf_stub",structural,std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?2??Read::V<lambda_1>::?$_Func_impl_no_alloc,3
+0x22b5f0,"""table""",weak-inferred,std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?2??Read::V<lambda_1>::?$_Func_impl_no_alloc,2
+0x22b600,"std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?2??Read::V<lambda_1>::?$_Func_impl_no_alloc::field_leaf_08_10_18_20",structural,std::8::std::E::EV?$allocator::X_JAEBV?$vector::Z::std::filesystem::AEBVpath::34::YA?AUDatabase::Features::Sqlite::?2??Read::V<lambda_1>::?$_Func_impl_no_alloc,0
+0x22b700,"std::TextEditor::VTransaction::?$_Ref_count_obj2::get_field_10",structural,std::TextEditor::VTransaction::?$_Ref_count_obj2,1
+0x22b720,"calls free",weak-inferred,std::std::filesystem::U_Dir_enum_impl::?$_Ref_count_obj2,0
+0x22ef10,"calls free",weak-inferred,std::std::filesystem::U_Dir_enum_impl::?$_Ref_count_obj2,2
+0x23a350,"calls free",weak-inferred,std::std::D::DV?$regex_traits::?$_Node_class,0
+0x23a470,"Features::Visual::ESP::Editor::Elements::CircleElement::leaf_stub",structural,Features::Visual::ESP::Editor::Elements::CircleElement,11
+0x2400b0,"calls free",weak-inferred,std::D::?$_Node_str,0
+0x240fd0,"calls free",weak-inferred,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringstream,0
+0x240fdc,"calls free",weak-inferred,std::std::D::DU?$char_traits::?$basic_ifstream,0
+0x240fe8,"calls free",weak-inferred,std::std::D::DU?$char_traits::?$basic_ofstream,0
+0x240ff4,"calls free",weak-inferred,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_ostringstream,0
+0x241000,"calls free",weak-inferred,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_istringstream,0
+0x2620c0,"calls free",weak-inferred,std::std::std::TextEditor::ULineSection::V?$allocator::TextEditor::ULineSection::V?$vector::?$_Ref_count_obj2,0
+0x2620d0,"calls free",weak-inferred,std::TextEditor::VTransaction::?$_Ref_count_obj2,0
+0x262410,"calls free",weak-inferred,std::TextEditor::VTransaction::?$_Ref_count_obj2,2
+0x262440,"calls free",weak-inferred,std::std::std::TextEditor::ULineSection::V?$allocator::TextEditor::ULineSection::V?$vector::?$_Ref_count_obj2,2
+0x264990,"calls free",weak-inferred,std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc,4
+0x2649a0,"std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc::leaf_stub",structural,std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc,3
+0x2649b0,"std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc::field_compare_08",structural,std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc,2
+0x2649c0,"std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc::get_field_08",structural,std::3::XAEAUGlyph::Z::std::std::D::DU?$char_traits::0_KIAEBV?$basic_string_view::3::IEAAXUDocPos::TextEditor::?4??addSquiggle::V<lambda_1>::?$_Func_impl_no_alloc,0
+0x265f30,"std::AEA_K::V12::V12::ZV12::0AEA_K::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc::leaf_stub",structural,std::AEA_K::V12::V12::ZV12::0AEA_K::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc,3
+0x265f40,"std::AEA_K::V12::V12::ZV12::0AEA_K::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc::get_field_08",structural,std::AEA_K::V12::V12::ZV12::0AEA_K::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc,2
+0x265f70,"std::AEA_K::V12::V12::ZV12::0AEA_K::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc::get_field_08",structural,std::AEA_K::V12::V12::ZV12::0AEA_K::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc,0
+0x265f90,"std::V12::V12::ZV12::0::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc::leaf_stub",structural,std::V12::V12::ZV12::0::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc,3
+0x265fa0,"std::V12::V12::ZV12::0::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc::get_field_08",structural,std::V12::V12::ZV12::0::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc,2
+0x265fd0,"std::V12::V12::ZV12::0::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc::get_field_08",structural,std::V12::V12::ZV12::0::V12::TextEditor::P6A?AVIterator::?$_Func_impl_no_alloc,0
+0x265ff0,"std::Z_NG::P6A_NG::?$_Func_impl_no_alloc::leaf_stub",structural,std::Z_NG::P6A_NG::?$_Func_impl_no_alloc,3
+0x266000,"std::Z_NG::P6A_NG::?$_Func_impl_no_alloc::get_field_08",structural,std::Z_NG::P6A_NG::?$_Func_impl_no_alloc,2
+0x266010,"std::Z_NG::P6A_NG::?$_Func_impl_no_alloc::get_field_08",structural,std::Z_NG::P6A_NG::?$_Func_impl_no_alloc,0
+0x2d8236,"msvcp140.dll!?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,1
+0x2d823c,"msvcp140.dll!?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,2
+0x2d8242,"msvcp140.dll!?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,5
+0x2d8248,"msvcp140.dll!?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,7
+0x2d824e,"msvcp140.dll!?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,8
+0x2d8254,"msvcp140.dll!?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,9
+0x2d825a,"msvcp140.dll!?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,12
+0x2d8260,"msvcp140.dll!?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,13
+0x2d8266,"msvcp140.dll!?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z",symbol,std::2::D::V?$allocator::std::D::DU?$char_traits::?$basic_stringbuf,14
+0x2d8272,"msvcp140.dll!?_Decref@facet@locale@std@@UEAAPEAV_Facet_base@3@XZ",symbol,std::D::?$collate,2
+0x2d8278,"msvcp140.dll!?_Incref@facet@locale@std@@UEAAXXZ",symbol,std::D::?$collate,1
+0x2d87e8,"calls free",weak-inferred,type_info,0
+0x2d8884,"calls free",weak-inferred,type_info,1
+0x2d925c,"vcruntime140.dll!_purecall",symbol,IGameEventListener,1

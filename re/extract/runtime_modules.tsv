@@ -1,0 +1,186 @@
+id	base	size	name	kind	path	signature	m64_import	deps_match	note
+M001	0x180000000	2519040	RTSSHooks64.dll	dll	C:\Program Files (x86)\RivaTuner Statistics Server\RTSSHooks64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M002	0x276de360000	536576	wintrust.dll	dll	C:\Windows\System32\wintrust.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M003	0x276f6260000	466944	Wldap32.dll	dll	C:\Windows\System32\Wldap32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M004	0x7ff653c80000	1060864	gmod.exe	exe	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\gmod.exe	4d5a90000300000004000000ffff0000	no	no	manual-mapped m64 image is not in the module list
+M005	0x7ffcdefb0000	44503040	nvd3dumx.dll	dll	C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_a627cd0923d8a1e4\nvd3dumx.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M006	0x7ffced930000	115642368	nvgpucomp64.dll	dll	C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_a627cd0923d8a1e4\nvgpucomp64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M007	0x7ffcfdd90000	139067392	libcef.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\libcef.dll	4d5a7800010000000400000000000000	no	no	n/a
+M008	0x7ffd59260000	16539648	igd9dxva64.dll	dll	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_7dec88a1950b9616\igd9dxva64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M009	0x7ffd5b2b0000	17186816	server.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\server.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M010	0x7ffd6e100000	12034048	client.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\client.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M011	0x7ffd71110000	34938880	materialsystem.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\materialsystem.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M012	0x7ffd73ef0000	15020032	engine.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\engine.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M013	0x7ffd75310000	8974336	igd9trinity64.dll	dll	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_7dec88a1950b9616\igd9trinity64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M014	0x7ffd75ba0000	2748416	igdumdim64.dll	dll	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_7dec88a1950b9616\igdumdim64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M015	0x7ffd854e0000	8605696	studiorender.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\studiorender.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M016	0x7ffd8cf70000	7512064	nvppex.dll	dll	C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_a627cd0923d8a1e4\nvppex.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M017	0x7ffd8fa50000	1499136	ServerBrowser.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\ServerBrowser.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M018	0x7ffd8fbc0000	2191360	GameUI.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\GameUI.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M019	0x7ffd905f0000	3141632	menusystem.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\menusystem.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M020	0x7ffd92bf0000	2306048	GameAnalytics.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\GameAnalytics.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M021	0x7ffd94420000	27185152	steamclient64.dll	dll	C:\Program Files (x86)\Steam\steamclient64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M022	0x7ffd96260000	1069056	chrome_elf.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\chrome_elf.dll	4d5a7800010000000400000000000000	no	no	n/a
+M023	0x7ffd9e990000	1024000	resources.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\resources.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M024	0x7ffd9ea90000	1277952	stdshader_dx9.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\stdshader_dx9.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M025	0x7ffd9ebd0000	2576384	D3DX9_42.dll	dll	C:\Windows\System32\D3DX9_42.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M026	0x7ffd9ee50000	1708032	vguimatsurface.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\vguimatsurface.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M027	0x7ffda8bf0000	3194880	tier0_s64.dll	dll	C:\Program Files (x86)\Steam\tier0_s64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M028	0x7ffda9c80000	1777664	d3d9.dll	dll	C:\Windows\System32\d3d9.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M029	0x7ffdaab40000	532480	html_chromium.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\html_chromium.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M030	0x7ffdac4e0000	925696	lua_shared.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\lua_shared.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M031	0x7ffdac5d0000	1413120	vphysics.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\vphysics.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M032	0x7ffdac730000	1064960	filesystem_stdio.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\filesystem_stdio.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M033	0x7ffdd7330000	1912832	gameoverlayrenderer64.dll	dll	C:\Program Files (x86)\Steam\gameoverlayrenderer64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M034	0x7ffdd8250000	376832	bass.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\bass.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M035	0x7ffddb7e0000	159744	nlansp_c.dll	dll	C:\Windows\System32\nlansp_c.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M036	0x7ffddb810000	77824	winrnr.dll	dll	C:\Windows\System32\winrnr.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M037	0x7ffddb830000	98304	NapiNSP.dll	dll	C:\Windows\System32\NapiNSP.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M038	0x7ffddcff0000	1507328	nvspcap64.dll	dll	C:\Windows\System32\nvspcap64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M039	0x7ffddecd0000	303104	gmod_audio.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\gmod_audio.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M040	0x7ffddf260000	1437696	NvMemMapStoragex.dll	dll	C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_a627cd0923d8a1e4\NvMemMapStoragex.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M041	0x7ffde0550000	294912	analytics.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\analytics.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M042	0x7ffde1990000	831488	stdshader_dx8.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\stdshader_dx8.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M043	0x7ffde40c0000	1003520	shaderapidx9.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\shaderapidx9.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M044	0x7ffde60f0000	405504	soundemittersystem.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\soundemittersystem.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M045	0x7ffde8f80000	397312	cryptui.dll	dll	C:\Windows\System32\cryptui.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M046	0x7ffdeae30000	540672	game_shader_generic_garrysmod.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\game_shader_generic_garrysmod.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M047	0x7ffdeafb0000	528384	stdshader_dx7.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\stdshader_dx7.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M048	0x7ffded120000	1335296	textinputframework.dll	dll	C:\Windows\System32\textinputframework.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M049	0x7ffdf0db0000	90112	wshbth.dll	dll	C:\Windows\System32\wshbth.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M050	0x7ffdf38f0000	4325376	UIAutomationCore.DLL	dll	C:\Windows\System32\UIAutomationCore.DLL	4d5a90000300000004000000ffff0000	no	no	n/a
+M051	0x7ffdfda10000	126976	credui.dll	dll	C:\Windows\System32\credui.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M052	0x7ffe02410000	638976	stdshader_dx6.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\stdshader_dx6.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M053	0x7ffe03440000	188416	dxva2.dll	dll	C:\Windows\System32\dxva2.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M054	0x7ffe04050000	102400	usp10.dll	dll	C:\Windows\System32\usp10.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M055	0x7ffe04100000	135168	msacm32.dll	dll	C:\Windows\System32\msacm32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M056	0x7ffe0ac90000	479232	oleacc.dll	dll	C:\Windows\System32\oleacc.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M057	0x7ffe0ad10000	716800	winspool.drv	dll	C:\Windows\System32\winspool.drv	4d5a90000300000004000000ffff0000	no	no	n/a
+M058	0x7ffe0add0000	2691072	comctl32.dll	dll	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.9818_none_3e071914e3359bdd\comctl32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M059	0x7ffe0b640000	520192	stdshader_dbg.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\stdshader_dbg.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M060	0x7ffe0ba50000	23199744	media_bin_64.dll	dll	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_7dec88a1950b9616\media_bin_64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M061	0x7ffe0e2d0000	733184	vgui2.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\vgui2.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M062	0x7ffe0ec30000	294912	ncryptsslp.dll	dll	C:\Windows\System32\ncryptsslp.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M063	0x7ffe106a0000	2007040	inputhost.dll	dll	C:\Windows\System32\inputhost.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M064	0x7ffe10890000	655360	msvcp140.dll	dll	C:\Windows\System32\msvcp140.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M065	0x7ffe10930000	675840	MpOAV.dll	dll	C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26100.4-0\MpOAV.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M066	0x7ffe11610000	114688	XInput1_4.dll	dll	C:\Windows\System32\XInput1_4.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M067	0x7ffe11640000	176128	VCRUNTIME140.dll	dll	C:\Windows\System32\VCRUNTIME140.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M068	0x7ffe11670000	565248	datacache.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\datacache.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M069	0x7ffe11790000	180224	scenefilecache.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\scenefilecache.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M070	0x7ffe11980000	163840	unicode.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\unicode.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M071	0x7ffe11b50000	430080	inputsystem.dll	dll	c:\program files (x86)\Steam\steamapps\common\garrysmod\bin\win64\inputsystem.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M072	0x7ffe11d00000	4333568	esent.dll	dll	C:\Windows\System32\esent.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M073	0x7ffe12350000	86016	wbemsvc.dll	dll	C:\Windows\System32\wbem\wbemsvc.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M074	0x7ffe12460000	1003520	fastprox.dll	dll	C:\Windows\System32\wbem\fastprox.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M075	0x7ffe12920000	536576	vstdlib_s64.dll	dll	C:\Program Files (x86)\Steam\vstdlib_s64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M076	0x7ffe13120000	73728	wbemprox.dll	dll	C:\Windows\System32\wbem\wbemprox.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M077	0x7ffe142d0000	167936	srvcli.dll	dll	C:\Windows\System32\srvcli.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M078	0x7ffe144d0000	2904064	iertutil.dll	dll	C:\Windows\System32\iertutil.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M079	0x7ffe147a0000	1966080	urlmon.dll	dll	C:\Windows\System32\urlmon.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M080	0x7ffe14990000	548864	wbemcomn.dll	dll	C:\Windows\System32\wbemcomn.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M081	0x7ffe14ce0000	241664	dbgcore.dll	dll	C:\Windows\System32\dbgcore.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M082	0x7ffe161c0000	2699264	wininet.dll	dll	C:\Windows\System32\wininet.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M083	0x7ffe16660000	106496	netapi32.dll	dll	C:\Windows\System32\netapi32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M084	0x7ffe16680000	495616	vstdlib.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\vstdlib.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M085	0x7ffe16700000	516096	tier0.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\tier0.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M086	0x7ffe16780000	327680	steam_api64.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\steam_api64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M087	0x7ffe16d20000	1421312	Windows.UI.dll	dll	C:\Windows\System32\Windows.UI.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M088	0x7ffe17ac0000	802816	mscms.dll	dll	C:\Windows\System32\mscms.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M089	0x7ffe17d90000	2408448	dbghelp.dll	dll	C:\Windows\System32\dbghelp.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M090	0x7ffe18070000	856064	nvldumdx.dll	dll	C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_a627cd0923d8a1e4\nvldumdx.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M091	0x7ffe1a310000	286720	deviceaccess.dll	dll	C:\Windows\System32\deviceaccess.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M092	0x7ffe1baa0000	1785856	AudioSes.dll	dll	C:\Windows\System32\AudioSes.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M093	0x7ffe1c430000	438272	launcher.dll	dll	C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\win64\launcher.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M094	0x7ffe1c7c0000	53248	VCRUNTIME140_1.dll	dll	C:\Windows\System32\VCRUNTIME140_1.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M095	0x7ffe1c7d0000	118784	amsi.dll	dll	C:\Windows\System32\amsi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M096	0x7ffe1d1a0000	630784	MMDevAPI.dll	dll	C:\Windows\System32\MMDevAPI.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M097	0x7ffe1d240000	86720512	igc64.dll	dll	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_7dec88a1950b9616\igc64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M098	0x7ffe228c0000	45056	rasadhlp.dll	dll	C:\Windows\System32\rasadhlp.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M099	0x7ffe22960000	4505600	igdgmm64.dll	dll	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_7dec88a1950b9616\igdgmm64.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M100	0x7ffe23160000	548864	FWPUCLNT.DLL	dll	C:\Windows\System32\FWPUCLNT.DLL	4d5a90000300000004000000ffff0000	no	no	n/a
+M101	0x7ffe231f0000	221184	winmm.dll	dll	C:\Windows\System32\winmm.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M102	0x7ffe24900000	1552384	drvstore.dll	dll	C:\Windows\System32\drvstore.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M103	0x7ffe24a80000	241664	cryptnet.dll	dll	C:\Windows\System32\cryptnet.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M104	0x7ffe24b20000	45056	version.dll	dll	C:\Windows\System32\version.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M105	0x7ffe24d60000	110592	wkscli.dll	dll	C:\Windows\System32\wkscli.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M106	0x7ffe24d80000	364544	wevtapi.dll	dll	C:\Windows\System32\wevtapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M107	0x7ffe24eb0000	3067904	CoreUIComponents.dll	dll	C:\Windows\System32\CoreUIComponents.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M108	0x7ffe251a0000	151552	dhcpcsvc.dll	dll	C:\Windows\System32\dhcpcsvc.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M109	0x7ffe251d0000	1482752	WinTypes.dll	dll	C:\Windows\System32\WinTypes.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M110	0x7ffe25340000	122880	dhcpcsvc6.DLL	dll	C:\Windows\System32\dhcpcsvc6.DLL	4d5a90000300000004000000ffff0000	no	no	n/a
+M111	0x7ffe25600000	1191936	winhttp.dll	dll	C:\Windows\System32\winhttp.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M112	0x7ffe258b0000	389120	directxdatabasehelper.dll	dll	C:\Windows\System32\directxdatabasehelper.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M113	0x7ffe25f40000	45056	avrt.dll	dll	C:\Windows\System32\avrt.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M114	0x7ffe262b0000	999424	propsys.dll	dll	C:\Windows\System32\propsys.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M115	0x7ffe26e00000	2539520	DWrite.dll	dll	C:\Windows\System32\DWrite.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M116	0x7ffe277c0000	2486272	d3d11.dll	dll	C:\Windows\System32\d3d11.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M117	0x7ffe27dc0000	40960	wsock32.dll	dll	C:\Windows\System32\wsock32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M118	0x7ffe28260000	1232896	CoreMessaging.dll	dll	C:\Windows\System32\CoreMessaging.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M119	0x7ffe28780000	53248	secur32.dll	dll	C:\Windows\System32\secur32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M120	0x7ffe287c0000	172032	wtsapi32.dll	dll	C:\Windows\System32\wtsapi32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M121	0x7ffe28960000	696320	uxtheme.dll	dll	C:\Windows\System32\uxtheme.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M122	0x7ffe28a60000	1323008	dxgi.dll	dll	C:\Windows\System32\dxgi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M123	0x7ffe28bb0000	303104	DXCore.dll	dll	C:\Windows\System32\DXCore.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M124	0x7ffe28c20000	188416	dwmapi.dll	dll	C:\Windows\System32\dwmapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M125	0x7ffe28fb0000	81920	resourcepolicyclient.dll	dll	C:\Windows\System32\resourcepolicyclient.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M126	0x7ffe29300000	9175040	windows.storage.dll	dll	C:\Windows\System32\windows.storage.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M127	0x7ffe29bd0000	61440	hid.dll	dll	C:\Windows\System32\hid.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M128	0x7ffe29e80000	110592	samcli.dll	dll	C:\Windows\System32\samcli.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M129	0x7ffe29ee0000	53248	netutils.dll	dll	C:\Windows\System32\netutils.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M130	0x7ffe29f00000	208896	IPHLPAPI.DLL	dll	C:\Windows\System32\IPHLPAPI.DLL	4d5a90000300000004000000ffff0000	no	no	n/a
+M131	0x7ffe29f90000	1359872	dnsapi.dll	dll	C:\Windows\System32\dnsapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M132	0x7ffe2a390000	831488	schannel.dll	dll	C:\Windows\System32\schannel.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M133	0x7ffe2a4c0000	233472	rsaenh.dll	dll	C:\Windows\System32\rsaenh.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M134	0x7ffe2a560000	110592	kernel.appcore.dll	dll	C:\Windows\System32\kernel.appcore.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M135	0x7ffe2a6a0000	221184	ntmarta.dll	dll	C:\Windows\System32\ntmarta.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M136	0x7ffe2a830000	303104	sspicli.dll	dll	C:\Windows\System32\sspicli.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M137	0x7ffe2a930000	53248	dsparse.dll	dll	C:\Windows\System32\dsparse.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M138	0x7ffe2ab50000	438272	mswsock.dll	dll	C:\Windows\System32\mswsock.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M139	0x7ffe2abc0000	151552	gpapi.dll	dll	C:\Windows\System32\gpapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M140	0x7ffe2abf0000	212992	userenv.dll	dll	C:\Windows\System32\userenv.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M141	0x7ffe2ae40000	110592	cryptsp.dll	dll	C:\Windows\System32\cryptsp.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M142	0x7ffe2ae60000	49152	CRYPTBASE.DLL	dll	C:\Windows\System32\CRYPTBASE.DLL	4d5a90000300000004000000ffff0000	no	no	n/a
+M143	0x7ffe2af20000	458752	wldp.dll	dll	C:\Windows\System32\wldp.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M144	0x7ffe2afa0000	77824	msasn1.dll	dll	C:\Windows\System32\msasn1.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M145	0x7ffe2b040000	258048	ntasn1.dll	dll	C:\Windows\System32\ntasn1.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M146	0x7ffe2b090000	196608	ncrypt.dll	dll	C:\Windows\System32\ncrypt.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M147	0x7ffe2b400000	335872	cfgmgr32.dll	dll	C:\Windows\System32\cfgmgr32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M148	0x7ffe2b460000	192512	devobj.dll	dll	C:\Windows\System32\devobj.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M149	0x7ffe2b4c0000	40960	dpapi.dll	dll	C:\Windows\System32\dpapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M150	0x7ffe2b4d0000	417792	winsta.dll	dll	C:\Windows\System32\winsta.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M151	0x7ffe2b720000	86016	umpdc.dll	dll	C:\Windows\System32\umpdc.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M152	0x7ffe2b740000	385024	powrprof.dll	dll	C:\Windows\System32\powrprof.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M153	0x7ffe2b7d0000	172032	bcrypt.dll	dll	C:\Windows\System32\bcrypt.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M154	0x7ffe2b800000	167936	profapi.dll	dll	C:\Windows\System32\profapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M155	0x7ffe2b8f0000	704512	bcryptPrimitives.dll	dll	C:\Windows\System32\bcryptPrimitives.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M156	0x7ffe2b9b0000	159744	win32u.dll	dll	C:\Windows\System32\win32u.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M157	0x7ffe2b9e0000	1359872	ucrtbase.dll	dll	C:\Windows\System32\ucrtbase.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M158	0x7ffe2bbd0000	1216512	gdi32full.dll	dll	C:\Windows\System32\gdi32full.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M159	0x7ffe2bd00000	4231168	KERNELBASE.dll	dll	C:\Windows\System32\KERNELBASE.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M160	0x7ffe2c1d0000	667648	msvcp_win.dll	dll	C:\Windows\System32\msvcp_win.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M161	0x7ffe2c280000	1564672	crypt32.dll	dll	C:\Windows\System32\crypt32.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M162	0x7ffe2c4a0000	3821568	combase.dll	dll	C:\Windows\System32\combase.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M163	0x7ffe2c850000	32768	normaliz.dll	dll	C:\Windows\System32\normaliz.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M164	0x7ffe2c860000	200704	imm32.dll	dll	C:\Windows\System32\imm32.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M165	0x7ffe2c8a0000	1675264	ole32.dll	dll	C:\Windows\System32\ole32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M166	0x7ffe2ca40000	32768	psapi.dll	dll	C:\Windows\System32\psapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M167	0x7ffe2ca70000	1146880	rpcrt4.dll	dll	C:\Windows\System32\rpcrt4.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M168	0x7ffe2cb90000	688128	sechost.dll	dll	C:\Windows\System32\sechost.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M169	0x7ffe2cc40000	40960	nsi.dll	dll	C:\Windows\System32\nsi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M170	0x7ffe2cc50000	770048	advapi32.dll	dll	C:\Windows\System32\advapi32.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M171	0x7ffe2cd20000	4747264	setupapi.dll	dll	C:\Windows\System32\setupapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M172	0x7ffe2d230000	425984	shlwapi.dll	dll	C:\Windows\System32\shlwapi.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M173	0x7ffe2d2a0000	131072	imagehlp.dll	dll	C:\Windows\System32\imagehlp.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M174	0x7ffe2d2e0000	892928	oleaut32.dll	dll	C:\Windows\System32\oleaut32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M175	0x7ffe2d3c0000	176128	gdi32.dll	dll	C:\Windows\System32\gdi32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M176	0x7ffe2d3f0000	1011712	comdlg32.dll	dll	C:\Windows\System32\comdlg32.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M177	0x7ffe2d6e0000	692224	msvcrt.dll	dll	C:\Windows\System32\msvcrt.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M178	0x7ffe2d7e0000	8060928	shell32.dll	dll	C:\Windows\System32\shell32.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M179	0x7ffe2dfa0000	716800	clbcatq.dll	dll	C:\Windows\System32\clbcatq.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M180	0x7ffe2e060000	831488	kernel32.dll	dll	C:\Windows\System32\kernel32.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M181	0x7ffe2e1c0000	524288	ws2_32.dll	dll	C:\Windows\System32\ws2_32.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M182	0x7ffe2e2b0000	1015808	SHCore.dll	dll	C:\Windows\System32\SHCore.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M183	0x7ffe2e3b0000	1957888	user32.dll	dll	C:\Windows\System32\user32.dll	4d5a90000300000004000000ffff0000	yes	yes	n/a
+M184	0x7ffe2e5a0000	1425408	msctf.dll	dll	C:\Windows\System32\msctf.dll	4d5a90000300000004000000ffff0000	no	no	n/a
+M185	0x7ffe2e750000	2539520	ntdll.dll	dll	C:\Windows\System32\ntdll.dll	4d5a90000300000004000000ffff0000	no	no	n/a

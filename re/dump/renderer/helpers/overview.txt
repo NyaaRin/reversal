@@ -1,0 +1,777 @@
+===== 0x180012ac0 =====
+// 180012ac0  FUN_180012ac0
+// signature: undefined FUN_180012ac0()
+// status: ok
+
+
+int FUN_180012ac0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+int FUN_180012ac0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+strings:
+===== 0x180014410 =====
+// 180014410  FUN_180014410
+// signature: undefined FUN_180014410()
+// status: ok
+
+
+void FUN_180014410(longlong param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+void FUN_180014410(longlong param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+strings:
+===== 0x18001d080 =====
+// 18001d080  FUN_18001d080
+// signature: undefined FUN_18001d080()
+// status: ok
+
+
+void FUN_18001d080(undefined8 *param_1,void *param_2,size_t param_3)
+void FUN_18001d080(undefined8 *param_1,void *param_2,size_t param_3)
+strings:
+===== 0x18006b0e0 =====
+// 18006b0e0  FUN_18006b0e0
+// signature: undefined FUN_18006b0e0()
+// status: ok
+
+
+undefined1 FUN_18006b0e0(void)
+undefined1 FUN_18006b0e0(void)
+strings:
+===== 0x1800b3740 =====
+// 1800b3740  FUN_1800b3740
+// signature: undefined FUN_1800b3740()
+// status: ok
+
+
+int FUN_1800b3740(void)
+int FUN_1800b3740(void)
+strings:
+"sv_maxusrcmdprocessticks"
+===== 0x180140b70 =====
+// 180140b70  FUN_180140b70
+// signature: undefined FUN_180140b70()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+strings:
+===== 0x180142570 =====
+// 180142570  FUN_180142570
+// signature: undefined FUN_180142570()
+// status: ok
+
+
+ulonglong FUN_180142570(void)
+ulonglong FUN_180142570(void)
+strings:
+"player_death"
+===== 0x1801425f0 =====
+// 1801425f0  FUN_1801425f0
+// signature: undefined FUN_1801425f0()
+// status: ok
+
+
+ulonglong FUN_1801425f0(void)
+ulonglong FUN_1801425f0(void)
+strings:
+"player_hurt"
+===== 0x180144cf0 =====
+// 180144cf0  FUN_180144cf0
+// signature: undefined FUN_180144cf0()
+// status: ok
+
+
+undefined8
+strings:
+===== 0x180144d80 =====
+// 180144d80  FUN_180144d80
+// signature: undefined FUN_180144d80()
+// status: ok
+
+
+void FUN_180144d80(undefined4 param_1,undefined8 param_2,char *param_3)
+void FUN_180144d80(undefined4 param_1,undefined8 param_2,char *param_3)
+strings:
+""
+"no cvar name"
+===== 0x180145a20 =====
+// 180145a20  FUN_180145a20
+// signature: undefined FUN_180145a20()
+// status: ok
+
+
+undefined8
+strings:
+===== 0x180145c40 =====
+// 180145c40  FUN_180145c40
+// signature: undefined FUN_180145c40()
+// status: ok
+
+
+longlong * FUN_180145c40(longlong *param_1,byte *param_2)
+strings:
+"models/"
+===== 0x180145f40 =====
+// 180145f40  FUN_180145f40
+// signature: undefined FUN_180145f40()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+void FUN_180145f40(undefined4 param_1,undefined8 param_2,char *param_3)
+strings:
+" queued"
+" refused"
+": nothing to send"
+"Not in a server - "
+===== 0x18014e010 =====
+// 18014e010  FUN_18014e010
+// signature: undefined FUN_18014e010()
+// status: ok
+
+
+undefined8
+strings:
+===== 0x18014e0a0 =====
+// 18014e0a0  FUN_18014e0a0
+// signature: undefined FUN_18014e0a0()
+// status: ok
+
+
+undefined8
+strings:
+===== 0x18014e130 =====
+// 18014e130  FUN_18014e130
+// signature: undefined FUN_18014e130()
+// status: ok
+
+
+undefined8 FUN_18014e130(undefined8 param_1)
+undefined8 FUN_18014e130(undefined8 param_1)
+strings:
+===== 0x180151970 =====
+// 180151970  FUN_180151970
+// signature: undefined FUN_180151970()
+// status: ok
+
+
+/* WARNING: Removing unreachable block (ram,0x000180151ad1) */
+void FUN_180151970(void)
+strings:
+===== 0x1801542d0 =====
+// 1801542d0  FUN_1801542d0
+// signature: undefined FUN_1801542d0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+void FUN_1801542d0(void)
+strings:
+===== 0x180154460 =====
+// 180154460  FUN_180154460
+// signature: undefined FUN_180154460()
+// status: ok
+
+
+void FUN_180154460(void)
+void FUN_180154460(void)
+strings:
+===== 0x1801544e0 =====
+// 1801544e0  FUN_1801544e0
+// signature: undefined FUN_1801544e0()
+// status: ok
+
+
+/* WARNING: Removing unreachable block (ram,0x00018015485d) */
+undefined8 FUN_1801544e0(void)
+strings:
+"Cleaning..."
+"Nothing selected"
+"sql wipe: queued for cl.db + mn.db (next game tick)"
+===== 0x1801582f0 =====
+// 1801582f0  FUN_1801582f0
+// signature: undefined FUN_1801582f0()
+// status: ok
+
+
+void FUN_1801582f0(void)
+void FUN_1801582f0(void)
+strings:
+"addons"
+"lua/*.lua"
+"lua/bin"
+===== 0x180158560 =====
+// 180158560  FUN_180158560
+// signature: undefined FUN_180158560()
+// status: ok
+
+
+void FUN_180158560(void)
+void FUN_180158560(void)
+strings:
+===== 0x1801585e0 =====
+// 1801585e0  FUN_1801585e0
+// signature: undefined FUN_1801585e0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+undefined8 FUN_1801585e0(undefined8 param_1,undefined4 param_2)
+strings:
+===== 0x1801996a0 =====
+// 1801996a0  FUN_1801996a0
+// signature: undefined FUN_1801996a0()
+// status: ok
+
+
+void FUN_1801996a0(void)
+void FUN_1801996a0(void)
+strings:
+===== 0x18019a460 =====
+// 18019a460  FUN_18019a460
+// signature: undefined FUN_18019a460()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+void FUN_18019a460(char *param_1,undefined8 param_2)
+strings:
+""
+===== 0x18019a680 =====
+// 18019a680  FUN_18019a680
+// signature: undefined FUN_18019a680()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+undefined8 FUN_18019a680(char *param_1)
+strings:
+===== 0x18019cb40 =====
+// 18019cb40  FUN_18019cb40
+// signature: undefined FUN_18019cb40()
+// status: ok
+
+
+undefined1
+strings:
+"##"
+===== 0x18019d4d0 =====
+// 18019d4d0  FUN_18019d4d0
+// signature: undefined FUN_18019d4d0()
+// status: ok
+
+
+undefined8 FUN_18019d4d0(undefined8 param_1,float param_2,undefined1 param_3,float *param_4)
+undefined8 FUN_18019d4d0(undefined8 param_1,float param_2,undefined1 param_3,float *param_4)
+strings:
+"sib_act"
+===== 0x18019dc00 =====
+// 18019dc00  FUN_18019dc00
+// signature: undefined FUN_18019dc00()
+// status: ok
+
+
+undefined1 FUN_18019dc00(undefined8 param_1,undefined4 param_2,undefined8 param_3)
+undefined1 FUN_18019dc00(undefined8 param_1,undefined4 param_2,undefined8 param_3)
+strings:
+===== 0x18019fbc0 =====
+// 18019fbc0  FUN_18019fbc0
+// signature: undefined FUN_18019fbc0()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+undefined8 FUN_18019fbc0(char *param_1,undefined4 param_2,undefined8 param_3,char param_4)
+strings:
+"##Foreground"
+===== 0x1801a0b60 =====
+// 1801a0b60  FUN_1801a0b60
+// signature: undefined FUN_1801a0b60()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+ulonglong FUN_1801a0b60(char *param_1,char *param_2)
+strings:
+"mc_fill"
+"mc_hover"
+===== 0x1801a16e0 =====
+// 1801a16e0  FUN_1801a16e0
+// signature: undefined FUN_1801a16e0()
+// status: ok
+
+
+undefined1
+strings:
+===== 0x1801a7a20 =====
+// 1801a7a20  FUN_1801a7a20
+// signature: undefined FUN_1801a7a20()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+strings:
+===== 0x1801a85a0 =====
+// 1801a85a0  FUN_1801a85a0
+// signature: undefined FUN_1801a85a0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+strings:
+===== 0x1801df5d0 =====
+// 1801df5d0  FUN_1801df5d0
+// signature: undefined FUN_1801df5d0()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+void FUN_1801df5d0(longlong *param_1,undefined8 param_2,int param_3)
+strings:
+===== 0x1801df700 =====
+// 1801df700  FUN_1801df700
+// signature: undefined FUN_1801df700()
+// status: ok
+
+
+void FUN_1801df700(longlong *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+void FUN_1801df700(longlong *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+strings:
+"##spam_bind"
+"%s bind"
+"Calling PopID() too many times!"
+===== 0x1801fcfc0 =====
+// 1801fcfc0  FUN_1801fcfc0
+// signature: undefined FUN_1801fcfc0()
+// status: ok
+
+
+longlong FUN_1801fcfc0(longlong param_1)
+longlong FUN_1801fcfc0(longlong param_1)
+strings:
+===== 0x1802028c0 =====
+// 1802028c0  FUN_1802028c0
+// signature: undefined FUN_1802028c0()
+// status: ok
+
+
+longlong FUN_1802028c0(longlong param_1)
+longlong FUN_1802028c0(longlong param_1)
+strings:
+===== 0x1802029c0 =====
+// 1802029c0  FUN_1802029c0
+// signature: undefined FUN_1802029c0()
+// status: ok
+
+
+longlong FUN_1802029c0(longlong param_1)
+longlong FUN_1802029c0(longlong param_1)
+strings:
+===== 0x180202dc0 =====
+// 180202dc0  FUN_180202dc0
+// signature: undefined FUN_180202dc0()
+// status: ok
+
+
+longlong FUN_180202dc0(longlong param_1)
+longlong FUN_180202dc0(longlong param_1)
+strings:
+===== 0x18020d5c0 =====
+// 18020d5c0  FUN_18020d5c0
+// signature: undefined FUN_18020d5c0()
+// status: ok
+
+
+void FUN_18020d5c0(longlong *param_1)
+void FUN_18020d5c0(longlong *param_1)
+strings:
+===== 0x18020d6f0 =====
+// 18020d6f0  FUN_18020d6f0
+// signature: undefined FUN_18020d6f0()
+// status: ok
+
+
+void FUN_18020d6f0(longlong *param_1,undefined8 param_2)
+void FUN_18020d6f0(longlong *param_1,undefined8 param_2)
+strings:
+===== 0x18020d830 =====
+// 18020d830  FUN_18020d830
+// signature: undefined FUN_18020d830()
+// status: ok
+
+
+longlong * FUN_18020d830(longlong *param_1,longlong *param_2)
+strings:
+===== 0x18020d910 =====
+// 18020d910  FUN_18020d910
+// signature: undefined FUN_18020d910()
+// status: ok
+
+
+longlong * FUN_18020d910(longlong *param_1,longlong *param_2,undefined8 param_3,undefined8 param_4)
+strings:
+===== 0x18020e450 =====
+// 18020e450  FUN_18020e450
+// signature: undefined FUN_18020e450()
+// status: ok
+
+
+void FUN_18020e450(longlong *param_1)
+void FUN_18020e450(longlong *param_1)
+strings:
+===== 0x18020e8a0 =====
+// 18020e8a0  FUN_18020e8a0
+// signature: undefined FUN_18020e8a0()
+// status: ok
+
+
+longlong * FUN_18020e8a0(longlong *param_1,longlong *param_2)
+strings:
+===== 0x180212700 =====
+// 180212700  FUN_180212700
+// signature: undefined FUN_180212700()
+// status: ok
+
+
+longlong * FUN_180212700(longlong *param_1,void *param_2,size_t param_3)
+strings:
+===== 0x18021c730 =====
+// 18021c730  FUN_18021c730
+// signature: undefined FUN_18021c730()
+// status: ok
+
+
+void FUN_18021c730(longlong *param_1)
+void FUN_18021c730(longlong *param_1)
+strings:
+===== 0x180220c70 =====
+// 180220c70  FUN_180220c70
+// signature: undefined FUN_180220c70()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+undefined8 FUN_180220c70(void *param_1)
+strings:
+"Pick a loading screen page"
+"Web pages"
+===== 0x180241a30 =====
+// 180241a30  FUN_180241a30
+// signature: undefined FUN_180241a30()
+// status: ok
+
+
+undefined8 * FUN_180241a30(longlong *param_1,undefined8 *param_2,ulonglong *param_3)
+strings:
+===== 0x180268980 =====
+// 180268980  FUN_180268980
+// signature: undefined FUN_180268980()
+// status: ok
+
+
+uint FUN_180268980(byte *param_1,ulonglong param_2,uint param_3)
+uint FUN_180268980(byte *param_1,ulonglong param_2,uint param_3)
+strings:
+===== 0x18026a810 =====
+// 18026a810  FUN_18026a810
+// signature: undefined FUN_18026a810()
+// status: ok
+
+
+void FUN_18026a810(int param_1,undefined8 *param_2)
+void FUN_18026a810(int param_1,undefined8 *param_2)
+strings:
+===== 0x18026a890 =====
+// 18026a890  FUN_18026a890
+// signature: undefined FUN_18026a890()
+// status: ok
+
+
+void FUN_18026a890(int param_1)
+void FUN_18026a890(int param_1)
+strings:
+"Calling PopStyleColor() too many times!"
+===== 0x18026aad0 =====
+// 18026aad0  FUN_18026aad0
+// signature: undefined FUN_18026aad0()
+// status: ok
+
+
+void FUN_18026aad0(int param_1,undefined8 *param_2)
+void FUN_18026aad0(int param_1,undefined8 *param_2)
+strings:
+"Calling PushStyleVar() variant with wrong type!"
+===== 0x18026abb0 =====
+// 18026abb0  FUN_18026abb0
+// signature: undefined FUN_18026abb0()
+// status: ok
+
+
+void FUN_18026abb0(int param_1)
+void FUN_18026abb0(int param_1)
+strings:
+"Calling PopStyleVar() too many times!"
+===== 0x18026ee60 =====
+// 18026ee60  FUN_18026ee60
+// signature: undefined FUN_18026ee60()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+ulonglong FUN_18026ee60(uint param_1)
+strings:
+"Invalid flags for IsItemHovered()!"
+===== 0x180272ea0 =====
+// 180272ea0  FUN_180272ea0
+// signature: undefined FUN_180272ea0()
+// status: ok
+
+
+ulonglong FUN_180272ea0(void)
+ulonglong FUN_180272ea0(void)
+strings:
+===== 0x180272fa0 =====
+// 180272fa0  FUN_180272fa0
+// signature: undefined FUN_180272fa0()
+// status: ok
+
+
+void FUN_180272fa0(undefined8 param_1,undefined8 param_2,undefined4 param_3,undefined4 param_4)
+void FUN_180272fa0(undefined8 param_1,undefined8 param_2,undefined4 param_3,undefined4 param_4)
+strings:
+===== 0x180273060 =====
+// 180273060  FUN_180273060
+// signature: undefined FUN_180273060()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+strings:
+"%s/%08X"
+"%s/%s_%08X"
+===== 0x180273410 =====
+// 180273410  FUN_180273410
+// signature: undefined FUN_180273410()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+void FUN_180273410(void)
+strings:
+===== 0x18027abf0 =====
+// 18027abf0  FUN_18027abf0
+// signature: undefined FUN_18027abf0()
+// status: ok
+
+
+void FUN_18027abf0(undefined8 param_1)
+void FUN_18027abf0(undefined8 param_1)
+strings:
+===== 0x18027ae00 =====
+// 18027ae00  FUN_18027ae00
+// signature: undefined FUN_18027ae00()
+// status: ok
+
+
+void FUN_18027ae00(undefined4 param_1)
+void FUN_18027ae00(undefined4 param_1)
+strings:
+===== 0x18027e9c0 =====
+// 18027e9c0  FUN_18027e9c0
+// signature: undefined FUN_18027e9c0()
+// status: ok
+
+
+undefined1 FUN_18027e9c0(undefined8 param_1)
+undefined1 FUN_18027e9c0(undefined8 param_1)
+strings:
+"##Foreground"
+"(and more errors)"
+===== 0x18027f5b0 =====
+// 18027f5b0  FUN_18027f5b0
+// signature: undefined FUN_18027f5b0()
+// status: ok
+
+
+void FUN_18027f5b0(float param_1,float param_2)
+void FUN_18027f5b0(float param_1,float param_2)
+strings:
+===== 0x180280d00 =====
+// 180280d00  FUN_180280d00
+// signature: undefined FUN_180280d00()
+// status: ok
+
+
+void FUN_180280d00(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+void FUN_180280d00(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+strings:
+===== 0x180280fd0 =====
+// 180280fd0  FUN_180280fd0
+// signature: undefined FUN_180280fd0()
+// status: ok
+
+
+void FUN_180280fd0(undefined8 param_1)
+void FUN_180280fd0(undefined8 param_1)
+strings:
+===== 0x180281800 =====
+// 180281800  FUN_180281800
+// signature: undefined FUN_180281800()
+// status: ok
+
+
+void FUN_180281800(void)
+void FUN_180281800(void)
+strings:
+"Calling EndPopup() in wrong window!"
+===== 0x1802899e0 =====
+// 1802899e0  FUN_1802899e0
+// signature: undefined FUN_1802899e0()
+// status: ok
+
+
+void FUN_1802899e0(char *param_1,int param_2,char *param_3,longlong param_4)
+void FUN_1802899e0(char *param_1,int param_2,char *param_3,longlong param_4)
+strings:
+"%d"
+"(void*)0x%p"
+"0x%08X [override]"
+===== 0x18028a220 =====
+// 18028a220  FUN_18028a220
+// signature: undefined FUN_18028a220()
+// status: ok
+
+
+void FUN_18028a220(int *param_1,undefined8 *param_2)
+void FUN_18028a220(int *param_1,undefined8 *param_2)
+strings:
+===== 0x18029e350 =====
+// 18029e350  FUN_18029e350
+// signature: undefined FUN_18029e350()
+// status: ok
+
+
+float * FUN_18029e350(float *param_1,undefined8 param_2,float param_3,float param_4,float param_5,
+strings:
+===== 0x1802aaae0 =====
+// 1802aaae0  FUN_1802aaae0
+// signature: undefined FUN_1802aaae0()
+// status: ok
+
+
+void FUN_1802aaae0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+void FUN_1802aaae0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+strings:
+===== 0x1802aabb0 =====
+// 1802aabb0  FUN_1802aabb0
+// signature: undefined FUN_1802aabb0()
+// status: ok
+
+
+void FUN_1802aabb0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+void FUN_1802aabb0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+strings:
+===== 0x1802aac80 =====
+// 1802aac80  FUN_1802aac80
+// signature: undefined FUN_1802aac80()
+// status: ok
+
+
+void FUN_1802aac80(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+void FUN_1802aac80(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+strings:
+===== 0x1802abf60 =====
+// 1802abf60  FUN_1802abf60
+// signature: undefined FUN_1802abf60()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+ulonglong FUN_1802abf60(char *param_1,undefined8 *param_2,uint param_3)
+strings:
+===== 0x1802ac330 =====
+// 1802ac330  FUN_1802ac330
+// signature: undefined FUN_1802ac330()
+// status: ok
+
+
+void FUN_1802ac330(undefined8 param_1)
+void FUN_1802ac330(undefined8 param_1)
+strings:
+===== 0x1802ae300 =====
+// 1802ae300  FUN_1802ae300
+// signature: undefined FUN_1802ae300()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+void FUN_1802ae300(float param_1,undefined8 *param_2,undefined1 *param_3)
+strings:
+"%.0f%%"
+===== 0x1802af4c0 =====
+// 1802af4c0  FUN_1802af4c0
+// signature: undefined FUN_1802af4c0()
+// status: ok
+
+
+void FUN_1802af4c0(void)
+void FUN_1802af4c0(void)
+strings:
+===== 0x1802afb40 =====
+// 1802afb40  FUN_1802afb40
+// signature: undefined FUN_1802afb40()
+// status: ok
+
+
+void FUN_1802afb40(void)
+void FUN_1802afb40(void)
+strings:
+===== 0x1802b1200 =====
+// 1802b1200  FUN_1802b1200
+// signature: undefined FUN_1802b1200()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+ulonglong FUN_1802b1200(undefined8 param_1,int *param_2,undefined8 param_3,undefined8 param_4,
+strings:
+"*Unknown item*"
+"Calling PopID() too many times!"
+===== 0x1802b74e0 =====
+// 1802b74e0  FUN_1802b74e0
+// signature: undefined FUN_1802b74e0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+ulonglong FUN_1802b74e0(code *******param_1,code *******param_2,code *******param_3,int param_4,
+strings:
+""
+"#SCROLLY"
+"%*s%.*s"
+===== 0x1802c1850 =====
+// 1802c1850  FUN_1802c1850
+// signature: undefined FUN_1802c1850()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+ulonglong FUN_1802c1850(char *param_1,byte param_2,uint param_3,float *param_4)
+strings:
+===== 0x1802d31a0 =====
+// 1802d31a0  FUN_1802d31a0
+// signature: undefined FUN_1802d31a0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+ulonglong FUN_1802d31a0(undefined8 param_1,int *param_2,undefined8 param_3,char param_4)
+strings:
+"[%s]###%s"
+"[Press a key]###%s"
+===== 0x1802d8350 =====
+// 1802d8350  FUN_1802d8350
+// signature: undefined FUN_1802d8350()
+// status: ok
+
+
+void FUN_1802d8350(size_t param_1)
+void FUN_1802d8350(size_t param_1)
+strings:

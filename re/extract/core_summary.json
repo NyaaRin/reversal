@@ -1,0 +1,20 @@
+{
+ "functions": 7656,
+ "call_edges": 23444,
+ "xrefs": 22280,
+ "hooks": 24,
+ "interfaces": 27,
+ "signatures": 21,
+ "vtables": 2680,
+ "rtti": 159,
+ "datatypes": 460,
+ "netvars": 59,
+ "cvars": 196,
+ "lua": 67,
+ "events": 17,
+ "deps": 43,
+ "symbols": 10543,
+ "decompiled": 7656,
+ "strings": 60550,
+ "md5": "3d9ad8894d9d55e4212b7d800119aaa7"
+}
