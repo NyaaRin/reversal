@@ -2289,7 +2289,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e205c() noexcept {
             trace.statement("longlong *plVar1;");
             trace.statement("int iVar2;");
             trace.statement("plVar1 = *(longlong **)(param_2 + 0x70);");
-            if (trace.checked_condition("if (plVar1 != (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar1 != (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar1 != (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar1 != (std::int64_t *)0x0); })) {
                 trace.statement("iVar2 = (**(code **)*plVar1)(plVar1);");
                 if (trace.checked_condition("if (*(int *)(param_2 + 0xb8) < iVar2)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(param_2 + 0xb8, 0) < iVar2); })) {
                     trace.statement("(**(code **)(*plVar1 + 0x10))(plVar1,iVar2 - *(int *)(param_2 + 0xb8));");

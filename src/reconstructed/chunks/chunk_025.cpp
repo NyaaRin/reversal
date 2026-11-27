@@ -210,7 +210,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f73b0() noexcept {
             trace.statement("undefined1 uVar1;");
             trace.statement("longlong lVar2;");
             trace.statement("undefined1 *puVar3;");
-            if (trace.checked_condition("if (DAT_1803fa498 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa498, 0) != (code *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa498 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa498, 0) != (void* *)0x0); })) {
                 if (trace.checked_condition("if (DAT_1803ff270 == '\\0')", [&]() -> bool { return static_cast<bool>(image::DAT_1803ff270 == '\0'); })) {
                     trace.statement("(*DAT_1803fa498)();");
                     trace.statement("return;");
@@ -400,6 +400,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f74b0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((cVar1 != '\0') && (cVar1 = FUN_1802013c0(), cVar1 != '\0')) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (((uVar2 != 0) && (DAT_1803fa668 != (longlong *)0x0)) && (cVar1 = (**(code **)(*DAT_1803fa668 + 0xd0))(), cVar1 != '\0')) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_18003a090", "CL_Move");
     trace.call_arguments("FUN_1802013c0");
     trace.call_arguments("FUN_1800b5640");
@@ -427,7 +428,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f74b0() noexcept {
             trace.statement("uint uVar2;");
             trace.statement("uint uVar3;");
             trace.statement("char *pcVar4;");
-            if (trace.checked_condition("if (DAT_1803fa430 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa430, 0) != (code *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa430 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa430, 0) != (void* *)0x0); })) {
                 if (trace.checked_condition("if ((DAT_1803ff270 == '\\0') || (DAT_1803f925e != '\\0'))", [&]() -> bool { return static_cast<bool>((image::DAT_1803ff270 == '\0') || (image::DAT_1803f925e != '\0')); })) {
                     trace.statement("(*DAT_1803fa430)();");
                     trace.statement("return;");
@@ -564,7 +565,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f7680() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined1 uVar1;");
-            if (trace.checked_condition("if (DAT_1803fa4a8 == (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa4a8, 0) == (code *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa4a8 == (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa4a8, 0) == (void* *)0x0); })) {
                 trace.statement("return 0;");
             }
             trace.statement("uVar1 = (*DAT_1803fa4a8)();");
@@ -699,6 +700,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f76e0() noexcept {
     // TODO: resolve the indirect call in body 52: uVar5 = (*DAT_1803fa488)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((cVar2 != '\0') && (local_30 != (LPVOID)0x0)) && (BVar4 = IsBadWritePtr(local_30,0x24), BVar4 == 0)) [reason: assignment or side effect]
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
     trace.call_arguments("FUN_1800b77a0", param_1, &local_30);
@@ -721,7 +723,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f76e0() noexcept {
             trace.statement("bool bVar6;");
             trace.statement("LPVOID local_30;");
             trace.statement("undefined8 local_28;");
-            if (trace.checked_condition("if (DAT_1803fa488 == (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa488, 0) == (code *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa488 == (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa488, 0) == (void* *)0x0); })) {
                 trace.statement("return 0;");
             }
             if (trace.checked_condition("if ((DAT_1803facf8 != '\\0') && (DAT_1803ff270 != '\\0'))", [&]() -> bool { return static_cast<bool>((image::DAT_1803facf8 != '\0') && (image::DAT_1803ff270 != '\0')); })) {
@@ -866,6 +868,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f7810() noexcept {
     // TODO: resolve the indirect call in body 17: (*DAT_1803fa460)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((DAT_180423572 != '\0') && (DAT_180423573 != '\0')) && ((DAT_1803e90b8 < DAT_180380ba0 || (_DAT_180380bb4 < DAT_1803e90b8)))) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803e90b8 < DAT_1803809c4) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180380e28 < DAT_1803e90b8) [reason: unresolved global storage/width]
     trace.data_ref("DAT_1803310e0", static_cast<const void*>(&image::DAT_1803310e0));
@@ -1008,6 +1011,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f78d0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180423573.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((((DAT_180423572 != '\0') && (DAT_180423573 != '\0')) && ((DAT_1803e90b8 < DAT_180380ba0 || (_DAT_180380bb4 < DAT_1803e90b8)))) && (((*(char *)(param_2 + 1) != '\0' && (DAT_1803fa398 != (double *)0x0)) && (param_1 = param_1 - *param_2, 0.0 < param_1)))) && (param_1 <= DAT_180380d08)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803e90b8 < DAT_1803809c4) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180380e28 < DAT_1803e90b8) [reason: unresolved global storage/width]
     trace.data_ref("DAT_1803310e0", static_cast<const void*>(&image::DAT_1803310e0));
@@ -1404,7 +1408,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f7a80() noexcept {
     // TODO: resolve the indirect call in body 97: (*pcVar1)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((local_28 == puStack_20) || (DAT_1803fa398 == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if ((0xfff < (ulonglong)((local_18 - (longlong)local_28 >> 3) * 8)) && (_Memory = (undefined8 *)local_28[-1], puVar5 = auStack_98, 0x1f < (ulonglong)((longlong)local_28 + (-8 - (longlong)_Memory)))) [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_18001d080", &local_78, "engine.dll", 10);
     trace.call_arguments("FUN_180016410", &local_28, &local_78, &local_58, 4);
     trace.call_arguments("FUN_18020e450", &local_78);
@@ -1507,7 +1511,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f7a80() noexcept {
             trace.statement("FUN_180014410(\"[PAT] NET_SetTimeForTimescale = %zu copy(ies)\\n\",");
             trace.statement("(longlong)puStack_20 - (longlong)local_28 >> 3);");
             trace.statement("FUN_180014410(\"[PAT] net_time_for_scale      = %p\\n\",DAT_1803fa398);");
-            if (trace.condition("if ((local_28 == puStack_20) || (DAT_1803fa398 == 0))")) {
+            if (trace.checked_condition("if ((local_28 == puStack_20) || (DAT_1803fa398 == 0))", [&]() -> bool { return static_cast<bool>((local_28 == puStack_20) || (image::DAT_1803fa398 == 0)); })) {
                 trace.statement("FUN_180014410(\"[SPEED] net-time compensation disabled (missing signature)\\n\");");
             } else {
             if (trace.checked_condition("if ((longlong)puStack_20 - (longlong)local_28 >> 3 != 0)", [&]() -> bool { return static_cast<bool>(reinterpret_cast<std::int64_t>(puStack_20) - reinterpret_cast<std::int64_t>(local_28) >> 3 != 0); })) {
@@ -1521,7 +1525,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f7a80() noexcept {
                 trace.statement("FUN_180014410(\"[SPEED] NET_SetTimeForTimescale #1 @ %p hook=%s\\n\",local_28[1],uVar4);");
             }
             }
-            if (trace.checked_condition("if (local_28 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_28 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_28 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_28 != (std::uint64_t *)0x0); })) {
                 trace.statement("_Memory = local_28;");
                 trace.statement("puVar5 = auStack_98;");
                 if (trace.condition("if ((0xfff < (ulonglong)((local_18 - (longlong)local_28 >> 3) * 8)) && (_Memory = (undefined8 *)local_28[-1], puVar5 = auStack_98, 0x1f < (ulonglong)((longlong)local_28 + (-8 - (longlong)_Memory))))")) {
@@ -2553,6 +2557,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f8230() noexcept {
     // TODO: resolve the indirect call in body 81: cVar5 = (*DAT_1803fa438)(DAT_1803f9278,&local_60,iVar11,iVar10);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((((DAT_1803fa620 != 0) && (DAT_1803fa438 != (code *)0x0)) && (DAT_1803f9278 != 0)) && ((param_2 != (LPVOID)0x0 && (BVar6 = IsBadWritePtr(param_2,0x88), BVar6 == 0)))) && ((iVar1 = *(int *)(DAT_1803fa620 + 0x20b88), iVar1 - 1U < 0x80 && (-1 < *(int *)(DAT_1803fa620 + 0x20b84))))) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (iVar9 - 1U < 0x16) [reason: ambiguous operand type]
     trace.call_arguments("IsBadWritePtr", param_2, 0x88);
     trace.call_arguments("memset", &image::DAT_18042f190, 0, 4000);
@@ -2871,6 +2876,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f84d0() noexcept {
     // TODO: resolve the indirect call in body 94: uVar7 = (*DAT_1803fa408)(param_1,param_2,param_3,param_4);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((DAT_1805b88a0 != 0) && (lVar4 = FUN_1801f81f0(param_2), lVar4 != 0)) && (cVar2 = FUN_180059340(lVar4), cVar2 != '\0')) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_1801f81f0", param_2);
     trace.call_arguments("FUN_180059340", lVar4);
     trace.call_arguments("FUN_180014410", "[LUANET] dropped outgoing '%s' (%u so far)\n", lVar4);
@@ -2913,7 +2919,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f84d0() noexcept {
             trace.statement("char *pcVar8;");
             trace.statement("int local_48;");
             trace.statement("longlong local_40;");
-            if (trace.checked_condition("if (DAT_1803fa408 == (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa408, 0) == (code *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa408 == (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa408, 0) == (void* *)0x0); })) {
                 trace.statement("return 0;");
             }
             if (trace.checked_condition("if (DAT_1803ff270 != '\\0')", [&]() -> bool { return static_cast<bool>(image::DAT_1803ff270 != '\0'); })) {
@@ -3317,6 +3323,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f8810() noexcept {
     // TODO: resolve the indirect call in body 91: if ((code *)ppuVar5[(uVar4 + 1) * 2] == FUN_1801f8c80) goto LAB_1801f8ae5;.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((((DAT_1803ff231 == '\0') && (DAT_1803fa668 != (longlong *)0x0)) && (lp_00 = (undefined8 *)(**(code **)(*DAT_1803fa668 + 0x240))(), lp_00 != (undefined8 *)0x0)) && ((BVar1 = IsBadReadPtr(lp_00,8), BVar1 == 0 && (lp = (void *)*lp_00, lp != (void *)0x0)))) && (BVar1 = IsBadReadPtr(lp,0x148), BVar1 == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((char *)(&DAT_1803eb898)[(longlong)iVar8 * 0xb] != (char *)0x0) && (iVar2 = strcmp((char *)(&DAT_1803eb898)[(longlong)iVar8 * 0xb],"player_connect"), iVar2 == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((char *)(&DAT_1803eb898)[(longlong)iVar8 * 0xb] != (char *)0x0) && (iVar2 = strcmp((char *)(&DAT_1803eb898)[(longlong)iVar8 * 0xb],"player_disconnect"), iVar2 == 0)) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for VirtualProtect: (LPVOID)(DAT_1803facd8 + 0x140),8,0x40,(PDWORD)&local_38 [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for VirtualProtect: (LPVOID)(DAT_1803facd8 + 0x140),8,(DWORD)local_38,(PDWORD)0x0 [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for strcmp: (char *)(&DAT_1803eb898)[(longlong)iVar8 * 0xb],"player_connect" [reason: unresolved global storage/width]
@@ -4174,7 +4183,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9010() noexcept {
             trace.statement("float local_40;");
             trace.statement("float local_3c;");
             trace.statement("char local_38;");
-            if (trace.condition("if (((((DAT_1803fa360 != (longlong *)0x0) && (0 < param_1)) && (param_2 != (float *)0x0)) && ((param_3 != (float *)0x0 && (param_4 != (float *)0x0)))) && (param_5 != (float *)0x0))")) {
+            if (trace.checked_condition("if (((((DAT_1803fa360 != (longlong *)0x0) && (0 < param_1)) && (param_2 != (float *)0x0)) && ((param_3 != (float *)0x0 && (param_4 != (float *)0x0)))) && (param_5 != (float *)0x0))", [&]() -> bool { return static_cast<bool>(((((load_at<void*>(&image::DAT_1803fa360, 0) != (std::int64_t *)0x0) && (0 < param_1)) && (param_2 != (float *)0x0)) && ((param_3 != (float *)0x0 && (param_4 != (float *)0x0)))) && (param_5 != (float *)0x0)); })) {
                 trace.statement("lVar1 = (**(code **)(*DAT_1803fa360 + 0x18))();");
                 if (trace.checked_condition("if (lVar1 != 0)", [&]() -> bool { return static_cast<bool>(lVar1 != 0); })) {
                     trace.statement("FUN_180190220(&local_48,lVar1,0);");
@@ -5770,9 +5779,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
     // TODO: resolve the indirect call in body 748: *(code **)(DAT_1803faad0 + 0x28) = FUN_1801f6f60;.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((DAT_1804096f8 == 0) || (DAT_1804096e8 == (FARPROC)0x0)) && (pHVar8 = GetModuleHandleA("lua_shared.dll"), pHVar8 != (HMODULE)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((iVar4 == 0) && (iVar4 = FUN_180243560(lVar6,1), iVar4 == 0)) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((iVar4 == 0) && (lVar6 = FUN_180023290(), lVar6 != 0)) [reason: assignment or side effect]
-    // TODO: condition expression type not recovered: if ((DAT_1803fa680 == (undefined8 *)0x0) || (DAT_1803f9258 == '\0')) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if ((DAT_1803ff248 == (PVOID)0x0) && (DAT_1803ff248 = AddVectoredExceptionHandler(1,(PVECTORED_EXCEPTION_HANDLER)&LAB_1801ed240), DAT_1803ff248 == (PVOID)0x0)) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for FUN_180242fc0: pFVar11,&LAB_1800228b0,&DAT_1803fa5b0 [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for FUN_180242fc0: lVar6,&LAB_180147890,&DAT_180409b90 [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for FUN_180242fc0: lVar6,&LAB_180023570,&DAT_1803fa648 [reason: unresolved global storage/width]
@@ -6603,7 +6613,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
                 trace.statement("uVar7 = FUN_1802436b0(uVar3);");
                 trace.statement("FUN_180014410(\"[MH] studio pAnim: %s\\n\",uVar7);");
             }
-            if (trace.checked_condition("if (DAT_1803fa5a0 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa5a0, 0) == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa5a0 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa5a0, 0) == (std::int64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[MH-WARN] g_pMoveHelper null - sim footstep audio stays doubled\\n\");");
             } else {
             trace.statement("lVar6 = *DAT_1803fa5a0;");
@@ -6658,7 +6668,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] D3D device is null!\\n\");");
             } else {
             trace.statement("puVar9 = (undefined8 *)FUN_1801e97c0();");
-            if (trace.checked_condition("if (puVar9 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(puVar9 == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (puVar9 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(puVar9 == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] no verified IDirect3DDevice9 behind raw=%p; D3D hooks skipped\\n\",");
                 trace.statement("DAT_1803fa5e0);");
             } else {
@@ -6735,7 +6745,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("DAT_18040a288 = FUN_1801ed510;");
             trace.statement("DAT_18040a278 = FUN_180119da0;");
             trace.statement("ReleaseSRWLockExclusive((PSRWLOCK)&DAT_18040a360);");
-            if (trace.checked_condition("if (DAT_1803fa640 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa640, 0) != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa640 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa640, 0) != (std::uint64_t *)0x0); })) {
                 trace.statement("pplVar1 = (longlong **)*DAT_1803fa640;");
                 trace.statement("local_c8 = (longlong **)0x0;");
                 trace.statement("uStack_c0 = 0;");
@@ -6763,7 +6773,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
                 trace.statement("FUN_180014410(\"[VMT] MaterialSystem: OverrideConfig(20)=%p\\n\",DAT_1803fa3d8);");
                 trace.statement("FUN_180115a50();");
             }
-            if (trace.checked_condition("if (DAT_1803f9278 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803f9278, 0) == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803f9278 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803f9278, 0) == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] CHLClient is null!\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803f9278;");
@@ -6831,7 +6841,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("FUN_180014410(\"[VMT] VR(26)=%p WU(23)=%p HU(11)=%p LI(5)=%p LS(7)=%p ESP->ClViewRender\\n\",");
             trace.statement("DAT_1803fa440,DAT_1803fa438,DAT_1803fa388);");
             }
-            if (trace.checked_condition("if (DAT_1803fa638 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa638, 0) == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa638 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa638, 0) == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] ClientMode is null!\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803fa638;");
@@ -6860,7 +6870,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("VirtualProtect((LPVOID)(DAT_1803fa9c0 + 0xa8),8,(DWORD)local_50,(PDWORD)0x0);");
             trace.statement("FUN_180014410(\"[VMT] CM(21)=%p\\n\",DAT_1803fa3d0);");
             }
-            if (trace.checked_condition("if (DAT_1803fa600 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa600, 0) == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa600 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa600, 0) == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] Panel is null!\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803fa600;");
@@ -6889,7 +6899,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("VirtualProtect((LPVOID)(DAT_1803faa20 + 0x148),8,(DWORD)local_50,(PDWORD)0x0);");
             trace.statement("FUN_180014410(\"[VMT] PT(41)=%p\\n\",DAT_1803fa508);");
             }
-            if (trace.condition("if ((DAT_1803fa680 == (undefined8 *)0x0) || (DAT_1803f9258 == '\\0'))")) {
+            if (trace.checked_condition("if ((DAT_1803fa680 == (undefined8 *)0x0) || (DAT_1803f9258 == '\\0'))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803fa680, 0) == (std::uint64_t *)0x0) || (image::DAT_1803f9258 == '\0')); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] ViewRender is null or not verified; slots 6/37 left untouched\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803fa680;");
@@ -6937,7 +6947,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("FUN_180014410(\"[VMT] RV(6)=%p PreHUD(37)=%p DrawViewModels(40)=%p\\n\",DAT_1803fa478,DAT_1803fa3a0");
             trace.statement(",DAT_1803fa498);");
             }
-            if (trace.checked_condition("if (DAT_1803fa668 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa668, 0) == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa668 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa668, 0) == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] Engine is null!\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803fa668;");
@@ -6959,7 +6969,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("FUN_180209520(uVar3,0x13,&LAB_1801f3440,&DAT_1803fa3f0);");
             trace.statement("FUN_180014410(\"[VMT] SVA(20)=%p GVA(19)=%p\\n\",DAT_1803fa380,DAT_1803fa3f0);");
             }
-            if (trace.checked_condition("if (DAT_1803fa598 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa598, 0) == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa598 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa598, 0) == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] ModelRender is null!\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803fa598;");
@@ -6988,7 +6998,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("VirtualProtect((LPVOID)(DAT_1803faa40 + 0xa0),8,(DWORD)local_50,(PDWORD)0x0);");
             trace.statement("FUN_180014410(\"[VMT] DME(20)=%p\\n\",DAT_1803fa378);");
             }
-            if (trace.checked_condition("if (DAT_1803fa678 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa678, 0) == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa678 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa678, 0) == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] LuaShared is null!\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803fa678;");
@@ -7017,7 +7027,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("VirtualProtect((LPVOID)(DAT_1803faad0 + 0x28),8,(DWORD)local_50,(PDWORD)0x0);");
             trace.statement("FUN_180014410(\"[VMT] CloseLuaInterface(5)=%p\\n\",DAT_1803fa3c0);");
             }
-            if (trace.checked_condition("if (DAT_1803fa350 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa350, 0) == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa350 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa350, 0) == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] VGui is null!\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803fa350;");
@@ -7036,7 +7046,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801f9180() noexcept {
             trace.statement("local_88[0] = &local_b8;");
             trace.statement("FUN_1802095f0(&local_b8);");
             }
-            if (trace.checked_condition("if (DAT_1803fa5a8 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa5a8, 0) == (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (DAT_1803fa5a8 == (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa5a8, 0) == (std::uint64_t *)0x0); })) {
                 trace.statement("FUN_180014410(\"[VMT-FAIL] InputSystem is null!\\n\");");
             } else {
             trace.statement("pplVar1 = (longlong **)*DAT_1803fa5a8;");
@@ -7300,6 +7310,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fafb0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: while (DAT_1803faac0 = plVar2, cVar1 == '\0') [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((plVar5[4] != 0) && (plVar5[5] != 0)) && (BVar4 = IsBadReadPtr((void *)(plVar5[4] + 0x9f0),8), BVar4 == 0)) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (*(code **)(plVar5[4] + 0x9f0) == FUN_1801ee2f0) [reason: pointer depth/pointee not proven]
     // TODO: call arguments not type-recovered for AcquireSRWLockExclusive: (PSRWLOCK)&DAT_1803fa400 [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for ReleaseSRWLockExclusive: (PSRWLOCK)&DAT_1803fa400 [reason: unresolved global storage/width]
@@ -7410,7 +7421,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fafb0() noexcept {
                 trace.statement("cVar1 = *(char *)(plVar5[1] + 0x19);");
                 trace.statement("plVar3 = (longlong *)plVar5[1];");
                 trace.statement("plVar2 = plVar5;");
-                while (trace.checked_loop_condition("while ((plVar5 = plVar3, cVar1 == '\\0' && (plVar2 == (longlong *)plVar5[2])))", [&]() -> bool { return static_cast<bool>((plVar5 = plVar3, cVar1 == '\0' && (plVar2 == (longlong *)plVar5[2]))); })) {
+                while (trace.checked_loop_condition("while ((plVar5 = plVar3, cVar1 == '\\0' && (plVar2 == (longlong *)plVar5[2])))", [&]() -> bool { return static_cast<bool>((plVar5 = plVar3, cVar1 == '\0' && (plVar2 == (std::int64_t *)plVar5[2]))); })) {
                     trace.statement("cVar1 = *(char *)(plVar5[1] + 0x19);");
                     trace.statement("plVar3 = (longlong *)plVar5[1];");
                     trace.statement("plVar2 = plVar5;");
@@ -7594,7 +7605,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fb310() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803f9288.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (puVar3[6] == DAT_1803f9288) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if ((ProcessEnvironmentBlock != (void *)0x0) && (*(longlong *)((longlong)ProcessEnvironmentBlock + 0x18) != 0)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((lp != (void *)0x0) && (BVar1 = IsBadReadPtr(lp,0x20), BVar1 == 0)) [reason: pointer-cast target not proven]
     trace.call_arguments("IsBadReadPtr", lp, 0x20);
     trace.data_ref("DAT_1803f9288", static_cast<const void*>(&image::DAT_1803f9288));
@@ -7607,8 +7618,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fb310() noexcept {
             trace.statement("undefined8 *puVar3;");
             if (trace.condition("if ((ProcessEnvironmentBlock != (void *)0x0) && (*(longlong *)((longlong)ProcessEnvironmentBlock + 0x18) != 0))")) {
                 trace.statement("puVar2 = (undefined8 *)(*(longlong *)((longlong)ProcessEnvironmentBlock + 0x18) + 0x10);");
-                for (auto loop = trace.loop("for (puVar3 = (undefined8 *)*puVar2; (puVar3 != (undefined8 *)0x0 && (puVar3 != puVar2)); puVar3 = (undefined8 *)*puVar3)"); loop.next(); ) {
-                    if (trace.condition("if (puVar3[6] == DAT_1803f9288)")) {
+                for (auto loop = trace.checked_loop("for (puVar3 = (undefined8 *)*puVar2; (puVar3 != (undefined8 *)0x0 && (puVar3 != puVar2)); puVar3 = (undefined8 *)*puVar3)", [&]() -> bool { return static_cast<bool>((puVar3 != (std::uint64_t *)0x0 && (puVar3 != puVar2))); }); loop.next(); ) {
+                    if (trace.checked_condition("if (puVar3[6] == DAT_1803f9288)", [&]() -> bool { return static_cast<bool>(puVar3[6] == image::DAT_1803f9288); })) {
                         trace.statement("lp = (void *)puVar3[0x13];");
                         if (trace.condition("if ((lp != (void *)0x0) && (BVar1 = IsBadReadPtr(lp,0x20), BVar1 == 0))")) {
                             if (trace.checked_condition("if (*(uint *)((longlong)lp + 0x18) < 0x41)", [&]() -> bool { return static_cast<bool>(load_at<std::uint32_t>(reinterpret_cast<std::int64_t>(lp) + 0x18, 0) < 0x41); })) {
@@ -8408,7 +8419,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fb3a0() noexcept {
     // TODO: resolve the indirect call in body 361: (*pcVar2)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803fa4f0 != 0) && (DAT_1803fa618 != (HWND)0x0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((cVar3 != '\0') && (lVar9 = FUN_1801321e0(), lVar9 != 0)) && (lVar9 = FUN_180131880(lVar9), lVar9 != 0)) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (((DAT_1803fa668 != (longlong *)0x0) && (cVar3 = (**(code **)(*DAT_1803fa668 + 0xd0))(), cVar3 != '\0')) && ((pcVar12 = (char *)FUN_18012a9f0(), pcVar12 != (char *)0x0 && (*pcVar12 != '\0')))) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for FUN_180014410: "[UNLOAD-WARN] render thread never presented; D3D objects left allocated\n" [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for SetUnhandledExceptionFilter: (LPTOP_LEVEL_EXCEPTION_FILTER)0x0 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180014410: "[UNLOAD-WARN] %u references still held; module will stay mapped\n",uVar13 [reason: ambiguous operand type]
@@ -8800,7 +8812,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fb3a0() noexcept {
                 if (trace.checked_condition("if ((DAT_180401593 != '\\0') && (DAT_1803fa46f == '\\0'))", [&]() -> bool { return static_cast<bool>((image::DAT_180401593 != '\0') && (image::DAT_1803fa46f == '\0')); })) {
                     trace.statement("FUN_180130390(uVar6,uVar6,uVar6,1);");
                 }
-                if (trace.checked_condition("if (DAT_1803fa5a8 != (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa5a8, 0) != (longlong *)0x0); })) {
+                if (trace.checked_condition("if (DAT_1803fa5a8 != (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fa5a8, 0) != (std::int64_t *)0x0); })) {
                     trace.statement("(**(code **)(*DAT_1803fa5a8 + 0x58))(DAT_1803fa5a8,1);");
                 }
                 trace.statement("DAT_18040a250 = 1;");
@@ -8882,7 +8894,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fb3a0() noexcept {
                             trace.statement("FUN_180014410(\"[UNLOAD] visual teardown done on the render thread (%d ms)\\n\",uVar14);");
                         } else {
                         trace.statement("DAT_1803ff298 = 0;");
-                        if (trace.condition("if ((DAT_1803fa4f0 != 0) && (DAT_1803fa618 != (HWND)0x0))")) {
+                        if (trace.checked_condition("if ((DAT_1803fa4f0 != 0) && (DAT_1803fa618 != (HWND)0x0))", [&]() -> bool { return static_cast<bool>((image::DAT_1803fa4f0 != 0) && (load_at<void*>(&image::DAT_1803fa618, 0) != (void*)0x0)); })) {
                             trace.statement("SetWindowLongPtrW(DAT_1803fa618,-4,DAT_1803fa4f0);");
                             trace.statement("DAT_1803fa4f0 = 0;");
                             trace.statement("FUN_180014410(\"[UNLOAD] WndProc restored\\n\");");
@@ -8919,7 +8931,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fb3a0() noexcept {
                         trace.statement("lpAddress = DAT_1805c8480;");
                         if (trace.checked_condition("if (iVar4 == 0)", [&]() -> bool { return static_cast<bool>(iVar4 == 0); })) {
                             trace.statement("DAT_1805c8480 = (undefined8 *)0x0;");
-                            while (trace.checked_loop_condition("while (lpAddress != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(lpAddress != (undefined8 *)0x0); })) {
+                            while (trace.checked_loop_condition("while (lpAddress != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(lpAddress != (std::uint64_t *)0x0); })) {
                                 trace.statement("puVar1 = (undefined8 *)*lpAddress;");
                                 trace.statement("VirtualFree(lpAddress,0,0x8000);");
                                 trace.statement("lpAddress = puVar1;");
@@ -8968,7 +8980,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fb3a0() noexcept {
                                             trace.statement("DAT_1803da76c = 0x7ffffffe;");
                                             trace.statement("std::_Throw_Cpp_error(6);");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803f9240 != (FILE *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803f9240, 0) != (FILE *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803f9240 != (FILE *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803f9240, 0) != (void* *)0x0); })) {
                                             trace.statement("fflush(DAT_1803f9240);");
                                             trace.statement("fclose(DAT_1803f9240);");
                                             trace.statement("DAT_1803f9240 = (FILE *)0x0;");
@@ -10013,9 +10025,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fc280() noexcept {
     // TODO: resolve the indirect call in body 90: (**(code **)(**(longlong **)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x48) +.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (*(longlong **)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x48) != (longlong *)0x0) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (*(int *)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x10) == 0) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((this == (basic_ostream<char,std::char_traits<char>_> *)0x0) || (this == param_1)) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((*(uint *)(param_1 + (longlong)*(int *)(lVar5 + 4) + 0x18) & 0x1c0) != 0x40) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (*(longlong **)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x48) != (longlong *)0x0) [reason: pointer depth/pointee not proven]
     // TODO: call arguments not type-recovered for flush: this [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Osfx: param_1 [reason: ambiguous operand type]
     trace.call_arguments("strlen", param_2);
@@ -10255,10 +10269,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fc450() noexcept {
     // TODO: resolve the indirect call in body 91: (**(code **)(**(longlong **)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x48) +.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (*(longlong **)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x48) != (longlong *)0x0) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (*(int *)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x10) == 0) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((this == (basic_ostream<char,std::char_traits<char>_> *)0x0) || (this == param_1)) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (1 < *(longlong *)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x28)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if ((*(uint *)(param_1 + (longlong)*(int *)(lVar3 + 4) + 0x18) & 0x1c0) == 0x40) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (*(longlong **)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x48) != (longlong *)0x0) [reason: pointer depth/pointee not proven]
     // TODO: call arguments not type-recovered for flush: this [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Osfx: param_1 [reason: ambiguous operand type]
     trace.call_arguments("uncaught_exceptions");
@@ -10599,7 +10615,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fc700() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*puVar2 <= 0x7fffffffffffffffU - *plVar1) [reason: ambiguous operand type]
     trace.call_arguments("FUN_18020e930", param_1, param_2, param_3, param_2, *plVar1, param_3, *puVar2);
     trace.call_arguments("FUN_1800130a0");
     trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
@@ -10611,7 +10626,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fc700() noexcept {
             trace.statement("ulonglong *puVar2;");
             trace.statement("plVar1 = param_2 + 2;");
             trace.statement("puVar2 = param_3 + 2;");
-            if (trace.condition("if (*puVar2 <= 0x7fffffffffffffffU - *plVar1)")) {
+            if (trace.checked_condition("if (*puVar2 <= 0x7fffffffffffffffU - *plVar1)", [&]() -> bool { return static_cast<bool>(*puVar2 <= 0x7fffffffffffffffU - *plVar1); })) {
                 if (trace.checked_condition("if (0xf < (ulonglong)param_2[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(param_2[3])); })) {
                     trace.statement("param_2 = (undefined8 *)*param_2;");
                 }
@@ -11167,7 +11182,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fc8c0() noexcept {
                         trace.statement("plVar1 = (longlong *)param_1[0x13];");
                         trace.statement("local_68 = *(undefined8 *)(uVar6 * 0x60 + 0x58 + lVar7);");
                         trace.statement("local_58 = uVar6;");
-                        if (trace.checked_condition("if (plVar1 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar1 == (longlong *)0x0); })) {
+                        if (trace.checked_condition("if (plVar1 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar1 == (std::int64_t *)0x0); })) {
                             trace.statement("std::_Xbad_function_call();");
                         }
                         trace.statement("(**(code **)(*plVar1 + 0x10))(plVar1,&local_58,&local_68);");
@@ -11417,7 +11432,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fcbd0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((puVar6 != (undefined8 *)(param_1[1] + -0x60)) || ((ushort *)puVar6[1] != (ushort *)*puVar6) [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_18021aef0", param_2, &local_48, uVar7);
     trace.call_arguments("FUN_18021abd0", param_2);
     trace.call_target("FUN_18021abd0", reinterpret_cast<const void*>(&image::FUN_18021abd0));
@@ -11451,10 +11465,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fcbd0() noexcept {
             trace.statement("local_50 = param_2;");
             LAB_1801fcc30: ;
             do {
-                if (trace.checked_condition("if ((undefined8 *)param_1[1] <= puVar6)", [&]() -> bool { return static_cast<bool>((undefined8 *)param_1[1] <= puVar6); })) {
+                if (trace.checked_condition("if ((undefined8 *)param_1[1] <= puVar6)", [&]() -> bool { return static_cast<bool>((std::uint64_t *)param_1[1] <= puVar6); })) {
                     trace.statement("return param_2;");
                 }
-                for (auto loop = trace.checked_loop("for (puVar5 = (ushort *)*puVar6; puVar5 < (ushort *)puVar6[1]; puVar5 = puVar5 + 8)", [&]() -> bool { return static_cast<bool>(puVar5 < (ushort *)puVar6[1]); }); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (puVar5 = (ushort *)*puVar6; puVar5 < (ushort *)puVar6[1]; puVar5 = puVar5 + 8)", [&]() -> bool { return static_cast<bool>(puVar5 < (std::uint16_t *)puVar6[1]); }); loop.next(); ) {
                     trace.statement("uVar3 = *puVar5;");
                     if (trace.checked_condition("if (uVar3 < 0x80)", [&]() -> bool { return static_cast<bool>(uVar3 < 0x80); })) {
                         trace.statement("uVar7 = 1;");
@@ -11476,7 +11490,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fcbd0() noexcept {
                     }
                     trace.statement("FUN_18021aef0(param_2,&local_48,uVar7);");
                 }
-                if (trace.condition("if ((puVar6 != (undefined8 *)(param_1[1] + -0x60)) || ((ushort *)puVar6[1] != (ushort *)*puVar6) )")) {
+                if (trace.checked_condition("if ((puVar6 != (undefined8 *)(param_1[1] + -0x60)) || ((ushort *)puVar6[1] != (ushort *)*puVar6) )", [&]() -> bool { return static_cast<bool>((puVar6 != (std::uint64_t *)(param_1[1] + -0x60)) || ((std::uint16_t *)puVar6[1] != (std::uint16_t *)*puVar6)); })) {
                     trace.statement("uVar1 = param_2[2];");
                     if (trace.checked_condition("if (uVar1 < (ulonglong)param_2[3])", [&]() -> bool { return static_cast<bool>(uVar1 < static_cast<std::uint64_t>(param_2[3])); })) {
                         trace.statement("param_2[2] = uVar1 + 1;");
@@ -12024,7 +12038,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fce40() noexcept {
             trace.statement("cVar1 = *(char *)(param_3[1] + 0x19);");
             trace.statement("plVar3 = (longlong *)param_3[1];");
             trace.statement("plVar2 = param_3;");
-            while (trace.checked_loop_condition("while ((plVar4 = plVar3, cVar1 == '\\0' && (plVar2 == (longlong *)plVar4[2])))", [&]() -> bool { return static_cast<bool>((plVar4 = plVar3, cVar1 == '\0' && (plVar2 == (longlong *)plVar4[2]))); })) {
+            while (trace.checked_loop_condition("while ((plVar4 = plVar3, cVar1 == '\\0' && (plVar2 == (longlong *)plVar4[2])))", [&]() -> bool { return static_cast<bool>((plVar4 = plVar3, cVar1 == '\0' && (plVar2 == (std::int64_t *)plVar4[2]))); })) {
                 trace.statement("cVar1 = *(char *)(plVar4[1] + 0x19);");
                 trace.statement("plVar3 = (longlong *)plVar4[1];");
                 trace.statement("plVar2 = plVar4;");
@@ -13300,7 +13314,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fd250() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar11 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar11 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar11 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar11 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar11 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar11[1];");
@@ -13392,7 +13406,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fd250() noexcept {
                                         trace.statement("iVar9 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar9 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -13421,7 +13435,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fd250() noexcept {
                                         } else {
                                         trace.statement("pcVar23 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar21 = puVar22;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar22[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar22[3])); })) {
                                                 trace.statement("puVar21 = (undefined8 *)*puVar22;");
@@ -14286,7 +14300,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fd890() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar11 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar11 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar11 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar11 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar11 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar11[1];");
@@ -14377,7 +14391,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fd890() noexcept {
                                         trace.statement("iVar9 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar9 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -14389,7 +14403,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fd890() noexcept {
                                     trace.statement("IVar14 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     trace.statement("puVar20 = local_60;");
                                     if (trace.checked_condition("if ((int)IVar14 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar14) == 6); })) {
-                                        if (trace.checked_condition("if ((DAT_1803fafa0 != (code *)0x0) && (DAT_1803faed8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803fafa0, 0) != (code *)0x0) && (load_at<void*>(&image::DAT_1803faed8, 0) != (code *)0x0)); })) {
+                                        if (trace.checked_condition("if ((DAT_1803fafa0 != (code *)0x0) && (DAT_1803faed8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803fafa0, 0) != (void* *)0x0) && (load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0)); })) {
                                             trace.statement("plVar19 = (longlong *)*local_60;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)plVar19[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(plVar19[3])); })) {
                                                 trace.statement("plVar19 = (longlong *)*plVar19;");
@@ -14397,7 +14411,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fd890() noexcept {
                                             trace.statement("(*DAT_1803fafa0)(lVar1,plVar19);");
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)*(int *)(puVar20 + 1));");
                                             if (trace.checked_condition("if (*(int *)((longlong)puVar20 + 0xc) == 0)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(reinterpret_cast<std::int64_t>(puVar20) + 0xc, 0) == 0); })) {
-                                                if (trace.checked_condition("if (DAT_1803fafd8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0); })) {
+                                                if (trace.checked_condition("if (DAT_1803fafd8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0); })) {
                                                     trace.statement("(*DAT_1803fafd8)(lVar1);");
                                                     trace.statement("goto LAB_1801fdce0;");
                                                 }
@@ -14425,7 +14439,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fd890() noexcept {
                                         } else {
                                         trace.statement("pcVar22 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar20 = puVar21;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar21[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar21[3])); })) {
                                                 trace.statement("puVar20 = (undefined8 *)*puVar21;");
@@ -15146,7 +15160,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fdeb0() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar12 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar12[1];");
@@ -15237,7 +15251,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fdeb0() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -15269,7 +15283,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fdeb0() noexcept {
                                         } else {
                                         trace.statement("pcVar23 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar21 = puVar22;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar22[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar22[3])); })) {
                                                 trace.statement("puVar21 = (undefined8 *)*puVar22;");
@@ -15985,7 +15999,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fe480() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar12 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar12[1];");
@@ -16078,7 +16092,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fe480() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -16108,7 +16122,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fe480() noexcept {
                                         } else {
                                         trace.statement("pcVar24 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar22 = puVar23;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar23[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar23[3])); })) {
                                                 trace.statement("puVar22 = (undefined8 *)*puVar23;");
@@ -16713,6 +16727,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fea40() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (plVar23 != DAT_1805c7c10) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((int)IVar17 == 3) && (uVar27 = (**(code **)(*plVar14 + 0xc0))(plVar14,0xfffffffe), ((uint)((ulonglong)uVar27 >> 0x34) & 0x7ff) != 0x7ff)) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (((int)IVar17 == 3) && (uVar27 = (**(code **)(*plVar14 + 0xc0))(plVar14,0xffffffff), ((uint)((ulonglong)uVar27 >> 0x34) & 0x7ff) != 0x7ff)) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_18003a090", "Pre_BuildBones");
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180039a50", 0);
@@ -16906,7 +16922,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fea40() noexcept {
                                         trace.statement("iVar11 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar11 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -16918,7 +16934,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fea40() noexcept {
                                     trace.statement("IVar17 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     trace.statement("piVar9 = local_58;");
                                     if (trace.checked_condition("if ((int)IVar17 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar17) == 6); })) {
-                                        if (trace.checked_condition("if (DAT_1803faed8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803faed8, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803faed8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0); })) {
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)*local_58);");
                                             trace.statement("(*DAT_1803faed8)(lVar1,*(undefined8 *)(piVar9 + 2));");
                                             trace.statement("(*DAT_1803faed8)(lVar1,*(undefined8 *)(piVar9 + 4));");
@@ -16961,7 +16977,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801fea40() noexcept {
                                         } else {
                                         trace.statement("pcVar18 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar22 = puVar24;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar24[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar24[3])); })) {
                                                 trace.statement("puVar22 = (undefined8 *)*puVar24;");
@@ -17633,7 +17649,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801feff0() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar12 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar12[1];");
@@ -17726,7 +17742,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801feff0() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -17737,7 +17753,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801feff0() noexcept {
                                     }
                                     trace.statement("IVar16 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     if (trace.checked_condition("if ((int)IVar16 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar16) == 6); })) {
-                                        if (trace.checked_condition("if (DAT_1803faed8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803faed8, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803faed8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0); })) {
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)*piVar8);");
                                         }
                                         trace.statement("DAT_1803ff8e8 = DAT_1803ff8e8 + 1;");
@@ -17758,7 +17774,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801feff0() noexcept {
                                         } else {
                                         trace.statement("pcVar24 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar22 = puVar23;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar23[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar23[3])); })) {
                                                 trace.statement("puVar22 = (undefined8 *)*puVar23;");
@@ -18476,7 +18492,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ff5b0() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar12 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar12[1];");
@@ -18568,7 +18584,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ff5b0() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -18579,7 +18595,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ff5b0() noexcept {
                                     }
                                     trace.statement("IVar15 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     if (trace.checked_condition("if ((int)IVar15 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar15) == 6); })) {
-                                        if (trace.checked_condition("if (DAT_1803fafa0 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fafa0, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803fafa0 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fafa0, 0) != (void* *)0x0); })) {
                                             trace.statement("(*DAT_1803fafa0)(lVar1,*puVar8);");
                                         }
                                         trace.statement("DAT_1803ff8e8 = DAT_1803ff8e8 + 1;");
@@ -18600,7 +18616,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ff5b0() noexcept {
                                         } else {
                                         trace.statement("pcVar23 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar21 = puVar22;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar22[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar22[3])); })) {
                                                 trace.statement("puVar21 = (undefined8 *)*puVar22;");
@@ -19352,7 +19368,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ffb60() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar12 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar12[1];");
@@ -19443,7 +19459,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ffb60() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -19455,7 +19471,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ffb60() noexcept {
                                     trace.statement("IVar15 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     trace.statement("piVar8 = local_60;");
                                     if (trace.checked_condition("if ((int)IVar15 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar15) == 6); })) {
-                                        if (trace.condition("if (((DAT_1803faed8 != (code *)0x0) && (DAT_1803fafa0 != (code *)0x0)) && (DAT_1803faf68 != (code *)0x0))")) {
+                                        if (trace.checked_condition("if (((DAT_1803faed8 != (code *)0x0) && (DAT_1803fafa0 != (code *)0x0)) && (DAT_1803faf68 != (code *)0x0))", [&]() -> bool { return static_cast<bool>(((load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0) && (load_at<void*>(&image::DAT_1803fafa0, 0) != (void* *)0x0)) && (load_at<void*>(&image::DAT_1803faf68, 0) != (void* *)0x0)); })) {
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)*local_60);");
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)piVar8[1]);");
                                             trace.statement("plVar20 = *(longlong **)(piVar8 + 2);");
@@ -19488,7 +19504,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1801ffb60() noexcept {
                                         } else {
                                         trace.statement("pcVar23 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar21 = puVar22;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar22[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar22[3])); })) {
                                                 trace.statement("puVar21 = (undefined8 *)*puVar22;");
@@ -20245,7 +20261,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200190() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar12 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar12[1];");
@@ -20336,7 +20352,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200190() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -20348,7 +20364,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200190() noexcept {
                                     trace.statement("IVar15 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     trace.statement("piVar8 = local_60;");
                                     if (trace.checked_condition("if ((int)IVar15 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar15) == 6); })) {
-                                        if (trace.condition("if (((DAT_1803faed8 != (code *)0x0) && (DAT_1803fafa0 != (code *)0x0)) && (DAT_1803faf68 != (code *)0x0))")) {
+                                        if (trace.checked_condition("if (((DAT_1803faed8 != (code *)0x0) && (DAT_1803fafa0 != (code *)0x0)) && (DAT_1803faf68 != (code *)0x0))", [&]() -> bool { return static_cast<bool>(((load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0) && (load_at<void*>(&image::DAT_1803fafa0, 0) != (void* *)0x0)) && (load_at<void*>(&image::DAT_1803faf68, 0) != (void* *)0x0)); })) {
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)*local_60);");
                                             trace.statement("plVar20 = *(longlong **)(piVar8 + 2);");
                                             if (trace.checked_condition("if (0xf < (ulonglong)plVar20[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(plVar20[3])); })) {
@@ -20385,7 +20401,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200190() noexcept {
                                         } else {
                                         trace.statement("pcVar23 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar21 = puVar22;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar22[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar22[3])); })) {
                                                 trace.statement("puVar21 = (undefined8 *)*puVar22;");
@@ -21117,7 +21133,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802007c0() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar12 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar12 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar12 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar12[1];");
@@ -21208,7 +21224,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802007c0() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -21220,7 +21236,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802007c0() noexcept {
                                     trace.statement("IVar15 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     trace.statement("piVar8 = local_60;");
                                     if (trace.checked_condition("if ((int)IVar15 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar15) == 6); })) {
-                                        if (trace.checked_condition("if ((DAT_1803faed8 != (code *)0x0) && (DAT_1803faf68 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803faed8, 0) != (code *)0x0) && (load_at<void*>(&image::DAT_1803faf68, 0) != (code *)0x0)); })) {
+                                        if (trace.checked_condition("if ((DAT_1803faed8 != (code *)0x0) && (DAT_1803faf68 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0) && (load_at<void*>(&image::DAT_1803faf68, 0) != (void* *)0x0)); })) {
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)*local_60);");
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)piVar8[1]);");
                                             trace.statement("(*DAT_1803faf68)(lVar1,(char)piVar8[2] != '\\0');");
@@ -21244,7 +21260,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802007c0() noexcept {
                                         } else {
                                         trace.statement("pcVar23 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar21 = puVar22;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar22[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar22[3])); })) {
                                                 trace.statement("puVar21 = (undefined8 *)*puVar22;");
@@ -21879,7 +21895,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200dc0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (plVar25 != DAT_1805c7c10) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((undefined1 *)*local_48 != (undefined1 *)0x0) [reason: pointer-cast target not proven]
     trace.call_arguments("FUN_18003a090");
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180039a50", 0);
@@ -21985,7 +22000,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200dc0() noexcept {
                 trace.statement("return;");
             }
             trace.statement("plVar11 = (longlong *)FUN_180039770();");
-            if (trace.checked_condition("if (plVar11 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar11 == (longlong *)0x0); })) {
+            if (trace.checked_condition("if (plVar11 == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar11 == (std::int64_t *)0x0); })) {
                 trace.statement("return;");
             }
             trace.statement("lVar1 = plVar11[1];");
@@ -22077,7 +22092,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200dc0() noexcept {
                                         trace.statement("iVar9 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar9 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -22089,9 +22104,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200dc0() noexcept {
                                     trace.statement("IVar15 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     trace.statement("puVar22 = local_48;");
                                     if (trace.checked_condition("if ((int)IVar15 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar15) == 6); })) {
-                                        if (trace.checked_condition("if ((DAT_1803fafa0 != (code *)0x0) && (DAT_1803faed8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803fafa0, 0) != (code *)0x0) && (load_at<void*>(&image::DAT_1803faed8, 0) != (code *)0x0)); })) {
+                                        if (trace.checked_condition("if ((DAT_1803fafa0 != (code *)0x0) && (DAT_1803faed8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803fafa0, 0) != (void* *)0x0) && (load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0)); })) {
                                             trace.statement("puVar21 = &DAT_18033e5ea;");
-                                            if (trace.condition("if ((undefined1 *)*local_48 != (undefined1 *)0x0)")) {
+                                            if (trace.checked_condition("if ((undefined1 *)*local_48 != (undefined1 *)0x0)", [&]() -> bool { return static_cast<bool>((std::uint8_t *)*local_48 != (std::uint8_t *)0x0); })) {
                                                 trace.statement("puVar21 = (undefined1 *)*local_48;");
                                             }
                                             trace.statement("(*DAT_1803fafa0)(lVar1,puVar21);");
@@ -22116,7 +22131,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180200dc0() noexcept {
                                         } else {
                                         trace.statement("pcVar24 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar22 = puVar23;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar23[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar23[3])); })) {
                                                 trace.statement("puVar22 = (undefined8 *)*puVar23;");
@@ -22657,6 +22672,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802013c0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (plVar22 != DAT_1805c7c10) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((int)IVar15 == 1) && (cVar8 = (**(code **)(*plVar12 + 200))(plVar12,0xffffffff), cVar8 == '\0')) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_18003a090", "CL_Move");
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180039a50", 0);
@@ -22834,7 +22850,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802013c0() noexcept {
                                         trace.statement("iVar9 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar9 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -22873,7 +22889,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802013c0() noexcept {
                                         } else {
                                         trace.statement("pcVar16 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar21 = puVar23;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar23[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar23[3])); })) {
                                                 trace.statement("puVar21 = (undefined8 *)*puVar23;");
@@ -23382,6 +23398,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180201850() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (plVar24 != DAT_1805c7c10) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((int)IVar17 == 1) && (cVar9 = (**(code **)(*plVar13 + 200))(plVar13,0xffffffff), cVar9 == '\0')) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_18003a090");
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180039a50", 0);
@@ -23567,7 +23584,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180201850() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -23607,7 +23624,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180201850() noexcept {
                                         } else {
                                         trace.statement("pcVar18 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar23 = puVar25;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar25[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar25[3])); })) {
                                                 trace.statement("puVar23 = (undefined8 *)*puVar25;");
@@ -24171,7 +24188,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180201e70() noexcept {
                 trace.statement("plVar3 = (longlong *)param_1[1];");
                 trace.statement("param_1[1] = puVar6;");
                 trace.statement("plStack_2c0 = plVar3;");
-                if (trace.checked_condition("if (plVar3 != (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar3 != (longlong *)0x0); })) {
+                if (trace.checked_condition("if (plVar3 != (longlong *)0x0)", [&]() -> bool { return static_cast<bool>(plVar3 != (std::int64_t *)0x0); })) {
                     trace.statement("LOCK();");
                     trace.statement("plVar1 = plVar3 + 1;");
                     trace.statement("lVar4 = *plVar1;");
@@ -24475,6 +24492,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x180202170() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180202284.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if ((this == (basic_streambuf<char,std::char_traits<char>_> *)0x0) || (iVar3 = std::basic_streambuf<char,std::char_traits<char>_>::sgetc(this), iVar3 == -1)) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if ((this_00 == (basic_streambuf<char,std::char_traits<char>_> *)0x0) || (iVar3 = std::basic_streambuf<char,std::char_traits<char>_>::sgetc(this_00), iVar3 == -1)) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if (this == (basic_streambuf<char,std::char_traits<char>_> *)0x0) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (this_00 == (basic_streambuf<char,std::char_traits<char>_> *)0x0) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for sgetc: this [reason: ambiguous operand type]
@@ -25160,6 +25179,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802023d0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (plVar23 != DAT_1805c7c10) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((int)IVar16 == 1) && (cVar9 = (**(code **)(*plVar13 + 200))(plVar13,0xffffffff), cVar9 == '\0')) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_18003a090", "Net_ShouldSend");
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180039a50", 0);
@@ -25341,7 +25361,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802023d0() noexcept {
                                         trace.statement("iVar10 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar10 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -25352,7 +25372,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802023d0() noexcept {
                                     }
                                     trace.statement("IVar16 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     if (trace.checked_condition("if ((int)IVar16 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar16) == 6); })) {
-                                        if (trace.checked_condition("if (DAT_1803fafa0 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fafa0, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803fafa0 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803fafa0, 0) != (void* *)0x0); })) {
                                             trace.statement("plVar12 = (longlong *)*puVar8;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)plVar12[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(plVar12[3])); })) {
                                                 trace.statement("plVar12 = (longlong *)*plVar12;");
@@ -25387,7 +25407,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802023d0() noexcept {
                                         } else {
                                         trace.statement("pcVar17 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar22 = puVar24;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar24[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar24[3])); })) {
                                                 trace.statement("puVar22 = (undefined8 *)*puVar24;");
@@ -27579,6 +27599,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802034f0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (plVar23 != DAT_1805c7c10) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((int)IVar17 == 3) && (uVar27 = (**(code **)(*plVar14 + 0xc0))(plVar14,0xfffffffe), ((uint)((ulonglong)uVar27 >> 0x34) & 0x7ff) != 0x7ff)) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (((int)IVar17 == 3) && (uVar27 = (**(code **)(*plVar14 + 0xc0))(plVar14,0xffffffff), ((uint)((ulonglong)uVar27 >> 0x34) & 0x7ff) != 0x7ff)) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_18003a090", "Pre_AnimUpdate");
     trace.call_arguments("FUN_180039770");
     trace.call_arguments("FUN_180039a50", 0);
@@ -27772,7 +27794,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802034f0() noexcept {
                                         trace.statement("iVar11 = (*DAT_1803fb088)(lVar4);");
                                         trace.statement("(*pcVar5)(lVar4,iVar11 + -1);");
                                     }
-                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                    if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                         trace.statement("(*DAT_1803fafd8)(lVar4);");
                                     }
                                     }
@@ -27784,7 +27806,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802034f0() noexcept {
                                     trace.statement("IVar17 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                     trace.statement("piVar9 = local_58;");
                                     if (trace.checked_condition("if ((int)IVar17 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar17) == 6); })) {
-                                        if (trace.checked_condition("if (DAT_1803faed8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803faed8, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803faed8 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0); })) {
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)*local_58);");
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)(float)piVar9[1]);");
                                             trace.statement("(*DAT_1803faed8)(lVar1,(double)(float)piVar9[2]);");
@@ -27827,7 +27849,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802034f0() noexcept {
                                         } else {
                                         trace.statement("pcVar18 = \"(non-string error)\";");
                                         }
-                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                        if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                             trace.statement("puVar22 = puVar24;");
                                             if (trace.checked_condition("if (0xf < (ulonglong)puVar24[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar24[3])); })) {
                                                 trace.statement("puVar22 = (undefined8 *)*puVar24;");
@@ -29178,7 +29200,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180203eb0() noexcept {
     // TODO: resolve the indirect call in body 256: (*DAT_180425540)(lVar1,uVar16 & 0xffffffff);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((DAT_1803ff980 != '\0') || (local_80 = param_3, local_78 = param_4, local_68 = param_3, local_48 = param_3, local_40 = param_4, plVar11 = (longlong *)FUN_18003a090("ESP_PlayerName"), (char)plVar11 == '\0')) || (plVar12 = (longlong *)FUN_180039770(), plVar11 = plVar12, plVar12 == (longlong *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (plVar25 != DAT_1805c7c10) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((int)IVar17 == 4) && (pcVar18 = (char *)(**(code **)(*plVar12 + 0xb8))(plVar12,0xffffffff,0), pcVar18 != (char *)0x0)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_18003a090", "ESP_PlayerName");
     trace.call_arguments("FUN_180039770");
@@ -29381,7 +29405,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180203eb0() noexcept {
                                             trace.statement("iVar9 = (*DAT_1803fb088)(lVar4);");
                                             trace.statement("(*pcVar5)(lVar4,iVar9 + -1);");
                                         }
-                                        if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                        if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                             trace.statement("(*DAT_1803fafd8)(lVar4);");
                                         }
                                         }
@@ -29392,7 +29416,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180203eb0() noexcept {
                                         }
                                         trace.statement("IVar17 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                         if (trace.checked_condition("if ((int)IVar17 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar17) == 6); })) {
-                                            if (trace.checked_condition("if ((DAT_1803faed8 != (code *)0x0) && (DAT_1803fafa0 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803faed8, 0) != (code *)0x0) && (load_at<void*>(&image::DAT_1803fafa0, 0) != (code *)0x0)); })) {
+                                            if (trace.checked_condition("if ((DAT_1803faed8 != (code *)0x0) && (DAT_1803fafa0 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0) && (load_at<void*>(&image::DAT_1803fafa0, 0) != (void* *)0x0)); })) {
                                                 trace.statement("(*DAT_1803faed8)(lVar1,(double)*local_80);");
                                                 trace.statement("plVar11 = *(longlong **)(local_68 + 2);");
                                                 if (trace.checked_condition("if (0xf < (ulonglong)plVar11[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(plVar11[3])); })) {
@@ -29430,7 +29454,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180203eb0() noexcept {
                                             } else {
                                             trace.statement("pcVar18 = \"(non-string error)\";");
                                             }
-                                            if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                            if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                                 trace.statement("puVar21 = puVar22;");
                                                 if (trace.checked_condition("if (0xf < (ulonglong)puVar22[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar22[3])); })) {
                                                     trace.statement("puVar21 = (undefined8 *)*puVar22;");
@@ -29981,7 +30005,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180204460() noexcept {
     // TODO: resolve the indirect call in body 256: (*DAT_180425540)(lVar1,uVar16 & 0xffffffff);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (((DAT_1803ff980 != '\0') || (local_80 = param_3, local_78 = param_4, local_68 = param_3, local_48 = param_3, local_40 = param_4, plVar11 = (longlong *)FUN_18003a090("ESP_Usergroup"), (char)plVar11 == '\0')) || (plVar12 = (longlong *)FUN_180039770(), plVar11 = plVar12, plVar12 == (longlong *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (plVar25 != DAT_1805c7c10) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((int)IVar17 == 4) && (pcVar18 = (char *)(**(code **)(*plVar12 + 0xb8))(plVar12,0xffffffff,0), pcVar18 != (char *)0x0)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_18003a090", "ESP_Usergroup");
     trace.call_arguments("FUN_180039770");
@@ -30184,7 +30210,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180204460() noexcept {
                                             trace.statement("iVar9 = (*DAT_1803fb088)(lVar4);");
                                             trace.statement("(*pcVar5)(lVar4,iVar9 + -1);");
                                         }
-                                        if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (code *)0x0)); })) {
+                                        if (trace.checked_condition("if ((lVar4 != 0) && (DAT_1803fafd8 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((lVar4 != 0) && (load_at<void*>(&image::DAT_1803fafd8, 0) != (void* *)0x0)); })) {
                                             trace.statement("(*DAT_1803fafd8)(lVar4);");
                                         }
                                         }
@@ -30195,7 +30221,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180204460() noexcept {
                                         }
                                         trace.statement("IVar17 = (*DAT_1803fe490)(lVar1,0xffffffff);");
                                         if (trace.checked_condition("if ((int)IVar17 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar17) == 6); })) {
-                                            if (trace.checked_condition("if ((DAT_1803faed8 != (code *)0x0) && (DAT_1803fafa0 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803faed8, 0) != (code *)0x0) && (load_at<void*>(&image::DAT_1803fafa0, 0) != (code *)0x0)); })) {
+                                            if (trace.checked_condition("if ((DAT_1803faed8 != (code *)0x0) && (DAT_1803fafa0 != (code *)0x0))", [&]() -> bool { return static_cast<bool>((load_at<void*>(&image::DAT_1803faed8, 0) != (void* *)0x0) && (load_at<void*>(&image::DAT_1803fafa0, 0) != (void* *)0x0)); })) {
                                                 trace.statement("(*DAT_1803faed8)(lVar1,(double)*local_80);");
                                                 trace.statement("plVar11 = *(longlong **)(local_68 + 2);");
                                                 if (trace.checked_condition("if (0xf < (ulonglong)plVar11[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(plVar11[3])); })) {
@@ -30233,7 +30259,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180204460() noexcept {
                                             } else {
                                             trace.statement("pcVar18 = \"(non-string error)\";");
                                             }
-                                            if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (code *)0x0); })) {
+                                            if (trace.checked_condition("if (DAT_1803ff978 != (code *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<void*>(&image::DAT_1803ff978, 0) != (void* *)0x0); })) {
                                                 trace.statement("puVar21 = puVar22;");
                                                 if (trace.checked_condition("if (0xf < (ulonglong)puVar22[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar22[3])); })) {
                                                     trace.statement("puVar21 = (undefined8 *)*puVar22;");
@@ -30861,7 +30887,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180204e10() noexcept {
             trace.statement("plVar1 = (longlong *)(DAT_1805c39a8 + uVar4 * 0x10);");
             trace.statement("lVar2 = DAT_1805c39a8 + uVar4 * 0x10;");
             if (trace.condition("if (*(longlong **)(lVar2 + 8) == param_3)")) {
-                if (trace.checked_condition("if ((longlong *)*plVar1 == param_3)", [&]() -> bool { return static_cast<bool>((longlong *)*plVar1 == param_3); })) {
+                if (trace.checked_condition("if ((longlong *)*plVar1 == param_3)", [&]() -> bool { return static_cast<bool>((std::int64_t *)*plVar1 == param_3); })) {
                     trace.statement("*plVar1 = DAT_1805c3998;");
                     trace.statement("*(longlong *)(lVar2 + 8) = lVar3;");
                 } else {
@@ -32167,7 +32193,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802055d0() noexcept {
             trace.statement("undefined8 *puVar14;");
             trace.statement("undefined8 *puVar15;");
             trace.statement("puVar2 = (undefined8 *)param_1[1];");
-            if (trace.checked_condition("if (puVar2 != (undefined8 *)param_1[2])", [&]() -> bool { return static_cast<bool>(puVar2 != (undefined8 *)param_1[2]); })) {
+            if (trace.checked_condition("if (puVar2 != (undefined8 *)param_1[2])", [&]() -> bool { return static_cast<bool>(puVar2 != (std::uint64_t *)param_1[2]); })) {
                 trace.statement("*puVar2 = 0;");
                 trace.statement("puVar2[1] = 0;");
                 trace.statement("puVar2[2] = 0;");
@@ -32380,6 +32406,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180205720() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (s_player_hurt_18034b8c8[0] != '\0') [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (((char *)(&DAT_1803eb898)[(longlong)iVar6 * 0xb] != (char *)0x0) && (iVar2 = strcmp((char *)(&DAT_1803eb898)[(longlong)iVar6 * 0xb],"player_hurt"), iVar2 == 0)) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for strcmp: (char *)(&DAT_1803eb898)[(longlong)iVar6 * 0xb],"player_hurt" [reason: unresolved global storage/width]
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("FUN_180014410", "[GAMEEVENT] sink table full, '%s' dropped\n", "player_hurt");
@@ -32447,7 +32474,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180205720() noexcept {
                             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
                             trace.statement("_Memory = (undefined8 *)0x0;");
                             }
-                            if (trace.checked_condition("if (_Memory != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (undefined8 *)0x0); })) {
+                            if (trace.checked_condition("if (_Memory != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (std::uint64_t *)0x0); })) {
                                 trace.statement("free(_Memory);");
                             }
                             trace.statement("return;");
@@ -32732,7 +32759,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802058b0() noexcept {
             trace.statement("uVar4 = FUN_180260220();");
             trace.statement("_Dst[9] = uVar4;");
             if (trace.checked_condition("if (_Dst[0x118] != 0)", [&]() -> bool { return static_cast<bool>(_Dst[0x118] != 0); })) {
-                if (trace.checked_condition("if ((longlong *)_Dst[0x118] == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>((longlong *)_Dst[0x118] == (longlong *)0x0); })) {
+                if (trace.checked_condition("if ((longlong *)_Dst[0x118] == (longlong *)0x0)", [&]() -> bool { return static_cast<bool>((std::int64_t *)_Dst[0x118] == (std::int64_t *)0x0); })) {
                     trace.statement("std::_Xbad_function_call();");
                 }
                 trace.statement("(**(code **)(*(longlong *)_Dst[0x118] + 0x10))();");
@@ -32773,7 +32800,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802058b0() noexcept {
             trace.statement("*DAT_1803fcc70 = _Dst;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -32915,7 +32942,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180205ab0() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -33044,7 +33071,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180205b80() noexcept {
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             trace.statement("_Dst = (undefined8 *)0x0;");
             }
-            if (trace.checked_condition("if (_Dst != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(_Dst != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (_Dst != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(_Dst != (std::uint64_t *)0x0); })) {
                 trace.statement("free(_Dst);");
             }
             trace.statement("return;");
@@ -33177,7 +33204,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180205ca0() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -33306,7 +33333,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180205d70() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -33431,7 +33458,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180205e40() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -33602,7 +33629,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180205f00() noexcept {
             trace.statement("*DAT_1803fcc70 = _Dst;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -33711,7 +33738,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180206030() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -33818,7 +33845,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802060d0() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -33925,7 +33952,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180206170() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -34034,7 +34061,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180206210() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -34141,7 +34168,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802062b0() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -34248,7 +34275,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180206350() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -34357,7 +34384,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802063f0() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -34464,7 +34491,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180206490() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");
@@ -34571,7 +34598,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180206530() noexcept {
             trace.statement("*DAT_1803fcc70 = local_res18;");
             trace.statement("DAT_1803fcc70 = DAT_1803fcc70 + 1;");
             }
-            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (undefined8 *)0x0); })) {
+            if (trace.checked_condition("if (local_res8 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(local_res8 != (std::uint64_t *)0x0); })) {
                 trace.statement("free(local_res8);");
             }
             trace.statement("return;");

@@ -1119,6 +1119,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d869c() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (IMAGE_DOS_HEADER_180000000.e_magic == (char  [2])0x5a4d) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if ((*(int *)(lVar3 + 0x180000000) == 0x4550) && (uVar1 = 0x20b, *(short *)((longlong)IMAGE_DOS_HEADER_180000000.e_res_4_ + lVar3 + -4) == 0x20b)) [reason: unknown aggregate layout]
     // TODO: call arguments not type-recovered for CONCAT71: uVar2,1 [reason: ambiguous operand type]
     // body sha256: b548af39281f15fb993d835e58b07f13e74f6293d02fab68b9522d9ff6ebd840
     // Structured control-flow trace derived from the decompiled body:
@@ -1806,7 +1807,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8884() noexcept {
             if (trace.checked_condition("if ((param_2 == 3) || (param_2 == 0))", [&]() -> bool { return static_cast<bool>((param_2 == 3) || (param_2 == 0)); })) {
                 trace.statement("lVar1 = *(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8);");
                 trace.statement("_Memory = *(uint **)(lVar1 + 0x20);");
-                if (trace.checked_condition("if (*(uint **)(lVar1 + 0x20) != (uint *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<std::uint32_t *>(lVar1 + 0x20, 0) != (uint *)0x0); })) {
+                if (trace.checked_condition("if (*(uint **)(lVar1 + 0x20) != (uint *)0x0)", [&]() -> bool { return static_cast<bool>(load_at<std::uint32_t *>(lVar1 + 0x20, 0) != (std::uint32_t *)0x0); })) {
                     while (trace.checked_loop_condition("while( true )", [&]() -> bool { return static_cast<bool>(true); })) {
                         trace.statement("uVar4 = (ulonglong)*_Memory;");
                         while (trace.checked_loop_condition("while (uVar3 = (int)uVar4 - 1, uVar4 = (ulonglong)uVar3, -1 < (int)uVar3)", [&]() -> bool { return static_cast<bool>(uVar3 = static_cast<std::int32_t>(uVar4) - 1, uVar4 = static_cast<std::uint64_t>(uVar3), -1 < static_cast<std::int32_t>(uVar3)); })) {
@@ -1916,7 +1917,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8910() noexcept {
             trace.statement("iVar3 = 0;");
             trace.statement("lVar1 = *(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8);");
             trace.statement("piVar2 = *(int **)(lVar1 + 0x20);");
-            if (trace.checked_condition("if (piVar2 == (int *)0x0)", [&]() -> bool { return static_cast<bool>(piVar2 == (int *)0x0); })) {
+            if (trace.checked_condition("if (piVar2 == (int *)0x0)", [&]() -> bool { return static_cast<bool>(piVar2 == (std::int32_t *)0x0); })) {
                 trace.statement("piVar2 = (int *)(lVar1 + 0x30);");
             } else {
             if (trace.checked_condition("if (*piVar2 != 0x1e)", [&]() -> bool { return static_cast<bool>(*piVar2 != 0x1e); })) {
@@ -1925,7 +1926,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8910() noexcept {
             }
             trace.statement("piVar2 = malloc(0x100);");
             trace.statement("free((void *)0x0);");
-            if (trace.checked_condition("if (piVar2 == (int *)0x0)", [&]() -> bool { return static_cast<bool>(piVar2 == (int *)0x0); })) {
+            if (trace.checked_condition("if (piVar2 == (int *)0x0)", [&]() -> bool { return static_cast<bool>(piVar2 == (std::int32_t *)0x0); })) {
                 trace.statement("return 0xffffffff;");
             }
             trace.statement("*(undefined8 *)(piVar2 + 2) = *(undefined8 *)(lVar1 + 0x20);");
@@ -2807,7 +2808,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8da0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (local_res8 < in_RAX) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (puVar1 < StackLimit) [reason: ambiguous operand type]
     // body sha256: 42f5f5779932af20b6080031f701d7cac0ee3347f2c8d838e46e514ccea0a501
     // Structured control-flow trace derived from the decompiled body:
@@ -2818,7 +2818,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8da0() noexcept {
             trace.statement("undefined1 *puVar2;");
             trace.statement("undefined1 local_res8 [32];");
             trace.statement("puVar1 = local_res8 + -(longlong)in_RAX;");
-            if (trace.condition("if (local_res8 < in_RAX)")) {
+            if (trace.checked_condition("if (local_res8 < in_RAX)", [&]() -> bool { return static_cast<bool>(local_res8 < in_RAX); })) {
                 trace.statement("puVar1 = (undefined1 *)0x0;");
             }
             if (trace.condition("if (puVar1 < StackLimit)")) {
@@ -3059,7 +3059,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8df0() noexcept {
                 trace.statement("uVar8 = *puVar2 & 0xfff3ff0;");
                 trace.statement("_DAT_1803da518 = 0x8000;");
                 trace.statement("_DAT_1803da520 = 0xffffffffffffffff;");
-                if (trace.condition("if ((((uVar8 == 0x106c0) || (uVar8 == 0x20660)) || (uVar8 == 0x20670)) || ((uVar8 - 0x30650 < 0x21 && ((0x100010001U >> ((ulonglong)(uVar8 - 0x30650) & 0x3f) & 1) != 0))))")) {
+                if (trace.checked_condition("if ((((uVar8 == 0x106c0) || (uVar8 == 0x20660)) || (uVar8 == 0x20670)) || ((uVar8 - 0x30650 < 0x21 && ((0x100010001U >> ((ulonglong)(uVar8 - 0x30650) & 0x3f) & 1) != 0))))", [&]() -> bool { return static_cast<bool>((((uVar8 == 0x106c0) || (uVar8 == 0x20660)) || (uVar8 == 0x20670)) || ((uVar8 - 0x30650 < 0x21 && ((0x100010001U >> ((ulonglong)(uVar8 - 0x30650) & 0x3f) & 1) != 0)))); })) {
                     trace.statement("DAT_1803f8f94 = DAT_1803f8f94 | 1;");
                 }
             }

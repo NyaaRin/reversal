@@ -234,9 +234,14 @@ def cpp_type(type_text: str) -> str | None:
         return None
     stars = cleaned.count("*")
     base = cleaned.replace("*", "").strip()
-    if base not in TYPE_ALIASES:
+    if base in TYPE_ALIASES:
+        mapped = TYPE_ALIASES[base]
+    elif TYPE_ALIASES.get(base.split("std::", 1)[-1]) == base:
+        # Already-normalized spellings keep working: the pointer depth of a
+        # recorded cast must stay readable after the first normalization pass.
+        mapped = base
+    else:
         return None
-    mapped = TYPE_ALIASES[base]
     if mapped == "void" and stars == 0:
         return None
     if stars:
@@ -354,6 +359,90 @@ def split_top_level(text: str, separator: str) -> list[str]:
             start = index + 1
     parts.append(text[start:].strip())
     return [part for part in parts if part]
+
+
+def rewrite_global_address_comparisons(
+    expr: str,
+    data_types: dict[int, str] | None,
+    locals: dict[str, tuple[str, int | None]] | None = None,
+) -> str:
+    """Give a typed global's address the pointer type used by its comparison.
+
+    Ghidra compares `&DAT_x` against a cast pointer.  The global's declaration
+    supplies the storage, and the decompiler supplies the compared pointer
+    type; the reinterpret_cast preserves the exact address and lets the
+    compiler check the comparison.
+    """
+    if not data_types:
+        return expr
+    for match in list(TOKEN_RE.finditer(expr)):
+        token = match.group(0)
+        if not data_symbol_type(token, data_types):
+            continue
+        if not re.search(rf"&\s*{re.escape(token)}\b|\b{re.escape(token)}\s*\[", expr) and "load_at<" not in expr:
+            continue
+        left = re.compile(
+            rf"(\(([^()]*)\)\s*[^()!=<>&|]*?(?:==|!=|<=|>=|<|>)\s*)&\s*{re.escape(token)}\b"
+        )
+        right = re.compile(
+            rf"&\s*{re.escape(token)}\b(\s*(?:==|!=|<=|>=|<|>)\s*)\(([^()]*)\)"
+        )
+
+        def left_replace(found: re.Match[str]) -> str:
+            target = cpp_type(found.group(2))
+            if not target or not pointer_shape(target):
+                return found.group(0)
+            return f"{found.group(1)}reinterpret_cast<{target}>(&{token})"
+
+        def right_replace(found: re.Match[str]) -> str:
+            target = cpp_type(found.group(2))
+            if not target or not pointer_shape(target):
+                return found.group(0)
+            return f"reinterpret_cast<{target}>(&{token}){found.group(1)}({target})"
+
+        expr = left.sub(left_replace, expr)
+        expr = right.sub(right_replace, expr)
+        # A global used as an aggregate base has its scalar slot addressed as
+        # `(&DAT)[i]`; when compared to a cast pointer, the element carries
+        # that pointer type.
+        pointer_casts = [cpp_type(m.group(1)) for m in re.finditer(r"\(([^()]*)\)", expr)]
+        pointer_casts = [cast for cast in pointer_casts if cast and pointer_shape(cast)]
+        if pointer_casts:
+            target = pointer_casts[0]
+            indexed = re.compile(rf"\(\s*&\s*{re.escape(token)}\s*\)\s*\[([^\]]*)\]")
+            expr = indexed.sub(
+                lambda found: f"reinterpret_cast<{target}>((&{token})[{found.group(1)}])",
+                expr,
+            )
+        if locals:
+            for name, (local_type, _) in locals.items():
+                if not pointer_shape(local_type):
+                    continue
+                compare = re.compile(
+                    rf"&\s*{re.escape(token)}\b(\s*(?:==|!=|<=|>=|<|>)\s*)\b{re.escape(name)}\b"
+                    rf"|\b{re.escape(name)}\b(\s*(?:==|!=|<=|>=|<|>)\s*)&\s*{re.escape(token)}\b"
+                )
+                expr = compare.sub(
+                    lambda found: (
+                        f"reinterpret_cast<{local_type}>(&{token}){found.group(1)}{name}"
+                        if found.group(1) else
+                        f"{name}{found.group(2)}reinterpret_cast<{local_type}>(&{token})"
+                    ),
+                    expr,
+                )
+        pointer_load = re.search(
+            rf"load_at<([^>]*\*)>\([^;]*?\)\s*(?:==|!=|<=|>=|<|>)\s*{re.escape(token)}\b"
+            rf"|\b{re.escape(token)}\b\s*(?:==|!=|<=|>=|<|>)\s*load_at<([^>]*\*)>",
+            expr,
+        )
+        if pointer_load:
+            target = pointer_load.group(1) or pointer_load.group(2)
+            expr = re.sub(
+                rf"(?<![&\w*])\b{re.escape(token)}\b(?!\s*\[)",
+                f"load_at<{target}>(&{token}, 0)",
+                expr,
+            )
+    return expr
 
 
 def replace_data_symbols(expr: str, allow_fun: bool = False) -> str | None:
@@ -694,6 +783,7 @@ def rewrite_admitted_casts(
 
 
 SIMPLE_ASSIGN_RE = re.compile(r"(?<![=!<>])\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*([A-Za-z_][A-Za-z0-9_]*)\b(?![\[(])")
+DEREF_ASSIGN_RE = re.compile(r"(?<![=!<>])\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*\*\s*([A-Za-z_][A-Za-z0-9_]*)\b(?![\[(])")
 
 
 def rewrite_assignment_casts(
@@ -727,7 +817,27 @@ def rewrite_assignment_casts(
             return f"{left} = reinterpret_cast<{left_type}>({right})"
         return f"{left} = reinterpret_cast<{left_type}>({right})"
 
-    return SIMPLE_ASSIGN_RE.sub(replace, expr), invalid
+    expr = SIMPLE_ASSIGN_RE.sub(replace, expr)
+
+    def replace_deref(match: re.Match[str]) -> str:
+        left, right = match.group(1), match.group(2)
+        left_decl = locals.get(left)
+        right_decl = locals.get(right)
+        if not left_decl or not right_decl:
+            return match.group(0)
+        left_type = left_decl[0]
+        right_pointee = right_decl[0]
+        if not pointer_shape(left_type) or not pointer_shape(right_pointee):
+            return match.group(0)
+        if right_pointee.rsplit("*", 1)[0].strip() == left_type.rsplit("*", 1)[0].strip():
+            return match.group(0)
+        # `_Str = *ppuVar9`: the decompiler dereferences a pointer local and
+        # stores the 8-byte pointer value into a differently-typed pointer.
+        # The store width is proven by the lvalue declaration, so the value is
+        # reinterpreted rather than silently retyped.
+        return f"{left} = reinterpret_cast<{left_type}>(*{right})"
+
+    return DEREF_ASSIGN_RE.sub(replace_deref, expr), invalid
 
 
 KNOWN_CAST_RE = re.compile(r"\(\s*([A-Za-z_][A-Za-z0-9_ ]*(?:\*+)?)\s*\)")
@@ -804,6 +914,19 @@ WINDOWS_SCALAR_ALIASES = {
 
 
 def rewrite_known_type_names(expr: str) -> str:
+    """Normalize the Windows pointer typedefs used by the recorded ABI."""
+    # A cast target can carry pointer stars (`(wint_t *******)`); normalize the
+    # alias inside the cast as well as the bare spelling.
+    for alias, mapped in sorted(TYPE_ALIASES.items(), key=lambda item: len(item[0]), reverse=True):
+        expr = re.sub(
+            rf"(?<!::)\b{re.escape(alias)}(\s*\*+)",
+            lambda found: mapped + found.group(1),
+            expr,
+        )
+    return _rewrite_known_type_names(expr)
+
+
+def _rewrite_known_type_names(expr: str) -> str:
     """Normalize the Windows pointer typedefs used by the recorded ABI.
 
     Only exact one-level typedefs are rewritten here; decompiler-width types
@@ -820,6 +943,95 @@ def rewrite_known_type_names(expr: str) -> str:
     return KNOWN_CAST_RE.sub(replace, expr)
 
 
+COMPARE_LEFT_CAST_RE = re.compile(
+    r"\(\s*([A-Za-z_][A-Za-z0-9_: ]*\*+)\s*\)\s*(?:0[xX][0-9A-Fa-f]+|\d+)"
+    r"\s*(<=|>=|==|!=|<|>)\s*([A-Za-z_][A-Za-z0-9_]*)"
+)
+COMPARE_RIGHT_CAST_RE = re.compile(
+    r"\b([A-Za-z_][A-Za-z0-9_]*)\s*(<=|>=|==|!=|<|>)\s*"
+    r"\(\s*([A-Za-z_][A-Za-z0-9_: ]*\*+)\s*\)\s*(?:0[xX][0-9A-Fa-f]+|\d+)"
+)
+
+
+def comparison_pointer_depth_conflict(
+    expr: str,
+    locals: dict[str, tuple[str, int | None]],
+) -> bool:
+    """Detect a comparison whose cast depth contradicts the local's type.
+
+    Ghidra occasionally compares a constant cast one pointer level deeper than
+    the local on the other side, e.g. `(undefined8 ****)0xf < pppuStack_1a8`
+    where that local is declared `undefined8 ***`.  Both spellings come from
+    the same recording, so neither can be proven correct and no cast may be
+    invented on the local; the site stays an explicit TODO.
+    """
+    def mismatched(name: str, cast_text: str) -> bool:
+        declaration = locals.get(name)
+        if declaration is None or declaration[1] is not None:
+            return False
+        declared_shape = pointer_shape(declaration[0])
+        if not declared_shape:
+            return False
+        # The cast text is already normalized to a qualified spelling
+        # (`std::uint64_t ****`), which `cpp_type` does not re-parse; the
+        # pointer depth is the star count either way.
+        cast_shape = pointer_shape(cast_text)
+        if not cast_shape:
+            return False
+        return cast_shape[1] != declared_shape[1]
+
+    for match in COMPARE_LEFT_CAST_RE.finditer(expr):
+        if mismatched(match.group(3), match.group(1)):
+            return True
+    for match in COMPARE_RIGHT_CAST_RE.finditer(expr):
+        if mismatched(match.group(1), match.group(3)):
+            return True
+    return False
+
+
+TYPE_ONLY_CALLEE_RE = re.compile(r"^\**\s*[A-Za-z_][A-Za-z0-9_: ]*\*+$")
+
+
+def calls_through_pointer(expr: str) -> bool:
+    """Detect a call whose callee is a cast or dereference, not a name.
+
+    `(**(code **)*param_1)(param_1)` calls through a recovered function
+    pointer.  The prototype and calling convention are unproven, and the
+    Ghidra `code` pseudo-type is only a pointer spelling, so the site must
+    stay an explicit TODO rather than being emitted as a callable expression.
+    """
+    for index, char in enumerate(expr):
+        if char != ")":
+            continue
+        cursor = index + 1
+        while cursor < len(expr) and expr[cursor] == " ":
+            cursor += 1
+        if cursor >= len(expr) or expr[cursor] != "(":
+            continue
+        start = index
+        depth = 0
+        while start >= 0:
+            if expr[start] == ")":
+                depth += 1
+            elif expr[start] == "(":
+                depth -= 1
+                if depth == 0:
+                    break
+            start -= 1
+        if start < 0:
+            continue
+        callee = expr[start + 1:index].strip()
+        if "*" not in callee and not re.search(r"\bcode\b", callee):
+            continue
+        if TYPE_ONLY_CALLEE_RE.match(callee):
+            # `*(std::uint16_t *)(address)` is a typed read, not a call: the
+            # parenthesized text is a type, so the following parentheses are
+            # the operand of that cast.
+            continue
+        return True
+    return False
+
+
 def safe_expression(
     expr: str,
     locals: dict[str, tuple[str, int | None]],
@@ -828,13 +1040,33 @@ def safe_expression(
     site_types: dict[str, str] | None = None,
 ) -> str | None:
     expr = rewrite_known_type_names(expr.strip())
+    if calls_through_pointer(expr):
+        return None
+    if comparison_pointer_depth_conflict(expr, locals):
+        return None
     if site_types:
         for token, type_name in sorted(site_types.items(), key=lambda item: len(item[0]), reverse=True):
             pointer_context = bool(re.search(
                 rf"\b{re.escape(token)}\b\s*(?:==|!=)\s*\([^()]*\*", expr
             ))
             global_type = data_symbol_type(token, data_types) if data_types else None
-            if global_type and not pointer_context:
+            if pointer_context and re.search(rf"\b{re.escape(token)}\s*\[", expr):
+                # A pointer-valued global used as an array base needs the
+                # element layout of its pointee; the access width alone does
+                # not prove that layout.
+                return None
+            assign_target = re.search(
+                rf"\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*{re.escape(token)}\b", expr
+            )
+            pointer_store = bool(
+                assign_target and assign_target.group(1) in locals
+                and pointer_shape(locals[assign_target.group(1)][0])
+                and scalar_width(type_name) == 8
+            )
+            if (global_type and not pointer_context and global_type == type_name
+                    and not pointer_store):
+                # The global-wide declaration already matches this site's
+                # instruction access exactly; no site-local load is needed.
                 continue
             if pointer_context and type_name == "std::uint64_t":
                 # An 8-byte access compared against a typed null pointer is a
@@ -843,9 +1075,16 @@ def safe_expression(
                 deref_target = re.search(
                     rf"\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*\*\s*{re.escape(token)}\b", expr
                 )
+                deref_cast = re.search(
+                    rf"\(([^()]*)\)\s*\*\s*{re.escape(token)}\b", expr
+                )
                 deref_type = "void**"
                 if deref_target and deref_target.group(1) in locals:
                     deref_type = locals[deref_target.group(1)][0] + "*"
+                elif deref_cast:
+                    cast_type = cpp_type(deref_cast.group(1))
+                    if cast_type and not pointer_shape(cast_type):
+                        deref_type = cast_type + "*"
                 expr = re.sub(
                     rf"\*\s*{re.escape(token)}\b",
                     f"*load_at<{deref_type}>(&{token}, 0)",
@@ -865,13 +1104,32 @@ def safe_expression(
                     expr,
                 )
                 continue
+            selected = type_name
+            assign_target = re.search(
+                rf"\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*{re.escape(token)}\b", expr
+            )
+            if assign_target and assign_target.group(1) in locals and scalar_width(type_name) == 8:
+                declared = locals[assign_target.group(1)][0]
+                if pointer_shape(declared):
+                    # A pointer store proves the compiler-visible width and
+                    # pointee depth of this 8-byte global access.
+                    selected = declared
             expr = re.sub(
                 rf"(?<!&)\b{re.escape(token)}\b(?!\s*\[)",
-                f"load_at<{type_name}>(&{token}, 0)",
+                f"load_at<{selected}>(&{token}, 0)",
                 expr,
             )
+    if re.search(r"\.[A-Za-z_][A-Za-z0-9_]*\s*=(?!=)", expr):
+        # A synthetic aggregate subfield on the left of an assignment has no
+        # recoverable lvalue shape yet; keep the site explicit.
+        return None
     expr = rewrite_vector_subpieces(expr, locals)
     expr = rewrite_memory_dereferences(expr)
+    expr = re.sub(
+        r"load_at<void\*>\(&([A-Za-z_][A-Za-z0-9_]*), 0\)\s*([+\-])\s*(0x[0-9A-Fa-f]+|\d+)",
+        r"reinterpret_cast<std::uint8_t*>(load_at<void*>(&\1, 0)) \2 \3",
+        expr,
+    )
     expr = rewrite_synthetic_subfields(expr, locals)
     expr = rewrite_admitted_casts(expr, locals)
     expr, invalid_assignment = rewrite_assignment_casts(expr, locals)
@@ -958,6 +1216,17 @@ def safe_expression(
         if declaration is None:
             continue
         type_name, count = declaration
+        shape = pointer_shape(type_name)
+        if (shape and shape[0] == "void" and shape[1] == 1
+                and re.search(rf"\b{re.escape(name)}\s*\[", expr)):
+            # A function pointer/opaque pointer is indexed by the decompiler as
+            # a machine-word array.  `void*` has no element size; the pointer
+            # value is the same when viewed as an array of words.
+            expr = re.sub(
+                rf"\b{re.escape(name)}\s*\[",
+                f"reinterpret_cast<void**>({name})[",
+                expr,
+            )
         if re.search(rf"\b{re.escape(name)}\s*\[", expr) and count is None and "*" not in type_name:
             # A recovered scalar local cannot be subscripted unless the
             # decompiler actually declared a pointer/array.
@@ -976,14 +1245,23 @@ def safe_expression(
             ):
                 return None
         if count is not None:
-            # A whole array argument is a valid lvalue-to-pointer decay.  Other
-            # whole-array shifts/arithmetic remain invalid C++.
+            # A whole array argument is a valid lvalue-to-pointer decay.  Array
+            # decay also makes pointer arithmetic and comparisons valid C++;
+            # the compiler still checks the resulting pointer type.
             if expr == name:
                 continue
-            # Arrays may be addressed or indexed, but decompiler scalar shifts
-            # and arithmetic on a whole array are not valid C++.
-            if not re.search(rf"&\s*{re.escape(name)}\b|\b{re.escape(name)}\s*\[", expr):
+            if re.search(rf"\b{re.escape(name)}\s*=(?!=)", expr):
+                # An array is not assignable.
                 return None
+            if re.search(r"<<|>>", expr):
+                # Arrays do not support bit shifts; the decompiler's vector
+                # register views need an explicit subpiece, not array decay.
+                return None
+            if not re.search(rf"&\s*{re.escape(name)}\b|\b{re.escape(name)}\s*\[", expr):
+                if not re.search(
+                    rf"\b{re.escape(name)}\b\s*(?:[+\-](?![+\-])|<=|>=|==|!=|(?<![<>])<(?![<=])|(?<![<>])>(?![>=]))", expr
+                ):
+                    return None
         local_pointer = pointer_shape(type_name)
         if (count is not None and "*" in type_name) or type_name.count("*") > 1:
             # Indexing an array of pointers (or a pointer-to-pointer) still
@@ -1003,25 +1281,40 @@ def safe_expression(
                     # width; a narrower/float conversion has no evidence here.
                     if scalar_width(cast_type) != 8 or cast_type in ("float", "double"):
                         return None
+        pointer_bare = bool(re.search(rf"\b{re.escape(name)}\b", re.sub(
+            rf"\b{re.escape(name)}\s*\[[^\]]*\]|\*\s*{re.escape(name)}\b", "", expr
+        ))) if local_pointer else False
+        if count is not None:
+            # An array decays to a pointer, so array-vs-pointer arithmetic and
+            # comparisons are legal C++; the compiler checks the pointee type.
+            continue
         if "*" in type_name or "*" in expr:
-            for other_name, (other_type, _) in analysis_locals.items():
+            for other_name, (other_type, other_count) in analysis_locals.items():
                 if other_name == name:
+                    continue
+                if other_count is not None:
+                    # The other operand is an array and decays to a pointer.
                     continue
                 if name not in expr or other_name not in expr:
                     continue
                 other_pointer = pointer_shape(other_type)
+                other_bare = bool(re.search(rf"\b{re.escape(other_name)}\b", re.sub(
+                    rf"\b{re.escape(other_name)}\s*\[[^\]]*\]|\*\s*{re.escape(other_name)}\b", "", expr
+                ))) if other_pointer else False
                 if local_pointer and other_pointer:
-                    if "void" not in local_pointer[0] and "void" not in other_pointer[0] and local_pointer != other_pointer:
+                    if pointer_bare and "void" not in local_pointer[0] and "void" not in other_pointer[0] and local_pointer != other_pointer:
                         comparison = rf"\b{re.escape(name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(name)}\b"
                         if re.search(comparison, expr):
                             return None
                     continue
-                if bool(local_pointer) == bool(other_pointer):
+                if (bool(local_pointer) == bool(other_pointer)
+                        or (local_pointer and not pointer_bare)
+                        or (other_pointer and not other_bare)):
                     continue
-                comparison = rf"\b{re.escape(name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|()]*?(?:<=|>=|==|!=|<|>)[^&|()]*?\b{re.escape(name)}\b"
+                comparison = rf"\b{re.escape(name)}\b[^&|(),=]*?(?:<=|>=|==|!=|<|>)[^&|(),=]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|(),=]*?(?:<=|>=|==|!=|<|>)[^&|(),=]*?\b{re.escape(name)}\b"
                 if re.search(comparison, expr):
                     return None
-        if local_pointer:
+        if local_pointer and pointer_bare:
             cast_patterns = [
                 rf"\b{re.escape(name)}\b\s*(?:<=|>=|==|!=|<|>)\s*\(([^()]*)\)",
                 rf"\(([^()]*)\)[^()]*?(?:<=|>=|==|!=|<|>)\s*\b{re.escape(name)}\b",
@@ -1052,6 +1345,11 @@ def safe_expression(
     ]
     for token in data_tokens:
         typed = data_symbol_type(token, data_types) if data_types else None
+        typed_from_site = bool(site_types and (
+            site_types.get(token) or site_types.get(token.lstrip("_"))
+        ))
+        if not typed and typed_from_site:
+            typed = site_types.get(token) or site_types.get(token.lstrip("_"))
         if typed:
             # The mined access width determines a scalar storage type.  Its
             # address and `(&DAT)[i]` forms remain valid; only operations that
@@ -1060,21 +1358,27 @@ def safe_expression(
                 cast_type = cpp_type(cast_match.group(1))
                 if cast_type and pointer_shape(cast_type):
                     return None
-            pointer_present = any(
-                pointer_shape(analysis_locals[name][0])
-                for name in identifier_set
-                if name in analysis_locals
-            ) or bool(re.search(r"load_at<[^>]*\*>", expr))
-            if not pointer_present:
-                for cast_match in re.finditer(r"\(([^()]*)\)", expr):
-                    cast_type = cpp_type(cast_match.group(1))
-                    if cast_type and pointer_shape(cast_type):
-                        pointer_present = True
-                        break
+            pointer_comparison = False
+            for name in identifier_set:
+                if name not in analysis_locals:
+                    continue
+                if not pointer_shape(analysis_locals[name][0]):
+                    continue
+                bare = bool(re.search(rf"\b{re.escape(name)}\b", re.sub(
+                    rf"\b{re.escape(name)}\s*\[[^\]]*\]|\*\s*{re.escape(name)}\b", "", expr
+                )))
+                if not bare:
+                    continue
+                if re.search(
+                    rf"\b{re.escape(token)}\b[^&|(),=]*?(?:<=|>=|==|!=|<|>)[^&|(),=]*?\b{re.escape(name)}\b|\b{re.escape(name)}\b[^&|(),=]*?(?:<=|>=|==|!=|<|>)[^&|(),=]*?\b{re.escape(token)}\b",
+                    expr,
+                ):
+                    pointer_comparison = True
+                    break
             pointer_slot = bool(re.search(
                 rf"load_at<[^>]*\*+>\(&\s*{re.escape(token)}\b", expr
             ))
-            if pointer_present and not pointer_slot and re.search(r"<=|>=|==|!=|<|>", expr):
+            if (pointer_comparison and not pointer_slot and not typed_from_site):
                 return None
             if typed in ("float", "double"):
                 without_address = re.sub(rf"&\s*{re.escape(token)}\b", "", expr)
@@ -1132,6 +1436,12 @@ def safe_expression(
         if name.startswith("FUN_") and allow_data:
             return None
         return None
+    expr = rewrite_global_address_comparisons(expr, data_types, analysis_locals)
+    expr = re.sub(
+        r"load_at<void\*>\(&([A-Za-z_][A-Za-z0-9_]*), 0\)\s*([+\-])\s*(0x[0-9A-Fa-f]+|\d+)",
+        r"reinterpret_cast<std::uint8_t*>(load_at<void*>(&\1, 0)) \2 \3",
+        expr,
+    )
     translated = replace_data_symbols(expr, allow_fun=allow_data)
     return translated
 
@@ -1187,6 +1497,16 @@ def recover_typed_sites(
 
     for line_index, (_, line) in enumerate(code_lines):
         stripped = line.strip()
+        # Ghidra wraps long `if`/`while`/`for` headers across physical lines.
+        # Join the recorded continuation before extracting the condition so
+        # the parentheses and every operand belong to the same site.
+        if re.match(r"(?:if|for|while|switch)\s*\(", stripped):
+            combined = stripped
+            cursor = line_index + 1
+            while combined.count("(") > combined.count(")") and cursor < len(code_lines):
+                combined = combined.rstrip() + " " + code_lines[cursor][1].strip()
+                cursor += 1
+            stripped = combined
         # The decompiler's own function signature is not a call site.  Named
         # methods (std_exception_vfunc00 etc.) use the same definition shape.
         if re.match(r"^[A-Za-z_][A-Za-z0-9_:<> ]*?[\s*]+[A-Za-z_][A-Za-z0-9_:]*\s*\([^;]*\)\s*$", stripped):
@@ -2004,7 +2324,7 @@ def main() -> int:
     data_types = load_data_types()
     site_global_types = load_site_global_types()
 
-    for row in rows:
+    for row_index, row in enumerate(rows):
         address = row["address"].lower()
         if address in seen_addresses:
             raise SystemExit(f"duplicate inventory address {address}")

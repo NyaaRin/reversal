@@ -177,21 +177,24 @@ timeout addresses.
 
 `src/reconstructed/` covers **7,656/7,656 inventory functions** with compiled
 C++17 accessors: **0 unmapped, 0 stubs**. `re/tools/gen_reconstructed_source.py`
-deterministically writes 60 chunks (85,238,684 bytes; 81.29 MiB) and
+deterministically writes 60 chunks (86,125,935 bytes; 82.13 MiB) and
 `src/reconstructed/coverage.tsv`; every address maps to a chunk source file and
-a unique `Function_0x...` accessor. The accessors contain **462,469 executable
+a unique `Function_0x...` accessor. The accessors contain **462,614 executable
 statement/reference lines**, **306,161 `trace.statement` calls**, **49,305 real
 C++ `if`/`else`/loop/`switch` control nodes**, **7,732 actual string-literal
 calls**, plus resolved references to **4,331 extern call thunks** and **5,414
 extern data symbols** in `src/reconstructed/symbols.h`. Recovered local/parameter
 declarations, whole-array argument decay, typed field reads and synthetic scalar
 subfields, admitted scalar/pointer casts, global decay, typed assignments,
-multiline signatures, Windows/CRT typedefs, decimal-literal typing and
+multiline signatures, wrapped `if`/`for`/`while` headers joined before typing,
+Windows/CRT typedefs, decimal-literal typing and
 table-admitted vector slots and function-scoped global access widths feed
-**37,341 compiler-checked condition expressions** and **51,321
-`trace.call_arguments` sites**; **3,923 condition sites** and **1,986
+**39,421 compiler-checked condition expressions** and **51,466
+`trace.call_arguments` sites**; **5,339 condition sites** and **1,841
 call-argument sites** remain explicit TODOs because their types or referenced
-entities are not recoverable from the available evidence. Global scalar types
+entities are not recoverable from the available evidence (including every call
+through a recovered function pointer and every comparison whose cast depth
+contradicts the declaring local). Global scalar types
 come from disassembling every non-LEA memory access to each slot and accepting
 only a single consistent width/kind; `re/tools/mine_data_types.py` writes the
 committed `re/dump/data_types.tsv` evidence table. Constant-offset field shapes
@@ -200,7 +203,7 @@ accesses by function and emits the committed `re/dump/field_types.tsv` table
 (44,457 slots with one agreed width/kind). Ambiguous or unknown-width slots stay
 byte arrays/TODOs. The recovery also includes Ghidra pointer declarations written
 without a space after `*`, pure string-literal arguments, and conservative
-pointer/scalar and pointer-depth checks. The generator skips function-signature
+pointer/scalar, comparison-depth and pointee-type checks. The generator skips function-signature
 pseudo-calls and rejects assignment expressions; it replaces chunks atomically
 and never clears the previous chunk set before a complete new one is ready.
 The complete decompiler body remains as a SHA-256-verified audit payload and is

@@ -173,10 +173,10 @@ shared by several classes (identical stubs/overrides) and are named
 
 `src/reconstructed/` maps **7,656/7,656 inventory functions** to compiled C++17
 accessors, with **0 unmapped** addresses and **0 stubs**. The deterministic
-generator `re/tools/gen_reconstructed_source.py` emits 60 chunks (**85,238,684
-bytes**, 81.29 MiB) plus `src/reconstructed/coverage.tsv`; each address maps to a
+generator `re/tools/gen_reconstructed_source.py` emits 60 chunks (**86,125,935
+bytes**, 82.13 MiB) plus `src/reconstructed/coverage.tsv`; each address maps to a
 `chunk_NNN.cpp` source file and a unique `Function_0x...` accessor. Every
-accessor contains **462,469 audited executable C++ statement/reference lines**,
+accessor contains **462,614 audited executable C++ statement/reference lines**,
 including **306,161 `trace.statement` calls**, **49,305 real C++ control nodes**
 (`if`/`else`/loops/`switch`) and **7,732 actual string-literal calls**.
 
@@ -184,17 +184,20 @@ Call targets are resolved through **4,331 declared extern `FUN_*` thunks** and
 data references through **5,414 declared extern `DAT_*`/`PTR_*`/`PTR_DAT_*`/
 `UNK_*`/`SUB_*` symbols** in `src/reconstructed/symbols.h`. The generator also
 recovers local/parameter declarations and emits typed condition and call-site
-checks where the decompiler gives enough type evidence: **37,341 checked
-condition expressions** (including loops and switches) and **51,321
+checks where the decompiler gives enough type evidence: **39,421 checked
+condition expressions** (including loops and switches) and **51,466
 `trace.call_arguments` sites**. Expressions that still contain undeclared
 entities, unresolved indirect state or ambiguous types remain explicit
-`TODO` comments; **3,923 condition sites** and **1,986 call-argument sites**
+`TODO` comments; **5,339 condition sites** and **1,841 call-argument sites**
 are deliberately unresolved rather than guessed. The recovered evidence now
 includes Ghidra pointer declarations without a space after `*` (for locals and
 parameters), pure string-literal arguments re-escaped through the C++ encoder,
-whole-array lvalue-to-pointer decay in call arguments, scalar/pointer
-compatibility checks, pointer-depth and pointee-type checks, and rejection of
-assignment expressions and function-signature pseudo-calls. A failed generation
+whole-array lvalue-to-pointer decay in call arguments, wrapped `if`/`for`/
+`while` headers joined before their condition is typed, scalar/pointer
+compatibility checks, pointer-depth and pointee-type checks, rejection of
+comparisons whose cast depth contradicts the declaring local, rejection of
+calls through recovered function pointers whose prototype is unproven, and
+rejection of assignment expressions and function-signature pseudo-calls. A failed generation
 leaves the previous complete chunk set in place; each chunk and mapping file is
 replaced atomically only after it is fully written.
 
