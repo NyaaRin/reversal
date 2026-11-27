@@ -110,8 +110,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215480() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180215480", "FUN_180215480");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint64_t * param_3{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
     [[maybe_unused]] std::uint32_t uVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
+    [[maybe_unused]] std::uint64_t * local_58{};
     [[maybe_unused]] std::uint64_t local_50{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180458200.
@@ -122,9 +129,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215480() noexcept {
     // TODO: condition expression type not recovered: if (*param_3 <= (ulonglong)puVar6[4])
     // TODO: condition expression type not recovered: if ((*(char *)((longlong)puVar3 + 0x19) == '\0') && ((ulonglong)puVar3[4] <= *param_3))
     // TODO: condition expression type not recovered: if (DAT_180458208 == 0x555555555555555)
-    // TODO: call arguments not type-recovered for FUN_18022bb90: &DAT_180458200,&local_58,puVar3
     trace.call_arguments("FUN_180013b80");
     trace.call_arguments("FUN_1802d8350", 0x30);
+    trace.call_arguments("FUN_18022bb90", &image::DAT_180458200, &local_58, puVar3);
     trace.call_target("FUN_180013b80", reinterpret_cast<const void*>(&image::FUN_180013b80));
     trace.call_target("FUN_18022bb90", reinterpret_cast<const void*>(&image::FUN_18022bb90));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -132,7 +139,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215480() noexcept {
     trace.data_ref("DAT_180458208", static_cast<const void*>(&image::DAT_180458208));
     // body sha256: 4f369d971447a766f5758a5d23cdb38d4ed02e8d4734aa4b57fad8c66719bd45
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180215480(undefined8 param_1,undefined8 *param_2,ulonglong *param_3)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -358,11 +364,20 @@ TODO: resolve the indirect call in body 50: puVar6 = (undefined8 *)(*pcVar5)();.
 const sf::reconstructed::FunctionTranslation& Function_0x1802155b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802155b0", "FUN_1802155b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
+    [[maybe_unused]] float * pfVar1{};
     [[maybe_unused]] std::int32_t iVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] void* * pcVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint64_t * puVar9{};
+    [[maybe_unused]] std::uint64_t * puVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
     [[maybe_unused]] std::uint64_t uVar12{};
     [[maybe_unused]] float fVar13{};
@@ -374,28 +389,25 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802155b0() noexcept {
     // TODO: resolve the indirect call in body 50: puVar6 = (undefined8 *)(*pcVar5)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (puVar6 != puVar10)
     // TODO: condition expression type not recovered: while( true )
     // TODO: condition expression type not recovered: if (*(int *)param_3 == iVar2)
     // TODO: condition expression type not recovered: if (*(longlong *)(param_1 + 4) == 0xaaaaaaaaaaaaaaa)
     // TODO: condition expression type not recovered: if (*param_1 < (float)(*(longlong *)(param_1 + 4) + 1) / (float)uVar3)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar13) && (fVar13 = fVar13 - DAT_180381300, fVar13 < DAT_180381300))
-    // TODO: condition expression type not recovered: if (puVar9 != puVar10)
+    // TODO: condition expression type not recovered: if ((uVar3 < uVar8) && ((0x1ff < uVar3 || (uVar11 = uVar3 * 8, uVar3 * 8 < uVar8))))
     // TODO: condition expression type not recovered: while (*(int *)(puVar6 + 2) != iVar2)
     // TODO: condition expression type not recovered: if (puVar4 == *(undefined8 **)pfVar1)
-    // TODO: condition expression type not recovered: if (puVar4 == puVar10)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x18,puVar9,lVar7,param_4,pfVar1,0
-    // TODO: call arguments not type-recovered for ceilf: (float)(*(longlong *)(param_1 + 4) + 1) / *param_1
-    // TODO: call arguments not type-recovered for FUN_180236430: param_1,uVar11
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x18, puVar9, lVar7, param_4, pfVar1, 0);
+    trace.call_arguments("ceilf", (float)(*(longlong *)(param_1 + 4) + 1) / *param_1);
+    trace.call_arguments("FUN_180236430", param_1, uVar11);
     trace.call_target("FUN_180236430", reinterpret_cast<const void*>(&image::FUN_180236430));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     trace.data_ref("DAT_180381300", static_cast<const void*>(&image::DAT_180381300));
     trace.string_literal("unordered_map/set too long");
     // body sha256: ae3e321bcbb97de9bfb6d08b2779cccbf11307d3e5aa9dd3a4a0cad5af04db8c
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_1802155b0(float *param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("float *pfVar1;");
             trace.statement("int iVar2;");
@@ -418,7 +430,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802155b0() noexcept {
             trace.statement("puVar6 = *(undefined8 **)(lVar7 + 8 + (longlong)puVar9 * 0x10);");
             trace.statement("pfVar1 = param_1 + 2;");
             trace.statement("puVar10 = *(undefined8 **)pfVar1;");
-            if (trace.condition("if (puVar6 != puVar10)")) {
+            if (trace.checked_condition("if (puVar6 != puVar10)", [&]() -> bool { return static_cast<bool>(puVar6 != puVar10); })) {
                 trace.statement("puVar9 = *(undefined8 **)(lVar7 + (longlong)puVar9 * 0x10);");
                 trace.statement("iVar2 = *(int *)(puVar6 + 2);");
                 trace.statement("puVar10 = puVar6;");
@@ -449,21 +461,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802155b0() noexcept {
                             trace.statement("uVar8 = (longlong)fVar13 + lVar7;");
                         }
                         trace.statement("uVar11 = uVar3;");
-                        if (trace.checked_condition("if ((uVar3 < uVar8) && ((0x1ff < uVar3 || (uVar11 = uVar3 * 8, uVar3 * 8 < uVar8))))", [&]() -> bool { return static_cast<bool>((uVar3 < uVar8) && ((0x1ff < uVar3 || (uVar11 = uVar3 * 8, uVar3 * 8 < uVar8)))); })) {
+                        if (trace.condition("if ((uVar3 < uVar8) && ((0x1ff < uVar3 || (uVar11 = uVar3 * 8, uVar3 * 8 < uVar8))))")) {
                             trace.statement("uVar11 = uVar8;");
                         }
                         trace.statement("FUN_180236430(param_1,uVar11);");
                         trace.statement("puVar9 = *(undefined8 **)");
                         trace.statement("(*(longlong *)(param_1 + 6) + 8 + (uVar12 & *(ulonglong *)(param_1 + 0xc)) * 0x10);");
                         trace.statement("puVar10 = *(undefined8 **)pfVar1;");
-                        if (trace.condition("if (puVar9 != puVar10)")) {
+                        if (trace.checked_condition("if (puVar9 != puVar10)", [&]() -> bool { return static_cast<bool>(puVar9 != puVar10); })) {
                             trace.statement("iVar2 = *(int *)(puVar9 + 2);");
                             trace.statement("puVar10 = puVar9;");
                             while (trace.loop_condition("while (*(int *)(puVar6 + 2) != iVar2)")) {
                                 if (trace.condition("if (puVar10 == *(undefined8 **) (*(longlong *)(param_1 + 6) + (uVar12 & *(ulonglong *)(param_1 + 0xc)) * 0x10)) goto LAB_1802157d3; puVar10 = (undefined8 *)puVar10[1]; iVar2 = *(int *)(puVar10 + 2); } puVar10 = (undefined8 *)*puVar10; } } LAB_1802157d3: puVar9 = (undefined8 *)puVar10[1]; *(longlong *)(param_1 + 4) = *(longlong *)(param_1 + 4) + 1; *puVar6 = puVar10; puVar6[1] = puVar9; *puVar9 = puVar6; puVar10[1] = puVar6; lVar7 = *(longlong *)(param_1 + 6); uVar12 = *(ulonglong *)(param_1 + 0xc) & uVar12; puVar4 = *(undefined8 **)(lVar7 + uVar12 * 0x10); if (puVar4 == *(undefined8 **)pfVar1)")) {
                                     trace.statement("*(undefined8 **)(lVar7 + uVar12 * 0x10) = puVar6;");
                                 } else {
-                                if (trace.condition("if (puVar4 == puVar10)")) {
+                                if (trace.checked_condition("if (puVar4 == puVar10)", [&]() -> bool { return static_cast<bool>(puVar4 == puVar10); })) {
                                     trace.statement("*(undefined8 **)(lVar7 + uVar12 * 0x10) = puVar6;");
                                     trace.statement("goto LAB_180215828;");
                                 }
@@ -622,6 +634,7 @@ TODO: resolve the indirect call in body 91: (**(code **)(**(longlong **)(param_1
 const sf::reconstructed::FunctionTranslation& Function_0x180215840() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180215840", "FUN_180215840");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_2{};
     [[maybe_unused]] std::uint64_t uVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] bool bVar3{};
@@ -629,8 +642,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215840() noexcept {
     [[maybe_unused]] std::uint32_t uVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
+    [[maybe_unused]] std::int64_t * plVar9{};
     [[maybe_unused]] std::uint32_t uVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
+    [[maybe_unused]] std::int64_t * local_30{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: resolve the indirect call in body 27: (**(code **)(**(longlong **)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x48) + 8).
     // TODO: resolve the indirect call in body 36: (puVar8 = (undefined8 *)(**(code **)(*local_30 + 0x10))(), puVar8 != (undefined8 *)0x0)) {.
@@ -639,21 +655,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215840() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[3])
+    // TODO: condition expression type not recovered: for (; uVar10 = 0, uVar11 != 0; uVar11 = uVar11 - 1)
     // TODO: condition expression type not recovered: if (uVar5 == 0xffffffff)
     // TODO: condition expression type not recovered: if ((*(byte *)(*(longlong *)(lVar7 + 0x18) + (ulonglong)(uVar5 & 0xff) * 2) & 0x48) != 0)
     // TODO: condition expression type not recovered: if (uVar1 < (ulonglong)param_2[3])
     // TODO: condition expression type not recovered: if ((ulonglong)param_2[3] < 0x10)
-    // TODO: call arguments not type-recovered for FUN_180215840: basic_istream<char,std::char_traits<char>_> *param_1,longlong *param_2
     // TODO: call arguments not type-recovered for _Ipfx: param_1,false
     // TODO: call arguments not type-recovered for getloc: (ios_base *)(param_1 + *(int *)(*(longlong *)param_1 + 4))
-    // TODO: call arguments not type-recovered for FUN_18021abd0: param_2
     trace.call_arguments("FUN_1801fbf10", uVar6);
+    trace.call_arguments("FUN_18021abd0", param_2);
     trace.call_target("FUN_1801fbf10", reinterpret_cast<const void*>(&image::FUN_1801fbf10));
     trace.call_target("FUN_18021abd0", reinterpret_cast<const void*>(&image::FUN_18021abd0));
     // body sha256: c6a2d4aef543871eb78f0e516264ade7b4b5134b3f77033005beb4f3538ef9fe
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("basic_istream<char,std::char_traits<char>_> *");
-        trace.statement("FUN_180215840(basic_istream<char,std::char_traits<char>_> *param_1,longlong *param_2)");
         {
             trace.statement("ulonglong uVar1;");
             trace.statement("longlong lVar2;");
@@ -693,7 +708,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215840() noexcept {
                 trace.statement("uVar5 = std::basic_streambuf<char,std::char_traits<char>_>::sgetc");
                 trace.statement("(*(basic_streambuf<char,std::char_traits<char>_> **)");
                 trace.statement("(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + 0x48));");
-                for (auto loop = trace.checked_loop("for (; uVar10 = 0, uVar11 != 0; uVar11 = uVar11 - 1)", [&]() -> bool { return static_cast<bool>(uVar11 = uVar11 - 1); }); loop.next(); ) {
+                for (auto loop = trace.loop("for (; uVar10 = 0, uVar11 != 0; uVar11 = uVar11 - 1)"); loop.next(); ) {
                     if (trace.condition("if (uVar5 == 0xffffffff)")) {
                         trace.statement("uVar10 = 1;");
                         trace.statement("break;");
@@ -890,8 +905,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215a50() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180215a50", "FUN_180215a50");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
+    [[maybe_unused]] void* * pcVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
+    [[maybe_unused]] std::uint64_t * puVar7{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180215c5a.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180215cbe.
@@ -914,8 +936,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215a50() noexcept {
     // TODO: condition expression type not recovered: while (puVar5[2] != lVar1)
     // TODO: condition expression type not recovered: if (puVar7 == *(undefined8 **)(DAT_1803fa878 + (DAT_1803fa890 & uVar6) * 0x10))
     // TODO: condition expression type not recovered: if (puVar3 == DAT_1803fa868)
-    // TODO: condition expression type not recovered: if (puVar3 == puVar7)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
     trace.call_arguments("FUN_1802d8350", 0x20);
     trace.call_arguments("FUN_18022c300", &image::DAT_1803fa860);
@@ -930,7 +951,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215a50() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: 82a2263ae58e88992ccfe64235f1900d042a25035d04f38a1b6daf345d653aa1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180215a50(undefined8 param_1,undefined8 *param_2,byte *param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -975,7 +995,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215a50() noexcept {
                                 if (trace.condition("if (puVar7 == *(undefined8 **)(DAT_1803fa878 + (DAT_1803fa890 & uVar6) * 0x10)) goto LAB_180215c5a; puVar7 = (undefined8 *)puVar7[1]; lVar1 = puVar7[2]; } puVar7 = (undefined8 *)*puVar7; } } LAB_180215c5a: puVar2 = (undefined8 *)puVar7[1]; DAT_1803fa870 = DAT_1803fa870 + 1; *puVar5 = puVar7; puVar5[1] = puVar2; *puVar2 = puVar5; puVar7[1] = puVar5; lVar1 = DAT_1803fa878; uVar6 = DAT_1803fa890 & uVar6; puVar3 = *(undefined8 **)(DAT_1803fa878 + uVar6 * 0x10); if (puVar3 == DAT_1803fa868)")) {
                                     trace.statement("*(undefined8 **)(DAT_1803fa878 + uVar6 * 0x10) = puVar5;");
                                 } else {
-                                if (trace.condition("if (puVar3 == puVar7)")) {
+                                if (trace.checked_condition("if (puVar3 == puVar7)", [&]() -> bool { return static_cast<bool>(puVar3 == puVar7); })) {
                                     trace.statement("*(undefined8 **)(DAT_1803fa878 + uVar6 * 0x10) = puVar5;");
                                     trace.statement("goto LAB_180215cbe;");
                                 }
@@ -1141,7 +1161,16 @@ TODO: resolve the indirect call in body 48: puVar6 = (undefined8 *)(*pcVar5)();.
 const sf::reconstructed::FunctionTranslation& Function_0x180215cd0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180215cd0", "FUN_180215cd0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
+    [[maybe_unused]] float * pfVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] void* * pcVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
+    [[maybe_unused]] std::uint64_t * puVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
     [[maybe_unused]] float fVar9{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -1151,27 +1180,22 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215cd0() noexcept {
     // TODO: resolve the indirect call in body 48: puVar6 = (undefined8 *)(*pcVar5)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (puVar6 != puVar7)
     // TODO: condition expression type not recovered: while( true )
     // TODO: condition expression type not recovered: if (*(longlong *)param_3 == lVar2)
     // TODO: condition expression type not recovered: if (puVar7 == *(undefined8 **)
-    // TODO: condition expression type not recovered: if (*(longlong *)(param_1 + 4) == 0x7ffffffffffffff)
     // TODO: condition expression type not recovered: if (*param_1 <= fVar9 && fVar9 != *param_1)
-    // TODO: condition expression type not recovered: if (puVar3 != puVar7)
     // TODO: condition expression type not recovered: while (puVar6[2] != lVar2)
     // TODO: condition expression type not recovered: if (puVar7 == *(undefined8 **)
     // TODO: condition expression type not recovered: if (puVar4 == *(undefined8 **)pfVar1)
-    // TODO: condition expression type not recovered: if (puVar4 == puVar7)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_18022c300: param_1
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
     trace.call_arguments("FUN_1802d8350", 0x20);
+    trace.call_arguments("FUN_18022c300", param_1);
     trace.call_target("FUN_18022c300", reinterpret_cast<const void*>(&image::FUN_18022c300));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     trace.string_literal("unordered_map/set too long");
     // body sha256: e31343ec62820c0201f8f95e0793cabb3811c17f2f73ef46146bbcf32eec65fe
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180215cd0(float *param_1,undefined8 *param_2,byte *param_3)");
         {
             trace.statement("float *pfVar1;");
             trace.statement("longlong lVar2;");
@@ -1191,7 +1215,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215cd0() noexcept {
             trace.statement("(*(longlong *)(param_1 + 6) + 8 + (uVar8 & *(ulonglong *)(param_1 + 0xc)) * 0x10);");
             trace.statement("pfVar1 = param_1 + 2;");
             trace.statement("puVar7 = *(undefined8 **)pfVar1;");
-            if (trace.condition("if (puVar6 != puVar7)")) {
+            if (trace.checked_condition("if (puVar6 != puVar7)", [&]() -> bool { return static_cast<bool>(puVar6 != puVar7); })) {
                 trace.statement("lVar2 = puVar6[2];");
                 trace.statement("puVar7 = puVar6;");
                 while (trace.loop_condition("while( true )")) {
@@ -1215,14 +1239,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215cd0() noexcept {
                         trace.statement("puVar3 = *(undefined8 **)");
                         trace.statement("(*(longlong *)(param_1 + 6) + 8 + (uVar8 & *(ulonglong *)(param_1 + 0xc)) * 0x10);");
                         trace.statement("puVar7 = *(undefined8 **)pfVar1;");
-                        if (trace.condition("if (puVar3 != puVar7)")) {
+                        if (trace.checked_condition("if (puVar3 != puVar7)", [&]() -> bool { return static_cast<bool>(puVar3 != puVar7); })) {
                             trace.statement("lVar2 = puVar3[2];");
                             trace.statement("puVar7 = puVar3;");
                             while (trace.loop_condition("while (puVar6[2] != lVar2)")) {
                                 if (trace.condition("if (puVar7 == *(undefined8 **) (*(longlong *)(param_1 + 6) + (uVar8 & *(ulonglong *)(param_1 + 0xc)) * 0x10) ) goto LAB_180215eb9; puVar7 = (undefined8 *)puVar7[1]; lVar2 = puVar7[2]; } puVar7 = (undefined8 *)*puVar7; } } LAB_180215eb9: puVar3 = (undefined8 *)puVar7[1]; *(longlong *)(param_1 + 4) = *(longlong *)(param_1 + 4) + 1; *puVar6 = puVar7; puVar6[1] = puVar3; *puVar3 = puVar6; puVar7[1] = puVar6; lVar2 = *(longlong *)(param_1 + 6); uVar8 = uVar8 & *(ulonglong *)(param_1 + 0xc); puVar4 = *(undefined8 **)(lVar2 + uVar8 * 0x10); if (puVar4 == *(undefined8 **)pfVar1)")) {
                                     trace.statement("*(undefined8 **)(lVar2 + uVar8 * 0x10) = puVar6;");
                                 } else {
-                                if (trace.condition("if (puVar4 == puVar7)")) {
+                                if (trace.checked_condition("if (puVar4 == puVar7)", [&]() -> bool { return static_cast<bool>(puVar4 == puVar7); })) {
                                     trace.statement("*(undefined8 **)(lVar2 + uVar8 * 0x10) = puVar6;");
                                     trace.statement("goto LAB_180215f0b;");
                                 }
@@ -1307,31 +1331,32 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x180215f20() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180215f20", "FUN_180215f20");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*param_3 == 0)
-    // TODO: condition expression type not recovered: if (param_2 < param_1)
     // TODO: condition expression type not recovered: if ((1 < uVar3) && ((param_3 < param_1 || (param_1 + (uVar3 - 1) < param_3))))
     // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 1)
     // TODO: call arguments not type-recovered for memset: param_1,0,(longlong)param_2 - (longlong)param_1 & 0xfffffffffffffff8
     // body sha256: ba100339166373a8f3d0ea792900b71a793568a13276e4366a0cd99e3601c3f1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180215f20(longlong *param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("ulonglong uVar2;");
             trace.statement("ulonglong uVar3;");
             trace.statement("longlong *plVar4;");
-            if (trace.condition("if (*param_3 == 0)")) {
+            if (trace.checked_condition("if (*param_3 == 0)", [&]() -> bool { return static_cast<bool>(*param_3 == 0); })) {
                 trace.statement("memset(param_1,0,(longlong)param_2 - (longlong)param_1 & 0xfffffffffffffff8);");
                 trace.statement("return;");
             }
             trace.statement("uVar3 = ((longlong)param_2 - (longlong)param_1) + 7U >> 3;");
-            if (trace.condition("if (param_2 < param_1)")) {
+            if (trace.checked_condition("if (param_2 < param_1)", [&]() -> bool { return static_cast<bool>(param_2 < param_1); })) {
                 trace.statement("uVar3 = 0;");
             }
             if (trace.condition("if ((1 < uVar3) && ((param_3 < param_1 || (param_1 + (uVar3 - 1) < param_3))))")) {
@@ -1521,11 +1546,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215fd0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180215fd0", "FUN_180215fd0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] void * param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
     [[maybe_unused]] std::size_t _Size{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
+    [[maybe_unused]] std::uint8_t * puVar6{};
+    [[maybe_unused]] void * pvVar7{};
     [[maybe_unused]] std::uint8_t auStack_38[8]{};
     [[maybe_unused]] std::uint8_t auStack_30[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -1541,16 +1571,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215fd0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803e9a98 == (void *)0x0)
-    // TODO: call arguments not type-recovered for memmove: DAT_1803e9a98,param_2,param_3 * 0x30
-    // TODO: call arguments not type-recovered for memmove: DAT_1803e9a98,param_2,lVar3 * 0x10
     // TODO: call arguments not type-recovered for memmove: DAT_1803e9aa0,(void *)(lVar3 * 0x10 + (longlong)param_2),_Size
-    // TODO: call arguments not type-recovered for free: pvVar7
-    // TODO: call arguments not type-recovered for memmove: pvVar7,param_2,param_3 * 0x30
+    trace.call_arguments("memmove", image::DAT_1803e9a98, param_2, param_3 * 0x30);
+    trace.call_arguments("memmove", image::DAT_1803e9a98, param_2, lVar3 * 0x10);
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350", uVar4);
     trace.call_arguments("FUN_1802d8350");
+    trace.call_arguments("free", pvVar7);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("memmove", pvVar7, param_2, param_3 * 0x30);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -1559,7 +1589,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180215fd0() noexcept {
     trace.data_ref("DAT_1803e9aa8", static_cast<const void*>(&image::DAT_1803e9aa8));
     // body sha256: 1621b1a46707ad3867fbfe86e178fa41fa612dfcac222fc9713019014fbb7af7
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180215fd0(undefined8 param_1,void *param_2,ulonglong param_3)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("ulonglong uVar2;");
@@ -1840,13 +1869,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802161d0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802161d0", "FUN_1802161d0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
     [[maybe_unused]] std::int32_t iVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] void* * pcVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
     [[maybe_unused]] float fVar12{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180216468.
@@ -1868,15 +1904,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802161d0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803fad50 == 0x2aaaaaaaaaaaaaa)
     // TODO: condition expression type not recovered: if (DAT_1803fad40 < (float)(DAT_1803fad50 + 1) / (float)DAT_1803fad78)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar12) && (fVar12 = fVar12 - DAT_180381300, fVar12 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))
     // TODO: condition expression type not recovered: if (puVar8 != DAT_1803fad48)
     // TODO: condition expression type not recovered: while (*(int *)(puVar5 + 2) != iVar1)
     // TODO: condition expression type not recovered: if (puVar11 == *(undefined8 **)(DAT_1803fad58 + (DAT_1803fad70 & uVar10) * 0x10))
     // TODO: condition expression type not recovered: if (puVar2 == DAT_1803fad48)
-    // TODO: condition expression type not recovered: if (puVar2 == puVar11)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x60,puVar8,DAT_1803fad58,param_4,&DAT_1803fad48,0
     // TODO: call arguments not type-recovered for ceilf: (float)(DAT_1803fad50 + 1) / DAT_1803fad40
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x60, puVar8, image::DAT_1803fad58, param_4, &image::DAT_1803fad48, 0);
     trace.call_arguments("FUN_180236a40", uVar7, uVar9);
     trace.call_target("FUN_180236a40", reinterpret_cast<const void*>(&image::FUN_180236a40));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -1890,7 +1926,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802161d0() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: 2249f2b20630b26cd0b96b65044ec0d221d0af753d676fc5737b1fe150c5d56a
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_1802161d0(undefined8 param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("int iVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -1955,7 +1990,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802161d0() noexcept {
                             trace.statement("uVar7 = (longlong)fVar12 + lVar6;");
                         }
                         trace.statement("uVar9 = uVar4;");
-                        if (trace.checked_condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))", [&]() -> bool { return static_cast<bool>((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7)))); })) {
+                        if (trace.condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))")) {
                             trace.statement("uVar9 = uVar7;");
                         }
                         trace.statement("FUN_180236a40(uVar7,uVar9);");
@@ -1968,7 +2003,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802161d0() noexcept {
                                 if (trace.condition("if (puVar11 == *(undefined8 **)(DAT_1803fad58 + (DAT_1803fad70 & uVar10) * 0x10)) goto LAB_180216468; puVar11 = (undefined8 *)puVar11[1]; iVar1 = *(int *)(puVar11 + 2); } puVar11 = (undefined8 *)*puVar11; } } LAB_180216468: puVar8 = (undefined8 *)puVar11[1]; DAT_1803fad50 = DAT_1803fad50 + 1; *puVar5 = puVar11; puVar5[1] = puVar8; *puVar8 = puVar5; puVar11[1] = puVar5; lVar6 = DAT_1803fad58; uVar10 = DAT_1803fad70 & uVar10; puVar2 = *(undefined8 **)(DAT_1803fad58 + uVar10 * 0x10); if (puVar2 == DAT_1803fad48)")) {
                                     trace.statement("*(undefined8 **)(DAT_1803fad58 + uVar10 * 0x10) = puVar5;");
                                 } else {
-                                if (trace.condition("if (puVar2 == puVar11)")) {
+                                if (trace.checked_condition("if (puVar2 == puVar11)", [&]() -> bool { return static_cast<bool>(puVar2 == puVar11); })) {
                                     trace.statement("*(undefined8 **)(DAT_1803fad58 + uVar10 * 0x10) = puVar5;");
                                     trace.statement("goto LAB_1802164cc;");
                                 }
@@ -2166,13 +2201,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802164e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802164e0", "FUN_1802164e0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
     [[maybe_unused]] std::int32_t iVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] void* * pcVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
     [[maybe_unused]] float fVar12{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180216750.
@@ -2194,15 +2236,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802164e0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803fad10 == 0x492492492492492)
     // TODO: condition expression type not recovered: if (DAT_1803fad00 < (float)(DAT_1803fad10 + 1) / (float)DAT_1803fad38)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar12) && (fVar12 = fVar12 - DAT_180381300, fVar12 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))
     // TODO: condition expression type not recovered: if (puVar8 != DAT_1803fad08)
     // TODO: condition expression type not recovered: while (*(int *)(puVar5 + 2) != iVar1)
     // TODO: condition expression type not recovered: if (puVar11 == *(undefined8 **)(DAT_1803fad18 + (DAT_1803fad30 & uVar10) * 0x10))
     // TODO: condition expression type not recovered: if (puVar2 == DAT_1803fad08)
-    // TODO: condition expression type not recovered: if (puVar2 == puVar11)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x38,puVar8,DAT_1803fad18,param_4,&DAT_1803fad08,0
     // TODO: call arguments not type-recovered for ceilf: (float)(DAT_1803fad10 + 1) / DAT_1803fad00
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x38, puVar8, image::DAT_1803fad18, param_4, &image::DAT_1803fad08, 0);
     trace.call_arguments("FUN_180236c10", uVar7, uVar9);
     trace.call_target("FUN_180236c10", reinterpret_cast<const void*>(&image::FUN_180236c10));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -2216,7 +2258,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802164e0() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: cd1f136b750c7120d8177a6c2b83ce5701028faca99a1ce50213547158d0d5c1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_1802164e0(undefined8 param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("int iVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -2271,7 +2312,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802164e0() noexcept {
                             trace.statement("uVar7 = (longlong)fVar12 + lVar6;");
                         }
                         trace.statement("uVar9 = uVar4;");
-                        if (trace.checked_condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))", [&]() -> bool { return static_cast<bool>((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7)))); })) {
+                        if (trace.condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))")) {
                             trace.statement("uVar9 = uVar7;");
                         }
                         trace.statement("FUN_180236c10(uVar7,uVar9);");
@@ -2284,7 +2325,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802164e0() noexcept {
                                 if (trace.condition("if (puVar11 == *(undefined8 **)(DAT_1803fad18 + (DAT_1803fad30 & uVar10) * 0x10)) goto LAB_180216750; puVar11 = (undefined8 *)puVar11[1]; iVar1 = *(int *)(puVar11 + 2); } puVar11 = (undefined8 *)*puVar11; } } LAB_180216750: puVar8 = (undefined8 *)puVar11[1]; DAT_1803fad10 = DAT_1803fad10 + 1; *puVar5 = puVar11; puVar5[1] = puVar8; *puVar8 = puVar5; puVar11[1] = puVar5; lVar6 = DAT_1803fad18; uVar10 = DAT_1803fad30 & uVar10; puVar2 = *(undefined8 **)(DAT_1803fad18 + uVar10 * 0x10); if (puVar2 == DAT_1803fad08)")) {
                                     trace.statement("*(undefined8 **)(DAT_1803fad18 + uVar10 * 0x10) = puVar5;");
                                 } else {
-                                if (trace.condition("if (puVar2 == puVar11)")) {
+                                if (trace.checked_condition("if (puVar2 == puVar11)", [&]() -> bool { return static_cast<bool>(puVar2 == puVar11); })) {
                                     trace.statement("*(undefined8 **)(DAT_1803fad18 + uVar10 * 0x10) = puVar5;");
                                     trace.statement("goto LAB_1802167b4;");
                                 }
@@ -2354,18 +2395,19 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802167d0() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_1802167d0: param_1,param_2,param_3[2]
     // TODO: call arguments not type-recovered for FUN_18020e450: param_3 + 0xc
-    // TODO: call arguments not type-recovered for FUN_18020e450: param_3 + 8
-    // TODO: call arguments not type-recovered for free: param_3
+    trace.call_arguments("FUN_1802167d0", param_1, param_2, param_3[2]);
+    trace.call_arguments("FUN_18020e450", param_3 + 8);
+    trace.call_arguments("free", param_3);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 4895ec7e3d7b71b47c5f84f5f4a91d22b1183b4dff6ec12860b29c62339a3ba7
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802167d0(undefined8 param_1,undefined8 param_2,longlong *param_3)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -2510,25 +2552,33 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x180216850() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180216850", "FUN_180216850");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::int32_t * param_3{};
+    [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] bool bVar2{};
+    [[maybe_unused]] std::int64_t * plVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::uint64_t uVar5{};
     [[maybe_unused]] std::uint32_t uVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
+    [[maybe_unused]] std::int64_t * local_58{};
     [[maybe_unused]] std::uint64_t local_50{};
+    [[maybe_unused]] std::int64_t * local_38{};
+    [[maybe_unused]] std::int64_t * local_30{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar7 + 0x19) == '\0')
     // TODO: condition expression type not recovered: if ((*(char *)((longlong)plVar4 + 0x19) == '\0') && ((int)plVar4[4] <= *param_3))
-    // TODO: condition expression type not recovered: if (param_1[1] == 0x1ffffffffffffff)
-    // TODO: call arguments not type-recovered for FUN_18022bb90: param_1,&local_58
     trace.call_arguments("FUN_180013b80");
     trace.call_arguments("FUN_1802d8350", 0x80);
+    trace.call_arguments("FUN_18022bb90", param_1, &local_58);
     trace.call_target("FUN_180013b80", reinterpret_cast<const void*>(&image::FUN_180013b80));
     trace.call_target("FUN_18022bb90", reinterpret_cast<const void*>(&image::FUN_18022bb90));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     // body sha256: 28004f359f16855db2823f676e4a05c7c3ae43f27a5864e1951e95ee0fce5ac4
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180216850(longlong *param_1,undefined8 *param_2,int *param_3)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("bool bVar2;");
@@ -2564,7 +2614,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216850() noexcept {
                 trace.statement("*param_2 = plVar4;");
                 trace.statement("*(undefined1 *)(param_2 + 1) = 0;");
             } else {
-            if (trace.condition("if (param_1[1] == 0x1ffffffffffffff)")) {
+            if (trace.checked_condition("if (param_1[1] == 0x1ffffffffffffff)", [&]() -> bool { return static_cast<bool>(param_1[1] == 0x1ffffffffffffff); })) {
                 trace.statement("FUN_180013b80();");
             }
             trace.statement("local_50 = 0;");
@@ -2728,10 +2778,15 @@ TODO: resolve the indirect call in body 44: lVar6 = (*pcVar1)();.)F1802169c0U",
 const sf::reconstructed::FunctionTranslation& Function_0x1802169c0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802169c0", "FUN_1802169c0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] std::int64_t * param_4{};
+    [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint8_t * puVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint8_t auStack_68[8]{};
     [[maybe_unused]] std::uint8_t auStack_60[72]{};
@@ -2755,7 +2810,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802169c0() noexcept {
     trace.data_ref("DAT_1803eb7b8", static_cast<const void*>(&image::DAT_1803eb7b8));
     // body sha256: d8f96aa57d6a094b83dd6ef6b731962bddb52862186108ec8a7db3817c2d7d6d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802169c0(ulonglong *param_1,ulonglong param_2,undefined8 param_3,longlong *param_4)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("longlong lVar2;");
@@ -3009,13 +3063,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216b00() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180216b00", "FUN_180216b00");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
     [[maybe_unused]] std::int32_t iVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] void* * pcVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
     [[maybe_unused]] float fVar12{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180216d7b.
@@ -3037,15 +3098,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216b00() noexcept {
     // TODO: condition expression type not recovered: if (DAT_180458220 == 0x3ffffffffffffff)
     // TODO: condition expression type not recovered: if (DAT_180458210 < (float)(DAT_180458220 + 1) / (float)DAT_180458248)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar12) && (fVar12 = fVar12 - DAT_180381300, fVar12 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))
     // TODO: condition expression type not recovered: if (puVar8 != DAT_180458218)
     // TODO: condition expression type not recovered: while (*(int *)(puVar5 + 2) != iVar1)
     // TODO: condition expression type not recovered: if (puVar11 == *(undefined8 **)(DAT_180458228 + (uVar10 & DAT_180458240) * 0x10))
     // TODO: condition expression type not recovered: if (puVar2 == DAT_180458218)
-    // TODO: condition expression type not recovered: if (puVar2 == puVar11)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x40,puVar8,DAT_180458228,param_4,&DAT_180458218,0
     // TODO: call arguments not type-recovered for ceilf: (float)(DAT_180458220 + 1) / DAT_180458210
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x40, puVar8, image::DAT_180458228, param_4, &image::DAT_180458218, 0);
     trace.call_arguments("FUN_180237320", uVar7, uVar9);
     trace.call_target("FUN_180237320", reinterpret_cast<const void*>(&image::FUN_180237320));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -3059,7 +3120,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216b00() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: c8ac47a74c793c703e49b6bc4c710510d78daf5224ec8626bf2c754f0f001c10
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180216b00(undefined8 param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("int iVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -3116,7 +3176,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216b00() noexcept {
                             trace.statement("uVar7 = (longlong)fVar12 + lVar6;");
                         }
                         trace.statement("uVar9 = uVar4;");
-                        if (trace.checked_condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))", [&]() -> bool { return static_cast<bool>((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7)))); })) {
+                        if (trace.condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))")) {
                             trace.statement("uVar9 = uVar7;");
                         }
                         trace.statement("FUN_180237320(uVar7,uVar9);");
@@ -3129,7 +3189,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216b00() noexcept {
                                 if (trace.condition("if (puVar11 == *(undefined8 **)(DAT_180458228 + (uVar10 & DAT_180458240) * 0x10)) goto LAB_180216d7b; puVar11 = (undefined8 *)puVar11[1]; iVar1 = *(int *)(puVar11 + 2); } puVar11 = (undefined8 *)*puVar11; } } LAB_180216d7b: puVar8 = (undefined8 *)puVar11[1]; DAT_180458220 = DAT_180458220 + 1; *puVar5 = puVar11; puVar5[1] = puVar8; *puVar8 = puVar5; puVar11[1] = puVar5; lVar6 = DAT_180458228; uVar10 = DAT_180458240 & uVar10; puVar2 = *(undefined8 **)(DAT_180458228 + uVar10 * 0x10); if (puVar2 == DAT_180458218)")) {
                                     trace.statement("*(undefined8 **)(DAT_180458228 + uVar10 * 0x10) = puVar5;");
                                 } else {
-                                if (trace.condition("if (puVar2 == puVar11)")) {
+                                if (trace.checked_condition("if (puVar2 == puVar11)", [&]() -> bool { return static_cast<bool>(puVar2 == puVar11); })) {
                                     trace.statement("*(undefined8 **)(DAT_180458228 + uVar10 * 0x10) = puVar5;");
                                     trace.statement("goto LAB_180216ddf;");
                                 }
@@ -3324,11 +3384,18 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216df0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180216df0", "FUN_180216df0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
+    [[maybe_unused]] std::uint64_t * puVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint64_t * puVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
     [[maybe_unused]] float fVar11{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -3351,15 +3418,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216df0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_180458260 == 0x7ffffffffffffff)
     // TODO: condition expression type not recovered: if (DAT_180458250 < (float)(DAT_180458260 + 1) / (float)DAT_180458288)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar11) && (fVar11 = fVar11 - DAT_180381300, fVar11 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar3 < uVar6) && ((0x1ff < uVar3 || (uVar10 = uVar3 * 8, uVar3 * 8 < uVar6))))
     // TODO: condition expression type not recovered: if (puVar7 != DAT_180458258)
     // TODO: condition expression type not recovered: while (puVar4[2] != lVar5)
     // TODO: condition expression type not recovered: if (puVar9 == *(undefined8 **)(DAT_180458268 + (uVar8 & DAT_180458280) * 0x10))
     // TODO: condition expression type not recovered: if (puVar1 == DAT_180458258)
-    // TODO: condition expression type not recovered: if (puVar1 == puVar9)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x20,puVar7,DAT_180458268,param_4,&DAT_180458258,0
     // TODO: call arguments not type-recovered for ceilf: (float)(DAT_180458260 + 1) / DAT_180458250
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x20, puVar7, image::DAT_180458268, param_4, &image::DAT_180458258, 0);
     trace.call_arguments("FUN_1802374f0", uVar6, uVar10);
     trace.call_target("FUN_1802374f0", reinterpret_cast<const void*>(&image::FUN_1802374f0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -3373,7 +3440,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216df0() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: b9f07a2d6951842df5128e6c40be2b79ba69de02008693503b1e77edc8a2df11
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180216df0(undefined8 param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("code *pcVar2;");
@@ -3425,7 +3491,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216df0() noexcept {
                             trace.statement("uVar6 = (longlong)fVar11 + lVar5;");
                         }
                         trace.statement("uVar10 = uVar3;");
-                        if (trace.checked_condition("if ((uVar3 < uVar6) && ((0x1ff < uVar3 || (uVar10 = uVar3 * 8, uVar3 * 8 < uVar6))))", [&]() -> bool { return static_cast<bool>((uVar3 < uVar6) && ((0x1ff < uVar3 || (uVar10 = uVar3 * 8, uVar3 * 8 < uVar6)))); })) {
+                        if (trace.condition("if ((uVar3 < uVar6) && ((0x1ff < uVar3 || (uVar10 = uVar3 * 8, uVar3 * 8 < uVar6))))")) {
                             trace.statement("uVar10 = uVar6;");
                         }
                         trace.statement("FUN_1802374f0(uVar6,uVar10);");
@@ -3438,7 +3504,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180216df0() noexcept {
                                 if (trace.condition("if (puVar9 == *(undefined8 **)(DAT_180458268 + (uVar8 & DAT_180458280) * 0x10)) goto LAB_180217069; puVar9 = (undefined8 *)puVar9[1]; lVar5 = puVar9[2]; } puVar9 = (undefined8 *)*puVar9; } } LAB_180217069: puVar7 = (undefined8 *)puVar9[1]; DAT_180458260 = DAT_180458260 + 1; *puVar4 = puVar9; puVar4[1] = puVar7; *puVar7 = puVar4; puVar9[1] = puVar4; lVar5 = DAT_180458268; uVar8 = DAT_180458280 & uVar8; puVar1 = *(undefined8 **)(DAT_180458268 + uVar8 * 0x10); if (puVar1 == DAT_180458258)")) {
                                     trace.statement("*(undefined8 **)(DAT_180458268 + uVar8 * 0x10) = puVar4;");
                                 } else {
-                                if (trace.condition("if (puVar1 == puVar9)")) {
+                                if (trace.checked_condition("if (puVar1 == puVar9)", [&]() -> bool { return static_cast<bool>(puVar1 == puVar9); })) {
                                     trace.statement("*(undefined8 **)(DAT_180458268 + uVar8 * 0x10) = puVar4;");
                                     trace.statement("goto LAB_1802170cd;");
                                 }
@@ -3641,11 +3707,18 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802170e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802170e0", "FUN_1802170e0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
+    [[maybe_unused]] std::uint64_t * puVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint64_t * puVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
     [[maybe_unused]] float fVar11{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -3668,15 +3741,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802170e0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1805c7b60 == 0x38e38e38e38e38e)
     // TODO: condition expression type not recovered: if (DAT_1805c7b50 < (float)(DAT_1805c7b60 + 1) / (float)DAT_1805c7b88)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar11) && (fVar11 = fVar11 - DAT_180381300, fVar11 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar3 < uVar6) && ((0x1ff < uVar3 || (uVar10 = uVar3 * 8, uVar3 * 8 < uVar6))))
     // TODO: condition expression type not recovered: if (puVar7 != DAT_1805c7b58)
     // TODO: condition expression type not recovered: while (puVar4[2] != lVar5)
     // TODO: condition expression type not recovered: if (puVar9 == *(undefined8 **)(DAT_1805c7b68 + (uVar8 & DAT_1805c7b80) * 0x10))
     // TODO: condition expression type not recovered: if (puVar1 == DAT_1805c7b58)
-    // TODO: condition expression type not recovered: if (puVar1 == puVar9)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x48,puVar7,DAT_1805c7b68,param_4,&DAT_1805c7b58,0
     // TODO: call arguments not type-recovered for ceilf: (float)(DAT_1805c7b60 + 1) / DAT_1805c7b50
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x48, puVar7, image::DAT_1805c7b68, param_4, &image::DAT_1805c7b58, 0);
     trace.call_arguments("FUN_1802376e0", uVar6, uVar10);
     trace.call_target("FUN_1802376e0", reinterpret_cast<const void*>(&image::FUN_1802376e0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -3690,7 +3763,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802170e0() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: 707a699c912d1871c534e0483a748c40e8bd24313655939bad77e53af723a23f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_1802170e0(undefined8 param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("code *pcVar2;");
@@ -3750,7 +3822,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802170e0() noexcept {
                             trace.statement("uVar6 = (longlong)fVar11 + lVar5;");
                         }
                         trace.statement("uVar10 = uVar3;");
-                        if (trace.checked_condition("if ((uVar3 < uVar6) && ((0x1ff < uVar3 || (uVar10 = uVar3 * 8, uVar3 * 8 < uVar6))))", [&]() -> bool { return static_cast<bool>((uVar3 < uVar6) && ((0x1ff < uVar3 || (uVar10 = uVar3 * 8, uVar3 * 8 < uVar6)))); })) {
+                        if (trace.condition("if ((uVar3 < uVar6) && ((0x1ff < uVar3 || (uVar10 = uVar3 * 8, uVar3 * 8 < uVar6))))")) {
                             trace.statement("uVar10 = uVar6;");
                         }
                         trace.statement("FUN_1802376e0(uVar6,uVar10);");
@@ -3763,7 +3835,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802170e0() noexcept {
                                 if (trace.condition("if (puVar9 == *(undefined8 **)(DAT_1805c7b68 + (uVar8 & DAT_1805c7b80) * 0x10)) goto LAB_18021737a; puVar9 = (undefined8 *)puVar9[1]; lVar5 = puVar9[2]; } puVar9 = (undefined8 *)*puVar9; } } LAB_18021737a: puVar7 = (undefined8 *)puVar9[1]; DAT_1805c7b60 = DAT_1805c7b60 + 1; *puVar4 = puVar9; puVar4[1] = puVar7; *puVar7 = puVar4; puVar9[1] = puVar4; lVar5 = DAT_1805c7b68; uVar8 = DAT_1805c7b80 & uVar8; puVar1 = *(undefined8 **)(DAT_1805c7b68 + uVar8 * 0x10); if (puVar1 == DAT_1805c7b58)")) {
                                     trace.statement("*(undefined8 **)(DAT_1805c7b68 + uVar8 * 0x10) = puVar4;");
                                 } else {
-                                if (trace.condition("if (puVar1 == puVar9)")) {
+                                if (trace.checked_condition("if (puVar1 == puVar9)", [&]() -> bool { return static_cast<bool>(puVar1 == puVar9); })) {
                                     trace.statement("*(undefined8 **)(DAT_1805c7b68 + uVar8 * 0x10) = puVar4;");
                                     trace.statement("goto LAB_1802173de;");
                                 }
@@ -3965,13 +4037,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802173f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802173f0", "FUN_1802173f0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
     [[maybe_unused]] std::int32_t iVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] void* * pcVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
     [[maybe_unused]] float fVar12{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180217688.
@@ -3993,16 +4072,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802173f0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1805c39a0 == 0x12f684bda12f684)
     // TODO: condition expression type not recovered: if (DAT_1805c3990 < (float)(DAT_1805c39a0 + 1) / (float)DAT_1805c39c8)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar12) && (fVar12 = fVar12 - DAT_180381300, fVar12 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))
     // TODO: condition expression type not recovered: if (puVar8 != DAT_1805c3998)
     // TODO: condition expression type not recovered: while (*(int *)(puVar5 + 2) != iVar1)
     // TODO: condition expression type not recovered: if (puVar11 == *(undefined8 **)(DAT_1805c39a8 + (uVar10 & DAT_1805c39c0) * 0x10))
     // TODO: condition expression type not recovered: if (puVar2 == DAT_1805c3998)
-    // TODO: condition expression type not recovered: if (puVar2 == puVar11)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0xd8,puVar8,DAT_1805c39a8,param_4,&DAT_1805c3998,0
-    // TODO: call arguments not type-recovered for memset: puVar5 + 7,0,0xa0
     // TODO: call arguments not type-recovered for ceilf: (float)(DAT_1805c39a0 + 1) / DAT_1805c3990
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0xd8, puVar8, image::DAT_1805c39a8, param_4, &image::DAT_1805c3998, 0);
+    trace.call_arguments("memset", puVar5 + 7, 0, 0xa0);
     trace.call_arguments("FUN_1802378d0", uVar7, uVar9);
     trace.call_target("FUN_1802378d0", reinterpret_cast<const void*>(&image::FUN_1802378d0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -4016,7 +4095,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802173f0() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: 98080d80599511c84002670305b95b5615770f6b66d042af04e6e853e7b2124f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_1802173f0(undefined8 param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("int iVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -4075,7 +4153,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802173f0() noexcept {
                             trace.statement("uVar7 = (longlong)fVar12 + lVar6;");
                         }
                         trace.statement("uVar9 = uVar4;");
-                        if (trace.checked_condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))", [&]() -> bool { return static_cast<bool>((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7)))); })) {
+                        if (trace.condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))")) {
                             trace.statement("uVar9 = uVar7;");
                         }
                         trace.statement("FUN_1802378d0(uVar7,uVar9);");
@@ -4088,7 +4166,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802173f0() noexcept {
                                 if (trace.condition("if (puVar11 == *(undefined8 **)(DAT_1805c39a8 + (uVar10 & DAT_1805c39c0) * 0x10)) goto LAB_180217688; puVar11 = (undefined8 *)puVar11[1]; iVar1 = *(int *)(puVar11 + 2); } puVar11 = (undefined8 *)*puVar11; } } LAB_180217688: puVar8 = (undefined8 *)puVar11[1]; DAT_1805c39a0 = DAT_1805c39a0 + 1; *puVar5 = puVar11; puVar5[1] = puVar8; *puVar8 = puVar5; puVar11[1] = puVar5; lVar6 = DAT_1805c39a8; uVar10 = DAT_1805c39c0 & uVar10; puVar2 = *(undefined8 **)(DAT_1805c39a8 + uVar10 * 0x10); if (puVar2 == DAT_1805c3998)")) {
                                     trace.statement("*(undefined8 **)(DAT_1805c39a8 + uVar10 * 0x10) = puVar5;");
                                 } else {
-                                if (trace.condition("if (puVar2 == puVar11)")) {
+                                if (trace.checked_condition("if (puVar2 == puVar11)", [&]() -> bool { return static_cast<bool>(puVar2 == puVar11); })) {
                                     trace.statement("*(undefined8 **)(DAT_1805c39a8 + uVar10 * 0x10) = puVar5;");
                                     trace.statement("goto LAB_1802176ec;");
                                 }
@@ -4282,13 +4360,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217700() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180217700", "FUN_180217700");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
     [[maybe_unused]] std::int32_t iVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] void* * pcVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
     [[maybe_unused]] float fVar12{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021793e.
@@ -4310,15 +4395,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217700() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1805beec0 == 0xaaaaaaaaaaaaaaa)
     // TODO: condition expression type not recovered: if (DAT_1805beeb0 < (float)(DAT_1805beec0 + 1) / (float)DAT_1805beee8)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar12) && (fVar12 = fVar12 - DAT_180381300, fVar12 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))
     // TODO: condition expression type not recovered: if (puVar8 != DAT_1805beeb8)
     // TODO: condition expression type not recovered: while (*(int *)(puVar5 + 2) != iVar1)
     // TODO: condition expression type not recovered: if (puVar11 == *(undefined8 **)(DAT_1805beec8 + (uVar10 & DAT_1805beee0) * 0x10))
     // TODO: condition expression type not recovered: if (puVar2 == DAT_1805beeb8)
-    // TODO: condition expression type not recovered: if (puVar2 == puVar11)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x18,puVar8,DAT_1805beec8,param_4,&DAT_1805beeb8,0
     // TODO: call arguments not type-recovered for ceilf: (float)(DAT_1805beec0 + 1) / DAT_1805beeb0
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x18, puVar8, image::DAT_1805beec8, param_4, &image::DAT_1805beeb8, 0);
     trace.call_arguments("FUN_180237c10", uVar7, uVar9);
     trace.call_target("FUN_180237c10", reinterpret_cast<const void*>(&image::FUN_180237c10));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -4332,7 +4417,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217700() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: b6466ec7cbb33cfcd02edacbb6d631c243c03a00b249a40dbb7499cda294cc31
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180217700(undefined8 param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("int iVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -4383,7 +4467,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217700() noexcept {
                             trace.statement("uVar7 = (longlong)fVar12 + lVar6;");
                         }
                         trace.statement("uVar9 = uVar4;");
-                        if (trace.checked_condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))", [&]() -> bool { return static_cast<bool>((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7)))); })) {
+                        if (trace.condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar9 = uVar4 * 8, uVar4 * 8 < uVar7))))")) {
                             trace.statement("uVar9 = uVar7;");
                         }
                         trace.statement("FUN_180237c10(uVar7,uVar9);");
@@ -4396,7 +4480,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217700() noexcept {
                                 if (trace.condition("if (puVar11 == *(undefined8 **)(DAT_1805beec8 + (uVar10 & DAT_1805beee0) * 0x10)) goto LAB_18021793e; puVar11 = (undefined8 *)puVar11[1]; iVar1 = *(int *)(puVar11 + 2); } puVar11 = (undefined8 *)*puVar11; } } LAB_18021793e: puVar8 = (undefined8 *)puVar11[1]; DAT_1805beec0 = DAT_1805beec0 + 1; *puVar5 = puVar11; puVar5[1] = puVar8; *puVar8 = puVar5; puVar11[1] = puVar5; lVar6 = DAT_1805beec8; uVar10 = DAT_1805beee0 & uVar10; puVar2 = *(undefined8 **)(DAT_1805beec8 + uVar10 * 0x10); if (puVar2 == DAT_1805beeb8)")) {
                                     trace.statement("*(undefined8 **)(DAT_1805beec8 + uVar10 * 0x10) = puVar5;");
                                 } else {
-                                if (trace.condition("if (puVar2 == puVar11)")) {
+                                if (trace.checked_condition("if (puVar2 == puVar11)", [&]() -> bool { return static_cast<bool>(puVar2 == puVar11); })) {
                                     trace.statement("*(undefined8 **)(DAT_1805beec8 + uVar10 * 0x10) = puVar5;");
                                     trace.statement("goto LAB_1802179a2;");
                                 }
@@ -4555,35 +4639,36 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802179b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802179b0", "FUN_1802179b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
     [[maybe_unused]] std::uint32_t uVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     [[maybe_unused]] std::uint32_t uVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
+    [[maybe_unused]] std::uint64_t * puVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((ulonglong)((param_1[2] - (longlong)puVar8 >> 4) * -0x3333333333333333) < param_3)
-    // TODO: condition expression type not recovered: if (puVar8 != puVar6)
-    // TODO: condition expression type not recovered: if (puVar8 != param_2)
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[3])
-    // TODO: condition expression type not recovered: if (puVar8 != param_2)
+    // TODO: condition expression type not recovered: for (; param_3 != 0; param_3 = param_3 - 1)
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[3])
-    // TODO: condition expression type not recovered: for (puVar7 = puVar6; puVar7 != puVar8; puVar7 = puVar7 + 10)
-    // TODO: call arguments not type-recovered for FUN_18022c880: param_1,param_3
-    // TODO: call arguments not type-recovered for FUN_180226040: param_2,param_3,*param_1,param_1
-    // TODO: call arguments not type-recovered for FUN_180212700: puVar8,puVar6,param_2[2]
-    // TODO: call arguments not type-recovered for FUN_180226040: param_2,param_3 + lVar5 * 0x3333333333333333,puVar6,param_1
-    // TODO: call arguments not type-recovered for FUN_180212700: puVar8,puVar7,param_2[2]
-    // TODO: call arguments not type-recovered for FUN_18020e450: puVar7
+    trace.call_arguments("FUN_18022c880", param_1, param_3);
+    trace.call_arguments("FUN_180226040", param_2, param_3, *param_1, param_1);
+    trace.call_arguments("FUN_180212700", puVar8, puVar6, param_2[2]);
+    trace.call_arguments("FUN_180226040", param_2, param_3 + lVar5 * 0x3333333333333333, puVar6, param_1);
+    trace.call_arguments("FUN_180212700", puVar8, puVar7, param_2[2]);
+    trace.call_arguments("FUN_18020e450", puVar7);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     trace.call_target("FUN_180212700", reinterpret_cast<const void*>(&image::FUN_180212700));
     trace.call_target("FUN_180226040", reinterpret_cast<const void*>(&image::FUN_180226040));
     trace.call_target("FUN_18022c880", reinterpret_cast<const void*>(&image::FUN_18022c880));
     // body sha256: 5781ff1e54f54a06355a20c29833b7a3bdfd63316e542daa96d5eb5d89cf0e95
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802179b0(longlong *param_1,undefined8 *param_2,ulonglong param_3)");
         {
             trace.statement("undefined4 uVar1;");
             trace.statement("undefined4 uVar2;");
@@ -4602,9 +4687,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802179b0() noexcept {
             trace.statement("puVar6 = (undefined8 *)param_1[1];");
             trace.statement("lVar5 = (longlong)puVar6 - (longlong)puVar8 >> 4;");
             if (trace.checked_condition("if ((ulonglong)(lVar5 * -0x3333333333333333) < param_3)", [&]() -> bool { return static_cast<bool>((ulonglong)(lVar5 * -0x3333333333333333) < param_3); })) {
-                if (trace.condition("if (puVar8 != puVar6)")) {
+                if (trace.checked_condition("if (puVar8 != puVar6)", [&]() -> bool { return static_cast<bool>(puVar8 != puVar6); })) {
                     do {
-                        if (trace.condition("if (puVar8 != param_2)")) {
+                        if (trace.checked_condition("if (puVar8 != param_2)", [&]() -> bool { return static_cast<bool>(puVar8 != param_2); })) {
                             trace.statement("puVar6 = param_2;");
                             if (trace.condition("if (0xf < (ulonglong)param_2[3])")) {
                                 trace.statement("puVar6 = (undefined8 *)*param_2;");
@@ -4637,8 +4722,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802179b0() noexcept {
                 trace.statement("param_1[1] = lVar5;");
             } else {
             trace.statement("puVar6 = puVar8 + param_3 * 10;");
-            for (auto loop = trace.checked_loop("for (; param_3 != 0; param_3 = param_3 - 1)", [&]() -> bool { return static_cast<bool>(param_3 = param_3 - 1); }); loop.next(); ) {
-                if (trace.condition("if (puVar8 != param_2)")) {
+            for (auto loop = trace.loop("for (; param_3 != 0; param_3 = param_3 - 1)"); loop.next(); ) {
+                if (trace.checked_condition("if (puVar8 != param_2)", [&]() -> bool { return static_cast<bool>(puVar8 != param_2); })) {
                     trace.statement("puVar7 = param_2;");
                     if (trace.condition("if (0xf < (ulonglong)param_2[3])")) {
                         trace.statement("puVar7 = (undefined8 *)*param_2;");
@@ -4666,7 +4751,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802179b0() noexcept {
                 trace.statement("param_2 = param_2 + 10;");
             }
             trace.statement("puVar8 = (undefined8 *)param_1[1];");
-            for (auto loop = trace.loop("for (puVar7 = puVar6; puVar7 != puVar8; puVar7 = puVar7 + 10)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (puVar7 = puVar6; puVar7 != puVar8; puVar7 = puVar7 + 10)", [&]() -> bool { return static_cast<bool>(puVar7 != puVar8); }); loop.next(); ) {
                 trace.statement("FUN_18020e450(puVar7);");
             }
             trace.statement("param_1[1] = (longlong)puVar6;");
@@ -4799,11 +4884,19 @@ TODO: resolve the indirect call in body 47: lVar3 = (*pcVar2)();.)F180217b80U",
 const sf::reconstructed::FunctionTranslation& Function_0x180217b80() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180217b80", "FUN_180217b80");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] std::uint64_t * param_4{};
+    [[maybe_unused]] std::uint32_t * puVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
+    [[maybe_unused]] std::uint32_t * puVar6{};
+    [[maybe_unused]] std::uint8_t * puVar7{};
+    [[maybe_unused]] std::uint8_t * puVar8{};
+    [[maybe_unused]] std::uint32_t * puVar9{};
     [[maybe_unused]] std::uint8_t auStack_68[8]{};
     [[maybe_unused]] std::uint8_t auStack_60[72]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -4812,13 +4905,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217b80() noexcept {
     // TODO: resolve the indirect call in body 47: lVar3 = (*pcVar2)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (puVar9 = DAT_1803edc50; puVar9 != puVar1; puVar9 = puVar9 + 0xc)
-    // TODO: call arguments not type-recovered for FUN_18016d4c0: puVar6 + 2,puVar9 + 2
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_1802d8350", param_2);
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("FUN_18016d4c0", puVar6 + 2, puVar9 + 2);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
     trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
@@ -4826,7 +4918,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217b80() noexcept {
     trace.data_ref("DAT_1803edc50", static_cast<const void*>(&image::DAT_1803edc50));
     // body sha256: 3aeb7d0f1770e7633de0fcdc3edc8013f068b789e2a1fa85eba1a71b2ce454c2
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180217b80(ulonglong *param_1,ulonglong param_2,undefined8 param_3,undefined8 *param_4)");
         {
             trace.statement("undefined4 *puVar1;");
             trace.statement("code *pcVar2;");
@@ -4880,7 +4971,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217b80() noexcept {
             trace.statement("*(undefined4 **)(puVar8 + 0x28) = puVar6;");
             trace.statement("*(undefined4 **)(puVar8 + 0x30) = puVar6;");
             trace.statement("*(ulonglong **)(puVar8 + 0x38) = param_1;");
-            for (auto loop = trace.loop("for (puVar9 = DAT_1803edc50; puVar9 != puVar1; puVar9 = puVar9 + 0xc)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (puVar9 = DAT_1803edc50; puVar9 != puVar1; puVar9 = puVar9 + 0xc)", [&]() -> bool { return static_cast<bool>(puVar9 != puVar1); }); loop.next(); ) {
                 trace.statement("*(undefined4 **)(puVar8 + 0x20) = puVar6;");
                 trace.statement("*puVar6 = *puVar9;");
                 trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180217c59;");
@@ -5077,12 +5168,19 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217cb0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180217cb0", "FUN_180217cb0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
     [[maybe_unused]] std::int32_t iVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] void* * pcVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
+    [[maybe_unused]] std::uint64_t * puVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
     [[maybe_unused]] float fVar12{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -5105,15 +5203,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217cb0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803fa7c0 == 0x7ffffffffffffff)
     // TODO: condition expression type not recovered: if (DAT_1803fa7b0 < (float)(DAT_1803fa7c0 + 1) / (float)DAT_1803fa7e8)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar12) && (fVar12 = fVar12 - DAT_180381300, fVar12 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar11 = uVar4 * 8, uVar4 * 8 < uVar7))))
     // TODO: condition expression type not recovered: if (puVar8 != DAT_1803fa7b8)
     // TODO: condition expression type not recovered: while (*(int *)(puVar5 + 2) != iVar1)
     // TODO: condition expression type not recovered: if (puVar10 == *(undefined8 **)(DAT_1803fa7c8 + (DAT_1803fa7e0 & uVar9) * 0x10))
     // TODO: condition expression type not recovered: if (puVar2 == DAT_1803fa7b8)
-    // TODO: condition expression type not recovered: if (puVar2 == puVar10)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x20,puVar8,DAT_1803fa7c8,param_4,&DAT_1803fa7b8,0
     // TODO: call arguments not type-recovered for ceilf: (float)(DAT_1803fa7c0 + 1) / DAT_1803fa7b0
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x20, puVar8, image::DAT_1803fa7c8, param_4, &image::DAT_1803fa7b8, 0);
     trace.call_arguments("FUN_1802380e0", uVar7, uVar11);
     trace.call_target("FUN_1802380e0", reinterpret_cast<const void*>(&image::FUN_1802380e0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
@@ -5127,7 +5225,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217cb0() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: 9cc7944cefc7b12d14880548edbdb67ddfbbcd29a61eb8704196864cd9974a10
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180217cb0(undefined8 param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("int iVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -5179,7 +5276,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217cb0() noexcept {
                             trace.statement("uVar7 = (longlong)fVar12 + lVar6;");
                         }
                         trace.statement("uVar11 = uVar4;");
-                        if (trace.checked_condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar11 = uVar4 * 8, uVar4 * 8 < uVar7))))", [&]() -> bool { return static_cast<bool>((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar11 = uVar4 * 8, uVar4 * 8 < uVar7)))); })) {
+                        if (trace.condition("if ((uVar4 < uVar7) && ((0x1ff < uVar4 || (uVar11 = uVar4 * 8, uVar4 * 8 < uVar7))))")) {
                             trace.statement("uVar11 = uVar7;");
                         }
                         trace.statement("FUN_1802380e0(uVar7,uVar11);");
@@ -5192,7 +5289,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217cb0() noexcept {
                                 if (trace.condition("if (puVar10 == *(undefined8 **)(DAT_1803fa7c8 + (DAT_1803fa7e0 & uVar9) * 0x10)) goto LAB_180217ef8; puVar10 = (undefined8 *)puVar10[1]; iVar1 = *(int *)(puVar10 + 2); } puVar10 = (undefined8 *)*puVar10; } } LAB_180217ef8: puVar8 = (undefined8 *)puVar10[1]; DAT_1803fa7c0 = DAT_1803fa7c0 + 1; *puVar5 = puVar10; puVar5[1] = puVar8; *puVar8 = puVar5; puVar10[1] = puVar5; lVar6 = DAT_1803fa7c8; uVar9 = DAT_1803fa7e0 & uVar9; puVar2 = *(undefined8 **)(DAT_1803fa7c8 + uVar9 * 0x10); if (puVar2 == DAT_1803fa7b8)")) {
                                     trace.statement("*(undefined8 **)(DAT_1803fa7c8 + uVar9 * 0x10) = puVar5;");
                                 } else {
-                                if (trace.condition("if (puVar2 == puVar10)")) {
+                                if (trace.checked_condition("if (puVar2 == puVar10)", [&]() -> bool { return static_cast<bool>(puVar2 == puVar10); })) {
                                     trace.statement("*(undefined8 **)(DAT_1803fa7c8 + uVar9 * 0x10) = puVar5;");
                                     trace.statement("goto LAB_180217f5c;");
                                 }
@@ -5260,15 +5357,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217f70() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_180217f70: param_1,param_2,param_3[2]
-    // TODO: call arguments not type-recovered for free: param_3
+    trace.call_arguments("FUN_180217f70", param_1, param_2, param_3[2]);
+    trace.call_arguments("free", param_3);
     // body sha256: edf4e9aad7415e50ab6f66ca1aec91259cf808c971d935478545941760d95cbc
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180217f70(undefined8 param_1,undefined8 param_2,longlong *param_3)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -5335,6 +5433,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217fc0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 0x98)
     trace.call_arguments("FUN_18020e450", param_1 + 0x70);
     trace.call_arguments("FUN_18020e450", param_1 + 0x50);
     trace.call_arguments("FUN_18020e450", param_1 + 0x28);
@@ -5342,9 +5441,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x180217fc0() noexcept {
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: a16f4b456ee9802c49ef3d74c8da5f23c87a39a424c91fa27fa1a9d085e3f4f1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180217fc0(longlong param_1,longlong param_2)");
         {
-            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 0x98)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 0x98); }); loop.next(); ) {
+            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 0x98)"); loop.next(); ) {
                 trace.statement("FUN_18020e450(param_1 + 0x70);");
                 trace.statement("FUN_18020e450(param_1 + 0x50);");
                 trace.statement("FUN_18020e450(param_1 + 0x28);");
@@ -5408,17 +5506,18 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218030() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_180218030: param_1,param_2,param_3[2]
-    // TODO: call arguments not type-recovered for free: param_3
+    trace.call_arguments("FUN_180218030", param_1, param_2, param_3[2]);
     trace.call_arguments("FUN_18020e450");
+    trace.call_arguments("free", param_3);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 7dcaeec2b6acb274f8ee3ae03ad0d95c876f3dcba098deade7208f5dfdcee459
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180218030(undefined8 param_1,undefined8 param_2,longlong *param_3)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -5565,13 +5664,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802180a0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802180a0", "FUN_1802180a0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint32_t * param_3{};
     [[maybe_unused]] std::uint64_t param_4{};
     [[maybe_unused]] std::uint32_t uVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     [[maybe_unused]] std::uint32_t uVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
     [[maybe_unused]] char cVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint32_t uVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
+    [[maybe_unused]] std::uint64_t * local_68{};
     [[maybe_unused]] std::uint32_t local_60{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180427620.
@@ -5580,12 +5687,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802180a0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: while (puVar4 = puVar8, cVar7 == '\0')
     // TODO: condition expression type not recovered: if (DAT_180427628 == 0x38e38e38e38e38e)
-    // TODO: call arguments not type-recovered for FUN_1802180a0: undefined8 param_1,undefined8 *param_2,undefined4 *param_3,undefined8 param_4
-    // TODO: call arguments not type-recovered for FUN_180201cf0: puVar4 + 4,param_3
-    // TODO: call arguments not type-recovered for FUN_180201cf0: param_3,puVar11 + 4
-    // TODO: call arguments not type-recovered for FUN_18022bb90: &DAT_180427620,&local_68,puVar8,param_4,puVar11,0
+    trace.call_arguments("FUN_180201cf0", puVar4 + 4, param_3);
+    trace.call_arguments("FUN_180201cf0", param_3, puVar11 + 4);
     trace.call_arguments("FUN_180013b80");
     trace.call_arguments("FUN_1802d8350", 0x48);
+    trace.call_arguments("FUN_18022bb90", &image::DAT_180427620, &local_68, puVar8, param_4, puVar11, 0);
     trace.call_target("FUN_180013b80", reinterpret_cast<const void*>(&image::FUN_180013b80));
     trace.call_target("FUN_180201cf0", reinterpret_cast<const void*>(&image::FUN_180201cf0));
     trace.call_target("FUN_18022bb90", reinterpret_cast<const void*>(&image::FUN_18022bb90));
@@ -5595,7 +5701,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802180a0() noexcept {
     // body sha256: 6113beb129709bdbf898b0e0eb6717c680fdb2b830f87f59e5ba7f19b3a13e22
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 *");
-        trace.statement("FUN_1802180a0(undefined8 param_1,undefined8 *param_2,undefined4 *param_3,undefined8 param_4)");
         {
             trace.statement("undefined4 uVar1;");
             trace.statement("undefined4 uVar2;");
@@ -5803,13 +5908,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218200() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180218200", "FUN_180218200");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint32_t * param_3{};
     [[maybe_unused]] std::uint64_t param_4{};
     [[maybe_unused]] std::uint32_t uVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     [[maybe_unused]] std::uint32_t uVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
     [[maybe_unused]] char cVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint32_t uVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
+    [[maybe_unused]] std::uint64_t * local_68{};
     [[maybe_unused]] std::uint32_t local_60{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1805b88a8.
@@ -5818,12 +5931,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218200() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: while (puVar4 = puVar8, cVar7 == '\0')
     // TODO: condition expression type not recovered: if (DAT_1805b88b0 == 0x38e38e38e38e38e)
-    // TODO: call arguments not type-recovered for FUN_180218200: undefined8 param_1,undefined8 *param_2,undefined4 *param_3,undefined8 param_4
-    // TODO: call arguments not type-recovered for FUN_180201cf0: puVar4 + 4,param_3
-    // TODO: call arguments not type-recovered for FUN_180201cf0: param_3,puVar11 + 4
-    // TODO: call arguments not type-recovered for FUN_18022bb90: &DAT_1805b88a8,&local_68,puVar8,param_4,puVar11,0
+    trace.call_arguments("FUN_180201cf0", puVar4 + 4, param_3);
+    trace.call_arguments("FUN_180201cf0", param_3, puVar11 + 4);
     trace.call_arguments("FUN_180013b80");
     trace.call_arguments("FUN_1802d8350", 0x48);
+    trace.call_arguments("FUN_18022bb90", &image::DAT_1805b88a8, &local_68, puVar8, param_4, puVar11, 0);
     trace.call_target("FUN_180013b80", reinterpret_cast<const void*>(&image::FUN_180013b80));
     trace.call_target("FUN_180201cf0", reinterpret_cast<const void*>(&image::FUN_180201cf0));
     trace.call_target("FUN_18022bb90", reinterpret_cast<const void*>(&image::FUN_18022bb90));
@@ -5833,7 +5945,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218200() noexcept {
     // body sha256: 1830b5b16380deaa88a91eadb5b0b1161f4ce055f3c1b57f19e62bfd963b4eb3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 *");
-        trace.statement("FUN_180218200(undefined8 param_1,undefined8 *param_2,undefined4 *param_3,undefined8 param_4)");
         {
             trace.statement("undefined4 uVar1;");
             trace.statement("undefined4 uVar2;");
@@ -6061,11 +6172,16 @@ TODO: resolve the indirect call in body 47: (*pcVar2)();.)F180218360U",
 const sf::reconstructed::FunctionTranslation& Function_0x180218360() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180218360", "FUN_180218360");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] void * pvVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] void * pvVar4{};
     [[maybe_unused]] std::uint64_t uVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
+    [[maybe_unused]] std::uint8_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint64_t uStack_70{};
     [[maybe_unused]] std::uint8_t auStack_68[80]{};
@@ -6078,15 +6194,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218360() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: while( true )
-    // TODO: call arguments not type-recovered for memset: pvVar1,0,param_2 - uVar7
     // TODO: call arguments not type-recovered for memmove: pvVar4,pvVar1,lVar3 - (longlong)pvVar1
-    // TODO: call arguments not type-recovered for FUN_18022c3f0: param_1,pvVar4,param_2,uVar9
-    // TODO: call arguments not type-recovered for memset: pvVar4,0,param_2 - uVar7
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_1802d8350", uVar5);
     trace.call_arguments("swi", 0x29);
     trace.call_arguments("FUN_1802d8350", uVar9);
     trace.call_arguments("FUN_180012fe0");
+    trace.call_arguments("memset", pvVar1, 0, param_2 - uVar7);
+    trace.call_arguments("FUN_18022c3f0", param_1, pvVar4, param_2, uVar9);
+    trace.call_arguments("memset", pvVar4, 0, param_2 - uVar7);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
     trace.call_target("FUN_18022c3f0", reinterpret_cast<const void*>(&image::FUN_18022c3f0));
@@ -6094,7 +6210,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218360() noexcept {
     trace.data_ref("UNK_1802184ca", static_cast<const void*>(&image::UNK_1802184ca));
     // body sha256: 3340442dfeb347bd192a4db04be2dcd9af8b2eba60470265b5f01af116587124
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180218360(longlong *param_1,ulonglong param_2)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("code *pcVar2;");
@@ -6298,25 +6413,34 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802184d0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802184d0", "FUN_1802184d0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint32_t * param_3{};
     [[maybe_unused]] std::uint64_t param_4{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     [[maybe_unused]] std::uint32_t uVar3{};
     [[maybe_unused]] std::uint32_t uVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
     [[maybe_unused]] char cVar7{};
+    [[maybe_unused]] std::int64_t * plVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
+    [[maybe_unused]] std::uint64_t * puVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
     [[maybe_unused]] std::uint32_t uVar12{};
+    [[maybe_unused]] std::int64_t * plVar13{};
+    [[maybe_unused]] std::uint64_t * local_58{};
     [[maybe_unused]] std::uint32_t local_50{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: while (puVar5 = puVar10, cVar7 == '\0')
-    // TODO: condition expression type not recovered: if (param_1[1] == 0x38e38e38e38e38e)
-    // TODO: call arguments not type-recovered for FUN_1802184d0: longlong *param_1,undefined8 *param_2,undefined4 *param_3,undefined8 param_4
-    // TODO: call arguments not type-recovered for FUN_180201cf0: puVar5 + 4,param_3
-    // TODO: call arguments not type-recovered for FUN_180201cf0: param_3,puVar11 + 4
-    // TODO: call arguments not type-recovered for FUN_18022bb90: param_1,&local_58,plVar8,param_4,plVar13,0
+    trace.call_arguments("FUN_180201cf0", puVar5 + 4, param_3);
+    trace.call_arguments("FUN_180201cf0", param_3, puVar11 + 4);
     trace.call_arguments("FUN_180013b80");
     trace.call_arguments("FUN_1802d8350", 0x48);
+    trace.call_arguments("FUN_18022bb90", param_1, &local_58, plVar8, param_4, plVar13, 0);
     trace.call_target("FUN_180013b80", reinterpret_cast<const void*>(&image::FUN_180013b80));
     trace.call_target("FUN_180201cf0", reinterpret_cast<const void*>(&image::FUN_180201cf0));
     trace.call_target("FUN_18022bb90", reinterpret_cast<const void*>(&image::FUN_18022bb90));
@@ -6324,7 +6448,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802184d0() noexcept {
     // body sha256: c77fac67812aabbef809d584be3717e62ec5eb350ec5d720a021c91b5ab9a8fe
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 *");
-        trace.statement("FUN_1802184d0(longlong *param_1,undefined8 *param_2,undefined4 *param_3,undefined8 param_4)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("undefined4 uVar2;");
@@ -6363,7 +6486,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802184d0() noexcept {
                 trace.statement("*param_2 = puVar11;");
                 trace.statement("*(undefined1 *)(param_2 + 1) = 0;");
             } else {
-            if (trace.condition("if (param_1[1] == 0x38e38e38e38e38e)")) {
+            if (trace.checked_condition("if (param_1[1] == 0x38e38e38e38e38e)", [&]() -> bool { return static_cast<bool>(param_1[1] == 0x38e38e38e38e38e); })) {
                 trace.statement("FUN_180013b80();");
             }
             trace.statement("plVar13 = param_1;");
@@ -6460,19 +6583,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218640() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_180218640: param_1,param_2,param_3[2]
-    // TODO: call arguments not type-recovered for FUN_18023e160: param_3 + 8
-    // TODO: call arguments not type-recovered for FUN_18020e450: param_3 + 4
-    // TODO: call arguments not type-recovered for free: param_3
+    trace.call_arguments("FUN_180218640", param_1, param_2, param_3[2]);
+    trace.call_arguments("FUN_18023e160", param_3 + 8);
+    trace.call_arguments("FUN_18020e450", param_3 + 4);
+    trace.call_arguments("free", param_3);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     trace.call_target("FUN_18023e160", reinterpret_cast<const void*>(&image::FUN_18023e160));
     // body sha256: 513901bda1d886e8d41d4d82f26b896a5bde627a5b5388d8c30aaf4d8946ae47
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180218640(undefined8 param_1,undefined8 param_2,longlong *param_3)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -6622,13 +6746,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802186b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802186b0", "FUN_1802186b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint32_t * param_3{};
     [[maybe_unused]] std::uint64_t param_4{};
     [[maybe_unused]] std::uint32_t uVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     [[maybe_unused]] std::uint32_t uVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
     [[maybe_unused]] char cVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
     [[maybe_unused]] std::uint32_t uVar10{};
+    [[maybe_unused]] std::uint64_t * puVar11{};
+    [[maybe_unused]] std::uint64_t * local_68{};
     [[maybe_unused]] std::uint32_t local_60{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1805c7c10.
@@ -6637,12 +6769,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802186b0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: while (puVar4 = puVar8, cVar7 == '\0')
     // TODO: condition expression type not recovered: if (DAT_1805c7c18 == 0x2e8ba2e8ba2e8ba)
-    // TODO: call arguments not type-recovered for FUN_1802186b0: undefined8 param_1,undefined8 *param_2,undefined4 *param_3,undefined8 param_4
-    // TODO: call arguments not type-recovered for FUN_180201cf0: puVar4 + 4,param_3
-    // TODO: call arguments not type-recovered for FUN_180201cf0: param_3,puVar11 + 4
-    // TODO: call arguments not type-recovered for FUN_18022bb90: &DAT_1805c7c10,&local_68,puVar8,param_4,puVar11,0
+    trace.call_arguments("FUN_180201cf0", puVar4 + 4, param_3);
+    trace.call_arguments("FUN_180201cf0", param_3, puVar11 + 4);
     trace.call_arguments("FUN_180013b80");
     trace.call_arguments("FUN_1802d8350", 0x58);
+    trace.call_arguments("FUN_18022bb90", &image::DAT_1805c7c10, &local_68, puVar8, param_4, puVar11, 0);
     trace.call_target("FUN_180013b80", reinterpret_cast<const void*>(&image::FUN_180013b80));
     trace.call_target("FUN_180201cf0", reinterpret_cast<const void*>(&image::FUN_180201cf0));
     trace.call_target("FUN_18022bb90", reinterpret_cast<const void*>(&image::FUN_18022bb90));
@@ -6652,7 +6783,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802186b0() noexcept {
     // body sha256: 0f476bdbec2299f7152c98bacbe4461124280d132efdb2638d6aea6b887c608d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 *");
-        trace.statement("FUN_1802186b0(undefined8 param_1,undefined8 *param_2,undefined4 *param_3,undefined8 param_4)");
         {
             trace.statement("undefined4 uVar1;");
             trace.statement("undefined4 uVar2;");
@@ -6905,13 +7035,22 @@ TODO: resolve the indirect call in body 52: puVar6 = (undefined8 *)(*pcVar5)();.
 const sf::reconstructed::FunctionTranslation& Function_0x180218810() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180218810", "FUN_180218810");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::uint8_t * param_3{};
     [[maybe_unused]] std::uint32_t param_4{};
+    [[maybe_unused]] float * pfVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] void* * pcVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint64_t * puVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
+    [[maybe_unused]] std::uint64_t * puVar12{};
     [[maybe_unused]] float fVar13{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180218a62.
@@ -6921,28 +7060,25 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218810() noexcept {
     // TODO: resolve the indirect call in body 52: puVar6 = (undefined8 *)(*pcVar5)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (puVar6 != puVar12)
     // TODO: condition expression type not recovered: while( true )
     // TODO: condition expression type not recovered: if (*(longlong *)param_3 == lVar2)
     // TODO: condition expression type not recovered: if (*(longlong *)(param_1 + 4) == 0xaaaaaaaaaaaaaaa)
     // TODO: condition expression type not recovered: if (*param_1 < (float)(*(longlong *)(param_1 + 4) + 1) / (float)uVar3)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar13) && (fVar13 = fVar13 - DAT_180381300, fVar13 < DAT_180381300))
-    // TODO: condition expression type not recovered: if (puVar9 != puVar12)
+    // TODO: condition expression type not recovered: if ((uVar3 < uVar8) && ((0x1ff < uVar3 || (uVar11 = uVar3 * 8, uVar3 * 8 < uVar8))))
     // TODO: condition expression type not recovered: while (puVar6[2] != lVar7)
     // TODO: condition expression type not recovered: if (puVar4 == *(undefined8 **)pfVar1)
-    // TODO: condition expression type not recovered: if (puVar4 == puVar12)
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_1802d8350: 0x18,puVar9,lVar7,param_4,pfVar1,0
-    // TODO: call arguments not type-recovered for ceilf: (float)(*(longlong *)(param_1 + 4) + 1) / *param_1
-    // TODO: call arguments not type-recovered for FUN_1802386b0: param_1,uVar11
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802d8350", 0x18, puVar9, lVar7, param_4, pfVar1, 0);
+    trace.call_arguments("ceilf", (float)(*(longlong *)(param_1 + 4) + 1) / *param_1);
+    trace.call_arguments("FUN_1802386b0", param_1, uVar11);
     trace.call_target("FUN_1802386b0", reinterpret_cast<const void*>(&image::FUN_1802386b0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     trace.data_ref("DAT_180381300", static_cast<const void*>(&image::DAT_180381300));
     trace.string_literal("unordered_map/set too long");
     // body sha256: 37633332e5e882e91e8309f6f74c1e6a4eb98573cf2ce07cb442d6e2bd32e6ce
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_180218810(float *param_1,undefined8 *param_2,byte *param_3,undefined4 param_4)");
         {
             trace.statement("float *pfVar1;");
             trace.statement("longlong lVar2;");
@@ -6967,7 +7103,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218810() noexcept {
             trace.statement("puVar6 = *(undefined8 **)(lVar7 + 8 + (longlong)puVar9 * 0x10);");
             trace.statement("pfVar1 = param_1 + 2;");
             trace.statement("puVar12 = *(undefined8 **)pfVar1;");
-            if (trace.condition("if (puVar6 != puVar12)")) {
+            if (trace.checked_condition("if (puVar6 != puVar12)", [&]() -> bool { return static_cast<bool>(puVar6 != puVar12); })) {
                 trace.statement("puVar9 = *(undefined8 **)(lVar7 + (longlong)puVar9 * 0x10);");
                 trace.statement("lVar2 = puVar6[2];");
                 trace.statement("puVar12 = puVar6;");
@@ -6997,21 +7133,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218810() noexcept {
                             trace.statement("uVar8 = (longlong)fVar13 + lVar7;");
                         }
                         trace.statement("uVar11 = uVar3;");
-                        if (trace.checked_condition("if ((uVar3 < uVar8) && ((0x1ff < uVar3 || (uVar11 = uVar3 * 8, uVar3 * 8 < uVar8))))", [&]() -> bool { return static_cast<bool>((uVar3 < uVar8) && ((0x1ff < uVar3 || (uVar11 = uVar3 * 8, uVar3 * 8 < uVar8)))); })) {
+                        if (trace.condition("if ((uVar3 < uVar8) && ((0x1ff < uVar3 || (uVar11 = uVar3 * 8, uVar3 * 8 < uVar8))))")) {
                             trace.statement("uVar11 = uVar8;");
                         }
                         trace.statement("FUN_1802386b0(param_1,uVar11);");
                         trace.statement("puVar9 = *(undefined8 **)");
                         trace.statement("(*(longlong *)(param_1 + 6) + 8 + (uVar10 & *(ulonglong *)(param_1 + 0xc)) * 0x10);");
                         trace.statement("puVar12 = *(undefined8 **)pfVar1;");
-                        if (trace.condition("if (puVar9 != puVar12)")) {
+                        if (trace.checked_condition("if (puVar9 != puVar12)", [&]() -> bool { return static_cast<bool>(puVar9 != puVar12); })) {
                             trace.statement("lVar7 = puVar9[2];");
                             trace.statement("puVar12 = puVar9;");
                             while (trace.loop_condition("while (puVar6[2] != lVar7)")) {
                                 if (trace.condition("if (puVar12 == *(undefined8 **) (*(longlong *)(param_1 + 6) + (uVar10 & *(ulonglong *)(param_1 + 0xc)) * 0x10)) goto LAB_180218a62; puVar12 = (undefined8 *)puVar12[1]; lVar7 = puVar12[2]; } puVar12 = (undefined8 *)*puVar12; } } LAB_180218a62: puVar9 = (undefined8 *)puVar12[1]; *(longlong *)(param_1 + 4) = *(longlong *)(param_1 + 4) + 1; *puVar6 = puVar12; puVar6[1] = puVar9; *puVar9 = puVar6; puVar12[1] = puVar6; lVar7 = *(longlong *)(param_1 + 6); uVar10 = uVar10 & *(ulonglong *)(param_1 + 0xc); puVar4 = *(undefined8 **)(lVar7 + uVar10 * 0x10); if (puVar4 == *(undefined8 **)pfVar1)")) {
                                     trace.statement("*(undefined8 **)(lVar7 + uVar10 * 0x10) = puVar6;");
                                 } else {
-                                if (trace.condition("if (puVar4 == puVar12)")) {
+                                if (trace.checked_condition("if (puVar4 == puVar12)", [&]() -> bool { return static_cast<bool>(puVar4 == puVar12); })) {
                                     trace.statement("*(undefined8 **)(lVar7 + uVar10 * 0x10) = puVar6;");
                                     trace.statement("goto LAB_180218ab8;");
                                 }
@@ -7079,6 +7215,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218ad0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 0x98)
     trace.call_arguments("FUN_18020e450", param_1 + 0x58);
     trace.call_arguments("FUN_18021d530", param_1 + 0x38);
     trace.call_arguments("FUN_18020d5c0", param_1 + 0x20);
@@ -7088,9 +7225,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218ad0() noexcept {
     trace.call_target("FUN_18021d530", reinterpret_cast<const void*>(&image::FUN_18021d530));
     // body sha256: 0f14f5120ee05784a1432173d2f1f0840aeb87b2ad6526d755a251a5b893f81b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180218ad0(longlong param_1,longlong param_2)");
         {
-            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 0x98)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 0x98); }); loop.next(); ) {
+            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 0x98)"); loop.next(); ) {
                 trace.statement("FUN_18020e450(param_1 + 0x58);");
                 trace.statement("FUN_18021d530(param_1 + 0x38);");
                 trace.statement("FUN_18020d5c0(param_1 + 0x20);");
@@ -7222,10 +7358,15 @@ TODO: resolve the indirect call in body 44: lVar6 = (*pcVar1)();.)F180218b50U",
 const sf::reconstructed::FunctionTranslation& Function_0x180218b50() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180218b50", "FUN_180218b50");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] std::int64_t * param_4{};
+    [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint8_t * puVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint8_t auStack_68[8]{};
     [[maybe_unused]] std::uint8_t auStack_60[72]{};
@@ -7250,7 +7391,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218b50() noexcept {
     trace.data_ref("DAT_1803e9b20", static_cast<const void*>(&image::DAT_1803e9b20));
     // body sha256: 96509ff9219c63d21aa3b214341ca6f069c736171b11b30596f2ab0b2739000f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180218b50(ulonglong *param_1,ulonglong param_2,undefined8 param_3,longlong *param_4)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("longlong lVar2;");
@@ -7455,13 +7595,20 @@ TODO: resolve the indirect call in body 76: _Memory = (void *)(*pcVar6)(5);.)F18
 const sf::reconstructed::FunctionTranslation& Function_0x180218c90() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180218c90", "FUN_180218c90");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
     [[maybe_unused]] std::uint64_t uVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] void * pvVar5{};
+    [[maybe_unused]] void* * pcVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
+    [[maybe_unused]] void * _Memory{};
     [[maybe_unused]] std::uint64_t uVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
+    [[maybe_unused]] std::uint8_t * puVar10{};
+    [[maybe_unused]] std::uint8_t * puVar11{};
     [[maybe_unused]] std::uint64_t uStack_70{};
     [[maybe_unused]] std::uint8_t auStack_68[8]{};
     [[maybe_unused]] std::uint8_t auStack_60[56]{};
@@ -7473,14 +7620,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218c90() noexcept {
     // TODO: resolve the indirect call in body 76: _Memory = (void *)(*pcVar6)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*param_2 < 0x800000000000000)
-    // TODO: call arguments not type-recovered for FUN_180229020: uVar9,uVar3,uVar8,param_1
-    // TODO: call arguments not type-recovered for free: _Memory
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("FUN_1802d8350", uVar8 + 0x27);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("FUN_180229020", uVar9, uVar3, uVar8, param_1);
     trace.call_arguments("FUN_18020c270", uVar9 + 8);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_arguments("FUN_180012fe0");
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_18020c270", reinterpret_cast<const void*>(&image::FUN_18020c270));
@@ -7488,7 +7634,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218c90() noexcept {
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     // body sha256: 884ea9ea07720f3822adb6fed501ff194b7d1323187e8d70d46017813539de0a
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180218c90(ulonglong *param_1,ulonglong *param_2)");
         {
             trace.statement("ulonglong uVar1;");
             trace.statement("ulonglong uVar2;");
@@ -7509,7 +7654,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218c90() noexcept {
             trace.statement("puVar11 = auStack_68;");
             trace.statement("uVar1 = param_1[1];");
             trace.statement("uVar2 = *param_1;");
-            if (trace.condition("if (*param_2 < 0x800000000000000)")) {
+            if (trace.checked_condition("if (*param_2 < 0x800000000000000)", [&]() -> bool { return static_cast<bool>(*param_2 < 0x800000000000000); })) {
                 trace.statement("uVar8 = *param_2 * 0x20;");
                 if (trace.checked_condition("if (uVar8 == 0)", [&]() -> bool { return static_cast<bool>(uVar8 == 0); })) {
                     trace.statement("uVar8 = 0;");
@@ -7768,12 +7913,24 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218df0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180218df0", "FUN_180218df0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::uint32_t * param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] void* * pcVar1{};
+    [[maybe_unused]] std::uint32_t * puVar2{};
+    [[maybe_unused]] std::uint32_t * puVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint32_t * puVar5{};
+    [[maybe_unused]] std::uint32_t * puVar6{};
+    [[maybe_unused]] std::uint8_t * puVar7{};
     [[maybe_unused]] std::int64_t lVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
+    [[maybe_unused]] std::int64_t * plVar10{};
     [[maybe_unused]] std::uint8_t auStack_88[8]{};
     [[maybe_unused]] std::uint8_t auStack_80[24]{};
+    [[maybe_unused]] std::uint32_t * local_68{};
+    [[maybe_unused]] std::uint32_t * local_48{};
+    [[maybe_unused]] std::uint32_t * puStack_40{};
+    [[maybe_unused]] std::uint64_t * local_38{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcc38.
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcc40.
@@ -7785,22 +7942,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218df0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803fcc38 != (undefined4 *)0x0)
     // TODO: condition expression type not recovered: for (; local_68 = puVar5, puVar5 != puVar3; puVar5 = puVar5 + 8)
     // TODO: condition expression type not recovered: if (0xfff < (DAT_1803fcc48 - (longlong)DAT_1803fcc38 & 0xffffffffffffffe0U))
-    // TODO: condition expression type not recovered: if ((undefined4 *)0x1f < puVar5)
     // TODO: condition expression type not recovered: if (DAT_1803fcc38 != DAT_1803fcc40)
     // TODO: condition expression type not recovered: if ((longlong *)(puVar3 + 2) != plVar10)
     // TODO: condition expression type not recovered: for (lVar8 = param_3 - uVar4; puVar3 = puStack_40, lVar8 != 0; lVar8 = lVar8 + -1)
     // TODO: condition expression type not recovered: if ((longlong *)(puVar6 + 2) != plVar10)
     // TODO: condition expression type not recovered: for (; puVar6 = DAT_1803fcc40, puVar5 != DAT_1803fcc40; puVar5 = puVar5 + 8)
-    // TODO: call arguments not type-recovered for FUN_18020c270: puVar5 + 2
-    // TODO: call arguments not type-recovered for free: puVar3
-    // TODO: call arguments not type-recovered for FUN_180233130: puVar7 + 0x28,param_2
-    // TODO: call arguments not type-recovered for FUN_180219100: puVar3 + 2,*plVar10,(plVar10[1] - *plVar10 >> 4) * -0x3333333333333333
-    // TODO: call arguments not type-recovered for FUN_180233130: &local_48,param_2
-    // TODO: call arguments not type-recovered for FUN_180219100: puVar6 + 2,*plVar10,(plVar10[1] - *plVar10 >> 4) * -0x3333333333333333
-    // TODO: call arguments not type-recovered for FUN_18020c270: puVar5 + 2
     trace.call_arguments("FUN_18020cc40");
+    trace.call_arguments("FUN_18020c270", puVar5 + 2);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", puVar3);
     trace.call_arguments("FUN_180238ad0", &image::DAT_1803fcc38, uVar9);
+    trace.call_arguments("FUN_180233130", puVar7 + 0x28, param_2);
+    trace.call_arguments("FUN_180219100", puVar3 + 2, *plVar10, (plVar10[1] - *plVar10 >> 4) * -0x3333333333333333);
+    trace.call_arguments("FUN_180233130", &local_48, param_2);
+    trace.call_arguments("FUN_180219100", puVar6 + 2, *plVar10, (plVar10[1] - *plVar10 >> 4) * -0x3333333333333333);
+    trace.call_arguments("FUN_18020c270", puVar5 + 2);
     trace.call_target("FUN_18020c270", reinterpret_cast<const void*>(&image::FUN_18020c270));
     trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
     trace.call_target("FUN_180219100", reinterpret_cast<const void*>(&image::FUN_180219100));
@@ -7811,7 +7967,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218df0() noexcept {
     trace.data_ref("DAT_1803fcc48", static_cast<const void*>(&image::DAT_1803fcc48));
     // body sha256: 4df77a3c13ec5cb2586b077b09c3eed86b32f7d7a1ad2cb54b7ae6d68741c66f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180218df0(undefined8 param_1,undefined4 *param_2,ulonglong param_3)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("undefined4 *puVar2;");
@@ -7851,7 +8006,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180218df0() noexcept {
                         trace.statement("puVar3 = *(undefined4 **)(DAT_1803fcc38 + -2);");
                         trace.statement("puVar5 = (undefined4 *)((longlong)DAT_1803fcc38 + (-8 - (longlong)puVar3));");
                         trace.statement("puVar7 = auStack_88;");
-                        if (trace.condition("if ((undefined4 *)0x1f < puVar5)")) {
+                        if (trace.checked_condition("if ((undefined4 *)0x1f < puVar5)", [&]() -> bool { return static_cast<bool>((undefined4 *)0x1f < puVar5); })) {
                             trace.statement("pcVar1 = (code *)swi(0x29);");
                             trace.statement("(*pcVar1)(5);");
                             trace.statement("puVar3 = puVar5;");
@@ -8129,43 +8284,51 @@ TODO: resolve the indirect call in body 111: (*pcVar2)();.)F180219100U",
 const sf::reconstructed::FunctionTranslation& Function_0x180219100() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180219100", "FUN_180219100");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] void * pvVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
     [[maybe_unused]] std::int64_t lVar4{};
     [[maybe_unused]] std::uint64_t uVar5{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
+    [[maybe_unused]] std::uint8_t * puVar9{};
+    [[maybe_unused]] std::uint64_t * puVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
     [[maybe_unused]] std::uint8_t auStack_68[8]{};
     [[maybe_unused]] std::uint8_t auStack_60[24]{};
+    [[maybe_unused]] std::uint64_t * local_48{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: resolve the indirect call in body 110: pcVar2 = (code *)swi(0x29);.
     // TODO: resolve the indirect call in body 111: (*pcVar2)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (puVar10 != puVar6)
-    // TODO: condition expression type not recovered: if (puVar10 != param_2)
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[3])
     // TODO: condition expression type not recovered: if (puVar10 + 4 != plVar7)
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[7])
-    // TODO: condition expression type not recovered: if (puVar10 != param_2)
+    // TODO: condition expression type not recovered: for (; param_3 != 0; param_3 = param_3 - 1)
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[3])
     // TODO: condition expression type not recovered: if (puVar10 + 4 != plVar7)
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[7])
-    // TODO: condition expression type not recovered: for (puVar8 = puVar6; puVar8 != puVar10; puVar8 = puVar8 + 10)
-    // TODO: condition expression type not recovered: if (puVar10 != (undefined8 *)0x0)
+    // TODO: condition expression type not recovered: if ((uVar5 < uVar3 || uVar5 - uVar3 == 0) && (uVar11 = uVar5 + (uVar5 >> 1), uVar11 < param_3))
     // TODO: condition expression type not recovered: for (; local_48 = puVar10, puVar10 != puVar6; puVar10 = puVar10 + 10)
-    // TODO: call arguments not type-recovered for FUN_180212700: puVar10,puVar6,param_2[2]
-    // TODO: call arguments not type-recovered for FUN_180212700: puVar10 + 4,plVar7,param_2[6]
-    // TODO: call arguments not type-recovered for FUN_180229320: param_2,param_3 + lVar4 * 0x3333333333333333,puVar6,param_1
-    // TODO: call arguments not type-recovered for FUN_180212700: puVar10,puVar8,param_2[2]
-    // TODO: call arguments not type-recovered for FUN_180212700: puVar10 + 4,plVar7,param_2[6]
-    // TODO: call arguments not type-recovered for FUN_18020e450: puVar8 + 4
-    // TODO: call arguments not type-recovered for FUN_18020e450: puVar8
-    // TODO: call arguments not type-recovered for FUN_18020e450: puVar10 + 4
-    // TODO: call arguments not type-recovered for FUN_18020e450: puVar10
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for FUN_180238b60: param_1,uVar11
-    // TODO: call arguments not type-recovered for FUN_180229320: param_2,param_3,lVar4,param_1
+    trace.call_arguments("FUN_180212700", puVar10, puVar6, param_2[2]);
+    trace.call_arguments("FUN_180212700", puVar10 + 4, plVar7, param_2[6]);
+    trace.call_arguments("FUN_180229320", param_2, param_3 + lVar4 * 0x3333333333333333, puVar6, param_1);
+    trace.call_arguments("FUN_180212700", puVar10, puVar8, param_2[2]);
+    trace.call_arguments("FUN_180212700", puVar10 + 4, plVar7, param_2[6]);
+    trace.call_arguments("FUN_18020e450", puVar8 + 4);
+    trace.call_arguments("FUN_18020e450", puVar8);
+    trace.call_arguments("FUN_18020e450", puVar10 + 4);
+    trace.call_arguments("FUN_18020e450", puVar10);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("FUN_180238b60", param_1, uVar11);
+    trace.call_arguments("FUN_180229320", param_2, param_3, lVar4, param_1);
     trace.call_arguments("FUN_18020cc40");
     trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
@@ -8174,7 +8337,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219100() noexcept {
     trace.call_target("FUN_180238b60", reinterpret_cast<const void*>(&image::FUN_180238b60));
     // body sha256: 0634ef3b1f40681161378eae685d2affc39a7b4dc5c2cd0e7e38effb1106a61a
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180219100(longlong *param_1,undefined8 *param_2,ulonglong param_3)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("code *pcVar2;");
@@ -8198,9 +8360,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219100() noexcept {
                 trace.statement("puVar6 = (undefined8 *)param_1[1];");
                 trace.statement("lVar4 = (longlong)puVar6 - (longlong)puVar10 >> 4;");
                 if (trace.checked_condition("if ((ulonglong)(lVar4 * -0x3333333333333333) < param_3)", [&]() -> bool { return static_cast<bool>((ulonglong)(lVar4 * -0x3333333333333333) < param_3); })) {
-                    if (trace.condition("if (puVar10 != puVar6)")) {
+                    if (trace.checked_condition("if (puVar10 != puVar6)", [&]() -> bool { return static_cast<bool>(puVar10 != puVar6); })) {
                         do {
-                            if (trace.condition("if (puVar10 != param_2)")) {
+                            if (trace.checked_condition("if (puVar10 != param_2)", [&]() -> bool { return static_cast<bool>(puVar10 != param_2); })) {
                                 trace.statement("puVar6 = param_2;");
                                 if (trace.condition("if (0xf < (ulonglong)param_2[3])")) {
                                     trace.statement("puVar6 = (undefined8 *)*param_2;");
@@ -8226,8 +8388,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219100() noexcept {
                     trace.statement("return;");
                 }
                 trace.statement("puVar6 = puVar10 + param_3 * 10;");
-                for (auto loop = trace.checked_loop("for (; param_3 != 0; param_3 = param_3 - 1)", [&]() -> bool { return static_cast<bool>(param_3 = param_3 - 1); }); loop.next(); ) {
-                    if (trace.condition("if (puVar10 != param_2)")) {
+                for (auto loop = trace.loop("for (; param_3 != 0; param_3 = param_3 - 1)"); loop.next(); ) {
+                    if (trace.checked_condition("if (puVar10 != param_2)", [&]() -> bool { return static_cast<bool>(puVar10 != param_2); })) {
                         trace.statement("puVar8 = param_2;");
                         if (trace.condition("if (0xf < (ulonglong)param_2[3])")) {
                             trace.statement("puVar8 = (undefined8 *)*param_2;");
@@ -8247,7 +8409,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219100() noexcept {
                     trace.statement("param_2 = param_2 + 10;");
                 }
                 trace.statement("puVar10 = (undefined8 *)param_1[1];");
-                for (auto loop = trace.loop("for (puVar8 = puVar6; puVar8 != puVar10; puVar8 = puVar8 + 10)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (puVar8 = puVar6; puVar8 != puVar10; puVar8 = puVar8 + 10)", [&]() -> bool { return static_cast<bool>(puVar8 != puVar10); }); loop.next(); ) {
                     trace.statement("local_48 = puVar8;");
                     trace.statement("FUN_18020e450(puVar8 + 4);");
                     trace.statement("FUN_18020e450(puVar8);");
@@ -8258,10 +8420,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219100() noexcept {
             if (trace.checked_condition("if (param_3 < 0x333333333333334)", [&]() -> bool { return static_cast<bool>(param_3 < 0x333333333333334); })) {
                 trace.statement("uVar3 = 0x333333333333333 - (uVar5 >> 1);");
                 trace.statement("uVar11 = 0x333333333333333;");
-                if (trace.checked_condition("if ((uVar5 < uVar3 || uVar5 - uVar3 == 0) && (uVar11 = uVar5 + (uVar5 >> 1), uVar11 < param_3))", [&]() -> bool { return static_cast<bool>((uVar5 < uVar3 || uVar5 - uVar3 == 0) && (uVar11 = uVar5 + (uVar5 >> 1), uVar11 < param_3)); })) {
+                if (trace.condition("if ((uVar5 < uVar3 || uVar5 - uVar3 == 0) && (uVar11 = uVar5 + (uVar5 >> 1), uVar11 < param_3))")) {
                     trace.statement("uVar11 = param_3;");
                 }
-                if (trace.condition("if (puVar10 != (undefined8 *)0x0)")) {
+                if (trace.checked_condition("if (puVar10 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(puVar10 != (undefined8 *)0x0); })) {
                     trace.statement("puVar6 = (undefined8 *)param_1[1];");
                     for (auto loop = trace.loop("for (; local_48 = puVar10, puVar10 != puVar6; puVar10 = puVar10 + 10)"); loop.next(); ) {
                         trace.statement("FUN_18020e450(puVar10 + 4);");
@@ -8411,10 +8573,15 @@ TODO: resolve the indirect call in body 44: lVar6 = (*pcVar1)();.)F180219390U",
 const sf::reconstructed::FunctionTranslation& Function_0x180219390() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180219390", "FUN_180219390");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] std::int64_t * param_4{};
+    [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint8_t * puVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint8_t auStack_68[8]{};
     [[maybe_unused]] std::uint8_t auStack_60[72]{};
@@ -8437,7 +8604,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219390() noexcept {
     trace.data_ref("DAT_1803e9b08", static_cast<const void*>(&image::DAT_1803e9b08));
     // body sha256: 6be56b6f213b6c26fd112482fcd8da5a65fbd3f72e8141f89d845cca66ce2d13
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180219390(ulonglong *param_1,ulonglong param_2,undefined8 param_3,longlong *param_4)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("longlong lVar2;");
@@ -8567,6 +8733,11 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x1802194b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802194b0", "FUN_1802194b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
+    [[maybe_unused]] std::int64_t * plVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
+    [[maybe_unused]] std::int64_t * plVar3{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -8575,7 +8746,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802194b0() noexcept {
     // TODO: condition expression type not recovered: if ((*(char *)((longlong)plVar2 + 0x19) != '\0') || (*param_2 < (ulonglong)plVar2[4]))
     // body sha256: da7fda02626cef68a2f9cbf013a5be125b6a11f8cca3701a3ff8355d2a040ec5
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_1802194b0(longlong *param_1,ulonglong *param_2)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("longlong *plVar2;");
@@ -8658,20 +8828,22 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x180219500() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180219500", "FUN_180219500");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
+    [[maybe_unused]] std::int64_t * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_180222550: param_1,param_2,_Memory[2]
-    // TODO: call arguments not type-recovered for FUN_18020e450: _Memory + 5
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("FUN_180222550", param_1, param_2, _Memory[2]);
+    trace.call_arguments("FUN_18020e450", _Memory + 5);
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("free", (void *)*param_1);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     trace.call_target("FUN_180222550", reinterpret_cast<const void*>(&image::FUN_180222550));
     // body sha256: 2ef946ae846926ee637078c18bb8925e0b81b2613557d560f2a5f23003307b3d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180219500(longlong *param_1,undefined8 param_2)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -8745,17 +8917,18 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219580() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_180219580: param_1,param_2,param_3[2]
-    // TODO: call arguments not type-recovered for _eh_vector_destructor_iterator_: param_3 + 5,0x48,4,FUN_180021090
-    // TODO: call arguments not type-recovered for free: param_3
+    trace.call_arguments("FUN_180219580", param_1, param_2, param_3[2]);
+    trace.call_arguments("_eh_vector_destructor_iterator_", param_3 + 5, 0x48, 4, &image::FUN_180021090);
+    trace.call_arguments("free", param_3);
     trace.call_target("FUN_180021090", reinterpret_cast<const void*>(&image::FUN_180021090));
     // body sha256: 6008b65b220a3d66220169133f91950fd842ce1a99a5a2be551b668468d48783
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180219580(undefined8 param_1,undefined8 param_2,longlong *param_3)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -8969,15 +9142,28 @@ TODO: resolve the indirect call in body 51: plVar4 = (longlong *)(*pcVar2)();.)F
 const sf::reconstructed::FunctionTranslation& Function_0x180219600() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180219600", "FUN_180219600");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float * param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::uint64_t * param_3{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
     [[maybe_unused]] std::size_t _Size{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int32_t iVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint64_t * _Buf1{};
+    [[maybe_unused]] std::uint64_t * puVar9{};
+    [[maybe_unused]] std::uint64_t * puVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
     [[maybe_unused]] std::uint64_t uVar12{};
     [[maybe_unused]] float fVar13{};
+    [[maybe_unused]] std::uint64_t * local_58{};
     [[maybe_unused]] std::int64_t local_50{};
+    [[maybe_unused]] std::uint64_t * local_48{};
+    [[maybe_unused]] std::uint64_t * local_40{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021987f.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802198ce.
@@ -8988,26 +9174,24 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219600() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_3[3])
-    // TODO: condition expression type not recovered: if (param_3[2] != 0)
-    // TODO: condition expression type not recovered: if (*(longlong *)(param_1 + 4) == 0x1af286bca1af286)
     // TODO: condition expression type not recovered: if (*param_1 < (float)(*(longlong *)(param_1 + 4) + 1) / (float)uVar6)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar13) && (fVar13 = fVar13 - DAT_180381300, fVar13 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar6 < uVar8) && ((0x1ff < uVar6 || (uVar11 = uVar6 * 8, uVar6 * 8 < uVar8))))
     // TODO: condition expression type not recovered: if (puVar10 != *(undefined8 **)(param_1 + 2))
     // TODO: condition expression type not recovered: while( true )
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)local_58[5])
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)puVar5[5])
     // TODO: condition expression type not recovered: if (puVar10 == *(undefined8 **)(param_1 + 2))
-    // TODO: condition expression type not recovered: if (puVar10 == local_58)
-    // TODO: call arguments not type-recovered for FUN_180229bd0: param_1,&local_58,param_3,uVar12
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_18016d4c0: puVar9,param_3
-    // TODO: call arguments not type-recovered for FUN_18020d250: puVar5 + 7
     // TODO: call arguments not type-recovered for FUN_18001d080: puVar5 + 0xf,&DAT_18033e5ea,0
-    // TODO: call arguments not type-recovered for ceilf: (float)(*(longlong *)(param_1 + 4) + 1) / *param_1
-    // TODO: call arguments not type-recovered for FUN_180238d80: param_1,uVar11
-    // TODO: call arguments not type-recovered for memcmp: _Buf1,puVar10,_Size
+    trace.call_arguments("FUN_180229bd0", param_1, &local_58, param_3, uVar12);
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
     trace.call_arguments("FUN_1802d8350", 0x98);
+    trace.call_arguments("FUN_18016d4c0", puVar9, param_3);
+    trace.call_arguments("FUN_18020d250", puVar5 + 7);
+    trace.call_arguments("ceilf", (float)(*(longlong *)(param_1 + 4) + 1) / *param_1);
+    trace.call_arguments("FUN_180238d80", param_1, uVar11);
+    trace.call_arguments("memcmp", _Buf1, puVar10, _Size);
     trace.call_target("FUN_18001d080", reinterpret_cast<const void*>(&image::FUN_18001d080));
     trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
     trace.call_target("FUN_18020d250", reinterpret_cast<const void*>(&image::FUN_18020d250));
@@ -9019,7 +9203,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219600() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: 3cafbf26d34ceeea75bd97f877950578a8cf2b12c4e989a22e804d861f38f042
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_180219600(float *param_1,longlong *param_2,undefined8 *param_3)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("size_t _Size;");
@@ -9046,7 +9229,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219600() noexcept {
             }
             trace.statement("uVar12 = 0xcbf29ce484222325;");
             trace.statement("uVar6 = 0;");
-            if (trace.condition("if (param_3[2] != 0)")) {
+            if (trace.checked_condition("if (param_3[2] != 0)", [&]() -> bool { return static_cast<bool>(param_3[2] != 0); })) {
                 do {
                     trace.statement("uVar12 = (uVar12 ^ *(byte *)((longlong)puVar9 + uVar6)) * 0x100000001b3;");
                     trace.statement("uVar6 = uVar6 + 1;");
@@ -9058,7 +9241,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219600() noexcept {
                 trace.statement("*(undefined1 *)(param_2 + 1) = 0;");
                 trace.statement("return param_2;");
             }
-            if (trace.condition("if (*(longlong *)(param_1 + 4) == 0x1af286bca1af286)")) {
+            if (trace.checked_condition("if (*(longlong *)(param_1 + 4) == 0x1af286bca1af286)", [&]() -> bool { return static_cast<bool>(*(longlong *)(param_1 + 4) == 0x1af286bca1af286); })) {
                 trace.statement("std::_Xlength_error(\"unordered_map/set too long\");");
                 trace.statement("pcVar2 = (code *)swi(3);");
                 trace.statement("plVar4 = (longlong *)(*pcVar2)();");
@@ -9087,7 +9270,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219600() noexcept {
                     trace.statement("uVar8 = (longlong)fVar13 + lVar7;");
                 }
                 trace.statement("uVar11 = uVar6;");
-                if (trace.checked_condition("if ((uVar6 < uVar8) && ((0x1ff < uVar6 || (uVar11 = uVar6 * 8, uVar6 * 8 < uVar8))))", [&]() -> bool { return static_cast<bool>((uVar6 < uVar8) && ((0x1ff < uVar6 || (uVar11 = uVar6 * 8, uVar6 * 8 < uVar8)))); })) {
+                if (trace.condition("if ((uVar6 < uVar8) && ((0x1ff < uVar6 || (uVar11 = uVar6 * 8, uVar6 * 8 < uVar8))))")) {
                     trace.statement("uVar11 = uVar8;");
                 }
                 trace.statement("FUN_180238d80(param_1,uVar11);");
@@ -9111,7 +9294,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219600() noexcept {
                         if (trace.condition("if ((_Size == local_58[4]) && ((_Size == 0 || (iVar3 = memcmp(_Buf1,puVar10,_Size), iVar3 == 0)))) break; if (local_58 == puVar1) goto LAB_18021987f; local_58 = (undefined8 *)local_58[1]; } local_58 = (undefined8 *)*local_58; } } LAB_18021987f: puVar9 = (undefined8 *)local_58[1]; *(longlong *)(param_1 + 4) = *(longlong *)(param_1 + 4) + 1; *puVar5 = local_58; puVar5[1] = puVar9; *puVar9 = puVar5; local_58[1] = puVar5; lVar7 = *(longlong *)(param_1 + 6); uVar12 = *(ulonglong *)(param_1 + 0xc) & uVar12; puVar10 = *(undefined8 **)(lVar7 + uVar12 * 0x10); if (puVar10 == *(undefined8 **)(param_1 + 2))")) {
                             trace.statement("*(undefined8 **)(lVar7 + uVar12 * 0x10) = puVar5;");
                         } else {
-                        if (trace.condition("if (puVar10 == local_58)")) {
+                        if (trace.checked_condition("if (puVar10 == local_58)", [&]() -> bool { return static_cast<bool>(puVar10 == local_58); })) {
                             trace.statement("*(undefined8 **)(lVar7 + uVar12 * 0x10) = puVar5;");
                             trace.statement("goto LAB_1802198ce;");
                         }
@@ -9310,15 +9493,27 @@ TODO: resolve the indirect call in body 50: plVar4 = (longlong *)(*pcVar2)();.)F
 const sf::reconstructed::FunctionTranslation& Function_0x180219900() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180219900", "FUN_180219900");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float * param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::uint64_t * param_3{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
     [[maybe_unused]] std::size_t _Size{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int32_t iVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint64_t * _Buf1{};
+    [[maybe_unused]] std::uint64_t * puVar9{};
+    [[maybe_unused]] std::uint64_t * puVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
     [[maybe_unused]] std::uint64_t uVar12{};
     [[maybe_unused]] float fVar13{};
+    [[maybe_unused]] std::uint64_t * local_58{};
     [[maybe_unused]] std::int64_t local_50{};
+    [[maybe_unused]] std::uint64_t * local_48{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180219b4f.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180219b9e.
@@ -9328,24 +9523,22 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219900() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_3[3])
-    // TODO: condition expression type not recovered: if (param_3[2] != 0)
-    // TODO: condition expression type not recovered: if (*(longlong *)(param_1 + 4) == 0x492492492492492)
     // TODO: condition expression type not recovered: if (*param_1 < (float)(*(longlong *)(param_1 + 4) + 1) / (float)uVar6)
     // TODO: condition expression type not recovered: if ((DAT_180381300 <= fVar13) && (fVar13 = fVar13 - DAT_180381300, fVar13 < DAT_180381300))
+    // TODO: condition expression type not recovered: if ((uVar6 < uVar8) && ((0x1ff < uVar6 || (uVar11 = uVar6 * 8, uVar6 * 8 < uVar8))))
     // TODO: condition expression type not recovered: if (puVar10 != *(undefined8 **)(param_1 + 2))
     // TODO: condition expression type not recovered: while( true )
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)local_58[5])
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)puVar5[5])
     // TODO: condition expression type not recovered: if (puVar10 == *(undefined8 **)(param_1 + 2))
-    // TODO: condition expression type not recovered: if (puVar10 == local_58)
-    // TODO: call arguments not type-recovered for FUN_180229bd0: param_1,&local_58,param_3,uVar12
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_18016d4c0: puVar9,param_3
-    // TODO: call arguments not type-recovered for ceilf: (float)(*(longlong *)(param_1 + 4) + 1) / *param_1
-    // TODO: call arguments not type-recovered for FUN_180239240: param_1,uVar11
-    // TODO: call arguments not type-recovered for memcmp: _Buf1,puVar10,_Size
+    trace.call_arguments("FUN_180229bd0", param_1, &local_58, param_3, uVar12);
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
     trace.call_arguments("FUN_1802d8350", 0x38);
+    trace.call_arguments("FUN_18016d4c0", puVar9, param_3);
+    trace.call_arguments("ceilf", (float)(*(longlong *)(param_1 + 4) + 1) / *param_1);
+    trace.call_arguments("FUN_180239240", param_1, uVar11);
+    trace.call_arguments("memcmp", _Buf1, puVar10, _Size);
     trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
     trace.call_target("FUN_180229bd0", reinterpret_cast<const void*>(&image::FUN_180229bd0));
     trace.call_target("FUN_180239240", reinterpret_cast<const void*>(&image::FUN_180239240));
@@ -9354,7 +9547,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219900() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: a4500c6546f43b25f947bddd7a5cd0811667fa12afaf72fd105a41c0e878d03e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_180219900(float *param_1,longlong *param_2,undefined8 *param_3)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("size_t _Size;");
@@ -9380,7 +9572,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219900() noexcept {
             }
             trace.statement("uVar12 = 0xcbf29ce484222325;");
             trace.statement("uVar6 = 0;");
-            if (trace.condition("if (param_3[2] != 0)")) {
+            if (trace.checked_condition("if (param_3[2] != 0)", [&]() -> bool { return static_cast<bool>(param_3[2] != 0); })) {
                 do {
                     trace.statement("uVar12 = (uVar12 ^ *(byte *)((longlong)puVar9 + uVar6)) * 0x100000001b3;");
                     trace.statement("uVar6 = uVar6 + 1;");
@@ -9392,7 +9584,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219900() noexcept {
                 trace.statement("*(undefined1 *)(param_2 + 1) = 0;");
                 trace.statement("return param_2;");
             }
-            if (trace.condition("if (*(longlong *)(param_1 + 4) == 0x492492492492492)")) {
+            if (trace.checked_condition("if (*(longlong *)(param_1 + 4) == 0x492492492492492)", [&]() -> bool { return static_cast<bool>(*(longlong *)(param_1 + 4) == 0x492492492492492); })) {
                 trace.statement("std::_Xlength_error(\"unordered_map/set too long\");");
                 trace.statement("pcVar2 = (code *)swi(3);");
                 trace.statement("plVar4 = (longlong *)(*pcVar2)();");
@@ -9415,7 +9607,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219900() noexcept {
                     trace.statement("uVar8 = (longlong)fVar13 + lVar7;");
                 }
                 trace.statement("uVar11 = uVar6;");
-                if (trace.checked_condition("if ((uVar6 < uVar8) && ((0x1ff < uVar6 || (uVar11 = uVar6 * 8, uVar6 * 8 < uVar8))))", [&]() -> bool { return static_cast<bool>((uVar6 < uVar8) && ((0x1ff < uVar6 || (uVar11 = uVar6 * 8, uVar6 * 8 < uVar8)))); })) {
+                if (trace.condition("if ((uVar6 < uVar8) && ((0x1ff < uVar6 || (uVar11 = uVar6 * 8, uVar6 * 8 < uVar8))))")) {
                     trace.statement("uVar11 = uVar8;");
                 }
                 trace.statement("FUN_180239240(param_1,uVar11);");
@@ -9439,7 +9631,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219900() noexcept {
                         if (trace.condition("if ((_Size == local_58[4]) && ((_Size == 0 || (iVar3 = memcmp(_Buf1,puVar10,_Size), iVar3 == 0)))) break; if (local_58 == puVar1) goto LAB_180219b4f; local_58 = (undefined8 *)local_58[1]; } local_58 = (undefined8 *)*local_58; } } LAB_180219b4f: puVar9 = (undefined8 *)local_58[1]; *(longlong *)(param_1 + 4) = *(longlong *)(param_1 + 4) + 1; *puVar5 = local_58; puVar5[1] = puVar9; *puVar9 = puVar5; local_58[1] = puVar5; lVar7 = *(longlong *)(param_1 + 6); uVar12 = *(ulonglong *)(param_1 + 0xc) & uVar12; puVar10 = *(undefined8 **)(lVar7 + uVar12 * 0x10); if (puVar10 == *(undefined8 **)(param_1 + 2))")) {
                             trace.statement("*(undefined8 **)(lVar7 + uVar12 * 0x10) = puVar5;");
                         } else {
-                        if (trace.condition("if (puVar10 == local_58)")) {
+                        if (trace.checked_condition("if (puVar10 == local_58)", [&]() -> bool { return static_cast<bool>(puVar10 == local_58); })) {
                             trace.statement("*(undefined8 **)(lVar7 + uVar12 * 0x10) = puVar5;");
                             trace.statement("goto LAB_180219b9e;");
                         }
@@ -9634,35 +9826,44 @@ TODO: resolve the indirect call in body 51: _Memory = (void *)(*pcVar2)(5);.)F18
 const sf::reconstructed::FunctionTranslation& Function_0x180219bd0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180219bd0", "FUN_180219bd0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] std::uint64_t * param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] void * pvVar1{};
+    [[maybe_unused]] void* * pcVar2{};
+    [[maybe_unused]] void * _Memory{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint64_t * puVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
+    [[maybe_unused]] std::uint8_t * puVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint64_t * puVar9{};
     [[maybe_unused]] std::uint8_t auStack_78[8]{};
     [[maybe_unused]] std::uint8_t auStack_70[48]{};
+    [[maybe_unused]] std::uint64_t * local_40{};
+    [[maybe_unused]] std::uint64_t * puStack_38{};
+    [[maybe_unused]] std::int64_t * local_30{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: resolve the indirect call in body 50: pcVar2 = (code *)swi(0x29);.
     // TODO: resolve the indirect call in body 51: _Memory = (void *)(*pcVar2)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (puVar9 != (undefined8 *)0x0)
     // TODO: condition expression type not recovered: for (; puVar9 != puVar5; puVar9 = puVar9 + 4)
-    // TODO: condition expression type not recovered: if (puVar9 != puVar5)
-    // TODO: condition expression type not recovered: if (puVar9 != param_2)
+    // TODO: condition expression type not recovered: for (; param_3 != 0; param_3 = param_3 - 1)
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[3])
-    // TODO: condition expression type not recovered: if (puVar9 != param_2)
+    // TODO: condition expression type not recovered: for (; param_3 != 0; param_3 = param_3 - 1)
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_2[3])
-    // TODO: condition expression type not recovered: for (puVar6 = puVar5; puVar6 != puVar9; puVar6 = puVar6 + 4)
-    // TODO: call arguments not type-recovered for FUN_18020e450: puVar9
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for FUN_18016d4c0: lVar3,param_2
-    // TODO: call arguments not type-recovered for FUN_180212700: puVar9,puVar5,param_2[2]
-    // TODO: call arguments not type-recovered for FUN_18016d4c0: puVar5,param_2
-    // TODO: call arguments not type-recovered for FUN_180212700: puVar9,puVar6,param_2[2]
-    // TODO: call arguments not type-recovered for FUN_18020e450: puVar6
     trace.call_arguments("FUN_18020cc40");
+    trace.call_arguments("FUN_18020e450", puVar9);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_arguments("FUN_18020dbc0");
+    trace.call_arguments("FUN_18016d4c0", lVar3, param_2);
+    trace.call_arguments("FUN_180212700", puVar9, puVar5, param_2[2]);
+    trace.call_arguments("FUN_18016d4c0", puVar5, param_2);
+    trace.call_arguments("FUN_180212700", puVar9, puVar6, param_2[2]);
+    trace.call_arguments("FUN_18020e450", puVar6);
     trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
     trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
     trace.call_target("FUN_18020dbc0", reinterpret_cast<const void*>(&image::FUN_18020dbc0));
@@ -9670,7 +9871,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219bd0() noexcept {
     trace.call_target("FUN_180212700", reinterpret_cast<const void*>(&image::FUN_180212700));
     // body sha256: 21a4b79a79371ae20b7f8de61b3f255cc549225fce88a197ab6c2b82291eb8b3
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_180219bd0(longlong *param_1,undefined8 *param_2,ulonglong param_3)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("code *pcVar2;");
@@ -9698,7 +9898,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219bd0() noexcept {
                 if (trace.condition("if ((uVar4 <= 0x7ffffffffffffff - (uVar4 >> 1)) && (uVar8 = uVar4 + (uVar4 >> 1), uVar8 < param_3))")) {
                     trace.statement("uVar8 = param_3;");
                 }
-                if (trace.condition("if (puVar9 != (undefined8 *)0x0)")) {
+                if (trace.checked_condition("if (puVar9 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(puVar9 != (undefined8 *)0x0); })) {
                     trace.statement("puVar5 = (undefined8 *)param_1[1];");
                     for (auto loop = trace.loop("for (; puVar9 != puVar5; puVar9 = puVar9 + 4)"); loop.next(); ) {
                         trace.statement("FUN_18020e450(puVar9);");
@@ -9728,7 +9928,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219bd0() noexcept {
                 trace.statement("*(longlong *)(puVar7 + 0x20) = lVar3;");
                 trace.statement("*(longlong *)(puVar7 + 0x28) = lVar3;");
                 trace.statement("*(longlong **)(puVar7 + 0x30) = param_1;");
-                for (auto loop = trace.checked_loop("for (; param_3 != 0; param_3 = param_3 - 1)", [&]() -> bool { return static_cast<bool>(param_3 = param_3 - 1); }); loop.next(); ) {
+                for (auto loop = trace.loop("for (; param_3 != 0; param_3 = param_3 - 1)"); loop.next(); ) {
                     trace.statement("*(undefined8 *)(puVar7 + -8) = 0x180219ceb;");
                     trace.statement("FUN_18016d4c0(lVar3,param_2);");
                     trace.statement("lVar3 = lVar3 + 0x20;");
@@ -9741,9 +9941,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219bd0() noexcept {
             trace.statement("puVar5 = (undefined8 *)param_1[1];");
             trace.statement("uVar4 = (longlong)puVar5 - (longlong)puVar9 >> 5;");
             if (trace.checked_condition("if (uVar4 < param_3)", [&]() -> bool { return static_cast<bool>(uVar4 < param_3); })) {
-                if (trace.condition("if (puVar9 != puVar5)")) {
+                if (trace.checked_condition("if (puVar9 != puVar5)", [&]() -> bool { return static_cast<bool>(puVar9 != puVar5); })) {
                     do {
-                        if (trace.condition("if (puVar9 != param_2)")) {
+                        if (trace.checked_condition("if (puVar9 != param_2)", [&]() -> bool { return static_cast<bool>(puVar9 != param_2); })) {
                             trace.statement("puVar5 = param_2;");
                             if (trace.condition("if (0xf < (ulonglong)param_2[3])")) {
                                 trace.statement("puVar5 = (undefined8 *)*param_2;");
@@ -9765,8 +9965,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219bd0() noexcept {
                 }
             } else {
             trace.statement("puVar5 = puVar9 + param_3 * 4;");
-            for (auto loop = trace.checked_loop("for (; param_3 != 0; param_3 = param_3 - 1)", [&]() -> bool { return static_cast<bool>(param_3 = param_3 - 1); }); loop.next(); ) {
-                if (trace.condition("if (puVar9 != param_2)")) {
+            for (auto loop = trace.loop("for (; param_3 != 0; param_3 = param_3 - 1)"); loop.next(); ) {
+                if (trace.checked_condition("if (puVar9 != param_2)", [&]() -> bool { return static_cast<bool>(puVar9 != param_2); })) {
                     trace.statement("puVar6 = param_2;");
                     if (trace.condition("if (0xf < (ulonglong)param_2[3])")) {
                         trace.statement("puVar6 = (undefined8 *)*param_2;");
@@ -9777,7 +9977,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219bd0() noexcept {
                 trace.statement("param_2 = param_2 + 4;");
             }
             trace.statement("puVar9 = (undefined8 *)param_1[1];");
-            for (auto loop = trace.loop("for (puVar6 = puVar5; puVar6 != puVar9; puVar6 = puVar6 + 4)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (puVar6 = puVar5; puVar6 != puVar9; puVar6 = puVar6 + 4)", [&]() -> bool { return static_cast<bool>(puVar6 != puVar9); }); loop.next(); ) {
                 trace.statement("FUN_18020e450(puVar6);");
             }
             }
@@ -9953,12 +10153,23 @@ TODO: resolve the indirect call in body 47: plVar5 = (longlong *)(*pcVar3)();.)F
 const sf::reconstructed::FunctionTranslation& Function_0x180219e20() noexcept {
     sf::reconstructed::TranslationTrace trace("0x180219e20", "FUN_180219e20");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] float * param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::uint64_t * param_3{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
     [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] std::int64_t lVar2{};
+    [[maybe_unused]] void* * pcVar3{};
     [[maybe_unused]] std::int32_t iVar4{};
+    [[maybe_unused]] std::int64_t * plVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
+    [[maybe_unused]] std::uint64_t * _Buf1{};
+    [[maybe_unused]] std::uint64_t * puVar8{};
+    [[maybe_unused]] std::uint64_t * puVar9{};
     [[maybe_unused]] std::uint64_t uVar10{};
     [[maybe_unused]] float fVar11{};
+    [[maybe_unused]] std::uint64_t * local_48{};
     [[maybe_unused]] std::int64_t local_40{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180219ffb.
@@ -9968,22 +10179,19 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219e20() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)param_3[3])
-    // TODO: condition expression type not recovered: if (param_3[2] != 0)
-    // TODO: condition expression type not recovered: if (*(longlong *)(param_1 + 4) == 0x555555555555555)
     // TODO: condition expression type not recovered: if (*param_1 <= fVar11 && fVar11 != *param_1)
     // TODO: condition expression type not recovered: if (puVar8 != *(undefined8 **)(param_1 + 2))
     // TODO: condition expression type not recovered: while( true )
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)puVar9[5])
     // TODO: condition expression type not recovered: if ((ulonglong)puVar6[5] < 0x10)
     // TODO: condition expression type not recovered: if (puVar1 == *(undefined8 **)(param_1 + 2))
-    // TODO: condition expression type not recovered: if (puVar1 == puVar9)
-    // TODO: call arguments not type-recovered for FUN_180229bd0: param_1,&local_48,param_3,uVar10
-    // TODO: call arguments not type-recovered for _Xlength_error: "unordered_map/set too long"
-    // TODO: call arguments not type-recovered for FUN_18016d4c0: puVar6 + 2,param_3
-    // TODO: call arguments not type-recovered for FUN_18022ea90: param_1
-    // TODO: call arguments not type-recovered for memcmp: _Buf1,puVar8,_Size
+    trace.call_arguments("FUN_180229bd0", param_1, &local_48, param_3, uVar10);
+    trace.call_arguments("_Xlength_error", "unordered_map/set too long");
     trace.call_arguments("swi", 3);
     trace.call_arguments("FUN_1802d8350", 0x30);
+    trace.call_arguments("FUN_18016d4c0", puVar6 + 2, param_3);
+    trace.call_arguments("FUN_18022ea90", param_1);
+    trace.call_arguments("memcmp", _Buf1, puVar8, _Size);
     trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
     trace.call_target("FUN_180229bd0", reinterpret_cast<const void*>(&image::FUN_180229bd0));
     trace.call_target("FUN_18022ea90", reinterpret_cast<const void*>(&image::FUN_18022ea90));
@@ -9991,7 +10199,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219e20() noexcept {
     trace.string_literal("unordered_map/set too long");
     // body sha256: 3eb84ac517b5f6dc4b657974e3512551d269e0cd24ad1b31c49322b74e91133e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_180219e20(float *param_1,longlong *param_2,undefined8 *param_3)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("size_t _Size;");
@@ -10014,7 +10221,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219e20() noexcept {
             }
             trace.statement("uVar10 = 0xcbf29ce484222325;");
             trace.statement("uVar7 = 0;");
-            if (trace.condition("if (param_3[2] != 0)")) {
+            if (trace.checked_condition("if (param_3[2] != 0)", [&]() -> bool { return static_cast<bool>(param_3[2] != 0); })) {
                 do {
                     trace.statement("uVar10 = (uVar10 ^ *(byte *)((longlong)puVar9 + uVar7)) * 0x100000001b3;");
                     trace.statement("uVar7 = uVar7 + 1;");
@@ -10026,7 +10233,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219e20() noexcept {
                 trace.statement("*(undefined1 *)(param_2 + 1) = 0;");
                 trace.statement("return param_2;");
             }
-            if (trace.condition("if (*(longlong *)(param_1 + 4) == 0x555555555555555)")) {
+            if (trace.checked_condition("if (*(longlong *)(param_1 + 4) == 0x555555555555555)", [&]() -> bool { return static_cast<bool>(*(longlong *)(param_1 + 4) == 0x555555555555555); })) {
                 trace.statement("std::_Xlength_error(\"unordered_map/set too long\");");
                 trace.statement("pcVar3 = (code *)swi(3);");
                 trace.statement("plVar5 = (longlong *)(*pcVar3)();");
@@ -10059,7 +10266,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180219e20() noexcept {
                         if (trace.condition("if ((_Size == puVar9[4]) && ((_Size == 0 || (iVar4 = memcmp(_Buf1,puVar8,_Size), iVar4 == 0)))) break; if (puVar9 == puVar1) goto LAB_180219ffb; puVar9 = (undefined8 *)puVar9[1]; } puVar9 = (undefined8 *)*puVar9; } } LAB_180219ffb: puVar8 = (undefined8 *)puVar9[1]; *(longlong *)(param_1 + 4) = *(longlong *)(param_1 + 4) + 1; *puVar6 = puVar9; puVar6[1] = puVar8; *puVar8 = puVar6; puVar9[1] = puVar6; lVar2 = *(longlong *)(param_1 + 6); uVar10 = *(ulonglong *)(param_1 + 0xc) & uVar10; puVar1 = *(undefined8 **)(lVar2 + uVar10 * 0x10); if (puVar1 == *(undefined8 **)(param_1 + 2))")) {
                             trace.statement("*(undefined8 **)(lVar2 + uVar10 * 0x10) = puVar6;");
                         } else {
-                        if (trace.condition("if (puVar1 == puVar9)")) {
+                        if (trace.checked_condition("if (puVar1 == puVar9)", [&]() -> bool { return static_cast<bool>(puVar1 == puVar9); })) {
                             trace.statement("*(undefined8 **)(lVar2 + uVar10 * 0x10) = puVar6;");
                             trace.statement("goto LAB_18021a04f;");
                         }
@@ -10213,11 +10420,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a080() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] void * _Dst{};
     [[maybe_unused]] std::size_t sVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
     [[maybe_unused]] std::uint64_t uVar5{};
+    [[maybe_unused]] std::uint8_t * puVar6{};
+    [[maybe_unused]] std::uint8_t * puVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] void * pvVar9{};
     [[maybe_unused]] std::uint8_t auStack_68[8]{};
     [[maybe_unused]] std::uint8_t auStack_60[72]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -10229,14 +10441,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a080() noexcept {
     // TODO: resolve the indirect call in body 57: lVar3 = (*pcVar2)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for memset: _Dst,0,sVar1
     // TODO: call arguments not type-recovered for memmove: pvVar9,DAT_1803eb410,(longlong)DAT_1803eb418 - (longlong)DAT_1803eb410
-    // TODO: call arguments not type-recovered for FUN_180239a50: &DAT_1803eb410,pvVar9,param_2,uVar8
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("FUN_1802d8350", uVar4 + 0x27);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("memset", _Dst, 0, sVar1);
+    trace.call_arguments("FUN_180239a50", &image::DAT_1803eb410, pvVar9, param_2, uVar8);
     trace.call_arguments("memset", image::DAT_1803eb418, 0, sVar1);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
@@ -10247,7 +10459,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a080() noexcept {
     trace.data_ref("DAT_1803eb420", static_cast<const void*>(&image::DAT_1803eb420));
     // body sha256: 1a64ad8eaa1978910ee3b781124e7d89109ee027645b32bd6aaa9e8ddd9dd970
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021a080(undefined8 param_1,ulonglong param_2)");
         {
             trace.statement("void *_Dst;");
             trace.statement("size_t sVar1;");
@@ -10388,28 +10599,29 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021a230() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021a230", "FUN_18021a230");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int32_t * param_1{};
+    [[maybe_unused]] std::int32_t * param_2{};
+    [[maybe_unused]] std::int32_t * param_3{};
     [[maybe_unused]] std::int32_t iVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::int32_t * piVar4{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*param_3 != 0)
-    // TODO: condition expression type not recovered: if (param_2 < param_1)
     // TODO: condition expression type not recovered: if ((3 < uVar3) && ((param_3 < param_1 || (param_1 + (uVar3 - 1) < param_3))))
     // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 1)
     // TODO: call arguments not type-recovered for memset: param_1,0,(longlong)param_2 - (longlong)param_1 & 0xfffffffffffffffc
     // body sha256: 91e28b9b87d1a64321e3c5ac46ad5c595e5aee632bab388ef8c5240fc0ddbd0d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021a230(int *param_1,int *param_2,int *param_3)");
         {
             trace.statement("int iVar1;");
             trace.statement("ulonglong uVar2;");
             trace.statement("ulonglong uVar3;");
             trace.statement("int *piVar4;");
-            if (trace.condition("if (*param_3 != 0)")) {
+            if (trace.checked_condition("if (*param_3 != 0)", [&]() -> bool { return static_cast<bool>(*param_3 != 0); })) {
                 trace.statement("uVar3 = ((longlong)param_2 - (longlong)param_1) + 3U >> 2;");
-                if (trace.condition("if (param_2 < param_1)")) {
+                if (trace.checked_condition("if (param_2 < param_1)", [&]() -> bool { return static_cast<bool>(param_2 < param_1); })) {
                     trace.statement("uVar3 = 0;");
                 }
                 if (trace.condition("if ((3 < uVar3) && ((param_3 < param_1 || (param_1 + (uVar3 - 1) < param_3))))")) {
@@ -10586,12 +10798,20 @@ TODO: resolve the indirect call in body 84: (*pcVar5)(5);.)F18021a2e0U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021a2e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021a2e0", "FUN_18021a2e0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
+    [[maybe_unused]] void * pvVar2{};
     [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] void* * pcVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
+    [[maybe_unused]] void * pvVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] void * _Src{};
+    [[maybe_unused]] std::uint8_t * puVar9{};
+    [[maybe_unused]] void * unaff_RSI{};
     [[maybe_unused]] std::uint8_t auStack_48[8]{};
     [[maybe_unused]] std::uint8_t auStack_40[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -10604,25 +10824,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a2e0() noexcept {
     // TODO: resolve the indirect call in body 84: (*pcVar5)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1)))
-    // TODO: condition expression type not recovered: if (pvVar7 < pvVar2)
     // TODO: condition expression type not recovered: if (0xfff < uVar4 * 2 + 2)
-    // TODO: condition expression type not recovered: if (_Src < (void *)0x20)
-    // TODO: call arguments not type-recovered for memcpy: unaff_RSI,param_1,_Size
-    // TODO: call arguments not type-recovered for memcpy: unaff_RSI,_Src,_Size
-    // TODO: call arguments not type-recovered for free: (void *)*puVar1
-    // TODO: call arguments not type-recovered for free: _Src
     trace.call_arguments("FUN_1800130a0");
+    trace.call_arguments("memcpy", unaff_RSI, param_1, _Size);
+    trace.call_arguments("memcpy", unaff_RSI, _Src, _Size);
+    trace.call_arguments("free", (void *)*puVar1);
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350", uVar8 + 0x27);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Src);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     // body sha256: d0885a94529d1e7b7a0e48638a93970d30644c7a77ce1aabc1c4d3625effa354
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021a2e0(undefined8 *param_1,ulonglong param_2)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("void *pvVar2;");
@@ -10646,10 +10862,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a2e0() noexcept {
             }
             trace.statement("uVar4 = param_1[3];");
             trace.statement("pvVar7 = (void *)(lVar3 + param_2 | 7);");
-            if (trace.condition("if ((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1)))")) {
+            if (trace.checked_condition("if ((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1)))", [&]() -> bool { return static_cast<bool>((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1))); })) {
                 trace.statement("pvVar2 = (void *)(uVar4 + (uVar4 >> 1));");
                 trace.statement("_Src = pvVar7;");
-                if (trace.condition("if (pvVar7 < pvVar2)")) {
+                if (trace.checked_condition("if (pvVar7 < pvVar2)", [&]() -> bool { return static_cast<bool>(pvVar7 < pvVar2); })) {
                     trace.statement("_Src = pvVar2;");
                 }
                 if (trace.condition("if (0x7fffffffffffffff < (longlong)_Src + 1U) goto LAB_18021a433; uVar8 = ((longlong)_Src + 1U) * 2; if (uVar8 != 0) goto LAB_18021a372; unaff_RSI = (void *)0x0; LAB_18021a3ab: param_1[2] = lVar3 + param_2; _Size = lVar3 * 2 + 2; param_1[3] = _Src; if (uVar4 < 8)")) {
@@ -10661,7 +10877,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a2e0() noexcept {
                 if (trace.condition("if (0xfff < uVar4 * 2 + 2)")) {
                     trace.statement("puVar1 = (undefined8 *)((longlong)_Src + -8);");
                     trace.statement("_Src = (void *)((longlong)_Src + (-8 - (longlong)*puVar1));");
-                    if (trace.condition("if (_Src < (void *)0x20)")) {
+                    if (trace.checked_condition("if (_Src < (void *)0x20)", [&]() -> bool { return static_cast<bool>(_Src < (void *)0x20); })) {
                         trace.statement("free((void *)*puVar1);");
                         trace.statement("goto LAB_18021a415;");
                     }
@@ -10856,14 +11072,22 @@ TODO: resolve the indirect call in body 88: (*pcVar5)(5);.)F18021a440U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021a440() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021a440", "FUN_18021a440");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
     [[maybe_unused]] std::uint16_t param_4{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
+    [[maybe_unused]] void * pvVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] void* * pcVar5{};
     [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] std::int64_t lVar6{};
+    [[maybe_unused]] void * pvVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] void * _Src{};
+    [[maybe_unused]] std::uint8_t * puVar9{};
+    [[maybe_unused]] void * unaff_RDI{};
     [[maybe_unused]] std::uint8_t auStack_48[8]{};
     [[maybe_unused]] std::uint8_t auStack_40[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -10876,25 +11100,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a440() noexcept {
     // TODO: resolve the indirect call in body 88: (*pcVar5)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1)))
-    // TODO: condition expression type not recovered: if (pvVar7 < pvVar2)
     // TODO: condition expression type not recovered: if (0xfff < uVar4 * 2 + 2)
-    // TODO: condition expression type not recovered: if (_Src < (void *)0x20)
-    // TODO: call arguments not type-recovered for memcpy: unaff_RDI,param_1,_Size
-    // TODO: call arguments not type-recovered for memcpy: unaff_RDI,_Src,_Size
-    // TODO: call arguments not type-recovered for free: (void *)*puVar1
-    // TODO: call arguments not type-recovered for free: _Src
     trace.call_arguments("FUN_1800130a0");
+    trace.call_arguments("memcpy", unaff_RDI, param_1, _Size);
+    trace.call_arguments("memcpy", unaff_RDI, _Src, _Size);
+    trace.call_arguments("free", (void *)*puVar1);
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350", uVar8 + 0x27);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Src);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     // body sha256: 4f1076a70ac64c620711cb5c939531a6409362be9cb949b677002bcadd55c55b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021a440(undefined8 *param_1,undefined8 param_2,undefined8 param_3,undefined2 param_4)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("void *pvVar2;");
@@ -10918,10 +11138,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a440() noexcept {
             }
             trace.statement("uVar4 = param_1[3];");
             trace.statement("pvVar7 = (void *)(lVar3 + 1U | 7);");
-            if (trace.condition("if ((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1)))")) {
+            if (trace.checked_condition("if ((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1)))", [&]() -> bool { return static_cast<bool>((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1))); })) {
                 trace.statement("pvVar2 = (void *)(uVar4 + (uVar4 >> 1));");
                 trace.statement("_Src = pvVar7;");
-                if (trace.condition("if (pvVar7 < pvVar2)")) {
+                if (trace.checked_condition("if (pvVar7 < pvVar2)", [&]() -> bool { return static_cast<bool>(pvVar7 < pvVar2); })) {
                     trace.statement("_Src = pvVar2;");
                 }
                 if (trace.condition("if (0x7fffffffffffffff < (longlong)_Src + 1U) goto LAB_18021a5b4; uVar8 = ((longlong)_Src + 1U) * 2; if (uVar8 != 0) goto LAB_18021a4d9; unaff_RDI = (void *)0x0; LAB_18021a512: _Size = lVar3 * 2; param_1[2] = lVar3 + 1U; param_1[3] = _Src; if (uVar4 < 8)")) {
@@ -10937,7 +11157,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a440() noexcept {
                 if (trace.condition("if (0xfff < uVar4 * 2 + 2)")) {
                     trace.statement("puVar1 = (undefined8 *)((longlong)_Src + -8);");
                     trace.statement("_Src = (void *)((longlong)_Src + (-8 - (longlong)*puVar1));");
-                    if (trace.condition("if (_Src < (void *)0x20)")) {
+                    if (trace.checked_condition("if (_Src < (void *)0x20)", [&]() -> bool { return static_cast<bool>(_Src < (void *)0x20); })) {
                         trace.statement("free((void *)*puVar1);");
                         trace.statement("goto LAB_18021a594;");
                     }
@@ -11149,16 +11369,23 @@ TODO: resolve the indirect call in body 103: (*pcVar5)(5);.)F18021a5c0U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021a5c0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021a5c0", "FUN_18021a5c0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
     [[maybe_unused]] std::int64_t param_4{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
     [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] void* * pcVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::uint64_t uVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::uint16_t * puVar9{};
+    [[maybe_unused]] std::uint8_t * puVar10{};
+    [[maybe_unused]] void * unaff_RSI{};
+    [[maybe_unused]] void * _Src{};
     [[maybe_unused]] std::uint8_t auStack_58[8]{};
     [[maybe_unused]] std::uint8_t auStack_50[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -11172,22 +11399,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a5c0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xfff < uVar4 * 2 + 2)
-    // TODO: condition expression type not recovered: if (_Src < (void *)0x20)
-    // TODO: call arguments not type-recovered for memcpy: unaff_RSI,param_1,_Size
-    // TODO: call arguments not type-recovered for memcpy: unaff_RSI,_Src,_Size
-    // TODO: call arguments not type-recovered for free: (void *)*puVar1
-    // TODO: call arguments not type-recovered for free: _Src
     trace.call_arguments("FUN_1800130a0");
+    trace.call_arguments("memcpy", unaff_RSI, param_1, _Size);
+    trace.call_arguments("memcpy", unaff_RSI, _Src, _Size);
+    trace.call_arguments("free", (void *)*puVar1);
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350", uVar7 + 0x27);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Src);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     // body sha256: 1248a3b336cd27748afe68a3c19dc65d0fd666b5e4b3483b74addf4069ca2c1c
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021a5c0(undefined8 *param_1,undefined8 param_2,undefined8 param_3,longlong param_4)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("ulonglong uVar2;");
@@ -11244,7 +11469,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a5c0() noexcept {
                 if (trace.condition("if (0xfff < uVar4 * 2 + 2)")) {
                     trace.statement("puVar1 = (undefined8 *)((longlong)_Src + -8);");
                     trace.statement("_Src = (void *)((longlong)_Src + (-8 - (longlong)*puVar1));");
-                    if (trace.condition("if (_Src < (void *)0x20)")) {
+                    if (trace.checked_condition("if (_Src < (void *)0x20)", [&]() -> bool { return static_cast<bool>(_Src < (void *)0x20); })) {
                         trace.statement("free((void *)*puVar1);");
                         trace.statement("goto LAB_18021a77b;");
                     }
@@ -11443,12 +11668,20 @@ TODO: resolve the indirect call in body 90: _Memory = (void *)(*pcVar3)(5);.)F18
 const sf::reconstructed::FunctionTranslation& Function_0x18021a7b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021a7b0", "FUN_18021a7b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] void * param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
     [[maybe_unused]] std::uint64_t uVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
+    [[maybe_unused]] void* * pcVar3{};
     [[maybe_unused]] std::int64_t lVar4{};
+    [[maybe_unused]] void * _Memory{};
     [[maybe_unused]] std::uint64_t uVar5{};
     [[maybe_unused]] std::uint64_t uVar6{};
+    [[maybe_unused]] std::uint8_t * puVar7{};
+    [[maybe_unused]] void * unaff_RSI{};
+    [[maybe_unused]] std::int64_t * _Dst{};
+    [[maybe_unused]] void * _Dst_00{};
     [[maybe_unused]] std::uint8_t auStack_58[8]{};
     [[maybe_unused]] std::uint8_t auStack_50[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -11462,21 +11695,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a7b0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xfff < uVar2 * 2 + 2)
-    // TODO: call arguments not type-recovered for memmove: _Dst,param_2,param_3 * 2
-    // TODO: call arguments not type-recovered for memcpy: _Dst_00,param_2,param_3 * 2
     // TODO: call arguments not type-recovered for free: *(void **)((longlong)_Memory + -8)
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("memmove", _Dst, param_2, param_3 * 2);
     trace.call_arguments("FUN_1800130a0");
+    trace.call_arguments("memcpy", _Dst_00, param_2, param_3 * 2);
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350", uVar5 + 0x27);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     // body sha256: ccdaa3580ecbee9bd6cb6d58666c2aab90d4687a9223d118ea4c43c102a561e5
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021a7b0(longlong *param_1,void *param_2,ulonglong param_3)");
         {
             trace.statement("ulonglong uVar1;");
             trace.statement("ulonglong uVar2;");
@@ -11704,11 +11936,17 @@ TODO: resolve the indirect call in body 66: uVar2 = (*pcVar1)(5);.)F18021a940U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021a940() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021a940", "FUN_18021a940");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] void* * pcVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
+    [[maybe_unused]] std::uint16_t * puVar7{};
+    [[maybe_unused]] std::uint16_t * puVar8{};
     [[maybe_unused]] std::uint64_t uStack_40{};
     [[maybe_unused]] std::uint8_t auStack_38[32]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -11720,6 +11958,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a940() noexcept {
     // TODO: resolve the indirect call in body 66: uVar2 = (*pcVar1)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: for (; uVar2 != 0; uVar2 = uVar2 - 1)
+    // TODO: condition expression type not recovered: for (uVar2 = param_3; uVar4 = param_3, uVar2 != 0; uVar2 = uVar2 - 1)
     trace.call_arguments("FUN_1800130a0");
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("FUN_180012fe0");
@@ -11731,7 +11971,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a940() noexcept {
     trace.data_ref("UNK_18021aa71", static_cast<const void*>(&image::UNK_18021aa71));
     // body sha256: 6240ccc5c10b7f3eb0fe63597446d7c217318cd847fb57ff71a4816d047d6a5d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021a940(undefined8 *param_1,undefined8 param_2,ulonglong param_3)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("ulonglong uVar2;");
@@ -11754,7 +11993,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a940() noexcept {
                 trace.statement("uVar2 = param_3;");
                 trace.statement("puVar6 = param_1;");
                 if (trace.checked_condition("if (param_3 != 0)", [&]() -> bool { return static_cast<bool>(param_3 != 0); })) {
-                    for (auto loop = trace.checked_loop("for (; uVar2 != 0; uVar2 = uVar2 - 1)", [&]() -> bool { return static_cast<bool>(uVar2 = uVar2 - 1); }); loop.next(); ) {
+                    for (auto loop = trace.loop("for (; uVar2 != 0; uVar2 = uVar2 - 1)"); loop.next(); ) {
                         trace.statement("*(undefined2 *)puVar6 = 0;");
                         trace.statement("puVar6 = (undefined8 *)((longlong)puVar6 + 2);");
                     }
@@ -11794,7 +12033,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021a940() noexcept {
                     trace.statement("param_1[2] = param_3;");
                     trace.statement("param_1[3] = uVar2;");
                     trace.statement("puVar7 = puVar8;");
-                    for (auto loop = trace.checked_loop("for (uVar2 = param_3; uVar4 = param_3, uVar2 != 0; uVar2 = uVar2 - 1)", [&]() -> bool { return static_cast<bool>(uVar4 = param_3, uVar2 != 0); }); loop.next(); ) {
+                    for (auto loop = trace.loop("for (uVar2 = param_3; uVar4 = param_3, uVar2 != 0; uVar2 = uVar2 - 1)"); loop.next(); ) {
                         trace.statement("*puVar7 = 0;");
                         trace.statement("puVar7 = puVar7 + 1;");
                     }
@@ -11962,12 +12201,20 @@ TODO: resolve the indirect call in body 85: (*pcVar6)(5);.)F18021aa80U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021aa80() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021aa80", "FUN_18021aa80");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t uVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] void * pvVar3{};
     [[maybe_unused]] std::int64_t lVar4{};
     [[maybe_unused]] std::uint64_t uVar5{};
+    [[maybe_unused]] void* * pcVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
+    [[maybe_unused]] void * pvVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
+    [[maybe_unused]] void * _Src{};
+    [[maybe_unused]] std::uint8_t * puVar10{};
+    [[maybe_unused]] void * unaff_RSI{};
     [[maybe_unused]] std::uint8_t auStack_48[8]{};
     [[maybe_unused]] std::uint8_t auStack_40[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -11979,26 +12226,22 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021aa80() noexcept {
     // TODO: resolve the indirect call in body 85: (*pcVar6)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((pvVar8 < (void *)0x8000000000000000) && (uVar5 <= 0x7fffffffffffffff - (uVar5 >> 1)))
-    // TODO: condition expression type not recovered: if (pvVar8 < pvVar3)
     // TODO: condition expression type not recovered: if (0xfff < uVar1)
     // TODO: condition expression type not recovered: if (0xfff < uVar5 + 1)
-    // TODO: condition expression type not recovered: if (_Src < (void *)0x20)
     // TODO: call arguments not type-recovered for memcpy: unaff_RSI,param_1,lVar4 + 1U
     // TODO: call arguments not type-recovered for memcpy: unaff_RSI,_Src,lVar4 + 1U
-    // TODO: call arguments not type-recovered for free: (void *)*puVar2
-    // TODO: call arguments not type-recovered for free: _Src
     trace.call_arguments("FUN_1800130a0");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350", uVar1);
+    trace.call_arguments("free", (void *)*puVar2);
     trace.call_arguments("FUN_1802d8350", uVar9);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Src);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     // body sha256: 2a1b24136aa52160910a8089121019963b149d7babb02aec12201ea61cfeca5a
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021aa80(undefined8 *param_1,ulonglong param_2)");
         {
             trace.statement("ulonglong uVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -12022,10 +12265,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021aa80() noexcept {
             }
             trace.statement("uVar5 = param_1[3];");
             trace.statement("pvVar8 = (void *)(lVar4 + param_2 | 0xf);");
-            if (trace.condition("if ((pvVar8 < (void *)0x8000000000000000) && (uVar5 <= 0x7fffffffffffffff - (uVar5 >> 1)))")) {
+            if (trace.checked_condition("if ((pvVar8 < (void *)0x8000000000000000) && (uVar5 <= 0x7fffffffffffffff - (uVar5 >> 1)))", [&]() -> bool { return static_cast<bool>((pvVar8 < (void *)0x8000000000000000) && (uVar5 <= 0x7fffffffffffffff - (uVar5 >> 1))); })) {
                 trace.statement("pvVar3 = (void *)(uVar5 + (uVar5 >> 1));");
                 trace.statement("_Src = pvVar8;");
-                if (trace.condition("if (pvVar8 < pvVar3)")) {
+                if (trace.checked_condition("if (pvVar8 < pvVar3)", [&]() -> bool { return static_cast<bool>(pvVar8 < pvVar3); })) {
                     trace.statement("_Src = pvVar3;");
                 }
                 trace.statement("uVar1 = (longlong)_Src + 1;");
@@ -12053,7 +12296,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021aa80() noexcept {
                 if (trace.condition("if (0xfff < uVar5 + 1)")) {
                     trace.statement("puVar2 = (undefined8 *)((longlong)_Src + -8);");
                     trace.statement("_Src = (void *)((longlong)_Src + (-8 - (longlong)*puVar2));");
-                    if (trace.condition("if (_Src < (void *)0x20)")) {
+                    if (trace.checked_condition("if (_Src < (void *)0x20)", [&]() -> bool { return static_cast<bool>(_Src < (void *)0x20); })) {
                         trace.statement("free((void *)*puVar2);");
                         trace.statement("goto LAB_18021ab9e;");
                     }
@@ -12238,14 +12481,22 @@ TODO: resolve the indirect call in body 89: (*pcVar5)(5);.)F18021abd0U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021abd0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021abd0", "FUN_18021abd0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
     [[maybe_unused]] std::uint8_t param_4{};
     [[maybe_unused]] std::uint64_t uVar1{};
+    [[maybe_unused]] std::uint64_t * puVar2{};
+    [[maybe_unused]] void * pvVar3{};
     [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] std::uint64_t uVar4{};
+    [[maybe_unused]] void* * pcVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
+    [[maybe_unused]] void * pvVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] void * _Src{};
+    [[maybe_unused]] std::uint8_t * puVar9{};
+    [[maybe_unused]] void * unaff_RDI{};
     [[maybe_unused]] std::uint8_t auStack_48[8]{};
     [[maybe_unused]] std::uint8_t auStack_40[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -12257,26 +12508,22 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021abd0() noexcept {
     // TODO: resolve the indirect call in body 89: (*pcVar5)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((pvVar7 < (void *)0x8000000000000000) && (uVar4 <= 0x7fffffffffffffff - (uVar4 >> 1)))
-    // TODO: condition expression type not recovered: if (pvVar7 < pvVar3)
     // TODO: condition expression type not recovered: if (0xfff < uVar1)
     // TODO: condition expression type not recovered: if (0xfff < uVar4 + 1)
-    // TODO: condition expression type not recovered: if (_Src < (void *)0x20)
-    // TODO: call arguments not type-recovered for memcpy: unaff_RDI,param_1,_Size
-    // TODO: call arguments not type-recovered for memcpy: unaff_RDI,_Src,_Size
-    // TODO: call arguments not type-recovered for free: (void *)*puVar2
-    // TODO: call arguments not type-recovered for free: _Src
     trace.call_arguments("FUN_1800130a0");
     trace.call_arguments("FUN_180012fe0");
     trace.call_arguments("FUN_1802d8350", uVar1);
+    trace.call_arguments("memcpy", unaff_RDI, param_1, _Size);
+    trace.call_arguments("memcpy", unaff_RDI, _Src, _Size);
+    trace.call_arguments("free", (void *)*puVar2);
     trace.call_arguments("FUN_1802d8350", uVar8);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Src);
     trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
     trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
     trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
     // body sha256: a680d931d6cce306e45e43052aa6b1ac693095f4e1173021a36c5e7d215d55ee
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021abd0(undefined8 *param_1,undefined8 param_2,undefined8 param_3,undefined1 param_4)");
         {
             trace.statement("ulonglong uVar1;");
             trace.statement("undefined8 *puVar2;");
@@ -12300,10 +12547,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021abd0() noexcept {
             }
             trace.statement("uVar4 = param_1[3];");
             trace.statement("pvVar7 = (void *)(_Size + 1 | 0xf);");
-            if (trace.condition("if ((pvVar7 < (void *)0x8000000000000000) && (uVar4 <= 0x7fffffffffffffff - (uVar4 >> 1)))")) {
+            if (trace.checked_condition("if ((pvVar7 < (void *)0x8000000000000000) && (uVar4 <= 0x7fffffffffffffff - (uVar4 >> 1)))", [&]() -> bool { return static_cast<bool>((pvVar7 < (void *)0x8000000000000000) && (uVar4 <= 0x7fffffffffffffff - (uVar4 >> 1))); })) {
                 trace.statement("pvVar3 = (void *)(uVar4 + (uVar4 >> 1));");
                 trace.statement("_Src = pvVar7;");
-                if (trace.condition("if (pvVar7 < pvVar3)")) {
+                if (trace.checked_condition("if (pvVar7 < pvVar3)", [&]() -> bool { return static_cast<bool>(pvVar7 < pvVar3); })) {
                     trace.statement("_Src = pvVar3;");
                 }
                 trace.statement("uVar1 = (longlong)_Src + 1;");
@@ -12335,7 +12582,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021abd0() noexcept {
                 if (trace.condition("if (0xfff < uVar4 + 1)")) {
                     trace.statement("puVar2 = (undefined8 *)((longlong)_Src + -8);");
                     trace.statement("_Src = (void *)((longlong)_Src + (-8 - (longlong)*puVar2));");
-                    if (trace.condition("if (_Src < (void *)0x20)")) {
+                    if (trace.checked_condition("if (_Src < (void *)0x20)", [&]() -> bool { return static_cast<bool>(_Src < (void *)0x20); })) {
                         trace.statement("free((void *)*puVar2);");
                         trace.statement("goto LAB_18021ad08;");
                     }
@@ -12484,11 +12731,16 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ad40() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021ad40", "FUN_18021ad40");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     [[maybe_unused]] std::uint64_t param_2{};
     [[maybe_unused]] std::uint64_t param_3{};
+    [[maybe_unused]] void * param_4{};
     [[maybe_unused]] std::size_t param_5{};
+    [[maybe_unused]] void * pvVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
     [[maybe_unused]] std::uint64_t uVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] void * _Src{};
     [[maybe_unused]] std::size_t _Size{};
     [[maybe_unused]] std::size_t _Size_00{};
     [[maybe_unused]] std::uint64_t uVar5{};
@@ -12496,23 +12748,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021ad40() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < uVar3)
-    // TODO: condition expression type not recovered: if (param_4 < _Src)
     // TODO: condition expression type not recovered: if (0xf < uVar3)
     // TODO: condition expression type not recovered: if (0xf < uVar3)
-    // TODO: call arguments not type-recovered for FUN_18021ad40: undefined8 *param_1,ulonglong param_2,ulonglong param_3,void *param_4,size_t param_5
-    // TODO: call arguments not type-recovered for FUN_180229ea0: param_1,uVar5,_Size_00,param_2,param_3,param_4,param_5
     // TODO: call arguments not type-recovered for memmove: (void *)((longlong)_Src + uVar5),_Src,_Size_00
-    // TODO: call arguments not type-recovered for memmove: pvVar1,param_4,_Size
-    // TODO: call arguments not type-recovered for memmove: pvVar1,param_4,param_5
     // TODO: call arguments not type-recovered for memmove: (void *)((longlong)pvVar1 + param_5),(void *)((longlong)pvVar1 + param_3),_Size_00
     // TODO: call arguments not type-recovered for memmove: (void *)(param_2 + (longlong)puVar4),param_4,param_5
     trace.call_arguments("FUN_18022ec00");
+    trace.call_arguments("FUN_180229ea0", param_1, uVar5, _Size_00, param_2, param_3, param_4, param_5);
+    trace.call_arguments("memmove", pvVar1, param_4, _Size);
+    trace.call_arguments("memmove", pvVar1, param_4, param_5);
     trace.call_target("FUN_180229ea0", reinterpret_cast<const void*>(&image::FUN_180229ea0));
     trace.call_target("FUN_18022ec00", reinterpret_cast<const void*>(&image::FUN_18022ec00));
     // body sha256: 9fc720aa16f9f79a2540ac9b65398a7a01b1eabd4f9993bc2031538b4376f15d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("undefined8 *");
-        trace.statement("FUN_18021ad40(undefined8 *param_1,ulonglong param_2,ulonglong param_3,void *param_4,size_t param_5)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("ulonglong uVar2;");
@@ -12547,7 +12796,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021ad40() noexcept {
                     trace.statement("_Src = (void *)(param_3 + (longlong)pvVar1);");
                     trace.statement("_Size = param_5;");
                     if (trace.condition("if ((pvVar1 < (void *)(param_5 + (longlong)param_4)) && (param_4 <= (void *)(uVar2 + (longlong)puVar4)))")) {
-                        if (trace.condition("if (param_4 < _Src)")) {
+                        if (trace.checked_condition("if (param_4 < _Src)", [&]() -> bool { return static_cast<bool>(param_4 < _Src); })) {
                             trace.statement("_Size = (longlong)_Src - (longlong)param_4;");
                         } else {
                         trace.statement("_Size = 0;");
@@ -12638,19 +12887,21 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021aef0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021aef0", "FUN_18021aef0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * param_2{};
     [[maybe_unused]] std::size_t param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < uVar2)
-    // TODO: call arguments not type-recovered for FUN_18022a080: param_1,param_3,uVar2,param_2,param_3
     // TODO: call arguments not type-recovered for memmove: (void *)(lVar1 + (longlong)puVar3),param_2,param_3
+    trace.call_arguments("FUN_18022a080", param_1, param_3, uVar2, param_2, param_3);
     trace.call_target("FUN_18022a080", reinterpret_cast<const void*>(&image::FUN_18022a080));
     // body sha256: 9155850a82bbef924e2303846056ba5ea1a3e9a6c93452cca78a79f7dc9088a4
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 * FUN_18021aef0(undefined8 *param_1,void *param_2,size_t param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("ulonglong uVar2;");
@@ -12815,7 +13066,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021af80() noexcept {
     trace.data_ref("DAT_180425ad0", static_cast<const void*>(&image::DAT_180425ad0));
     // body sha256: 600c3d20c992ee1176931902a163c04c78f55289f14b29d1d248c35ab35c0b11
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("facet * FUN_18021af80(locale *param_1)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("ulonglong uVar2;");
@@ -12913,16 +13163,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b0b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b0b0", "FUN_18021b0b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 1612f656818f2cc841d0cbe5ca438d032305a8279c828af073d74a74ba6785d3
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b0b0(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -12988,26 +13237,26 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 const sf::reconstructed::FunctionTranslation& Function_0x18021b0d0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b0d0", "FUN_18021b0d0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1804099d8.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_1 != (undefined8 *)0x0)
     // TODO: condition expression type not recovered: if (DAT_1804099d8 == param_1)
-    // TODO: call arguments not type-recovered for FUN_18021c260: param_1 + 1
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for free: param_1
     trace.call_arguments("FUN_18020a720");
+    trace.call_arguments("FUN_18021c260", param_1 + 1);
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("free", param_1);
     trace.call_target("FUN_18020a720", reinterpret_cast<const void*>(&image::FUN_18020a720));
     trace.call_target("FUN_18021c260", reinterpret_cast<const void*>(&image::FUN_18021c260));
     trace.data_ref("DAT_1804099d8", static_cast<const void*>(&image::DAT_1804099d8));
     // body sha256: a8f8ce11cafb16c7d2d98caebd175a321f3245d6a4fa2eea4495a730adce41dd
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b0d0(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("param_1 = (undefined8 *)*param_1;");
-            if (trace.condition("if (param_1 != (undefined8 *)0x0)")) {
+            if (trace.checked_condition("if (param_1 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(param_1 != (undefined8 *)0x0); })) {
                 trace.statement("*param_1 = vftable_Features_DamageLogger_DamageLoggerFeature;");
                 if (trace.condition("if (DAT_1804099d8 == param_1)")) {
                     trace.statement("DAT_1804099d8 = (undefined8 *)0x0;");
@@ -13068,16 +13317,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b150() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b150", "FUN_18021b150");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 8ce8c9fdc0e0cbda57193140a90398bbb5405edb819ba6f9270c909e768d92b1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b150(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -13136,22 +13384,22 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b170() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b170", "FUN_18021b170");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for FUN_180209700: (longlong)_Memory + 0x68
     // TODO: call arguments not type-recovered for FUN_18020e450: (longlong)_Memory + 0x30
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_180209700", reinterpret_cast<const void*>(&image::FUN_180209700));
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 1819f7e338532ba4623cbee4ccf19b6fc71c358213a2d4e0108b63cde7f1e524
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b170(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("FUN_180209700((longlong)_Memory + 0x68);");
                 trace.statement("FUN_18020e450((longlong)_Memory + 0x30);");
                 trace.statement("free(_Memory);");
@@ -13206,16 +13454,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b1b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b1b0", "FUN_18021b1b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 1908bae2ce1f56db8bd7722dceedb8963996f934cdcd7c29e4bac02e86783192
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b1b0(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -13275,23 +13522,23 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b1d0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b1d0", "FUN_18021b1d0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for FUN_18020e450: (longlong)_Memory + 0x70
     // TODO: call arguments not type-recovered for FUN_18020e450: (longlong)_Memory + 0x50
     // TODO: call arguments not type-recovered for FUN_18020e450: (longlong)_Memory + 0x30
     // TODO: call arguments not type-recovered for FUN_18020e450: (longlong)_Memory + 0x10
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: a1faa918acb08bf440f7b3f849e957698759497ee73060a13615cab56d35c9bc
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b1d0(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("FUN_18020e450((longlong)_Memory + 0x70);");
                 trace.statement("FUN_18020e450((longlong)_Memory + 0x50);");
                 trace.statement("FUN_18020e450((longlong)_Memory + 0x30);");
@@ -13348,16 +13595,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b230() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b230", "FUN_18021b230");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 66ab728b737dbdb1bcb9c211916753a0742f50d4700acd8cd0559bbecdc04108
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b230(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -13410,16 +13656,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b250() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b250", "FUN_18021b250");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: e70ce2bad839658552a7b2fd87b212ddc9b8f720cf3d576d0229d4a95b6f0db7
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b250(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -13472,16 +13717,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b270() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b270", "FUN_18021b270");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 95531210b088acea8e488962c636ea3b36d386b3276085c4c3139c5fc6721985
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b270(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -13534,16 +13778,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b290() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b290", "FUN_18021b290");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 9a3ce5eb79c78e31bd2563563030b3fd13a846539952da939eb5d64f8f495003
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b290(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -13600,20 +13843,20 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b2b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b2b0", "FUN_18021b2b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for FUN_18020bc50: (longlong)_Memory + 8
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020bc50", reinterpret_cast<const void*>(&image::FUN_18020bc50));
     // body sha256: a9637f5b9cb0e508a8c6c02ae833d6ebbb2aa61a9647df5e6f997529d21e82b6
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b2b0(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("FUN_18020bc50((longlong)_Memory + 8);");
                 trace.statement("free(_Memory);");
                 trace.statement("return;");
@@ -13667,16 +13910,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b2f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b2f0", "FUN_18021b2f0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 94d42a4b6cda9e5d169b81de9be3f17eacd7709857dd089ce9ebffee5f214f50
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b2f0(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -13737,24 +13979,24 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b310() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b310", "FUN_18021b310");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for FUN_18020e450: (longlong)_Memory + 0xa58
     // TODO: call arguments not type-recovered for FUN_18020d5c0: (longlong)_Memory + 0x9d8
     // TODO: call arguments not type-recovered for FUN_1800f5240: (longlong)_Memory + 8
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_1800f5240", reinterpret_cast<const void*>(&image::FUN_1800f5240));
     trace.call_target("FUN_18020d5c0", reinterpret_cast<const void*>(&image::FUN_18020d5c0));
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 0ac959ee2ae649be03f54da674ede961031e586229178c33e6215c7c3af63982
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b310(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("FUN_18020e450((longlong)_Memory + 0xa58);");
                 trace.statement("FUN_18020d5c0((longlong)_Memory + 0x9d8);");
                 trace.statement("FUN_1800f5240((longlong)_Memory + 8);");
@@ -13814,20 +14056,20 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b360() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b360", "FUN_18021b360");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for _eh_vector_destructor_iterator_: (void *)((longlong)_Memory + 8),0x18,0x102,FUN_18021ef60
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18021ef60", reinterpret_cast<const void*>(&image::FUN_18021ef60));
     // body sha256: 09d482b7fcb44b07ec62e8874ac27047f29a3434882b02679a11c2d50ef417e8
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b360(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("_eh_vector_destructor_iterator_((void *)((longlong)_Memory + 8),0x18,0x102,FUN_18021ef60);");
                 trace.statement("free(_Memory);");
                 trace.statement("return;");
@@ -13887,22 +14129,22 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b3b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b3b0", "FUN_18021b3b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for FUN_18020c420: (longlong)_Memory + 0x20
     // TODO: call arguments not type-recovered for FUN_18020b940: (longlong)_Memory + 8
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020b940", reinterpret_cast<const void*>(&image::FUN_18020b940));
     trace.call_target("FUN_18020c420", reinterpret_cast<const void*>(&image::FUN_18020c420));
     // body sha256: ec146279527e5c808c04fdf041f0737b3329e498b183700a8adff40cb7a41d4a
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b3b0(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("FUN_18020c420((longlong)_Memory + 0x20);");
                 trace.statement("FUN_18020b940((longlong)_Memory + 8);");
                 trace.statement("free(_Memory);");
@@ -13957,16 +14199,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b3f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b3f0", "FUN_18021b3f0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: a6efc917dd0b0126e068a6eac02381b709c1a48643931dc08011e85ad83e6524
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b3f0(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14023,20 +14264,20 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b410() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b410", "FUN_18021b410");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for FUN_18020ad50: (longlong)_Memory + 8
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020ad50", reinterpret_cast<const void*>(&image::FUN_18020ad50));
     // body sha256: b4cf9a80ff1c59b865085bd23a5d7434ca52b24a2d0ba4cc755fe8a99b320fc3
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b410(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("FUN_18020ad50((longlong)_Memory + 8);");
                 trace.statement("free(_Memory);");
                 trace.statement("return;");
@@ -14090,16 +14331,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b450() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b450", "FUN_18021b450");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 5a2c6c57333198c84f819e017a9b00f02b7e1c79d6c61e3958384be41a74d82b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b450(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14152,16 +14392,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b470() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b470", "FUN_18021b470");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 06e31617f3639f488e216e66a78862307651206e1d14846cc4ff6456bb299b81
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b470(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14214,16 +14453,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b490() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b490", "FUN_18021b490");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 1dae121a117171b70018db687d4306e62acc1ff6235633c7089e2099c25e6100
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b490(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14289,7 +14527,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021b4b0() noexcept {
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 90a47eea0ab0a534f624bdf64d1d641c0516a5d0738066ee61b6f4ea6b45781e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b4b0(longlong param_1)");
         {
             if (trace.checked_condition("if (*(longlong *)(param_1 + 8) != 0)", [&]() -> bool { return static_cast<bool>(*(longlong *)(param_1 + 8) != 0); })) {
                 trace.statement("FUN_18020e450(*(longlong *)(param_1 + 8) + 0x18);");
@@ -14347,16 +14584,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b500() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b500", "FUN_18021b500");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 745dac847b4ec2281d893aaa7dd0901c7eab1502f6f3551615ce13d0a32c00b8
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b500(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14413,20 +14649,20 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b520() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b520", "FUN_18021b520");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for FUN_18020e450: (longlong)_Memory + 0xd0
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: f53e738061147085f803253a54462fccf482f78da9d5be975960e85e0f909ea6
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b520(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("FUN_18020e450((longlong)_Memory + 0xd0);");
                 trace.statement("free(_Memory);");
                 trace.statement("return;");
@@ -14480,16 +14716,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b560() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b560", "FUN_18021b560");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: f34979c4e7f2057ee23d04b56951005c1621879466349c6053554d97e00ee6a5
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b560(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14542,16 +14777,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b580() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b580", "FUN_18021b580");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 7199475442abfe1b1225487d7246bd3bb399ca5c4e108f61b20df1dd8a7f6fb7
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b580(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14604,16 +14838,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b5a0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b5a0", "FUN_18021b5a0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: b7805077eb8ee9b1a1092bc5e64511637cc4cbc235cae3a3455af398a3dd256e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b5a0(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14666,16 +14899,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b5c0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b5c0", "FUN_18021b5c0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: b7efa419b917deabbe97a9f9f23e342cf70daeea9d5ef6019f7e38a75751b285
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b5c0(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14728,16 +14960,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b5e0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b5e0", "FUN_18021b5e0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: 674f48ff8b423073305b498540a97227887c3a5b0047666faa2e4e3dce83c96a
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b5e0(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -14794,20 +15025,20 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b600() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b600", "FUN_18021b600");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
+    [[maybe_unused]] void * _Memory{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (_Memory != (void *)0x0)
     // TODO: call arguments not type-recovered for FUN_18020e450: (longlong)_Memory + 0x28
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: bad245bf2b1909608ff6f3c155333bcc0b84f87a0b75117231b1173dc744749a
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b600(undefined8 *param_1)");
         {
             trace.statement("void *_Memory;");
             trace.statement("_Memory = (void *)*param_1;");
-            if (trace.condition("if (_Memory != (void *)0x0)")) {
+            if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                 trace.statement("FUN_18020e450((longlong)_Memory + 0x28);");
                 trace.statement("free(_Memory);");
                 trace.statement("return;");
@@ -14861,16 +15092,15 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021b640() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b640", "FUN_18021b640");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t * param_1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((void *)*param_1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: (void *)*param_1
+    trace.call_arguments("free", (void *)*param_1);
     // body sha256: a25221fd29943b690fcb642e2b0dc7163c2c2327255e163786d119b83369c12d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021b640(undefined8 *param_1)");
         {
-            if (trace.condition("if ((void *)*param_1 != (void *)0x0)")) {
+            if (trace.checked_condition("if ((void *)*param_1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>((void *)*param_1 != (void *)0x0); })) {
                 trace.statement("free((void *)*param_1);");
                 trace.statement("return;");
             }
@@ -15014,27 +15244,29 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021b660() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b660", "FUN_18021b660");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
+    [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] std::int64_t * plVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
+    [[maybe_unused]] std::int64_t * plVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
+    [[maybe_unused]] std::int64_t * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * plVar11{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021b87e.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (_Memory == plVar10)
-    // TODO: condition expression type not recovered: if (plVar5 == param_2)
-    // TODO: condition expression type not recovered: while (plVar11 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar11 == param_3)
-    // TODO: condition expression type not recovered: if (plVar5 == param_2)
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for free: plVar10
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("free", plVar10);
     // body sha256: b96a48ff3639425421996e8d759da657d31fc2e56a211961d47ac5888cc72b38
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021b660(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("longlong lVar2;");
@@ -15048,7 +15280,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021b660() noexcept {
             trace.statement("longlong *_Memory;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *plVar11;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar2 = *(longlong *)(param_1 + 8);");
@@ -15073,13 +15305,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021b660() noexcept {
                 trace.statement("plVar11 = (longlong *)*_Memory;");
                 trace.statement("free(_Memory);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (_Memory == plVar10)")) {
-                    if (trace.condition("if (plVar5 == param_2)")) {
+                if (trace.checked_condition("if (_Memory == plVar10)", [&]() -> bool { return static_cast<bool>(_Memory == plVar10); })) {
+                    if (trace.checked_condition("if (plVar5 == param_2)", [&]() -> bool { return static_cast<bool>(plVar5 == param_2); })) {
                         trace.statement("*plVar1 = lVar2;");
                         trace.statement("lVar6 = lVar2;");
                     }
                     trace.statement("*plVar8 = lVar6;");
-                    while (trace.loop_condition("while (plVar11 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar11 != param_3)", [&]() -> bool { return static_cast<bool>(plVar11 != param_3); })) {
                         trace.statement("uVar9 = (((((((((ulonglong)*(byte *)(plVar11 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar11 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar11 + 0x12)) * 0x100000001b3 ^");
@@ -15109,7 +15341,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021b660() noexcept {
                 }
                 trace.statement("_Memory = plVar11;");
             } while (trace.loop_condition("while (plVar11 != param_3);"));
-            if (trace.condition("if (plVar5 == param_2)")) {
+            if (trace.checked_condition("if (plVar5 == param_2)", [&]() -> bool { return static_cast<bool>(plVar5 == param_2); })) {
                 trace.statement("*plVar1 = (longlong)plVar11;");
             }
             LAB_18021b87e: ;
@@ -15247,27 +15479,30 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021b8c0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021b8c0", "FUN_18021b8c0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::int64_t * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar9{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * plVar11{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021b9b1.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021b9b5.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (_Memory == plVar10)
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: condition expression type not recovered: while (plVar9 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for free: plVar10
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("free", plVar10);
     // body sha256: fc982f1aaf75fe790779f8a3fb951995f02b8e580d6eb0258791a37095485bb1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021b8c0(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("longlong lVar2;");
@@ -15281,7 +15516,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021b8c0() noexcept {
             trace.statement("longlong *plVar9;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *plVar11;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar1 = *(longlong *)(param_1 + 8);");
@@ -15302,13 +15537,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021b8c0() noexcept {
                 trace.statement("plVar9 = (longlong *)*_Memory;");
                 trace.statement("free(_Memory);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (_Memory == plVar10)")) {
-                    if (trace.condition("if (plVar4 == param_2)")) {
+                if (trace.checked_condition("if (_Memory == plVar10)", [&]() -> bool { return static_cast<bool>(_Memory == plVar10); })) {
+                    if (trace.checked_condition("if (plVar4 == param_2)", [&]() -> bool { return static_cast<bool>(plVar4 == param_2); })) {
                         trace.statement("*plVar11 = lVar1;");
                         trace.statement("lVar5 = lVar1;");
                     }
                     trace.statement("*plVar7 = lVar5;");
-                    while (trace.loop_condition("while (plVar9 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar9 != param_3)", [&]() -> bool { return static_cast<bool>(plVar9 != param_3); })) {
                         trace.statement("uVar8 = (((((ulonglong)*(byte *)(plVar9 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x12)) * 0x100000001b3 ^");
@@ -15409,6 +15644,11 @@ TODO: resolve the indirect call in body 28: (*pcVar1)(5);.)F18021bab0U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021bab0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021bab0", "FUN_18021bab0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] void* * pcVar1{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] std::uint8_t * puVar3{};
     [[maybe_unused]] std::uint8_t auStack_28[8]{};
     [[maybe_unused]] std::uint8_t auStack_20[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -15416,14 +15656,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bab0() noexcept {
     // TODO: resolve the indirect call in body 28: (*pcVar1)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pvVar2 != (void *)0x0)
     // TODO: condition expression type not recovered: if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 3) * 8))
-    // TODO: condition expression type not recovered: if ((void *)0x1f < pvVar2)
-    // TODO: call arguments not type-recovered for free: _Memory
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     // body sha256: 00f9d87c5c3dd442817ee050d15d23cb6df8847eb91b207859c39ec9eb78caa7
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021bab0(longlong *param_1)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("void *_Memory;");
@@ -15432,14 +15669,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bab0() noexcept {
             trace.statement("undefined1 auStack_28 [8];");
             trace.statement("undefined1 auStack_20 [24];");
             trace.statement("pvVar2 = (void *)*param_1;");
-            if (trace.condition("if (pvVar2 != (void *)0x0)")) {
+            if (trace.checked_condition("if (pvVar2 != (void *)0x0)", [&]() -> bool { return static_cast<bool>(pvVar2 != (void *)0x0); })) {
                 trace.statement("_Memory = pvVar2;");
                 trace.statement("puVar3 = auStack_28;");
                 if (trace.condition("if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 3) * 8))")) {
                     trace.statement("_Memory = *(void **)((longlong)pvVar2 + -8);");
                     trace.statement("pvVar2 = (void *)((longlong)pvVar2 + (-8 - (longlong)_Memory));");
                     trace.statement("puVar3 = auStack_28;");
-                    if (trace.condition("if ((void *)0x1f < pvVar2)")) {
+                    if (trace.checked_condition("if ((void *)0x1f < pvVar2)", [&]() -> bool { return static_cast<bool>((void *)0x1f < pvVar2); })) {
                         trace.statement("pcVar1 = (code *)swi(0x29);");
                         trace.statement("_Memory = pvVar2;");
                         trace.statement("(*pcVar1)(5);");
@@ -15592,27 +15829,29 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bb30() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021bb30", "FUN_18021bb30");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
+    [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] std::int64_t * plVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
+    [[maybe_unused]] std::int64_t * plVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
+    [[maybe_unused]] std::int64_t * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * plVar11{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021bd4e.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (_Memory == plVar10)
-    // TODO: condition expression type not recovered: if (plVar5 == param_2)
-    // TODO: condition expression type not recovered: while (plVar11 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar11 == param_3)
-    // TODO: condition expression type not recovered: if (plVar5 == param_2)
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for free: plVar10
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("free", plVar10);
     // body sha256: bf03412bf0e9a1b09f4684901627a9075dd842b81b305f5b90f45966802acc4e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021bb30(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("longlong lVar2;");
@@ -15626,7 +15865,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bb30() noexcept {
             trace.statement("longlong *_Memory;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *plVar11;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar2 = *(longlong *)(param_1 + 8);");
@@ -15651,13 +15890,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bb30() noexcept {
                 trace.statement("plVar11 = (longlong *)*_Memory;");
                 trace.statement("free(_Memory);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (_Memory == plVar10)")) {
-                    if (trace.condition("if (plVar5 == param_2)")) {
+                if (trace.checked_condition("if (_Memory == plVar10)", [&]() -> bool { return static_cast<bool>(_Memory == plVar10); })) {
+                    if (trace.checked_condition("if (plVar5 == param_2)", [&]() -> bool { return static_cast<bool>(plVar5 == param_2); })) {
                         trace.statement("*plVar1 = lVar2;");
                         trace.statement("lVar6 = lVar2;");
                     }
                     trace.statement("*plVar8 = lVar6;");
-                    while (trace.loop_condition("while (plVar11 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar11 != param_3)", [&]() -> bool { return static_cast<bool>(plVar11 != param_3); })) {
                         trace.statement("uVar9 = (((((((((ulonglong)*(byte *)(plVar11 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar11 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar11 + 0x12)) * 0x100000001b3 ^");
@@ -15687,7 +15926,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bb30() noexcept {
                 }
                 trace.statement("_Memory = plVar11;");
             } while (trace.loop_condition("while (plVar11 != param_3);"));
-            if (trace.condition("if (plVar5 == param_2)")) {
+            if (trace.checked_condition("if (plVar5 == param_2)", [&]() -> bool { return static_cast<bool>(plVar5 == param_2); })) {
                 trace.statement("*plVar1 = (longlong)plVar11;");
             }
             LAB_18021bd4e: ;
@@ -15828,31 +16067,34 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bd90() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021bd90", "FUN_18021bd90");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
+    [[maybe_unused]] std::int64_t * plVar5{};
+    [[maybe_unused]] std::int64_t * plVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
+    [[maybe_unused]] std::int64_t * plVar8{};
     [[maybe_unused]] std::int64_t lVar9{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * plVar11{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021bfca.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021bfcd.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (plVar5 == plVar10)
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: condition expression type not recovered: while (plVar11 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: call arguments not type-recovered for FUN_18020e450: plVar5 + 8
-    // TODO: call arguments not type-recovered for FUN_18020e450: plVar5 + 4
-    // TODO: call arguments not type-recovered for free: plVar5
-    // TODO: call arguments not type-recovered for FUN_18020e450: plVar10 + 8
-    // TODO: call arguments not type-recovered for FUN_18020e450: plVar10 + 4
-    // TODO: call arguments not type-recovered for free: plVar10
+    trace.call_arguments("FUN_18020e450", plVar5 + 8);
+    trace.call_arguments("FUN_18020e450", plVar5 + 4);
+    trace.call_arguments("free", plVar5);
+    trace.call_arguments("FUN_18020e450", plVar10 + 8);
+    trace.call_arguments("FUN_18020e450", plVar10 + 4);
+    trace.call_arguments("free", plVar10);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 821dbd0e4a4e4e0aae57b92a30132bd60a6a3e4362998a9779442add79f6512f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021bd90(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("longlong lVar2;");
@@ -15865,7 +16107,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bd90() noexcept {
             trace.statement("longlong lVar9;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *plVar11;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar1 = *(longlong *)(param_1 + 8);");
@@ -15888,13 +16130,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021bd90() noexcept {
                 trace.statement("FUN_18020e450(plVar5 + 4);");
                 trace.statement("free(plVar5);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (plVar5 == plVar10)")) {
-                    if (trace.condition("if (plVar4 == param_2)")) {
+                if (trace.checked_condition("if (plVar5 == plVar10)", [&]() -> bool { return static_cast<bool>(plVar5 == plVar10); })) {
+                    if (trace.checked_condition("if (plVar4 == param_2)", [&]() -> bool { return static_cast<bool>(plVar4 == param_2); })) {
                         trace.statement("*plVar6 = lVar1;");
                         trace.statement("lVar9 = lVar1;");
                     }
                     trace.statement("*plVar8 = lVar9;");
-                    while (trace.loop_condition("while (plVar11 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar11 != param_3)", [&]() -> bool { return static_cast<bool>(plVar11 != param_3); })) {
                         trace.statement("lVar9 = ((((((ulonglong)*(byte *)(plVar11 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar11 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar11 + 0x12)) * 0x100000001b3 ^");
@@ -16055,30 +16297,33 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c010() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021c010", "FUN_18021c010");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::int64_t * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar9{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * local_a8{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021c130.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021c138.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (_Memory == plVar10)
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: condition expression type not recovered: while (plVar9 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: call arguments not type-recovered for FUN_18020a5a0: _Memory + 4
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for FUN_18020a5a0: plVar10 + 4
-    // TODO: call arguments not type-recovered for free: plVar10
+    trace.call_arguments("FUN_18020a5a0", _Memory + 4);
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("FUN_18020a5a0", plVar10 + 4);
+    trace.call_arguments("free", plVar10);
     trace.call_target("FUN_18020a5a0", reinterpret_cast<const void*>(&image::FUN_18020a5a0));
     // body sha256: 897ad1ede9c221a91e33825d8747e291d21eab67cab86b11766879b5ac954af7
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021c010(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("longlong lVar2;");
@@ -16092,7 +16337,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c010() noexcept {
             trace.statement("longlong *plVar9;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *local_a8;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar1 = *(longlong *)(param_1 + 8);");
@@ -16114,13 +16359,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c010() noexcept {
                 trace.statement("FUN_18020a5a0(_Memory + 4);");
                 trace.statement("free(_Memory);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (_Memory == plVar10)")) {
-                    if (trace.condition("if (plVar4 == param_2)")) {
+                if (trace.checked_condition("if (_Memory == plVar10)", [&]() -> bool { return static_cast<bool>(_Memory == plVar10); })) {
+                    if (trace.checked_condition("if (plVar4 == param_2)", [&]() -> bool { return static_cast<bool>(plVar4 == param_2); })) {
                         trace.statement("*local_a8 = lVar1;");
                         trace.statement("lVar5 = lVar1;");
                     }
                     trace.statement("*plVar7 = lVar5;");
-                    while (trace.loop_condition("while (plVar9 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar9 != param_3)", [&]() -> bool { return static_cast<bool>(plVar9 != param_3); })) {
                         trace.statement("uVar8 = (((((ulonglong)*(byte *)(plVar9 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x12)) * 0x100000001b3 ^");
@@ -16239,7 +16484,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c260() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021c260", "FUN_18021c260");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] void * pvVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::uint8_t * puVar4{};
     [[maybe_unused]] std::uint8_t auStack_28[8]{};
     [[maybe_unused]] std::uint8_t auStack_20[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -16247,13 +16496,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c260() noexcept {
     // TODO: resolve the indirect call in body 43: (*pcVar2)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pvVar1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: pvVar1
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", pvVar1);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     // body sha256: 1a83d5594dbf845755761fa3fe924b89588d859138ecf665f3ae763cd1541ebf
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c260(longlong param_1)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("code *pcVar2;");
@@ -16275,7 +16522,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c260() noexcept {
                 while (trace.checked_loop_condition("while (0 < lVar3)", [&]() -> bool { return static_cast<bool>(0 < lVar3); })) {
                     trace.statement("lVar3 = lVar3 + -1;");
                     trace.statement("pvVar1 = *(void **)(*(longlong *)(param_1 + 8) + lVar3 * 8);");
-                    if (trace.condition("if (pvVar1 != (void *)0x0)")) {
+                    if (trace.checked_condition("if (pvVar1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>(pvVar1 != (void *)0x0); })) {
                         trace.statement("free(pvVar1);");
                     }
                 }
@@ -16348,7 +16595,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c320() noexcept {
     trace.data_ref("DAT_180409e30", static_cast<const void*>(&image::DAT_180409e30));
     // body sha256: fcab448e0fc41a27db7d468a138b73b89c27ea5635baef36bc3f107bbb0630d6
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c320(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409e30,param_1,2,0,0);");
             trace.statement("return;");
@@ -16406,7 +16652,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c350() noexcept {
     trace.data_ref("DAT_180409e20", static_cast<const void*>(&image::DAT_180409e20));
     // body sha256: f2ed1ea88670d3fd63c1b030b92527eda02dfc75ff2610fbbb9ec987b2af34d9
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c350(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409e20,param_1,3,0,1);");
             trace.statement("return;");
@@ -16464,7 +16709,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c380() noexcept {
     trace.data_ref("DAT_180409e10", static_cast<const void*>(&image::DAT_180409e10));
     // body sha256: a85487e66acc86f9e6eb85d758f186370a5d016f0b17330f7785866ad8223432
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c380(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409e10,param_1,2,0,0);");
             trace.statement("return;");
@@ -16522,7 +16766,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c3b0() noexcept {
     trace.data_ref("DAT_180409e00", static_cast<const void*>(&image::DAT_180409e00));
     // body sha256: 088c06af309309a08beca5609ef288e93f4aa2a0360918fb7c39130bb1e0b108
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c3b0(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409e00,param_1,2,0,0);");
             trace.statement("return;");
@@ -16580,7 +16823,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c3e0() noexcept {
     trace.data_ref("DAT_180409df0", static_cast<const void*>(&image::DAT_180409df0));
     // body sha256: 626e0aa70c35a73fb36d0e5230a9909e5bc98f2bf21c7bcf3db8bb2e36505f1b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c3e0(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409df0,param_1,2,0,0);");
             trace.statement("return;");
@@ -16638,7 +16880,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c410() noexcept {
     trace.data_ref("DAT_180409de0", static_cast<const void*>(&image::DAT_180409de0));
     // body sha256: 7f4a4d69e06c8bb36b5a08837fe78fcd6dc9e424413c56bea4dd3b95aace1df4
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c410(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409de0,param_1,2,0,0);");
             trace.statement("return;");
@@ -16696,7 +16937,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c440() noexcept {
     trace.data_ref("DAT_180409dd0", static_cast<const void*>(&image::DAT_180409dd0));
     // body sha256: 860d95a9960e33c5de55fac8397be5545b6dd0512d595028caa860e823606430
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c440(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409dd0,param_1,2,0,0);");
             trace.statement("return;");
@@ -16754,7 +16994,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c470() noexcept {
     trace.data_ref("DAT_180409dc0", static_cast<const void*>(&image::DAT_180409dc0));
     // body sha256: 535e64d8ea15aa0c2830030772d966aa12dcc0468edab888b5306de1aa59b33b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c470(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409dc0,param_1,2,1,0);");
             trace.statement("return;");
@@ -16812,7 +17051,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c4a0() noexcept {
     trace.data_ref("DAT_180409fe0", static_cast<const void*>(&image::DAT_180409fe0));
     // body sha256: 9f91a2624e4b940cf63b53c2a95d7d5ec8f616662d9ff9d65a96620aa5c77bb4
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c4a0(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409fe0,param_1,2,0,0);");
             trace.statement("return;");
@@ -16870,7 +17108,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c4d0() noexcept {
     trace.data_ref("DAT_180409fd0", static_cast<const void*>(&image::DAT_180409fd0));
     // body sha256: 60dcc86eeb972f69e10743ff7de0680d511a62cfdf5e0edd7f073f511bc9412d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c4d0(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409fd0,param_1,3,0,1);");
             trace.statement("return;");
@@ -16928,7 +17165,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c500() noexcept {
     trace.data_ref("DAT_180409fc0", static_cast<const void*>(&image::DAT_180409fc0));
     // body sha256: 9fab0090465dec4398b6bc63fcc5afa0c6ca6043fa97cbc7be8a934b0329cdd1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c500(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409fc0,param_1,2,0,0);");
             trace.statement("return;");
@@ -16986,7 +17222,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c530() noexcept {
     trace.data_ref("DAT_180409fb0", static_cast<const void*>(&image::DAT_180409fb0));
     // body sha256: ac1fda5d147f1243850afa24b18504dc5719cd062abd7825bc3b505234bdab2f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c530(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409fb0,param_1,2,0,0);");
             trace.statement("return;");
@@ -17044,7 +17279,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c560() noexcept {
     trace.data_ref("DAT_180409fa0", static_cast<const void*>(&image::DAT_180409fa0));
     // body sha256: 28088c9b4ca622422ef738782cfe4bd07d4702b4514f2e2ff571348ca528244f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c560(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409fa0,param_1,2,0,0);");
             trace.statement("return;");
@@ -17102,7 +17336,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c590() noexcept {
     trace.data_ref("DAT_180409f90", static_cast<const void*>(&image::DAT_180409f90));
     // body sha256: 46274d855235e68e3a3e83e8bd54b818a00d319c7e3884b32c7f52014c71d724
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c590(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409f90,param_1,2,0,0);");
             trace.statement("return;");
@@ -17160,7 +17393,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c5c0() noexcept {
     trace.data_ref("DAT_180409f80", static_cast<const void*>(&image::DAT_180409f80));
     // body sha256: b8b4c19a346af28cf0e615409bfad0d4b565a0204ea8c8132414e8a09fcb7386
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c5c0(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409f80,param_1,2,0,0);");
             trace.statement("return;");
@@ -17218,7 +17450,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c5f0() noexcept {
     trace.data_ref("DAT_180409f70", static_cast<const void*>(&image::DAT_180409f70));
     // body sha256: c2e14e2f4ac0ad67fbda7b1b7ab3063a941e66a2d924a98a8e8082cc9fb5fa5d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c5f0(undefined8 param_1)");
         {
             trace.statement("FUN_180155880(&DAT_180409f70,param_1,2,1,0);");
             trace.statement("return;");
@@ -17297,6 +17528,11 @@ TODO: resolve the indirect call in body 28: (*pcVar1)(5);.)F18021c620U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021c620() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021c620", "FUN_18021c620");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] void* * pcVar1{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] std::uint8_t * puVar3{};
     [[maybe_unused]] std::uint8_t auStack_28[8]{};
     [[maybe_unused]] std::uint8_t auStack_20[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -17304,14 +17540,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c620() noexcept {
     // TODO: resolve the indirect call in body 28: (*pcVar1)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pvVar2 != (void *)0x0)
     // TODO: condition expression type not recovered: if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 1) * 2))
-    // TODO: condition expression type not recovered: if ((void *)0x1f < pvVar2)
-    // TODO: call arguments not type-recovered for free: _Memory
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     // body sha256: 48eec4de33c187cfc92f4a5d51eb1d07e6c832dc67f332f8693ea6ee06a1b891
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c620(longlong *param_1)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("void *_Memory;");
@@ -17320,14 +17553,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c620() noexcept {
             trace.statement("undefined1 auStack_28 [8];");
             trace.statement("undefined1 auStack_20 [24];");
             trace.statement("pvVar2 = (void *)*param_1;");
-            if (trace.condition("if (pvVar2 != (void *)0x0)")) {
+            if (trace.checked_condition("if (pvVar2 != (void *)0x0)", [&]() -> bool { return static_cast<bool>(pvVar2 != (void *)0x0); })) {
                 trace.statement("_Memory = pvVar2;");
                 trace.statement("puVar3 = auStack_28;");
                 if (trace.condition("if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 1) * 2))")) {
                     trace.statement("_Memory = *(void **)((longlong)pvVar2 + -8);");
                     trace.statement("pvVar2 = (void *)((longlong)pvVar2 + (-8 - (longlong)_Memory));");
                     trace.statement("puVar3 = auStack_28;");
-                    if (trace.condition("if ((void *)0x1f < pvVar2)")) {
+                    if (trace.checked_condition("if ((void *)0x1f < pvVar2)", [&]() -> bool { return static_cast<bool>((void *)0x1f < pvVar2); })) {
                         trace.statement("pcVar1 = (code *)swi(0x29);");
                         trace.statement("_Memory = pvVar2;");
                         trace.statement("(*pcVar1)(5);");
@@ -17420,8 +17653,13 @@ TODO: resolve the indirect call in body 33: _Memory = (void *)(*pcVar3)(5);.)F18
 const sf::reconstructed::FunctionTranslation& Function_0x18021c690() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021c690", "FUN_18021c690");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] void* * pcVar3{};
+    [[maybe_unused]] void * _Memory{};
     [[maybe_unused]] std::int64_t lVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
     [[maybe_unused]] std::uint8_t auStack_38[8]{};
     [[maybe_unused]] std::uint8_t auStack_30[24]{};
     [[maybe_unused]] std::int64_t local_18{};
@@ -17430,13 +17668,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c690() noexcept {
     // TODO: resolve the indirect call in body 33: _Memory = (void *)(*pcVar3)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for free: _Memory
+    // TODO: condition expression type not recovered: for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x20)
     trace.call_arguments("FUN_18021e290", lVar4);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18021e290", reinterpret_cast<const void*>(&image::FUN_18021e290));
     // body sha256: 43c27a63a3c8c4bf1bfc41cc86a24f11c91d364241899c32c868b7e5acd6f828
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c690(longlong *param_1)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("void *pvVar2;");
@@ -17450,7 +17688,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c690() noexcept {
             trace.statement("lVar4 = *param_1;");
             if (trace.checked_condition("if (lVar4 != 0)", [&]() -> bool { return static_cast<bool>(lVar4 != 0); })) {
                 trace.statement("lVar1 = param_1[1];");
-                for (auto loop = trace.checked_loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x20)", [&]() -> bool { return static_cast<bool>(lVar4 = lVar4 + 0x20); }); loop.next(); ) {
+                for (auto loop = trace.loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x20)"); loop.next(); ) {
                     trace.statement("FUN_18021e290(lVar4);");
                 }
                 trace.statement("pvVar2 = (void *)*param_1;");
@@ -17548,8 +17786,13 @@ TODO: resolve the indirect call in body 34: (*pcVar3)();.)F18021c730U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021c730() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021c730", "FUN_18021c730");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] void* * pcVar3{};
+    [[maybe_unused]] void * _Memory{};
     [[maybe_unused]] std::int64_t lVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
     [[maybe_unused]] std::uint8_t auStack_38[8]{};
     [[maybe_unused]] std::uint8_t auStack_30[24]{};
     [[maybe_unused]] std::int64_t local_18{};
@@ -17558,13 +17801,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c730() noexcept {
     // TODO: resolve the indirect call in body 34: (*pcVar3)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for free: _Memory
+    // TODO: condition expression type not recovered: for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x28)
     trace.call_arguments("FUN_18020e450", lVar4 + 8);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 4347ef925673be96e5e1d1acdda66c5b6d35bdf954f9fc92163ebb7e8745edfb
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021c730(longlong *param_1)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("void *pvVar2;");
@@ -17578,7 +17821,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c730() noexcept {
             trace.statement("lVar4 = *param_1;");
             if (trace.checked_condition("if (lVar4 != 0)", [&]() -> bool { return static_cast<bool>(lVar4 != 0); })) {
                 trace.statement("lVar1 = param_1[1];");
-                for (auto loop = trace.checked_loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x28)", [&]() -> bool { return static_cast<bool>(lVar4 = lVar4 + 0x28); }); loop.next(); ) {
+                for (auto loop = trace.loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x28)"); loop.next(); ) {
                     trace.statement("FUN_18020e450(lVar4 + 8);");
                 }
                 trace.statement("pvVar2 = (void *)*param_1;");
@@ -17730,30 +17973,33 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c7f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021c7f0", "FUN_18021c7f0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::int64_t * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar9{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * local_a8{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021c910.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021c918.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (_Memory == plVar10)
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: condition expression type not recovered: while (plVar9 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: call arguments not type-recovered for FUN_18020e450: _Memory + 4
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for FUN_18020e450: plVar10 + 4
-    // TODO: call arguments not type-recovered for free: plVar10
+    trace.call_arguments("FUN_18020e450", _Memory + 4);
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("FUN_18020e450", plVar10 + 4);
+    trace.call_arguments("free", plVar10);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: a4e3509a9d97b72fd12151a743048e0427cbc469224828250daccc6f38cdd5bd
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021c7f0(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("longlong lVar2;");
@@ -17767,7 +18013,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c7f0() noexcept {
             trace.statement("longlong *plVar9;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *local_a8;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar1 = *(longlong *)(param_1 + 8);");
@@ -17789,13 +18035,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021c7f0() noexcept {
                 trace.statement("FUN_18020e450(_Memory + 4);");
                 trace.statement("free(_Memory);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (_Memory == plVar10)")) {
-                    if (trace.condition("if (plVar4 == param_2)")) {
+                if (trace.checked_condition("if (_Memory == plVar10)", [&]() -> bool { return static_cast<bool>(_Memory == plVar10); })) {
+                    if (trace.checked_condition("if (plVar4 == param_2)", [&]() -> bool { return static_cast<bool>(plVar4 == param_2); })) {
                         trace.statement("*local_a8 = lVar1;");
                         trace.statement("lVar5 = lVar1;");
                     }
                     trace.statement("*plVar7 = lVar5;");
-                    while (trace.loop_condition("while (plVar9 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar9 != param_3)", [&]() -> bool { return static_cast<bool>(plVar9 != param_3); })) {
                         trace.statement("uVar8 = (((((ulonglong)*(byte *)(plVar9 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x12)) * 0x100000001b3 ^");
@@ -17961,27 +18207,29 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021ca40() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021ca40", "FUN_18021ca40");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
+    [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] std::uint64_t * puVar4{};
+    [[maybe_unused]] std::int64_t * plVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
     [[maybe_unused]] std::int64_t lVar7{};
+    [[maybe_unused]] std::int64_t * plVar8{};
     [[maybe_unused]] std::uint64_t uVar9{};
+    [[maybe_unused]] std::int64_t * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * plVar11{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021cc5e.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (_Memory == plVar10)
-    // TODO: condition expression type not recovered: if (plVar5 == param_2)
-    // TODO: condition expression type not recovered: while (plVar11 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar11 == param_3)
-    // TODO: condition expression type not recovered: if (plVar5 == param_2)
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for free: plVar10
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("free", plVar10);
     // body sha256: c3809f1f47fbf9fe20fb0f5ef0f356e1d2b88f971672698052ff6f8755c95885
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021ca40(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("longlong lVar2;");
@@ -17995,7 +18243,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021ca40() noexcept {
             trace.statement("longlong *_Memory;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *plVar11;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar2 = *(longlong *)(param_1 + 8);");
@@ -18020,13 +18268,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021ca40() noexcept {
                 trace.statement("plVar11 = (longlong *)*_Memory;");
                 trace.statement("free(_Memory);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (_Memory == plVar10)")) {
-                    if (trace.condition("if (plVar5 == param_2)")) {
+                if (trace.checked_condition("if (_Memory == plVar10)", [&]() -> bool { return static_cast<bool>(_Memory == plVar10); })) {
+                    if (trace.checked_condition("if (plVar5 == param_2)", [&]() -> bool { return static_cast<bool>(plVar5 == param_2); })) {
                         trace.statement("*plVar1 = lVar2;");
                         trace.statement("lVar6 = lVar2;");
                     }
                     trace.statement("*plVar8 = lVar6;");
-                    while (trace.loop_condition("while (plVar11 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar11 != param_3)", [&]() -> bool { return static_cast<bool>(plVar11 != param_3); })) {
                         trace.statement("uVar9 = (((((((((ulonglong)*(byte *)(plVar11 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar11 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar11 + 0x12)) * 0x100000001b3 ^");
@@ -18056,7 +18304,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021ca40() noexcept {
                 }
                 trace.statement("_Memory = plVar11;");
             } while (trace.loop_condition("while (plVar11 != param_3);"));
-            if (trace.condition("if (plVar5 == param_2)")) {
+            if (trace.checked_condition("if (plVar5 == param_2)", [&]() -> bool { return static_cast<bool>(plVar5 == param_2); })) {
                 trace.statement("*plVar1 = (longlong)plVar11;");
             }
             LAB_18021cc5e: ;
@@ -18196,30 +18444,33 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021cca0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021cca0", "FUN_18021cca0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::int64_t * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar9{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * local_a8{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021cdbc.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021cdc4.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (_Memory == plVar10)
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: condition expression type not recovered: while (plVar9 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for free: plVar10
     trace.call_arguments("FUN_18020e450");
+    trace.call_arguments("free", _Memory);
     trace.call_arguments("FUN_18020e450");
+    trace.call_arguments("free", plVar10);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 43080a2228f9b521336702076e60f66d96f4a16da15480f0c6ad80c483da383d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021cca0(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("longlong lVar2;");
@@ -18233,7 +18484,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021cca0() noexcept {
             trace.statement("longlong *plVar9;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *local_a8;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar1 = *(longlong *)(param_1 + 8);");
@@ -18255,13 +18506,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021cca0() noexcept {
                 trace.statement("FUN_18020e450();");
                 trace.statement("free(_Memory);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (_Memory == plVar10)")) {
-                    if (trace.condition("if (plVar4 == param_2)")) {
+                if (trace.checked_condition("if (_Memory == plVar10)", [&]() -> bool { return static_cast<bool>(_Memory == plVar10); })) {
+                    if (trace.checked_condition("if (plVar4 == param_2)", [&]() -> bool { return static_cast<bool>(plVar4 == param_2); })) {
                         trace.statement("*local_a8 = lVar1;");
                         trace.statement("lVar5 = lVar1;");
                     }
                     trace.statement("*plVar7 = lVar5;");
-                    while (trace.loop_condition("while (plVar9 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar9 != param_3)", [&]() -> bool { return static_cast<bool>(plVar9 != param_3); })) {
                         trace.statement("uVar8 = (((((ulonglong)*(byte *)(plVar9 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x12)) * 0x100000001b3 ^");
@@ -18363,6 +18614,11 @@ TODO: resolve the indirect call in body 28: (*pcVar1)(5);.)F18021cee0U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021cee0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021cee0", "FUN_18021cee0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] void* * pcVar1{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] std::uint8_t * puVar3{};
     [[maybe_unused]] std::uint8_t auStack_28[8]{};
     [[maybe_unused]] std::uint8_t auStack_20[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -18370,14 +18626,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021cee0() noexcept {
     // TODO: resolve the indirect call in body 28: (*pcVar1)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pvVar2 != (void *)0x0)
     // TODO: condition expression type not recovered: if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 3) * 8))
-    // TODO: condition expression type not recovered: if ((void *)0x1f < pvVar2)
-    // TODO: call arguments not type-recovered for free: _Memory
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     // body sha256: ba889a541a4e220c7ab34130782290d1f9e40da0d11285fe9753d2b3957b6298
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021cee0(longlong *param_1)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("void *_Memory;");
@@ -18386,14 +18639,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021cee0() noexcept {
             trace.statement("undefined1 auStack_28 [8];");
             trace.statement("undefined1 auStack_20 [24];");
             trace.statement("pvVar2 = (void *)*param_1;");
-            if (trace.condition("if (pvVar2 != (void *)0x0)")) {
+            if (trace.checked_condition("if (pvVar2 != (void *)0x0)", [&]() -> bool { return static_cast<bool>(pvVar2 != (void *)0x0); })) {
                 trace.statement("_Memory = pvVar2;");
                 trace.statement("puVar3 = auStack_28;");
                 if (trace.condition("if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 3) * 8))")) {
                     trace.statement("_Memory = *(void **)((longlong)pvVar2 + -8);");
                     trace.statement("pvVar2 = (void *)((longlong)pvVar2 + (-8 - (longlong)_Memory));");
                     trace.statement("puVar3 = auStack_28;");
-                    if (trace.condition("if ((void *)0x1f < pvVar2)")) {
+                    if (trace.checked_condition("if ((void *)0x1f < pvVar2)", [&]() -> bool { return static_cast<bool>((void *)0x1f < pvVar2); })) {
                         trace.statement("pcVar1 = (code *)swi(0x29);");
                         trace.statement("_Memory = pvVar2;");
                         trace.statement("(*pcVar1)(5);");
@@ -18538,27 +18791,30 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021cf60() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021cf60", "FUN_18021cf60");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
+    [[maybe_unused]] std::int64_t * param_3{};
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::int64_t lVar2{};
+    [[maybe_unused]] std::uint64_t * puVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
     [[maybe_unused]] std::int64_t lVar5{};
     [[maybe_unused]] std::int64_t lVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
     [[maybe_unused]] std::uint64_t uVar8{};
+    [[maybe_unused]] std::int64_t * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar9{};
+    [[maybe_unused]] std::int64_t * plVar10{};
+    [[maybe_unused]] std::int64_t * plVar11{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021d051.
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021d055.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 == param_3)
-    // TODO: condition expression type not recovered: if (_Memory == plVar10)
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: condition expression type not recovered: while (plVar9 != param_3)
     // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if (plVar4 == param_2)
-    // TODO: call arguments not type-recovered for free: _Memory
-    // TODO: call arguments not type-recovered for free: plVar10
+    trace.call_arguments("free", _Memory);
+    trace.call_arguments("free", plVar10);
     // body sha256: aeb0d94fafaef9540dea58e9d0661730e8b57b84e11fb1755a77bc7bd1f645ae
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021cf60(longlong param_1,longlong *param_2,longlong *param_3)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("longlong lVar2;");
@@ -18572,7 +18828,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021cf60() noexcept {
             trace.statement("longlong *plVar9;");
             trace.statement("longlong *plVar10;");
             trace.statement("longlong *plVar11;");
-            if (trace.condition("if (param_2 == param_3)")) {
+            if (trace.checked_condition("if (param_2 == param_3)", [&]() -> bool { return static_cast<bool>(param_2 == param_3); })) {
                 trace.statement("return param_3;");
             }
             trace.statement("lVar1 = *(longlong *)(param_1 + 8);");
@@ -18593,13 +18849,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021cf60() noexcept {
                 trace.statement("plVar9 = (longlong *)*_Memory;");
                 trace.statement("free(_Memory);");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
-                if (trace.condition("if (_Memory == plVar10)")) {
-                    if (trace.condition("if (plVar4 == param_2)")) {
+                if (trace.checked_condition("if (_Memory == plVar10)", [&]() -> bool { return static_cast<bool>(_Memory == plVar10); })) {
+                    if (trace.checked_condition("if (plVar4 == param_2)", [&]() -> bool { return static_cast<bool>(plVar4 == param_2); })) {
                         trace.statement("*plVar11 = lVar1;");
                         trace.statement("lVar5 = lVar1;");
                     }
                     trace.statement("*plVar7 = lVar5;");
-                    while (trace.loop_condition("while (plVar9 != param_3)")) {
+                    while (trace.checked_loop_condition("while (plVar9 != param_3)", [&]() -> bool { return static_cast<bool>(plVar9 != param_3); })) {
                         trace.statement("uVar8 = (((((ulonglong)*(byte *)(plVar9 + 2) ^ 0xcbf29ce484222325) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x11)) * 0x100000001b3 ^");
                         trace.statement("(ulonglong)*(byte *)((longlong)plVar9 + 0x12)) * 0x100000001b3 ^");
@@ -18717,7 +18973,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d150() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d150", "FUN_18021d150");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] void * pvVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::uint8_t * puVar4{};
     [[maybe_unused]] std::uint8_t auStack_28[8]{};
     [[maybe_unused]] std::uint8_t auStack_20[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -18725,13 +18985,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d150() noexcept {
     // TODO: resolve the indirect call in body 43: (*pcVar2)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pvVar1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: pvVar1
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", pvVar1);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     // body sha256: b07264c45c7466b498d520634c74192154b1e742dde9af56a1a7e287dc5621b3
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021d150(longlong param_1)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("code *pcVar2;");
@@ -18753,7 +19011,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d150() noexcept {
                 while (trace.checked_loop_condition("while (0 < lVar3)", [&]() -> bool { return static_cast<bool>(0 < lVar3); })) {
                     trace.statement("lVar3 = lVar3 + -1;");
                     trace.statement("pvVar1 = *(void **)(*(longlong *)(param_1 + 8) + lVar3 * 8);");
-                    if (trace.condition("if (pvVar1 != (void *)0x0)")) {
+                    if (trace.checked_condition("if (pvVar1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>(pvVar1 != (void *)0x0); })) {
                         trace.statement("free(pvVar1);");
                     }
                 }
@@ -18868,7 +19126,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d210() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d210", "FUN_18021d210");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] void * pvVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::uint8_t * puVar4{};
     [[maybe_unused]] std::uint8_t auStack_28[8]{};
     [[maybe_unused]] std::uint8_t auStack_20[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -18876,14 +19138,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d210() noexcept {
     // TODO: resolve the indirect call in body 47: (*pcVar2)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pvVar1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: pvVar1
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", pvVar1);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18006b910", reinterpret_cast<const void*>(&image::FUN_18006b910));
     // body sha256: a4612bd872c79fae8222eb865943e2c54b023414094d7fd15362bd740ea81b1d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021d210(longlong param_1)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("code *pcVar2;");
@@ -18909,7 +19169,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d210() noexcept {
                 while (trace.checked_loop_condition("while (0 < lVar3)", [&]() -> bool { return static_cast<bool>(0 < lVar3); })) {
                     trace.statement("lVar3 = lVar3 + -1;");
                     trace.statement("pvVar1 = *(void **)(*(longlong *)(param_1 + 8) + lVar3 * 8);");
-                    if (trace.condition("if (pvVar1 != (void *)0x0)")) {
+                    if (trace.checked_condition("if (pvVar1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>(pvVar1 != (void *)0x0); })) {
                         trace.statement("free(pvVar1);");
                     }
                 }
@@ -19030,7 +19290,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d310() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d310", "FUN_18021d310");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] void * pvVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::uint8_t * puVar4{};
     [[maybe_unused]] std::uint8_t auStack_38[8]{};
     [[maybe_unused]] std::uint8_t auStack_30[24]{};
     [[maybe_unused]] std::int64_t local_18{};
@@ -19039,18 +19303,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d310() noexcept {
     // TODO: resolve the indirect call in body 53: (*pcVar2)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pvVar1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: pvVar1
-    // TODO: call arguments not type-recovered for free: _Memory
     trace.call_arguments("FUN_18020e450", lVar3 + 0x70);
     trace.call_arguments("FUN_18020e450", lVar3 + 0x50);
     trace.call_arguments("FUN_18020e450", lVar3 + 0x28);
     trace.call_arguments("FUN_18020e450", lVar3 + 8);
+    trace.call_arguments("free", pvVar1);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 15e66fe74187233d372daae2490e03522afce6a52392885c45a3aaa99bf4050e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021d310(longlong param_1)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("code *pcVar2;");
@@ -19082,7 +19344,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d310() noexcept {
                 while (trace.checked_loop_condition("while (0 < lVar3)", [&]() -> bool { return static_cast<bool>(0 < lVar3); })) {
                     trace.statement("lVar3 = lVar3 + -1;");
                     trace.statement("pvVar1 = *(void **)(*(longlong *)(param_1 + 8) + lVar3 * 8);");
-                    if (trace.condition("if (pvVar1 != (void *)0x0)")) {
+                    if (trace.checked_condition("if (pvVar1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>(pvVar1 != (void *)0x0); })) {
                         trace.statement("free(pvVar1);");
                     }
                 }
@@ -19197,7 +19459,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d430() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d430", "FUN_18021d430");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t param_1{};
+    [[maybe_unused]] void * pvVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::int64_t lVar3{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::uint8_t * puVar4{};
     [[maybe_unused]] std::uint8_t auStack_28[8]{};
     [[maybe_unused]] std::uint8_t auStack_20[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -19205,14 +19471,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d430() noexcept {
     // TODO: resolve the indirect call in body 47: (*pcVar2)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pvVar1 != (void *)0x0)
-    // TODO: call arguments not type-recovered for free: pvVar1
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("free", pvVar1);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: eb681891bd085d0a8de2766fe718f30ab0ca36403e653438dce1553562e42322
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021d430(longlong param_1)");
         {
             trace.statement("void *pvVar1;");
             trace.statement("code *pcVar2;");
@@ -19238,7 +19502,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d430() noexcept {
                 while (trace.checked_loop_condition("while (0 < lVar3)", [&]() -> bool { return static_cast<bool>(0 < lVar3); })) {
                     trace.statement("lVar3 = lVar3 + -1;");
                     trace.statement("pvVar1 = *(void **)(*(longlong *)(param_1 + 8) + lVar3 * 8);");
-                    if (trace.condition("if (pvVar1 != (void *)0x0)")) {
+                    if (trace.checked_condition("if (pvVar1 != (void *)0x0)", [&]() -> bool { return static_cast<bool>(pvVar1 != (void *)0x0); })) {
                         trace.statement("free(pvVar1);");
                     }
                 }
@@ -19333,6 +19597,11 @@ TODO: resolve the indirect call in body 29: (*pcVar1)(5);.)F18021d530U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021d530() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d530", "FUN_18021d530");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
+    [[maybe_unused]] void* * pcVar1{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] std::uint8_t * puVar3{};
     [[maybe_unused]] std::uint8_t auStack_28[8]{};
     [[maybe_unused]] std::uint8_t auStack_20[24]{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -19340,16 +19609,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d530() noexcept {
     // TODO: resolve the indirect call in body 29: (*pcVar1)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*param_1 != 0)
     // TODO: condition expression type not recovered: if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 4) << 4))
-    // TODO: condition expression type not recovered: if ((void *)0x1f < pvVar2)
-    // TODO: call arguments not type-recovered for FUN_18022a300: *param_1,param_1[1]
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("FUN_18022a300", *param_1, param_1[1]);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18022a300", reinterpret_cast<const void*>(&image::FUN_18022a300));
     // body sha256: e5e5896df17709e1ea5c5a7369067cbe5ed08d945aab1106dd28dc40f4b1c62b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021d530(longlong *param_1)");
         {
             trace.statement("code *pcVar1;");
             trace.statement("void *_Memory;");
@@ -19357,7 +19623,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d530() noexcept {
             trace.statement("undefined1 *puVar3;");
             trace.statement("undefined1 auStack_28 [8];");
             trace.statement("undefined1 auStack_20 [24];");
-            if (trace.condition("if (*param_1 != 0)")) {
+            if (trace.checked_condition("if (*param_1 != 0)", [&]() -> bool { return static_cast<bool>(*param_1 != 0); })) {
                 trace.statement("FUN_18022a300(*param_1,param_1[1]);");
                 trace.statement("pvVar2 = (void *)*param_1;");
                 trace.statement("_Memory = pvVar2;");
@@ -19366,7 +19632,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d530() noexcept {
                     trace.statement("_Memory = *(void **)((longlong)pvVar2 + -8);");
                     trace.statement("pvVar2 = (void *)((longlong)pvVar2 + (-8 - (longlong)_Memory));");
                     trace.statement("puVar3 = auStack_28;");
-                    if (trace.condition("if ((void *)0x1f < pvVar2)")) {
+                    if (trace.checked_condition("if ((void *)0x1f < pvVar2)", [&]() -> bool { return static_cast<bool>((void *)0x1f < pvVar2); })) {
                         trace.statement("pcVar1 = (code *)swi(0x29);");
                         trace.statement("_Memory = pvVar2;");
                         trace.statement("(*pcVar1)(5);");
@@ -19461,8 +19727,13 @@ TODO: resolve the indirect call in body 34: _Memory = (void *)(*pcVar3)(5);.)F18
 const sf::reconstructed::FunctionTranslation& Function_0x18021d5c0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d5c0", "FUN_18021d5c0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] void* * pcVar3{};
+    [[maybe_unused]] void * _Memory{};
     [[maybe_unused]] std::int64_t lVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
     [[maybe_unused]] std::uint8_t auStack_38[8]{};
     [[maybe_unused]] std::uint8_t auStack_30[24]{};
     [[maybe_unused]] std::int64_t local_18{};
@@ -19471,15 +19742,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d5c0() noexcept {
     // TODO: resolve the indirect call in body 34: _Memory = (void *)(*pcVar3)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for free: _Memory
+    // TODO: condition expression type not recovered: for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x40)
     trace.call_arguments("FUN_18020d5c0", lVar4 + 0x28);
     trace.call_arguments("FUN_18020e450", lVar4);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020d5c0", reinterpret_cast<const void*>(&image::FUN_18020d5c0));
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 4f42a838860e73c80115946b5d94af77fdb7b8bc0503ba785ee8954ed4a04901
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021d5c0(longlong *param_1)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("void *pvVar2;");
@@ -19493,7 +19764,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d5c0() noexcept {
             trace.statement("lVar4 = *param_1;");
             if (trace.checked_condition("if (lVar4 != 0)", [&]() -> bool { return static_cast<bool>(lVar4 != 0); })) {
                 trace.statement("lVar1 = param_1[1];");
-                for (auto loop = trace.checked_loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x40)", [&]() -> bool { return static_cast<bool>(lVar4 = lVar4 + 0x40); }); loop.next(); ) {
+                for (auto loop = trace.loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x40)"); loop.next(); ) {
                     trace.statement("FUN_18020d5c0(lVar4 + 0x28);");
                     trace.statement("FUN_18020e450(lVar4);");
                 }
@@ -19591,8 +19862,13 @@ TODO: resolve the indirect call in body 33: _Memory = (void *)(*pcVar3)(5);.)F18
 const sf::reconstructed::FunctionTranslation& Function_0x18021d670() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d670", "FUN_18021d670");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] void* * pcVar3{};
+    [[maybe_unused]] void * _Memory{};
     [[maybe_unused]] std::int64_t lVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
     [[maybe_unused]] std::uint8_t auStack_38[8]{};
     [[maybe_unused]] std::uint8_t auStack_30[24]{};
     [[maybe_unused]] std::int64_t local_18{};
@@ -19601,13 +19877,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d670() noexcept {
     // TODO: resolve the indirect call in body 33: _Memory = (void *)(*pcVar3)(5);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for free: _Memory
+    // TODO: condition expression type not recovered: for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x20)
     trace.call_arguments("FUN_18020c270", lVar4 + 8);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020c270", reinterpret_cast<const void*>(&image::FUN_18020c270));
     // body sha256: 9ed9709879bf60d3e10e1e8a97e5bd744fbb8d8c03cbc2daf430ff0270c71604
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021d670(longlong *param_1)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("void *pvVar2;");
@@ -19621,7 +19897,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d670() noexcept {
             trace.statement("lVar4 = *param_1;");
             if (trace.checked_condition("if (lVar4 != 0)", [&]() -> bool { return static_cast<bool>(lVar4 != 0); })) {
                 trace.statement("lVar1 = param_1[1];");
-                for (auto loop = trace.checked_loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x20)", [&]() -> bool { return static_cast<bool>(lVar4 = lVar4 + 0x20); }); loop.next(); ) {
+                for (auto loop = trace.loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x20)"); loop.next(); ) {
                     trace.statement("FUN_18020c270(lVar4 + 8);");
                 }
                 trace.statement("pvVar2 = (void *)*param_1;");
@@ -19722,8 +19998,13 @@ TODO: resolve the indirect call in body 36: (*pcVar3)();.)F18021d720U",
 const sf::reconstructed::FunctionTranslation& Function_0x18021d720() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d720", "FUN_18021d720");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::int64_t * param_1{};
     [[maybe_unused]] std::int64_t lVar1{};
+    [[maybe_unused]] void * pvVar2{};
+    [[maybe_unused]] void* * pcVar3{};
+    [[maybe_unused]] void * _Memory{};
     [[maybe_unused]] std::int64_t lVar4{};
+    [[maybe_unused]] std::uint8_t * puVar5{};
     [[maybe_unused]] std::uint8_t auStack_38[8]{};
     [[maybe_unused]] std::uint8_t auStack_30[24]{};
     [[maybe_unused]] std::int64_t local_18{};
@@ -19732,16 +20013,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d720() noexcept {
     // TODO: resolve the indirect call in body 36: (*pcVar3)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for free: _Memory
+    // TODO: condition expression type not recovered: for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x68)
     trace.call_arguments("FUN_18020e450", lVar4 + 0x48);
     trace.call_arguments("FUN_18020d5c0", lVar4 + 0x28);
     trace.call_arguments("FUN_18020e450", lVar4 + 8);
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18020d5c0", reinterpret_cast<const void*>(&image::FUN_18020d5c0));
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     // body sha256: 1965dc7de59d44ad7a8a8cf7fb48a69237151a97d48cae6a25d8aa6e0bee0972
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_18021d720(longlong *param_1)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("void *pvVar2;");
@@ -19755,7 +20036,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d720() noexcept {
             trace.statement("lVar4 = *param_1;");
             if (trace.checked_condition("if (lVar4 != 0)", [&]() -> bool { return static_cast<bool>(lVar4 != 0); })) {
                 trace.statement("lVar1 = param_1[1];");
-                for (auto loop = trace.checked_loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x68)", [&]() -> bool { return static_cast<bool>(lVar4 = lVar4 + 0x68); }); loop.next(); ) {
+                for (auto loop = trace.loop("for (; local_18 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x68)"); loop.next(); ) {
                     trace.statement("FUN_18020e450(lVar4 + 0x48);");
                     trace.statement("FUN_18020d5c0(lVar4 + 0x28);");
                     trace.statement("FUN_18020e450(lVar4 + 8);");
@@ -19942,7 +20223,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d7f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d7f0", "FUN_18021d7f0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
+    [[maybe_unused]] std::int64_t * plVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
+    [[maybe_unused]] std::int64_t * plVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar8{};
     [[maybe_unused]] std::int64_t lVar9{};
     [[maybe_unused]] std::uint8_t auStack_58[32]{};
     [[maybe_unused]] std::uint64_t local_38{};
@@ -19952,18 +20242,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d7f0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fac70.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while (plVar4 != plVar3)
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar8 + 0x19) == '\0')
     // TODO: condition expression type not recovered: while ((plVar4 = plVar7, cVar1 == '\0' && (plVar8 == (longlong *)plVar4[2])))
     // TODO: condition expression type not recovered: if ((plVar2 == (longlong *)*DAT_1803fac68) && (*(char *)((longlong)plVar3 + 0x19) != '\0'))
-    // TODO: condition expression type not recovered: while (plVar2 != plVar3)
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar4 + 0x19) == '\0')
     // TODO: condition expression type not recovered: while ((plVar8 = plVar7, cVar1 == '\0' && (plVar4 == (longlong *)plVar8[2])))
     // TODO: condition expression type not recovered: while ((plVar5 = plVar7, cVar1 == '\0' && (plVar4 == (longlong *)plVar5[2])))
-    // TODO: call arguments not type-recovered for FUN_180214c40: &DAT_1803fac68,&DAT_1803fac68,plVar2[2]
-    // TODO: call arguments not type-recovered for free: plVar2
-    // TODO: call arguments not type-recovered for FUN_18022e0e0: &DAT_1803fac68,plVar2
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("FUN_180214c40", &image::DAT_1803fac68, &image::DAT_1803fac68, plVar2[2]);
+    trace.call_arguments("free", plVar2);
+    trace.call_arguments("FUN_18022e0e0", &image::DAT_1803fac68, plVar2);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_180214c40", reinterpret_cast<const void*>(&image::FUN_180214c40));
     trace.call_target("FUN_18022e0e0", reinterpret_cast<const void*>(&image::FUN_18022e0e0));
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
@@ -19971,7 +20259,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d7f0() noexcept {
     trace.data_ref("DAT_1803fac70", static_cast<const void*>(&image::DAT_1803fac70));
     // body sha256: 92384b483cf4fb8d0dfc09f49e43ee0adbc140bce2da9e466b137732106b807b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong FUN_18021d7f0(undefined8 param_1,longlong *param_2)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -19991,7 +20278,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d7f0() noexcept {
             trace.statement("lVar9 = 0;");
             trace.statement("plVar3 = (longlong *)param_2[1];");
             trace.statement("plVar4 = plVar2;");
-            while (trace.loop_condition("while (plVar4 != plVar3)")) {
+            while (trace.checked_loop_condition("while (plVar4 != plVar3)", [&]() -> bool { return static_cast<bool>(plVar4 != plVar3); })) {
                 trace.statement("plVar8 = (longlong *)plVar4[2];");
                 trace.statement("lVar9 = lVar9 + 1;");
                 if (trace.condition("if (*(char *)((longlong)plVar8 + 0x19) == '\\0')")) {
@@ -20029,7 +20316,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d7f0() noexcept {
                 trace.statement("puVar6[2] = puVar6;");
                 trace.statement("DAT_1803fac70 = 0;");
             } else {
-            while (trace.loop_condition("while (plVar2 != plVar3)")) {
+            while (trace.checked_loop_condition("while (plVar2 != plVar3)", [&]() -> bool { return static_cast<bool>(plVar2 != plVar3); })) {
                 trace.statement("plVar4 = (longlong *)plVar2[2];");
                 if (trace.condition("if (*(char *)((longlong)plVar4 + 0x19) == '\\0')")) {
                     trace.statement("cVar1 = *(char *)(*plVar4 + 0x19);");
@@ -20236,7 +20523,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d9b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021d9b0", "FUN_18021d9b0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
+    [[maybe_unused]] std::int64_t * plVar3{};
+    [[maybe_unused]] std::int64_t * plVar4{};
+    [[maybe_unused]] std::int64_t * plVar5{};
+    [[maybe_unused]] std::uint64_t * puVar6{};
+    [[maybe_unused]] std::int64_t * plVar7{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar8{};
     [[maybe_unused]] std::int64_t lVar9{};
     [[maybe_unused]] std::uint8_t auStack_58[32]{};
     [[maybe_unused]] std::uint64_t local_38{};
@@ -20246,18 +20542,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d9b0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fa7f8.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while (plVar4 != plVar3)
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar8 + 0x19) == '\0')
     // TODO: condition expression type not recovered: while ((plVar4 = plVar7, cVar1 == '\0' && (plVar8 == (longlong *)plVar4[2])))
     // TODO: condition expression type not recovered: if ((plVar2 == (longlong *)*DAT_1803fa7f0) && (*(char *)((longlong)plVar3 + 0x19) != '\0'))
-    // TODO: condition expression type not recovered: while (plVar2 != plVar3)
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar4 + 0x19) == '\0')
     // TODO: condition expression type not recovered: while ((plVar8 = plVar7, cVar1 == '\0' && (plVar4 == (longlong *)plVar8[2])))
     // TODO: condition expression type not recovered: while ((plVar5 = plVar7, cVar1 == '\0' && (plVar4 == (longlong *)plVar5[2])))
-    // TODO: call arguments not type-recovered for FUN_180214c40: &DAT_1803fa7f0,&DAT_1803fa7f0,plVar2[2]
-    // TODO: call arguments not type-recovered for free: plVar2
-    // TODO: call arguments not type-recovered for FUN_18022e0e0: &DAT_1803fa7f0,plVar2
-    // TODO: call arguments not type-recovered for free: _Memory
+    trace.call_arguments("FUN_180214c40", &image::DAT_1803fa7f0, &image::DAT_1803fa7f0, plVar2[2]);
+    trace.call_arguments("free", plVar2);
+    trace.call_arguments("FUN_18022e0e0", &image::DAT_1803fa7f0, plVar2);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_180214c40", reinterpret_cast<const void*>(&image::FUN_180214c40));
     trace.call_target("FUN_18022e0e0", reinterpret_cast<const void*>(&image::FUN_18022e0e0));
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
@@ -20265,7 +20559,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d9b0() noexcept {
     trace.data_ref("DAT_1803fa7f8", static_cast<const void*>(&image::DAT_1803fa7f8));
     // body sha256: 0584387e92214904040556a7b89361d5d2fbeca090547c47175c0bc281577ba0
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong FUN_18021d9b0(undefined8 param_1,longlong *param_2)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -20285,7 +20578,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d9b0() noexcept {
             trace.statement("lVar9 = 0;");
             trace.statement("plVar3 = (longlong *)param_2[1];");
             trace.statement("plVar4 = plVar2;");
-            while (trace.loop_condition("while (plVar4 != plVar3)")) {
+            while (trace.checked_loop_condition("while (plVar4 != plVar3)", [&]() -> bool { return static_cast<bool>(plVar4 != plVar3); })) {
                 trace.statement("plVar8 = (longlong *)plVar4[2];");
                 trace.statement("lVar9 = lVar9 + 1;");
                 if (trace.condition("if (*(char *)((longlong)plVar8 + 0x19) == '\\0')")) {
@@ -20323,7 +20616,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021d9b0() noexcept {
                 trace.statement("puVar6[2] = puVar6;");
                 trace.statement("DAT_1803fa7f8 = 0;");
             } else {
-            while (trace.loop_condition("while (plVar2 != plVar3)")) {
+            while (trace.checked_loop_condition("while (plVar2 != plVar3)", [&]() -> bool { return static_cast<bool>(plVar2 != plVar3); })) {
                 trace.statement("plVar4 = (longlong *)plVar2[2];");
                 if (trace.condition("if (*(char *)((longlong)plVar4 + 0x19) == '\\0')")) {
                     trace.statement("cVar1 = *(char *)(*plVar4 + 0x19);");
@@ -20438,20 +20731,23 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021db70() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021db70", "FUN_18021db70");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t * param_2{};
     [[maybe_unused]] char cVar1{};
+    [[maybe_unused]] std::int64_t * plVar2{};
+    [[maybe_unused]] void * _Memory{};
+    [[maybe_unused]] std::int64_t * plVar3{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fa7f0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (*(char *)((longlong)plVar3 + 0x19) == '\0')
     // TODO: condition expression type not recovered: while ((plVar3 = plVar2, cVar1 == '\0' && (param_2 == (longlong *)plVar3[2])))
-    // TODO: call arguments not type-recovered for free: _Memory
     trace.call_arguments("FUN_18022e0e0", &image::DAT_1803fa7f0);
+    trace.call_arguments("free", _Memory);
     trace.call_target("FUN_18022e0e0", reinterpret_cast<const void*>(&image::FUN_18022e0e0));
     trace.data_ref("DAT_1803fa7f0", static_cast<const void*>(&image::DAT_1803fa7f0));
     // body sha256: f28a294e59e7af7ec84f68c53f52adef1336ee9739c7ff2d70d92770392dee05
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("longlong * FUN_18021db70(undefined8 param_1,longlong *param_2)");
         {
             trace.statement("char cVar1;");
             trace.statement("longlong *plVar2;");
@@ -20567,6 +20863,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 const sf::reconstructed::FunctionTranslation& Function_0x18021dbf0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18021dbf0", "FUN_18021dbf0");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint32_t * param_1{};
     [[maybe_unused]] std::uint64_t uVar1{};
     [[maybe_unused]] std::uint32_t uVar2{};
     [[maybe_unused]] std::uint32_t uVar3{};
@@ -20576,12 +20873,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021dbf0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*param_1 == 0x270)
     trace.call_arguments("FUN_18022e630");
     trace.call_target("FUN_18022e630", reinterpret_cast<const void*>(&image::FUN_18022e630));
     // body sha256: 088bc6b5ef8f215f23c313005fc0d1fef44466dd2b6e559a323e8ca391d41501
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("uint FUN_18021dbf0(uint *param_1)");
         {
             trace.statement("ulonglong uVar1;");
             trace.statement("uint uVar2;");
@@ -20590,7 +20885,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021dbf0() noexcept {
             trace.statement("uint uVar5;");
             trace.statement("ulonglong uVar6;");
             trace.statement("uVar6 = 0x270;");
-            if (trace.condition("if (*param_1 == 0x270)")) {
+            if (trace.checked_condition("if (*param_1 == 0x270)", [&]() -> bool { return static_cast<bool>(*param_1 == 0x270); })) {
                 do {
                     trace.statement("uVar3 = param_1[uVar6 - 0x26e];");
                     trace.statement("uVar4 = param_1[uVar6 - 0x26d];");

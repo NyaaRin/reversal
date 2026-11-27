@@ -177,17 +177,22 @@ timeout addresses.
 
 `src/reconstructed/` covers **7,656/7,656 inventory functions** with compiled
 C++17 accessors: **0 unmapped, 0 stubs**. `re/tools/gen_reconstructed_source.py`
-deterministically writes 60 chunks (84,610,023 bytes; 80.69 MiB) and
+deterministically writes 60 chunks (84,611,836 bytes; 80.69 MiB) and
 `src/reconstructed/coverage.tsv`; every address maps to a chunk source file and
-a unique `Function_0x...` accessor. The accessors contain **442,104 executable
-statement/reference lines**, **312,958 `trace.statement` calls**, **49,305 real
+a unique `Function_0x...` accessor. The accessors contain **447,762 executable
+statement/reference lines**, **306,161 `trace.statement` calls**, **49,305 real
 C++ `if`/`else`/loop/`switch` control nodes**, **7,732 actual string-literal
 calls**, plus resolved references to **4,331 extern call thunks** and **4,494
 extern data-table symbols** in `src/reconstructed/symbols.h`. Recovered
-local/parameter declarations feed **20,387 compiler-checked condition
-expressions** and **25,664 `trace.call_arguments` sites**; **21,960 condition
-sites** and **29,156 call-argument sites** remain explicit TODOs because their
+local/parameter declarations feed **24,144 compiler-checked condition
+expressions** and **38,119 `trace.call_arguments` sites**; **17,991 condition
+sites** and **16,561 call-argument sites** remain explicit TODOs because their
 types or referenced entities are not recoverable from the available evidence.
+The recovery now includes Ghidra pointer declarations written without a space
+after `*`, pure string-literal arguments, and conservative pointer/scalar and
+pointer-depth checks. The generator skips function-signature pseudo-calls and
+rejects assignment expressions; it replaces chunks atomically and never clears
+the previous chunk set before a complete new one is ready.
 The complete decompiler body remains as a SHA-256-verified audit payload and is
 not the executable accessor payload.
 

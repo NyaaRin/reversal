@@ -57,7 +57,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802dfe40() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 3836e8969e177d970e3b4d37d059dd12c1a2eb7d12790b21d5b9edfded6c1dea
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802dfe40(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
@@ -112,7 +111,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802dfee6() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 84928e342bba7b121f1c73d6a7fff6fa88210673803f43e8668543215b6657e7
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802dfee6(void)");
         {
             trace.statement("return 0;");
         }
@@ -162,7 +160,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0000() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 5f3098ecac2b885aa1e58b2fd77880d5ed590dde761e0335b6bbd7030ca1d0a3
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0000(void)");
         {
             trace.statement("return 0;");
         }
@@ -215,7 +212,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0020() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 18b93ab2963cd0adb6458b1abd8956babfbf1ca3903748891083de184c500f4d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0020(void)");
         {
             trace.statement("*(uint *)(*(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8) + 0x1fa0)");
             trace.statement("= *(uint *)(*(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8) +");
@@ -271,7 +267,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0077() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 02be03d4e3d65c79a4f9c2960105c7b5a4451ffcf8d2307cf7218ba47e5afb48
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0077(void)");
         {
             trace.statement("*(uint *)(*(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8) + 0x1fa0)");
             trace.statement("= *(uint *)(*(longlong *)((longlong)ThreadLocalStoragePointer + (ulonglong)_tls_index * 8) +");
@@ -324,7 +319,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e00ce() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 9481a81a5d8684292f084e073e496cc1c93a87a9b679e211b6869bbdcfc45855
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e00ce(void)");
         {
             trace.statement("return 0;");
         }
@@ -380,13 +374,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0100() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::int64_t param_2{};
+    [[maybe_unused]] std::uint64_t * puVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < (ulonglong)puVar1[3])
     // body sha256: 990cad04f937242c48babd67d7884cceaefa3a59ffee7468833b77bd1d12b209
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0100(undefined8 param_1,longlong param_2)");
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("puVar1 = *(undefined8 **)(param_2 + 0x20);");
@@ -443,7 +437,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0140() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: a5915c743a6baca139bc0c71ed32a61ba7afcb6fd3d3d9ede05facd698e4bb00
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0140(void)");
         {
             trace.statement("return 0;");
         }
@@ -501,7 +494,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e015e() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x30);
     // body sha256: 524b3439572e916d83af9d0b91dac4d34654237e1386c157a58c5d572a4a9639
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e015e(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
@@ -555,7 +547,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0184() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 6baac5cac734d3c507937f812c06f6d5379f86d4ce3d1d171530d4cd0acdc922
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0184(void)");
         {
             trace.statement("return 0;");
         }
@@ -605,7 +596,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e01a2() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 68bccd3a5683322b2901ad4ca7b75697515748023327829e03b13665d29e6296
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e01a2(void)");
         {
             trace.statement("return 0;");
         }
@@ -661,13 +651,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e01e8() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::int64_t param_2{};
+    [[maybe_unused]] std::uint8_t * puVar1{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (0xf < *(ulonglong *)(param_2 + 200))
     // body sha256: e8f7794a2af00585eb7c0ea338087d4279bf2d5bc204c8b7b2d93209c3452514
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e01e8(undefined8 param_1,longlong param_2)");
         {
             trace.statement("undefined1 *puVar1;");
             trace.statement("*(undefined8 *)(param_2 + 0xc0) = 0;");
@@ -724,7 +714,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0237() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: d3ad10b4734c889c7e587182a9077d9a3f8ec2fd3fe763d723eb577974799171
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0237(void)");
         {
             trace.statement("return 0;");
         }
@@ -774,7 +763,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0255() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 4daa2f201f9fc5f157cd3205ee03da4dbafc9d140aed4194d62e107c23dfcc48
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0255(void)");
         {
             trace.statement("return 0;");
         }
@@ -824,7 +812,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0297() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: de7074940c182c1ae6a88da56a822e4ef964a7b63b435351f91c950cd09b6565
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0297(void)");
         {
             trace.statement("return 0;");
         }
@@ -878,7 +865,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e02b5() noexcept {
     trace.data_ref("DAT_180427638", static_cast<const void*>(&image::DAT_180427638));
     // body sha256: ed87ba3eabf759b7256d34759a0bb3840c2768b194a9dd8ccbcdb1a6a023ad21
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e02b5(void)");
         {
             trace.statement("DAT_180427638 = DAT_180427638 & 0xfffffffe;");
             trace.statement("return;");
@@ -933,7 +919,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e02cb() noexcept {
     trace.data_ref("DAT_180427638", static_cast<const void*>(&image::DAT_180427638));
     // body sha256: 2342424fccc158c841fca08a8f25516e24d4da41e992b88114d162a775d62cb2
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e02cb(void)");
         {
             trace.statement("DAT_180427638 = DAT_180427638 & 0xfffffffd;");
             trace.statement("return;");
@@ -984,7 +969,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e02e1() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 4f0a46a8c6cef287a3c186bc0ff20ee9ead6100f8254f8ccd68989ab8a31f7c0
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e02e1(void)");
         {
             trace.statement("return 0;");
         }
@@ -1034,7 +1018,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e030b() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 255941e866e30a3d2ee3a38c57ed5d3f952754d97dca18e1ec80d50d25052f9f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e030b(void)");
         {
             trace.statement("return 0;");
         }
@@ -1084,7 +1067,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0335() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 56a11b05818b8712125165de7527d44ccfa0bc7efbb9ae72b74f1ac67518eae3
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0335(void)");
         {
             trace.statement("return 0;");
         }
@@ -1142,7 +1124,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0360() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 84282d34c09832ca1e14a8609e0ee0d37ed7e0eff81802f8072db90480e68b55
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0360(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
@@ -1196,7 +1177,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0392() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: bf0d8763bf21de11bb14d72ccbac860c6138fa4e9aad24985e9186e8f6f138e3
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0392(void)");
         {
             trace.statement("return 0;");
         }
@@ -1254,6 +1234,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e03bc() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::int64_t param_2{};
+    [[maybe_unused]] std::int64_t * plVar1{};
+    [[maybe_unused]] void* * pcVar2{};
     [[maybe_unused]] std::uint32_t uVar3{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: resolve the indirect call in body 15: pcVar2 = (code *)((undefined8 *)*plVar1)[2];.
@@ -1263,7 +1245,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e03bc() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 79d5fd9c43bb93eeeddd9b91e9798ded092cb951a1ef6e197516b89d8c083de4
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e03bc(undefined8 param_1,longlong param_2)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("code *pcVar2;");
@@ -1320,7 +1301,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e03f6() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: d9e09d5d886fd19cbb3aadbf9b373fb92e5efb1f0f1a51c79e5684bc5e22c635
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e03f6(void)");
         {
             trace.statement("return 0;");
         }
@@ -1370,7 +1350,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0478() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 26e4254940150de97054165c8cbadb95c3935d1b51700b824e6f5f6f84daf414
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0478(void)");
         {
             trace.statement("return 0;");
         }
@@ -1429,7 +1408,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e04a0() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: aadf9bf86829274ef9fb8d26601a4c13307eb7897f2aca0f649a2b12e0d06334
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e04a0(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x24) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x24) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xfffffffe;");
@@ -1492,7 +1470,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e04c6() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: 93467921183c6b50bfa2ff09ff28df46e67835489b0014e161d23c1e46b6d0b3
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e04c6(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x24) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x24) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xfffffffd;");
@@ -1546,7 +1523,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0504() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: bef743343244cc628e321a9940944248ee7bc7855dbafe416f61782b109cc0b9
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0504(void)");
         {
             trace.statement("return 0;");
         }
@@ -1596,7 +1572,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0522() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 2672782e2dfd18caf4fc50567cafa48da0424579f95fd063cb53137c51f274ec
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0522(void)");
         {
             trace.statement("return 0;");
         }
@@ -1654,7 +1629,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0540() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 1aae9a189f19919c357ddb04c85ae8cdba48ca4c27082ed20f4a0fc0175f60c4
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0540(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
@@ -1716,7 +1690,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0566() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 4eda154bb2edc9c083a93ff0176d980eaeb0d2bc2f2f24e4a11637c39dda5449
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0566(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
@@ -1770,7 +1743,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e059c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: ed0c915c338f1d56300a933c733709fa2d5cf81cf17a7c65a315f09691696a38
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e059c(void)");
         {
             trace.statement("return 0;");
         }
@@ -1824,7 +1796,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e05c0() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: 6cfd568871b643959d392f809b144116b65c26aa132e6202a365cbdce2e5d34e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e05c0(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -1879,7 +1850,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e05d6() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: 1b20ca12497d508a744de49a6e8d8a7bdbef0f367b871fd6d1d6bffbdec342bc
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e05d6(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -1938,7 +1908,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e05fc() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 2945b44921c3ba6399944ed7d23df8cd3e085478fb6588b5683543fa57ce2f2d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e05fc(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x24) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x24) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xfffffffe;");
@@ -1992,7 +1961,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0622() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: a57cb0963dbf5af7624f7ac83656aa6e08f87f017a80b868c41be980aa0cb083
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0622(void)");
         {
             trace.statement("return 0;");
         }
@@ -2051,7 +2019,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0640() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: a8710cbb0c007268c15fa9681fa68765b0b9d22597dd00964b89ada6331a5649
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0640(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x74) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x74) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x74) = *(uint *)(param_2 + 0x74) & 0xfffffffe;");
@@ -2114,7 +2081,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0669() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: 051f9b0c2c979b1bb2302c0f7ce1c3a3bf6290a67291ea9cb2e64499152be632
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0669(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x74) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x74) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x74) = *(uint *)(param_2 + 0x74) & 0xfffffffd;");
@@ -2168,7 +2134,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e069b() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: c1d0262e146241a3f5121255f00c6c2d41e1f6409ef576eca1f47b671d415196
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e069b(void)");
         {
             trace.statement("return 0;");
         }
@@ -2218,7 +2183,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e06b9() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 94198e353304a863aa9e7f106d5b1a4b9df5ec1a06bb8febf640b0918776366f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e06b9(void)");
         {
             trace.statement("return 0;");
         }
@@ -2268,7 +2232,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e06d7() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 3ee04c0c4fd5e6667e606f0e12deccedf763869df043b77e565781d38b895805
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e06d7(void)");
         {
             trace.statement("return 0;");
         }
@@ -2326,7 +2289,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0700() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 9f0a00cd4c64298f9e272ccf5795c488e7162d1126ed00806c67fa7f4c39f6d1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0700(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
@@ -2380,7 +2342,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e073c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 6e3d03c08b0bfeb481bddfdc6ed060ab50fd192d92a64948e68e3dd0b02ce123
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e073c(void)");
         {
             trace.statement("return 0;");
         }
@@ -2439,7 +2400,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0760() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: f46f0a943149a27d9f9ce8201cf6b0cc07eeb6b5b5ec9d522bc91a945cd65f6b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0760(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffe;");
@@ -2502,7 +2462,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0786() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: d208082d60b8c17df67330374675f098956feeba0e8123714c3e5c2fdac6c469
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0786(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffd;");
@@ -2556,7 +2515,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e07b8() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 0f5a851dada5282e55cad300febad5fa251b59e26fbeca68b56d1ebedc596a01
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e07b8(void)");
         {
             trace.statement("return 0;");
         }
@@ -2606,7 +2564,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e07d6() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 5a22bd592b1d014bfce3df2817032b8fa56caac30d1b46734b61a99ffab79d4b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e07d6(void)");
         {
             trace.statement("return 0;");
         }
@@ -2665,7 +2622,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0800() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: 2795d5fb410cf2a960dc1651c14bd7b8df0dfd48ff06a5e63667b04756a24373
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0800(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x90) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x90) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x90) = *(uint *)(param_2 + 0x90) & 0xfffffffe;");
@@ -2728,7 +2684,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e082f() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: 7f4a04d5b2a19a275bbcde8a684e88646af503602892adfa1ab72aa30c4682de
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e082f(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x90) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x90) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x90) = *(uint *)(param_2 + 0x90) & 0xfffffffd;");
@@ -2782,7 +2737,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e086a() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 5e4931184ef0e1c05368da383deeb676c9cfa33f9f98900d304906e45a54ac8a
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e086a(void)");
         {
             trace.statement("return 0;");
         }
@@ -2832,7 +2786,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e088e() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 65a5a5aaa9f844e2a4ca21b15c03c8cecb00668ac07f95663e887eac4710fca2
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e088e(void)");
         {
             trace.statement("return 0;");
         }
@@ -2891,7 +2844,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e08c0() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: 4185765cf9d3eee57db27d7c71cea8008a7be8bf39ea7db46c718dfb5d371a83
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e08c0(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x38) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x38) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x38) = *(uint *)(param_2 + 0x38) & 0xfffffffe;");
@@ -2954,7 +2906,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e08e6() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: 9b1ff1e65113e4b49ea0698bf9610e62d20d372ffccc7d583b28c9f0443f59a6
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e08e6(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x38) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x38) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x38) = *(uint *)(param_2 + 0x38) & 0xfffffffd;");
@@ -3008,7 +2959,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0918() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: f6a3e50a68a075d103434767a38f2dbcd8859434bd133578e9aa72678223e04c
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0918(void)");
         {
             trace.statement("return 0;");
         }
@@ -3058,7 +3008,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0936() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 5dec3ef571fa8e6ec4bd71c1012f5194d08d79e20b3dd54b3332577341849501
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0936(void)");
         {
             trace.statement("return 0;");
         }
@@ -3108,7 +3057,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e096c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 8b92b8474d9c0cb08908d2a27874d7f50067c85526cac2592c6fadf3831bfbdd
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e096c(void)");
         {
             trace.statement("return 0;");
         }
@@ -3162,7 +3110,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0990() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: 786973c7297e86bca0148157ad1fac11c3b11f147ec8ab900f3d6cc01ebe38fd
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0990(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -3217,7 +3164,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e09a6() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: b682baab4eb6daa8441e610061a8d023700924d7d9379b396cdd8c838d8bba1b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e09a6(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -3272,7 +3218,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e09bc() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: 2349112b312e0b78cdd1532d2172c285a6f953624ec8f200a1b70578bb5bea74
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e09bc(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -3327,7 +3272,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e09d2() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: f6d3d99c96b6e2ea3e6d019e64d79e640235ae6ef6aee069c46ad8badc512179
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e09d2(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -3382,7 +3326,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e09e8() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: 2271d0143920e4b2010896bd05a42533c3b379d66c2f3ea5d543fddc19f8f632
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e09e8(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -3442,7 +3385,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0a00() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: f6075fbc0521dce2770c89e9d0141c7fdd947cff95a67962a2e5453379cfa9e4
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0a00(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x70) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) & 0xfffffffe;");
@@ -3505,7 +3447,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0a29() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: 6a3e8157d545e764c83b8c014a1ae0a4965e53bd59d3297f087f72ea8d4af656
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0a29(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x70) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x70) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) & 0xfffffffd;");
@@ -3559,7 +3500,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0a5e() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 7065b9668c874c3f4ed8d7128b37c5660f7aaab5fb7dcf5a9da9a0a5a052df55
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0a5e(void)");
         {
             trace.statement("return 0;");
         }
@@ -3609,7 +3549,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0a7c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 3837e0f9cb6e553412bb0541f2303e24d2e1b02bf323e51bd86d65205982489e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0a7c(void)");
         {
             trace.statement("return 0;");
         }
@@ -3659,7 +3598,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0aac() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 6ef20632cdde75ed35150de75bf7f58a98ccb025ab7b6af839777fdb9560d1d6
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0aac(void)");
         {
             trace.statement("return 0;");
         }
@@ -3709,7 +3647,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0adc() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 40cada3c759747e5b859fdc477480e6728b2b8bfdd184d079aa51adb4b467844
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0adc(void)");
         {
             trace.statement("return 0;");
         }
@@ -3762,7 +3699,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0b0c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 9588f2b9a629dc7453145d2f08e12e89ee2c3aba4014a20e945439e03d618e43
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0b0c(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(param_2 + 0x20) = 0;");
             trace.statement("return 0;");
@@ -3813,7 +3749,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0b3c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 7faf0f39433145958b2831987d0c7e606792e25077a66ffc005470357fcf6b62
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0b3c(void)");
         {
             trace.statement("return 0;");
         }
@@ -3871,7 +3806,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0b60() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 610cca9ee2d3a4637aef543177e1ef5e1f632e49e435f28ffe4be0d44f4cf13c
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0b60(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x24) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x24) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xfffffffe;");
@@ -3925,7 +3859,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0b92() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 5cc534f58c83527aad67694358d130ec81c1419aebbef59f4b7f2e9494684ea7
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0b92(void)");
         {
             trace.statement("return 0;");
         }
@@ -3978,7 +3911,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0bc8() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: fdcf14543f73034a715481218261c18c7cc24a72c7496211e03861a1c0ad4a22
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0bc8(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(*(longlong *)(param_2 + 0x38) + 0x10) = 0;");
             trace.statement("return 0;");
@@ -4037,7 +3969,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0bf0() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x48);
     // body sha256: 42b761d20835b0c2c538988a3ad54db6a4d22e596c8434b4a2be51e296864d46
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0bf0(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
@@ -4099,7 +4030,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0c16() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: ad0046d2d2b589bfd327c538a59a3443fb95c0534f2cc11810e9751e33dd7fed
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0c16(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
@@ -4153,7 +4083,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0c58() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 3be3a27d4953b53fce7f0ff6a1f56d8a47e7a315bd458774318b585e801f299f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0c58(void)");
         {
             trace.statement("return 0;");
         }
@@ -4207,7 +4136,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0c80() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: 59e2ccc0fe0f31dc7fe5021838913a43b1fe19b0aee0c8730b7f8fe227cdcd7e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0c80(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -4262,7 +4190,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0c96() noexcept {
     trace.data_ref("DAT_18042f184", static_cast<const void*>(&image::DAT_18042f184));
     // body sha256: cd3cfc4dcbb8510795e2f1fd7f62e137a031879495c54cce16e92da9947b76c0
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0c96(void)");
         {
             trace.statement("DAT_18042f184 = DAT_18042f184 & 0xfffffffe;");
             trace.statement("return;");
@@ -4322,7 +4249,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0cac() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: 27dc9c97c0b22864b63d0bb6173daaff52891de58a5876ba40de998c7de456f2
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0cac(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x48) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x48) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x48) = *(uint *)(param_2 + 0x48) & 0xfffffffe;");
@@ -4385,7 +4311,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0cd2() noexcept {
     trace.call_target("FUN_18001bc60", reinterpret_cast<const void*>(&image::FUN_18001bc60));
     // body sha256: c65de3c3975bb2580c64e056cd0109170b720a165583f63c28169c726b03fe0b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0cd2(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x48) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x48) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x48) = *(uint *)(param_2 + 0x48) & 0xfffffffd;");
@@ -4439,7 +4364,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0d04() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 67872c030b56cb111e594f9b625edcd0e1a51ad8de01ff0ded903dda13565de2
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0d04(void)");
         {
             trace.statement("return 0;");
         }
@@ -4489,7 +4413,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0d22() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: a5d2ba0f140db9d9411ba4efa777b499199bd833747c6904fb678fab775fd6e2
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0d22(void)");
         {
             trace.statement("return 0;");
         }
@@ -4539,7 +4462,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0d4c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 217f8d00fe7daabacd6ddae545c5e4dfcd5dca8a3ad1d026df66986ff9bfbeb6
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0d4c(void)");
         {
             trace.statement("return 0;");
         }
@@ -4589,7 +4511,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0d6a() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: d376618beca3d8fb89cc300ae8cfa43cf496274ef4ba91a4b14df9ebed3c41d2
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0d6a(void)");
         {
             trace.statement("return 0;");
         }
@@ -4639,7 +4560,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0d88() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 6a5150b63b9370e56b9d078d2f064fb401b9c133b2b3903a8b07fb10e773371f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0d88(void)");
         {
             trace.statement("return 0;");
         }
@@ -4689,7 +4609,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0dc8() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 6fdf71570cf036013e0e6c4fe5b50c1a28225e27f977e8f88a539401f0423e2e
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0dc8(void)");
         {
             trace.statement("return 0;");
         }
@@ -4739,7 +4658,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0de6() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: b3a77d271b03ae14e808142d6c1a2bc24ce9221cf8274ee674b2c5106453f38f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0de6(void)");
         {
             trace.statement("return 0;");
         }
@@ -4789,7 +4707,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0e28() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 074cda1d73d302a4733e69c3b782281cc29234f5d7a77f96541451024951c70c
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0e28(void)");
         {
             trace.statement("return 0;");
         }
@@ -4839,7 +4756,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0e68() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: cedf3a33a1b848c38e9feb43025e5497e1ed01a0cf4b94c2c70f275f63455e7f
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0e68(void)");
         {
             trace.statement("return 0;");
         }
@@ -4897,7 +4813,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0e9c() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 4513d099c93cd0bff208470066df9daf22455ab6525b29f6354ff6f449995ffe
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e0e9c(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
@@ -4951,7 +4866,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0ee8() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 4302208e5794f35692829503aa74de3e47fd83a733b9ae721f7379742ac17b6d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0ee8(void)");
         {
             trace.statement("return 0;");
         }
@@ -5001,7 +4915,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0f06() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: efd4adbed3fa40ba04dc4cb91e385e1b17ef32d0d2c69ec5e4ac48293689dad5
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0f06(void)");
         {
             trace.statement("return 0;");
         }
@@ -5051,7 +4964,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0f24() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 7a1464f554f4cf0e122a4d1b9660c5c9c290662d74a3fc5de44f6e8e70d1bb63
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0f24(void)");
         {
             trace.statement("return 0;");
         }
@@ -5101,7 +5013,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0f42() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 6da299f1afbbf2e05e1cf6f46de10674f156c0c1237a54650d05ef8a8485eeb5
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0f42(void)");
         {
             trace.statement("return 0;");
         }
@@ -5151,7 +5062,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0f60() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: df28c20815c98daa538b300f85547780f941eccf777d6b180dd3e58165c5ae60
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0f60(void)");
         {
             trace.statement("return 0;");
         }
@@ -5201,7 +5111,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0f7e() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 44ef1cd531ae003421bf085d4c83833051457a732723c6ae4cb210e9988013cc
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0f7e(void)");
         {
             trace.statement("return 0;");
         }
@@ -5257,13 +5166,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0fac() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803fd040 < 4)
-    // TODO: call arguments not type-recovered for FUN_180014410: "[NS-SEED] EXCEPTION\n"
+    trace.call_arguments("FUN_180014410", "[NS-SEED] EXCEPTION\n");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1803fd040", static_cast<const void*>(&image::DAT_1803fd040));
     trace.string_literal("[NS-SEED] EXCEPTION\\n");
     // body sha256: 88cddea186b5d134754e59438484bfae75e365a2361c6adf92ea77e22384ffde
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e0fac(void)");
         {
             trace.statement("DAT_1803fd040 = DAT_1803fd040 + 1;");
             if (trace.condition("if (DAT_1803fd040 < 4)")) {
@@ -5317,7 +5225,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1008() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 430d2bc9edf4c8e1eb98465f6dba0c57773380388095542d18fab2bef8cafa96
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1008(void)");
         {
             trace.statement("return 0;");
         }
@@ -5367,7 +5274,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e103c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 7bcb46fe8262506477a363e1147514c87cdadcbfeadd7738b23bf2d0224f0361
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e103c(void)");
         {
             trace.statement("return 0;");
         }
@@ -5417,7 +5323,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e106c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: c85824d2833a14382763e545f879daf798aa5764312512fd1c3436698c327f46
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e106c(void)");
         {
             trace.statement("return 0;");
         }
@@ -5467,7 +5372,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e109c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: f76f3966306a69e8adfcdedcefbea207bb697a16425e1872f211b225ffc176c6
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e109c(void)");
         {
             trace.statement("return 0;");
         }
@@ -5517,7 +5421,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e10ba() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 2e6901fdfeee322216a9e7bee09facb6858ca8cb39e0424f411103e5f5d79e2b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e10ba(void)");
         {
             trace.statement("return 0;");
         }
@@ -5567,7 +5470,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e10d8() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: a629151d0bf972c43ec1301c1fbbb6fffefc09ec1440c5d1ef70a5ef4ce81249
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e10d8(void)");
         {
             trace.statement("return 0;");
         }
@@ -5620,7 +5522,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e10f6() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 594005d08afa55f9733c50c5f8efa52471f2e6bda5124301c07afe20d7523587
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e10f6(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(*(longlong *)(param_2 + 0x40) + 0x48) = 0;");
             trace.statement("return 0;");
@@ -5679,7 +5580,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e111c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 3d9828081d3f7959115fed55db6264818434fbfccdfc9c92baaa237a83558f6b
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e111c(undefined8 param_1,longlong param_2)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("lVar1 = *(longlong *)(param_2 + 0x40);");
@@ -5733,7 +5633,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e114d() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 51e85a8168730df32182a980694b9e97bd3d5e056da3954997688f29b8f80552
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e114d(void)");
         {
             trace.statement("return 0;");
         }
@@ -5786,7 +5685,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1170() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 421c92cf57fc683b32bd30dac7124ed3d1fce6f6c70fd282b96f1f8abb08b20d
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1170(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(*(longlong *)(param_2 + 0x30) + 0x54) = 0;");
             trace.statement("return 0;");
@@ -5849,7 +5747,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e11ac() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 92b26f2b1f1d8c29fc180a776f14f7ba9dbcab8c8e955002854662c3ac022c54
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e11ac(undefined8 param_1,longlong param_2)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("*(undefined4 *)(param_2 + 0x7c) = 0;");
@@ -5907,7 +5804,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e120d() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: b078fc260f0709d2a7b74faa211259122c9ad76124bf80ec1348415c5fbbbfab
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e120d(void)");
         {
             trace.statement("return 0;");
         }
@@ -5957,7 +5853,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1248() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 3ebc5822dbb278d369a7f5a762cf5fc77126207c2b055755a82abe5859ccbc22
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1248(void)");
         {
             trace.statement("return 0;");
         }
@@ -6019,7 +5914,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e128c() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 2e5aa80251cb5df352be44cad2c55d88d32894bddcc539fc2becb50370321d44
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e128c(undefined8 param_1,longlong param_2)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("*(undefined4 *)(param_2 + 0x130) = 0;");
@@ -6089,7 +5983,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e12f0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: a20fed6e4f1d3a71c1898c5ea9f77fba2b7b81868b354096683e9643a853a9ab
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e12f0(undefined8 param_1,longlong param_2)");
         {
             trace.statement("longlong lVar1;");
             trace.statement("*(undefined4 *)(param_2 + 0x148) = 0;");
@@ -6147,7 +6040,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1354() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 61421cc54ae6974786d79844c0500abbd18d64cb733d2012dbc8c51cec714205
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1354(void)");
         {
             trace.statement("return 0;");
         }
@@ -6197,7 +6089,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1398() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 5a79749b633f198629090815f0df83b0520e256706700eb6434ba3b386e22b1c
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1398(void)");
         {
             trace.statement("return 0;");
         }
@@ -6255,7 +6146,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e13cc() noexcept {
     trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 8e9e1a3087c129ea1df2cbc48c794692d734dd3977a81ec67865fb2c044520ac
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e13cc(undefined8 param_1,longlong param_2)");
         {
             if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
@@ -6309,7 +6199,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e13f2() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 39d25f2427bf9200a73a0460049f67d4026154c6c42851ae487801086406d932
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e13f2(void)");
         {
             trace.statement("return 0;");
         }
@@ -6362,7 +6251,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1410() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 66e9b94a3b03aae396daf4a19db8c999ccd04578f5693ed91f8255259cffa755
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1410(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined8 *)(param_2 + 0x20) = 0;");
             trace.statement("return 0;");
@@ -6421,6 +6309,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1440() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::int64_t param_2{};
+    [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] std::int32_t iVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: resolve the indirect call in body 14: iVar2 = (**(code **)*plVar1)(plVar1);.
@@ -6429,7 +6318,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1440() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 58ec30314025400f14911de5ff451a22231ee846efb0f89911c5067d35fd9656
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1440(undefined8 param_1,longlong param_2)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("int iVar2;");
@@ -6494,6 +6382,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1490() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::int64_t param_2{};
+    [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] std::int32_t iVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: resolve the indirect call in body 14: iVar2 = (**(code **)*plVar1)(plVar1);.
@@ -6502,7 +6391,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1490() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 4d3b35e1fa8ae1dbf869d2366c76017a8821320bcc3b93be7713dacd80dfa5fb
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1490(undefined8 param_1,longlong param_2)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("int iVar2;");
@@ -6562,7 +6450,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e14ec() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: cca8e5118a28830bfd396153931b46a139f9de00e315731a13aee28ea5cc4338
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e14ec(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(param_2 + 0x20) = 0;");
             trace.statement("return 0;");
@@ -6616,7 +6503,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1528() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 6c9c49e3079bd97daf8870b61fb4df997746c2e9ebad17a6dcb45fe11829428c
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1528(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(param_2 + 0x20) = 0;");
             trace.statement("return 0;");
@@ -6667,7 +6553,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e154a() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 4a082c51febef04d615ba8161c87dadbcf623a073cd9d9dc426d6f4a5a779f31
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e154a(void)");
         {
             trace.statement("return 0;");
         }
@@ -6720,7 +6605,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1580() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: f60b183e0dd45de70c2d8d721238305ac77aebf06eced21aa31adbeb1020dbec
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1580(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(param_2 + 0x20) = 0;");
             trace.statement("return 0;");
@@ -6774,7 +6658,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e15c8() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: ac8121b23227583d2476f2638022d88108b4df07aaac7737e75604eb7a5852ec
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e15c8(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(param_2 + 0x30) = 0;");
             trace.statement("return 0;");
@@ -6828,7 +6711,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1608() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: be95edb663f52d20a2d275a362790bbd5f907a87edb39e30de2e0620300be0b4
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1608(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(param_2 + 0x30) = 0;");
             trace.statement("return 0;");
@@ -6887,6 +6769,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1630() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] std::int64_t param_2{};
+    [[maybe_unused]] std::int64_t * plVar1{};
     [[maybe_unused]] std::int32_t iVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: resolve the indirect call in body 14: iVar2 = (**(code **)*plVar1)(plVar1);.
@@ -6895,7 +6778,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1630() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 4df71529029e2c7b8f5a3e4628ba154280e7ad30fb99af67bf88342f32c86aca
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1630(undefined8 param_1,longlong param_2)");
         {
             trace.statement("longlong *plVar1;");
             trace.statement("int iVar2;");
@@ -6955,7 +6837,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e1698() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 19e2c064bf06bc080a4eb21f36533d8707bfa393b27e00fe55f57abe8ecb97d2
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e1698(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined4 *)(param_2 + 0x38) = 0;");
             trace.statement("return 0;");
@@ -7009,7 +6890,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e16bd() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // body sha256: 5cd32243973441209e6cac585fe231ef9ab7b1a38d20630fc14e3d3b0c7bd1b1
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("undefined8 FUN_1802e16bd(undefined8 param_1,longlong param_2)");
         {
             trace.statement("*(undefined1 *)(param_2 + 0x21) = 0;");
             trace.statement("return 0;");
@@ -7064,7 +6944,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e171c() noexcept {
     trace.data_ref("DAT_18042a8b0", static_cast<const void*>(&image::DAT_18042a8b0));
     // body sha256: 8a655f1942ac28e46a47b0ada92df43e45d4936d1f80551f5b3d6760db867d23
     // Structured control-flow trace derived from the decompiled body:
-        trace.statement("void FUN_1802e171c(void)");
         {
             trace.statement("DAT_18042a8b0 = DAT_18042a8b0 & 0xfffffffe;");
             trace.statement("return;");

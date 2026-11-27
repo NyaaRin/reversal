@@ -16,8 +16,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
-import shutil
 import sys
 from pathlib import Path
 
@@ -41,7 +41,7 @@ CONTROL_RE = re.compile(
 INDIRECT_RE = re.compile(r"\(\s*code\s*\*|\(\s*\*\s*[A-Za-z_][A-Za-z0-9_]*\s*\)\s*\(")
 LABEL_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*):(?!:)(?:\s*(.*))?$")
 DECL_RE = re.compile(
-    r"^\s*([A-Za-z_][A-Za-z0-9_ ]*?\*?)\s+([A-Za-z_][A-Za-z0-9_]*)"
+    r"^\s*([A-Za-z_][A-Za-z0-9_ ]*?)(\s+\*+\s*|\s+)([A-Za-z_][A-Za-z0-9_]*)"
     r"(?:\s*\[\s*(\d+)\s*\])?\s*;\s*$"
 )
 IDENT_RE = re.compile(r"\b[A-Za-z_][A-Za-z0-9_]*\b")
@@ -150,22 +150,29 @@ def recover_declarations(body: str) -> dict[str, tuple[str, int | None]]:
         if not params or params == "void":
             continue
         for param in params.split(","):
-            match = re.match(r"(.+?)\s+([A-Za-z_][A-Za-z0-9_]*)$", param.strip())
+            match = re.match(
+                r"(.+?)(\s+\*+\s*|\s+)([A-Za-z_][A-Za-z0-9_]*)(?:\s*\[\s*(\d+)\s*\])?$",
+                param.strip(),
+            )
             if not match:
                 continue
-            mapped = cpp_type(match.group(1))
-            name = match.group(2)
+            pointer_count = match.group(2).count("*")
+            type_text = match.group(1).strip() + (" " + "*" * pointer_count if pointer_count else "")
+            mapped = cpp_type(type_text)
+            name = match.group(3)
             if mapped and name not in declarations:
-                declarations[name] = (mapped, None)
+                declarations[name] = (mapped, int(match.group(4)) if match.group(4) else None)
 
     for line in lines:
         match = DECL_RE.match(line)
         if not match:
             continue
-        mapped = cpp_type(match.group(1))
-        name = match.group(2)
+        pointer_count = match.group(2).count("*")
+        type_text = match.group(1).strip() + (" " + "*" * pointer_count if pointer_count else "")
+        mapped = cpp_type(type_text)
+        name = match.group(3)
         if mapped and name not in declarations:
-            declarations[name] = (mapped, int(match.group(3)) if match.group(3) else None)
+            declarations[name] = (mapped, int(match.group(4)) if match.group(4) else None)
     return declarations
 
 
@@ -221,14 +228,65 @@ def replace_data_symbols(expr: str, allow_fun: bool = False) -> str | None:
     return TOKEN_RE.sub(replace, expr)
 
 
+C_ESCAPES = {
+    "a": "\a", "b": "\b", "f": "\f", "n": "\n", "r": "\r",
+    "t": "\t", "v": "\v", "\\": "\\", "'": "'", '"': '"', "?": "?",
+}
+
+
+def decode_c_string(raw: str) -> str:
+    result: list[str] = []
+    index = 0
+    while index < len(raw):
+        char = raw[index]
+        if char != "\\" or index + 1 >= len(raw):
+            result.append(char)
+            index += 1
+            continue
+        escape = raw[index + 1]
+        if escape == "x":
+            end = index + 2
+            while end < len(raw) and end < index + 4 and raw[end] in "0123456789abcdefABCDEF":
+                end += 1
+            if end > index + 2:
+                result.append(chr(int(raw[index + 2:end], 16)))
+                index = end
+                continue
+        if escape in "01234567":
+            end = index + 1
+            while end < len(raw) and end < index + 4 and raw[end] in "01234567":
+                end += 1
+            result.append(chr(int(raw[index + 1:end], 8)))
+            index = end
+            continue
+        result.append(C_ESCAPES.get(escape, escape))
+        index += 2
+    return "".join(result)
+
+
+def encode_string_literals(expr: str) -> str:
+    return STRING_RE.sub(lambda match: cpp_string(decode_c_string(match.group(1))), expr)
+
+
+def pointer_shape(type_text: str) -> tuple[str, int] | None:
+    if "*" not in type_text:
+        return None
+    stars = type_text.count("*")
+    base = type_text.replace("*", "").replace("std::", "").strip()
+    return base, stars
+
+
 def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_data: bool) -> str | None:
     expr = expr.strip()
     if not expr or expr in TYPE_WORDS or any(char in expr for char in ";{}"):
         return None
-    # String literals already have their own trace sink; re-emitting them as
-    # raw call arguments would bypass the escaping applied by cpp_string().
     if '"' in expr:
-        return None
+        # A pure literal (or adjacent literals) has a known `const char*`
+        # argument type.  Re-escape it through the same encoder used by the
+        # audit payload instead of rejecting the call site.
+        if not re.fullmatch(r'(?:"(?:[^"\\]|\\.)*"\s*)+', expr):
+            return None
+        return encode_string_literals(expr)
     # A bare `type name` pair is a declaration, not an expression.
     if re.match(r"^[A-Za-z_][A-Za-z0-9_ ]*?\*?\s+[A-Za-z_][A-Za-z0-9_]*$", expr):
         first = expr.split()[0]
@@ -238,6 +296,10 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
         return None
     if expr.count("(") != expr.count(")") or expr.count("[") != expr.count("]"):
         return None
+    # Assignment is not a value-preserving comparison and the decompiler can
+    # place incompatible pointer/scalar pairs on either side of it.
+    if re.search(r"(?<![=!<>])=(?!=)", expr):
+        return None
     if not re.search(r"[A-Za-z0-9_]", expr):
         return None
     if re.search(r"\b\d+[A-Za-z]+\b", expr):
@@ -245,6 +307,14 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
         return None
     if re.search(r"\([^()]*\[[^\]]*\][^()]*\)\s*(?:0x[0-9A-Fa-f]+|\d+|\w+)", expr):
         # C-style casts to array types are not valid C++ expressions.
+        return None
+    if re.search(r"\)\s*\(", expr) and re.search(
+        r"\bcode\b|\b(?:FUN|DAT|SUB|PTR|UNK)_|\bswitchD_|\bcaseD_", expr
+    ):
+        # Calls through a recovered function pointer/data slot have no
+        # signature yet; do not mistake an ordinary cast-plus-group for one.
+        return None
+    if re.search(r"\(\s*\*+\s*[A-Za-z_]", expr) and re.search(r"\)\s*\(", expr):
         return None
 
     identifiers = IDENT_RE.findall(expr)
@@ -275,6 +345,42 @@ def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_
             # and arithmetic on a whole array are not valid C++.
             if not re.search(rf"&\s*{re.escape(name)}\b|\b{re.escape(name)}\s*\[", expr):
                 return None
+        local_pointer = pointer_shape(type_name)
+        if local_pointer or count is not None:
+            for cast_match in re.finditer(rf"\(([^()]*)\)\s*\b{re.escape(name)}\b", expr):
+                cast_type = cpp_type(cast_match.group(1))
+                if cast_type and not pointer_shape(cast_type):
+                    return None
+        if "*" in type_name or "*" in expr:
+            for other_name, (other_type, _) in locals.items():
+                if other_name == name:
+                    continue
+                if name not in expr or other_name not in expr:
+                    continue
+                other_pointer = pointer_shape(other_type)
+                if local_pointer and other_pointer:
+                    if "void" not in local_pointer[0] and "void" not in other_pointer[0] and local_pointer != other_pointer:
+                        comparison = rf"\b{re.escape(name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(name)}\b"
+                        if re.search(comparison, expr):
+                            return None
+                    continue
+                if bool(local_pointer) == bool(other_pointer):
+                    continue
+                comparison = rf"\b{re.escape(name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(other_name)}\b|\b{re.escape(other_name)}\b[^&|]*?(?:<=|>=|==|!=|<|>)[^&|]*?\b{re.escape(name)}\b"
+                if re.search(comparison, expr):
+                    return None
+        if local_pointer:
+            cast_patterns = [
+                rf"\b{re.escape(name)}\b\s*(?:<=|>=|==|!=|<|>)\s*\(([^()]*)\)",
+                rf"\(([^()]*)\)[^()]*?(?:<=|>=|==|!=|<|>)\s*\b{re.escape(name)}\b",
+            ]
+            for pattern in cast_patterns:
+                for cast_match in re.finditer(pattern, expr):
+                    cast_type = cpp_type(cast_match.group(1))
+                    cast_pointer = pointer_shape(cast_type) if cast_type else None
+                    if cast_pointer and "void" not in local_pointer[0] and "void" not in cast_pointer[0]:
+                        if local_pointer != cast_pointer:
+                            return None
     for word in identifiers:
         if word in locals or word in TYPE_WORDS or word in CALL_KEYWORDS:
             continue
@@ -877,6 +983,14 @@ def code_for_translation(body: str) -> list[str]:
             continue
         if stripped.startswith("// signature:") or stripped.startswith("// size="):
             continue
+        # Ghidra sometimes omits `void` entirely, leaving a top-level
+        # `FUN_...(...)` signature line.  Indented calls with the same shape
+        # remain real call sites.
+        if not line[:1].isspace() and re.match(
+            r"^(?:[A-Za-z_][A-Za-z0-9_:<>* ]*\s+)?(?:thunk_)?FUN_[0-9A-Fa-f]+\s*\(.*\)\s*$",
+            stripped,
+        ):
+            continue
         lines.append(line.rstrip())
     return lines
 
@@ -1067,13 +1181,23 @@ def build_accessor(address: str, row: dict[str, str], facts: dict[str, object], 
     )
 
 
+def atomic_write_text(path: Path, text: str) -> None:
+    temporary = path.with_name(path.name + ".tmp")
+    temporary.write_text(text, encoding="utf-8", newline="\n")
+    os.replace(temporary, path)
+
+
 def main() -> int:
     rows = read_rows()
     rows.sort(key=lambda row: int(row["address"], 16))
 
-    if CHUNKS.exists():
-        shutil.rmtree(CHUNKS)
-    CHUNKS.mkdir(parents=True)
+    # Keep the previous complete chunk set live until each replacement is
+    # ready.  An interrupted run therefore leaves runnable files behind
+    # instead of an empty directory; stale chunks are removed only after all
+    # new chunks and the mapping have been written.
+    CHUNKS.mkdir(parents=True, exist_ok=True)
+    for stale in CHUNKS.glob("*.tmp"):
+        stale.unlink()
 
     chunks: dict[int, list[str]] = {}
     coverage_rows: list[str] = []
@@ -1201,7 +1325,7 @@ def main() -> int:
     for name in sorted(data_symbols, key=lambda value: (int(value.split("_")[-1], 16), value)):
         symbol_lines.append(f"extern std::byte {name}[0x20];")
     symbol_lines.extend(["}", "", "}  // namespace sf::reconstructed::image", ""])
-    (OUT / "symbols.h").write_text("\n".join(symbol_lines), encoding="utf-8", newline="\n")
+    atomic_write_text(OUT / "symbols.h", "\n".join(symbol_lines))
 
     for index, lines in chunks.items():
         header = [
@@ -1215,9 +1339,12 @@ def main() -> int:
             "",
         ]
         footer = ["}  // namespace sf::reconstructed", ""]
-        (CHUNKS / f"chunk_{index:03d}.cpp").write_text(
+        chunk_path = CHUNKS / f"chunk_{index:03d}.cpp"
+        temporary = chunk_path.with_name(chunk_path.name + ".tmp")
+        temporary.write_text(
             "\n".join(header + lines + footer), encoding="utf-8", newline="\n"
         )
+        os.replace(temporary, chunk_path)
 
     coverage_header = [
         "address",
@@ -1241,10 +1368,14 @@ def main() -> int:
         "unresolved_call_args",
         "status",
     ]
-    (OUT / "coverage.tsv").write_text(
+    expected_chunks = {f"chunk_{index:03d}.cpp" for index in chunks}
+    for stale in CHUNKS.glob("chunk_*.cpp"):
+        if stale.name not in expected_chunks:
+            stale.unlink()
+
+    atomic_write_text(
+        OUT / "coverage.tsv",
         "\n".join(["\t".join(coverage_header), *coverage_rows]) + "\n",
-        encoding="utf-8",
-        newline="\n",
     )
 
     executable_total = sum(int(row.split("\t")[12]) for row in coverage_rows)
@@ -1282,9 +1413,7 @@ def main() -> int:
         "implementations of the original machine functions.  Hand-translated code under",
         "`src/features/` remains the authoritative executable reconstruction.",
     ]
-    (OUT / "coverage.md").write_text(
-        "\n".join(summary) + "\n", encoding="utf-8", newline="\n"
-    )
+    atomic_write_text(OUT / "coverage.md", "\n".join(summary) + "\n")
 
     print(f"wrote {len(coverage_rows)} compiled accessors in {len(chunks)} chunks")
     print(f"symbols: calls={len(call_symbols)} data={len(data_symbols)}")
