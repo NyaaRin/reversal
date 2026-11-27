@@ -1,0 +1,13621 @@
+// Generated complete-corpus translation chunk.
+// Generator: re/tools/gen_reconstructed_source.py
+#include "../reconstruction.h"
+
+namespace sf::reconstructed {
+
+// 0x1800af7b0 FUN_1800af7b0
+// source: re/dump/decompile/0x1800af7b0_FUN_1800af7b0.c
+// size: 169 bytes; thunk: false
+// body sha256: df7ed10cdd89e04f0bb599201289360a70c0e50ab00ebfbff191f9fdfda15867
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800af7b0{
+    "0x1800af7b0",
+    "FUN_1800af7b0",
+    R"F1800af7b0S(undefined FUN_1800af7b0())F1800af7b0S",
+    R"B1800af7b0(// 0x1800af7b0  FUN_1800af7b0
+// size=169 thunk=false
+// signature: undefined FUN_1800af7b0()
+// status: ok
+
+
+ulonglong FUN_1800af7b0(undefined8 *param_1,undefined4 *param_2)
+
+{
+  undefined4 uVar1;
+  ulonglong uVar2;
+  size_t _Size;
+  char *_Str;
+  int iVar3;
+  ulonglong uVar4;
+  undefined4 extraout_var;
+  undefined8 *_Buf1;
+  undefined **ppuVar5;
+  
+  uVar2 = param_1[3];
+  ppuVar5 = &PTR_s_default_18033a590;
+  _Size = param_1[2];
+  do {
+    _Str = *ppuVar5;
+    uVar4 = strlen(_Str);
+    _Buf1 = param_1;
+    if (0xf < uVar2) {
+      _Buf1 = (undefined8 *)*param_1;
+    }
+    if (_Size == uVar4) {
+      if (_Size == 0) {
+LAB_1800af83b:
+        *param_2 = *(undefined4 *)(ppuVar5 + 1);
+        uVar1 = *(undefined4 *)((longlong)ppuVar5 + 0xc);
+        param_2[1] = uVar1;
+        return CONCAT71((uint7)(uint3)((uint)uVar1 >> 8),1);
+      }
+      iVar3 = memcmp(_Buf1,_Str,_Size);
+      uVar4 = CONCAT44(extraout_var,iVar3);
+      if (iVar3 == 0) goto LAB_1800af83b;
+    }
+    ppuVar5 = ppuVar5 + 2;
+    if (ppuVar5 == &Features::Warp::WarpFeature::vftable_meta_ptr) {
+      *param_2 = 0x3f800000;
+      param_2[1] = 0x3f000000;
+      return uVar4 & 0xffffffffffffff00;
+    }
+  } while( true );
+}
+
+
+)B1800af7b0",
+    "df7ed10cdd89e04f0bb599201289360a70c0e50ab00ebfbff191f9fdfda15867",
+    R"F1800af7b0C()F1800af7b0C",
+    R"F1800af7b0D(LAB_1800af83b)F1800af7b0D",
+    R"F1800af7b0T()F1800af7b0T",
+    R"F1800af7b0F(23: do {
+27: if (0xf < uVar2) {
+30: if (_Size == uVar4) {
+31: if (_Size == 0) {
+32: LAB_1800af83b:
+36: return CONCAT71((uint7)(uint3)((uint)uVar1 >> 8),1);
+40: if (iVar3 == 0) goto LAB_1800af83b;
+43: if (ppuVar5 == &Features::Warp::WarpFeature::vftable_meta_ptr) {
+46: return uVar4 & 0xffffffffffffff00;)F1800af7b0F",
+    R"F1800af7b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800af83b.)F1800af7b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800af7b0() noexcept {
+    return kFunction_0x1800af7b0;
+}
+
+// 0x1800af860 Features_Autowall_SWCSAutowall_vfunc02
+// source: re/dump/decompile/0x1800af860_Features_Autowall_SWCSAutowall_vfunc02.c
+// size: 42 bytes; thunk: false
+// body sha256: 212db30955e819f912dabeba4390708ee3d3eb2ef7374861bbf95bd4e91c7157
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800af860{
+    "0x1800af860",
+    "Features_Autowall_SWCSAutowall_vfunc02",
+    R"F1800af860S(undefined Features_Autowall_SWCSAutowall_vfunc02())F1800af860S",
+    R"B1800af860(// 0x1800af860  Features_Autowall_SWCSAutowall_vfunc02
+// size=42 thunk=false
+// signature: undefined Features_Autowall_SWCSAutowall_vfunc02()
+// status: ok
+
+
+ulonglong Features_Autowall_SWCSAutowall_vfunc02(undefined8 param_1,longlong param_2)
+
+{
+  ulonglong in_RAX;
+  ulonglong uVar1;
+  
+  if (param_2 != 0) {
+    uVar1 = 0;
+    while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_18034785c)[uVar1]) {
+      uVar1 = in_RAX;
+      if (in_RAX == 5) {
+        return 1;
+      }
+    }
+  }
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800af860",
+    "212db30955e819f912dabeba4390708ee3d3eb2ef7374861bbf95bd4e91c7157",
+    R"F1800af860C()F1800af860C",
+    R"F1800af860D(DAT_18034785c)F1800af860D",
+    R"F1800af860T()F1800af860T",
+    R"F1800af860F(13: if (param_2 != 0) {
+15: while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_18034785c)[uVar1]) {
+17: if (in_RAX == 5) {
+18: return 1;
+22: return in_RAX & 0xffffffffffffff00;)F1800af860F",
+    R"F1800af860U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18034785c.)F1800af860U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800af860() noexcept {
+    return kFunction_0x1800af860;
+}
+
+// 0x1800af890 Features_Autowall_SWCSAutowall_vfunc03
+// source: re/dump/decompile/0x1800af890_Features_Autowall_SWCSAutowall_vfunc03.c
+// size: 446 bytes; thunk: false
+// body sha256: 5c1001f4eb06da546b783c58c8501227ae719357cafbc49216199de71fee9dbe
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800af890{
+    "0x1800af890",
+    "Features_Autowall_SWCSAutowall_vfunc03",
+    R"F1800af890S(undefined Features_Autowall_SWCSAutowall_vfunc03())F1800af890S",
+    R"B1800af890(// 0x1800af890  Features_Autowall_SWCSAutowall_vfunc03
+// size=446 thunk=false
+// signature: undefined Features_Autowall_SWCSAutowall_vfunc03()
+// status: ok
+
+
+void Features_Autowall_SWCSAutowall_vfunc03
+               (ulonglong param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+
+{
+  undefined1 *puVar1;
+  undefined1 *puVar2;
+  float *pfVar3;
+  float *pfVar4;
+  char cVar5;
+  undefined4 uVar6;
+  longlong lVar7;
+  ulonglong local_res8;
+  undefined8 local_res10;
+  undefined1 *local_res18;
+  undefined1 *local_res20;
+  float *pfVar8;
+  float *pfVar9;
+  
+  puVar1 = (undefined1 *)(param_1 + 0x20);
+  *puVar1 = 0;
+  puVar2 = (undefined1 *)(param_1 + 0x10);
+  *puVar2 = 0;
+  pfVar3 = (float *)(param_1 + 8);
+  *pfVar3 = 0.0;
+  pfVar4 = (float *)(param_1 + 0xc);
+  *pfVar4 = 0.0;
+  local_res8 = param_1;
+  local_res10 = param_2;
+  local_res18 = puVar1;
+  local_res20 = puVar2;
+  pfVar8 = pfVar3;
+  pfVar9 = pfVar4;
+  if (*(longlong *)(param_1 + 0x28) == 0) {
+    lVar7 = FUN_1800acab0("swcs_penetration_type");
+    *(longlong *)(param_1 + 0x28) = lVar7;
+    *(undefined4 *)(param_1 + 0x1c) = 1;
+    if (lVar7 == 0) goto LAB_1800af94f;
+  }
+  else {
+    *(undefined4 *)(param_1 + 0x1c) = 1;
+  }
+  uVar6 = FUN_1800197a0(*(undefined8 *)(param_1 + 0x28));
+  *(undefined4 *)(param_1 + 0x1c) = uVar6;
+LAB_1800af94f:
+  local_res8 = local_res8 & 0xffffffff00000000;
+  cVar5 = FUN_1800ac3f0(param_2,"GetPenetration",&local_res8,param_4,pfVar8,pfVar9);
+  if ((cVar5 != '\0') && (0.0 < (float)local_res8)) {
+    *pfVar3 = (float)local_res8;
+    local_res8 = local_res8 & 0xffffffff00000000;
+    cVar5 = FUN_1800ac3f0(param_2,"GetDamage",&local_res8,param_4,pfVar8,pfVar9);
+    if ((cVar5 != '\0') && (0.0 < (float)local_res8)) {
+      *pfVar4 = (float)local_res8;
+      *puVar2 = 1;
+    }
+    local_res8 = local_res8 & 0xffffffff00000000;
+    cVar5 = FUN_1800ac3f0(param_2,"GetRange",&local_res8,param_4,pfVar8,pfVar9);
+    if ((cVar5 == '\0') || ((float)local_res8 <= 0.0)) {
+      *(undefined4 *)(param_1 + 0x14) = 0x46000000;
+    }
+    else {
+      *(float *)(param_1 + 0x14) = (float)local_res8;
+    }
+    local_res8 = local_res8 & 0xffffffff00000000;
+    cVar5 = FUN_1800ac3f0(param_2,"GetRangeModifier",&local_res8);
+    if (((cVar5 == '\0') || ((float)local_res8 <= 0.0)) || (DAT_180380bb0 < (float)local_res8)) {
+      *(undefined4 *)(param_1 + 0x18) = 0x3f7ae148;
+    }
+    else {
+      *(float *)(param_1 + 0x18) = (float)local_res8;
+    }
+    *puVar1 = 1;
+  }
+  return;
+}
+
+
+)B1800af890",
+    "5c1001f4eb06da546b783c58c8501227ae719357cafbc49216199de71fee9dbe",
+    R"F1800af890C(FUN_1800197a0
+FUN_1800ac3f0
+FUN_1800acab0)F1800af890C",
+    R"F1800af890D(LAB_1800af94f
+DAT_180380bb0)F1800af890D",
+    R"F1800af890T("GetRange"
+"GetDamage"
+"GetPenetration"
+"GetRangeModifier"
+"swcs_penetration_type")F1800af890T",
+    R"F1800af890F(39: if (*(longlong *)(param_1 + 0x28) == 0) {
+43: if (lVar7 == 0) goto LAB_1800af94f;
+45: else {
+50: LAB_1800af94f:
+53: if ((cVar5 != '\0') && (0.0 < (float)local_res8)) {
+57: if ((cVar5 != '\0') && (0.0 < (float)local_res8)) {
+63: if ((cVar5 == '\0') || ((float)local_res8 <= 0.0)) {
+66: else {
+71: if (((cVar5 == '\0') || ((float)local_res8 <= 0.0)) || (DAT_180380bb0 < (float)local_res8)) {
+74: else {
+79: return;)F1800af890F",
+    R"F1800af890U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800af94f.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.)F1800af890U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800af890() noexcept {
+    return kFunction_0x1800af890;
+}
+
+// 0x1800afa80 Features_Autowall_SWCSAutowall_vfunc04
+// source: re/dump/decompile/0x1800afa80_Features_Autowall_SWCSAutowall_vfunc04.c
+// size: 31 bytes; thunk: false
+// body sha256: 547b103bdab132631b09a8c1280245ea35b7fdf99aaf5dd1a1306e37e4b03326
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800afa80{
+    "0x1800afa80",
+    "Features_Autowall_SWCSAutowall_vfunc04",
+    R"F1800afa80S(undefined Features_Autowall_SWCSAutowall_vfunc04())F1800afa80S",
+    R"B1800afa80(// 0x1800afa80  Features_Autowall_SWCSAutowall_vfunc04
+// size=31 thunk=false
+// signature: undefined Features_Autowall_SWCSAutowall_vfunc04()
+// status: ok
+
+
+undefined1 Features_Autowall_SWCSAutowall_vfunc04(longlong param_1)
+
+{
+  if (((*(char *)(param_1 + 0x20) != '\0') && (*(int *)(param_1 + 0x1c) == 1)) &&
+     (0.0 < *(float *)(param_1 + 8))) {
+    return 1;
+  }
+  return 0;
+}
+
+
+)B1800afa80",
+    "547b103bdab132631b09a8c1280245ea35b7fdf99aaf5dd1a1306e37e4b03326",
+    R"F1800afa80C()F1800afa80C",
+    R"F1800afa80D()F1800afa80D",
+    R"F1800afa80T()F1800afa80T",
+    R"F1800afa80F(10: if (((*(char *)(param_1 + 0x20) != '\0') && (*(int *)(param_1 + 0x1c) == 1)) &&
+12: return 1;
+14: return 0;)F1800afa80F",
+    R"F1800afa80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800afa80U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800afa80() noexcept {
+    return kFunction_0x1800afa80;
+}
+
+// 0x1800afaa0 Features_Autowall_SWCSAutowall_vfunc07
+// source: re/dump/decompile/0x1800afaa0_Features_Autowall_SWCSAutowall_vfunc07.c
+// size: 55 bytes; thunk: false
+// body sha256: d19b9048953b4c7d1bf9b7b161344f2c9cbd59e838973b4e2bcadd2dd828afc6
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800afaa0{
+    "0x1800afaa0",
+    "Features_Autowall_SWCSAutowall_vfunc07",
+    R"F1800afaa0S(undefined Features_Autowall_SWCSAutowall_vfunc07())F1800afaa0S",
+    R"B1800afaa0(// 0x1800afaa0  Features_Autowall_SWCSAutowall_vfunc07
+// size=55 thunk=false
+// signature: undefined Features_Autowall_SWCSAutowall_vfunc07()
+// status: ok
+
+
+undefined4 Features_Autowall_SWCSAutowall_vfunc07(longlong param_1)
+
+{
+  undefined4 *puVar1;
+  undefined4 local_res8 [8];
+  
+  local_res8[0] = 0;
+  puVar1 = local_res8;
+  if (0.0 <= *(float *)(param_1 + 0x14)) {
+    puVar1 = (undefined4 *)(param_1 + 0x14);
+  }
+  if (DAT_1803812a4 < *(float *)(param_1 + 0x14)) {
+    puVar1 = &DAT_18033c69c;
+  }
+  return *puVar1;
+}
+
+
+)B1800afaa0",
+    "d19b9048953b4c7d1bf9b7b161344f2c9cbd59e838973b4e2bcadd2dd828afc6",
+    R"F1800afaa0C()F1800afaa0C",
+    R"F1800afaa0D(DAT_18033c69c
+DAT_1803812a4)F1800afaa0D",
+    R"F1800afaa0T()F1800afaa0T",
+    R"F1800afaa0F(15: if (0.0 <= *(float *)(param_1 + 0x14)) {
+18: if (DAT_1803812a4 < *(float *)(param_1 + 0x14)) {
+21: return *puVar1;)F1800afaa0F",
+    R"F1800afaa0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18033c69c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803812a4.)F1800afaa0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800afaa0() noexcept {
+    return kFunction_0x1800afaa0;
+}
+
+// 0x1800afae0 Features_Autowall_SWCSAutowall_vfunc09
+// source: re/dump/decompile/0x1800afae0_Features_Autowall_SWCSAutowall_vfunc09.c
+// size: 76 bytes; thunk: false
+// body sha256: 12d5014fc000be05fba9a50a4f4eb296e2f4df044025ec459845b7699269a700
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800afae0{
+    "0x1800afae0",
+    "Features_Autowall_SWCSAutowall_vfunc09",
+    R"F1800afae0S(undefined Features_Autowall_SWCSAutowall_vfunc09())F1800afae0S",
+    R"B1800afae0(// 0x1800afae0  Features_Autowall_SWCSAutowall_vfunc09
+// size=76 thunk=false
+// signature: undefined Features_Autowall_SWCSAutowall_vfunc09()
+// status: ok
+
+
+void Features_Autowall_SWCSAutowall_vfunc09(longlong param_1)
+
+{
+  undefined4 *puVar1;
+  undefined4 local_18 [6];
+  
+  local_18[0] = 0;
+  puVar1 = local_18;
+  if (0.0 <= *(float *)(param_1 + 0x14)) {
+    puVar1 = (undefined4 *)(param_1 + 0x14);
+  }
+  if (DAT_1803812a4 < *(float *)(param_1 + 0x14)) {
+    puVar1 = &DAT_18033c69c;
+  }
+  *(undefined4 *)(param_1 + 0x30) = *puVar1;
+  *(undefined4 *)(param_1 + 0x34) = 0;
+  *(undefined4 *)(param_1 + 0x38) = 4;
+  return;
+}
+
+
+)B1800afae0",
+    "12d5014fc000be05fba9a50a4f4eb296e2f4df044025ec459845b7699269a700",
+    R"F1800afae0C()F1800afae0C",
+    R"F1800afae0D(DAT_18033c69c
+DAT_1803812a4)F1800afae0D",
+    R"F1800afae0T()F1800afae0T",
+    R"F1800afae0F(15: if (0.0 <= *(float *)(param_1 + 0x14)) {
+18: if (DAT_1803812a4 < *(float *)(param_1 + 0x14)) {
+24: return;)F1800afae0F",
+    R"F1800afae0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18033c69c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803812a4.)F1800afae0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800afae0() noexcept {
+    return kFunction_0x1800afae0;
+}
+
+// 0x1800afb30 Features_Autowall_SWCSAutowall_vfunc10
+// source: re/dump/decompile/0x1800afb30_Features_Autowall_SWCSAutowall_vfunc10.c
+// size: 86 bytes; thunk: false
+// body sha256: d2c8551e74b3fe5cdc9eb339de1c19171c4a64b19457ac365f4c77e81df75207
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800afb30{
+    "0x1800afb30",
+    "Features_Autowall_SWCSAutowall_vfunc10",
+    R"F1800afb30S(undefined Features_Autowall_SWCSAutowall_vfunc10())F1800afb30S",
+    R"B1800afb30(// 0x1800afb30  Features_Autowall_SWCSAutowall_vfunc10
+// size=86 thunk=false
+// signature: undefined Features_Autowall_SWCSAutowall_vfunc10()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+float Features_Autowall_SWCSAutowall_vfunc10(longlong param_1,float param_2,float param_3)
+
+{
+  float fVar1;
+  
+  param_3 = param_3 - *(float *)(param_1 + 0x34);
+  if (param_3 <= 0.0) {
+    param_3 = 0.0;
+  }
+  if ((0.0 < param_3) && (*(float *)(param_1 + 0x18) < DAT_180380bb0)) {
+    fVar1 = powf(*(float *)(param_1 + 0x18),param_3 / _DAT_180381248);
+    return fVar1 * param_2;
+  }
+  return param_2;
+}
+
+
+)B1800afb30",
+    "d2c8551e74b3fe5cdc9eb339de1c19171c4a64b19457ac365f4c77e81df75207",
+    R"F1800afb30C()F1800afb30C",
+    R"F1800afb30D(DAT_180380bb0)F1800afb30D",
+    R"F1800afb30T()F1800afb30T",
+    R"F1800afb30F(15: if (param_3 <= 0.0) {
+18: if ((0.0 < param_3) && (*(float *)(param_1 + 0x18) < DAT_180380bb0)) {
+20: return fVar1 * param_2;
+22: return param_2;)F1800afb30F",
+    R"F1800afb30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.)F1800afb30U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800afb30() noexcept {
+    return kFunction_0x1800afb30;
+}
+
+// 0x1800afb90 Features_Autowall_SWCSAutowall_vfunc11
+// source: re/dump/decompile/0x1800afb90_Features_Autowall_SWCSAutowall_vfunc11.c
+// size: 975 bytes; thunk: false
+// body sha256: 9c1f75ec3cfd06b012e5ba53cb998367f12aee25d610e6e0f8d6ae89e2e1e791
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800afb90{
+    "0x1800afb90",
+    "Features_Autowall_SWCSAutowall_vfunc11",
+    R"F1800afb90S(undefined Features_Autowall_SWCSAutowall_vfunc11())F1800afb90S",
+    R"B1800afb90(// 0x1800afb90  Features_Autowall_SWCSAutowall_vfunc11
+// size=975 thunk=false
+// signature: undefined Features_Autowall_SWCSAutowall_vfunc11()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined1 *
+Features_Autowall_SWCSAutowall_vfunc11(longlong *param_1,undefined1 *param_2,longlong param_3)
+
+{
+  bool bVar1;
+  char cVar2;
+  int iVar3;
+  int iVar4;
+  undefined8 uVar5;
+  undefined8 ****_Buf1;
+  undefined ***pppuVar6;
+  float fVar7;
+  float fVar8;
+  float fVar9;
+  float fVar10;
+  float fVar11;
+  float fVar12;
+  undefined1 auStack_198 [32];
+  undefined4 *local_178;
+  float *local_170;
+  undefined8 local_168;
+  undefined4 local_160;
+  float local_158 [2];
+  undefined4 local_150;
+  undefined4 local_14c;
+  undefined4 local_148;
+  float local_140 [2];
+  undefined **local_138;
+  undefined8 local_130;
+  undefined8 uStack_128;
+  undefined8 ***local_120 [2];
+  longlong local_110;
+  ulonglong local_108;
+  undefined1 local_f8 [112];
+  ulonglong local_88;
+  
+  local_88 = DAT_1803da4c0 ^ (ulonglong)auStack_198;
+  *param_2 = 0;
+  *(undefined8 *)(param_2 + 4) = 0;
+  *(undefined8 *)(param_2 + 0xc) = 0;
+  *(undefined4 *)(param_2 + 0x14) = 0;
+  *(undefined4 *)(param_2 + 0x18) = 0xbf800000;
+  cVar2 = (**(code **)(*param_1 + 0x20))();
+  fVar8 = DAT_180380bb0;
+  if (cVar2 != '\0') {
+    fVar7 = *(float *)(param_3 + 0x74);
+    fVar10 = *(float *)(param_3 + 0x80);
+    fVar9 = fVar10 - *(float *)((longlong)param_1 + 0x34);
+    if (fVar9 <= 0.0) {
+      fVar9 = 0.0;
+    }
+    if ((0.0 < fVar9) && (*(float *)(param_1 + 3) < DAT_180380bb0)) {
+      fVar9 = powf(*(float *)(param_1 + 3),fVar9 / _DAT_180381248);
+      fVar7 = fVar9 * fVar7;
+    }
+    *(float *)((longlong)param_1 + 0x34) = fVar10;
+    if (0.0 < fVar7) {
+      iVar3 = FUN_1800aa2b0(param_3);
+      if (((((*(byte *)(param_3 + 0x30) & 8) == 0) && ((*(byte *)(param_3 + 0x4a) & 0x80) == 0)) &&
+          (iVar3 != 0x59)) && (iVar3 != 0x47)) {
+        bVar1 = false;
+      }
+      else {
+        bVar1 = true;
+      }
+      uVar5 = FUN_1800abeb0(local_120,param_3);
+      FUN_1800af7b0(uVar5,local_158);
+      FUN_18020e450(local_120);
+      fVar10 = local_158[0];
+      if ((_DAT_180381288 < *(float *)(param_3 + 0x80)) || (local_158[0] < DAT_1803809ec)) {
+        *(undefined4 *)(param_1 + 7) = 0;
+      }
+      if (0 < (int)param_1[7]) {
+        FUN_1800ac060(local_120,param_3);
+        _Buf1 = local_120;
+        if (0xf < local_108) {
+          _Buf1 = (undefined8 ****)local_120[0];
+        }
+        if ((local_110 == 0x17) &&
+           (iVar4 = memcmp(_Buf1,"tools/toolsblockbullets",0x17), iVar4 == 0)) {
+          FUN_18020e450(local_120);
+        }
+        else {
+          FUN_18020e450(local_120);
+          local_158[0] = 0.0;
+          local_160 = 0x46004003;
+          local_168 = *(undefined8 *)(param_3 + 0x88);
+          local_170 = local_158;
+          local_178 = &local_150;
+          cVar2 = FUN_1800acb50(param_3 + 0xc,param_3 + 0x68,DAT_180380e9c,DAT_18038110c);
+          if (cVar2 != '\0') {
+            local_138 = vftable_CDoubleTraceFilter;
+            local_130 = 0;
+            uStack_128 = 0;
+            pppuVar6 = &local_138;
+            if (*(undefined ****)(param_3 + 0x88) != (undefined ***)0x0) {
+              pppuVar6 = *(undefined ****)(param_3 + 0x88);
+            }
+            local_178 = (undefined4 *)local_f8;
+            FUN_1800abbc0(&local_150,param_3 + 0xc,0x46004003,pppuVar6);
+            iVar4 = FUN_1800aa2b0(local_f8);
+            uVar5 = FUN_1800abeb0(local_120,local_f8);
+            FUN_1800af7b0(uVar5,local_140);
+            FUN_18020e450(local_120);
+            fVar9 = DAT_180380ac0;
+            fVar12 = DAT_180380a20;
+            if (bVar1) {
+              fVar10 = fVar8;
+              if (iVar3 == 0x47) {
+                fVar10 = DAT_180380e28;
+                fVar12 = DAT_1803809c4;
+              }
+            }
+            else {
+              fVar10 = (local_140[0] + fVar10) * DAT_180380ac0;
+            }
+            if (((iVar3 == iVar4) &&
+                ((fVar11 = DAT_180380e28, (iVar4 - 0x55U & 0xfffffffd) == 0 ||
+                 (fVar11 = DAT_180380d30, iVar4 == 0x4c)))) || (fVar11 = fVar10, 0.0 < fVar10)) {
+              fVar11 = fVar8 / fVar11;
+              if (fVar11 <= 0.0) {
+                fVar11 = 0.0;
+              }
+              fVar10 = (DAT_180380e28 / *(float *)(param_1 + 1)) * DAT_180380c00;
+              if (fVar10 <= 0.0) {
+                fVar10 = 0.0;
+              }
+              fVar10 = fVar10 * fVar11 * DAT_180380e28 + fVar12 * fVar7 +
+                       (fVar11 * local_158[0] * local_158[0]) / DAT_180381038;
+              if (fVar10 <= 0.0) {
+                fVar10 = 0.0;
+              }
+              if (fVar8 <= fVar7 - fVar10) {
+                *(int *)(param_1 + 7) = (int)param_1[7] + -1;
+                local_158[0] = local_158[0] + *(float *)((longlong)param_1 + 0x34);
+                *(float *)((longlong)param_1 + 0x34) = local_158[0];
+                *(float *)(param_1 + 6) = (*(float *)(param_1 + 6) - local_158[0]) * fVar9;
+                *param_2 = 1;
+                *(undefined4 *)(param_2 + 4) = local_150;
+                *(undefined4 *)(param_2 + 8) = local_14c;
+                *(undefined4 *)(param_2 + 0xc) = local_148;
+                *(float *)(param_2 + 0x10) = fVar7 - fVar10;
+                *(undefined4 *)(param_2 + 0x14) = *(undefined4 *)(param_3 + 0x78);
+                fVar8 = *(float *)(param_1 + 6) - *(float *)((longlong)param_1 + 0x34);
+                if (fVar8 <= 0.0) {
+                  fVar8 = 0.0;
+                }
+                *(float *)(param_2 + 0x18) = fVar8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return param_2;
+}
+
+
+)B1800afb90",
+    "9c1f75ec3cfd06b012e5ba53cb998367f12aee25d610e6e0f8d6ae89e2e1e791",
+    R"F1800afb90C(FUN_1800aa2b0
+FUN_1800abbc0
+FUN_1800abeb0
+FUN_1800ac060
+FUN_1800acb50
+FUN_1800af7b0
+FUN_18020e450)F1800afb90C",
+    R"F1800afb90D(DAT_1803809c4
+DAT_1803809ec
+DAT_180380a20
+DAT_180380ac0
+DAT_180380bb0
+DAT_180380c00
+DAT_180380d30
+DAT_180380e28
+DAT_180380e9c
+DAT_180381038
+DAT_18038110c
+DAT_1803da4c0)F1800afb90D",
+    R"F1800afb90T("tools/toolsblockbullets")F1800afb90T",
+    R"F1800afb90F(54: if (cVar2 != '\0') {
+58: if (fVar9 <= 0.0) {
+61: if ((0.0 < fVar9) && (*(float *)(param_1 + 3) < DAT_180380bb0)) {
+66: if (0.0 < fVar7) {
+68: if (((((*(byte *)(param_3 + 0x30) & 8) == 0) && ((*(byte *)(param_3 + 0x4a) & 0x80) == 0)) &&
+72: else {
+79: if ((_DAT_180381288 < *(float *)(param_3 + 0x80)) || (local_158[0] < DAT_1803809ec)) {
+82: if (0 < (int)param_1[7]) {
+85: if (0xf < local_108) {
+88: if ((local_110 == 0x17) &&
+92: else {
+100: if (cVar2 != '\0') {
+105: if (*(undefined ****)(param_3 + 0x88) != (undefined ***)0x0) {
+116: if (bVar1) {
+118: if (iVar3 == 0x47) {
+123: else {
+126: if (((iVar3 == iVar4) &&
+130: if (fVar11 <= 0.0) {
+134: if (fVar10 <= 0.0) {
+139: if (fVar10 <= 0.0) {
+142: if (fVar8 <= fVar7 - fVar10) {
+154: if (fVar8 <= 0.0) {
+165: return param_2;)F1800afb90F",
+    R"F1800afb90U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803809c4.
+TODO: recover the declaration, type and value for global/data reference DAT_1803809ec.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a20.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ac0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380c00.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d30.
+TODO: recover the declaration, type and value for global/data reference DAT_180380e28.
+TODO: recover the declaration, type and value for global/data reference DAT_180380e9c.
+TODO: recover the declaration, type and value for global/data reference DAT_180381038.
+TODO: recover the declaration, type and value for global/data reference DAT_18038110c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
+TODO: resolve the indirect call in body 52: cVar2 = (**(code **)(*param_1 + 0x20))();.)F1800afb90U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800afb90() noexcept {
+    return kFunction_0x1800afb90;
+}
+
+// 0x1800aff60 Features_Autowall_TFAAutowall_vfunc02
+// source: re/dump/decompile/0x1800aff60_Features_Autowall_TFAAutowall_vfunc02.c
+// size: 42 bytes; thunk: false
+// body sha256: 55970aba19d4f5b1317e5a2cac0b49f5bc37e36ed5552106e5b7a9e8d5835490
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800aff60{
+    "0x1800aff60",
+    "Features_Autowall_TFAAutowall_vfunc02",
+    R"F1800aff60S(undefined Features_Autowall_TFAAutowall_vfunc02())F1800aff60S",
+    R"B1800aff60(// 0x1800aff60  Features_Autowall_TFAAutowall_vfunc02
+// size=42 thunk=false
+// signature: undefined Features_Autowall_TFAAutowall_vfunc02()
+// status: ok
+
+
+ulonglong Features_Autowall_TFAAutowall_vfunc02(undefined8 param_1,longlong param_2)
+
+{
+  ulonglong in_RAX;
+  ulonglong uVar1;
+  
+  if (param_2 != 0) {
+    uVar1 = 0;
+    while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_1803473fc)[uVar1]) {
+      uVar1 = in_RAX;
+      if (in_RAX == 4) {
+        return 1;
+      }
+    }
+  }
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800aff60",
+    "55970aba19d4f5b1317e5a2cac0b49f5bc37e36ed5552106e5b7a9e8d5835490",
+    R"F1800aff60C()F1800aff60C",
+    R"F1800aff60D(DAT_1803473fc)F1800aff60D",
+    R"F1800aff60T()F1800aff60T",
+    R"F1800aff60F(13: if (param_2 != 0) {
+15: while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_1803473fc)[uVar1]) {
+17: if (in_RAX == 4) {
+18: return 1;
+22: return in_RAX & 0xffffffffffffff00;)F1800aff60F",
+    R"F1800aff60U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803473fc.)F1800aff60U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800aff60() noexcept {
+    return kFunction_0x1800aff60;
+}
+
+// 0x1800aff90 Features_Autowall_TFAAutowall_vfunc03
+// source: re/dump/decompile/0x1800aff90_Features_Autowall_TFAAutowall_vfunc03.c
+// size: 756 bytes; thunk: false
+// body sha256: 7cc0c47e8d1f27b2a831314b330e43b0e5ec1d34cfd7b8c17bd88504444a18dd
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800aff90{
+    "0x1800aff90",
+    "Features_Autowall_TFAAutowall_vfunc03",
+    R"F1800aff90S(undefined Features_Autowall_TFAAutowall_vfunc03())F1800aff90S",
+    R"B1800aff90(// 0x1800aff90  Features_Autowall_TFAAutowall_vfunc03
+// size=756 thunk=false
+// signature: undefined Features_Autowall_TFAAutowall_vfunc03()
+// status: ok
+
+
+void Features_Autowall_TFAAutowall_vfunc03(longlong param_1,undefined8 param_2)
+
+{
+  undefined1 *puVar1;
+  float *pfVar2;
+  float *pfVar3;
+  float *pfVar4;
+  longlong *plVar5;
+  undefined1 uVar6;
+  char cVar7;
+  int iVar8;
+  undefined8 uVar9;
+  longlong lVar10;
+  float **ppfVar11;
+  float **ppfVar12;
+  float fVar13;
+  float fVar14;
+  undefined8 local_98;
+  float local_90;
+  int local_8c;
+  float *local_88;
+  float *local_80;
+  undefined8 local_78;
+  longlong local_70;
+  undefined1 *local_68;
+  longlong *local_60;
+  float *local_58;
+  
+  puVar1 = (undefined1 *)(param_1 + 0x25);
+  *puVar1 = 0;
+  pfVar2 = (float *)(param_1 + 0x14);
+  *(undefined1 *)pfVar2 = 0;
+  pfVar3 = (float *)(param_1 + 8);
+  *pfVar3 = 0.0;
+  local_58 = (float *)(param_1 + 0xc);
+  *local_58 = 0.0;
+  pfVar4 = (float *)(param_1 + 0x10);
+  *pfVar4 = 0.0;
+  local_98 = pfVar4;
+  local_88 = pfVar3;
+  local_80 = pfVar2;
+  local_78 = param_2;
+  local_70 = param_1;
+  local_68 = puVar1;
+  if (*(longlong *)(param_1 + 0x28) == 0) {
+    uVar9 = FUN_1800acab0("sv_tfa_bullet_penetration");
+    *(undefined8 *)(param_1 + 0x28) = uVar9;
+  }
+  if (*(longlong *)(param_1 + 0x30) == 0) {
+    uVar9 = FUN_1800acab0("sv_tfa_bullet_penetration_power_mul");
+    *(undefined8 *)(param_1 + 0x30) = uVar9;
+  }
+  plVar5 = (longlong *)(param_1 + 0x38);
+  local_60 = plVar5;
+  if (*plVar5 == 0) {
+    lVar10 = FUN_1800acab0("sv_tfa_penetration_hardlimit");
+    *plVar5 = lVar10;
+  }
+  uVar6 = FUN_1800acae0(*(undefined8 *)(param_1 + 0x28));
+  *(undefined1 *)(param_1 + 0x24) = uVar6;
+  fVar14 = DAT_180380bb0;
+  local_90 = DAT_180380bb0;
+  if ((*(longlong *)(param_1 + 0x30) != 0) &&
+     (fVar13 = (float)FUN_180019700(*(undefined8 *)(param_1 + 0x30)), 0.0 < fVar13)) {
+    local_90 = fVar13;
+    fVar14 = fVar13;
+  }
+  local_80 = (float *)CONCAT44(local_80._4_4_,0x45fa0000);
+  local_98 = (float *)CONCAT44(local_98._4_4_,0x447a0000);
+  fVar13 = fVar14 * DAT_180381120;
+  local_88 = (float *)CONCAT44(local_88._4_4_,fVar13);
+  ppfVar12 = (float **)&local_98;
+  if (DAT_180381278 <= fVar13) {
+    ppfVar12 = &local_88;
+  }
+  ppfVar11 = &local_80;
+  if (fVar13 <= DAT_1803812a0) {
+    ppfVar11 = ppfVar12;
+  }
+  *(undefined4 *)(param_1 + 0x1c) = *(undefined4 *)ppfVar11;
+  local_98._0_4_ = 0.0;
+  cVar7 = FUN_1800ac530(param_2,"GetStatL","Primary.PenetrationPower",&local_98,0);
+  if ((cVar7 != '\0') && (0.0 < (float)local_98)) {
+    *local_58 = (float)local_98 * fVar14;
+    *pfVar3 = (float)local_98 * fVar14;
+    local_98._0_4_ = 1.0;
+    cVar7 = FUN_1800ac530(param_2,"GetStatL","Primary.PenetrationMultiplier",&local_98,0);
+    if ((cVar7 == '\0') || ((float)local_98 <= 0.0)) {
+      *(undefined4 *)(param_1 + 0x18) = 0x3f800000;
+    }
+    else {
+      *(float *)(param_1 + 0x18) = (float)local_98;
+    }
+    local_98 = (float *)((ulonglong)local_98._4_4_ << 0x20);
+    cVar7 = FUN_1800ac530(param_2,"GetStatL","Primary.Damage",&local_98,0);
+    if ((cVar7 != '\0') && (0.0 < (float)local_98)) {
+      *pfVar4 = (float)local_98;
+      *(undefined1 *)pfVar2 = 1;
+    }
+    local_8c = 100;
+    if ((*plVar5 != 0) && (iVar8 = FUN_1800197a0(*plVar5), local_8c = 100, 0 < iVar8)) {
+      local_8c = iVar8;
+    }
+    fVar13 = (float)local_8c;
+    local_98 = (float *)((ulonglong)local_98 & 0xffffffff00000000);
+    cVar7 = FUN_1800ac530(param_2,"GetStatL","Primary.MaxSurfacePenetrationCount",&local_98,0);
+    fVar14 = fVar13;
+    if (((cVar7 != '\0') && (0.0 < (float)local_98)) &&
+       (fVar14 = (float)local_98, fVar13 <= (float)local_98)) {
+      fVar14 = fVar13;
+    }
+    local_80 = (float *)CONCAT44(local_80._4_4_,1);
+    iVar8 = (int)fVar14;
+    local_88 = (float *)CONCAT44(local_88._4_4_,iVar8);
+    ppfVar12 = &local_80;
+    if (0 < iVar8) {
+      ppfVar12 = &local_88;
+    }
+    if (4 < iVar8) {
+      ppfVar12 = (float **)&DAT_18033c6a0;
+    }
+    *(undefined4 *)(param_1 + 0x20) = *(undefined4 *)ppfVar12;
+    *puVar1 = 1;
+  }
+  return;
+}
+
+
+)B1800aff90",
+    "7cc0c47e8d1f27b2a831314b330e43b0e5ec1d34cfd7b8c17bd88504444a18dd",
+    R"F1800aff90C(FUN_180019700
+FUN_1800197a0
+FUN_1800ac530
+FUN_1800acab0
+FUN_1800acae0)F1800aff90C",
+    R"F1800aff90D(DAT_18033c6a0
+DAT_180380bb0
+DAT_180381120
+DAT_180381278
+DAT_1803812a0)F1800aff90D",
+    R"F1800aff90T("GetStatL"
+"Primary.Damage"
+"Primary.PenetrationPower"
+"sv_tfa_bullet_penetration"
+"sv_tfa_penetration_hardlimit"
+"Primary.PenetrationMultiplier"
+"Primary.MaxSurfacePenetrationCount"
+"sv_tfa_bullet_penetration_power_mul")F1800aff90T",
+    R"F1800aff90F(51: if (*(longlong *)(param_1 + 0x28) == 0) {
+55: if (*(longlong *)(param_1 + 0x30) == 0) {
+61: if (*plVar5 == 0) {
+69: if ((*(longlong *)(param_1 + 0x30) != 0) &&
+79: if (DAT_180381278 <= fVar13) {
+83: if (fVar13 <= DAT_1803812a0) {
+89: if ((cVar7 != '\0') && (0.0 < (float)local_98)) {
+94: if ((cVar7 == '\0') || ((float)local_98 <= 0.0)) {
+97: else {
+102: if ((cVar7 != '\0') && (0.0 < (float)local_98)) {
+107: if ((*plVar5 != 0) && (iVar8 = FUN_1800197a0(*plVar5), local_8c = 100, 0 < iVar8)) {
+114: if (((cVar7 != '\0') && (0.0 < (float)local_98)) &&
+122: if (0 < iVar8) {
+125: if (4 < iVar8) {
+131: return;)F1800aff90F",
+    R"F1800aff90U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18033c6a0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180381120.
+TODO: recover the declaration, type and value for global/data reference DAT_180381278.
+TODO: recover the declaration, type and value for global/data reference DAT_1803812a0.)F1800aff90U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800aff90() noexcept {
+    return kFunction_0x1800aff90;
+}
+
+// 0x1800b02c0 Features_Autowall_TFAAutowall_vfunc04
+// source: re/dump/decompile/0x1800b02c0_Features_Autowall_TFAAutowall_vfunc04.c
+// size: 31 bytes; thunk: false
+// body sha256: e73a116e20a66e3649e4c6f642bc8a77608b562fc167fa5fbc38efdef2fcfb52
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b02c0{
+    "0x1800b02c0",
+    "Features_Autowall_TFAAutowall_vfunc04",
+    R"F1800b02c0S(undefined Features_Autowall_TFAAutowall_vfunc04())F1800b02c0S",
+    R"B1800b02c0(// 0x1800b02c0  Features_Autowall_TFAAutowall_vfunc04
+// size=31 thunk=false
+// signature: undefined Features_Autowall_TFAAutowall_vfunc04()
+// status: ok
+
+
+undefined1 Features_Autowall_TFAAutowall_vfunc04(longlong param_1)
+
+{
+  if (((*(char *)(param_1 + 0x25) != '\0') && (*(char *)(param_1 + 0x24) != '\0')) &&
+     (0.0 < *(float *)(param_1 + 8))) {
+    return 1;
+  }
+  return 0;
+}
+
+
+)B1800b02c0",
+    "e73a116e20a66e3649e4c6f642bc8a77608b562fc167fa5fbc38efdef2fcfb52",
+    R"F1800b02c0C()F1800b02c0C",
+    R"F1800b02c0D()F1800b02c0D",
+    R"F1800b02c0T()F1800b02c0T",
+    R"F1800b02c0F(10: if (((*(char *)(param_1 + 0x25) != '\0') && (*(char *)(param_1 + 0x24) != '\0')) &&
+12: return 1;
+14: return 0;)F1800b02c0F",
+    R"F1800b02c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b02c0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b02c0() noexcept {
+    return kFunction_0x1800b02c0;
+}
+
+// 0x1800b02e0 Features_Autowall_TFAAutowall_vfunc08
+// source: re/dump/decompile/0x1800b02e0_Features_Autowall_TFAAutowall_vfunc08.c
+// size: 4 bytes; thunk: false
+// body sha256: d50a730c8551e864b77b8046488001845b3bb52147fe95823745a6d681ca7e17
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b02e0{
+    "0x1800b02e0",
+    "Features_Autowall_TFAAutowall_vfunc08",
+    R"F1800b02e0S(undefined Features_Autowall_TFAAutowall_vfunc08())F1800b02e0S",
+    R"B1800b02e0(// 0x1800b02e0  Features_Autowall_TFAAutowall_vfunc08
+// size=4 thunk=false
+// signature: undefined Features_Autowall_TFAAutowall_vfunc08()
+// status: ok
+
+
+undefined4 Features_Autowall_TFAAutowall_vfunc08(longlong param_1)
+
+{
+  return *(undefined4 *)(param_1 + 0x20);
+}
+
+
+)B1800b02e0",
+    "d50a730c8551e864b77b8046488001845b3bb52147fe95823745a6d681ca7e17",
+    R"F1800b02e0C()F1800b02e0C",
+    R"F1800b02e0D()F1800b02e0D",
+    R"F1800b02e0T()F1800b02e0T",
+    R"F1800b02e0F(10: return *(undefined4 *)(param_1 + 0x20);)F1800b02e0F",
+    R"F1800b02e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b02e0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b02e0() noexcept {
+    return kFunction_0x1800b02e0;
+}
+
+// 0x1800b02f0 Features_Autowall_TFAAutowall_vfunc11
+// source: re/dump/decompile/0x1800b02f0_Features_Autowall_TFAAutowall_vfunc11.c
+// size: 494 bytes; thunk: false
+// body sha256: a1cfd932a7dc4c63e20ec6b22ef65ff896792291c3ee924853ebca02c376114b
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b02f0{
+    "0x1800b02f0",
+    "Features_Autowall_TFAAutowall_vfunc11",
+    R"F1800b02f0S(undefined Features_Autowall_TFAAutowall_vfunc11())F1800b02f0S",
+    R"B1800b02f0(// 0x1800b02f0  Features_Autowall_TFAAutowall_vfunc11
+// size=494 thunk=false
+// signature: undefined Features_Autowall_TFAAutowall_vfunc11()
+// status: ok
+
+
+undefined1 *
+Features_Autowall_TFAAutowall_vfunc11(longlong *param_1,undefined1 *param_2,longlong param_3)
+
+{
+  float *pfVar1;
+  float fVar2;
+  char cVar3;
+  undefined4 uVar4;
+  float *pfVar5;
+  float fVar6;
+  float fVar7;
+  float local_58;
+  float local_54;
+  float local_50 [2];
+  undefined4 local_48;
+  undefined4 local_44;
+  undefined4 local_40;
+  
+  *param_2 = 0;
+  *(undefined8 *)(param_2 + 4) = 0;
+  *(undefined8 *)(param_2 + 0xc) = 0;
+  *(undefined4 *)(param_2 + 0x14) = 0;
+  *(undefined4 *)(param_2 + 0x18) = 0xbf800000;
+  cVar3 = (**(code **)(*param_1 + 0x20))();
+  if (cVar3 != '\0') {
+    uVar4 = FUN_1800aa2b0(param_3);
+    switch(uVar4) {
+    case 0x43:
+      fVar7 = DAT_180380b60;
+      break;
+    case 0x44:
+      fVar7 = DAT_180380b74;
+      break;
+    default:
+      fVar7 = DAT_180380bb0;
+      break;
+    case 0x46:
+      fVar7 = DAT_180380ab8;
+      break;
+    case 0x4c:
+      fVar7 = DAT_180380a44;
+      break;
+    case 0x4d:
+      fVar7 = DAT_180380ae4;
+      break;
+    case 0x4f:
+      fVar7 = DAT_180380b68;
+      break;
+    case 0x56:
+      fVar7 = DAT_180380a94;
+      break;
+    case 0x57:
+      fVar7 = DAT_180380a3c;
+      break;
+    case 0x59:
+      fVar7 = DAT_180380a20;
+    }
+    fVar7 = fVar7 * *(float *)(param_1 + 3);
+    if (0.0 < fVar7) {
+      pfVar1 = (float *)((longlong)param_1 + 0x1c);
+      local_50[0] = *(float *)(param_3 + 0x78) / fVar7;
+      local_54 = 0.0;
+      pfVar5 = &local_54;
+      if (0.0 <= local_50[0]) {
+        pfVar5 = local_50;
+      }
+      if (*pfVar1 <= local_50[0] && local_50[0] != *pfVar1) {
+        pfVar5 = pfVar1;
+      }
+      fVar2 = *pfVar5;
+      if (0.0 < fVar2) {
+        fVar6 = DAT_1803812a4;
+        if (fVar2 <= DAT_1803812a4) {
+          fVar6 = fVar2;
+        }
+        local_58 = 0.0;
+        cVar3 = FUN_1800acb50(param_3 + 0xc,param_3 + 0x68,DAT_180380e9c,fVar6,&local_48,&local_58,
+                              *(undefined8 *)(param_3 + 0x88),0x46004003);
+        if ((cVar3 != '\0') &&
+           (fVar7 = *(float *)(param_3 + 0x78) - (local_58 + DAT_180380d30) * fVar7, 0.0 < fVar7)) {
+          *(undefined4 *)(param_2 + 4) = local_48;
+          *(undefined4 *)(param_2 + 0xc) = local_40;
+          *(undefined4 *)(param_2 + 8) = local_44;
+          *(float *)(param_2 + 0x14) = fVar7;
+          *param_2 = 1;
+          if (*(float *)((longlong)param_1 + 0xc) <= 0.0) {
+            fVar7 = 0.0;
+          }
+          else {
+            fVar7 = (fVar7 / *(float *)((longlong)param_1 + 0xc)) * *(float *)(param_1 + 2);
+          }
+          *(float *)(param_2 + 0x10) = fVar7;
+        }
+      }
+    }
+  }
+  return param_2;
+}
+
+
+)B1800b02f0",
+    "a1cfd932a7dc4c63e20ec6b22ef65ff896792291c3ee924853ebca02c376114b",
+    R"F1800b02f0C(FUN_1800aa2b0
+FUN_1800acb50)F1800b02f0C",
+    R"F1800b02f0D(DAT_180380a20
+DAT_180380a3c
+DAT_180380a44
+DAT_180380a94
+DAT_180380ab8
+DAT_180380ae4
+DAT_180380b60
+DAT_180380b68
+DAT_180380b74
+DAT_180380bb0
+DAT_180380d30
+DAT_180380e9c
+DAT_1803812a4)F1800b02f0D",
+    R"F1800b02f0T()F1800b02f0T",
+    R"F1800b02f0F(31: if (cVar3 != '\0') {
+33: switch(uVar4) {
+34: case 0x43:
+36: break;
+37: case 0x44:
+39: break;
+42: break;
+43: case 0x46:
+45: break;
+46: case 0x4c:
+48: break;
+49: case 0x4d:
+51: break;
+52: case 0x4f:
+54: break;
+55: case 0x56:
+57: break;
+58: case 0x57:
+60: break;
+61: case 0x59:
+65: if (0.0 < fVar7) {
+70: if (0.0 <= local_50[0]) {
+73: if (*pfVar1 <= local_50[0] && local_50[0] != *pfVar1) {
+77: if (0.0 < fVar2) {
+79: if (fVar2 <= DAT_1803812a4) {
+85: if ((cVar3 != '\0') &&
+92: if (*(float *)((longlong)param_1 + 0xc) <= 0.0) {
+95: else {
+103: return param_2;)F1800b02f0F",
+    R"F1800b02f0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a20.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a3c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a44.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a94.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ab8.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ae4.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b60.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b68.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b74.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d30.
+TODO: recover the declaration, type and value for global/data reference DAT_180380e9c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803812a4.
+TODO: resolve the indirect call in body 30: cVar3 = (**(code **)(*param_1 + 0x20))();.)F1800b02f0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b02f0() noexcept {
+    return kFunction_0x1800b02f0;
+}
+
+// 0x1800b0540 FUN_1800b0540
+// source: re/dump/decompile/0x1800b0540_FUN_1800b0540.c
+// size: 539 bytes; thunk: false
+// body sha256: a4b365c18a343a5c8fcb452deba81d19b15a5ee614875082d8792f6c338538cc
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0540{
+    "0x1800b0540",
+    "FUN_1800b0540",
+    R"F1800b0540S(undefined FUN_1800b0540())F1800b0540S",
+    R"B1800b0540(// 0x1800b0540  FUN_1800b0540
+// size=539 thunk=false
+// signature: undefined FUN_1800b0540()
+// status: ok
+
+
+undefined4 FUN_1800b0540(char *param_1,char *param_2,undefined1 *param_3)
+
+{
+  undefined1 uVar1;
+  int iVar2;
+  char *pcVar3;
+  
+  pcVar3 = param_1;
+  if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+    pcVar3 = *(char **)param_1;
+  }
+  iVar2 = _stricmp(pcVar3,"SniperPenetratedRound");
+  *param_2 = iVar2 == 0;
+  pcVar3 = param_1;
+  if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+    pcVar3 = *(char **)param_1;
+  }
+  iVar2 = _stricmp(pcVar3,"pistol");
+  if (iVar2 != 0) {
+    pcVar3 = param_1;
+    if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+      pcVar3 = *(char **)param_1;
+    }
+    iVar2 = _stricmp(pcVar3,"buckshot");
+    if (iVar2 != 0) {
+      pcVar3 = param_1;
+      if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+        pcVar3 = *(char **)param_1;
+      }
+      iVar2 = _stricmp(pcVar3,"slam");
+      if (iVar2 != 0) {
+        uVar1 = 0;
+        goto LAB_1800b05d6;
+      }
+    }
+  }
+  uVar1 = 1;
+LAB_1800b05d6:
+  *param_3 = uVar1;
+  if (*param_2 != '\0') {
+    return DAT_180381024;
+  }
+  pcVar3 = param_1;
+  if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+    pcVar3 = *(char **)param_1;
+  }
+  iVar2 = _stricmp(pcVar3,"pistol");
+  if (iVar2 != 0) {
+    pcVar3 = param_1;
+    if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+      pcVar3 = *(char **)param_1;
+    }
+    iVar2 = _stricmp(pcVar3,"357");
+    if (iVar2 != 0) {
+      pcVar3 = param_1;
+      if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+        pcVar3 = *(char **)param_1;
+      }
+      iVar2 = _stricmp(pcVar3,"smg1");
+      if (iVar2 == 0) {
+        return DAT_180380fe0;
+      }
+      pcVar3 = param_1;
+      if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+        pcVar3 = *(char **)param_1;
+      }
+      iVar2 = _stricmp(pcVar3,"ar2");
+      if (iVar2 == 0) {
+        return DAT_180380fe8;
+      }
+      pcVar3 = param_1;
+      if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+        pcVar3 = *(char **)param_1;
+      }
+      iVar2 = _stricmp(pcVar3,"buckshot");
+      if (iVar2 != 0) {
+        pcVar3 = param_1;
+        if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+          pcVar3 = *(char **)param_1;
+        }
+        iVar2 = _stricmp(pcVar3,"slam");
+        if (iVar2 != 0) {
+          if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+            param_1 = *(char **)param_1;
+          }
+          iVar2 = _stricmp(param_1,"AirboatGun");
+          if (iVar2 != 0) {
+            return DAT_180380fe0;
+          }
+          return DAT_180380ffc;
+        }
+      }
+      return DAT_180380f00;
+    }
+    return DAT_180380fd8;
+  }
+  return DAT_180380fc4;
+}
+
+
+)B1800b0540",
+    "a4b365c18a343a5c8fcb452deba81d19b15a5ee614875082d8792f6c338538cc",
+    R"F1800b0540C()F1800b0540C",
+    R"F1800b0540D(LAB_1800b05d6
+DAT_180380f00
+DAT_180380fc4
+DAT_180380fd8
+DAT_180380fe0
+DAT_180380fe8
+DAT_180380ffc
+DAT_180381024)F1800b0540D",
+    R"F1800b0540T("357"
+"ar2"
+"slam"
+"smg1"
+"pistol"
+"buckshot"
+"AirboatGun"
+"SniperPenetratedRound")F1800b0540T",
+    R"F1800b0540F(15: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+21: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+25: if (iVar2 != 0) {
+27: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+31: if (iVar2 != 0) {
+33: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+37: if (iVar2 != 0) {
+39: goto LAB_1800b05d6;
+44: LAB_1800b05d6:
+46: if (*param_2 != '\0') {
+47: return DAT_180381024;
+50: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+54: if (iVar2 != 0) {
+56: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+60: if (iVar2 != 0) {
+62: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+66: if (iVar2 == 0) {
+67: return DAT_180380fe0;
+70: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+74: if (iVar2 == 0) {
+75: return DAT_180380fe8;
+78: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+82: if (iVar2 != 0) {
+84: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+88: if (iVar2 != 0) {
+89: if (0xf < *(ulonglong *)(param_1 + 0x18)) {
+93: if (iVar2 != 0) {
+94: return DAT_180380fe0;
+96: return DAT_180380ffc;
+99: return DAT_180380f00;
+101: return DAT_180380fd8;
+103: return DAT_180380fc4;)F1800b0540F",
+    R"F1800b0540U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b05d6.
+TODO: recover the declaration, type and value for global/data reference DAT_180380f00.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fc4.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fd8.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fe0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fe8.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ffc.
+TODO: recover the declaration, type and value for global/data reference DAT_180381024.)F1800b0540U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0540() noexcept {
+    return kFunction_0x1800b0540;
+}
+
+// 0x1800b0760 Features_Autowall_M9KAutowall_vfunc02
+// source: re/dump/decompile/0x1800b0760_Features_Autowall_M9KAutowall_vfunc02.c
+// size: 42 bytes; thunk: false
+// body sha256: d1630b386b6c8cb44c4029a371488b3f4f71e2b68aa0dea4318b3ed8f001b952
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0760{
+    "0x1800b0760",
+    "Features_Autowall_M9KAutowall_vfunc02",
+    R"F1800b0760S(undefined Features_Autowall_M9KAutowall_vfunc02())F1800b0760S",
+    R"B1800b0760(// 0x1800b0760  Features_Autowall_M9KAutowall_vfunc02
+// size=42 thunk=false
+// signature: undefined Features_Autowall_M9KAutowall_vfunc02()
+// status: ok
+
+
+ulonglong Features_Autowall_M9KAutowall_vfunc02(undefined8 param_1,longlong param_2)
+
+{
+  ulonglong in_RAX;
+  ulonglong uVar1;
+  
+  if (param_2 != 0) {
+    uVar1 = 0;
+    while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_180347220)[uVar1]) {
+      uVar1 = in_RAX;
+      if (in_RAX == 4) {
+        return 1;
+      }
+    }
+  }
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800b0760",
+    "d1630b386b6c8cb44c4029a371488b3f4f71e2b68aa0dea4318b3ed8f001b952",
+    R"F1800b0760C()F1800b0760C",
+    R"F1800b0760D(DAT_180347220)F1800b0760D",
+    R"F1800b0760T()F1800b0760T",
+    R"F1800b0760F(13: if (param_2 != 0) {
+15: while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_180347220)[uVar1]) {
+17: if (in_RAX == 4) {
+18: return 1;
+22: return in_RAX & 0xffffffffffffff00;)F1800b0760F",
+    R"F1800b0760U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180347220.)F1800b0760U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0760() noexcept {
+    return kFunction_0x1800b0760;
+}
+
+// 0x1800b0790 Features_Autowall_M9KAutowall_vfunc03
+// source: re/dump/decompile/0x1800b0790_Features_Autowall_M9KAutowall_vfunc03.c
+// size: 514 bytes; thunk: false
+// body sha256: f4592ed20e39f7f7be9c173badf78f07684e131a46a8fef059c790d5a6037e32
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0790{
+    "0x1800b0790",
+    "Features_Autowall_M9KAutowall_vfunc03",
+    R"F1800b0790S(undefined Features_Autowall_M9KAutowall_vfunc03())F1800b0790S",
+    R"B1800b0790(// 0x1800b0790  Features_Autowall_M9KAutowall_vfunc03
+// size=514 thunk=false
+// signature: undefined Features_Autowall_M9KAutowall_vfunc03()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void Features_Autowall_M9KAutowall_vfunc03(ulonglong param_1,undefined8 param_2)
+
+{
+  undefined1 *puVar1;
+  undefined1 *puVar2;
+  float *pfVar3;
+  longlong *plVar4;
+  float fVar5;
+  char cVar6;
+  int iVar7;
+  undefined8 uVar8;
+  longlong lVar9;
+  undefined4 uVar10;
+  float fVar11;
+  float fVar12;
+  undefined1 auStack_e8 [32];
+  char local_c8;
+  undefined1 local_c7 [7];
+  ulonglong local_c0;
+  float local_b8;
+  undefined1 *local_b0;
+  undefined1 *local_a8;
+  float *local_a0;
+  undefined8 local_98;
+  longlong *local_90;
+  undefined8 local_88;
+  undefined8 uStack_80;
+  undefined8 local_78;
+  undefined8 uStack_70;
+  ulonglong local_68;
+  
+  local_68 = DAT_1803da4c0 ^ (ulonglong)auStack_e8;
+  puVar1 = (undefined1 *)(param_1 + 0x15);
+  *puVar1 = 0;
+  puVar2 = (undefined1 *)(param_1 + 0x10);
+  *puVar2 = 0;
+  pfVar3 = (float *)(param_1 + 0xc);
+  *pfVar3 = 0.0;
+  local_c0 = param_1;
+  local_b0 = puVar1;
+  local_a8 = puVar2;
+  local_a0 = pfVar3;
+  local_98 = param_2;
+  if (*(longlong *)(param_1 + 0x18) == 0) {
+    uVar8 = FUN_1800acab0("M9KDisablePenetration");
+    *(undefined8 *)(param_1 + 0x18) = uVar8;
+  }
+  plVar4 = (longlong *)(param_1 + 0x20);
+  local_90 = plVar4;
+  if (*plVar4 == 0) {
+    lVar9 = FUN_1800acab0("M9KDamageMultiplier");
+    *plVar4 = lVar9;
+  }
+  *(undefined1 *)(param_1 + 0x11) = 1;
+  if (*(longlong *)(param_1 + 0x18) != 0) {
+    iVar7 = FUN_1800197a0(*(undefined8 *)(param_1 + 0x18));
+    *(bool *)(param_1 + 0x11) = iVar7 == 0;
+  }
+  local_c7[0] = 1;
+  local_c8 = '\0';
+  cVar6 = FUN_1800ac790(param_2,"Penetration",local_c7,&local_c8);
+  if ((cVar6 == '\0') || (local_c8 == '\0')) {
+    *(undefined1 *)(param_1 + 0x12) = 1;
+  }
+  else {
+    *(undefined1 *)(param_1 + 0x12) = local_c7[0];
+  }
+  uStack_80 = 0;
+  local_78 = _DAT_1803814b0;
+  uStack_70 = _UNK_1803814b8;
+  local_88 = 0;
+  cVar6 = FUN_1800ac980(param_2);
+  if (cVar6 != '\0') {
+    uVar10 = FUN_1800b0540(&local_88,param_1 + 0x14,param_1 + 0x13);
+    *(undefined4 *)(param_1 + 8) = uVar10;
+    local_c0 = local_c0 & 0xffffffff00000000;
+    cVar6 = FUN_1800ac860(param_2);
+    fVar12 = DAT_180380bb0;
+    if ((cVar6 != '\0') && (fVar5 = (float)local_c0, 0.0 < (float)local_c0)) {
+      local_b8 = DAT_180380bb0;
+      if ((*plVar4 != 0) && (fVar11 = (float)FUN_180019700(*plVar4), fVar11 != 0.0)) {
+        fVar12 = (float)((uint)fVar11 & _DAT_1803817c0);
+        local_b8 = fVar12;
+      }
+      *pfVar3 = fVar12 * fVar5;
+      *puVar2 = 1;
+    }
+    *puVar1 = 1;
+  }
+  FUN_18020e450(&local_88);
+  return;
+}
+
+
+)B1800b0790",
+    "f4592ed20e39f7f7be9c173badf78f07684e131a46a8fef059c790d5a6037e32",
+    R"F1800b0790C(FUN_180019700
+FUN_1800197a0
+FUN_1800ac790
+FUN_1800ac860
+FUN_1800ac980
+FUN_1800acab0
+FUN_1800b0540
+FUN_18020e450)F1800b0790C",
+    R"F1800b0790D(DAT_180380bb0
+DAT_1803da4c0)F1800b0790D",
+    R"F1800b0790T("Penetration"
+"M9KDamageMultiplier"
+"M9KDisablePenetration")F1800b0790T",
+    R"F1800b0790F(53: if (*(longlong *)(param_1 + 0x18) == 0) {
+59: if (*plVar4 == 0) {
+64: if (*(longlong *)(param_1 + 0x18) != 0) {
+71: if ((cVar6 == '\0') || (local_c8 == '\0')) {
+74: else {
+82: if (cVar6 != '\0') {
+88: if ((cVar6 != '\0') && (fVar5 = (float)local_c0, 0.0 < (float)local_c0)) {
+90: if ((*plVar4 != 0) && (fVar11 = (float)FUN_180019700(*plVar4), fVar11 != 0.0)) {
+100: return;)F1800b0790F",
+    R"F1800b0790U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F1800b0790U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0790() noexcept {
+    return kFunction_0x1800b0790;
+}
+
+// 0x1800b09d0 Features_Autowall_M9KAutowall_vfunc04
+// source: re/dump/decompile/0x1800b09d0_Features_Autowall_M9KAutowall_vfunc04.c
+// size: 37 bytes; thunk: false
+// body sha256: 2a6e2851e96f1ae6e8a7301b25c7aa0c1276019eca420592e8542953b407555e
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b09d0{
+    "0x1800b09d0",
+    "Features_Autowall_M9KAutowall_vfunc04",
+    R"F1800b09d0S(undefined Features_Autowall_M9KAutowall_vfunc04())F1800b09d0S",
+    R"B1800b09d0(// 0x1800b09d0  Features_Autowall_M9KAutowall_vfunc04
+// size=37 thunk=false
+// signature: undefined Features_Autowall_M9KAutowall_vfunc04()
+// status: ok
+
+
+undefined1 Features_Autowall_M9KAutowall_vfunc04(longlong param_1)
+
+{
+  if ((((*(char *)(param_1 + 0x15) != '\0') && (*(char *)(param_1 + 0x11) != '\0')) &&
+      (*(char *)(param_1 + 0x12) != '\0')) && (0.0 < *(float *)(param_1 + 8))) {
+    return 1;
+  }
+  return 0;
+}
+
+
+)B1800b09d0",
+    "2a6e2851e96f1ae6e8a7301b25c7aa0c1276019eca420592e8542953b407555e",
+    R"F1800b09d0C()F1800b09d0C",
+    R"F1800b09d0D()F1800b09d0D",
+    R"F1800b09d0T()F1800b09d0T",
+    R"F1800b09d0F(10: if ((((*(char *)(param_1 + 0x15) != '\0') && (*(char *)(param_1 + 0x11) != '\0')) &&
+12: return 1;
+14: return 0;)F1800b09d0F",
+    R"F1800b09d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b09d0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b09d0() noexcept {
+    return kFunction_0x1800b09d0;
+}
+
+// 0x1800b0a00 Features_Autowall_M9KAutowall_vfunc11
+// source: re/dump/decompile/0x1800b0a00_Features_Autowall_M9KAutowall_vfunc11.c
+// size: 354 bytes; thunk: false
+// body sha256: 858ac4c773d6f8e6eb11dc3ea1d9cded1b0428270d28bbc56fc36ec599d06f89
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0a00{
+    "0x1800b0a00",
+    "Features_Autowall_M9KAutowall_vfunc11",
+    R"F1800b0a00S(undefined Features_Autowall_M9KAutowall_vfunc11())F1800b0a00S",
+    R"B1800b0a00(// 0x1800b0a00  Features_Autowall_M9KAutowall_vfunc11
+// size=354 thunk=false
+// signature: undefined Features_Autowall_M9KAutowall_vfunc11()
+// status: ok
+
+
+undefined1 *
+Features_Autowall_M9KAutowall_vfunc11(longlong *param_1,undefined1 *param_2,longlong param_3)
+
+{
+  char cVar1;
+  int iVar2;
+  float fVar3;
+  undefined1 local_res8 [32];
+  undefined4 local_38;
+  undefined4 local_34;
+  undefined4 local_30;
+  
+  *param_2 = 0;
+  *(undefined8 *)(param_2 + 4) = 0;
+  *(undefined8 *)(param_2 + 0xc) = 0;
+  *(undefined4 *)(param_2 + 0x14) = 0;
+  *(undefined4 *)(param_2 + 0x18) = 0xbf800000;
+  cVar1 = (**(code **)(*param_1 + 0x20))();
+  if (cVar1 != '\0') {
+    iVar2 = FUN_1800aa2b0(param_3);
+    if ((iVar2 == 0x4d) && (*(char *)((longlong)param_1 + 0x13) != '\0')) {
+      if (*(char *)((longlong)param_1 + 0x14) == '\0') {
+        return param_2;
+      }
+      fVar3 = *(float *)(param_1 + 1);
+    }
+    else {
+      fVar3 = *(float *)(param_1 + 1);
+      if ((iVar2 - 0x46U < 0x14) && ((0xa0045U >> (iVar2 - 0x46U & 0x1f) & 1) != 0)) {
+        fVar3 = fVar3 + fVar3;
+      }
+    }
+    cVar1 = FUN_1800acb50(param_3 + 0xc,param_3 + 0x68,DAT_180380d30,fVar3,&local_38,local_res8,
+                          *(undefined8 *)(param_3 + 0x88),0x46004003);
+    if (cVar1 != '\0') {
+      *(undefined4 *)(param_2 + 4) = local_38;
+      *(undefined4 *)(param_2 + 0xc) = local_30;
+      *(undefined4 *)(param_2 + 8) = local_34;
+      *param_2 = 1;
+      *(int *)(param_2 + 0x14) = (int)param_1[1];
+      fVar3 = DAT_180380bb0;
+      if ((((*(char *)((longlong)param_1 + 0x14) == '\0') && (fVar3 = DAT_180380a6c, iVar2 != 0x43))
+          && (iVar2 != 0x4d)) &&
+         (((0xd < iVar2 - 0x4cU ||
+           (fVar3 = DAT_180380b3c, (0x2801U >> (iVar2 - 0x4cU & 0x1f) & 1) == 0)) &&
+          (fVar3 = DAT_180380b68, (iVar2 - 0x46U & 0xfffffffd) != 0)))) {
+        fVar3 = DAT_180380ac0;
+      }
+      *(float *)(param_2 + 0x10) = fVar3 * *(float *)(param_3 + 0x74);
+    }
+  }
+  return param_2;
+}
+
+
+)B1800b0a00",
+    "858ac4c773d6f8e6eb11dc3ea1d9cded1b0428270d28bbc56fc36ec599d06f89",
+    R"F1800b0a00C(FUN_1800aa2b0
+FUN_1800acb50)F1800b0a00C",
+    R"F1800b0a00D(DAT_180380a6c
+DAT_180380ac0
+DAT_180380b3c
+DAT_180380b68
+DAT_180380bb0
+DAT_180380d30)F1800b0a00D",
+    R"F1800b0a00T()F1800b0a00T",
+    R"F1800b0a00F(25: if (cVar1 != '\0') {
+27: if ((iVar2 == 0x4d) && (*(char *)((longlong)param_1 + 0x13) != '\0')) {
+28: if (*(char *)((longlong)param_1 + 0x14) == '\0') {
+29: return param_2;
+33: else {
+35: if ((iVar2 - 0x46U < 0x14) && ((0xa0045U >> (iVar2 - 0x46U & 0x1f) & 1) != 0)) {
+41: if (cVar1 != '\0') {
+48: if ((((*(char *)((longlong)param_1 + 0x14) == '\0') && (fVar3 = DAT_180380a6c, iVar2 != 0x43))
+58: return param_2;)F1800b0a00F",
+    R"F1800b0a00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a6c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ac0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b3c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b68.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d30.
+TODO: resolve the indirect call in body 24: cVar1 = (**(code **)(*param_1 + 0x20))();.)F1800b0a00U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0a00() noexcept {
+    return kFunction_0x1800b0a00;
+}
+
+// 0x1800b0b70 Features_Autowall_CW20Autowall_vfunc01
+// source: re/dump/decompile/0x1800b0b70_Features_Autowall_CW20Autowall_vfunc01.c
+// size: 8 bytes; thunk: false
+// body sha256: 2b38170aa79ccafb9c591f6198e852ac44f5529ed45a067131842e8fa1941ec3
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0b70{
+    "0x1800b0b70",
+    "Features_Autowall_CW20Autowall_vfunc01",
+    R"F1800b0b70S(undefined Features_Autowall_CW20Autowall_vfunc01())F1800b0b70S",
+    R"B1800b0b70(// 0x1800b0b70  Features_Autowall_CW20Autowall_vfunc01
+// size=8 thunk=false
+// signature: undefined Features_Autowall_CW20Autowall_vfunc01()
+// status: ok
+
+
+char * Features_Autowall_CW20Autowall_vfunc01(void)
+
+{
+  return "CW 2.0";
+}
+
+
+)B1800b0b70",
+    "2b38170aa79ccafb9c591f6198e852ac44f5529ed45a067131842e8fa1941ec3",
+    R"F1800b0b70C()F1800b0b70C",
+    R"F1800b0b70D()F1800b0b70D",
+    R"F1800b0b70T("CW 2.0")F1800b0b70T",
+    R"F1800b0b70F(10: return "CW 2.0";)F1800b0b70F",
+    R"F1800b0b70U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b0b70U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0b70() noexcept {
+    return kFunction_0x1800b0b70;
+}
+
+// 0x1800b0b80 Features_Autowall_CW20Autowall_vfunc02
+// source: re/dump/decompile/0x1800b0b80_Features_Autowall_CW20Autowall_vfunc02.c
+// size: 74 bytes; thunk: false
+// body sha256: 7b074b8fdc8c338ccad931f40c2e8eed05d02be59d0c4cb159b129f4a14bf2a0
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0b80{
+    "0x1800b0b80",
+    "Features_Autowall_CW20Autowall_vfunc02",
+    R"F1800b0b80S(undefined Features_Autowall_CW20Autowall_vfunc02())F1800b0b80S",
+    R"B1800b0b80(// 0x1800b0b80  Features_Autowall_CW20Autowall_vfunc02
+// size=74 thunk=false
+// signature: undefined Features_Autowall_CW20Autowall_vfunc02()
+// status: ok
+
+
+ulonglong Features_Autowall_CW20Autowall_vfunc02(undefined8 param_1,longlong param_2)
+
+{
+  ulonglong in_RAX;
+  ulonglong uVar1;
+  longlong lVar2;
+  longlong lVar3;
+  
+  if (param_2 != 0) {
+    lVar2 = 0;
+    while (lVar3 = lVar2 + 1, *(char *)(param_2 + lVar2) == (&DAT_180346eb4)[lVar2]) {
+      lVar2 = lVar3;
+      if (lVar3 == 6) {
+        return 1;
+      }
+    }
+    uVar1 = 0;
+    while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_180346db4)[uVar1]) {
+      uVar1 = in_RAX;
+      if (in_RAX == 5) {
+        return 1;
+      }
+    }
+  }
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800b0b80",
+    "7b074b8fdc8c338ccad931f40c2e8eed05d02be59d0c4cb159b129f4a14bf2a0",
+    R"F1800b0b80C()F1800b0b80C",
+    R"F1800b0b80D(DAT_180346db4
+DAT_180346eb4)F1800b0b80D",
+    R"F1800b0b80T()F1800b0b80T",
+    R"F1800b0b80F(15: if (param_2 != 0) {
+17: while (lVar3 = lVar2 + 1, *(char *)(param_2 + lVar2) == (&DAT_180346eb4)[lVar2]) {
+19: if (lVar3 == 6) {
+20: return 1;
+24: while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_180346db4)[uVar1]) {
+26: if (in_RAX == 5) {
+27: return 1;
+31: return in_RAX & 0xffffffffffffff00;)F1800b0b80F",
+    R"F1800b0b80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180346db4.
+TODO: recover the declaration, type and value for global/data reference DAT_180346eb4.)F1800b0b80U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0b80() noexcept {
+    return kFunction_0x1800b0b80;
+}
+
+// 0x1800b0bd0 vfunc_shared_1800b0bd0
+// source: re/dump/decompile/0x1800b0bd0_vfunc_shared_1800b0bd0.c
+// size: 338 bytes; thunk: false
+// body sha256: b359bb4d41d96445f7b45d58bbb45d02f71696e3cc7f7b9976c14e060adc3d08
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0bd0{
+    "0x1800b0bd0",
+    "vfunc_shared_1800b0bd0",
+    R"F1800b0bd0S(undefined vfunc_shared_1800b0bd0())F1800b0bd0S",
+    R"B1800b0bd0(// 0x1800b0bd0  vfunc_shared_1800b0bd0
+// size=338 thunk=false
+// signature: undefined vfunc_shared_1800b0bd0()
+// status: ok
+
+
+void vfunc_shared_1800b0bd0(longlong param_1,undefined8 param_2)
+
+{
+  char cVar1;
+  float local_res8 [2];
+  undefined1 local_res18 [16];
+  
+  *(undefined1 *)(param_1 + 0x1a) = 0;
+  *(undefined4 *)(param_1 + 8) = 0;
+  *(undefined4 *)(param_1 + 0x14) = 0;
+  *(undefined1 *)(param_1 + 0x18) = 0;
+  local_res8[0] = 0.0;
+  cVar1 = FUN_1800ac6b0(param_2,"PenStr",local_res8);
+  if ((cVar1 != '\0') && (0.0 < local_res8[0])) {
+    *(float *)(param_1 + 8) = local_res8[0];
+    local_res8[0] = 1.0;
+    cVar1 = FUN_1800ac6b0(param_2,"PenMod",local_res8);
+    if ((cVar1 == '\0') || (local_res8[0] <= 0.0)) {
+      *(undefined4 *)(param_1 + 0xc) = 0x3f800000;
+    }
+    else {
+      *(float *)(param_1 + 0xc) = local_res8[0];
+    }
+    local_res8[0] = 0.0;
+    cVar1 = FUN_1800ac6b0(param_2,"PenetrativeRange",local_res8);
+    if ((cVar1 == '\0') || (local_res8[0] <= 0.0)) {
+      *(undefined4 *)(param_1 + 0x10) = 0x46000000;
+    }
+    else {
+      *(float *)(param_1 + 0x10) = local_res8[0];
+    }
+    local_res18[0] = 1;
+    local_res8[0] = (float)((uint)local_res8[0] & 0xffffff00);
+    cVar1 = FUN_1800ac790(param_2,"CanPenetrate",local_res18,local_res8);
+    if ((cVar1 == '\0') || (local_res8[0]._0_1_ == '\0')) {
+      *(undefined1 *)(param_1 + 0x19) = 1;
+    }
+    else {
+      *(undefined1 *)(param_1 + 0x19) = local_res18[0];
+    }
+    local_res8[0] = 0.0;
+    cVar1 = FUN_1800ac6b0(param_2,"Damage",local_res8);
+    if ((cVar1 != '\0') && (0.0 < local_res8[0])) {
+      *(float *)(param_1 + 0x14) = local_res8[0];
+      *(undefined1 *)(param_1 + 0x18) = 1;
+    }
+    *(undefined1 *)(param_1 + 0x1a) = 1;
+  }
+  return;
+}
+
+
+)B1800b0bd0",
+    "b359bb4d41d96445f7b45d58bbb45d02f71696e3cc7f7b9976c14e060adc3d08",
+    R"F1800b0bd0C(FUN_1800ac6b0
+FUN_1800ac790)F1800b0bd0C",
+    R"F1800b0bd0D()F1800b0bd0D",
+    R"F1800b0bd0T("Damage"
+"PenMod"
+"PenStr"
+"CanPenetrate"
+"PenetrativeRange")F1800b0bd0T",
+    R"F1800b0bd0F(20: if ((cVar1 != '\0') && (0.0 < local_res8[0])) {
+24: if ((cVar1 == '\0') || (local_res8[0] <= 0.0)) {
+27: else {
+32: if ((cVar1 == '\0') || (local_res8[0] <= 0.0)) {
+35: else {
+41: if ((cVar1 == '\0') || (local_res8[0]._0_1_ == '\0')) {
+44: else {
+49: if ((cVar1 != '\0') && (0.0 < local_res8[0])) {
+55: return;)F1800b0bd0F",
+    R"F1800b0bd0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b0bd0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0bd0() noexcept {
+    return kFunction_0x1800b0bd0;
+}
+
+// 0x1800b0d30 vfunc_shared_1800b0d30
+// source: re/dump/decompile/0x1800b0d30_vfunc_shared_1800b0d30.c
+// size: 31 bytes; thunk: false
+// body sha256: 0cbf3bbd6fdf53e12a632fa2bb8f05c4097e514109615fec31da3116b87c5b60
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0d30{
+    "0x1800b0d30",
+    "vfunc_shared_1800b0d30",
+    R"F1800b0d30S(undefined vfunc_shared_1800b0d30())F1800b0d30S",
+    R"B1800b0d30(// 0x1800b0d30  vfunc_shared_1800b0d30
+// size=31 thunk=false
+// signature: undefined vfunc_shared_1800b0d30()
+// status: ok
+
+
+undefined1 vfunc_shared_1800b0d30(longlong param_1)
+
+{
+  if (((*(char *)(param_1 + 0x1a) != '\0') && (*(char *)(param_1 + 0x19) != '\0')) &&
+     (0.0 < *(float *)(param_1 + 8))) {
+    return 1;
+  }
+  return 0;
+}
+
+
+)B1800b0d30",
+    "0cbf3bbd6fdf53e12a632fa2bb8f05c4097e514109615fec31da3116b87c5b60",
+    R"F1800b0d30C()F1800b0d30C",
+    R"F1800b0d30D()F1800b0d30D",
+    R"F1800b0d30T()F1800b0d30T",
+    R"F1800b0d30F(10: if (((*(char *)(param_1 + 0x1a) != '\0') && (*(char *)(param_1 + 0x19) != '\0')) &&
+12: return 1;
+14: return 0;)F1800b0d30F",
+    R"F1800b0d30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b0d30U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0d30() noexcept {
+    return kFunction_0x1800b0d30;
+}
+
+// 0x1800b0d50 vfunc_shared_1800b0d50
+// source: re/dump/decompile/0x1800b0d50_vfunc_shared_1800b0d50.c
+// size: 12 bytes; thunk: false
+// body sha256: e1c1d1281589bda33a05656f0cc0a155b69fe35f50fcec241eb60d5d9653631a
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0d50{
+    "0x1800b0d50",
+    "vfunc_shared_1800b0d50",
+    R"F1800b0d50S(undefined vfunc_shared_1800b0d50())F1800b0d50S",
+    R"B1800b0d50(// 0x1800b0d50  vfunc_shared_1800b0d50
+// size=12 thunk=false
+// signature: undefined vfunc_shared_1800b0d50()
+// status: ok
+
+
+undefined4 vfunc_shared_1800b0d50(longlong param_1,undefined1 *param_2)
+
+{
+  *param_2 = *(undefined1 *)(param_1 + 0x18);
+  return *(undefined4 *)(param_1 + 0x14);
+}
+
+
+)B1800b0d50",
+    "e1c1d1281589bda33a05656f0cc0a155b69fe35f50fcec241eb60d5d9653631a",
+    R"F1800b0d50C()F1800b0d50C",
+    R"F1800b0d50D()F1800b0d50D",
+    R"F1800b0d50T()F1800b0d50T",
+    R"F1800b0d50F(11: return *(undefined4 *)(param_1 + 0x14);)F1800b0d50F",
+    R"F1800b0d50U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b0d50U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0d50() noexcept {
+    return kFunction_0x1800b0d50;
+}
+
+// 0x1800b0d60 vfunc_shared_1800b0d60
+// source: re/dump/decompile/0x1800b0d60_vfunc_shared_1800b0d60.c
+// size: 6 bytes; thunk: false
+// body sha256: 2fa983ba1b43cddba7f7fb80686c504f104e1996cee5c5b12a16825179558d51
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0d60{
+    "0x1800b0d60",
+    "vfunc_shared_1800b0d60",
+    R"F1800b0d60S(undefined vfunc_shared_1800b0d60())F1800b0d60S",
+    R"B1800b0d60(// 0x1800b0d60  vfunc_shared_1800b0d60
+// size=6 thunk=false
+// signature: undefined vfunc_shared_1800b0d60()
+// status: ok
+
+
+undefined8 vfunc_shared_1800b0d60(void)
+
+{
+  return 1;
+}
+
+
+)B1800b0d60",
+    "2fa983ba1b43cddba7f7fb80686c504f104e1996cee5c5b12a16825179558d51",
+    R"F1800b0d60C()F1800b0d60C",
+    R"F1800b0d60D()F1800b0d60D",
+    R"F1800b0d60T()F1800b0d60T",
+    R"F1800b0d60F(10: return 1;)F1800b0d60F",
+    R"F1800b0d60U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b0d60U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0d60() noexcept {
+    return kFunction_0x1800b0d60;
+}
+
+// 0x1800b0d70 vfunc_shared_1800b0d70
+// source: re/dump/decompile/0x1800b0d70_vfunc_shared_1800b0d70.c
+// size: 55 bytes; thunk: false
+// body sha256: afe081b7b30dbe11e57744ba65370b12aa36c2aa2ec0276e22bde3135e039788
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0d70{
+    "0x1800b0d70",
+    "vfunc_shared_1800b0d70",
+    R"F1800b0d70S(undefined vfunc_shared_1800b0d70())F1800b0d70S",
+    R"B1800b0d70(// 0x1800b0d70  vfunc_shared_1800b0d70
+// size=55 thunk=false
+// signature: undefined vfunc_shared_1800b0d70()
+// status: ok
+
+
+undefined4 vfunc_shared_1800b0d70(longlong param_1)
+
+{
+  undefined4 *puVar1;
+  undefined4 local_res8 [8];
+  
+  local_res8[0] = 0;
+  puVar1 = local_res8;
+  if (0.0 <= *(float *)(param_1 + 0x10)) {
+    puVar1 = (undefined4 *)(param_1 + 0x10);
+  }
+  if (DAT_1803812a4 < *(float *)(param_1 + 0x10)) {
+    puVar1 = &DAT_18033c69c;
+  }
+  return *puVar1;
+}
+
+
+)B1800b0d70",
+    "afe081b7b30dbe11e57744ba65370b12aa36c2aa2ec0276e22bde3135e039788",
+    R"F1800b0d70C()F1800b0d70C",
+    R"F1800b0d70D(DAT_18033c69c
+DAT_1803812a4)F1800b0d70D",
+    R"F1800b0d70T()F1800b0d70T",
+    R"F1800b0d70F(15: if (0.0 <= *(float *)(param_1 + 0x10)) {
+18: if (DAT_1803812a4 < *(float *)(param_1 + 0x10)) {
+21: return *puVar1;)F1800b0d70F",
+    R"F1800b0d70U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18033c69c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803812a4.)F1800b0d70U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0d70() noexcept {
+    return kFunction_0x1800b0d70;
+}
+
+// 0x1800b0db0 vfunc_shared_1800b0db0
+// source: re/dump/decompile/0x1800b0db0_vfunc_shared_1800b0db0.c
+// size: 658 bytes; thunk: false
+// body sha256: a0ae7e181a48299ece1e694dbb40d151ac5e84750c11e4eb30528d5208b866a1
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b0db0{
+    "0x1800b0db0",
+    "vfunc_shared_1800b0db0",
+    R"F1800b0db0S(undefined vfunc_shared_1800b0db0())F1800b0db0S",
+    R"B1800b0db0(// 0x1800b0db0  vfunc_shared_1800b0db0
+// size=658 thunk=false
+// signature: undefined vfunc_shared_1800b0db0()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined1 * vfunc_shared_1800b0db0(longlong *param_1,undefined1 *param_2,longlong param_3)
+
+{
+  float fVar1;
+  float fVar2;
+  char cVar3;
+  int iVar4;
+  float fVar5;
+  float local_68;
+  float local_64;
+  float local_60;
+  
+  *param_2 = 0;
+  *(undefined8 *)(param_2 + 4) = 0;
+  *(undefined8 *)(param_2 + 0xc) = 0;
+  *(undefined4 *)(param_2 + 0x14) = 0;
+  *(undefined4 *)(param_2 + 0x18) = 0xbf800000;
+  cVar3 = (**(code **)(*param_1 + 0x20))();
+  if ((((cVar3 != '\0') && (iVar4 = FUN_1800aa2b0(param_3), iVar4 != 0x53)) &&
+      (fVar5 = *(float *)(param_3 + 0x18), ((uint)fVar5 & 0x7f800000) != 0x7f800000)) &&
+     (((fVar1 = *(float *)(param_3 + 0x1c), ((uint)fVar1 & 0x7f800000) != 0x7f800000 &&
+       (fVar2 = *(float *)(param_3 + 0x20), ((uint)fVar2 & 0x7f800000) != 0x7f800000)) &&
+      (DAT_180380938 < fVar1 * fVar1 + fVar5 * fVar5 + fVar2 * fVar2)))) {
+    if (_DAT_180380a5c <
+        (float)((uint)(*(float *)(param_3 + 0x6c) * fVar1 + *(float *)(param_3 + 0x68) * fVar5 +
+                      *(float *)(param_3 + 0x70) * fVar2) ^ DAT_1803817f0)) {
+      fVar5 = DAT_180380b3c;
+      if (((iVar4 != 0x44) && (fVar5 = DAT_180380bc4, iVar4 != 0x4d)) &&
+         ((fVar5 = DAT_180380ac0, iVar4 != 0x4e &&
+          ((fVar5 = DAT_180380b68, iVar4 != 0x54 && (fVar5 = DAT_180380bf0, iVar4 != 0x57)))))) {
+        fVar5 = DAT_180380bb0;
+      }
+      fVar5 = fVar5 * *(float *)(param_1 + 1) * *(float *)((longlong)param_1 + 0xc);
+      if (0.0 < fVar5) {
+        local_68 = *(float *)(param_3 + 0x68) * fVar5 + *(float *)(param_3 + 0xc);
+        local_64 = *(float *)(param_3 + 0x6c) * fVar5 + *(float *)(param_3 + 0x10);
+        local_60 = *(float *)(param_3 + 0x70) * fVar5 + *(float *)(param_3 + 0x14);
+        if ((((((uint)local_68 & 0x7f800000) == 0x7f800000) ||
+             (((uint)local_64 & 0x7f800000) == 0x7f800000)) ||
+            (((uint)local_60 & 0x7f800000) == 0x7f800000)) ||
+           (cVar3 = FUN_1800abd90(&local_68,*(undefined8 *)(param_3 + 0x88),0x46004003),
+           cVar3 != '\0')) {
+          DAT_1804236d8 = 0.0;
+          DAT_1804236c0 = 0;
+          DAT_1804236b4 = fVar5;
+        }
+        else {
+          *(float *)(param_2 + 4) = local_68;
+          *(float *)(param_2 + 0xc) = local_60;
+          *(float *)(param_2 + 8) = local_64;
+          *param_2 = 1;
+          *(int *)(param_2 + 0x14) = (int)param_1[1];
+          DAT_1804236c0 = 1;
+          DAT_1804236d8 = fVar5;
+          *(float *)(param_2 + 0x10) = *(float *)(param_3 + 0x74) * DAT_180380ac0;
+          DAT_1804236b4 = fVar5;
+        }
+      }
+    }
+  }
+  return param_2;
+}
+
+
+)B1800b0db0",
+    "a0ae7e181a48299ece1e694dbb40d151ac5e84750c11e4eb30528d5208b866a1",
+    R"F1800b0db0C(FUN_1800aa2b0
+FUN_1800abd90)F1800b0db0C",
+    R"F1800b0db0D(DAT_180380938
+DAT_180380ac0
+DAT_180380b3c
+DAT_180380b68
+DAT_180380bb0
+DAT_180380bc4
+DAT_180380bf0
+DAT_1803817f0
+DAT_1804236b4
+DAT_1804236c0
+DAT_1804236d8)F1800b0db0D",
+    R"F1800b0db0T()F1800b0db0T",
+    R"F1800b0db0F(27: if ((((cVar3 != '\0') && (iVar4 = FUN_1800aa2b0(param_3), iVar4 != 0x53)) &&
+32: if (_DAT_180380a5c <
+36: if (((iVar4 != 0x44) && (fVar5 = DAT_180380bc4, iVar4 != 0x4d)) &&
+42: if (0.0 < fVar5) {
+46: if ((((((uint)local_68 & 0x7f800000) == 0x7f800000) ||
+55: else {
+69: return param_2;)F1800b0db0F",
+    R"F1800b0db0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380938.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ac0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b3c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b68.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bc4.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bf0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803817f0.
+TODO: recover the declaration, type and value for global/data reference DAT_1804236b4.
+TODO: recover the declaration, type and value for global/data reference DAT_1804236c0.
+TODO: recover the declaration, type and value for global/data reference DAT_1804236d8.
+TODO: resolve the indirect call in body 26: cVar3 = (**(code **)(*param_1 + 0x20))();.)F1800b0db0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b0db0() noexcept {
+    return kFunction_0x1800b0db0;
+}
+
+// 0x1800b1050 Features_Autowall_SWBAutowall_vfunc02
+// source: re/dump/decompile/0x1800b1050_Features_Autowall_SWBAutowall_vfunc02.c
+// size: 74 bytes; thunk: false
+// body sha256: 62876aebedadcc2574e4d6ce90c7fb0dca27fe3563e84fe553448d76df0534fe
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1050{
+    "0x1800b1050",
+    "Features_Autowall_SWBAutowall_vfunc02",
+    R"F1800b1050S(undefined Features_Autowall_SWBAutowall_vfunc02())F1800b1050S",
+    R"B1800b1050(// 0x1800b1050  Features_Autowall_SWBAutowall_vfunc02
+// size=74 thunk=false
+// signature: undefined Features_Autowall_SWBAutowall_vfunc02()
+// status: ok
+
+
+ulonglong Features_Autowall_SWBAutowall_vfunc02(undefined8 param_1,longlong param_2)
+
+{
+  ulonglong in_RAX;
+  ulonglong uVar1;
+  longlong lVar2;
+  longlong lVar3;
+  
+  if (param_2 != 0) {
+    lVar2 = 0;
+    while (lVar3 = lVar2 + 1, *(char *)(param_2 + lVar2) == (&DAT_180346f94)[lVar2]) {
+      lVar2 = lVar3;
+      if (lVar3 == 4) {
+        return 1;
+      }
+    }
+    uVar1 = 0;
+    while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_180346fb0)[uVar1]) {
+      uVar1 = in_RAX;
+      if (in_RAX == 6) {
+        return 1;
+      }
+    }
+  }
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800b1050",
+    "62876aebedadcc2574e4d6ce90c7fb0dca27fe3563e84fe553448d76df0534fe",
+    R"F1800b1050C()F1800b1050C",
+    R"F1800b1050D(DAT_180346f94
+DAT_180346fb0)F1800b1050D",
+    R"F1800b1050T()F1800b1050T",
+    R"F1800b1050F(15: if (param_2 != 0) {
+17: while (lVar3 = lVar2 + 1, *(char *)(param_2 + lVar2) == (&DAT_180346f94)[lVar2]) {
+19: if (lVar3 == 4) {
+20: return 1;
+24: while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_180346fb0)[uVar1]) {
+26: if (in_RAX == 6) {
+27: return 1;
+31: return in_RAX & 0xffffffffffffff00;)F1800b1050F",
+    R"F1800b1050U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180346f94.
+TODO: recover the declaration, type and value for global/data reference DAT_180346fb0.)F1800b1050U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1050() noexcept {
+    return kFunction_0x1800b1050;
+}
+
+// 0x1800b10a0 Features_Autowall_FAS2Autowall_vfunc01
+// source: re/dump/decompile/0x1800b10a0_Features_Autowall_FAS2Autowall_vfunc01.c
+// size: 8 bytes; thunk: false
+// body sha256: 47f86a739bbe537c719ced775aeb470b68ed1cb93d38a77f505f3d152d6ff9aa
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b10a0{
+    "0x1800b10a0",
+    "Features_Autowall_FAS2Autowall_vfunc01",
+    R"F1800b10a0S(undefined Features_Autowall_FAS2Autowall_vfunc01())F1800b10a0S",
+    R"B1800b10a0(// 0x1800b10a0  Features_Autowall_FAS2Autowall_vfunc01
+// size=8 thunk=false
+// signature: undefined Features_Autowall_FAS2Autowall_vfunc01()
+// status: ok
+
+
+char * Features_Autowall_FAS2Autowall_vfunc01(void)
+
+{
+  return "FA:S 2.0";
+}
+
+
+)B1800b10a0",
+    "47f86a739bbe537c719ced775aeb470b68ed1cb93d38a77f505f3d152d6ff9aa",
+    R"F1800b10a0C()F1800b10a0C",
+    R"F1800b10a0D()F1800b10a0D",
+    R"F1800b10a0T("FA:S 2.0")F1800b10a0T",
+    R"F1800b10a0F(10: return "FA:S 2.0";)F1800b10a0F",
+    R"F1800b10a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b10a0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b10a0() noexcept {
+    return kFunction_0x1800b10a0;
+}
+
+// 0x1800b10b0 Features_Autowall_FAS2Autowall_vfunc02
+// source: re/dump/decompile/0x1800b10b0_Features_Autowall_FAS2Autowall_vfunc02.c
+// size: 42 bytes; thunk: false
+// body sha256: 20e6fe522c56041f8feb77a6ddc78537bcd4171707e7093aa4644db2dea739c0
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b10b0{
+    "0x1800b10b0",
+    "Features_Autowall_FAS2Autowall_vfunc02",
+    R"F1800b10b0S(undefined Features_Autowall_FAS2Autowall_vfunc02())F1800b10b0S",
+    R"B1800b10b0(// 0x1800b10b0  Features_Autowall_FAS2Autowall_vfunc02
+// size=42 thunk=false
+// signature: undefined Features_Autowall_FAS2Autowall_vfunc02()
+// status: ok
+
+
+ulonglong Features_Autowall_FAS2Autowall_vfunc02(undefined8 param_1,longlong param_2)
+
+{
+  ulonglong in_RAX;
+  ulonglong uVar1;
+  
+  if (param_2 != 0) {
+    uVar1 = 0;
+    while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_1803473cc)[uVar1]) {
+      uVar1 = in_RAX;
+      if (in_RAX == 5) {
+        return 1;
+      }
+    }
+  }
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800b10b0",
+    "20e6fe522c56041f8feb77a6ddc78537bcd4171707e7093aa4644db2dea739c0",
+    R"F1800b10b0C()F1800b10b0C",
+    R"F1800b10b0D(DAT_1803473cc)F1800b10b0D",
+    R"F1800b10b0T()F1800b10b0T",
+    R"F1800b10b0F(13: if (param_2 != 0) {
+15: while (in_RAX = uVar1 + 1, *(char *)(param_2 + uVar1) == (&DAT_1803473cc)[uVar1]) {
+17: if (in_RAX == 5) {
+18: return 1;
+22: return in_RAX & 0xffffffffffffff00;)F1800b10b0F",
+    R"F1800b10b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803473cc.)F1800b10b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b10b0() noexcept {
+    return kFunction_0x1800b10b0;
+}
+
+// 0x1800b10e0 Features_Autowall_FAS2Autowall_vfunc03
+// source: re/dump/decompile/0x1800b10e0_Features_Autowall_FAS2Autowall_vfunc03.c
+// size: 281 bytes; thunk: false
+// body sha256: 98f6fa4e1648b45448dbe1d8e28215a0e2ec076814186f9225c66477a2f08a36
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b10e0{
+    "0x1800b10e0",
+    "Features_Autowall_FAS2Autowall_vfunc03",
+    R"F1800b10e0S(undefined Features_Autowall_FAS2Autowall_vfunc03())F1800b10e0S",
+    R"B1800b10e0(// 0x1800b10e0  Features_Autowall_FAS2Autowall_vfunc03
+// size=281 thunk=false
+// signature: undefined Features_Autowall_FAS2Autowall_vfunc03()
+// status: ok
+
+
+void Features_Autowall_FAS2Autowall_vfunc03(longlong param_1,undefined8 param_2)
+
+{
+  char cVar1;
+  float local_res8 [2];
+  undefined1 local_res18 [16];
+  
+  *(undefined1 *)(param_1 + 0x16) = 0;
+  *(undefined4 *)(param_1 + 8) = 0;
+  *(undefined4 *)(param_1 + 0x10) = 0;
+  *(undefined1 *)(param_1 + 0x14) = 0;
+  local_res8[0] = 0.0;
+  cVar1 = FUN_1800ac6b0(param_2,"PenStr",local_res8);
+  if ((cVar1 != '\0') && (0.0 < local_res8[0])) {
+    *(float *)(param_1 + 8) = local_res8[0];
+    local_res8[0] = 1.0;
+    cVar1 = FUN_1800ac6b0(param_2,"PenMod",local_res8);
+    if ((cVar1 == '\0') || (local_res8[0] <= 0.0)) {
+      *(undefined4 *)(param_1 + 0xc) = 0x3f800000;
+    }
+    else {
+      *(float *)(param_1 + 0xc) = local_res8[0];
+    }
+    local_res18[0] = 1;
+    local_res8[0] = (float)((uint)local_res8[0] & 0xffffff00);
+    cVar1 = FUN_1800ac790(param_2,"PenetrationEnabled",local_res18,local_res8);
+    if ((cVar1 == '\0') || (local_res8[0]._0_1_ == '\0')) {
+      *(undefined1 *)(param_1 + 0x15) = 1;
+    }
+    else {
+      *(undefined1 *)(param_1 + 0x15) = local_res18[0];
+    }
+    local_res8[0] = 0.0;
+    cVar1 = FUN_1800ac6b0(param_2,"Damage",local_res8);
+    if ((cVar1 != '\0') && (0.0 < local_res8[0])) {
+      *(float *)(param_1 + 0x10) = local_res8[0];
+      *(undefined1 *)(param_1 + 0x14) = 1;
+    }
+    *(undefined1 *)(param_1 + 0x16) = 1;
+  }
+  return;
+}
+
+
+)B1800b10e0",
+    "98f6fa4e1648b45448dbe1d8e28215a0e2ec076814186f9225c66477a2f08a36",
+    R"F1800b10e0C(FUN_1800ac6b0
+FUN_1800ac790)F1800b10e0C",
+    R"F1800b10e0D()F1800b10e0D",
+    R"F1800b10e0T("Damage"
+"PenMod"
+"PenStr"
+"PenetrationEnabled")F1800b10e0T",
+    R"F1800b10e0F(20: if ((cVar1 != '\0') && (0.0 < local_res8[0])) {
+24: if ((cVar1 == '\0') || (local_res8[0] <= 0.0)) {
+27: else {
+33: if ((cVar1 == '\0') || (local_res8[0]._0_1_ == '\0')) {
+36: else {
+41: if ((cVar1 != '\0') && (0.0 < local_res8[0])) {
+47: return;)F1800b10e0F",
+    R"F1800b10e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b10e0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b10e0() noexcept {
+    return kFunction_0x1800b10e0;
+}
+
+// 0x1800b1200 Features_Autowall_FAS2Autowall_vfunc04
+// source: re/dump/decompile/0x1800b1200_Features_Autowall_FAS2Autowall_vfunc04.c
+// size: 31 bytes; thunk: false
+// body sha256: 7dcc1b94d4ba79c8158e779ab6a4f5aca76d2e112e90b1a8d4e9e5be4df2f560
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1200{
+    "0x1800b1200",
+    "Features_Autowall_FAS2Autowall_vfunc04",
+    R"F1800b1200S(undefined Features_Autowall_FAS2Autowall_vfunc04())F1800b1200S",
+    R"B1800b1200(// 0x1800b1200  Features_Autowall_FAS2Autowall_vfunc04
+// size=31 thunk=false
+// signature: undefined Features_Autowall_FAS2Autowall_vfunc04()
+// status: ok
+
+
+undefined1 Features_Autowall_FAS2Autowall_vfunc04(longlong param_1)
+
+{
+  if (((*(char *)(param_1 + 0x16) != '\0') && (*(char *)(param_1 + 0x15) != '\0')) &&
+     (0.0 < *(float *)(param_1 + 8))) {
+    return 1;
+  }
+  return 0;
+}
+
+
+)B1800b1200",
+    "7dcc1b94d4ba79c8158e779ab6a4f5aca76d2e112e90b1a8d4e9e5be4df2f560",
+    R"F1800b1200C()F1800b1200C",
+    R"F1800b1200D()F1800b1200D",
+    R"F1800b1200T()F1800b1200T",
+    R"F1800b1200F(10: if (((*(char *)(param_1 + 0x16) != '\0') && (*(char *)(param_1 + 0x15) != '\0')) &&
+12: return 1;
+14: return 0;)F1800b1200F",
+    R"F1800b1200U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b1200U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1200() noexcept {
+    return kFunction_0x1800b1200;
+}
+
+// 0x1800b1220 Features_Autowall_HomigradAutowall_vfunc01
+// source: re/dump/decompile/0x1800b1220_Features_Autowall_HomigradAutowall_vfunc01.c
+// size: 8 bytes; thunk: false
+// body sha256: 68e90da9b230083ce97109876067eff3b170a0a41f481eff9f58c57dcafa9532
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1220{
+    "0x1800b1220",
+    "Features_Autowall_HomigradAutowall_vfunc01",
+    R"F1800b1220S(undefined Features_Autowall_HomigradAutowall_vfunc01())F1800b1220S",
+    R"B1800b1220(// 0x1800b1220  Features_Autowall_HomigradAutowall_vfunc01
+// size=8 thunk=false
+// signature: undefined Features_Autowall_HomigradAutowall_vfunc01()
+// status: ok
+
+
+char * Features_Autowall_HomigradAutowall_vfunc01(void)
+
+{
+  return "Homigrad";
+}
+
+
+)B1800b1220",
+    "68e90da9b230083ce97109876067eff3b170a0a41f481eff9f58c57dcafa9532",
+    R"F1800b1220C()F1800b1220C",
+    R"F1800b1220D()F1800b1220D",
+    R"F1800b1220T("Homigrad")F1800b1220T",
+    R"F1800b1220F(10: return "Homigrad";)F1800b1220F",
+    R"F1800b1220U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b1220U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1220() noexcept {
+    return kFunction_0x1800b1220;
+}
+
+// 0x1800b1230 Features_Autowall_HomigradAutowall_vfunc02
+// source: re/dump/decompile/0x1800b1230_Features_Autowall_HomigradAutowall_vfunc02.c
+// size: 45 bytes; thunk: false
+// body sha256: b460aea2b1890a467f643745e8c1c0e650b0ecab021b6293c96f86fc1d66d529
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1230{
+    "0x1800b1230",
+    "Features_Autowall_HomigradAutowall_vfunc02",
+    R"F1800b1230S(undefined Features_Autowall_HomigradAutowall_vfunc02())F1800b1230S",
+    R"B1800b1230(// 0x1800b1230  Features_Autowall_HomigradAutowall_vfunc02
+// size=45 thunk=false
+// signature: undefined Features_Autowall_HomigradAutowall_vfunc02()
+// status: ok
+
+
+ulonglong Features_Autowall_HomigradAutowall_vfunc02(undefined8 param_1,char *param_2)
+
+{
+  int iVar1;
+  undefined4 extraout_var;
+  ulonglong uVar2;
+  
+  uVar2 = 0;
+  if (param_2 != (char *)0x0) {
+    iVar1 = strcmp(param_2,"Z-City/Homigrad");
+    uVar2 = CONCAT44(extraout_var,iVar1);
+    if (iVar1 == 0) {
+      return CONCAT71((int7)(uVar2 >> 8),1);
+    }
+  }
+  return uVar2 & 0xffffffffffffff00;
+}
+
+
+)B1800b1230",
+    "b460aea2b1890a467f643745e8c1c0e650b0ecab021b6293c96f86fc1d66d529",
+    R"F1800b1230C()F1800b1230C",
+    R"F1800b1230D()F1800b1230D",
+    R"F1800b1230T("Z-City/Homigrad")F1800b1230T",
+    R"F1800b1230F(15: if (param_2 != (char *)0x0) {
+18: if (iVar1 == 0) {
+19: return CONCAT71((int7)(uVar2 >> 8),1);
+22: return uVar2 & 0xffffffffffffff00;)F1800b1230F",
+    R"F1800b1230U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b1230U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1230() noexcept {
+    return kFunction_0x1800b1230;
+}
+
+// 0x1800b1260 Features_Autowall_HomigradAutowall_vfunc04
+// source: re/dump/decompile/0x1800b1260_Features_Autowall_HomigradAutowall_vfunc04.c
+// size: 82 bytes; thunk: false
+// body sha256: 26fb13660d62a89fe0988b212c38bf429b9692862265f8c968152c20acc5310d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1260{
+    "0x1800b1260",
+    "Features_Autowall_HomigradAutowall_vfunc04",
+    R"F1800b1260S(undefined Features_Autowall_HomigradAutowall_vfunc04())F1800b1260S",
+    R"B1800b1260(// 0x1800b1260  Features_Autowall_HomigradAutowall_vfunc04
+// size=82 thunk=false
+// signature: undefined Features_Autowall_HomigradAutowall_vfunc04()
+// status: ok
+
+
+ulonglong Features_Autowall_HomigradAutowall_vfunc04(void)
+
+{
+  float *in_RAX;
+  
+  if ((((0.0 <= DAT_1803e9200) && (in_RAX = DAT_1803fa608, DAT_1803fa608 != (float *)0x0)) &&
+      (0.0 <= (double)*DAT_1803fa608 - DAT_1803e9200)) &&
+     (((double)*DAT_1803fa608 - DAT_1803e9200 <= DAT_180380c90 && (0.0 < DAT_1803e9230)))) {
+    return CONCAT71((int7)((ulonglong)DAT_1803fa608 >> 8),1);
+  }
+  return (ulonglong)in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800b1260",
+    "26fb13660d62a89fe0988b212c38bf429b9692862265f8c968152c20acc5310d",
+    R"F1800b1260C()F1800b1260C",
+    R"F1800b1260D(DAT_180380c90
+DAT_1803e9200
+DAT_1803e9230
+DAT_1803fa608)F1800b1260D",
+    R"F1800b1260T()F1800b1260T",
+    R"F1800b1260F(12: if ((((0.0 <= DAT_1803e9200) && (in_RAX = DAT_1803fa608, DAT_1803fa608 != (float *)0x0)) &&
+15: return CONCAT71((int7)((ulonglong)DAT_1803fa608 >> 8),1);
+17: return (ulonglong)in_RAX & 0xffffffffffffff00;)F1800b1260F",
+    R"F1800b1260U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380c90.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9200.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9230.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.)F1800b1260U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1260() noexcept {
+    return kFunction_0x1800b1260;
+}
+
+// 0x1800b12c0 Features_Autowall_HomigradAutowall_vfunc05
+// source: re/dump/decompile/0x1800b12c0_Features_Autowall_HomigradAutowall_vfunc05.c
+// size: 12 bytes; thunk: false
+// body sha256: 05780da24c5b349466f15353ba481a2c2e602850a4204dacd12a0526a1de453b
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b12c0{
+    "0x1800b12c0",
+    "Features_Autowall_HomigradAutowall_vfunc05",
+    R"F1800b12c0S(undefined Features_Autowall_HomigradAutowall_vfunc05())F1800b12c0S",
+    R"B1800b12c0(// 0x1800b12c0  Features_Autowall_HomigradAutowall_vfunc05
+// size=12 thunk=false
+// signature: undefined Features_Autowall_HomigradAutowall_vfunc05()
+// status: ok
+
+
+undefined4 Features_Autowall_HomigradAutowall_vfunc05(undefined8 param_1,undefined1 *param_2)
+
+{
+  *param_2 = 1;
+  return DAT_1803e9208;
+}
+
+
+)B1800b12c0",
+    "05780da24c5b349466f15353ba481a2c2e602850a4204dacd12a0526a1de453b",
+    R"F1800b12c0C()F1800b12c0C",
+    R"F1800b12c0D(DAT_1803e9208)F1800b12c0D",
+    R"F1800b12c0T()F1800b12c0T",
+    R"F1800b12c0F(11: return DAT_1803e9208;)F1800b12c0F",
+    R"F1800b12c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9208.)F1800b12c0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b12c0() noexcept {
+    return kFunction_0x1800b12c0;
+}
+
+// 0x1800b12d0 Features_Autowall_HomigradAutowall_vfunc06
+// source: re/dump/decompile/0x1800b12d0_Features_Autowall_HomigradAutowall_vfunc06.c
+// size: 9 bytes; thunk: false
+// body sha256: 5d09b49a0e3ed598956df871be0f58bb1fdbf6a52b4184650d4c4bce3acc9762
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b12d0{
+    "0x1800b12d0",
+    "Features_Autowall_HomigradAutowall_vfunc06",
+    R"F1800b12d0S(undefined Features_Autowall_HomigradAutowall_vfunc06())F1800b12d0S",
+    R"B1800b12d0(// 0x1800b12d0  Features_Autowall_HomigradAutowall_vfunc06
+// size=9 thunk=false
+// signature: undefined Features_Autowall_HomigradAutowall_vfunc06()
+// status: ok
+
+
+undefined4 Features_Autowall_HomigradAutowall_vfunc06(void)
+
+{
+  return DAT_1803e9230;
+}
+
+
+)B1800b12d0",
+    "5d09b49a0e3ed598956df871be0f58bb1fdbf6a52b4184650d4c4bce3acc9762",
+    R"F1800b12d0C()F1800b12d0C",
+    R"F1800b12d0D(DAT_1803e9230)F1800b12d0D",
+    R"F1800b12d0T()F1800b12d0T",
+    R"F1800b12d0F(10: return DAT_1803e9230;)F1800b12d0F",
+    R"F1800b12d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9230.)F1800b12d0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b12d0() noexcept {
+    return kFunction_0x1800b12d0;
+}
+
+// 0x1800b12e0 Features_Autowall_HomigradAutowall_vfunc10
+// source: re/dump/decompile/0x1800b12e0_Features_Autowall_HomigradAutowall_vfunc10.c
+// size: 102 bytes; thunk: false
+// body sha256: 382479da5c2b4a5b3214e983575ca88f2b7c96f7dfb58954e067fec8df4d3272
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b12e0{
+    "0x1800b12e0",
+    "Features_Autowall_HomigradAutowall_vfunc10",
+    R"F1800b12e0S(undefined Features_Autowall_HomigradAutowall_vfunc10())F1800b12e0S",
+    R"B1800b12e0(// 0x1800b12e0  Features_Autowall_HomigradAutowall_vfunc10
+// size=102 thunk=false
+// signature: undefined Features_Autowall_HomigradAutowall_vfunc10()
+// status: ok
+
+
+float Features_Autowall_HomigradAutowall_vfunc10(longlong param_1,float param_2)
+
+{
+  float *pfVar1;
+  float *pfVar2;
+  float local_res20 [2];
+  float local_18;
+  float local_14 [5];
+  
+  if (DAT_1803e9230 <= 0.0) {
+    return 0.0;
+  }
+  local_18 = *(float *)(param_1 + 8) / DAT_1803e9230;
+  local_14[0] = 1.0;
+  pfVar2 = local_res20;
+  if (0.0 <= local_18) {
+    pfVar2 = &local_18;
+  }
+  pfVar1 = local_14;
+  if (local_18 <= DAT_180380bb0) {
+    pfVar1 = pfVar2;
+  }
+  return param_2 * *pfVar1;
+}
+
+
+)B1800b12e0",
+    "382479da5c2b4a5b3214e983575ca88f2b7c96f7dfb58954e067fec8df4d3272",
+    R"F1800b12e0C()F1800b12e0C",
+    R"F1800b12e0D(DAT_180380bb0
+DAT_1803e9230)F1800b12e0D",
+    R"F1800b12e0T()F1800b12e0T",
+    R"F1800b12e0F(16: if (DAT_1803e9230 <= 0.0) {
+17: return 0.0;
+22: if (0.0 <= local_18) {
+26: if (local_18 <= DAT_180380bb0) {
+29: return param_2 * *pfVar1;)F1800b12e0F",
+    R"F1800b12e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9230.)F1800b12e0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b12e0() noexcept {
+    return kFunction_0x1800b12e0;
+}
+
+// 0x1800b1350 Features_Autowall_HomigradAutowall_vfunc09
+// source: re/dump/decompile/0x1800b1350_Features_Autowall_HomigradAutowall_vfunc09.c
+// size: 14 bytes; thunk: false
+// body sha256: 0278c18d6c0d3bfa8f546870ad09fc51f00d4de8c5ac114982c2ed6a2ece035d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1350{
+    "0x1800b1350",
+    "Features_Autowall_HomigradAutowall_vfunc09",
+    R"F1800b1350S(undefined Features_Autowall_HomigradAutowall_vfunc09())F1800b1350S",
+    R"B1800b1350(// 0x1800b1350  Features_Autowall_HomigradAutowall_vfunc09
+// size=14 thunk=false
+// signature: undefined Features_Autowall_HomigradAutowall_vfunc09()
+// status: ok
+
+
+void Features_Autowall_HomigradAutowall_vfunc09(longlong param_1)
+
+{
+  *(undefined4 *)(param_1 + 8) = DAT_1803e9230;
+  return;
+}
+
+
+)B1800b1350",
+    "0278c18d6c0d3bfa8f546870ad09fc51f00d4de8c5ac114982c2ed6a2ece035d",
+    R"F1800b1350C()F1800b1350C",
+    R"F1800b1350D(DAT_1803e9230)F1800b1350D",
+    R"F1800b1350T()F1800b1350T",
+    R"F1800b1350F(11: return;)F1800b1350F",
+    R"F1800b1350U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9230.)F1800b1350U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1350() noexcept {
+    return kFunction_0x1800b1350;
+}
+
+// 0x1800b1360 Features_Autowall_HomigradAutowall_vfunc11
+// source: re/dump/decompile/0x1800b1360_Features_Autowall_HomigradAutowall_vfunc11.c
+// size: 785 bytes; thunk: false
+// body sha256: 81dc39c06d136a81e5ab3647240080efe8ceb8f92b70202f8e19a5e89b977bb6
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1360{
+    "0x1800b1360",
+    "Features_Autowall_HomigradAutowall_vfunc11",
+    R"F1800b1360S(undefined Features_Autowall_HomigradAutowall_vfunc11())F1800b1360S",
+    R"B1800b1360(// 0x1800b1360  Features_Autowall_HomigradAutowall_vfunc11
+// size=785 thunk=false
+// signature: undefined Features_Autowall_HomigradAutowall_vfunc11()
+// status: ok
+
+
+undefined1 *
+Features_Autowall_HomigradAutowall_vfunc11(longlong *param_1,undefined1 *param_2,longlong param_3)
+
+{
+  float fVar1;
+  float fVar2;
+  char cVar3;
+  undefined4 uVar4;
+  float *pfVar5;
+  float *pfVar6;
+  float fVar7;
+  float fVar8;
+  float fVar9;
+  float local_58 [2];
+  undefined8 local_50;
+  float local_48;
+  float local_40 [10];
+  
+  *param_2 = 0;
+  *(undefined8 *)(param_2 + 4) = 0;
+  *(undefined8 *)(param_2 + 0xc) = 0;
+  *(undefined4 *)(param_2 + 0x14) = 0;
+  *(undefined4 *)(param_2 + 0x18) = 0xbf800000;
+  local_50 = param_2;
+  cVar3 = (**(code **)(*param_1 + 0x20))();
+  if ((cVar3 != '\0') &&
+     ((*(longlong **)(param_3 + 0x58) == (longlong *)0x0 ||
+      (cVar3 = (**(code **)(**(longlong **)(param_3 + 0x58) + 0x550))(), cVar3 == '\0')))) {
+    uVar4 = FUN_1800aa2b0(param_3);
+    fVar9 = DAT_180380bb0;
+    switch(uVar4) {
+    case 0x43:
+    case 0x44:
+    case 0x47:
+    case 0x50:
+    case 0x56:
+      fVar8 = DAT_180380b68;
+      break;
+    default:
+      fVar8 = DAT_180380ac0;
+      break;
+    case 0x48:
+    case 0x4c:
+      fVar8 = DAT_180380a6c;
+      break;
+    case 0x4a:
+    case 0x4e:
+      fVar8 = DAT_1803809ec;
+      break;
+    case 0x4d:
+      fVar8 = DAT_180380bb0;
+      break;
+    case 0x53:
+      fVar8 = DAT_1803809c4;
+      break;
+    case 0x54:
+      fVar8 = DAT_180380b3c;
+      break;
+    case 0x55:
+      fVar8 = DAT_180380a3c;
+      break;
+    case 0x59:
+      fVar8 = DAT_180380ae4;
+    }
+    fVar7 = *(float *)(param_3 + 0x18);
+    if ((((((uint)fVar7 & 0x7f800000) != 0x7f800000) &&
+         (fVar1 = *(float *)(param_3 + 0x1c), ((uint)fVar1 & 0x7f800000) != 0x7f800000)) &&
+        (fVar2 = *(float *)(param_3 + 0x20), ((uint)fVar2 & 0x7f800000) != 0x7f800000)) &&
+       (DAT_180380938 < fVar1 * fVar1 + fVar7 * fVar7 + fVar2 * fVar2)) {
+      local_40[0] = fVar1 * *(float *)(param_3 + 0x6c) + fVar7 * *(float *)(param_3 + 0x68) +
+                    fVar2 * *(float *)(param_3 + 0x70);
+      local_50._0_4_ = 1.0;
+      local_58[0] = -1.0;
+      pfVar6 = local_58;
+      if (DAT_180381384 <= local_40[0]) {
+        pfVar6 = local_40;
+      }
+      pfVar5 = (float *)&local_50;
+      if (local_40[0] <= DAT_180380bb0) {
+        pfVar5 = pfVar6;
+      }
+      fVar7 = asinf(*pfVar5);
+      fVar7 = (float)((uint)fVar7 ^ DAT_1803817f0) * DAT_1803810c0;
+      if (!NAN(fVar7)) {
+        if (DAT_18042398c != '\0') {
+          fVar9 = 0.0;
+        }
+        if (fVar8 * DAT_1803810c8 * fVar9 < fVar7) {
+          fVar8 = ((*(float *)(param_3 + 0x78) * DAT_180380e28) / fVar8) * DAT_180380a94;
+          fVar9 = DAT_180381120;
+          if (fVar8 <= DAT_180381120) {
+            fVar9 = fVar8;
+          }
+          if (DAT_180380f00 < fVar9) {
+            local_58[0] = 0.0;
+            cVar3 = FUN_1800acb50(param_3 + 0xc,param_3 + 0x68,DAT_180380f00,fVar9,&local_50,
+                                  local_58,*(undefined8 *)(param_3 + 0x88),0x200400b);
+            if ((cVar3 != '\0') &&
+               (fVar9 = *(float *)(param_3 + 0x78) -
+                        (local_58[0] / fVar9) * *(float *)(param_3 + 0x78), DAT_180380fa8 <= fVar9))
+            {
+              *(float *)(param_1 + 1) = fVar9;
+              *param_2 = 1;
+              fVar8 = *(float *)(param_3 + 0x6c);
+              fVar7 = *(float *)(param_3 + 0x70);
+              *(float *)(param_2 + 4) = (float)local_50 + *(float *)(param_3 + 0x68);
+              *(float *)(param_2 + 8) = local_50._4_4_ + fVar8;
+              *(float *)(param_2 + 0xc) = local_48 + fVar7;
+              *(float *)(param_2 + 0x14) = fVar9;
+              *(float *)(param_2 + 0x10) = *(float *)(param_3 + 0x74) * DAT_180380afc;
+            }
+          }
+        }
+      }
+    }
+  }
+  return param_2;
+}
+
+
+)B1800b1360",
+    "81dc39c06d136a81e5ab3647240080efe8ceb8f92b70202f8e19a5e89b977bb6",
+    R"F1800b1360C(FUN_1800aa2b0
+FUN_1800acb50)F1800b1360C",
+    R"F1800b1360D(DAT_180380938
+DAT_1803809c4
+DAT_1803809ec
+DAT_180380a3c
+DAT_180380a6c
+DAT_180380a94
+DAT_180380ac0
+DAT_180380ae4
+DAT_180380afc
+DAT_180380b3c
+DAT_180380b68
+DAT_180380bb0
+DAT_180380e28
+DAT_180380f00
+DAT_180380fa8
+DAT_1803810c0
+DAT_1803810c8
+DAT_180381120
+DAT_180381384
+DAT_1803817f0
+DAT_18042398c)F1800b1360D",
+    R"F1800b1360T()F1800b1360T",
+    R"F1800b1360F(32: if ((cVar3 != '\0') &&
+37: switch(uVar4) {
+38: case 0x43:
+39: case 0x44:
+40: case 0x47:
+41: case 0x50:
+42: case 0x56:
+44: break;
+47: break;
+48: case 0x48:
+49: case 0x4c:
+51: break;
+52: case 0x4a:
+53: case 0x4e:
+55: break;
+56: case 0x4d:
+58: break;
+59: case 0x53:
+61: break;
+62: case 0x54:
+64: break;
+65: case 0x55:
+67: break;
+68: case 0x59:
+72: if ((((((uint)fVar7 & 0x7f800000) != 0x7f800000) &&
+81: if (DAT_180381384 <= local_40[0]) {
+85: if (local_40[0] <= DAT_180380bb0) {
+90: if (!NAN(fVar7)) {
+91: if (DAT_18042398c != '\0') {
+94: if (fVar8 * DAT_1803810c8 * fVar9 < fVar7) {
+97: if (fVar8 <= DAT_180381120) {
+100: if (DAT_180380f00 < fVar9) {
+104: if ((cVar3 != '\0') &&
+123: return param_2;)F1800b1360F",
+    R"F1800b1360U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380938.
+TODO: recover the declaration, type and value for global/data reference DAT_1803809c4.
+TODO: recover the declaration, type and value for global/data reference DAT_1803809ec.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a3c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a6c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a94.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ac0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ae4.
+TODO: recover the declaration, type and value for global/data reference DAT_180380afc.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b3c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b68.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380e28.
+TODO: recover the declaration, type and value for global/data reference DAT_180380f00.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fa8.
+TODO: recover the declaration, type and value for global/data reference DAT_1803810c0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803810c8.
+TODO: recover the declaration, type and value for global/data reference DAT_180381120.
+TODO: recover the declaration, type and value for global/data reference DAT_180381384.
+TODO: recover the declaration, type and value for global/data reference DAT_1803817f0.
+TODO: recover the declaration, type and value for global/data reference DAT_18042398c.
+TODO: resolve the indirect call in body 31: cVar3 = (**(code **)(*param_1 + 0x20))();.
+TODO: resolve the indirect call in body 34: (cVar3 = (**(code **)(**(longlong **)(param_3 + 0x58) + 0x550))(), cVar3 == '\0')))) {.)F1800b1360U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1360() noexcept {
+    return kFunction_0x1800b1360;
+}
+
+// 0x1800b16e0 FUN_1800b16e0
+// source: re/dump/decompile/0x1800b16e0_FUN_1800b16e0.c
+// size: 122 bytes; thunk: false
+// body sha256: 4f6e51ba236b68242d5da1934c0690363ed2fca37dc816c6644b806503312954
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b16e0{
+    "0x1800b16e0",
+    "FUN_1800b16e0",
+    R"F1800b16e0S(undefined FUN_1800b16e0())F1800b16e0S",
+    R"B1800b16e0(// 0x1800b16e0  FUN_1800b16e0
+// size=122 thunk=false
+// signature: undefined FUN_1800b16e0()
+// status: ok
+
+
+undefined1 FUN_1800b16e0(void)
+
+{
+  undefined8 uVar1;
+  char *pcVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x93fd561a96ab0c67);
+  uVar1 = FUN_180241610(uVar1,0xb180266dc2efa3d2);
+  pcVar2 = (char *)FUN_1801fcfc0(uVar1);
+  if (*pcVar2 != '\0') {
+    uVar1 = FUN_180241610(&DAT_1803fadf0,0x93fd561a96ab0c67);
+    uVar1 = FUN_180241610(uVar1,0x1a096a9307a0dc72);
+    pcVar2 = (char *)FUN_1801fcfc0(uVar1);
+    if (*pcVar2 != '\0') {
+      return 1;
+    }
+  }
+  return 0;
+}
+
+
+)B1800b16e0",
+    "4f6e51ba236b68242d5da1934c0690363ed2fca37dc816c6644b806503312954",
+    R"F1800b16e0C(FUN_1801fcfc0
+FUN_180241610)F1800b16e0C",
+    R"F1800b16e0D(DAT_1803fadf0)F1800b16e0D",
+    R"F1800b16e0T()F1800b16e0T",
+    R"F1800b16e0F(16: if (*pcVar2 != '\0') {
+20: if (*pcVar2 != '\0') {
+21: return 1;
+24: return 0;)F1800b16e0F",
+    R"F1800b16e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b16e0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b16e0() noexcept {
+    return kFunction_0x1800b16e0;
+}
+
+// 0x1800b1760 Features_Autowall_AutowallFeature_vfunc06
+// source: re/dump/decompile/0x1800b1760_Features_Autowall_AutowallFeature_vfunc06.c
+// size: 33 bytes; thunk: false
+// body sha256: 6938f75b660df83ea3618da4ea9fdda3b44e57497506231ded09f93e169f4103
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1760{
+    "0x1800b1760",
+    "Features_Autowall_AutowallFeature_vfunc06",
+    R"F1800b1760S(undefined Features_Autowall_AutowallFeature_vfunc06())F1800b1760S",
+    R"B1800b1760(// 0x1800b1760  Features_Autowall_AutowallFeature_vfunc06
+// size=33 thunk=false
+// signature: undefined Features_Autowall_AutowallFeature_vfunc06()
+// status: ok
+
+
+void Features_Autowall_AutowallFeature_vfunc06(void)
+
+{
+  char cVar1;
+  
+  cVar1 = FUN_1800acf70();
+  if ((cVar1 == '\0') && (cVar1 = FUN_1800b16e0(), cVar1 == '\0')) {
+    return;
+  }
+  FUN_180076b50();
+  return;
+}
+
+
+)B1800b1760",
+    "6938f75b660df83ea3618da4ea9fdda3b44e57497506231ded09f93e169f4103",
+    R"F1800b1760C(FUN_180076b50
+FUN_1800acf70
+FUN_1800b16e0)F1800b1760C",
+    R"F1800b1760D()F1800b1760D",
+    R"F1800b1760T()F1800b1760T",
+    R"F1800b1760F(13: if ((cVar1 == '\0') && (cVar1 = FUN_1800b16e0(), cVar1 == '\0')) {
+14: return;
+17: return;)F1800b1760F",
+    R"F1800b1760U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b1760U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1760() noexcept {
+    return kFunction_0x1800b1760;
+}
+
+// 0x1800b1790 FUN_1800b1790
+// source: re/dump/decompile/0x1800b1790_FUN_1800b1790.c
+// size: 1496 bytes; thunk: false
+// body sha256: c7727a5ea320d9fad5514feb576b782719a569f4c88ffa94eca0a7c4b16faaeb
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1790{
+    "0x1800b1790",
+    "FUN_1800b1790",
+    R"F1800b1790S(undefined FUN_1800b1790())F1800b1790S",
+    R"B1800b1790(// 0x1800b1790  FUN_1800b1790
+// size=1496 thunk=false
+// signature: undefined FUN_1800b1790()
+// status: ok
+
+
+void FUN_1800b1790(void)
+
+{
+  undefined8 *puVar1;
+  undefined8 in_R9;
+  undefined8 *local_res8;
+  undefined8 local_res10;
+  
+  if (DAT_1803e9b98 == DAT_1803e9ba0) {
+    puVar1 = (undefined8 *)FUN_1802d8350(0x30);
+    *(undefined4 *)(puVar1 + 2) = 0x100;
+    *(undefined4 *)((longlong)puVar1 + 0x19) = 0;
+    *(undefined2 *)((longlong)puVar1 + 0x1d) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x1f) = 0;
+    *puVar1 = vftable_Features_Autowall_ArcCWAutowall;
+    puVar1[1] = 0;
+    *(undefined4 *)((longlong)puVar1 + 0x14) = 0x3f800000;
+    *(undefined1 *)(puVar1 + 3) = 0;
+    puVar1[4] = 0;
+    puVar1[5] = 0;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_ArcCWAutowall,DAT_1803e9ba0,&local_res8,in_R9,1);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x28);
+    *(undefined2 *)((longlong)puVar1 + 0x15) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x17) = 0;
+    *(undefined4 *)((longlong)puVar1 + 0x1c) = 1;
+    *puVar1 = vftable_Features_Autowall_ARC9Autowall;
+    *(undefined4 *)(puVar1 + 1) = 0;
+    *(undefined8 *)((longlong)puVar1 + 0xc) = 0x3dcccccd;
+    *(undefined1 *)((longlong)puVar1 + 0x14) = 0;
+    *(undefined4 *)(puVar1 + 3) = 3;
+    puVar1[4] = 0;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_ARC9Autowall,DAT_1803e9ba0,&local_res8,in_R9,2);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x20);
+    *(undefined4 *)((longlong)puVar1 + 0x13) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x17) = 0;
+    *puVar1 = vftable_Features_Autowall_TacRPAutowall;
+    puVar1[1] = 0;
+    *(undefined2 *)(puVar1 + 2) = 0x100;
+    *(undefined1 *)((longlong)puVar1 + 0x12) = 0;
+    puVar1[3] = 0;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_TacRPAutowall,DAT_1803e9ba0,&local_res8,in_R9,4);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x40);
+    *(undefined2 *)((longlong)puVar1 + 0x11) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x13) = 0;
+    *(undefined4 *)((longlong)puVar1 + 0x21) = 0;
+    *(undefined2 *)((longlong)puVar1 + 0x25) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x27) = 0;
+    puVar1[7] = 4;
+    *puVar1 = vftable_Features_Autowall_SWCSAutowall;
+    puVar1[1] = 0;
+    *(undefined1 *)(puVar1 + 2) = 0;
+    *(undefined4 *)((longlong)puVar1 + 0x14) = 0x46000000;
+    *(undefined4 *)(puVar1 + 3) = 0x3f7ae148;
+    *(undefined4 *)((longlong)puVar1 + 0x1c) = 1;
+    *(undefined1 *)(puVar1 + 4) = 0;
+    puVar1[5] = 0;
+    puVar1[6] = 0x46000000;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_SWCSAutowall,DAT_1803e9ba0,&local_res8,in_R9,8);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x40);
+    *(undefined2 *)((longlong)puVar1 + 0x15) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x17) = 0;
+    *(undefined4 *)((longlong)puVar1 + 0x24) = 1;
+    *puVar1 = vftable_Features_Autowall_TFAAutowall;
+    puVar1[1] = 0;
+    *(undefined4 *)(puVar1 + 2) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x14) = 0;
+    *(undefined4 *)(puVar1 + 3) = 0x3f800000;
+    *(undefined4 *)((longlong)puVar1 + 0x1c) = 0x447a0000;
+    *(undefined4 *)(puVar1 + 4) = 4;
+    puVar1[5] = 0;
+    puVar1[6] = 0;
+    puVar1[7] = 0;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_TFAAutowall,DAT_1803e9ba0,&local_res8,in_R9,0x10);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x28);
+    puVar1[2] = 0x10100;
+    *puVar1 = vftable_Features_Autowall_M9KAutowall;
+    puVar1[1] = 0x41600000;
+    puVar1[3] = 0;
+    puVar1[4] = 0;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_M9KAutowall,DAT_1803e9ba0,&local_res8,in_R9,0x20);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x20);
+    *(undefined4 *)((longlong)puVar1 + 0x1b) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x1f) = 0;
+    *puVar1 = vftable_Features_Autowall_CW20Autowall;
+    *(undefined4 *)(puVar1 + 1) = 0;
+    *(undefined8 *)((longlong)puVar1 + 0xc) = 0x3f800000;
+    *(undefined4 *)((longlong)puVar1 + 0x14) = 0;
+    *(undefined2 *)(puVar1 + 3) = 0x100;
+    *(undefined1 *)((longlong)puVar1 + 0x1a) = 0;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_CW20Autowall,DAT_1803e9ba0,&local_res8,in_R9,0x40);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x20);
+    *(undefined4 *)((longlong)puVar1 + 0x1b) = 0;
+    *(undefined1 *)((longlong)puVar1 + 0x1f) = 0;
+    *puVar1 = vftable_Features_Autowall_SWBAutowall;
+    *(undefined4 *)(puVar1 + 1) = 0;
+    *(undefined8 *)((longlong)puVar1 + 0xc) = 0x3f800000;
+    *(undefined4 *)((longlong)puVar1 + 0x14) = 0;
+    *(undefined2 *)(puVar1 + 3) = 0x100;
+    *(undefined1 *)((longlong)puVar1 + 0x1a) = 0;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_SWBAutowall,DAT_1803e9ba0,&local_res8,in_R9,0x80);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x18);
+    *(undefined4 *)((longlong)puVar1 + 0x14) = 0x100;
+    *puVar1 = vftable_Features_Autowall_FAS2Autowall;
+    *(undefined4 *)(puVar1 + 1) = 0;
+    *(undefined8 *)((longlong)puVar1 + 0xc) = 0x3f800000;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_FAS2Autowall,DAT_1803e9ba0,&local_res8,in_R9,0x100);
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+    puVar1 = (undefined8 *)FUN_1802d8350(0x10);
+    puVar1[1] = 0;
+    *puVar1 = vftable_Features_Autowall_HomigradAutowall;
+    local_res10 = 0;
+    if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+      local_res8 = puVar1;
+      FUN_180233490(vftable_Features_Autowall_HomigradAutowall,DAT_1803e9ba0,&local_res8,in_R9,0x200
+                   );
+    }
+    else {
+      local_res8 = (undefined8 *)0x0;
+      *DAT_1803e9ba0 = puVar1;
+      DAT_1803e9ba0 = DAT_1803e9ba0 + 1;
+    }
+    if (local_res8 != (undefined8 *)0x0) {
+      (**(code **)*local_res8)(local_res8,1);
+    }
+  }
+  return;
+}
+
+
+)B1800b1790",
+    "c7727a5ea320d9fad5514feb576b782719a569f4c88ffa94eca0a7c4b16faaeb",
+    R"F1800b1790C(FUN_180233490
+FUN_1802d8350)F1800b1790C",
+    R"F1800b1790D(DAT_1803e9b98
+DAT_1803e9ba0
+DAT_1803e9ba8)F1800b1790D",
+    R"F1800b1790T()F1800b1790T",
+    R"F1800b1790F(15: if (DAT_1803e9b98 == DAT_1803e9ba0) {
+28: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+32: else {
+37: if (local_res8 != (undefined8 *)0x0) {
+51: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+55: else {
+60: if (local_res8 != (undefined8 *)0x0) {
+72: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+76: else {
+81: if (local_res8 != (undefined8 *)0x0) {
+101: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+105: else {
+110: if (local_res8 != (undefined8 *)0x0) {
+128: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+132: else {
+137: if (local_res8 != (undefined8 *)0x0) {
+147: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+151: else {
+156: if (local_res8 != (undefined8 *)0x0) {
+169: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+173: else {
+178: if (local_res8 != (undefined8 *)0x0) {
+191: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+195: else {
+200: if (local_res8 != (undefined8 *)0x0) {
+209: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+213: else {
+218: if (local_res8 != (undefined8 *)0x0) {
+225: if (DAT_1803e9ba0 == DAT_1803e9ba8) {
+230: else {
+235: if (local_res8 != (undefined8 *)0x0) {
+239: return;)F1800b1790F",
+    R"F1800b1790U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9b98.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9ba0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9ba8.
+TODO: resolve the indirect call in body 38: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 61: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 82: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 111: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 138: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 157: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 179: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 201: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 219: (**(code **)*local_res8)(local_res8,1);.
+TODO: resolve the indirect call in body 236: (**(code **)*local_res8)(local_res8,1);.)F1800b1790U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1790() noexcept {
+    return kFunction_0x1800b1790;
+}
+
+// 0x1800b1d70 FUN_1800b1d70
+// source: re/dump/decompile/0x1800b1d70_FUN_1800b1d70.c
+// size: 99 bytes; thunk: false
+// body sha256: 193dcdc5b26b80c9a2a4ba116064748a8ecb3b483742a418a428094070aa26d0
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1d70{
+    "0x1800b1d70",
+    "FUN_1800b1d70",
+    R"F1800b1d70S(undefined FUN_1800b1d70())F1800b1d70S",
+    R"B1800b1d70(// 0x1800b1d70  FUN_1800b1d70
+// size=99 thunk=false
+// signature: undefined FUN_1800b1d70()
+// status: ok
+
+
+undefined8 FUN_1800b1d70(float param_1)
+
+{
+  short sVar1;
+  float fVar2;
+  undefined4 extraout_XMM0_Db;
+  
+  sVar1 = _fdclass();
+  if (0 < sVar1) {
+    return 0;
+  }
+  fVar2 = fmodf(param_1,DAT_18038120c);
+  if (DAT_180381188 < fVar2) {
+    fVar2 = fVar2 - DAT_18038120c;
+  }
+  if (fVar2 < DAT_180381420) {
+    fVar2 = fVar2 + DAT_18038120c;
+  }
+  return CONCAT44(extraout_XMM0_Db,fVar2);
+}
+
+
+)B1800b1d70",
+    "193dcdc5b26b80c9a2a4ba116064748a8ecb3b483742a418a428094070aa26d0",
+    R"F1800b1d70C()F1800b1d70C",
+    R"F1800b1d70D(DAT_180381188
+DAT_18038120c
+DAT_180381420)F1800b1d70D",
+    R"F1800b1d70T()F1800b1d70T",
+    R"F1800b1d70F(15: if (0 < sVar1) {
+16: return 0;
+19: if (DAT_180381188 < fVar2) {
+22: if (fVar2 < DAT_180381420) {
+25: return CONCAT44(extraout_XMM0_Db,fVar2);)F1800b1d70F",
+    R"F1800b1d70U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180381188.
+TODO: recover the declaration, type and value for global/data reference DAT_18038120c.
+TODO: recover the declaration, type and value for global/data reference DAT_180381420.)F1800b1d70U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1d70() noexcept {
+    return kFunction_0x1800b1d70;
+}
+
+// 0x1800b1de0 FUN_1800b1de0
+// source: re/dump/decompile/0x1800b1de0_FUN_1800b1de0.c
+// size: 579 bytes; thunk: false
+// body sha256: 819803865cbef2db4af1c631b5aced4fe5b5d80a6bf335f5d1dbf692e8227ef5
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b1de0{
+    "0x1800b1de0",
+    "FUN_1800b1de0",
+    R"F1800b1de0S(undefined FUN_1800b1de0())F1800b1de0S",
+    R"B1800b1de0(// 0x1800b1de0  FUN_1800b1de0
+// size=579 thunk=false
+// signature: undefined FUN_1800b1de0()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1800b1de0(float *param_1,float param_2,float param_3,float param_4)
+
+{
+  char *pcVar1;
+  short sVar2;
+  float fVar3;
+  float fVar4;
+  float fVar5;
+  float fVar6;
+  float fVar7;
+  float fVar8;
+  
+  sVar2 = _fdclass(param_2);
+  fVar3 = DAT_180381420;
+  fVar4 = DAT_18038120c;
+  if (sVar2 < 1) {
+    fVar7 = fmodf(param_2,DAT_18038120c);
+    if (DAT_180381188 < fVar7) {
+      fVar7 = fVar7 - fVar4;
+    }
+    if (fVar7 < fVar3) {
+      fVar7 = fVar7 + fVar4;
+    }
+  }
+  else {
+    fVar7 = 0.0;
+  }
+  fVar8 = DAT_180380bb0;
+  pcVar1 = (char *)((longlong)param_1 + 9);
+  if ((param_3 <= DAT_180380bb0) && (*pcVar1 == '\0')) {
+    if (*(char *)(param_1 + 2) == '\0') {
+      param_1[1] = fVar7;
+      *(undefined1 *)(param_1 + 2) = 1;
+    }
+    else {
+      fVar5 = *param_1;
+      sVar2 = _fdclass(fVar5 - fVar7);
+      if (sVar2 < 1) {
+        fVar7 = fmodf(fVar5 - fVar7,fVar4);
+        if (DAT_180381188 < fVar7) {
+          fVar7 = fVar7 - fVar4;
+        }
+        if (fVar7 < fVar3) {
+          fVar7 = fVar7 + fVar4;
+        }
+      }
+      else {
+        fVar7 = 0.0;
+      }
+      if ((float)((uint)fVar7 & _DAT_1803817c0) <= DAT_180381094) {
+        fVar7 = *param_1;
+      }
+      else if (fVar7 <= 0.0) {
+        fVar7 = *param_1 + DAT_180381094;
+      }
+      else {
+        fVar7 = *param_1 + DAT_180381404;
+      }
+    }
+  }
+  sVar2 = _fdclass(fVar7);
+  if (sVar2 < 1) {
+    fVar7 = fmodf(fVar7,fVar4);
+    if (DAT_180381188 < fVar7) {
+      fVar7 = fVar7 - fVar4;
+    }
+    if (fVar7 < fVar3) {
+      fVar7 = fVar7 + fVar4;
+    }
+  }
+  else {
+    fVar7 = 0.0;
+  }
+  fVar4 = param_1[1];
+  *param_1 = fVar7;
+  if (fVar7 != fVar4) {
+    if (*pcVar1 == '\0') {
+      fVar6 = (float)((uint)(fVar7 - fVar4) & _DAT_1803817c0);
+      fVar5 = fVar6 / DAT_1803810c8;
+      fVar3 = DAT_180380980;
+      if (DAT_180380980 <= fVar5) {
+        fVar3 = fVar5;
+      }
+      if (fVar3 <= fVar8) {
+        fVar8 = fVar3;
+      }
+      fVar8 = fVar8 * param_4 * _DAT_180381264;
+      if (fVar8 < fVar6) {
+        fVar3 = (float)FUN_1800b1d70(fVar7 - fVar4);
+        if (fVar3 < 0.0) {
+          fVar8 = (float)((uint)fVar8 ^ DAT_1803817f0);
+        }
+        fVar7 = fVar4 + fVar8;
+      }
+      fVar4 = (float)FUN_1800b1d70(fVar7);
+      param_1[1] = fVar4;
+    }
+    else {
+      param_1[1] = fVar7;
+    }
+  }
+  *pcVar1 = '\0';
+  return;
+}
+
+
+)B1800b1de0",
+    "819803865cbef2db4af1c631b5aced4fe5b5d80a6bf335f5d1dbf692e8227ef5",
+    R"F1800b1de0C(FUN_1800b1d70)F1800b1de0C",
+    R"F1800b1de0D(DAT_180380980
+DAT_180380bb0
+DAT_180381094
+DAT_1803810c8
+DAT_180381188
+DAT_18038120c
+DAT_180381404
+DAT_180381420
+DAT_1803817f0)F1800b1de0D",
+    R"F1800b1de0T()F1800b1de0T",
+    R"F1800b1de0F(24: if (sVar2 < 1) {
+26: if (DAT_180381188 < fVar7) {
+29: if (fVar7 < fVar3) {
+33: else {
+38: if ((param_3 <= DAT_180380bb0) && (*pcVar1 == '\0')) {
+39: if (*(char *)(param_1 + 2) == '\0') {
+43: else {
+46: if (sVar2 < 1) {
+48: if (DAT_180381188 < fVar7) {
+51: if (fVar7 < fVar3) {
+55: else {
+58: if ((float)((uint)fVar7 & _DAT_1803817c0) <= DAT_180381094) {
+61: else if (fVar7 <= 0.0) {
+64: else {
+70: if (sVar2 < 1) {
+72: if (DAT_180381188 < fVar7) {
+75: if (fVar7 < fVar3) {
+79: else {
+84: if (fVar7 != fVar4) {
+85: if (*pcVar1 == '\0') {
+89: if (DAT_180380980 <= fVar5) {
+92: if (fVar3 <= fVar8) {
+96: if (fVar8 < fVar6) {
+98: if (fVar3 < 0.0) {
+106: else {
+111: return;)F1800b1de0F",
+    R"F1800b1de0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380980.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180381094.
+TODO: recover the declaration, type and value for global/data reference DAT_1803810c8.
+TODO: recover the declaration, type and value for global/data reference DAT_180381188.
+TODO: recover the declaration, type and value for global/data reference DAT_18038120c.
+TODO: recover the declaration, type and value for global/data reference DAT_180381404.
+TODO: recover the declaration, type and value for global/data reference DAT_180381420.
+TODO: recover the declaration, type and value for global/data reference DAT_1803817f0.)F1800b1de0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b1de0() noexcept {
+    return kFunction_0x1800b1de0;
+}
+
+// 0x1800b2030 FUN_1800b2030
+// source: re/dump/decompile/0x1800b2030_FUN_1800b2030.c
+// size: 9 bytes; thunk: false
+// body sha256: a331534b520acc17a2a6db5492b0a4f07f9563a63302c8657c5b45f40e3fc43d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2030{
+    "0x1800b2030",
+    "FUN_1800b2030",
+    R"F1800b2030S(undefined FUN_1800b2030())F1800b2030S",
+    R"B1800b2030(// 0x1800b2030  FUN_1800b2030
+// size=9 thunk=false
+// signature: undefined FUN_1800b2030()
+// status: ok
+
+
+undefined8 FUN_1800b2030(undefined4 *param_1,undefined4 *param_2)
+
+{
+  undefined4 uVar1;
+  
+  uVar1 = *param_1;
+  *param_2 = uVar1;
+  return CONCAT71((uint7)(uint3)((uint)uVar1 >> 8),1);
+}
+
+
+)B1800b2030",
+    "a331534b520acc17a2a6db5492b0a4f07f9563a63302c8657c5b45f40e3fc43d",
+    R"F1800b2030C()F1800b2030C",
+    R"F1800b2030D()F1800b2030D",
+    R"F1800b2030T()F1800b2030T",
+    R"F1800b2030F(14: return CONCAT71((uint7)(uint3)((uint)uVar1 >> 8),1);)F1800b2030F",
+    R"F1800b2030U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b2030U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2030() noexcept {
+    return kFunction_0x1800b2030;
+}
+
+// 0x1800b2040 FUN_1800b2040
+// source: re/dump/decompile/0x1800b2040_FUN_1800b2040.c
+// size: 197 bytes; thunk: false
+// body sha256: 07d1218666d0df8171ed8aba2d6edcf49ea63728f5797c92d744c280d467cf84
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2040{
+    "0x1800b2040",
+    "FUN_1800b2040",
+    R"F1800b2040S(undefined FUN_1800b2040())F1800b2040S",
+    R"B1800b2040(// 0x1800b2040  FUN_1800b2040
+// size=197 thunk=false
+// signature: undefined FUN_1800b2040()
+// status: ok
+
+
+LPVOID FUN_1800b2040(int param_1)
+
+{
+  char cVar1;
+  LPVOID lp;
+  int iVar2;
+  int iVar3;
+  int iVar4;
+  int local_res10 [6];
+  
+  if ((DAT_1803fa660 != (longlong *)0x0) && (DAT_1803fa620 != 0)) {
+    iVar2 = *(int *)(DAT_1803fa620 + 0x20b84);
+    iVar3 = -1;
+    if (iVar2 < 0) {
+      iVar2 = -1;
+    }
+    if ((-1 < iVar2) && (-1 < param_1)) {
+      if (*(uint *)(DAT_1803fa620 + 0x20b88) < 0x80) {
+        iVar4 = *(uint *)(DAT_1803fa620 + 0x20b88) + 1;
+      }
+      else {
+        iVar4 = 0;
+      }
+      if (param_1 < iVar4) {
+        iVar3 = param_1 + 1 + iVar2;
+      }
+    }
+    if (-1 < iVar3) {
+      lp = (LPVOID)(**(code **)(*DAT_1803fa660 + 0x40))(DAT_1803fa660,iVar3);
+      if (lp != (LPVOID)0x0) {
+        local_res10[0] = IsBadWritePtr(lp,0x140);
+        if (local_res10[0] == 0) {
+          cVar1 = FUN_1800b2030(lp,local_res10);
+          if ((cVar1 != '\0') && (local_res10[0] == iVar3)) {
+            return lp;
+          }
+        }
+      }
+    }
+  }
+  return (LPVOID)0x0;
+}
+
+
+)B1800b2040",
+    "07d1218666d0df8171ed8aba2d6edcf49ea63728f5797c92d744c280d467cf84",
+    R"F1800b2040C(FUN_1800b2030)F1800b2040C",
+    R"F1800b2040D(DAT_1803fa620
+DAT_1803fa660)F1800b2040D",
+    R"F1800b2040T()F1800b2040T",
+    R"F1800b2040F(17: if ((DAT_1803fa660 != (longlong *)0x0) && (DAT_1803fa620 != 0)) {
+20: if (iVar2 < 0) {
+23: if ((-1 < iVar2) && (-1 < param_1)) {
+24: if (*(uint *)(DAT_1803fa620 + 0x20b88) < 0x80) {
+27: else {
+30: if (param_1 < iVar4) {
+34: if (-1 < iVar3) {
+36: if (lp != (LPVOID)0x0) {
+38: if (local_res10[0] == 0) {
+40: if ((cVar1 != '\0') && (local_res10[0] == iVar3)) {
+41: return lp;
+47: return (LPVOID)0x0;)F1800b2040F",
+    R"F1800b2040U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa620.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa660.
+TODO: resolve the indirect call in body 35: lp = (LPVOID)(**(code **)(*DAT_1803fa660 + 0x40))(DAT_1803fa660,iVar3);.)F1800b2040U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2040() noexcept {
+    return kFunction_0x1800b2040;
+}
+
+// 0x1800b2110 FUN_1800b2110
+// source: re/dump/decompile/0x1800b2110_FUN_1800b2110.c
+// size: 122 bytes; thunk: false
+// body sha256: fc5b157cfe8be9b117f7e5eeb984b0d0b8a7d2f7aebd447547a10a26c45a4ab7
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2110{
+    "0x1800b2110",
+    "FUN_1800b2110",
+    R"F1800b2110S(undefined FUN_1800b2110())F1800b2110S",
+    R"B1800b2110(// 0x1800b2110  FUN_1800b2110
+// size=122 thunk=false
+// signature: undefined FUN_1800b2110()
+// status: ok
+
+
+void * FUN_1800b2110(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+
+{
+  char cVar1;
+  void *lp;
+  void *pvVar2;
+  int local_res10 [6];
+  
+  if ((DAT_1803fa660 != (longlong *)0x0) && (-1 < param_1)) {
+    lp = (void *)(**(code **)(*DAT_1803fa660 + 0x40))(DAT_1803fa660,param_1);
+    if (lp != (void *)0x0) {
+      pvVar2 = lp;
+      local_res10[0] = IsBadReadPtr(lp,0x140);
+      if (local_res10[0] == 0) {
+        cVar1 = FUN_1800b2030(lp,local_res10,param_3,param_4,pvVar2);
+        if (cVar1 != '\0') {
+          pvVar2 = (void *)0x0;
+          if (local_res10[0] == param_1) {
+            pvVar2 = lp;
+          }
+          return pvVar2;
+        }
+      }
+    }
+  }
+  return (void *)0x0;
+}
+
+
+)B1800b2110",
+    "fc5b157cfe8be9b117f7e5eeb984b0d0b8a7d2f7aebd447547a10a26c45a4ab7",
+    R"F1800b2110C(FUN_1800b2030)F1800b2110C",
+    R"F1800b2110D(DAT_1803fa660)F1800b2110D",
+    R"F1800b2110T()F1800b2110T",
+    R"F1800b2110F(15: if ((DAT_1803fa660 != (longlong *)0x0) && (-1 < param_1)) {
+17: if (lp != (void *)0x0) {
+20: if (local_res10[0] == 0) {
+22: if (cVar1 != '\0') {
+24: if (local_res10[0] == param_1) {
+27: return pvVar2;
+32: return (void *)0x0;)F1800b2110F",
+    R"F1800b2110U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa660.
+TODO: resolve the indirect call in body 16: lp = (void *)(**(code **)(*DAT_1803fa660 + 0x40))(DAT_1803fa660,param_1);.)F1800b2110U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2110() noexcept {
+    return kFunction_0x1800b2110;
+}
+
+// 0x1800b2190 FUN_1800b2190
+// source: re/dump/decompile/0x1800b2190_FUN_1800b2190.c
+// size: 22 bytes; thunk: false
+// body sha256: 21f679f856d15c7c031a61fff2a43f102789d5be26b7e1ac8550519e4c23c001
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2190{
+    "0x1800b2190",
+    "FUN_1800b2190",
+    R"F1800b2190S(undefined FUN_1800b2190())F1800b2190S",
+    R"B1800b2190(// 0x1800b2190  FUN_1800b2190
+// size=22 thunk=false
+// signature: undefined FUN_1800b2190()
+// status: ok
+
+
+ulonglong FUN_1800b2190(longlong param_1,undefined4 *param_2)
+
+{
+  undefined4 uVar1;
+  ulonglong in_RAX;
+  ulonglong uVar2;
+  
+  if ((param_1 == 0) || (param_2 == (undefined4 *)0x0)) {
+    uVar2 = in_RAX & 0xffffffffffffff00;
+  }
+  else {
+    uVar1 = *(undefined4 *)(param_1 + 0xc);
+    *param_2 = uVar1;
+    uVar2 = CONCAT71((uint7)(uint3)((uint)uVar1 >> 8),1);
+  }
+  return uVar2;
+}
+
+
+)B1800b2190",
+    "21f679f856d15c7c031a61fff2a43f102789d5be26b7e1ac8550519e4c23c001",
+    R"F1800b2190C()F1800b2190C",
+    R"F1800b2190D()F1800b2190D",
+    R"F1800b2190T()F1800b2190T",
+    R"F1800b2190F(14: if ((param_1 == 0) || (param_2 == (undefined4 *)0x0)) {
+17: else {
+22: return uVar2;)F1800b2190F",
+    R"F1800b2190U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b2190U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2190() noexcept {
+    return kFunction_0x1800b2190;
+}
+
+// 0x1800b21b0 FUN_1800b21b0
+// source: re/dump/decompile/0x1800b21b0_FUN_1800b21b0.c
+// size: 62 bytes; thunk: false
+// body sha256: aa7ce64904a187d6fb374044c91a702070bd09391d4fb7032c6b77e790869fff
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b21b0{
+    "0x1800b21b0",
+    "FUN_1800b21b0",
+    R"F1800b21b0S(undefined FUN_1800b21b0())F1800b21b0S",
+    R"B1800b21b0(// 0x1800b21b0  FUN_1800b21b0
+// size=62 thunk=false
+// signature: undefined FUN_1800b21b0()
+// status: ok
+
+
+undefined1 FUN_1800b21b0(void)
+
+{
+  undefined8 uVar1;
+  undefined1 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0x8823bab96cef1ea);
+  puVar2 = (undefined1 *)FUN_1801fcfc0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b21b0",
+    "aa7ce64904a187d6fb374044c91a702070bd09391d4fb7032c6b77e790869fff",
+    R"F1800b21b0C(FUN_1801fcfc0
+FUN_180241610)F1800b21b0C",
+    R"F1800b21b0D(DAT_1803fadf0)F1800b21b0D",
+    R"F1800b21b0T()F1800b21b0T",
+    R"F1800b21b0F(16: return *puVar2;)F1800b21b0F",
+    R"F1800b21b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b21b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b21b0() noexcept {
+    return kFunction_0x1800b21b0;
+}
+
+// 0x1800b2200 FUN_1800b2200
+// source: re/dump/decompile/0x1800b2200_FUN_1800b2200.c
+// size: 948 bytes; thunk: false
+// body sha256: 3ec51d3edeb3e3722f8ca6a4b21f315d5a2592e7e6b1657b183bdbcba5116ef6
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2200{
+    "0x1800b2200",
+    "FUN_1800b2200",
+    R"F1800b2200S(undefined FUN_1800b2200())F1800b2200S",
+    R"B1800b2200(// 0x1800b2200  FUN_1800b2200
+// size=948 thunk=false
+// signature: undefined FUN_1800b2200()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+
+longlong FUN_1800b2200(ulonglong *param_1,char *param_2)
+
+{
+  uint *puVar1;
+  char cVar2;
+  ushort uVar3;
+  uint uVar4;
+  ulonglong uVar5;
+  void *pvVar6;
+  int iVar7;
+  BOOL BVar8;
+  size_t sVar9;
+  ulonglong uVar10;
+  longlong lVar11;
+  longlong lVar12;
+  ulonglong uVar13;
+  uint uVar14;
+  void *pvVar15;
+  char *pcVar16;
+  int iVar17;
+  undefined1 auStack_1a8 [32];
+  int local_188;
+  size_t local_180;
+  char *local_178;
+  void *local_170;
+  ulonglong local_168;
+  ulonglong local_158 [35];
+  
+  local_158[0x20] = DAT_1803da4c0 ^ (ulonglong)auStack_1a8;
+  if ((((char)param_1[2] != '\0') && (param_2 != (char *)0x0)) &&
+     (local_178 = param_2, sVar9 = strlen(param_2), sVar9 - 8 < 0x79)) {
+    local_168 = *param_1;
+    local_158[0] = 0;
+    local_158[1] = 0;
+    local_158[2] = 0;
+    lVar11 = (longlong)*(int *)(local_168 + 0x3c) + local_168;
+    local_158[3] = 0;
+    local_158[4] = 0;
+    local_158[5] = 0;
+    local_158[6] = 0;
+    uVar3 = *(ushort *)(lVar11 + 6);
+    local_158[7] = 0;
+    local_158[8] = 0;
+    local_158[9] = 0;
+    local_158[10] = 0;
+    local_158[0xb] = 0;
+    local_158[0xc] = 0;
+    local_158[0xd] = 0;
+    local_158[0xe] = 0;
+    local_158[0xf] = 0;
+    local_158[0x10] = 0;
+    local_158[0x11] = 0;
+    local_158[0x12] = 0;
+    local_158[0x13] = 0;
+    local_158[0x14] = 0;
+    local_158[0x15] = 0;
+    local_158[0x16] = 0;
+    local_158[0x17] = 0;
+    local_158[0x18] = 0;
+    local_158[0x19] = 0;
+    local_158[0x1a] = 0;
+    local_158[0x1b] = 0;
+    local_158[0x1c] = 0;
+    local_158[0x1d] = 0;
+    local_158[0x1e] = 0;
+    local_158[0x1f] = 0;
+    if (uVar3 != 0) {
+      local_188 = 0;
+      lVar11 = (ulonglong)*(ushort *)(lVar11 + 0x14) + lVar11;
+      uVar13 = 0;
+      do {
+        if (0xf < local_188) break;
+        if ((*(uint *)(lVar11 + 0x3c + uVar13 * 0x28) & 0x42000020) == 0x40000000) {
+          uVar14 = *(uint *)(lVar11 + 0x24 + uVar13 * 0x28);
+          if (((uVar14 != 0) && (uVar4 = *(uint *)(lVar11 + 0x20 + uVar13 * 0x28), uVar4 != 0)) &&
+             ((ulonglong)uVar14 + (ulonglong)uVar4 <= param_1[1])) {
+            lVar12 = (longlong)local_188;
+            local_188 = local_188 + 1;
+            local_158[lVar12 * 2] = uVar14 + local_168;
+            local_158[lVar12 * 2 + 1] = (ulonglong)uVar4;
+          }
+        }
+        uVar14 = (int)uVar13 + 1;
+        uVar13 = (ulonglong)uVar14;
+      } while ((int)uVar14 < (int)(uint)uVar3);
+      if (0 < local_188) {
+        pvVar15 = (void *)0x0;
+        local_170 = (void *)0x0;
+        iVar17 = 0;
+        local_180 = sVar9;
+        do {
+          iVar7 = local_188;
+          if (pvVar15 != (void *)0x0) goto LAB_1800b248d;
+          uVar13 = sVar9 + 1;
+          uVar10 = local_158[(longlong)iVar17 * 2 + 1];
+          pvVar6 = local_170;
+          if (uVar13 < uVar10) {
+            uVar5 = local_158[(longlong)iVar17 * 2];
+            lVar11 = 0;
+            cVar2 = *local_178;
+            do {
+              pvVar15 = (void *)(lVar11 + uVar5);
+              if ((*(char *)(lVar11 + uVar5) == cVar2) &&
+                 (iVar7 = memcmp(pvVar15,local_178,uVar13), sVar9 = local_180, pvVar6 = pvVar15,
+                 iVar7 == 0)) break;
+              lVar11 = lVar11 + 1;
+              pvVar15 = local_170;
+              pvVar6 = local_170;
+            } while (sVar9 + 1 + lVar11 < uVar10);
+          }
+          local_170 = pvVar6;
+          iVar17 = iVar17 + 1;
+        } while (iVar17 < local_188);
+        iVar7 = local_188;
+        if (pvVar15 != (void *)0x0) {
+LAB_1800b248d:
+          if (local_168 <= (longlong)pvVar15 - 0x10U) {
+            pcVar16 = (char *)(ulonglong)(uint)((int)((longlong)pvVar15 - 0x10U) - (int)local_168);
+            local_188 = 0;
+            local_178 = pcVar16;
+            do {
+              uVar13 = local_158[(longlong)local_188 * 2 + 1];
+              if (0x1f < uVar13) {
+                pvVar15 = (void *)local_158[(longlong)local_188 * 2];
+                local_180 = 0;
+                local_170 = pvVar15;
+                local_168 = uVar13;
+                do {
+                  puVar1 = (uint *)(local_180 + (longlong)pvVar15);
+                  if ((*(int *)(local_180 + 0xc + (longlong)pvVar15) == (int)pcVar16) &&
+                     (*puVar1 < 2)) {
+                    iVar17 = 0;
+                    do {
+                      uVar13 = local_158[(longlong)iVar17 * 2 + 1];
+                      if (0x17 < uVar13) {
+                        uVar10 = local_158[(longlong)iVar17 * 2];
+                        lVar11 = 0;
+                        do {
+                          if (*(uint **)(lVar11 + uVar10) == puVar1) {
+                            lVar12 = lVar11 + uVar10;
+                            BVar8 = IsBadReadPtr((void *)(lVar12 + 8),0x28);
+                            if (BVar8 == 0) {
+                              return lVar12 + 8;
+                            }
+                          }
+                          uVar5 = lVar11 + 0x18;
+                          lVar11 = lVar11 + 8;
+                        } while (uVar5 < uVar13);
+                      }
+                      iVar17 = iVar17 + 1;
+                      uVar13 = local_168;
+                      pvVar15 = local_170;
+                      pcVar16 = local_178;
+                    } while (iVar17 < iVar7);
+                  }
+                  uVar10 = local_180 + 0x1c;
+                  local_180 = local_180 + 4;
+                } while (uVar10 < uVar13);
+              }
+              local_188 = local_188 + 1;
+            } while (local_188 < iVar7);
+          }
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+
+)B1800b2200",
+    "3ec51d3edeb3e3722f8ca6a4b21f315d5a2592e7e6b1657b183bdbcba5116ef6",
+    R"F1800b2200C()F1800b2200C",
+    R"F1800b2200D(LAB_1800b248d
+DAT_1803da4c0)F1800b2200D",
+    R"F1800b2200T()F1800b2200T",
+    R"F1800b2200F(38: if ((((char)param_1[2] != '\0') && (param_2 != (char *)0x0)) &&
+75: if (uVar3 != 0) {
+79: do {
+80: if (0xf < local_188) break;
+81: if ((*(uint *)(lVar11 + 0x3c + uVar13 * 0x28) & 0x42000020) == 0x40000000) {
+83: if (((uVar14 != 0) && (uVar4 = *(uint *)(lVar11 + 0x20 + uVar13 * 0x28), uVar4 != 0)) &&
+94: if (0 < local_188) {
+99: do {
+101: if (pvVar15 != (void *)0x0) goto LAB_1800b248d;
+105: if (uVar13 < uVar10) {
+109: do {
+111: if ((*(char *)(lVar11 + uVar5) == cVar2) &&
+123: if (pvVar15 != (void *)0x0) {
+124: LAB_1800b248d:
+125: if (local_168 <= (longlong)pvVar15 - 0x10U) {
+129: do {
+131: if (0x1f < uVar13) {
+136: do {
+138: if ((*(int *)(local_180 + 0xc + (longlong)pvVar15) == (int)pcVar16) &&
+141: do {
+143: if (0x17 < uVar13) {
+146: do {
+147: if (*(uint **)(lVar11 + uVar10) == puVar1) {
+150: if (BVar8 == 0) {
+151: return lVar12 + 8;
+175: return 0;)F1800b2200F",
+    R"F1800b2200U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b248d.
+TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F1800b2200U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2200() noexcept {
+    return kFunction_0x1800b2200;
+}
+
+// 0x1800b25c0 FUN_1800b25c0
+// source: re/dump/decompile/0x1800b25c0_FUN_1800b25c0.c
+// size: 147 bytes; thunk: false
+// body sha256: 47bb576a380bc532913757c8eeb31e43c59247d2c88d2bac12ee8debe1b5607d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b25c0{
+    "0x1800b25c0",
+    "FUN_1800b25c0",
+    R"F1800b25c0S(undefined FUN_1800b25c0())F1800b25c0S",
+    R"B1800b25c0(// 0x1800b25c0  FUN_1800b25c0
+// size=147 thunk=false
+// signature: undefined FUN_1800b25c0()
+// status: ok
+
+
+void FUN_1800b25c0(undefined8 param_1)
+
+{
+  char *pcVar1;
+  
+  if (DAT_1804099e8 < 0x14) {
+    pcVar1 = "NOT ENOUGH DATA - move around on a live map first";
+  }
+  else if (DAT_180409a28 < 2) {
+    pcVar1 = "PER FRAME - choke does NOT steer the body (anti-aim design must change)";
+    if (DAT_180409a4c < 1) {
+      pcVar1 = "ONLY 1 CALL/TICK SO FAR - nothing has been choked yet, enable fakelag";
+    }
+  }
+  else {
+    pcVar1 = "PER USERCMD - choked commands DO steer the server body (design holds)";
+  }
+  FUN_180014410("[ANIMPROBE] %s: maxCalls/tick=%d maxChoke=%d bursts=%lld calls=%lld ticks=%lld worstDrift=%.4f deg => %s\n"
+                ,param_1,DAT_180409a28,DAT_180409a4c,DAT_180409a60,DAT_1804099e8,DAT_180409a00,
+                (double)DAT_180409a20,pcVar1);
+  return;
+}
+
+
+)B1800b25c0",
+    "47bb576a380bc532913757c8eeb31e43c59247d2c88d2bac12ee8debe1b5607d",
+    R"F1800b25c0C(FUN_180014410)F1800b25c0C",
+    R"F1800b25c0D(DAT_1804099e8
+DAT_180409a00
+DAT_180409a20
+DAT_180409a28
+DAT_180409a4c
+DAT_180409a60)F1800b25c0D",
+    R"F1800b25c0T("NOT ENOUGH DATA - move around on a live map first"
+"ONLY 1 CALL/TICK SO FAR - nothing has been choked yet, enable fakelag"
+"PER USERCMD - choked commands DO steer the server body (design holds)"
+"PER FRAME - choke does NOT steer the body (anti-aim design must change)"
+"[ANIMPROBE] %s: maxCalls/tick=%d maxChoke=%d bursts=%lld calls=%lld ticks=%lld worstDrift=%.4f deg => %s\\n")F1800b25c0T",
+    R"F1800b25c0F(12: if (DAT_1804099e8 < 0x14) {
+15: else if (DAT_180409a28 < 2) {
+17: if (DAT_180409a4c < 1) {
+21: else {
+27: return;)F1800b25c0F",
+    R"F1800b25c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1804099e8.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a00.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a20.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a28.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a4c.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a60.)F1800b25c0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b25c0() noexcept {
+    return kFunction_0x1800b25c0;
+}
+
+// 0x1800b2660 FUN_1800b2660
+// source: re/dump/decompile/0x1800b2660_FUN_1800b2660.c
+// size: 14 bytes; thunk: false
+// body sha256: a39208deb7a7e5c5d044ea791182fe1759298ed39fcb9fa26c11de06d85fd967
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2660{
+    "0x1800b2660",
+    "FUN_1800b2660",
+    R"F1800b2660S(undefined FUN_1800b2660())F1800b2660S",
+    R"B1800b2660(// 0x1800b2660  FUN_1800b2660
+// size=14 thunk=false
+// signature: undefined FUN_1800b2660()
+// status: ok
+
+
+undefined8 FUN_1800b2660(longlong param_1,int param_2,undefined4 *param_3)
+
+{
+  *param_3 = *(undefined4 *)(param_2 + param_1);
+  return CONCAT71((int7)(int3)((uint)param_2 >> 8),1);
+}
+
+
+)B1800b2660",
+    "a39208deb7a7e5c5d044ea791182fe1759298ed39fcb9fa26c11de06d85fd967",
+    R"F1800b2660C()F1800b2660C",
+    R"F1800b2660D()F1800b2660D",
+    R"F1800b2660T()F1800b2660T",
+    R"F1800b2660F(11: return CONCAT71((int7)(int3)((uint)param_2 >> 8),1);)F1800b2660F",
+    R"F1800b2660U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b2660U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2660() noexcept {
+    return kFunction_0x1800b2660;
+}
+
+// 0x1800b2670 FUN_1800b2670
+// source: re/dump/decompile/0x1800b2670_FUN_1800b2670.c
+// size: 12 bytes; thunk: false
+// body sha256: b004dbc0d5e111f54806148d4d80086950877fde2205557a6466bdc731e5d822
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2670{
+    "0x1800b2670",
+    "FUN_1800b2670",
+    R"F1800b2670S(undefined FUN_1800b2670())F1800b2670S",
+    R"B1800b2670(// 0x1800b2670  FUN_1800b2670
+// size=12 thunk=false
+// signature: undefined FUN_1800b2670()
+// status: ok
+
+
+undefined8 FUN_1800b2670(longlong param_1,undefined8 param_2,undefined8 *param_3)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = *(undefined8 *)(param_1 + 0x30);
+  *param_3 = uVar1;
+  return CONCAT71((int7)((ulonglong)uVar1 >> 8),1);
+}
+
+
+)B1800b2670",
+    "b004dbc0d5e111f54806148d4d80086950877fde2205557a6466bdc731e5d822",
+    R"F1800b2670C()F1800b2670C",
+    R"F1800b2670D()F1800b2670D",
+    R"F1800b2670T()F1800b2670T",
+    R"F1800b2670F(14: return CONCAT71((int7)((ulonglong)uVar1 >> 8),1);)F1800b2670F",
+    R"F1800b2670U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b2670U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2670() noexcept {
+    return kFunction_0x1800b2670;
+}
+
+// 0x1800b2680 FUN_1800b2680
+// source: re/dump/decompile/0x1800b2680_FUN_1800b2680.c
+// size: 1423 bytes; thunk: false
+// body sha256: a73f0954f94ea948170cb5ae197e9f952f687b1388f25f61d3e97721fc1087db
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2680{
+    "0x1800b2680",
+    "FUN_1800b2680",
+    R"F1800b2680S(undefined FUN_1800b2680())F1800b2680S",
+    R"B1800b2680(// 0x1800b2680  FUN_1800b2680
+// size=1423 thunk=false
+// signature: undefined FUN_1800b2680()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1800b2680(longlong param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  int iVar1;
+  float fVar2;
+  float fVar3;
+  float fVar4;
+  char cVar5;
+  char cVar6;
+  int iVar7;
+  longlong lVar8;
+  int iVar9;
+  int iVar10;
+  bool bVar11;
+  uint uVar12;
+  float fVar13;
+  float fVar14;
+  float fVar15;
+  float fVar16;
+  float fVar17;
+  float fVar18;
+  float fVar19;
+  float local_res20 [2];
+  undefined8 local_e8;
+  undefined1 local_e0;
+  undefined1 local_df;
+  undefined2 local_de;
+  float local_d8 [2];
+  float local_d0;
+  float local_cc;
+  undefined1 local_c8;
+  undefined1 local_c7;
+  undefined2 local_c6;
+  
+  if (DAT_180409a10 != (code *)0x0) {
+    local_res20[0] = 0.0;
+    local_e8 = (double)((ulonglong)local_e8 & 0xffffffff00000000);
+    cVar5 = FUN_1800b2660(param_1,0x90,&local_e8);
+    fVar19 = 0.0;
+    if ((cVar5 == '\0') ||
+       (cVar5 = FUN_1800b2660(param_1,0x94,local_res20), fVar19 = local_res20[0], cVar5 == '\0')) {
+      cVar5 = '\0';
+    }
+    else {
+      cVar5 = '\x01';
+    }
+    (*DAT_180409a10)(param_1,param_2,param_3);
+    cVar6 = FUN_1800b21b0();
+    if (cVar6 != '\0') {
+      local_d8[0] = 0.0;
+      local_res20[0] = 0.0;
+      cVar6 = FUN_1800b2660(param_1,0x90,local_d8);
+      if ((cVar6 != '\0') && (cVar6 = FUN_1800b2660(param_1,0x94,local_res20), cVar6 != '\0')) {
+        FUN_1800b2670();
+        fVar3 = local_res20[0];
+        lVar8 = DAT_1803fa608;
+        fVar15 = DAT_180380988;
+        if (DAT_1803fa608 == 0) {
+          iVar10 = 0;
+        }
+        else {
+          iVar10 = *(int *)(DAT_1803fa608 + 0x20);
+        }
+        if (iVar10 != DAT_1803e8110) {
+          if ((-1 < DAT_1803e8110) &&
+             (DAT_180409a00 = DAT_180409a00 + 1, DAT_180409a28 < DAT_180409a50)) {
+            DAT_180409a28 = DAT_180409a50;
+          }
+          DAT_180409a50 = 0;
+          DAT_1803e8110 = iVar10;
+        }
+        DAT_1804099e8 = DAT_1804099e8 + 1;
+        iVar7 = DAT_180409a50 + 1;
+        if (param_1 != DAT_1804099e0) {
+          DAT_180409a48 = '\0';
+          DAT_1804099e0 = param_1;
+        }
+        fVar4 = (float)local_e8;
+        DAT_180409a50 = iVar7;
+        if (cVar5 == '\0') {
+          fVar15 = 0.0;
+          local_res20[0] = DAT_180409a30;
+        }
+        else {
+          _DAT_1804099f0 = (float)local_e8;
+          if (DAT_180409a48 == '\0') {
+            local_e0 = 1;
+            DAT_1804099fa = local_c6;
+            DAT_1804099f9 = 0;
+            DAT_180409a48 = '\x01';
+            _DAT_1804099f8 = 1;
+          }
+          else {
+            local_e0 = DAT_1804099f8;
+          }
+          local_d0 = (float)local_e8;
+          local_e8 = (double)CONCAT44(fVar19,(float)local_e8);
+          fVar14 = DAT_180380988;
+          if (DAT_1803fa608 != 0) {
+            fVar14 = (float)*(double *)(DAT_1803fa608 + 0x28);
+          }
+          _DAT_1804099f4 = fVar19;
+          local_df = DAT_1804099f9;
+          local_de = DAT_1804099fa;
+          local_cc = fVar19;
+          local_c8 = local_e0;
+          local_c7 = DAT_1804099f9;
+          local_c6 = DAT_1804099fa;
+          FUN_1800b1de0(&local_d0,param_2,0,fVar14);
+          if (lVar8 != 0) {
+            fVar15 = (float)*(double *)(lVar8 + 0x28);
+          }
+          FUN_1800b1de0(&local_e8,param_2,DAT_1803811c4,fVar15);
+          fVar17 = local_cc;
+          uVar12 = FUN_1800b1d70(local_cc - fVar3);
+          fVar14 = local_e8._4_4_;
+          fVar18 = (float)(uVar12 & _DAT_1803817c0);
+          local_res20[0] = local_e8._4_4_;
+          uVar12 = FUN_1800b1d70(local_e8._4_4_ - fVar3);
+          DAT_180409a18 = (float)(uVar12 & _DAT_1803817c0);
+          fVar15 = fVar18;
+          if (DAT_180409a18 <= fVar18) {
+            fVar15 = DAT_180409a18;
+          }
+          if (DAT_180409a20 < fVar15) {
+            DAT_180409a20 = fVar15;
+          }
+          DAT_180409a44 = fVar17;
+          DAT_180409a30 = fVar14;
+          DAT_180409a40 = fVar18;
+        }
+        fVar2 = DAT_180409a44;
+        fVar18 = DAT_180409a40;
+        fVar17 = DAT_180409a24;
+        cVar6 = DAT_180409a1c;
+        fVar14 = DAT_180409a18;
+        if (1 < iVar7) {
+          DAT_180409a60 = DAT_180409a60 + 1;
+        }
+        if (DAT_180409a1c == '\0') {
+          fVar16 = 0.0;
+        }
+        else {
+          uVar12 = FUN_1800b1d70(DAT_180409a24 - fVar3);
+          fVar16 = (float)(uVar12 & _DAT_1803817c0);
+          if (_DAT_180409a68 < fVar16) {
+            _DAT_180409a68 = fVar16;
+          }
+        }
+        iVar1 = DAT_180409a28;
+        iVar9 = DAT_1804261ac + 1;
+        bVar11 = DAT_1804261ac == (DAT_1804261ac / 0x21) * 0x21;
+        DAT_1804261ac = iVar9;
+        if (bVar11) {
+          fVar13 = (float)FUN_1800b1d70((float)param_2 - fVar3);
+          local_e8 = (double)fVar13;
+          if (cVar6 == '\0') {
+            fVar17 = 0.0;
+          }
+          FUN_180014410("[ANIMPROBE] tick=%d call#%d/tick eye=%.2f | before(goal=%.2f cur=%.2f ok=%d) -> engine(goal=%.2f cur=%.2f) | predict stand=%.2f move=%.2f | dStand=%.3f dMove=%.3f drift=%.3f | aaMirror=%.2f lag=%.2f | twist=%.2f maxCalls/tick=%d\n"
+                        ,iVar10,iVar7,(double)(float)param_2,(double)fVar4,(double)fVar19,cVar5,
+                        (double)local_d8[0],(double)fVar3,(double)fVar2,(double)local_res20[0],
+                        (double)fVar18,(double)fVar14,(double)fVar15,(double)fVar17,(double)fVar16,
+                        local_e8,iVar1);
+          lVar8 = DAT_1803fa608;
+        }
+        if ((lVar8 != 0) && (DAT_180380d38 < *(double *)(lVar8 + 0x10) - _DAT_180409a08)) {
+          _DAT_180409a08 = *(double *)(lVar8 + 0x10);
+          FUN_1800b25c0("running");
+        }
+      }
+    }
+  }
+  return;
+}
+
+
+)B1800b2680",
+    "a73f0954f94ea948170cb5ae197e9f952f687b1388f25f61d3e97721fc1087db",
+    R"F1800b2680C(FUN_180014410
+FUN_1800b1d70
+FUN_1800b1de0
+FUN_1800b21b0
+FUN_1800b25c0
+FUN_1800b2660
+FUN_1800b2670)F1800b2680C",
+    R"F1800b2680D(DAT_180380988
+DAT_180380d38
+DAT_1803811c4
+DAT_1803e8110
+DAT_1803fa608
+DAT_1804099e0
+DAT_1804099e8
+DAT_1804099f8
+DAT_1804099f9
+DAT_1804099fa
+DAT_180409a00
+DAT_180409a10
+DAT_180409a18
+DAT_180409a1c
+DAT_180409a20
+DAT_180409a24
+DAT_180409a28
+DAT_180409a30
+DAT_180409a40
+DAT_180409a44
+DAT_180409a48
+DAT_180409a50
+DAT_180409a60
+DAT_1804261ac)F1800b2680D",
+    R"F1800b2680T("running"
+"[ANIMPROBE] tick=%d call#%d/tick eye=%.2f | before(goal=%.2f cur=%.2f ok=%d) -> engine(goal=%.2f cur=%.2f) | predict stand=%.2f move=%.2f | dStand=%.3f dMove=%.3f drift=%.3f | aaMirror=%.2f lag=%.2f | twist=%.2f maxCalls/tick=%d\\n")F1800b2680T",
+    R"F1800b2680F(43: if (DAT_180409a10 != (code *)0x0) {
+48: if ((cVar5 == '\0') ||
+52: else {
+57: if (cVar6 != '\0') {
+61: if ((cVar6 != '\0') && (cVar6 = FUN_1800b2660(param_1,0x94,local_res20), cVar6 != '\0')) {
+66: if (DAT_1803fa608 == 0) {
+69: else {
+72: if (iVar10 != DAT_1803e8110) {
+73: if ((-1 < DAT_1803e8110) &&
+82: if (param_1 != DAT_1804099e0) {
+88: if (cVar5 == '\0') {
+92: else {
+94: if (DAT_180409a48 == '\0') {
+101: else {
+107: if (DAT_1803fa608 != 0) {
+118: if (lVar8 != 0) {
+130: if (DAT_180409a18 <= fVar18) {
+133: if (DAT_180409a20 < fVar15) {
+145: if (1 < iVar7) {
+148: if (DAT_180409a1c == '\0') {
+151: else {
+154: if (_DAT_180409a68 < fVar16) {
+162: if (bVar11) {
+165: if (cVar6 == '\0') {
+175: if ((lVar8 != 0) && (DAT_180380d38 < *(double *)(lVar8 + 0x10) - _DAT_180409a08)) {
+182: return;)F1800b2680F",
+    R"F1800b2680U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380988.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d38.
+TODO: recover the declaration, type and value for global/data reference DAT_1803811c4.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e8110.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1804099e0.
+TODO: recover the declaration, type and value for global/data reference DAT_1804099e8.
+TODO: recover the declaration, type and value for global/data reference DAT_1804099f8.
+TODO: recover the declaration, type and value for global/data reference DAT_1804099f9.
+TODO: recover the declaration, type and value for global/data reference DAT_1804099fa.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a00.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a10.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a18.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a1c.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a20.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a24.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a28.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a30.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a40.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a44.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a48.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a50.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a60.
+TODO: recover the declaration, type and value for global/data reference DAT_1804261ac.
+TODO: resolve the indirect call in body 43: if (DAT_180409a10 != (code *)0x0) {.
+TODO: resolve the indirect call in body 55: (*DAT_180409a10)(param_1,param_2,param_3);.)F1800b2680U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2680() noexcept {
+    return kFunction_0x1800b2680;
+}
+
+// 0x1800b2c10 FUN_1800b2c10
+// source: re/dump/decompile/0x1800b2c10_FUN_1800b2c10.c
+// size: 23 bytes; thunk: false
+// body sha256: 93f250d486c2acdcb7353b8b0f5d4494af5ed232f62c3204f524351ce7ab89eb
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2c10{
+    "0x1800b2c10",
+    "FUN_1800b2c10",
+    R"F1800b2c10S(undefined FUN_1800b2c10())F1800b2c10S",
+    R"B1800b2c10(// 0x1800b2c10  FUN_1800b2c10
+// size=23 thunk=false
+// signature: undefined FUN_1800b2c10()
+// status: ok
+
+
+void FUN_1800b2c10(void)
+
+{
+  FUN_180243300(DAT_180409a58);
+  return;
+}
+
+
+)B1800b2c10",
+    "93f250d486c2acdcb7353b8b0f5d4494af5ed232f62c3204f524351ce7ab89eb",
+    R"F1800b2c10C(FUN_180243300)F1800b2c10C",
+    R"F1800b2c10D(DAT_180409a58)F1800b2c10D",
+    R"F1800b2c10T()F1800b2c10T",
+    R"F1800b2c10F(11: return;)F1800b2c10F",
+    R"F1800b2c10U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a58.)F1800b2c10U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2c10() noexcept {
+    return kFunction_0x1800b2c10;
+}
+
+// 0x1800b2c30 FUN_1800b2c30
+// source: re/dump/decompile/0x1800b2c30_FUN_1800b2c30.c
+// size: 640 bytes; thunk: false
+// body sha256: 0e63cc2ec63461d482f7e61b4b83c0921fb16ecf3ea34c0b7f18b2072a572311
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2c30{
+    "0x1800b2c30",
+    "FUN_1800b2c30",
+    R"F1800b2c30S(undefined FUN_1800b2c30())F1800b2c30S",
+    R"B1800b2c30(// 0x1800b2c30  FUN_1800b2c30
+// size=640 thunk=false
+// signature: undefined FUN_1800b2c30()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8 FUN_1800b2c30(void)
+
+{
+  void *lp;
+  uint uVar1;
+  BOOL BVar2;
+  int iVar3;
+  HMODULE lp_00;
+  longlong lVar4;
+  int *lp_01;
+  char *pcVar5;
+  undefined8 local_38;
+  bool local_28;
+  undefined7 uStack_27;
+  undefined4 local_20;
+  undefined4 uStack_1c;
+  uint uStack_18;
+  undefined4 uStack_14;
+  undefined8 local_10;
+  
+  if (DAT_180409a2c != '\0') {
+    return 1;
+  }
+  local_28 = false;
+  local_38 = (HMODULE)0x0;
+  uVar1 = 0;
+  lp_00 = GetModuleHandleA("server.dll");
+  uStack_18 = uVar1;
+  if (((lp_00 != (HMODULE)0x0) && (BVar2 = IsBadReadPtr(lp_00,0x40), BVar2 == 0)) &&
+     ((short)lp_00->unused == 0x5a4d)) {
+    lp_01 = (int *)((longlong)&lp_00->unused + (longlong)lp_00[0xf].unused);
+    BVar2 = IsBadReadPtr(lp_01,0x108);
+    if ((BVar2 == 0) && (*lp_01 == 0x4550)) {
+      uStack_18 = lp_01[0x14];
+      local_28 = 0x1000 < uStack_18;
+      local_38 = lp_00;
+    }
+  }
+  local_10 = CONCAT71(uStack_27,local_28);
+  local_20 = (undefined4)local_38;
+  uStack_1c = local_38._4_4_;
+  uStack_14 = 0;
+  if (local_28) {
+    pcVar5 = ".?AVCHL2MPPlayerAnimState@@";
+    lVar4 = FUN_1800b2200(&local_20,".?AVCHL2MPPlayerAnimState@@");
+    if (lVar4 == 0) {
+      pcVar5 = ".?AVCMultiPlayerAnimState@@";
+      lVar4 = FUN_1800b2200(&local_20,".?AVCMultiPlayerAnimState@@");
+      if (lVar4 == 0) {
+        FUN_180014410("[ANIMPROBE] no animstate vtable found in server.dll\n");
+        return 0;
+      }
+      FUN_180014410(
+                   "[ANIMPROBE] WARNING: derived animstate vtable missing, falling back to the base class - counts may be zero\n"
+                   );
+    }
+    lp = *(void **)(lVar4 + 0x20);
+    if ((lp == (void *)0x0) || (BVar2 = IsBadReadPtr(lp,0x10), BVar2 != 0)) {
+      FUN_180014410("[ANIMPROBE] vtable slot %d is not readable code\n",4);
+    }
+    else {
+      iVar3 = FUN_180242fc0(lp,FUN_1800b2680,&DAT_180409a10);
+      if (iVar3 == 0) {
+        iVar3 = FUN_180243560(lp,1);
+        if (iVar3 == 0) {
+          DAT_180409a38 = CONCAT44(uStack_1c,local_20);
+          _DAT_180409a08 = 0;
+          DAT_180409a2c = 1;
+          DAT_180409a50 = 0;
+          DAT_1803e8110 = 0xffffffff;
+          DAT_180409a28 = 0;
+          DAT_1804099e8 = 0;
+          DAT_180409a00 = 0;
+          DAT_1804099e0 = 0;
+          DAT_180409a48 = 0;
+          DAT_180409a20 = 0;
+          DAT_180409a4c = 0;
+          DAT_180409a60 = 0;
+          DAT_180409a58 = lp;
+          FUN_180014410("[ANIMPROBE] armed on server.dll %s::Update %p (rva +0x%zX, module %p, slot %d). A verdict line prints every 2s while a map runs.\n"
+                        ,pcVar5,lp,(longlong)lp - DAT_180409a38,DAT_180409a38,4);
+          return 1;
+        }
+        FUN_180014410("[ANIMPROBE] MH_EnableHook failed on %p\n",lp);
+        FUN_180243300(lp);
+      }
+      else {
+        FUN_180014410("[ANIMPROBE] MH_CreateHook failed on %p\n",lp);
+      }
+    }
+  }
+  else {
+    FUN_180014410(
+                 "[ANIMPROBE] server.dll is not loaded - host a listen server (or start a singleplayer map) and toggle the probe again.\n"
+                 );
+  }
+  return 0;
+}
+
+
+)B1800b2c30",
+    "0e63cc2ec63461d482f7e61b4b83c0921fb16ecf3ea34c0b7f18b2072a572311",
+    R"F1800b2c30C(FUN_180014410
+FUN_1800b2200
+FUN_1800b2680
+FUN_180242fc0
+FUN_180243300
+FUN_180243560)F1800b2c30C",
+    R"F1800b2c30D(DAT_1803e8110
+DAT_1804099e0
+DAT_1804099e8
+DAT_180409a00
+DAT_180409a10
+DAT_180409a20
+DAT_180409a28
+DAT_180409a2c
+DAT_180409a38
+DAT_180409a48
+DAT_180409a4c
+DAT_180409a50
+DAT_180409a58
+DAT_180409a60)F1800b2c30D",
+    R"F1800b2c30T("server.dll"
+".?AVCHL2MPPlayerAnimState@@"
+".?AVCMultiPlayerAnimState@@"
+"[ANIMPROBE] MH_CreateHook failed on %p\\n"
+"[ANIMPROBE] MH_EnableHook failed on %p\\n"
+"[ANIMPROBE] vtable slot %d is not readable code\\n"
+"[ANIMPROBE] no animstate vtable found in server.dll\\n"
+"[ANIMPROBE] WARNING: derived animstate vtable missing, falling back to the base class - counts may be zero\\n"
+"[ANIMPROBE] server.dll is not loaded - host a listen server (or start a singleplayer map) and toggle the probe again.\\n"
+"[ANIMPROBE] armed on server.dll %s::Update %p (rva +0x%zX, module %p, slot %d). A verdict line prints every 2s while a map runs.\\n")F1800b2c30T",
+    R"F1800b2c30F(29: if (DAT_180409a2c != '\0') {
+30: return 1;
+37: if (((lp_00 != (HMODULE)0x0) && (BVar2 = IsBadReadPtr(lp_00,0x40), BVar2 == 0)) &&
+41: if ((BVar2 == 0) && (*lp_01 == 0x4550)) {
+51: if (local_28) {
+54: if (lVar4 == 0) {
+57: if (lVar4 == 0) {
+59: return 0;
+66: if ((lp == (void *)0x0) || (BVar2 = IsBadReadPtr(lp,0x10), BVar2 != 0)) {
+69: else {
+71: if (iVar3 == 0) {
+73: if (iVar3 == 0) {
+90: return 1;
+95: else {
+100: else {
+105: return 0;)F1800b2c30F",
+    R"F1800b2c30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e8110.
+TODO: recover the declaration, type and value for global/data reference DAT_1804099e0.
+TODO: recover the declaration, type and value for global/data reference DAT_1804099e8.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a00.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a10.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a20.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a28.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a2c.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a38.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a48.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a4c.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a50.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a58.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a60.)F1800b2c30U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2c30() noexcept {
+    return kFunction_0x1800b2c30;
+}
+
+// 0x1800b2eb0 FUN_1800b2eb0
+// source: re/dump/decompile/0x1800b2eb0_FUN_1800b2eb0.c
+// size: 91 bytes; thunk: false
+// body sha256: 11085c2c53c4ff2f9363b6f1733f1e94639b3729b697cc1fd2b99c46fb43b492
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2eb0{
+    "0x1800b2eb0",
+    "FUN_1800b2eb0",
+    R"F1800b2eb0S(undefined FUN_1800b2eb0())F1800b2eb0S",
+    R"B1800b2eb0(// 0x1800b2eb0  FUN_1800b2eb0
+// size=91 thunk=false
+// signature: undefined FUN_1800b2eb0()
+// status: ok
+
+
+void FUN_1800b2eb0(void)
+
+{
+  if ((DAT_180409a2c != '\0') && (DAT_180409a58 != 0)) {
+    FUN_180243560(DAT_180409a58,0);
+    FUN_180243300(DAT_180409a58);
+    FUN_1800b25c0("disarmed");
+    DAT_180409a2c = '\0';
+    DAT_180409a58 = 0;
+    DAT_180409a38 = 0;
+    DAT_180409a10 = 0;
+  }
+  return;
+}
+
+
+)B1800b2eb0",
+    "11085c2c53c4ff2f9363b6f1733f1e94639b3729b697cc1fd2b99c46fb43b492",
+    R"F1800b2eb0C(FUN_1800b25c0
+FUN_180243300
+FUN_180243560)F1800b2eb0C",
+    R"F1800b2eb0D(DAT_180409a10
+DAT_180409a2c
+DAT_180409a38
+DAT_180409a58)F1800b2eb0D",
+    R"F1800b2eb0T("disarmed")F1800b2eb0T",
+    R"F1800b2eb0F(10: if ((DAT_180409a2c != '\0') && (DAT_180409a58 != 0)) {
+19: return;)F1800b2eb0F",
+    R"F1800b2eb0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a10.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a2c.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a38.
+TODO: recover the declaration, type and value for global/data reference DAT_180409a58.)F1800b2eb0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2eb0() noexcept {
+    return kFunction_0x1800b2eb0;
+}
+
+// 0x1800b2f10 FUN_1800b2f10
+// source: re/dump/decompile/0x1800b2f10_FUN_1800b2f10.c
+// size: 1282 bytes; thunk: false
+// body sha256: c69449c528e03126f96db9c4970200b43c48417c70e2a0f64e3fdc3a3f4cef1d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b2f10{
+    "0x1800b2f10",
+    "FUN_1800b2f10",
+    R"F1800b2f10S(undefined FUN_1800b2f10())F1800b2f10S",
+    R"B1800b2f10(// 0x1800b2f10  FUN_1800b2f10
+// size=1282 thunk=false
+// signature: undefined FUN_1800b2f10()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1800b2f10(int param_1,float param_2,int param_3,undefined8 param_4)
+
+{
+  int iVar1;
+  short sVar2;
+  uint uVar3;
+  int iVar4;
+  uint uVar5;
+  uint uVar6;
+  uint uVar7;
+  longlong lVar8;
+  uint uVar9;
+  uint uVar10;
+  longlong lVar11;
+  uint uVar12;
+  uint uVar13;
+  undefined4 uVar14;
+  undefined1 extraout_var [12];
+  undefined1 auVar15 [16];
+  float fVar16;
+  float fVar17;
+  float fVar18;
+  undefined1 auVar19 [16];
+  float fVar20;
+  undefined4 local_54;
+  
+  if (0x7f < param_1 - 1U) {
+    return;
+  }
+  lVar11 = (longlong)param_1 * 0x318;
+  sVar2 = _fdclass();
+  fVar20 = 0.0;
+  if (sVar2 < 1) {
+    fVar16 = fmodf(param_2,DAT_18038120c);
+    auVar19._4_4_ = extraout_var._0_4_;
+    auVar19._0_4_ = fVar16;
+    auVar19._8_4_ = extraout_var._4_4_;
+    auVar19._12_4_ = extraout_var._8_4_;
+    if (DAT_180381188 < fVar16) {
+      auVar19._0_4_ = fVar16 - DAT_18038120c;
+    }
+    if (auVar19._0_4_ < DAT_180381420) {
+      auVar19._0_4_ = auVar19._0_4_ + DAT_18038120c;
+    }
+  }
+  else {
+    auVar19 = ZEXT816(0);
+  }
+  iVar4 = 1;
+  if (0 < param_3) {
+    iVar4 = param_3;
+  }
+  if (*(int *)(&DAT_18040a950 + lVar11) < 1) {
+    uVar14 = 0;
+  }
+  else {
+    uVar3 = *(int *)(&DAT_18040a954 + lVar11) + 0x3fU & 0x8000001f;
+    if ((int)uVar3 < 0) {
+      uVar3 = (uVar3 - 1 | 0xffffffe0) + 1;
+    }
+    auVar15._4_12_ = auVar19._4_12_;
+    auVar15._0_4_ = auVar19._0_4_ - *(float *)(lVar11 + 0x18040a658 + (longlong)(int)uVar3 * 0x18);
+    uVar14 = FUN_1800b1d70(auVar15._0_8_);
+  }
+  lVar8 = (longlong)*(int *)(&DAT_18040a954 + lVar11);
+  *(undefined8 *)(&DAT_18040a650 + lVar8 * 0x18 + lVar11) = param_4;
+  *(float *)(lVar11 + 0x18040a658 + lVar8 * 0x18) = auVar19._0_4_;
+  *(undefined4 *)(lVar11 + 0x18040a65c + lVar8 * 0x18) = uVar14;
+  *(int *)(&DAT_18040a660 + lVar8 * 0x18 + lVar11) = iVar4;
+  *(undefined4 *)(lVar11 + 0x18040a664 + lVar8 * 0x18) = local_54;
+  uVar3 = _DAT_1803817c0;
+  uVar13 = *(int *)(&DAT_18040a954 + lVar11) + 1U & 0x8000001f;
+  if ((int)uVar13 < 0) {
+    uVar13 = (uVar13 - 1 | 0xffffffe0) + 1;
+  }
+  iVar4 = *(int *)(&DAT_18040a950 + lVar11);
+  uVar12 = 0;
+  *(uint *)(&DAT_18040a954 + lVar11) = uVar13;
+  *(undefined8 *)(&DAT_18040a958 + lVar11) = 0;
+  *(undefined8 *)(&DAT_18040a960 + lVar11) = 0;
+  if (iVar4 < 0x20) {
+    iVar4 = iVar4 + 1;
+    *(int *)(&DAT_18040a950 + lVar11) = iVar4;
+    if (4 < iVar4) goto LAB_1800b306e;
+  }
+  else {
+LAB_1800b306e:
+    fVar18 = 0.0;
+    fVar16 = 0.0;
+    uVar10 = uVar12;
+    if (0 < iVar4 + -1) {
+      do {
+        if (7 < (int)uVar10) break;
+        uVar5 = (uVar13 - uVar10) + 0x3f & 0x8000001f;
+        if ((int)uVar5 < 0) {
+          uVar5 = (uVar5 - 1 | 0xffffffe0) + 1;
+        }
+        if (*(int *)(&DAT_18040a660 + (longlong)(int)uVar5 * 0x18 + lVar11) < 1) goto LAB_1800b318f;
+        fVar18 = fVar18 + *(float *)(lVar11 + 0x18040a65c + (longlong)(int)uVar5 * 0x18);
+        uVar10 = uVar10 + 1;
+        fVar16 = fVar16 + (float)*(int *)(&DAT_18040a660 + (longlong)(int)uVar5 * 0x18 + lVar11);
+      } while ((int)uVar10 < iVar4 + -1);
+      if ((3 < (int)uVar10) && (0.0 < fVar16)) {
+        fVar18 = fVar18 / fVar16;
+        if (DAT_180380d30 <= (float)((uint)fVar18 & uVar3)) {
+          fVar16 = 0.0;
+          uVar5 = uVar12;
+          do {
+            uVar6 = (uVar13 - uVar5) + 0x3f & 0x8000001f;
+            if ((int)uVar6 < 0) {
+              uVar6 = (uVar6 - 1 | 0xffffffe0) + 1;
+            }
+            fVar17 = *(float *)(lVar11 + 0x18040a65c + (longlong)(int)uVar6 * 0x18) /
+                     (float)*(int *)(&DAT_18040a660 + (longlong)(int)uVar6 * 0x18 + lVar11);
+            if ((0.0 < fVar17 != 0.0 < fVar18) ||
+               (fVar17 = (float)((uint)(fVar17 - fVar18) & uVar3) / (float)((uint)fVar18 & uVar3),
+               DAT_180380a88 < fVar17)) goto LAB_1800b318f;
+            if (fVar17 <= fVar16) {
+              fVar17 = fVar16;
+            }
+            fVar16 = fVar17;
+            uVar5 = uVar5 + 1;
+          } while ((int)uVar5 < (int)uVar10);
+          fVar16 = DAT_180380bb0 - fVar16;
+          *(float *)(&DAT_18040a95c + lVar11) = fVar18;
+          *(undefined4 *)(&DAT_18040a958 + lVar11) = 1;
+          goto LAB_1800b33e1;
+        }
+      }
+    }
+  }
+LAB_1800b318f:
+  fVar16 = DAT_180380bb0;
+  iVar4 = *(int *)(&DAT_18040a950 + lVar11);
+  if (4 < iVar4) {
+    fVar18 = 0.0;
+    uVar10 = uVar12;
+    if (0 < iVar4 + -1) {
+      do {
+        if (7 < uVar10) break;
+        uVar5 = (uVar13 - uVar10) + 0x3f & 0x8000001f;
+        if ((int)uVar5 < 0) {
+          uVar5 = (uVar5 - 1 | 0xffffffe0) + 1;
+        }
+        fVar17 = *(float *)(lVar11 + 0x18040a65c + (longlong)(int)uVar5 * 0x18);
+        uVar5 = (uVar13 - uVar10) + 0x3e & 0x8000001f;
+        if ((int)uVar5 < 0) {
+          uVar5 = (uVar5 - 1 | 0xffffffe0) + 1;
+        }
+        if (0.0 < fVar17 == 0.0 < *(float *)(lVar11 + 0x18040a65c + (longlong)(int)uVar5 * 0x18))
+        goto LAB_1800b32b6;
+        uVar10 = uVar10 + 1;
+        fVar18 = fVar18 + (float)((uint)fVar17 & uVar3);
+      } while ((int)uVar10 < iVar4 + -1);
+      if ((3 < (int)uVar10) &&
+         (fVar18 = fVar18 / (float)(int)uVar10, uVar5 = uVar12, DAT_180380fcc <= fVar18)) {
+        do {
+          uVar6 = (uVar13 - uVar5) + 0x3f & 0x8000001f;
+          if ((int)uVar6 < 0) {
+            uVar6 = (uVar6 - 1 | 0xffffffe0) + 1;
+          }
+          fVar17 = (float)((uint)((float)(*(uint *)(lVar11 + 0x18040a65c +
+                                                   (longlong)(int)uVar6 * 0x18) & uVar3) - fVar18) &
+                          uVar3) / fVar18;
+          if (DAT_180380a94 < fVar17) goto LAB_1800b32b6;
+          if (fVar17 <= fVar20) {
+            fVar17 = fVar20;
+          }
+          fVar20 = fVar17;
+          uVar5 = uVar5 + 1;
+        } while ((int)uVar5 < (int)uVar10);
+        fVar16 = DAT_180380bb0 - fVar20;
+        *(float *)(&DAT_18040a95c + lVar11) = fVar18;
+        *(undefined4 *)(&DAT_18040a958 + lVar11) = 2;
+        goto LAB_1800b33e1;
+      }
+    }
+  }
+LAB_1800b32b6:
+  if (iVar4 < 10) {
+    return;
+  }
+  uVar5 = 4;
+  uVar13 = 2;
+  uVar10 = uVar12;
+  do {
+    uVar6 = 0;
+    if ((int)uVar13 < iVar4) {
+      uVar6 = uVar12;
+      do {
+        uVar7 = (*(int *)(&DAT_18040a954 + lVar11) - uVar6) + 0x3f & 0x8000001f;
+        if ((int)uVar7 < 0) {
+          uVar7 = (uVar7 - 1 | 0xffffffe0) + 1;
+        }
+        uVar9 = ((*(int *)(&DAT_18040a954 + lVar11) - uVar6) - uVar13) + 0x3f & 0x8000001f;
+        if ((int)uVar9 < 0) {
+          uVar9 = (uVar9 - 1 | 0xffffffe0) + 1;
+        }
+      } while ((((float)((uint)(*(float *)(lVar11 + 0x18040a65c + (longlong)(int)uVar7 * 0x18) -
+                               *(float *)(lVar11 + 0x18040a65c + (longlong)(int)uVar9 * 0x18)) &
+                        uVar3) < DAT_180381024) && (uVar6 = uVar6 + 1, (int)uVar6 < 0xc)) &&
+              ((int)(uVar6 + uVar13) < iVar4));
+    }
+    uVar7 = uVar13;
+    if (((int)uVar5 < (int)uVar6) && (0xb < (int)uVar6)) break;
+    if ((int)uVar6 <= (int)uVar5) {
+      uVar6 = uVar5;
+      uVar7 = uVar10;
+    }
+    uVar5 = uVar6;
+    iVar1 = uVar13 + 5;
+    uVar6 = uVar5;
+    uVar13 = uVar13 + 1;
+    uVar10 = uVar7;
+  } while (iVar1 < iVar4);
+  if (uVar7 == 0) {
+    return;
+  }
+  *(undefined4 *)(&DAT_18040a958 + lVar11) = 3;
+  *(uint *)(&DAT_18040a964 + lVar11) = uVar7;
+  if ((float)(int)uVar6 / DAT_180380fd8 <= fVar16) {
+    fVar16 = (float)(int)uVar6 / DAT_180380fd8;
+  }
+LAB_1800b33e1:
+  *(float *)(&DAT_18040a960 + lVar11) = fVar16;
+  return;
+}
+
+
+)B1800b2f10",
+    "c69449c528e03126f96db9c4970200b43c48417c70e2a0f64e3fdc3a3f4cef1d",
+    R"F1800b2f10C(FUN_1800b1d70)F1800b2f10C",
+    R"F1800b2f10D(LAB_1800b306e
+LAB_1800b318f
+LAB_1800b32b6
+LAB_1800b33e1
+DAT_180380a88
+DAT_180380a94
+DAT_180380bb0
+DAT_180380d30
+DAT_180380fcc
+DAT_180380fd8
+DAT_180381024
+DAT_180381188
+DAT_18038120c
+DAT_180381420
+DAT_18040a650
+DAT_18040a660
+DAT_18040a950
+DAT_18040a954
+DAT_18040a958
+DAT_18040a95c
+DAT_18040a960
+DAT_18040a964)F1800b2f10D",
+    R"F1800b2f10T()F1800b2f10T",
+    R"F1800b2f10F(35: if (0x7f < param_1 - 1U) {
+36: return;
+41: if (sVar2 < 1) {
+47: if (DAT_180381188 < fVar16) {
+50: if (auVar19._0_4_ < DAT_180381420) {
+54: else {
+58: if (0 < param_3) {
+61: if (*(int *)(&DAT_18040a950 + lVar11) < 1) {
+64: else {
+66: if ((int)uVar3 < 0) {
+81: if ((int)uVar13 < 0) {
+89: if (iVar4 < 0x20) {
+92: if (4 < iVar4) goto LAB_1800b306e;
+94: else {
+95: LAB_1800b306e:
+99: if (0 < iVar4 + -1) {
+100: do {
+101: if (7 < (int)uVar10) break;
+103: if ((int)uVar5 < 0) {
+106: if (*(int *)(&DAT_18040a660 + (longlong)(int)uVar5 * 0x18 + lVar11) < 1) goto LAB_1800b318f;
+111: if ((3 < (int)uVar10) && (0.0 < fVar16)) {
+113: if (DAT_180380d30 <= (float)((uint)fVar18 & uVar3)) {
+116: do {
+118: if ((int)uVar6 < 0) {
+123: if ((0.0 < fVar17 != 0.0 < fVar18) ||
+126: if (fVar17 <= fVar16) {
+135: goto LAB_1800b33e1;
+140: LAB_1800b318f:
+143: if (4 < iVar4) {
+146: if (0 < iVar4 + -1) {
+147: do {
+148: if (7 < uVar10) break;
+150: if ((int)uVar5 < 0) {
+155: if ((int)uVar5 < 0) {
+158: if (0.0 < fVar17 == 0.0 < *(float *)(lVar11 + 0x18040a65c + (longlong)(int)uVar5 * 0x18))
+159: goto LAB_1800b32b6;
+163: if ((3 < (int)uVar10) &&
+165: do {
+167: if ((int)uVar6 < 0) {
+173: if (DAT_180380a94 < fVar17) goto LAB_1800b32b6;
+174: if (fVar17 <= fVar20) {
+183: goto LAB_1800b33e1;
+187: LAB_1800b32b6:
+188: if (iVar4 < 10) {
+189: return;
+194: do {
+196: if ((int)uVar13 < iVar4) {
+198: do {
+200: if ((int)uVar7 < 0) {
+204: if ((int)uVar9 < 0) {
+213: if (((int)uVar5 < (int)uVar6) && (0xb < (int)uVar6)) break;
+214: if ((int)uVar6 <= (int)uVar5) {
+224: if (uVar7 == 0) {
+225: return;
+229: if ((float)(int)uVar6 / DAT_180380fd8 <= fVar16) {
+232: LAB_1800b33e1:
+234: return;)F1800b2f10F",
+    R"F1800b2f10U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b306e.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b318f.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b32b6.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b33e1.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a88.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a94.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d30.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fcc.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fd8.
+TODO: recover the declaration, type and value for global/data reference DAT_180381024.
+TODO: recover the declaration, type and value for global/data reference DAT_180381188.
+TODO: recover the declaration, type and value for global/data reference DAT_18038120c.
+TODO: recover the declaration, type and value for global/data reference DAT_180381420.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a650.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a660.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a950.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a954.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a958.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a95c.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a960.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a964.)F1800b2f10U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b2f10() noexcept {
+    return kFunction_0x1800b2f10;
+}
+
+// 0x1800b3420 FUN_1800b3420
+// source: re/dump/decompile/0x1800b3420_FUN_1800b3420.c
+// size: 790 bytes; thunk: false
+// body sha256: d9d33c560da1fca13d8cc780787a2ce38da2ef5640f6ad78c3e2223be4056c8d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b3420{
+    "0x1800b3420",
+    "FUN_1800b3420",
+    R"F1800b3420S(undefined FUN_1800b3420())F1800b3420S",
+    R"B1800b3420(// 0x1800b3420  FUN_1800b3420
+// size=790 thunk=false
+// signature: undefined FUN_1800b3420()
+// status: ok
+
+
+void FUN_1800b3420(float *param_1,float param_2,float param_3,float param_4,undefined4 param_5,
+                  undefined8 param_6,longlong param_7)
+
+{
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  float fVar4;
+  uint uVar5;
+  ulonglong uVar6;
+  int iVar7;
+  ulonglong uVar8;
+  float fVar9;
+  undefined2 local_7e;
+  
+  fVar1 = DAT_180380bb0;
+  if (*(char *)(param_1 + 0x12) != '\0') {
+    if ((int)param_3 < 1) {
+      return;
+    }
+    if ((int)param_3 < 0x19) {
+      param_1[0x16] = param_3;
+      fVar4 = DAT_180381414;
+      fVar3 = DAT_180381188;
+      fVar2 = DAT_18038110c;
+      uVar8 = 0;
+      *(bool *)((longlong)param_1 + 0x61) = param_7 != 0;
+      *(undefined8 *)(param_1 + 0x14) = param_6;
+      param_1[0x17] = param_4;
+      *(bool *)(param_1 + 0x18) = fVar1 < param_4;
+      do {
+        uVar6 = 0;
+        iVar7 = (int)uVar8;
+        if (0 < (int)param_3 + -1) {
+          do {
+            fVar9 = param_2;
+            if (iVar7 == 5) {
+              if (param_7 != 0) {
+                fVar9 = *(float *)(param_7 + uVar6 * 4);
+              }
+            }
+            else if (iVar7 != 0) {
+              if (iVar7 == 1) {
+                fVar9 = (float)FUN_1800b1d70(param_2 + fVar3);
+              }
+              else if (iVar7 == 2) {
+                fVar9 = (float)FUN_1800b1d70(param_2 + fVar2);
+              }
+              else if (iVar7 == 3) {
+                fVar9 = (float)FUN_1800b1d70(param_2 - fVar2);
+              }
+              else if (iVar7 == 4) {
+                if ((uVar6 & 1) == 0) {
+                  fVar9 = (float)FUN_1800b1d70(fVar4 + param_2);
+                }
+                else {
+                  fVar9 = (float)FUN_1800b1d70(fVar2 + param_2);
+                }
+              }
+            }
+            FUN_1800b1de0(param_1 + uVar8 * 3,fVar9,param_4,param_5);
+            uVar5 = (int)uVar6 + 1;
+            uVar6 = (ulonglong)uVar5;
+          } while ((int)uVar5 < (int)param_3 + -1);
+        }
+        FUN_1800b1de0(param_1 + uVar8 * 3,param_2,param_4,param_5);
+        uVar8 = (ulonglong)(iVar7 + 1U);
+      } while ((int)(iVar7 + 1U) < 6);
+      if (param_4 <= fVar1) {
+        return;
+      }
+      *(undefined8 *)(param_1 + 3) = *(undefined8 *)param_1;
+      param_1[5] = param_1[2];
+      *(undefined8 *)(param_1 + 6) = *(undefined8 *)param_1;
+      param_1[8] = param_1[2];
+      *(undefined8 *)(param_1 + 9) = *(undefined8 *)param_1;
+      param_1[0xb] = param_1[2];
+      *(undefined8 *)(param_1 + 0xc) = *(undefined8 *)param_1;
+      param_1[0xe] = param_1[2];
+      *(undefined8 *)(param_1 + 0xf) = *(undefined8 *)param_1;
+      param_1[0x11] = param_1[2];
+      return;
+    }
+  }
+  *(undefined2 *)(param_1 + 2) = 1;
+  *(undefined2 *)((longlong)param_1 + 10) = local_7e;
+  *param_1 = param_2;
+  param_1[1] = param_2;
+  *(undefined2 *)(param_1 + 5) = 1;
+  *(undefined2 *)((longlong)param_1 + 0x16) = local_7e;
+  param_1[3] = param_2;
+  param_1[4] = param_2;
+  *(undefined2 *)(param_1 + 8) = 1;
+  *(undefined2 *)((longlong)param_1 + 0x22) = local_7e;
+  param_1[6] = param_2;
+  param_1[7] = param_2;
+  *(undefined2 *)(param_1 + 0xb) = 1;
+  *(undefined2 *)((longlong)param_1 + 0x2e) = local_7e;
+  param_1[9] = param_2;
+  param_1[10] = param_2;
+  *(undefined2 *)(param_1 + 0xe) = 1;
+  *(undefined2 *)((longlong)param_1 + 0x3a) = local_7e;
+  param_1[0xc] = param_2;
+  param_1[0xd] = param_2;
+  *(undefined2 *)(param_1 + 0x11) = 1;
+  *(undefined2 *)((longlong)param_1 + 0x46) = local_7e;
+  param_1[0xf] = param_2;
+  param_1[0x10] = param_2;
+  *(undefined8 *)(param_1 + 0x14) = param_6;
+  *(undefined1 *)(param_1 + 0x12) = 1;
+  param_1[0x16] = 0.0;
+  param_1[0x17] = 0.0;
+  *(undefined1 *)(param_1 + 0x18) = 0;
+  return;
+}
+
+
+)B1800b3420",
+    "d9d33c560da1fca13d8cc780787a2ce38da2ef5640f6ad78c3e2223be4056c8d",
+    R"F1800b3420C(FUN_1800b1d70
+FUN_1800b1de0)F1800b3420C",
+    R"F1800b3420D(DAT_180380bb0
+DAT_18038110c
+DAT_180381188
+DAT_180381414)F1800b3420D",
+    R"F1800b3420T()F1800b3420T",
+    R"F1800b3420F(23: if (*(char *)(param_1 + 0x12) != '\0') {
+24: if ((int)param_3 < 1) {
+25: return;
+27: if ((int)param_3 < 0x19) {
+37: do {
+40: if (0 < (int)param_3 + -1) {
+41: do {
+43: if (iVar7 == 5) {
+44: if (param_7 != 0) {
+48: else if (iVar7 != 0) {
+49: if (iVar7 == 1) {
+52: else if (iVar7 == 2) {
+55: else if (iVar7 == 3) {
+58: else if (iVar7 == 4) {
+59: if ((uVar6 & 1) == 0) {
+62: else {
+75: if (param_4 <= fVar1) {
+76: return;
+88: return;
+120: return;)F1800b3420F",
+    R"F1800b3420U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_18038110c.
+TODO: recover the declaration, type and value for global/data reference DAT_180381188.
+TODO: recover the declaration, type and value for global/data reference DAT_180381414.)F1800b3420U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b3420() noexcept {
+    return kFunction_0x1800b3420;
+}
+
+// 0x1800b3740 FUN_1800b3740
+// source: re/dump/decompile/0x1800b3740_FUN_1800b3740.c
+// size: 100 bytes; thunk: false
+// body sha256: 797fbaf8964ee8d99453d16917be8e86758201cfd42ee40a48db22b7246f7324
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b3740{
+    "0x1800b3740",
+    "FUN_1800b3740",
+    R"F1800b3740S(undefined FUN_1800b3740())F1800b3740S",
+    R"B1800b3740(// 0x1800b3740  FUN_1800b3740
+// size=100 thunk=false
+// signature: undefined FUN_1800b3740()
+// status: ok
+
+
+int FUN_1800b3740(void)
+
+{
+  int iVar1;
+  
+  if (DAT_1803fed50 == 0) {
+    if (DAT_1803fa340 != 0) {
+      DAT_1803fed50 = FUN_180016fb0("sv_maxusrcmdprocessticks");
+      if (DAT_1803fed50 != 0) goto LAB_1800b3771;
+    }
+    return 0x18;
+  }
+LAB_1800b3771:
+  iVar1 = FUN_1800197a0(DAT_1803fed50);
+  if (iVar1 < 1) {
+    return 0xf;
+  }
+  if (0x40 < iVar1) {
+    iVar1 = 0x40;
+  }
+  return iVar1;
+}
+
+
+)B1800b3740",
+    "797fbaf8964ee8d99453d16917be8e86758201cfd42ee40a48db22b7246f7324",
+    R"F1800b3740C(FUN_180016fb0
+FUN_1800197a0)F1800b3740C",
+    R"F1800b3740D(LAB_1800b3771
+DAT_1803fa340
+DAT_1803fed50)F1800b3740D",
+    R"F1800b3740T("sv_maxusrcmdprocessticks")F1800b3740T",
+    R"F1800b3740F(12: if (DAT_1803fed50 == 0) {
+13: if (DAT_1803fa340 != 0) {
+15: if (DAT_1803fed50 != 0) goto LAB_1800b3771;
+17: return 0x18;
+19: LAB_1800b3771:
+21: if (iVar1 < 1) {
+22: return 0xf;
+24: if (0x40 < iVar1) {
+27: return iVar1;)F1800b3740F",
+    R"F1800b3740U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b3771.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa340.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fed50.)F1800b3740U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b3740() noexcept {
+    return kFunction_0x1800b3740;
+}
+
+// 0x1800b37b0 FUN_1800b37b0
+// source: re/dump/decompile/0x1800b37b0_FUN_1800b37b0.c
+// size: 350 bytes; thunk: false
+// body sha256: 42d944b4db9dcd25a51bcd133f495d2cb7bb455bd89dccdfab440df1230c4e67
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b37b0{
+    "0x1800b37b0",
+    "FUN_1800b37b0",
+    R"F1800b37b0S(undefined FUN_1800b37b0())F1800b37b0S",
+    R"B1800b37b0(// 0x1800b37b0  FUN_1800b37b0
+// size=350 thunk=false
+// signature: undefined FUN_1800b37b0()
+// status: ok
+
+
+void FUN_1800b37b0(void)
+
+{
+  int iVar1;
+  int iVar2;
+  BOOL BVar3;
+  int iVar4;
+  void *lp;
+  
+  if ((((DAT_1803fa608 != 0) && (DAT_1803fa668 != (longlong *)0x0)) &&
+      (lp = (void *)(**(code **)(*DAT_1803fa668 + 0x240))(), lp != (void *)0x0)) &&
+     (BVar3 = IsBadReadPtr(lp,8), BVar3 == 0)) {
+    iVar1 = *(int *)(DAT_1803fa608 + 0x20);
+    iVar2 = *(int *)((longlong)lp + 0x20);
+    if (DAT_1804096dc == '\0') {
+      DAT_1804096dc = 1;
+      DAT_1803e7b98 = iVar1;
+      DAT_1804096c4 = iVar2;
+      return;
+    }
+    iVar4 = FUN_1800b3740();
+    if (iVar1 != DAT_1803e7b98) {
+      if (0x100 < (uint)(iVar1 - DAT_1803e7b98)) {
+        DAT_1803e7b98 = 0xffffffff;
+        DAT_1804096c4 = 0;
+        DAT_1804096d8 = 0.0;
+        DAT_1804096dc = 0;
+        return;
+      }
+      DAT_1804096d8 = DAT_1804096d8 + (float)(iVar1 - DAT_1803e7b98);
+      if ((float)iVar4 < DAT_1804096d8) {
+        DAT_1804096d8 = (float)iVar4;
+      }
+      DAT_1803e7b98 = iVar1;
+      FUN_1800b3920();
+    }
+    if ((iVar2 < DAT_1804096c4) &&
+       (DAT_1804096d8 = DAT_1804096d8 - (float)(DAT_1804096c4 + 1), DAT_1804096d8 < 0.0)) {
+      DAT_1804096d8 = 0.0;
+    }
+    DAT_1804096c4 = iVar2;
+    return;
+  }
+  DAT_1804096d8 = 0.0;
+  DAT_1803e7b98 = 0xffffffff;
+  DAT_1804096c4 = 0;
+  DAT_1804096dc = 0;
+  return;
+}
+
+
+)B1800b37b0",
+    "42d944b4db9dcd25a51bcd133f495d2cb7bb455bd89dccdfab440df1230c4e67",
+    R"F1800b37b0C(FUN_1800b3740
+FUN_1800b3920)F1800b37b0C",
+    R"F1800b37b0D(DAT_1803e7b98
+DAT_1803fa608
+DAT_1803fa668
+DAT_1804096c4
+DAT_1804096d8
+DAT_1804096dc)F1800b37b0D",
+    R"F1800b37b0T()F1800b37b0T",
+    R"F1800b37b0F(16: if ((((DAT_1803fa608 != 0) && (DAT_1803fa668 != (longlong *)0x0)) &&
+21: if (DAT_1804096dc == '\0') {
+25: return;
+28: if (iVar1 != DAT_1803e7b98) {
+29: if (0x100 < (uint)(iVar1 - DAT_1803e7b98)) {
+34: return;
+37: if ((float)iVar4 < DAT_1804096d8) {
+43: if ((iVar2 < DAT_1804096c4) &&
+48: return;
+54: return;)F1800b37b0F",
+    R"F1800b37b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7b98.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa668.
+TODO: recover the declaration, type and value for global/data reference DAT_1804096c4.
+TODO: recover the declaration, type and value for global/data reference DAT_1804096d8.
+TODO: recover the declaration, type and value for global/data reference DAT_1804096dc.
+TODO: resolve the indirect call in body 17: (lp = (void *)(**(code **)(*DAT_1803fa668 + 0x240))(), lp != (void *)0x0)) &&.)F1800b37b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b37b0() noexcept {
+    return kFunction_0x1800b37b0;
+}
+
+// 0x1800b3920 FUN_1800b3920
+// source: re/dump/decompile/0x1800b3920_FUN_1800b3920.c
+// size: 608 bytes; thunk: false
+// body sha256: f0163dbbfc2aefdd1e50b96c89eab435922b9d438750ad25cfae788af40e2e4f
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b3920{
+    "0x1800b3920",
+    "FUN_1800b3920",
+    R"F1800b3920S(undefined FUN_1800b3920())F1800b3920S",
+    R"B1800b3920(// 0x1800b3920  FUN_1800b3920
+// size=608 thunk=false
+// signature: undefined FUN_1800b3920()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1800b3920(void)
+
+{
+  code *pcVar1;
+  undefined4 uVar2;
+  int iVar3;
+  longlong lVar4;
+  float *pfVar5;
+  int iVar6;
+  float fVar7;
+  float fVar8;
+  undefined1 local_38 [48];
+  
+  if ((-1 < DAT_1803e7ba4) && (DAT_1803e7ba4 = DAT_1803e7ba4 + -1, DAT_1803e7ba4 < 1)) {
+    DAT_1803e7ba4 = -1;
+    pcVar1 = *(code **)(*DAT_1803fa360 + 0x18);
+    uVar2 = (**(code **)(*DAT_1803fa668 + 0x60))();
+    lVar4 = (*pcVar1)(DAT_1803fa360,uVar2);
+    if ((lVar4 != 0) && (0 < DAT_1804096c8)) {
+      pfVar5 = (float *)FUN_18001daf0(lVar4,local_38);
+      fVar7 = (pfVar5[1] - _DAT_1803e9fdc) * (pfVar5[1] - _DAT_1803e9fdc) +
+              (*pfVar5 - _DAT_1803e9fd8) * (*pfVar5 - _DAT_1803e9fd8);
+      if (fVar7 < 0.0) {
+        fVar7 = sqrtf(fVar7);
+      }
+      else {
+        fVar7 = SQRT(fVar7);
+      }
+      fVar8 = DAT_180380988;
+      if ((DAT_1803fa608 != 0) && (0.0 < *(double *)(DAT_1803fa608 + 0x28))) {
+        fVar8 = (float)*(double *)(DAT_1803fa608 + 0x28);
+      }
+      fVar8 = fVar8 * _DAT_1804096d4 * (float)DAT_1804096c8;
+      if (DAT_180380bb0 <= fVar8) {
+        DAT_1803e7b9c = fVar7 / fVar8;
+        if (DAT_1803e7b9c < DAT_180380ad4) {
+          DAT_1804096e0 = DAT_1804096e0 + 1;
+          DAT_1804096d8 = 0.0;
+          FUN_180014410("[EXPLOIT] burst DISCARDED: asked %d ticks, travelled %.0fu of %.0fu expected (%.0f%%) - bank zeroed, rejections=%d\n"
+                        ,DAT_1804096c8,(double)fVar7,(double)fVar8,
+                        (double)(DAT_1803e7b9c * DAT_180381120),DAT_1804096e0);
+          DAT_1804096c8 = 0;
+          return;
+        }
+        uVar2 = FUN_1800b3740();
+        iVar3 = FUN_1800b3740();
+        iVar6 = 0;
+        if (-1 < (int)DAT_1804096d8) {
+          iVar6 = (int)DAT_1804096d8;
+        }
+        if (iVar3 < iVar6) {
+          iVar6 = iVar3;
+        }
+        FUN_180014410("[EXPLOIT] burst ok: %d ticks, %.0fu of %.0fu (%.0f%%) bank=%d/%d\n",
+                      DAT_1804096c8,(double)fVar7,(double)fVar8,
+                      (double)(DAT_1803e7b9c * DAT_180381120),iVar6,uVar2);
+      }
+      DAT_1804096c8 = 0;
+      return;
+    }
+  }
+  return;
+}
+
+
+)B1800b3920",
+    "f0163dbbfc2aefdd1e50b96c89eab435922b9d438750ad25cfae788af40e2e4f",
+    R"F1800b3920C(FUN_180014410
+FUN_18001daf0
+FUN_1800b3740)F1800b3920C",
+    R"F1800b3920D(DAT_180380988
+DAT_180380ad4
+DAT_180380bb0
+DAT_180381120
+DAT_1803e7b9c
+DAT_1803e7ba4
+DAT_1803fa360
+DAT_1803fa608
+DAT_1803fa668
+DAT_1804096c8
+DAT_1804096d8
+DAT_1804096e0)F1800b3920D",
+    R"F1800b3920T("[EXPLOIT] burst ok: %d ticks, %.0fu of %.0fu (%.0f%%) bank=%d/%d\\n"
+"[EXPLOIT] burst DISCARDED: asked %d ticks, travelled %.0fu of %.0fu expected (%.0f%%) - bank zeroed, rejections=%d\\n")F1800b3920T",
+    R"F1800b3920F(22: if ((-1 < DAT_1803e7ba4) && (DAT_1803e7ba4 = DAT_1803e7ba4 + -1, DAT_1803e7ba4 < 1)) {
+27: if ((lVar4 != 0) && (0 < DAT_1804096c8)) {
+31: if (fVar7 < 0.0) {
+34: else {
+38: if ((DAT_1803fa608 != 0) && (0.0 < *(double *)(DAT_1803fa608 + 0x28))) {
+42: if (DAT_180380bb0 <= fVar8) {
+44: if (DAT_1803e7b9c < DAT_180380ad4) {
+51: return;
+56: if (-1 < (int)DAT_1804096d8) {
+59: if (iVar3 < iVar6) {
+67: return;
+70: return;)F1800b3920F",
+    R"F1800b3920U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380988.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ad4.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180381120.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7b9c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7ba4.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa360.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa668.
+TODO: recover the declaration, type and value for global/data reference DAT_1804096c8.
+TODO: recover the declaration, type and value for global/data reference DAT_1804096d8.
+TODO: recover the declaration, type and value for global/data reference DAT_1804096e0.
+TODO: resolve the indirect call in body 24: pcVar1 = *(code **)(*DAT_1803fa360 + 0x18);.
+TODO: resolve the indirect call in body 25: uVar2 = (**(code **)(*DAT_1803fa668 + 0x60))();.
+TODO: resolve the indirect call in body 26: lVar4 = (*pcVar1)(DAT_1803fa360,uVar2);.)F1800b3920U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b3920() noexcept {
+    return kFunction_0x1800b3920;
+}
+
+// 0x1800b3b80 FUN_1800b3b80
+// source: re/dump/decompile/0x1800b3b80_FUN_1800b3b80.c
+// size: 119 bytes; thunk: false
+// body sha256: 481bb82716a329abdca5672139a5906eae1d869331d0a75d8fd22ec9a518a6a4
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b3b80{
+    "0x1800b3b80",
+    "FUN_1800b3b80",
+    R"F1800b3b80S(undefined FUN_1800b3b80())F1800b3b80S",
+    R"B1800b3b80(// 0x1800b3b80  FUN_1800b3b80
+// size=119 thunk=false
+// signature: undefined FUN_1800b3b80()
+// status: ok
+
+
+undefined1 FUN_1800b3b80(void)
+
+{
+  undefined1 uVar1;
+  undefined8 uVar2;
+  char *pcVar3;
+  undefined1 *puVar4;
+  
+  uVar2 = FUN_180241610(&DAT_1803fadf0,0x93fd561a96ab0c67);
+  uVar2 = FUN_180241610(uVar2,0xe7781529f617a7b6);
+  pcVar3 = (char *)FUN_1801fcfc0(uVar2);
+  if (*pcVar3 == '\0') {
+    uVar2 = FUN_180241610(&DAT_1803fadf0,0x2723fc3764d74742);
+    uVar2 = FUN_180241610(uVar2,0x150438b5fa29716a);
+    puVar4 = (undefined1 *)FUN_1801fcfc0(uVar2);
+    uVar1 = *puVar4;
+  }
+  else {
+    uVar1 = 1;
+  }
+  return uVar1;
+}
+
+
+)B1800b3b80",
+    "481bb82716a329abdca5672139a5906eae1d869331d0a75d8fd22ec9a518a6a4",
+    R"F1800b3b80C(FUN_1801fcfc0
+FUN_180241610)F1800b3b80C",
+    R"F1800b3b80D(DAT_1803fadf0)F1800b3b80D",
+    R"F1800b3b80T()F1800b3b80T",
+    R"F1800b3b80F(18: if (*pcVar3 == '\0') {
+24: else {
+27: return uVar1;)F1800b3b80F",
+    R"F1800b3b80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b3b80U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b3b80() noexcept {
+    return kFunction_0x1800b3b80;
+}
+
+// 0x1800b3c00 FUN_1800b3c00
+// source: re/dump/decompile/0x1800b3c00_FUN_1800b3c00.c
+// size: 1104 bytes; thunk: false
+// body sha256: 60d22ca246b4b1c7d06e74f4bb6e76d5b2f9b3743efe2db526c854a008c4fb62
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b3c00{
+    "0x1800b3c00",
+    "FUN_1800b3c00",
+    R"F1800b3c00S(undefined FUN_1800b3c00())F1800b3c00S",
+    R"B1800b3c00(// 0x1800b3c00  FUN_1800b3c00
+// size=1104 thunk=false
+// signature: undefined FUN_1800b3c00()
+// status: ok
+
+
+undefined4 * FUN_1800b3c00(void)
+
+{
+  undefined8 *local_res8;
+  char *local_1e8;
+  char *local_1e0;
+  char *local_1d8;
+  char *local_1d0;
+  char **local_1c8;
+  char **ppcStack_1c0;
+  char **local_1b8;
+  char **ppcStack_1b0;
+  char **local_1a8;
+  char **ppcStack_1a0;
+  char **local_198;
+  char **ppcStack_190;
+  char **local_188;
+  char **ppcStack_180;
+  char **local_178;
+  char **ppcStack_170;
+  char **local_168;
+  undefined8 **ppuStack_160;
+  char **local_158;
+  undefined8 **ppuStack_150;
+  char *local_148;
+  char *local_140;
+  char *local_138;
+  char *local_130;
+  char *local_128;
+  char *local_120;
+  char *local_118;
+  char *local_110;
+  char *local_108;
+  char *local_100;
+  char *local_f8;
+  char *local_f0;
+  char *local_e8;
+  char *local_e0;
+  char *local_d8;
+  char *local_d0;
+  char *local_c8;
+  char *local_c0;
+  char *local_b8;
+  char *local_b0;
+  char *local_a8;
+  char *local_a0;
+  char *local_98;
+  char *local_90;
+  char **local_88;
+  char **ppcStack_80;
+  char **local_78;
+  char **ppcStack_70;
+  char **local_68;
+  char **ppcStack_60;
+  char **local_58;
+  char **ppcStack_50;
+  char **local_48;
+  char **ppcStack_40;
+  char **local_38;
+  char **ppcStack_30;
+  char **local_28;
+  undefined8 **ppuStack_20;
+  char **local_18;
+  undefined8 **ppuStack_10;
+  
+  if (DAT_1804009ec == '\0') {
+    DAT_1804009ec = '\x01';
+    local_res8 = &DAT_1803fac80;
+    local_148 = "DT_BaseEntity";
+    local_140 = "m_vecOrigin[0]";
+    local_138 = "DT_BaseAnimating";
+    local_130 = "m_vecOrigin";
+    local_1c8 = &local_148;
+    ppcStack_1c0 = &local_128;
+    local_88 = local_1c8;
+    ppcStack_80 = ppcStack_1c0;
+    DAT_1803e6f80 = FUN_1800b4050(&local_res8,&local_88);
+    local_128 = "DT_BaseEntity";
+    local_120 = "m_vecVelocity[0]";
+    local_118 = "DT_BaseAnimating";
+    local_110 = "m_vecVelocity";
+    local_1b8 = &local_128;
+    ppcStack_1b0 = &local_108;
+    local_78 = local_1b8;
+    ppcStack_70 = ppcStack_1b0;
+    DAT_1803e6f84 = FUN_1800b4050(&local_res8,&local_78);
+    local_1e8 = "DT_BasePlayer";
+    local_1e0 = "m_fFlags";
+    local_1a8 = &local_1e8;
+    ppcStack_1a0 = &local_1d8;
+    local_68 = local_1a8;
+    ppcStack_60 = ppcStack_1a0;
+    DAT_1803e6f8c = FUN_1800b4050(&local_res8,&local_68);
+    local_108 = "DT_BaseFlex";
+    local_100 = "m_vecViewOffset[0]";
+    local_f8 = "DT_BasePlayer";
+    local_f0 = "m_vecViewOffset[0]";
+    local_198 = &local_108;
+    ppcStack_190 = &local_e8;
+    local_58 = local_198;
+    ppcStack_50 = ppcStack_190;
+    DAT_1803e6f90 = FUN_1800b4050(&local_res8,&local_58);
+    local_e8 = "DT_BasePlayer";
+    local_e0 = "m_vecBaseVelocity";
+    local_d8 = "DT_BaseEntity";
+    local_d0 = "m_vecBaseVelocity[0]";
+    local_188 = &local_e8;
+    ppcStack_180 = &local_c8;
+    local_48 = local_188;
+    ppcStack_40 = ppcStack_180;
+    DAT_1803e6f88 = FUN_1800b4050(&local_res8,&local_48);
+    local_c8 = "DT_BasePlayer";
+    local_c0 = "m_hGroundEntity";
+    local_b8 = "DT_BaseEntity";
+    local_b0 = "m_hGroundEntity";
+    local_178 = &local_c8;
+    ppcStack_170 = &local_a8;
+    local_38 = local_178;
+    ppcStack_30 = ppcStack_170;
+    DAT_1803e6f94 = FUN_1800b4050(&local_res8,&local_38);
+    local_1d8 = "DT_BasePlayer";
+    local_1d0 = "m_flFallVelocity";
+    local_168 = &local_1d8;
+    ppuStack_160 = &local_1c8;
+    local_28 = local_168;
+    ppuStack_20 = ppuStack_160;
+    DAT_1803e6f98 = FUN_1800b4050(&local_res8,&local_28);
+    local_a8 = "DT_BaseEntity";
+    local_a0 = "m_nWaterLevel";
+    local_98 = "DT_BasePlayer";
+    local_90 = "m_nWaterLevel";
+    local_158 = &local_a8;
+    ppuStack_150 = &local_88;
+    local_18 = local_158;
+    ppuStack_10 = ppuStack_150;
+    DAT_1803e6f9c = FUN_1800b4050(&local_res8,&local_18);
+    if ((((DAT_1803e6f80 < 1) || (DAT_1803e6f84 < 1)) || (DAT_1803e6f8c < 1)) || (DAT_1803e6f90 < 1)
+       ) {
+      DAT_1803e6fa0 = 0;
+    }
+    else {
+      DAT_1803e6fa0 = 1;
+    }
+    FUN_180014410("[EXTRAP] fields origin=+0x%X vel=+0x%X flags=+0x%X view=+0x%X base=+0x%X ground=+0x%X fall=+0x%X water=+0x%X valid=%d\n"
+                  ,DAT_1803e6f80,DAT_1803e6f84,DAT_1803e6f8c,DAT_1803e6f90,DAT_1803e6f88,
+                  DAT_1803e6f94,DAT_1803e6f98,DAT_1803e6f9c,DAT_1803e6fa0);
+  }
+  return &DAT_1803e6f80;
+}
+
+
+)B1800b3c00",
+    "60d22ca246b4b1c7d06e74f4bb6e76d5b2f9b3743efe2db526c854a008c4fb62",
+    R"F1800b3c00C(FUN_180014410
+FUN_1800b4050)F1800b3c00C",
+    R"F1800b3c00D(DAT_1803e6f80
+DAT_1803e6f84
+DAT_1803e6f88
+DAT_1803e6f8c
+DAT_1803e6f90
+DAT_1803e6f94
+DAT_1803e6f98
+DAT_1803e6f9c
+DAT_1803e6fa0
+DAT_1803fac80
+DAT_1804009ec)F1800b3c00D",
+    R"F1800b3c00T("m_fFlags"
+"DT_BaseFlex"
+"m_vecOrigin"
+"DT_BaseEntity"
+"DT_BasePlayer"
+"m_nWaterLevel"
+"m_vecVelocity"
+"m_vecOrigin[0]"
+"m_hGroundEntity"
+"DT_BaseAnimating"
+"m_flFallVelocity"
+"m_vecVelocity[0]"
+"m_vecBaseVelocity"
+"m_vecViewOffset[0]"
+"m_vecBaseVelocity[0]"
+"[EXTRAP] fields origin=+0x%X vel=+0x%X flags=+0x%X view=+0x%X base=+0x%X ground=+0x%X fall=+0x%X water=+0x%X valid=%d\\n")F1800b3c00T",
+    R"F1800b3c00F(72: if (DAT_1804009ec == '\0') {
+143: if ((((DAT_1803e6f80 < 1) || (DAT_1803e6f84 < 1)) || (DAT_1803e6f8c < 1)) || (DAT_1803e6f90 < 1)
+147: else {
+154: return &DAT_1803e6f80;)F1800b3c00F",
+    R"F1800b3c00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6f80.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6f84.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6f88.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6f8c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6f90.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6f94.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6f98.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6f9c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e6fa0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fac80.
+TODO: recover the declaration, type and value for global/data reference DAT_1804009ec.)F1800b3c00U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b3c00() noexcept {
+    return kFunction_0x1800b3c00;
+}
+
+// 0x1800b4050 FUN_1800b4050
+// source: re/dump/decompile/0x1800b4050_FUN_1800b4050.c
+// size: 369 bytes; thunk: false
+// body sha256: ed41ac9fda18422ef2fd0e563b14b1eb03ba1e9f6cf5e86209b47b133eefb672
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4050{
+    "0x1800b4050",
+    "FUN_1800b4050",
+    R"F1800b4050S(undefined FUN_1800b4050())F1800b4050S",
+    R"B1800b4050(// 0x1800b4050  FUN_1800b4050
+// size=369 thunk=false
+// signature: undefined FUN_1800b4050()
+// status: ok
+
+
+int FUN_1800b4050(undefined8 *param_1,undefined8 *param_2)
+
+{
+  undefined8 *puVar1;
+  char *pcVar2;
+  int iVar3;
+  size_t sVar4;
+  undefined8 uVar5;
+  undefined8 uVar6;
+  undefined8 *puVar7;
+  undefined8 local_b8;
+  undefined8 uStack_b0;
+  undefined8 local_a8;
+  undefined8 local_a0;
+  undefined8 local_98;
+  undefined8 uStack_90;
+  undefined8 local_88;
+  undefined8 local_80;
+  undefined8 *local_78;
+  undefined8 *local_70;
+  undefined1 *local_68;
+  undefined8 *local_60;
+  undefined8 *local_58;
+  undefined1 *local_50;
+  undefined1 local_48 [32];
+  
+  puVar7 = (undefined8 *)*param_2;
+  puVar1 = (undefined8 *)param_2[1];
+  while( true ) {
+    if (puVar7 == puVar1) {
+      return -1;
+    }
+    uVar6 = *param_1;
+    local_78 = &local_b8;
+    pcVar2 = (char *)*puVar7;
+    local_b8 = 0;
+    uStack_b0 = 0;
+    local_a8 = 0;
+    local_a0 = 0;
+    sVar4 = strlen(pcVar2);
+    FUN_18001d080(&local_b8,pcVar2,sVar4);
+    local_70 = &local_b8;
+    local_68 = local_48;
+    uVar5 = FUN_18016d4c0(local_48,&local_b8);
+    uVar6 = FUN_180018ef0(uVar6,uVar5);
+    FUN_18020e450(&local_b8);
+    local_60 = &local_98;
+    pcVar2 = (char *)puVar7[1];
+    local_98 = 0;
+    uStack_90 = 0;
+    local_88 = 0;
+    local_80 = 0;
+    sVar4 = strlen(pcVar2);
+    FUN_18001d080(&local_98,pcVar2,sVar4);
+    local_58 = &local_98;
+    local_50 = local_48;
+    uVar5 = FUN_18016d4c0(local_48,&local_98);
+    iVar3 = FUN_180018c10(uVar6,uVar5);
+    FUN_18020e450(&local_98);
+    if (0 < iVar3) break;
+    puVar7 = puVar7 + 2;
+  }
+  return iVar3;
+}
+
+
+)B1800b4050",
+    "ed41ac9fda18422ef2fd0e563b14b1eb03ba1e9f6cf5e86209b47b133eefb672",
+    R"F1800b4050C(FUN_180018c10
+FUN_180018ef0
+FUN_18001d080
+FUN_18016d4c0
+FUN_18020e450)F1800b4050C",
+    R"F1800b4050D()F1800b4050D",
+    R"F1800b4050T()F1800b4050T",
+    R"F1800b4050F(35: while( true ) {
+36: if (puVar7 == puVar1) {
+37: return -1;
+66: if (0 < iVar3) break;
+69: return iVar3;)F1800b4050F",
+    R"F1800b4050U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b4050U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4050() noexcept {
+    return kFunction_0x1800b4050;
+}
+
+// 0x1800b41e0 FUN_1800b41e0
+// source: re/dump/decompile/0x1800b41e0_FUN_1800b41e0.c
+// size: 533 bytes; thunk: false
+// body sha256: 20304d963ef3d8d3e271eff469380f5d37e3330f89757d23d029941c7add0826
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b41e0{
+    "0x1800b41e0",
+    "FUN_1800b41e0",
+    R"F1800b41e0S(undefined FUN_1800b41e0())F1800b41e0S",
+    R"B1800b41e0(// 0x1800b41e0  FUN_1800b41e0
+// size=533 thunk=false
+// signature: undefined FUN_1800b41e0()
+// status: ok
+
+
+void FUN_1800b41e0(int param_1,longlong param_2)
+
+{
+  undefined8 uVar1;
+  double dVar2;
+  float fVar3;
+  undefined8 *puVar4;
+  int *piVar5;
+  int *piVar6;
+  longlong lVar7;
+  longlong lVar8;
+  double dVar9;
+  double dVar10;
+  float fVar11;
+  float fVar12;
+  int local_68 [4];
+  undefined8 local_58;
+  undefined4 local_50;
+  double local_48;
+  undefined1 local_40 [56];
+  
+  lVar7 = (longlong)param_1;
+  if (((param_1 - 1U < 0x80) && (param_2 != 0)) && (DAT_1803fa608 != 0)) {
+    local_58 = 0;
+    local_50 = 0;
+    dVar9 = (double)FUN_18001c0d0(param_2);
+    local_48 = dVar9;
+    puVar4 = (undefined8 *)FUN_18001daf0(param_2,local_40);
+    uVar1 = *puVar4;
+    fVar3 = *(float *)(puVar4 + 1);
+    lVar8 = lVar7 * 0x38;
+    dVar10 = *(double *)(DAT_1803fa608 + 0x28);
+    if (*(double *)(DAT_1803fa608 + 0x28) <= 0.0) {
+      dVar10 = DAT_180380be0;
+    }
+    if ((*(char *)(&DAT_1804ecb60 + lVar7 * 0x1c) == '\0') ||
+       (dVar2 = (double)(&DAT_1804ecb30)[lVar7 * 7], dVar9 < dVar2 - DAT_180380b40)) {
+      (&DAT_1804ecb60)[lVar7 * 0x1c] = 1;
+      (&DAT_1804ecb62)[lVar8] = 0;
+    }
+    else {
+      if (dVar9 <= dVar2 + DAT_180380ae8) {
+        return;
+      }
+      fVar12 = (float)((dVar9 - dVar2) / (double)(float)dVar10);
+      if ((0.0 < fVar12) && (fVar12 <= DAT_1803810d0)) {
+        fVar11 = fVar12 * (float)dVar10;
+        *(undefined4 *)(&DAT_1804ecb50 + lVar7 * 7) =
+             *(undefined4 *)((longlong)&DAT_1804ecb40 + lVar8 + 4);
+        *(undefined4 *)((longlong)&DAT_1804ecb50 + lVar8 + 4) =
+             *(undefined4 *)(&DAT_1804ecb48 + lVar7 * 7);
+        (&DAT_1804ecb58)[lVar7 * 0xe] = *(undefined4 *)((longlong)&DAT_1804ecb48 + lVar8 + 4);
+        (&DAT_1804ecb62)[lVar8] = *(undefined1 *)((longlong)&DAT_1804ecb60 + lVar8 + 1);
+        *(float *)((longlong)&DAT_1804ecb40 + lVar8 + 4) =
+             ((float)uVar1 - *(float *)(&DAT_1804ecb38 + lVar7 * 7)) / fVar11;
+        local_58._4_4_ = (float)((ulonglong)uVar1 >> 0x20);
+        *(float *)(&DAT_1804ecb48 + lVar7 * 7) =
+             (local_58._4_4_ - *(float *)((longlong)&DAT_1804ecb38 + lVar8 + 4)) / fVar11;
+        *(float *)((longlong)&DAT_1804ecb48 + lVar8 + 4) =
+             (fVar3 - *(float *)(&DAT_1804ecb40 + lVar7 * 7)) / fVar11;
+        *(undefined1 *)((longlong)&DAT_1804ecb60 + lVar8 + 1) = 1;
+        local_68[2] = 0x10;
+        local_68[0] = 1;
+        local_68[1] = (int)(fVar12 + DAT_180380ac0);
+        piVar6 = local_68;
+        if (0 < local_68[1]) {
+          piVar6 = local_68 + 1;
+        }
+        piVar5 = local_68 + 2;
+        if (local_68[1] < 0x11) {
+          piVar5 = piVar6;
+        }
+        (&DAT_1804ecb5c)[lVar7 * 0xe] = *piVar5;
+      }
+    }
+    (&DAT_1804ecb30)[lVar7 * 7] = dVar9;
+    (&DAT_1804ecb38)[lVar7 * 7] = uVar1;
+    *(float *)(&DAT_1804ecb40 + lVar7 * 7) = fVar3;
+  }
+  return;
+}
+
+
+)B1800b41e0",
+    "20304d963ef3d8d3e271eff469380f5d37e3330f89757d23d029941c7add0826",
+    R"F1800b41e0C(FUN_18001c0d0
+FUN_18001daf0)F1800b41e0C",
+    R"F1800b41e0D(DAT_180380ac0
+DAT_180380ae8
+DAT_180380b40
+DAT_180380be0
+DAT_1803810d0
+DAT_1803fa608
+DAT_1804ecb30
+DAT_1804ecb38
+DAT_1804ecb40
+DAT_1804ecb48
+DAT_1804ecb50
+DAT_1804ecb58
+DAT_1804ecb5c
+DAT_1804ecb60
+DAT_1804ecb62)F1800b41e0D",
+    R"F1800b41e0T()F1800b41e0T",
+    R"F1800b41e0F(29: if (((param_1 - 1U < 0x80) && (param_2 != 0)) && (DAT_1803fa608 != 0)) {
+39: if (*(double *)(DAT_1803fa608 + 0x28) <= 0.0) {
+42: if ((*(char *)(&DAT_1804ecb60 + lVar7 * 0x1c) == '\0') ||
+47: else {
+48: if (dVar9 <= dVar2 + DAT_180380ae8) {
+49: return;
+52: if ((0.0 < fVar12) && (fVar12 <= DAT_1803810d0)) {
+72: if (0 < local_68[1]) {
+76: if (local_68[1] < 0x11) {
+86: return;)F1800b41e0F",
+    R"F1800b41e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ac0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ae8.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b40.
+TODO: recover the declaration, type and value for global/data reference DAT_180380be0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803810d0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb30.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb38.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb40.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb48.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb50.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb58.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb5c.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb60.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ecb62.)F1800b41e0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b41e0() noexcept {
+    return kFunction_0x1800b41e0;
+}
+
+// 0x1800b4400 FUN_1800b4400
+// source: re/dump/decompile/0x1800b4400_FUN_1800b4400.c
+// size: 30 bytes; thunk: false
+// body sha256: 9991593d49b74d5e997d6e9a3ba9b85fd64eb8644a54589b9cf001b2479e590e
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4400{
+    "0x1800b4400",
+    "FUN_1800b4400",
+    R"F1800b4400S(undefined FUN_1800b4400())F1800b4400S",
+    R"B1800b4400(// 0x1800b4400  FUN_1800b4400
+// size=30 thunk=false
+// signature: undefined FUN_1800b4400()
+// status: ok
+
+
+undefined8 FUN_1800b4400(void *param_1,void *param_2,int param_3)
+
+{
+  memcpy(param_2,param_1,(longlong)param_3);
+  return 1;
+}
+
+
+)B1800b4400",
+    "9991593d49b74d5e997d6e9a3ba9b85fd64eb8644a54589b9cf001b2479e590e",
+    R"F1800b4400C()F1800b4400C",
+    R"F1800b4400D()F1800b4400D",
+    R"F1800b4400T()F1800b4400T",
+    R"F1800b4400F(11: return 1;)F1800b4400F",
+    R"F1800b4400U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b4400U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4400() noexcept {
+    return kFunction_0x1800b4400;
+}
+
+// 0x1800b4420 FUN_1800b4420
+// source: re/dump/decompile/0x1800b4420_FUN_1800b4420.c
+// size: 21 bytes; thunk: false
+// body sha256: 0989bee6b61887f3d800aee3110fbbcd97c450fd813594acd8c4b9a8f7d88871
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4420{
+    "0x1800b4420",
+    "FUN_1800b4420",
+    R"F1800b4420S(undefined FUN_1800b4420())F1800b4420S",
+    R"B1800b4420(// 0x1800b4420  FUN_1800b4420
+// size=21 thunk=false
+// signature: undefined FUN_1800b4420()
+// status: ok
+
+
+undefined8 FUN_1800b4420(void *param_1,void *param_2,int param_3)
+
+{
+  memcpy(param_1,param_2,(longlong)param_3);
+  return 1;
+}
+
+
+)B1800b4420",
+    "0989bee6b61887f3d800aee3110fbbcd97c450fd813594acd8c4b9a8f7d88871",
+    R"F1800b4420C()F1800b4420C",
+    R"F1800b4420D()F1800b4420D",
+    R"F1800b4420T()F1800b4420T",
+    R"F1800b4420F(11: return 1;)F1800b4420F",
+    R"F1800b4420U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b4420U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4420() noexcept {
+    return kFunction_0x1800b4420;
+}
+
+// 0x1800b4440 FUN_1800b4440
+// source: re/dump/decompile/0x1800b4440_FUN_1800b4440.c
+// size: 11 bytes; thunk: false
+// body sha256: f1d88f4ce092034c73b139fc1bbfc4ca36e107e82d1e43998f2a5b4b3817a0f5
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4440{
+    "0x1800b4440",
+    "FUN_1800b4440",
+    R"F1800b4440S(undefined FUN_1800b4440())F1800b4440S",
+    R"B1800b4440(// 0x1800b4440  FUN_1800b4440
+// size=11 thunk=false
+// signature: undefined FUN_1800b4440()
+// status: ok
+
+
+undefined8 FUN_1800b4440(undefined8 *param_1,undefined8 *param_2)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = *param_1;
+  *param_2 = uVar1;
+  return CONCAT71((int7)((ulonglong)uVar1 >> 8),1);
+}
+
+
+)B1800b4440",
+    "f1d88f4ce092034c73b139fc1bbfc4ca36e107e82d1e43998f2a5b4b3817a0f5",
+    R"F1800b4440C()F1800b4440C",
+    R"F1800b4440D()F1800b4440D",
+    R"F1800b4440T()F1800b4440T",
+    R"F1800b4440F(14: return CONCAT71((int7)((ulonglong)uVar1 >> 8),1);)F1800b4440F",
+    R"F1800b4440U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b4440U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4440() noexcept {
+    return kFunction_0x1800b4440;
+}
+
+// 0x1800b4450 FUN_1800b4450
+// source: re/dump/decompile/0x1800b4450_FUN_1800b4450.c
+// size: 112 bytes; thunk: false
+// body sha256: 2642af5cd693ad031e51826f4d5a1e0f5f0e88a0129d8c178701f8d2946578b4
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4450{
+    "0x1800b4450",
+    "FUN_1800b4450",
+    R"F1800b4450S(undefined FUN_1800b4450())F1800b4450S",
+    R"B1800b4450(// 0x1800b4450  FUN_1800b4450
+// size=112 thunk=false
+// signature: undefined FUN_1800b4450()
+// status: ok
+
+
+undefined8 FUN_1800b4450(longlong param_1)
+
+{
+  void *pvVar1;
+  char cVar2;
+  BOOL BVar3;
+  undefined8 uVar4;
+  void *local_res8;
+  
+  if (param_1 != 0) {
+    local_res8 = (void *)0x0;
+    cVar2 = FUN_1800b4440(param_1,&local_res8);
+    pvVar1 = local_res8;
+    if ((((cVar2 != '\0') && (local_res8 != (void *)0x0)) &&
+        (BVar3 = IsBadReadPtr(local_res8,0x80), BVar3 == 0)) &&
+       (*(code **)((longlong)pvVar1 + 0x78) != (code *)0x0)) {
+      uVar4 = (**(code **)((longlong)pvVar1 + 0x78))(param_1);
+      return uVar4;
+    }
+  }
+  return 0;
+}
+
+
+)B1800b4450",
+    "2642af5cd693ad031e51826f4d5a1e0f5f0e88a0129d8c178701f8d2946578b4",
+    R"F1800b4450C(FUN_1800b4440)F1800b4450C",
+    R"F1800b4450D()F1800b4450D",
+    R"F1800b4450T()F1800b4450T",
+    R"F1800b4450F(16: if (param_1 != 0) {
+20: if ((((cVar2 != '\0') && (local_res8 != (void *)0x0)) &&
+24: return uVar4;
+27: return 0;)F1800b4450F",
+    R"F1800b4450U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: resolve the indirect call in body 22: (*(code **)((longlong)pvVar1 + 0x78) != (code *)0x0)) {.
+TODO: resolve the indirect call in body 23: uVar4 = (**(code **)((longlong)pvVar1 + 0x78))(param_1);.)F1800b4450U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4450() noexcept {
+    return kFunction_0x1800b4450;
+}
+
+// 0x1800b44d0 FUN_1800b44d0
+// source: re/dump/decompile/0x1800b44d0_FUN_1800b44d0.c
+// size: 673 bytes; thunk: false
+// body sha256: cec7e6479ffee2aa84ef5e376734b3c3ff111f980717829b32f0939bdf6c412d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b44d0{
+    "0x1800b44d0",
+    "FUN_1800b44d0",
+    R"F1800b44d0S(undefined FUN_1800b44d0())F1800b44d0S",
+    R"B1800b44d0(// 0x1800b44d0  FUN_1800b44d0
+// size=673 thunk=false
+// signature: undefined FUN_1800b44d0()
+// status: ok
+
+
+void FUN_1800b44d0(void *param_1,int param_2,longlong param_3,int *param_4,int param_5)
+
+{
+  char cVar1;
+  BOOL BVar2;
+  ulonglong uVar3;
+  void *pvVar4;
+  int iVar5;
+  uint uVar6;
+  uint local_58;
+  int local_54;
+  int local_50;
+  int local_4c;
+  void *local_48;
+  void *local_40;
+  
+  if ((((param_1 != (void *)0x0) && (param_5 < 7)) && (*param_4 < 0x180)) &&
+     (BVar2 = IsBadReadPtr(param_1,0x30), BVar2 == 0)) {
+    iVar5 = 0;
+    local_40 = (void *)0x0;
+    cVar1 = FUN_1800b4440((longlong)param_1 + 0x18,&local_40);
+    if (((cVar1 != '\0') && (local_40 != (void *)0x0)) && (local_40 != param_1)) {
+      FUN_1800b44d0(local_40,param_2,param_3,param_4,param_5 + 1);
+    }
+    local_40 = (void *)0x0;
+    local_58 = 0;
+    cVar1 = FUN_1800b4440(param_1,&local_40);
+    pvVar4 = local_40;
+    if (((cVar1 != '\0') && (local_40 != (void *)0x0)) &&
+       ((cVar1 = FUN_1800b2030((longlong)param_1 + 8,&local_58), cVar1 != '\0' &&
+        ((uVar3 = (ulonglong)(int)local_58, local_58 - 1 < 0x1000 &&
+         (BVar2 = IsBadReadPtr(pvVar4,uVar3 * 0x60), BVar2 == 0)))))) {
+      while( true ) {
+        local_48 = (void *)CONCAT44(local_48._4_4_,iVar5);
+        if (((int)uVar3 <= iVar5) || (0x17f < *param_4)) break;
+        pvVar4 = (void *)((longlong)iVar5 * 0x60 + (longlong)local_40);
+        local_50 = 0;
+        local_54 = 0;
+        local_4c = 0;
+        cVar1 = FUN_1800b2030(pvVar4,&local_50);
+        if (cVar1 == '\0') {
+          return;
+        }
+        cVar1 = FUN_1800b2030((longlong)pvVar4 + 0x10,&local_54);
+        if (cVar1 == '\0') {
+          return;
+        }
+        cVar1 = FUN_1800b2030((longlong)pvVar4 + 0x38,&local_4c);
+        if (cVar1 == '\0') {
+          return;
+        }
+        uVar6 = param_2 + local_54;
+        if (uVar6 < 0x20001) {
+          if (local_50 != 10) {
+            if ((local_50 != 0) && (local_4c - 1U < 0x40)) {
+              *(uint *)(param_3 + (longlong)*param_4 * 0x18) = uVar6;
+              *(int *)(param_3 + 4 + (longlong)*param_4 * 0x18) = local_4c;
+              *(int *)(param_3 + 8 + (longlong)*param_4 * 0x18) = local_50;
+              *(undefined4 *)(param_3 + 0xc + (longlong)*param_4 * 0x18) = 0;
+              *(undefined8 *)(param_3 + 0x10 + (longlong)*param_4 * 0x18) = 0;
+              *(undefined4 *)(param_3 + 0xc + (longlong)*param_4 * 0x18) =
+                   *(undefined4 *)((longlong)pvVar4 + 0x4c);
+              *(undefined8 *)(param_3 + 0x10 + (longlong)*param_4 * 0x18) =
+                   *(undefined8 *)((longlong)pvVar4 + 8);
+              *param_4 = *param_4 + 1;
+            }
+            goto LAB_1800b476d;
+          }
+          local_48 = (void *)0x0;
+          cVar1 = FUN_1800b4440((longlong)pvVar4 + 0x30,&local_48);
+          if (((cVar1 == '\0') || (local_48 == (void *)0x0)) || (local_48 == param_1))
+          goto LAB_1800b476d;
+          FUN_1800b44d0(local_48,uVar6,param_3,param_4,param_5 + 1);
+          iVar5 = iVar5 + 1;
+          uVar3 = (ulonglong)local_58;
+        }
+        else {
+LAB_1800b476d:
+          iVar5 = iVar5 + 1;
+          uVar3 = (ulonglong)local_58;
+        }
+      }
+    }
+  }
+  return;
+}
+
+
+)B1800b44d0",
+    "cec7e6479ffee2aa84ef5e376734b3c3ff111f980717829b32f0939bdf6c412d",
+    R"F1800b44d0C(FUN_1800b2030
+FUN_1800b4440)F1800b44d0C",
+    R"F1800b44d0D(LAB_1800b476d)F1800b44d0D",
+    R"F1800b44d0T()F1800b44d0T",
+    R"F1800b44d0F(23: if ((((param_1 != (void *)0x0) && (param_5 < 7)) && (*param_4 < 0x180)) &&
+28: if (((cVar1 != '\0') && (local_40 != (void *)0x0)) && (local_40 != param_1)) {
+35: if (((cVar1 != '\0') && (local_40 != (void *)0x0)) &&
+39: while( true ) {
+41: if (((int)uVar3 <= iVar5) || (0x17f < *param_4)) break;
+47: if (cVar1 == '\0') {
+48: return;
+51: if (cVar1 == '\0') {
+52: return;
+55: if (cVar1 == '\0') {
+56: return;
+59: if (uVar6 < 0x20001) {
+60: if (local_50 != 10) {
+61: if ((local_50 != 0) && (local_4c - 1U < 0x40)) {
+73: goto LAB_1800b476d;
+77: if (((cVar1 == '\0') || (local_48 == (void *)0x0)) || (local_48 == param_1))
+78: goto LAB_1800b476d;
+83: else {
+84: LAB_1800b476d:
+91: return;)F1800b44d0F",
+    R"F1800b44d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b476d.)F1800b44d0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b44d0() noexcept {
+    return kFunction_0x1800b44d0;
+}
+
+// 0x1800b4790 FUN_1800b4790
+// source: re/dump/decompile/0x1800b4790_FUN_1800b4790.c
+// size: 579 bytes; thunk: false
+// body sha256: 54506ceafc53fdd708cdbbeb6f9e2468b5836b8dec8fcabc5219cf3da90d838f
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4790{
+    "0x1800b4790",
+    "FUN_1800b4790",
+    R"F1800b4790S(undefined FUN_1800b4790())F1800b4790S",
+    R"B1800b4790(// 0x1800b4790  FUN_1800b4790
+// size=579 thunk=false
+// signature: undefined FUN_1800b4790()
+// status: ok
+
+
+undefined8 FUN_1800b4790(longlong param_1,longlong param_2)
+
+{
+  char cVar1;
+  undefined1 uVar2;
+  int *piVar3;
+  longlong lVar4;
+  undefined *puVar5;
+  undefined *puVar6;
+  undefined *puVar7;
+  uint uVar8;
+  
+  piVar3 = (int *)FUN_1800b3c00();
+  if (((((param_1 != 0) && ((char)piVar3[8] != '\0')) &&
+       (cVar1 = FUN_1800b4400(*piVar3 + param_1,param_2,0xc), cVar1 != '\0')) &&
+      ((cVar1 = FUN_1800b4400(piVar3[1] + param_1,param_2 + 0xc,0xc), cVar1 != '\0' &&
+       (cVar1 = FUN_1800b4400(piVar3[4] + param_1,param_2 + 0x24,0xc), cVar1 != '\0')))) &&
+     (cVar1 = FUN_1800b4400(piVar3[3] + param_1,param_2 + 0x30,4), cVar1 != '\0')) {
+    if (0 < piVar3[2]) {
+      FUN_1800b4400(param_1 + piVar3[2],param_2 + 0x18,0xc);
+    }
+    if (0 < piVar3[5]) {
+      FUN_1800b4400(param_1 + piVar3[5],param_2 + 0x34,4);
+    }
+    if (0 < piVar3[6]) {
+      FUN_1800b4400(param_1 + piVar3[6],param_2 + 0x38,4);
+    }
+    if (0 < piVar3[7]) {
+      FUN_1800b4400(param_1 + piVar3[7],param_2 + 0x3c,4);
+    }
+    lVar4 = FUN_1800b4450(param_1);
+    puVar6 = (undefined *)0x0;
+    puVar5 = puVar6;
+    puVar7 = puVar6;
+    if (lVar4 != 0) {
+      if ((lVar4 != DAT_18040a228) || (DAT_18040a220 == '\0')) {
+        DAT_18040a220 = '\x01';
+        DAT_18040a230 = 0;
+        DAT_18040a228 = lVar4;
+        FUN_1800b44d0(lVar4,0,&DAT_1804ee770,&DAT_18040a230,0);
+        FUN_180014410("[EXTRAP] prediction datamap %p -> %d flattened fields\n",lVar4,DAT_18040a230)
+        ;
+      }
+      puVar5 = (undefined *)(ulonglong)DAT_18040a230;
+      puVar7 = &DAT_1804ee770;
+    }
+    DAT_18040a218 = puVar7;
+    *(int *)(param_2 + 0x44) = (int)puVar5;
+    if (DAT_18040a218 == (undefined *)0x0) {
+      *(undefined4 *)(param_2 + 0x44) = 0;
+    }
+    else {
+      puVar7 = puVar6;
+      if (0 < (int)puVar5) {
+        do {
+          puVar5 = DAT_18040a218;
+          lVar4 = (longlong)(int)puVar7;
+          uVar2 = FUN_1800b4400(*(int *)(DAT_18040a218 + lVar4 * 0x18) + param_1,
+                                &DAT_1804f0cf0 + (int)puVar6,
+                                *(undefined4 *)(DAT_18040a218 + lVar4 * 0x18 + 4));
+          puVar6 = (undefined *)(ulonglong)(uint)((int)puVar6 + *(int *)(puVar5 + lVar4 * 0x18 + 4))
+          ;
+          uVar8 = (int)puVar7 + 1;
+          puVar7 = (undefined *)(ulonglong)uVar8;
+          (&DAT_1804f0b70)[lVar4] = uVar2;
+        } while ((int)uVar8 < *(int *)(param_2 + 0x44));
+      }
+    }
+    *(undefined1 *)(param_2 + 0x40) = 1;
+    return 1;
+  }
+  return 0;
+}
+
+
+)B1800b4790",
+    "54506ceafc53fdd708cdbbeb6f9e2468b5836b8dec8fcabc5219cf3da90d838f",
+    R"F1800b4790C(FUN_180014410
+FUN_1800b3c00
+FUN_1800b4400
+FUN_1800b4450
+FUN_1800b44d0)F1800b4790C",
+    R"F1800b4790D(DAT_18040a218
+DAT_18040a220
+DAT_18040a228
+DAT_18040a230
+DAT_1804ee770
+DAT_1804f0b70
+DAT_1804f0cf0)F1800b4790D",
+    R"F1800b4790T("[EXTRAP] prediction datamap %p -> %d flattened fields\\n")F1800b4790T",
+    R"F1800b4790F(20: if (((((param_1 != 0) && ((char)piVar3[8] != '\0')) &&
+25: if (0 < piVar3[2]) {
+28: if (0 < piVar3[5]) {
+31: if (0 < piVar3[6]) {
+34: if (0 < piVar3[7]) {
+41: if (lVar4 != 0) {
+42: if ((lVar4 != DAT_18040a228) || (DAT_18040a220 == '\0')) {
+55: if (DAT_18040a218 == (undefined *)0x0) {
+58: else {
+60: if (0 < (int)puVar5) {
+61: do {
+76: return 1;
+78: return 0;)F1800b4790F",
+    R"F1800b4790U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a218.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a220.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a228.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a230.
+TODO: recover the declaration, type and value for global/data reference DAT_1804ee770.
+TODO: recover the declaration, type and value for global/data reference DAT_1804f0b70.
+TODO: recover the declaration, type and value for global/data reference DAT_1804f0cf0.)F1800b4790U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4790() noexcept {
+    return kFunction_0x1800b4790;
+}
+
+// 0x1800b49e0 FUN_1800b49e0
+// source: re/dump/decompile/0x1800b49e0_FUN_1800b49e0.c
+// size: 406 bytes; thunk: false
+// body sha256: 7fb63d97589484b91b5a712a586da358a39ebfe71d7c741a352c5af6deb63435
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b49e0{
+    "0x1800b49e0",
+    "FUN_1800b49e0",
+    R"F1800b49e0S(undefined FUN_1800b49e0())F1800b49e0S",
+    R"B1800b49e0(// 0x1800b49e0  FUN_1800b49e0
+// size=406 thunk=false
+// signature: undefined FUN_1800b49e0()
+// status: ok
+
+
+void FUN_1800b49e0(longlong param_1,longlong param_2)
+
+{
+  longlong lVar1;
+  int *piVar2;
+  longlong lVar3;
+  int iVar4;
+  int iVar5;
+  longlong lVar6;
+  
+  piVar2 = (int *)FUN_1800b3c00();
+  if (((param_1 != 0) && ((char)piVar2[8] != '\0')) && (*(char *)(param_2 + 0x40) != '\0')) {
+    FUN_1800b4420(*piVar2 + param_1,param_2,0xc);
+    FUN_1800b4420(piVar2[1] + param_1,param_2 + 0xc,0xc);
+    FUN_1800b4420(piVar2[4] + param_1,param_2 + 0x24,0xc);
+    FUN_1800b4420(piVar2[3] + param_1,param_2 + 0x30,4);
+    if (0 < piVar2[2]) {
+      FUN_1800b4420(param_1 + piVar2[2],param_2 + 0x18,0xc);
+    }
+    if (0 < piVar2[5]) {
+      FUN_1800b4420(param_1 + piVar2[5],param_2 + 0x34,4);
+    }
+    if (0 < piVar2[6]) {
+      FUN_1800b4420(param_1 + piVar2[6],param_2 + 0x38,4);
+    }
+    if (0 < piVar2[7]) {
+      FUN_1800b4420(param_1 + piVar2[7],param_2 + 0x3c,4);
+    }
+    if ((0 < *(int *)(param_2 + 0x44)) && (DAT_18040a218 != 0)) {
+      iVar4 = 0;
+      iVar5 = 0;
+      lVar6 = DAT_18040a218;
+      do {
+        lVar3 = (longlong)iVar5;
+        lVar1 = lVar6 + lVar3 * 0x18;
+        if ((&DAT_1804f0b70)[lVar3] != '\0') {
+          FUN_1800b4420(*(int *)(lVar6 + lVar3 * 0x18) + param_1,&DAT_1804f0cf0 + iVar4,
+                        *(undefined4 *)(lVar1 + 4));
+          lVar6 = DAT_18040a218;
+        }
+        iVar4 = iVar4 + *(int *)(lVar1 + 4);
+        iVar5 = iVar5 + 1;
+      } while (iVar5 < *(int *)(param_2 + 0x44));
+    }
+  }
+  return;
+}
+
+
+)B1800b49e0",
+    "7fb63d97589484b91b5a712a586da358a39ebfe71d7c741a352c5af6deb63435",
+    R"F1800b49e0C(FUN_1800b3c00
+FUN_1800b4420)F1800b49e0C",
+    R"F1800b49e0D(DAT_18040a218
+DAT_1804f0b70
+DAT_1804f0cf0)F1800b49e0D",
+    R"F1800b49e0T()F1800b49e0T",
+    R"F1800b49e0F(18: if (((param_1 != 0) && ((char)piVar2[8] != '\0')) && (*(char *)(param_2 + 0x40) != '\0')) {
+23: if (0 < piVar2[2]) {
+26: if (0 < piVar2[5]) {
+29: if (0 < piVar2[6]) {
+32: if (0 < piVar2[7]) {
+35: if ((0 < *(int *)(param_2 + 0x44)) && (DAT_18040a218 != 0)) {
+39: do {
+42: if ((&DAT_1804f0b70)[lVar3] != '\0') {
+52: return;)F1800b49e0F",
+    R"F1800b49e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a218.
+TODO: recover the declaration, type and value for global/data reference DAT_1804f0b70.
+TODO: recover the declaration, type and value for global/data reference DAT_1804f0cf0.)F1800b49e0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b49e0() noexcept {
+    return kFunction_0x1800b49e0;
+}
+
+// 0x1800b4b80 FUN_1800b4b80
+// source: re/dump/decompile/0x1800b4b80_FUN_1800b4b80.c
+// size: 28 bytes; thunk: false
+// body sha256: 1e5b600c26d368de99143875b2605c5b796dde27c1b51f85b12324924e3b1253
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4b80{
+    "0x1800b4b80",
+    "FUN_1800b4b80",
+    R"F1800b4b80S(undefined FUN_1800b4b80())F1800b4b80S",
+    R"B1800b4b80(// 0x1800b4b80  FUN_1800b4b80
+// size=28 thunk=false
+// signature: undefined FUN_1800b4b80()
+// status: ok
+
+
+void FUN_1800b4b80(undefined8 *param_1)
+
+{
+  if (*(char *)(param_1 + 10) != '\0') {
+    FUN_1800b49e0(*param_1,param_1 + 1);
+  }
+  return;
+}
+
+
+)B1800b4b80",
+    "1e5b600c26d368de99143875b2605c5b796dde27c1b51f85b12324924e3b1253",
+    R"F1800b4b80C(FUN_1800b49e0)F1800b4b80C",
+    R"F1800b4b80D()F1800b4b80D",
+    R"F1800b4b80T()F1800b4b80T",
+    R"F1800b4b80F(10: if (*(char *)(param_1 + 10) != '\0') {
+13: return;)F1800b4b80F",
+    R"F1800b4b80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b4b80U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4b80() noexcept {
+    return kFunction_0x1800b4b80;
+}
+
+// 0x1800b4ba0 FUN_1800b4ba0
+// source: re/dump/decompile/0x1800b4ba0_FUN_1800b4ba0.c
+// size: 72 bytes; thunk: false
+// body sha256: 4dc0cbc045bbd627004e4bf218e6db5ff2fb9d2a5e33f0334603a89c9f30c0f1
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4ba0{
+    "0x1800b4ba0",
+    "FUN_1800b4ba0",
+    R"F1800b4ba0S(undefined FUN_1800b4ba0())F1800b4ba0S",
+    R"B1800b4ba0(// 0x1800b4ba0  FUN_1800b4ba0
+// size=72 thunk=false
+// signature: undefined FUN_1800b4ba0()
+// status: ok
+
+
+void FUN_1800b4ba0(void)
+
+{
+  void *lp;
+  BOOL BVar1;
+  
+  if ((((DAT_1803fa5a0 != (undefined8 *)0x0) && (lp = (void *)*DAT_1803fa5a0, lp != (void *)0x0)) &&
+      (BVar1 = IsBadReadPtr(lp,0x10), BVar1 == 0)) && (*(code **)((longlong)lp + 8) != (code *)0x0))
+  {
+    (**(code **)((longlong)lp + 8))(DAT_1803fa5a0);
+  }
+  return;
+}
+
+
+)B1800b4ba0",
+    "4dc0cbc045bbd627004e4bf218e6db5ff2fb9d2a5e33f0334603a89c9f30c0f1",
+    R"F1800b4ba0C()F1800b4ba0C",
+    R"F1800b4ba0D(DAT_1803fa5a0)F1800b4ba0D",
+    R"F1800b4ba0T()F1800b4ba0T",
+    R"F1800b4ba0F(13: if ((((DAT_1803fa5a0 != (undefined8 *)0x0) && (lp = (void *)*DAT_1803fa5a0, lp != (void *)0x0)) &&
+18: return;)F1800b4ba0F",
+    R"F1800b4ba0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa5a0.
+TODO: resolve the indirect call in body 14: (BVar1 = IsBadReadPtr(lp,0x10), BVar1 == 0)) && (*(code **)((longlong)lp + 8) != (code *)0x0)).
+TODO: resolve the indirect call in body 16: (**(code **)((longlong)lp + 8))(DAT_1803fa5a0);.)F1800b4ba0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4ba0() noexcept {
+    return kFunction_0x1800b4ba0;
+}
+
+// 0x1800b4bf0 FUN_1800b4bf0
+// source: re/dump/decompile/0x1800b4bf0_FUN_1800b4bf0.c
+// size: 1015 bytes; thunk: false
+// body sha256: c6302cd81aef64abd0b43fe1d0cd7ff11672c7334410ec260c070bee5acbb9de
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b4bf0{
+    "0x1800b4bf0",
+    "FUN_1800b4bf0",
+    R"F1800b4bf0S(undefined FUN_1800b4bf0())F1800b4bf0S",
+    R"B1800b4bf0(// 0x1800b4bf0  FUN_1800b4bf0
+// size=1015 thunk=false
+// signature: undefined FUN_1800b4bf0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+
+ulonglong FUN_1800b4bf0(longlong param_1,int param_2,undefined8 *param_3,undefined8 param_4)
+
+{
+  undefined1 uVar1;
+  char cVar2;
+  char cVar3;
+  ulonglong uVar4;
+  int *piVar5;
+  int iVar6;
+  char cVar7;
+  float fVar8;
+  undefined1 auStack_408 [32];
+  undefined4 *local_3e8;
+  undefined1 local_3d8;
+  undefined1 local_3d7;
+  int local_3d4;
+  undefined8 local_3d0;
+  undefined4 local_3c8;
+  ulonglong local_3c0 [3];
+  longlong local_3a8;
+  undefined8 local_3a0;
+  undefined8 local_398;
+  undefined8 uStack_390;
+  undefined8 local_388;
+  undefined8 uStack_380;
+  undefined8 local_378;
+  ulonglong local_370;
+  undefined8 local_368;
+  undefined1 local_360;
+  undefined4 local_35c;
+  char local_358;
+  undefined4 local_348;
+  undefined8 local_344;
+  undefined4 local_33c;
+  undefined4 local_338;
+  undefined4 local_334;
+  undefined4 local_330;
+  undefined4 local_32c;
+  undefined4 local_328;
+  undefined8 local_324;
+  undefined4 uStack_31c;
+  undefined4 uStack_318;
+  undefined4 uStack_314;
+  undefined8 uStack_310;
+  undefined4 local_2fc;
+  undefined4 local_2f8;
+  undefined4 local_2f4;
+  undefined4 local_2f0;
+  undefined4 local_2ec;
+  undefined4 local_2e8;
+  undefined4 local_2e4;
+  undefined8 local_2bc;
+  undefined4 local_2b4;
+  undefined1 local_2a4 [268];
+  undefined8 local_198;
+  undefined4 local_190;
+  float local_18c;
+  undefined4 local_188;
+  float local_184;
+  undefined8 local_180;
+  undefined4 local_178;
+  undefined1 local_174 [284];
+  ulonglong local_58;
+  
+  local_58 = DAT_1803da4c0 ^ (ulonglong)auStack_408;
+  uVar4 = local_58;
+  if (((((param_1 != 0) && (uVar4 = (ulonglong)(param_2 - 1U), param_2 - 1U < 0x20)) &&
+       (local_3c0[2] = param_4, uVar4 = FUN_1800b3c00(), *(char *)(uVar4 + 0x20) != '\0')) &&
+      ((DAT_1803f9290 != (longlong *)0x0 && (DAT_1803fa658 != (longlong *)0x0)))) &&
+     (DAT_1803fa5a0 != 0)) {
+    local_3c0[0] = 0;
+    local_3c0[1] = 0;
+    uVar4 = FUN_180024b50(local_3c0);
+    uVar1 = DAT_1803fe4ac;
+    cVar7 = (char)local_3c0[1];
+    DAT_1803fe4ac = uVar1;
+    if (cVar7 != '\0') {
+      local_3d7 = DAT_1803fe4ac;
+      DAT_1803fe4ac = 1;
+      local_3a0 = 0;
+      local_398 = 0;
+      uStack_390 = 0;
+      local_388 = 0;
+      uStack_380 = 0;
+      local_378 = 0;
+      local_370 = 0;
+      local_368 = 0;
+      local_360 = 0;
+      local_35c = 0;
+      local_358 = 0;
+      local_3a8 = param_1;
+      cVar2 = FUN_1800b4790(param_1,&local_3a0);
+      if (cVar2 != '\0') {
+        local_358 = cVar2;
+        piVar5 = (int *)FUN_1800b3c00();
+        local_3d0 = *param_3;
+        fVar8 = (float)((ulonglong)local_3d0 >> 0x20);
+        local_3c8 = *(undefined4 *)(param_3 + 1);
+        fVar8 = fVar8 * fVar8 + (float)local_3d0 * (float)local_3d0;
+        if (fVar8 < 0.0) {
+          fVar8 = sqrtf(fVar8);
+        }
+        else {
+          fVar8 = SQRT(fVar8);
+        }
+        FUN_1800b4420(piVar5[1] + param_1,&local_3d0,0xc);
+        memset(local_174,0,0x11c);
+        iVar6 = 0;
+        local_198 = 0;
+        local_178 = 0;
+        local_190 = 0;
+        if (fVar8 <= DAT_180380bb0) {
+          local_18c = 0.0;
+        }
+        else {
+          local_18c = atan2f(local_3d0._4_4_,(float)local_3d0);
+          local_18c = local_18c * DAT_1803810bc;
+        }
+        local_188 = 0;
+        local_180 = 0;
+        if ((local_370 & 2) != 0) {
+          local_178 = 4;
+        }
+        local_348 = 0;
+        local_344 = 0;
+        local_334 = 0;
+        local_338 = 0;
+        local_33c = 0;
+        local_328 = 0;
+        local_32c = 0;
+        local_330 = 0;
+        local_324 = 0;
+        uStack_31c = 0;
+        uStack_318 = 0;
+        uStack_314 = 0;
+        uStack_310 = 0;
+        local_2f4 = 0;
+        local_2f8 = 0;
+        local_2fc = 0;
+        local_2e8 = 0;
+        local_2ec = 0;
+        local_2f0 = 0;
+        local_2e4 = 0;
+        local_2bc = 0;
+        local_2b4 = 0;
+        local_184 = fVar8;
+        memset(local_2a4,0,0x100);
+        for (; local_3d4 = iVar6, iVar6 < param_2; iVar6 = iVar6 + 1) {
+          memset(&local_348,0,0x1a4);
+          local_3e8 = &local_348;
+          (**(code **)(*DAT_1803f9290 + 0x90))(DAT_1803f9290,param_1,&local_198,DAT_1803fa5a0);
+          (**(code **)(*DAT_1803fa658 + 8))(DAT_1803fa658,param_1,&local_348);
+          (**(code **)(*DAT_1803f9290 + 0x98))(DAT_1803f9290,param_1,&local_198,&local_348);
+        }
+        cVar3 = FUN_1800b4400(*piVar5 + param_1,local_3c0[2],0xc);
+        local_3d8 = cVar3 != '\0';
+        FUN_1800b4ba0();
+        if (cVar2 != '\0') {
+          FUN_1800b49e0(local_3a8,&local_3a0);
+        }
+        DAT_1803fe4ac = uVar1;
+        if ((cVar7 != '\0') && ((longlong)DAT_1803fa368 - 1U < 0xfffffffffffffffe)) {
+          *DAT_1803fa368 = local_3c0[0];
+        }
+        return (ulonglong)(cVar3 != '\0');
+      }
+      uVar4 = (longlong)DAT_1803fa368 - 1U;
+      DAT_1803fe4ac = uVar1;
+      if ((longlong)DAT_1803fa368 - 1U < 0xfffffffffffffffe) {
+        *DAT_1803fa368 = local_3c0[0];
+        uVar4 = local_3c0[0];
+      }
+    }
+  }
+  return uVar4 & 0xffffffffffffff00;
+}
+
+
+)B1800b4bf0",
+    "c6302cd81aef64abd0b43fe1d0cd7ff11672c7334410ec260c070bee5acbb9de",
+    R"F1800b4bf0C(FUN_180024b50
+FUN_1800b3c00
+FUN_1800b4400
+FUN_1800b4420
+FUN_1800b4790
+FUN_1800b49e0
+FUN_1800b4ba0)F1800b4bf0C",
+    R"F1800b4bf0D(DAT_180380bb0
+DAT_1803810bc
+DAT_1803da4c0
+DAT_1803f9290
+DAT_1803fa368
+DAT_1803fa5a0
+DAT_1803fa658
+DAT_1803fe4ac)F1800b4bf0D",
+    R"F1800b4bf0T()F1800b4bf0T",
+    R"F1800b4bf0F(75: if (((((param_1 != 0) && (uVar4 = (ulonglong)(param_2 - 1U), param_2 - 1U < 0x20)) &&
+85: if (cVar7 != '\0') {
+101: if (cVar2 != '\0') {
+108: if (fVar8 < 0.0) {
+111: else {
+120: if (fVar8 <= DAT_180380bb0) {
+123: else {
+129: if ((local_370 & 2) != 0) {
+156: for (; local_3d4 = iVar6, iVar6 < param_2; iVar6 = iVar6 + 1) {
+166: if (cVar2 != '\0') {
+170: if ((cVar7 != '\0') && ((longlong)DAT_1803fa368 - 1U < 0xfffffffffffffffe)) {
+173: return (ulonglong)(cVar3 != '\0');
+177: if ((longlong)DAT_1803fa368 - 1U < 0xfffffffffffffffe) {
+183: return uVar4 & 0xffffffffffffff00;)F1800b4bf0F",
+    R"F1800b4bf0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803810bc.
+TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803f9290.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa368.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa5a0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa658.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fe4ac.
+TODO: resolve the indirect call in body 159: (**(code **)(*DAT_1803f9290 + 0x90))(DAT_1803f9290,param_1,&local_198,DAT_1803fa5a0);.
+TODO: resolve the indirect call in body 160: (**(code **)(*DAT_1803fa658 + 8))(DAT_1803fa658,param_1,&local_348);.
+TODO: resolve the indirect call in body 161: (**(code **)(*DAT_1803f9290 + 0x98))(DAT_1803f9290,param_1,&local_198,&local_348);.)F1800b4bf0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b4bf0() noexcept {
+    return kFunction_0x1800b4bf0;
+}
+
+// 0x1800b5000 FUN_1800b5000
+// source: re/dump/decompile/0x1800b5000_FUN_1800b5000.c
+// size: 62 bytes; thunk: false
+// body sha256: b0e124a434bfc7cef50b37b6f3b7210c2aa7a9f62faae5ee207d9e7683e146cb
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5000{
+    "0x1800b5000",
+    "FUN_1800b5000",
+    R"F1800b5000S(undefined FUN_1800b5000())F1800b5000S",
+    R"B1800b5000(// 0x1800b5000  FUN_1800b5000
+// size=62 thunk=false
+// signature: undefined FUN_1800b5000()
+// status: ok
+
+
+undefined1 FUN_1800b5000(void)
+
+{
+  undefined8 uVar1;
+  undefined1 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0xb11c6c42591b6fcf);
+  puVar2 = (undefined1 *)FUN_1801fcfc0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b5000",
+    "b0e124a434bfc7cef50b37b6f3b7210c2aa7a9f62faae5ee207d9e7683e146cb",
+    R"F1800b5000C(FUN_1801fcfc0
+FUN_180241610)F1800b5000C",
+    R"F1800b5000D(DAT_1803fadf0)F1800b5000D",
+    R"F1800b5000T()F1800b5000T",
+    R"F1800b5000F(16: return *puVar2;)F1800b5000F",
+    R"F1800b5000U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b5000U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5000() noexcept {
+    return kFunction_0x1800b5000;
+}
+
+// 0x1800b5050 FUN_1800b5050
+// source: re/dump/decompile/0x1800b5050_FUN_1800b5050.c
+// size: 84 bytes; thunk: false
+// body sha256: b6b218aaf6e352fba5309c767eab3acbdbaa1a1a4463216bf812c50da87f0cff
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5050{
+    "0x1800b5050",
+    "FUN_1800b5050",
+    R"F1800b5050S(undefined FUN_1800b5050())F1800b5050S",
+    R"B1800b5050(// 0x1800b5050  FUN_1800b5050
+// size=84 thunk=false
+// signature: undefined FUN_1800b5050()
+// status: ok
+
+
+undefined1 FUN_1800b5050(longlong param_1)
+
+{
+  undefined1 uVar1;
+  
+  if ((((*(char *)(param_1 + 0x4a) == 'H') && (*(char *)(param_1 + 0x4b) == 'c')) &&
+      (*(char *)(param_1 + 0x4c) == '=')) &&
+     (((*(char *)(param_1 + 0x60) == 'H' && (*(char *)(param_1 + 0x61) == -0x75)) &&
+      (*(char *)(param_1 + 0x62) == '\x05')))) {
+    DAT_18040a5f8 = (longlong)*(int *)(param_1 + 0x4d) + 0x51 + param_1;
+    DAT_18040a5f0 = (longlong)*(int *)(param_1 + 99) + 0x67 + param_1;
+    uVar1 = 1;
+  }
+  else {
+    uVar1 = 0;
+  }
+  return uVar1;
+}
+
+
+)B1800b5050",
+    "b6b218aaf6e352fba5309c767eab3acbdbaa1a1a4463216bf812c50da87f0cff",
+    R"F1800b5050C()F1800b5050C",
+    R"F1800b5050D(DAT_18040a5f0
+DAT_18040a5f8)F1800b5050D",
+    R"F1800b5050T()F1800b5050T",
+    R"F1800b5050F(12: if ((((*(char *)(param_1 + 0x4a) == 'H') && (*(char *)(param_1 + 0x4b) == 'c')) &&
+20: else {
+23: return uVar1;)F1800b5050F",
+    R"F1800b5050U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f0.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f8.)F1800b5050U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5050() noexcept {
+    return kFunction_0x1800b5050;
+}
+
+// 0x1800b50c0 FUN_1800b50c0
+// source: re/dump/decompile/0x1800b50c0_FUN_1800b50c0.c
+// size: 103 bytes; thunk: false
+// body sha256: 626d8170696b8e8a815b199a2347a6ae1e8ec9d69839f42fd904d9687620d857
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b50c0{
+    "0x1800b50c0",
+    "FUN_1800b50c0",
+    R"F1800b50c0S(undefined FUN_1800b50c0())F1800b50c0S",
+    R"B1800b50c0(// 0x1800b50c0  FUN_1800b50c0
+// size=103 thunk=false
+// signature: undefined FUN_1800b50c0()
+// status: ok
+
+
+void FUN_1800b50c0(undefined8 param_1)
+
+{
+  int iVar1;
+  longlong lVar2;
+  longlong lVar3;
+  int iVar4;
+  
+  lVar2 = *DAT_18040a5f0;
+  if ((lVar2 != 0) && (iVar1 = *DAT_18040a5f8, iVar1 - 1U < 0xfff)) {
+    iVar4 = 0;
+    while (iVar4 < iVar1) {
+      if ((*(byte *)(lVar2 + 8 + (longlong)iVar4 * 0x10) & 1) == 0) {
+        iVar4 = iVar4 + 1;
+      }
+      else {
+        lVar3 = *(longlong *)(lVar2 + (longlong)iVar4 * 0x10);
+        if (lVar3 == 0) {
+          iVar4 = iVar4 + 1;
+        }
+        else {
+          *(undefined8 *)(lVar3 + 0xa0) = param_1;
+          iVar4 = iVar4 + 1;
+        }
+      }
+    }
+  }
+  return;
+}
+
+
+)B1800b50c0",
+    "626d8170696b8e8a815b199a2347a6ae1e8ec9d69839f42fd904d9687620d857",
+    R"F1800b50c0C()F1800b50c0C",
+    R"F1800b50c0D(DAT_18040a5f0
+DAT_18040a5f8)F1800b50c0D",
+    R"F1800b50c0T()F1800b50c0T",
+    R"F1800b50c0F(16: if ((lVar2 != 0) && (iVar1 = *DAT_18040a5f8, iVar1 - 1U < 0xfff)) {
+18: while (iVar4 < iVar1) {
+19: if ((*(byte *)(lVar2 + 8 + (longlong)iVar4 * 0x10) & 1) == 0) {
+22: else {
+24: if (lVar3 == 0) {
+27: else {
+34: return;)F1800b50c0F",
+    R"F1800b50c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f0.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f8.)F1800b50c0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b50c0() noexcept {
+    return kFunction_0x1800b50c0;
+}
+
+// 0x1800b5170 FUN_1800b5170
+// source: re/dump/decompile/0x1800b5170_FUN_1800b5170.c
+// size: 140 bytes; thunk: false
+// body sha256: ac7773735617448fa4d9d59ae4f815e6cb8f1266b0a6777f1c87c514478659ca
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5170{
+    "0x1800b5170",
+    "FUN_1800b5170",
+    R"F1800b5170S(undefined FUN_1800b5170())F1800b5170S",
+    R"B1800b5170(// 0x1800b5170  FUN_1800b5170
+// size=140 thunk=false
+// signature: undefined FUN_1800b5170()
+// status: ok
+
+
+void FUN_1800b5170(void)
+
+{
+  char cVar1;
+  
+  if (DAT_18040a608 == (code *)0x0) {
+    return;
+  }
+  if ((((DAT_18040a628 == '\0') && (cVar1 = FUN_1800b5000(), cVar1 != '\0')) && (DAT_1803fa608 != 0)
+      ) && (((DAT_18040a62c <= (float)*(double *)(DAT_1803fa608 + 0x10) &&
+             ((float)*(double *)(DAT_1803fa608 + 0x10) - DAT_18040a62c <= DAT_180380a58)) &&
+            ((DAT_18040a5f8 != 0 && (DAT_18040a5f0 != 0)))))) {
+    FUN_1800b50c0();
+                    /* WARNING: Could not recover jumptable at 0x0001800b51e2. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (*DAT_18040a608)();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x0001800b51f4. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (*DAT_18040a608)();
+  return;
+}
+
+
+)B1800b5170",
+    "ac7773735617448fa4d9d59ae4f815e6cb8f1266b0a6777f1c87c514478659ca",
+    R"F1800b5170C(FUN_1800b5000
+FUN_1800b50c0)F1800b5170C",
+    R"F1800b5170D(DAT_180380a58
+DAT_1803fa608
+DAT_18040a5f0
+DAT_18040a5f8
+DAT_18040a608
+DAT_18040a628
+DAT_18040a62c)F1800b5170D",
+    R"F1800b5170T()F1800b5170T",
+    R"F1800b5170F(12: if (DAT_18040a608 == (code *)0x0) {
+13: return;
+15: if ((((DAT_18040a628 == '\0') && (cVar1 = FUN_1800b5000(), cVar1 != '\0')) && (DAT_1803fa608 != 0)
+23: return;
+28: return;)F1800b5170F",
+    R"F1800b5170U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a58.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f0.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f8.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a608.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a628.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a62c.
+TODO: resolve the indirect call in body 12: if (DAT_18040a608 == (code *)0x0) {.
+TODO: resolve the indirect call in body 22: (*DAT_18040a608)();.
+TODO: resolve the indirect call in body 27: (*DAT_18040a608)();.)F1800b5170U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5170() noexcept {
+    return kFunction_0x1800b5170;
+}
+
+// 0x1800b5200 FUN_1800b5200
+// source: re/dump/decompile/0x1800b5200_FUN_1800b5200.c
+// size: 1082 bytes; thunk: false
+// body sha256: 5c79943eed3d08cf9498745bce0725cd93c0c89bec5cca1a5b638100a1d034ae
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5200{
+    "0x1800b5200",
+    "FUN_1800b5200",
+    R"F1800b5200S(undefined FUN_1800b5200())F1800b5200S",
+    R"B1800b5200(// 0x1800b5200  FUN_1800b5200
+// size=1082 thunk=false
+// signature: undefined FUN_1800b5200()
+// status: ok
+
+
+char FUN_1800b5200(void)
+
+{
+  char cVar1;
+  int iVar2;
+  longlong lVar3;
+  longlong lVar4;
+  longlong lVar5;
+  longlong lVar6;
+  longlong lVar7;
+  longlong lVar8;
+  undefined8 uVar9;
+  char *pcVar10;
+  undefined8 local_118;
+  undefined8 uStack_110;
+  undefined8 local_108;
+  undefined8 local_100;
+  undefined8 local_f8;
+  undefined8 uStack_f0;
+  undefined8 local_e8;
+  undefined8 local_e0;
+  undefined8 local_d8;
+  undefined8 uStack_d0;
+  undefined8 local_c8;
+  undefined8 uStack_c0;
+  undefined8 local_b8;
+  undefined8 uStack_b0;
+  undefined8 local_a8;
+  undefined8 uStack_a0;
+  undefined8 local_98;
+  undefined8 uStack_90;
+  undefined8 local_88;
+  undefined8 uStack_80;
+  undefined8 local_78;
+  undefined8 uStack_70;
+  undefined8 local_68;
+  undefined8 uStack_60;
+  undefined8 *local_58;
+  undefined8 *local_50;
+  
+  cVar1 = DAT_18040a630;
+  if ((DAT_18040a630 == '\0') && (DAT_18040a600 == '\0')) {
+    local_118 = 0;
+    uStack_110 = 0;
+    local_108 = 0;
+    local_100 = 0;
+    FUN_18001d080(&local_118,
+                  "48 83 EC 38 83 3D ? ? ? ? 06 75 ? 83 3D ? ? ? ? 00 7C ? 48 8B 0D ? ? ? ? 48 8B 01 FF 50 48"
+                  ,0x5a);
+    local_f8 = 0;
+    uStack_f0 = 0;
+    local_e8 = 0;
+    local_e0 = 0;
+    FUN_18001d080(&local_f8,"engine.dll",10);
+    lVar3 = FUN_180015f40(&local_f8,&local_118);
+    local_f8 = 0;
+    uStack_f0 = 0;
+    local_e8 = 0;
+    local_e0 = 0;
+    FUN_18001d080(&local_f8,
+                  "48 83 EC 48 48 89 5C 24 50 48 8D 0D ? ? ? ? 0F 29 74 24 30 0F 29 7C 24 20 E8",
+                  0x4c);
+    local_118 = 0;
+    uStack_110 = 0;
+    local_108 = 0;
+    local_100 = 0;
+    FUN_18001d080(&local_118,"engine.dll",10);
+    lVar4 = FUN_180015f40(&local_118,&local_f8);
+    local_58 = &local_f8;
+    local_f8 = 0;
+    uStack_f0 = 0;
+    local_e8 = 0;
+    local_e0 = 0;
+    FUN_18001d080(&local_f8,
+                  "48 83 EC 38 48 8B 0D ? ? ? ? 48 89 74 24 48 48 89 7C 24 30 8B B1 0C 10 00 00",
+                  0x4c);
+    local_50 = &local_118;
+    local_118 = 0;
+    uStack_110 = 0;
+    local_108 = 0;
+    local_100 = 0;
+    FUN_18001d080(&local_118,"client.dll",10);
+    lVar5 = FUN_180015f40(&local_118,&local_f8);
+    if ((lVar3 == 0) || ((lVar4 == 0 || (lVar5 == 0)))) {
+      pcVar10 = 
+      "[TICKANIM] signature miss (runPred=%p fireEvents=%p updateAnims=%p) -- feature disabled\n";
+    }
+    else {
+      local_d8 = 0;
+      uStack_d0 = 0;
+      local_c8 = 0;
+      uStack_c0 = 0;
+      FUN_18001d080(&local_d8,
+                    "48 83 EC 38 83 3D ? ? ? ? 06 75 ? 83 3D ? ? ? ? 00 7C ? 48 8B 0D ? ? ? ? 48 8B 01 FF 50 48"
+                    ,0x5a);
+      local_98 = 0;
+      uStack_90 = 0;
+      local_88 = 0;
+      uStack_80 = 0;
+      FUN_18001d080(&local_98,"engine.dll",10);
+      lVar6 = FUN_1800160e0(&local_98,&local_d8);
+      FUN_18020e450(&local_98);
+      FUN_18020e450(&local_d8);
+      local_b8 = 0;
+      uStack_b0 = 0;
+      local_a8 = 0;
+      uStack_a0 = 0;
+      FUN_18001d080(&local_b8,
+                    "48 83 EC 48 48 89 5C 24 50 48 8D 0D ? ? ? ? 0F 29 74 24 30 0F 29 7C 24 20 E8",
+                    0x4c);
+      local_d8 = 0;
+      uStack_d0 = 0;
+      local_c8 = 0;
+      uStack_c0 = 0;
+      FUN_18001d080(&local_d8,"engine.dll",10);
+      lVar7 = FUN_1800160e0(&local_d8,&local_b8);
+      FUN_18020e450(&local_d8);
+      FUN_18020e450(&local_b8);
+      local_78 = 0;
+      uStack_70 = 0;
+      local_68 = 0;
+      uStack_60 = 0;
+      FUN_18001d080(&local_78,
+                    "48 83 EC 38 48 8B 0D ? ? ? ? 48 89 74 24 48 48 89 7C 24 30 8B B1 0C 10 00 00",
+                    0x4c);
+      local_b8 = 0;
+      uStack_b0 = 0;
+      local_a8 = 0;
+      uStack_a0 = 0;
+      FUN_18001d080(&local_b8,"client.dll",10);
+      lVar8 = FUN_1800160e0(&local_b8,&local_78);
+      FUN_18020e450(&local_b8);
+      FUN_18020e450(&local_78);
+      if (((lVar6 == 1) && (lVar7 == 1)) && (lVar8 == 1)) {
+        DAT_18040a5e8 = lVar5;
+        DAT_18040a610 = lVar3;
+        DAT_18040a620 = lVar4;
+        FUN_1800b5050(lVar5);
+        if ((DAT_18040a5f8 == 0) || (pcVar10 = "on", DAT_18040a5f0 == 0)) {
+          pcVar10 = "OFF -- walker layout changed";
+        }
+        FUN_180014410("[TICKANIM] anim list count=%p base=%p (anim-time pin %s)\n",DAT_18040a5f8,
+                      DAT_18040a5f0,pcVar10);
+        iVar2 = FUN_180242fc0(DAT_18040a5e8,FUN_1800b5170,&DAT_18040a608);
+        if (iVar2 == 0) {
+          FUN_180243560(DAT_18040a5e8,1);
+        }
+        uVar9 = FUN_1802436b0(iVar2);
+        FUN_180014410("[TICKANIM] RunPrediction=%p FireEvents=%p UpdateClientSideAnimations=%p hook=%s\n"
+                      ,lVar3,lVar4,DAT_18040a5e8,uVar9);
+        DAT_18040a630 = iVar2 == 0;
+        if (iVar2 == 0) {
+          return true;
+        }
+        DAT_18040a5e8 = 0;
+        DAT_18040a600 = 1;
+        DAT_18040a608 = 0;
+        return (bool)DAT_18040a630;
+      }
+      pcVar10 = 
+      "[TICKANIM] AMBIGUOUS signatures (runPred=%zu fireEvents=%zu updateAnims=%zu) -- feature disabled\n"
+      ;
+      lVar3 = lVar6;
+      lVar4 = lVar7;
+      lVar5 = lVar8;
+    }
+    DAT_18040a600 = '\x01';
+    FUN_180014410(pcVar10,lVar3,lVar4,lVar5);
+    cVar1 = '\0';
+  }
+  return cVar1;
+}
+
+
+)B1800b5200",
+    "5c79943eed3d08cf9498745bce0725cd93c0c89bec5cca1a5b638100a1d034ae",
+    R"F1800b5200C(FUN_180014410
+FUN_180015f40
+FUN_1800160e0
+FUN_18001d080
+FUN_1800b5050
+FUN_1800b5170
+FUN_18020e450
+FUN_180242fc0
+FUN_180243560
+FUN_1802436b0)F1800b5200C",
+    R"F1800b5200D(DAT_18040a5e8
+DAT_18040a5f0
+DAT_18040a5f8
+DAT_18040a600
+DAT_18040a608
+DAT_18040a610
+DAT_18040a620
+DAT_18040a630)F1800b5200D",
+    R"F1800b5200T("on"
+"client.dll"
+"engine.dll"
+"OFF -- walker layout changed"
+"[TICKANIM] anim list count=%p base=%p (anim-time pin %s)\\n"
+"48 83 EC 38 48 8B 0D ? ? ? ? 48 89 74 24 48 48 89 7C 24 30 8B B1 0C 10 00 00"
+"48 83 EC 48 48 89 5C 24 50 48 8D 0D ? ? ? ? 0F 29 74 24 30 0F 29 7C 24 20 E8"
+"[TICKANIM] RunPrediction=%p FireEvents=%p UpdateClientSideAnimations=%p hook=%s\\n"
+"[TICKANIM] signature miss (runPred=%p fireEvents=%p updateAnims=%p) -- feature disabled\\n"
+"48 83 EC 38 83 3D ? ? ? ? 06 75 ? 83 3D ? ? ? ? 00 7C ? 48 8B 0D ? ? ? ? 48 8B 01 FF 50 48"
+"[TICKANIM] AMBIGUOUS signatures (runPred=%zu fireEvents=%zu updateAnims=%zu) -- feature disabled\\n")F1800b5200T",
+    R"F1800b5200F(48: if ((DAT_18040a630 == '\0') && (DAT_18040a600 == '\0')) {
+90: if ((lVar3 == 0) || ((lVar4 == 0 || (lVar5 == 0)))) {
+94: else {
+140: if (((lVar6 == 1) && (lVar7 == 1)) && (lVar8 == 1)) {
+145: if ((DAT_18040a5f8 == 0) || (pcVar10 = "on", DAT_18040a5f0 == 0)) {
+151: if (iVar2 == 0) {
+158: if (iVar2 == 0) {
+159: return true;
+164: return (bool)DAT_18040a630;
+177: return cVar1;)F1800b5200F",
+    R"F1800b5200U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5e8.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f0.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f8.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a600.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a608.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a610.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a620.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a630.)F1800b5200U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5200() noexcept {
+    return kFunction_0x1800b5200;
+}
+
+// 0x1800b5640 FUN_1800b5640
+// source: re/dump/decompile/0x1800b5640_FUN_1800b5640.c
+// size: 394 bytes; thunk: false
+// body sha256: f46dbfc1c07981600d2520c7dba7a1c3e0a04e8c3421f4d7db8fe1f51c25c7ff
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5640{
+    "0x1800b5640",
+    "FUN_1800b5640",
+    R"F1800b5640S(undefined FUN_1800b5640())F1800b5640S",
+    R"B1800b5640(// 0x1800b5640  FUN_1800b5640
+// size=394 thunk=false
+// signature: undefined FUN_1800b5640()
+// status: ok
+
+
+void FUN_1800b5640(void)
+
+{
+  double *pdVar1;
+  code *pcVar2;
+  char cVar3;
+  undefined4 uVar4;
+  longlong lVar5;
+  char *pcVar6;
+  
+  if (DAT_18040a630 != '\0') {
+    cVar3 = FUN_1800b5000();
+    if (((cVar3 != '\0') && (DAT_18040a608 != (code *)0x0)) && (DAT_1803fa668 != (longlong *)0x0)) {
+      cVar3 = (**(code **)(*DAT_1803fa668 + 0xd0))();
+      if (cVar3 != '\0') {
+        pcVar2 = *(code **)(*DAT_1803fa360 + 0x18);
+        uVar4 = (**(code **)(*DAT_1803fa668 + 0x60))();
+        lVar5 = (*pcVar2)(DAT_1803fa360,uVar4);
+        if ((lVar5 != 0) && (DAT_1803fa608 != 0)) {
+          if (DAT_18040a610 != (code *)0x0) {
+            (*DAT_18040a610)();
+          }
+          if (DAT_18040a620 != (code *)0x0) {
+            (*DAT_18040a620)();
+          }
+          lVar5 = DAT_1803fa608;
+          uVar4 = *(undefined4 *)(DAT_1803fa608 + 0x18);
+          pdVar1 = (double *)(DAT_1803fa608 + 0x28);
+          *(float *)(DAT_1803fa608 + 0x18) = (float)*pdVar1;
+          if ((DAT_18040a5f8 != 0) && (DAT_18040a5f0 != 0)) {
+            FUN_1800b50c0(*(double *)(lVar5 + 0x10) - *pdVar1);
+          }
+          DAT_18040a628 = 1;
+          (*DAT_18040a608)();
+          lVar5 = DAT_1803fa608;
+          DAT_18040a628 = 0;
+          *(undefined4 *)(DAT_1803fa608 + 0x18) = uVar4;
+          DAT_18040a62c = (float)*(double *)(lVar5 + 0x10);
+          DAT_18040a618 = DAT_18040a618 + 1;
+          if (DAT_18040a618 == 1) {
+            if ((DAT_18040a5f8 == 0) || (pcVar6 = "ON", DAT_18040a5f0 == 0)) {
+              pcVar6 = "OFF -- advance is NOT quantised";
+            }
+            FUN_180014410("[TICKANIM] tick pump live (%.4f per tick, anim-time pin %s)\n",
+                          *(undefined8 *)(lVar5 + 0x28),pcVar6);
+            return;
+          }
+        }
+      }
+    }
+  }
+  return;
+}
+
+
+)B1800b5640",
+    "f46dbfc1c07981600d2520c7dba7a1c3e0a04e8c3421f4d7db8fe1f51c25c7ff",
+    R"F1800b5640C(FUN_180014410
+FUN_1800b5000
+FUN_1800b50c0)F1800b5640C",
+    R"F1800b5640D(DAT_1803fa360
+DAT_1803fa608
+DAT_1803fa668
+DAT_18040a5f0
+DAT_18040a5f8
+DAT_18040a608
+DAT_18040a610
+DAT_18040a618
+DAT_18040a620
+DAT_18040a628
+DAT_18040a62c
+DAT_18040a630)F1800b5640D",
+    R"F1800b5640T("ON"
+"OFF -- advance is NOT quantised"
+"[TICKANIM] tick pump live (%.4f per tick, anim-time pin %s)\\n")F1800b5640T",
+    R"F1800b5640F(17: if (DAT_18040a630 != '\0') {
+19: if (((cVar3 != '\0') && (DAT_18040a608 != (code *)0x0)) && (DAT_1803fa668 != (longlong *)0x0)) {
+21: if (cVar3 != '\0') {
+25: if ((lVar5 != 0) && (DAT_1803fa608 != 0)) {
+26: if (DAT_18040a610 != (code *)0x0) {
+29: if (DAT_18040a620 != (code *)0x0) {
+36: if ((DAT_18040a5f8 != 0) && (DAT_18040a5f0 != 0)) {
+46: if (DAT_18040a618 == 1) {
+47: if ((DAT_18040a5f8 == 0) || (pcVar6 = "ON", DAT_18040a5f0 == 0)) {
+52: return;
+58: return;)F1800b5640F",
+    R"F1800b5640U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa360.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa668.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f0.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a5f8.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a608.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a610.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a618.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a620.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a628.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a62c.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a630.
+TODO: resolve the indirect call in body 19: if (((cVar3 != '\0') && (DAT_18040a608 != (code *)0x0)) && (DAT_1803fa668 != (longlong *)0x0)) {.
+TODO: resolve the indirect call in body 20: cVar3 = (**(code **)(*DAT_1803fa668 + 0xd0))();.
+TODO: resolve the indirect call in body 22: pcVar2 = *(code **)(*DAT_1803fa360 + 0x18);.
+TODO: resolve the indirect call in body 23: uVar4 = (**(code **)(*DAT_1803fa668 + 0x60))();.
+TODO: resolve the indirect call in body 24: lVar5 = (*pcVar2)(DAT_1803fa360,uVar4);.
+TODO: resolve the indirect call in body 26: if (DAT_18040a610 != (code *)0x0) {.
+TODO: resolve the indirect call in body 27: (*DAT_18040a610)();.
+TODO: resolve the indirect call in body 29: if (DAT_18040a620 != (code *)0x0) {.
+TODO: resolve the indirect call in body 30: (*DAT_18040a620)();.
+TODO: resolve the indirect call in body 40: (*DAT_18040a608)();.)F1800b5640U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5640() noexcept {
+    return kFunction_0x1800b5640;
+}
+
+// 0x1800b5800 FUN_1800b5800
+// source: re/dump/decompile/0x1800b5800_FUN_1800b5800.c
+// size: 169 bytes; thunk: false
+// body sha256: b315cc5f331b879d45297d04cf32158cd67299f1b29d2f547582cd58c376abf2
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5800{
+    "0x1800b5800",
+    "FUN_1800b5800",
+    R"F1800b5800S(undefined FUN_1800b5800())F1800b5800S",
+    R"B1800b5800(// 0x1800b5800  FUN_1800b5800
+// size=169 thunk=false
+// signature: undefined FUN_1800b5800()
+// status: ok
+
+
+undefined8 FUN_1800b5800(void)
+
+{
+  undefined8 local_48;
+  undefined8 uStack_40;
+  undefined8 local_38;
+  undefined8 local_30;
+  undefined8 local_28;
+  undefined8 uStack_20;
+  undefined8 local_18;
+  undefined8 local_10;
+  
+  if (DAT_1803ff110 != '\0') {
+    return DAT_1803fe790;
+  }
+  DAT_1803ff110 = 1;
+  local_48 = 0;
+  uStack_40 = 0;
+  local_38 = 0;
+  local_30 = 0;
+  FUN_18001d080(&local_48,"40 53 48 83 EC 30 48 8B D9 8B 89 ? ? ? ? 83 F9 FF",0x31);
+  local_28 = 0;
+  uStack_20 = 0;
+  local_18 = 0;
+  local_10 = 0;
+  FUN_18001d080(&local_28,"client.dll",10);
+  DAT_1803fe790 = FUN_180015f40(&local_28,&local_48);
+  return DAT_1803fe790;
+}
+
+
+)B1800b5800",
+    "b315cc5f331b879d45297d04cf32158cd67299f1b29d2f547582cd58c376abf2",
+    R"F1800b5800C(FUN_180015f40
+FUN_18001d080)F1800b5800C",
+    R"F1800b5800D(DAT_1803fe790
+DAT_1803ff110)F1800b5800D",
+    R"F1800b5800T("client.dll"
+"40 53 48 83 EC 30 48 8B D9 8B 89 ? ? ? ? 83 F9 FF")F1800b5800T",
+    R"F1800b5800F(19: if (DAT_1803ff110 != '\0') {
+20: return DAT_1803fe790;
+34: return DAT_1803fe790;)F1800b5800F",
+    R"F1800b5800U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fe790.
+TODO: recover the declaration, type and value for global/data reference DAT_1803ff110.)F1800b5800U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5800() noexcept {
+    return kFunction_0x1800b5800;
+}
+
+// 0x1800b58b0 FUN_1800b58b0
+// source: re/dump/decompile/0x1800b58b0_FUN_1800b58b0.c
+// size: 137 bytes; thunk: false
+// body sha256: 80c4c8ec4f9a7ff770830c453e29ea864f54c5816689be3f256116cc0dbbef99
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b58b0{
+    "0x1800b58b0",
+    "FUN_1800b58b0",
+    R"F1800b58b0S(undefined FUN_1800b58b0())F1800b58b0S",
+    R"B1800b58b0(// 0x1800b58b0  FUN_1800b58b0
+// size=137 thunk=false
+// signature: undefined FUN_1800b58b0()
+// status: ok
+
+
+longlong FUN_1800b58b0(void)
+
+{
+  longlong lVar1;
+  uint uVar2;
+  char *pcVar3;
+  
+  if (DAT_1804258e0 == '\0') {
+    DAT_1804258e0 = '\x01';
+    lVar1 = FUN_1800b5800();
+    if (lVar1 != 0) {
+      uVar2 = 0;
+      do {
+        pcVar3 = (char *)((ulonglong)uVar2 + lVar1);
+        if (((*pcVar3 == 'H') && (pcVar3[1] == -0x75)) && (pcVar3[2] == -0x75)) {
+          lVar1 = (longlong)*(int *)(pcVar3 + 3);
+          if (*(int *)(pcVar3 + 3) - 0x101U < 0xfeff) goto LAB_1800b58fa;
+          break;
+        }
+        uVar2 = uVar2 + 1;
+      } while ((int)uVar2 < 0xc0);
+    }
+    lVar1 = DAT_1803fcf10;
+LAB_1800b58fa:
+    DAT_1803fcf10 = lVar1;
+    FUN_180014410("[LBY] AnimState ptrOff=+0x%zX valid=%d (from UpdateClientSideAnimation %p)\n",
+                  DAT_1803fcf10,DAT_1803fcf10 != 0);
+  }
+  return DAT_1803fcf10;
+}
+
+
+)B1800b58b0",
+    "80c4c8ec4f9a7ff770830c453e29ea864f54c5816689be3f256116cc0dbbef99",
+    R"F1800b58b0C(FUN_180014410
+FUN_1800b5800)F1800b58b0C",
+    R"F1800b58b0D(LAB_1800b58fa
+DAT_1803fcf10
+DAT_1804258e0)F1800b58b0D",
+    R"F1800b58b0T("[LBY] AnimState ptrOff=+0x%zX valid=%d (from UpdateClientSideAnimation %p)\\n")F1800b58b0T",
+    R"F1800b58b0F(14: if (DAT_1804258e0 == '\0') {
+17: if (lVar1 != 0) {
+19: do {
+21: if (((*pcVar3 == 'H') && (pcVar3[1] == -0x75)) && (pcVar3[2] == -0x75)) {
+23: if (*(int *)(pcVar3 + 3) - 0x101U < 0xfeff) goto LAB_1800b58fa;
+24: break;
+30: LAB_1800b58fa:
+35: return DAT_1803fcf10;)F1800b58b0F",
+    R"F1800b58b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b58fa.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fcf10.
+TODO: recover the declaration, type and value for global/data reference DAT_1804258e0.)F1800b58b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b58b0() noexcept {
+    return kFunction_0x1800b58b0;
+}
+
+// 0x1800b5940 FUN_1800b5940
+// source: re/dump/decompile/0x1800b5940_FUN_1800b5940.c
+// size: 94 bytes; thunk: false
+// body sha256: fd288779a8c170797c3c9b66f7f7e366ef5ef0c16faa52b2e7aab2906f1a0a58
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5940{
+    "0x1800b5940",
+    "FUN_1800b5940",
+    R"F1800b5940S(undefined FUN_1800b5940())F1800b5940S",
+    R"B1800b5940(// 0x1800b5940  FUN_1800b5940
+// size=94 thunk=false
+// signature: undefined FUN_1800b5940()
+// status: ok
+
+
+undefined8 * FUN_1800b5940(longlong param_1,longlong param_2)
+
+{
+  void *lp;
+  BOOL BVar1;
+  undefined8 *lp_00;
+  
+  lp_00 = *(undefined8 **)(param_1 + param_2);
+  if ((lp_00 == (undefined8 *)0x0) || (BVar1 = IsBadReadPtr(lp_00,0x150), BVar1 != 0)) {
+    lp_00 = (undefined8 *)0x0;
+  }
+  else {
+    lp = (void *)*lp_00;
+    if ((lp == (void *)0x0) ||
+       ((BVar1 = IsBadReadPtr(lp,0x40), BVar1 != 0 || (*(longlong *)((longlong)lp + 8) == 0)))) {
+      lp_00 = (undefined8 *)0x0;
+    }
+  }
+  return lp_00;
+}
+
+
+)B1800b5940",
+    "fd288779a8c170797c3c9b66f7f7e366ef5ef0c16faa52b2e7aab2906f1a0a58",
+    R"F1800b5940C()F1800b5940C",
+    R"F1800b5940D()F1800b5940D",
+    R"F1800b5940T()F1800b5940T",
+    R"F1800b5940F(15: if ((lp_00 == (undefined8 *)0x0) || (BVar1 = IsBadReadPtr(lp_00,0x150), BVar1 != 0)) {
+18: else {
+20: if ((lp == (void *)0x0) ||
+25: return lp_00;)F1800b5940F",
+    R"F1800b5940U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b5940U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5940() noexcept {
+    return kFunction_0x1800b5940;
+}
+
+// 0x1800b59a0 FUN_1800b59a0
+// source: re/dump/decompile/0x1800b59a0_FUN_1800b59a0.c
+// size: 9 bytes; thunk: false
+// body sha256: be0b34a71a8112ff989688b02965e913bc0d9cb82ff245e6ab29bc8594356992
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b59a0{
+    "0x1800b59a0",
+    "FUN_1800b59a0",
+    R"F1800b59a0S(undefined FUN_1800b59a0())F1800b59a0S",
+    R"B1800b59a0(// 0x1800b59a0  FUN_1800b59a0
+// size=9 thunk=false
+// signature: undefined FUN_1800b59a0()
+// status: ok
+
+
+undefined1 FUN_1800b59a0(undefined4 *param_1,undefined4 param_2)
+
+{
+  *param_1 = param_2;
+  return 1;
+}
+
+
+)B1800b59a0",
+    "be0b34a71a8112ff989688b02965e913bc0d9cb82ff245e6ab29bc8594356992",
+    R"F1800b59a0C()F1800b59a0C",
+    R"F1800b59a0D()F1800b59a0D",
+    R"F1800b59a0T()F1800b59a0T",
+    R"F1800b59a0F(11: return 1;)F1800b59a0F",
+    R"F1800b59a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b59a0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b59a0() noexcept {
+    return kFunction_0x1800b59a0;
+}
+
+// 0x1800b59b0 FUN_1800b59b0
+// source: re/dump/decompile/0x1800b59b0_FUN_1800b59b0.c
+// size: 141 bytes; thunk: false
+// body sha256: b6060776999bfb679211b41c3c207bb51c2c595dbad59b03a00aba222cfbf3f9
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b59b0{
+    "0x1800b59b0",
+    "FUN_1800b59b0",
+    R"F1800b59b0S(undefined FUN_1800b59b0())F1800b59b0S",
+    R"B1800b59b0(// 0x1800b59b0  FUN_1800b59b0
+// size=141 thunk=false
+// signature: undefined FUN_1800b59b0()
+// status: ok
+
+
+undefined8 FUN_1800b59b0(undefined8 *param_1,undefined8 *param_2)
+
+{
+  undefined8 uVar1;
+  longlong lVar2;
+  undefined8 *puVar3;
+  undefined8 *puVar4;
+  
+  lVar2 = 2;
+  do {
+    puVar4 = param_2;
+    puVar3 = param_1;
+    uVar1 = puVar3[1];
+    *puVar4 = *puVar3;
+    puVar4[1] = uVar1;
+    uVar1 = puVar3[3];
+    puVar4[2] = puVar3[2];
+    puVar4[3] = uVar1;
+    uVar1 = puVar3[5];
+    puVar4[4] = puVar3[4];
+    puVar4[5] = uVar1;
+    uVar1 = puVar3[7];
+    puVar4[6] = puVar3[6];
+    puVar4[7] = uVar1;
+    uVar1 = puVar3[9];
+    puVar4[8] = puVar3[8];
+    puVar4[9] = uVar1;
+    uVar1 = puVar3[0xb];
+    puVar4[10] = puVar3[10];
+    puVar4[0xb] = uVar1;
+    uVar1 = puVar3[0xd];
+    puVar4[0xc] = puVar3[0xc];
+    puVar4[0xd] = uVar1;
+    uVar1 = puVar3[0xf];
+    puVar4[0xe] = puVar3[0xe];
+    puVar4[0xf] = uVar1;
+    lVar2 = lVar2 + -1;
+    param_1 = puVar3 + 0x10;
+    param_2 = puVar4 + 0x10;
+  } while (lVar2 != 0);
+  uVar1 = puVar3[0x11];
+  puVar4[0x10] = puVar3[0x10];
+  puVar4[0x11] = uVar1;
+  uVar1 = puVar3[0x13];
+  puVar4[0x12] = puVar3[0x12];
+  puVar4[0x13] = uVar1;
+  uVar1 = puVar3[0x15];
+  puVar4[0x14] = puVar3[0x14];
+  puVar4[0x15] = uVar1;
+  uVar1 = puVar3[0x17];
+  puVar4[0x16] = puVar3[0x16];
+  puVar4[0x17] = uVar1;
+  uVar1 = puVar3[0x19];
+  puVar4[0x18] = puVar3[0x18];
+  puVar4[0x19] = uVar1;
+  return 1;
+}
+
+
+)B1800b59b0",
+    "b6060776999bfb679211b41c3c207bb51c2c595dbad59b03a00aba222cfbf3f9",
+    R"F1800b59b0C()F1800b59b0C",
+    R"F1800b59b0D()F1800b59b0D",
+    R"F1800b59b0T()F1800b59b0T",
+    R"F1800b59b0F(16: do {
+62: return 1;)F1800b59b0F",
+    R"F1800b59b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b59b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b59b0() noexcept {
+    return kFunction_0x1800b59b0;
+}
+
+// 0x1800b5a40 FUN_1800b5a40
+// source: re/dump/decompile/0x1800b5a40_FUN_1800b5a40.c
+// size: 414 bytes; thunk: false
+// body sha256: 622d302fb93a7c231c2a8b81d0cd17b0f3195e057dbb67bcb81eff5e9c86640d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5a40{
+    "0x1800b5a40",
+    "FUN_1800b5a40",
+    R"F1800b5a40S(undefined FUN_1800b5a40())F1800b5a40S",
+    R"B1800b5a40(// 0x1800b5a40  FUN_1800b5a40
+// size=414 thunk=false
+// signature: undefined FUN_1800b5a40()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8 FUN_1800b5a40(longlong param_1,int param_2,undefined4 param_3,undefined4 param_4)
+
+{
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  float fVar4;
+  short sVar5;
+  longlong lVar6;
+  uint extraout_XMM0_Da;
+  undefined4 uVar7;
+  uint extraout_XMM0_Da_00;
+  uint extraout_XMM0_Da_01;
+  uint extraout_XMM0_Da_02;
+  
+  if (param_2 - 0x10U < 0x131) {
+    lVar6 = (longlong)param_2;
+    fVar1 = *(float *)(lVar6 + param_1);
+    sVar5 = _fdclass(fVar1);
+    fVar4 = DAT_180381428;
+    fVar3 = DAT_180381210;
+    if (((sVar5 < 1) && (DAT_180381428 <= fVar1)) && (fVar1 <= DAT_180381210)) {
+      fVar2 = *(float *)(lVar6 + 8 + param_1);
+      sVar5 = _fdclass(fVar2);
+      if (((sVar5 < 1) && (fVar4 <= fVar2)) && (fVar2 <= fVar3)) {
+        fVar2 = *(float *)(lVar6 + 0xc + param_1);
+        sVar5 = _fdclass(fVar2);
+        if (((sVar5 < 1) && (fVar4 <= fVar2)) && (fVar2 <= fVar3)) {
+          uVar7 = *(undefined4 *)(lVar6 + 4 + param_1);
+          sVar5 = _fdclass(uVar7);
+          if ((sVar5 < 1) &&
+             (FUN_180022110(fVar1,param_3), fVar1 = DAT_180380d30,
+             (float)(extraout_XMM0_Da & _DAT_1803817c0) <= DAT_180380d30)) {
+            uVar7 = FUN_1802d3e00(uVar7);
+            FUN_180022110(uVar7,param_4);
+            if (((float)(extraout_XMM0_Da_00 & _DAT_1803817c0) <= fVar1) &&
+               ((FUN_180022110(param_3,*(undefined4 *)(lVar6 + 8 + param_1)), fVar1 = DAT_180381098,
+                (float)(extraout_XMM0_Da_01 & _DAT_1803817c0) <= DAT_180381098 &&
+                (FUN_180022110(param_3,*(undefined4 *)(lVar6 + 0xc + param_1)),
+                (float)(extraout_XMM0_Da_02 & _DAT_1803817c0) <= fVar1)))) {
+              return 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+
+)B1800b5a40",
+    "622d302fb93a7c231c2a8b81d0cd17b0f3195e057dbb67bcb81eff5e9c86640d",
+    R"F1800b5a40C(FUN_180022110
+FUN_1802d3e00)F1800b5a40C",
+    R"F1800b5a40D(DAT_180380d30
+DAT_180381098
+DAT_180381210
+DAT_180381428)F1800b5a40D",
+    R"F1800b5a40T()F1800b5a40T",
+    R"F1800b5a40F(24: if (param_2 - 0x10U < 0x131) {
+30: if (((sVar5 < 1) && (DAT_180381428 <= fVar1)) && (fVar1 <= DAT_180381210)) {
+33: if (((sVar5 < 1) && (fVar4 <= fVar2)) && (fVar2 <= fVar3)) {
+36: if (((sVar5 < 1) && (fVar4 <= fVar2)) && (fVar2 <= fVar3)) {
+39: if ((sVar5 < 1) &&
+44: if (((float)(extraout_XMM0_Da_00 & _DAT_1803817c0) <= fVar1) &&
+49: return 1;
+56: return 0;)F1800b5a40F",
+    R"F1800b5a40U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d30.
+TODO: recover the declaration, type and value for global/data reference DAT_180381098.
+TODO: recover the declaration, type and value for global/data reference DAT_180381210.
+TODO: recover the declaration, type and value for global/data reference DAT_180381428.)F1800b5a40U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5a40() noexcept {
+    return kFunction_0x1800b5a40;
+}
+
+// 0x1800b5be0 FUN_1800b5be0
+// source: re/dump/decompile/0x1800b5be0_FUN_1800b5be0.c
+// size: 597 bytes; thunk: false
+// body sha256: 8a50ddaee3d4b34f493518306921e29abd4e8300858276a809617d174db9d7a6
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5be0{
+    "0x1800b5be0",
+    "FUN_1800b5be0",
+    R"F1800b5be0S(undefined FUN_1800b5be0())F1800b5be0S",
+    R"B1800b5be0(// 0x1800b5be0  FUN_1800b5be0
+// size=597 thunk=false
+// signature: undefined FUN_1800b5be0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1800b5be0(void *param_1,undefined4 *param_2)
+
+{
+  char cVar1;
+  short sVar2;
+  BOOL BVar3;
+  longlong lVar4;
+  int iVar5;
+  int iVar6;
+  int iVar7;
+  undefined4 uVar8;
+  undefined4 uVar9;
+  uint uVar10;
+  undefined1 auStack_1a8 [32];
+  undefined1 local_188 [336];
+  ulonglong local_38;
+  
+  local_38 = DAT_1803da4c0 ^ (ulonglong)auStack_1a8;
+  if (((((DAT_1804097a4 == '\0') && (sVar2 = _fdclass(*param_2), sVar2 < 1)) &&
+       (sVar2 = _fdclass(param_2[1]), sVar2 < 1)) &&
+      ((param_1 != (void *)0x0 && (BVar3 = IsBadReadPtr(param_1,8), BVar3 == 0)))) &&
+     ((lVar4 = FUN_1800b58b0(), lVar4 != 0 &&
+      ((lVar4 = FUN_1800b5940(param_1,lVar4), lVar4 != 0 &&
+       (cVar1 = FUN_1800b59b0(lVar4,local_188), cVar1 != '\0')))))) {
+    uVar8 = FUN_1802d3e00(param_2[1]);
+    uVar9 = FUN_1802d3e00(*param_2);
+    iVar5 = -1;
+    if (-1 < DAT_1803e7c84) {
+      cVar1 = FUN_1800b5a40(local_188,DAT_1803e7c84,uVar8,uVar9);
+      if (cVar1 != '\0') {
+        DAT_1804097a4 = 1;
+        DAT_18040979c = 0;
+        FUN_180014410("[LBY] field base +0x%X verified against live sample\n");
+        return;
+      }
+      if (-1 < DAT_1803e7c84) {
+        DAT_18040979c = DAT_18040979c + 1;
+        if (DAT_18040979c < 0x28) {
+          return;
+        }
+        FUN_180014410("[LBY] known field base +0x%X failed %d live samples - rescanning\n");
+        DAT_1803e7c84 = -1;
+      }
+    }
+    iVar7 = 0x10;
+    iVar6 = 0;
+    do {
+      cVar1 = FUN_1800b5a40(local_188,iVar7,uVar8,uVar9);
+      if ((cVar1 != '\0') && (iVar6 = iVar6 + 1, iVar5 < 0)) {
+        iVar5 = iVar7;
+      }
+      iVar7 = iVar7 + 4;
+    } while (iVar7 < 0x141);
+    if ((-1 < iVar5) && (iVar6 == 1)) {
+      if (iVar5 == DAT_1803e7c80) {
+        uVar10 = FUN_180022110(uVar8,DAT_180409798);
+        if ((DAT_180380f00 <= (float)(uVar10 & _DAT_1803817c0)) &&
+           (DAT_1804097a0 = DAT_1804097a0 + 1, DAT_180409798 = uVar8, 2 < DAT_1804097a0)) {
+          DAT_1804097a4 = '\x01';
+          DAT_18040979c = 0;
+          DAT_1803e7c84 = iVar5;
+          FUN_180014410("[LBY] field base +0x%X found by scan (eyeYaw/eyePitch/goalFeet/curFeet)\n",
+                        iVar5);
+        }
+      }
+      else {
+        DAT_1804097a0 = 1;
+        DAT_1803e7c80 = iVar5;
+        DAT_180409798 = uVar8;
+      }
+    }
+  }
+  return;
+}
+
+
+)B1800b5be0",
+    "8a50ddaee3d4b34f493518306921e29abd4e8300858276a809617d174db9d7a6",
+    R"F1800b5be0C(FUN_180014410
+FUN_180022110
+FUN_1800b58b0
+FUN_1800b5940
+FUN_1800b59b0
+FUN_1800b5a40
+FUN_1802d3e00)F1800b5be0C",
+    R"F1800b5be0D(DAT_180380f00
+DAT_1803da4c0
+DAT_1803e7c80
+DAT_1803e7c84
+DAT_180409798
+DAT_18040979c
+DAT_1804097a0
+DAT_1804097a4)F1800b5be0D",
+    R"F1800b5be0T("[LBY] field base +0x%X verified against live sample\\n"
+"[LBY] known field base +0x%X failed %d live samples - rescanning\\n"
+"[LBY] field base +0x%X found by scan (eyeYaw/eyePitch/goalFeet/curFeet)\\n")F1800b5be0T",
+    R"F1800b5be0F(28: if (((((DAT_1804097a4 == '\0') && (sVar2 = _fdclass(*param_2), sVar2 < 1)) &&
+37: if (-1 < DAT_1803e7c84) {
+39: if (cVar1 != '\0') {
+43: return;
+45: if (-1 < DAT_1803e7c84) {
+47: if (DAT_18040979c < 0x28) {
+48: return;
+56: do {
+58: if ((cVar1 != '\0') && (iVar6 = iVar6 + 1, iVar5 < 0)) {
+63: if ((-1 < iVar5) && (iVar6 == 1)) {
+64: if (iVar5 == DAT_1803e7c80) {
+66: if ((DAT_180380f00 <= (float)(uVar10 & _DAT_1803817c0)) &&
+75: else {
+82: return;)F1800b5be0F",
+    R"F1800b5be0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380f00.
+TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7c80.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7c84.
+TODO: recover the declaration, type and value for global/data reference DAT_180409798.
+TODO: recover the declaration, type and value for global/data reference DAT_18040979c.
+TODO: recover the declaration, type and value for global/data reference DAT_1804097a0.
+TODO: recover the declaration, type and value for global/data reference DAT_1804097a4.)F1800b5be0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5be0() noexcept {
+    return kFunction_0x1800b5be0;
+}
+
+// 0x1800b5e40 FUN_1800b5e40
+// source: re/dump/decompile/0x1800b5e40_FUN_1800b5e40.c
+// size: 226 bytes; thunk: false
+// body sha256: 7581a044fad10de475c44aae714b28ec118b8c91715fec0fe95321303554e2bf
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5e40{
+    "0x1800b5e40",
+    "FUN_1800b5e40",
+    R"F1800b5e40S(undefined FUN_1800b5e40())F1800b5e40S",
+    R"B1800b5e40(// 0x1800b5e40  FUN_1800b5e40
+// size=226 thunk=false
+// signature: undefined FUN_1800b5e40()
+// status: ok
+
+
+ulonglong FUN_1800b5e40(void *param_1,int param_2,float *param_3)
+
+{
+  BOOL BVar1;
+  uint uVar2;
+  ulonglong in_RAX;
+  undefined4 extraout_var;
+  longlong lVar3;
+  float local_res20 [2];
+  
+  if ((-1 < DAT_1803e7c84) && (param_1 != (void *)0x0)) {
+    BVar1 = IsBadReadPtr(param_1,8);
+    in_RAX = CONCAT44(extraout_var,BVar1);
+    if (BVar1 == 0) {
+      lVar3 = FUN_1800b58b0();
+      in_RAX = 0;
+      if (lVar3 != 0) {
+        lVar3 = FUN_1800b5940(param_1,lVar3);
+        in_RAX = 0;
+        if (lVar3 != 0) {
+          local_res20[0] = 0.0;
+          in_RAX = FUN_1800b2030((longlong)DAT_1803e7c84 + lVar3 + param_2 * 4,local_res20);
+          if ((char)in_RAX != '\0') {
+            uVar2 = (uint)local_res20[0] & 0x7f800000;
+            in_RAX = (ulonglong)CONCAT31((int3)(uVar2 >> 8),uVar2 != 0x7f800000);
+            if (((uVar2 != 0x7f800000) && (DAT_180381428 <= local_res20[0])) &&
+               (local_res20[0] <= DAT_180381210)) {
+              *param_3 = local_res20[0];
+              return in_RAX;
+            }
+          }
+        }
+      }
+    }
+  }
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800b5e40",
+    "7581a044fad10de475c44aae714b28ec118b8c91715fec0fe95321303554e2bf",
+    R"F1800b5e40C(FUN_1800b2030
+FUN_1800b58b0
+FUN_1800b5940)F1800b5e40C",
+    R"F1800b5e40D(DAT_180381210
+DAT_180381428
+DAT_1803e7c84)F1800b5e40D",
+    R"F1800b5e40T()F1800b5e40T",
+    R"F1800b5e40F(17: if ((-1 < DAT_1803e7c84) && (param_1 != (void *)0x0)) {
+20: if (BVar1 == 0) {
+23: if (lVar3 != 0) {
+26: if (lVar3 != 0) {
+29: if ((char)in_RAX != '\0') {
+32: if (((uVar2 != 0x7f800000) && (DAT_180381428 <= local_res20[0])) &&
+35: return in_RAX;
+42: return in_RAX & 0xffffffffffffff00;)F1800b5e40F",
+    R"F1800b5e40U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180381210.
+TODO: recover the declaration, type and value for global/data reference DAT_180381428.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7c84.)F1800b5e40U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5e40() noexcept {
+    return kFunction_0x1800b5e40;
+}
+
+// 0x1800b5f30 FUN_1800b5f30
+// source: re/dump/decompile/0x1800b5f30_FUN_1800b5f30.c
+// size: 629 bytes; thunk: false
+// body sha256: 1a15327be80b1d9e1c83906f8cebbc85e37f83e479a30c756c4161410203b04d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b5f30{
+    "0x1800b5f30",
+    "FUN_1800b5f30",
+    R"F1800b5f30S(undefined FUN_1800b5f30())F1800b5f30S",
+    R"B1800b5f30(// 0x1800b5f30  FUN_1800b5f30
+// size=629 thunk=false
+// signature: undefined FUN_1800b5f30()
+// status: ok
+
+
+undefined8 FUN_1800b5f30(void *param_1,float *param_2)
+
+{
+  float fVar1;
+  float fVar2;
+  char cVar3;
+  short sVar4;
+  BOOL BVar5;
+  int iVar6;
+  longlong lVar7;
+  undefined8 uVar8;
+  undefined8 uVar9;
+  float fVar10;
+  undefined8 *local_res18;
+  undefined8 *local_res20;
+  undefined8 local_a8;
+  undefined8 uStack_a0;
+  undefined8 local_98;
+  undefined8 local_90;
+  undefined8 local_88;
+  undefined8 uStack_80;
+  undefined8 local_78;
+  undefined8 local_70;
+  undefined8 local_68 [10];
+  
+  if (param_1 != (void *)0x0) {
+    if ((((-1 < DAT_1803e7c84) && (BVar5 = IsBadReadPtr(param_1,8), BVar5 == 0)) &&
+        (lVar7 = FUN_1800b58b0(), lVar7 != 0)) && (lVar7 = FUN_1800b5940(param_1,lVar7), lVar7 != 0)
+       ) {
+      local_res18 = (undefined8 *)((ulonglong)local_res18 & 0xffffffff00000000);
+      cVar3 = FUN_1800b2030((longlong)DAT_1803e7c84 + 0xc + lVar7,&local_res18);
+      if (cVar3 != '\0') {
+        fVar10 = local_res18._0_4_;
+        sVar4 = _fdclass(local_res18._0_4_);
+        if (((sVar4 < 1) && (DAT_180381428 <= fVar10)) && (fVar10 <= DAT_180381210))
+        goto LAB_1800b5ff6;
+      }
+    }
+    fVar2 = DAT_180381428;
+    fVar1 = DAT_180381210;
+    if (DAT_1803fe9d0 == '\0') {
+      DAT_1803fe9d0 = '\x01';
+      local_res18 = &local_a8;
+      local_a8 = 0;
+      uStack_a0 = 0;
+      local_98 = 0;
+      local_90 = 0;
+      FUN_18001d080(&local_a8,"DT_BaseEntity",0xd);
+      local_res18 = &local_a8;
+      local_res20 = local_68;
+      uVar8 = FUN_18016d4c0(local_68,&local_a8);
+      uVar8 = FUN_180018ef0(&DAT_1803fac80,uVar8);
+      FUN_18020e450(&local_a8);
+      local_res18 = &local_88;
+      local_88 = 0;
+      uStack_80 = 0;
+      local_78 = 0;
+      local_70 = 0;
+      FUN_18001d080(&local_88,"m_angRotation",0xd);
+      local_res20 = &local_88;
+      local_res18 = local_68;
+      uVar9 = FUN_18016d4c0(local_68,&local_88);
+      iVar6 = FUN_180018c10(uVar8,uVar9);
+      FUN_18020e450(&local_88);
+      DAT_180425410 = (longlong)iVar6;
+    }
+    if (DAT_180425410 != 0) {
+      local_res18 = (undefined8 *)((ulonglong)local_res18 & 0xffffffff00000000);
+      cVar3 = FUN_1800b2030((longlong)param_1 + DAT_180425410 + 4,&local_res18);
+      if (cVar3 != '\0') {
+        fVar10 = local_res18._0_4_;
+        sVar4 = _fdclass(local_res18._0_4_);
+        if (((sVar4 < 1) && (fVar2 <= fVar10)) && (fVar10 <= fVar1)) {
+LAB_1800b5ff6:
+          *param_2 = fVar10;
+          return 1;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+
+)B1800b5f30",
+    "1a15327be80b1d9e1c83906f8cebbc85e37f83e479a30c756c4161410203b04d",
+    R"F1800b5f30C(FUN_180018c10
+FUN_180018ef0
+FUN_18001d080
+FUN_1800b2030
+FUN_1800b58b0
+FUN_1800b5940
+FUN_18016d4c0
+FUN_18020e450)F1800b5f30C",
+    R"F1800b5f30D(LAB_1800b5ff6
+DAT_180381210
+DAT_180381428
+DAT_1803e7c84
+DAT_1803fac80
+DAT_1803fe9d0
+DAT_180425410)F1800b5f30D",
+    R"F1800b5f30T("DT_BaseEntity"
+"m_angRotation")F1800b5f30T",
+    R"F1800b5f30F(32: if (param_1 != (void *)0x0) {
+33: if ((((-1 < DAT_1803e7c84) && (BVar5 = IsBadReadPtr(param_1,8), BVar5 == 0)) &&
+38: if (cVar3 != '\0') {
+41: if (((sVar4 < 1) && (DAT_180381428 <= fVar10)) && (fVar10 <= DAT_180381210))
+42: goto LAB_1800b5ff6;
+47: if (DAT_1803fe9d0 == '\0') {
+73: if (DAT_180425410 != 0) {
+76: if (cVar3 != '\0') {
+79: if (((sVar4 < 1) && (fVar2 <= fVar10)) && (fVar10 <= fVar1)) {
+80: LAB_1800b5ff6:
+82: return 1;
+87: return 0;)F1800b5f30F",
+    R"F1800b5f30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b5ff6.
+TODO: recover the declaration, type and value for global/data reference DAT_180381210.
+TODO: recover the declaration, type and value for global/data reference DAT_180381428.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7c84.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fac80.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fe9d0.
+TODO: recover the declaration, type and value for global/data reference DAT_180425410.)F1800b5f30U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b5f30() noexcept {
+    return kFunction_0x1800b5f30;
+}
+
+// 0x1800b61b0 FUN_1800b61b0
+// source: re/dump/decompile/0x1800b61b0_FUN_1800b61b0.c
+// size: 222 bytes; thunk: false
+// body sha256: 75e794fa654d2752b2ad94e08609737504d84cf09ea4c2fae860c55e1dcc20a4
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b61b0{
+    "0x1800b61b0",
+    "FUN_1800b61b0",
+    R"F1800b61b0S(undefined FUN_1800b61b0())F1800b61b0S",
+    R"B1800b61b0(// 0x1800b61b0  FUN_1800b61b0
+// size=222 thunk=false
+// signature: undefined FUN_1800b61b0()
+// status: ok
+
+
+undefined1 FUN_1800b61b0(void *param_1,float *param_2)
+
+{
+  float fVar1;
+  undefined1 extraout_AL;
+  undefined1 extraout_AL_00;
+  char cVar2;
+  undefined1 uVar3;
+  undefined1 extraout_AH;
+  undefined1 extraout_AH_00;
+  char extraout_AH_01;
+  BOOL BVar4;
+  undefined2 extraout_var;
+  undefined2 extraout_var_00;
+  undefined4 extraout_var_01;
+  undefined4 extraout_var_02;
+  float local_res18 [4];
+  
+  if ((-1 < DAT_1803e7c84) && (param_1 != (void *)0x0)) {
+    BVar4 = IsBadReadPtr(param_1,8);
+    if (BVar4 == 0) {
+      FUN_1800b58b0();
+      if ((CONCAT44(extraout_var_01,CONCAT22(extraout_var,CONCAT11(extraout_AH,extraout_AL))) &
+          CONCAT44(extraout_var_01,CONCAT22(extraout_var,CONCAT11(extraout_AH,extraout_AL)))) != 0)
+      {
+        FUN_1800b5940(param_1,CONCAT44(extraout_var_01,
+                                       CONCAT22(extraout_var,CONCAT11(extraout_AH,extraout_AL))));
+        if ((CONCAT44(extraout_var_02,
+                      CONCAT22(extraout_var_00,CONCAT11(extraout_AH_00,extraout_AL_00))) &
+            CONCAT44(extraout_var_02,
+                     CONCAT22(extraout_var_00,CONCAT11(extraout_AH_00,extraout_AL_00)))) != 0) {
+          local_res18[0] = 0.0;
+          cVar2 = FUN_1800b2030((longlong)DAT_1803e7c84 + 8 +
+                                CONCAT44(extraout_var_02,
+                                         CONCAT22(extraout_var_00,
+                                                  CONCAT11(extraout_AH_00,extraout_AL_00))),
+                                local_res18);
+          fVar1 = local_res18[0];
+          if (cVar2 != '\0') {
+            uVar3 = _fdclass(local_res18[0]);
+            if (((CONCAT11(extraout_AH_01,uVar3) == 0 || extraout_AH_01 < '\0') &&
+                (DAT_180381428 <= fVar1)) && (fVar1 <= DAT_180381210)) {
+              *param_2 = fVar1;
+              return 1;
+            }
+            return 0;
+          }
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+
+)B1800b61b0",
+    "75e794fa654d2752b2ad94e08609737504d84cf09ea4c2fae860c55e1dcc20a4",
+    R"F1800b61b0C(FUN_1800b2030
+FUN_1800b58b0
+FUN_1800b5940)F1800b61b0C",
+    R"F1800b61b0D(DAT_180381210
+DAT_180381428
+DAT_1803e7c84)F1800b61b0D",
+    R"F1800b61b0T()F1800b61b0T",
+    R"F1800b61b0F(25: if ((-1 < DAT_1803e7c84) && (param_1 != (void *)0x0)) {
+27: if (BVar4 == 0) {
+29: if ((CONCAT44(extraout_var_01,CONCAT22(extraout_var,CONCAT11(extraout_AH,extraout_AL))) &
+34: if ((CONCAT44(extraout_var_02,
+45: if (cVar2 != '\0') {
+47: if (((CONCAT11(extraout_AH_01,uVar3) == 0 || extraout_AH_01 < '\0') &&
+50: return 1;
+52: return 0;
+58: return 0;)F1800b61b0F",
+    R"F1800b61b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180381210.
+TODO: recover the declaration, type and value for global/data reference DAT_180381428.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7c84.)F1800b61b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b61b0() noexcept {
+    return kFunction_0x1800b61b0;
+}
+
+// 0x1800b6290 FUN_1800b6290
+// source: re/dump/decompile/0x1800b6290_FUN_1800b6290.c
+// size: 218 bytes; thunk: false
+// body sha256: bdbaaee9b26c37f505ebd66681468bea8caa24b82eb3030591ca9f18c028f01f
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6290{
+    "0x1800b6290",
+    "FUN_1800b6290",
+    R"F1800b6290S(undefined FUN_1800b6290())F1800b6290S",
+    R"B1800b6290(// 0x1800b6290  FUN_1800b6290
+// size=218 thunk=false
+// signature: undefined FUN_1800b6290()
+// status: ok
+
+
+undefined1 FUN_1800b6290(void *param_1,float *param_2)
+
+{
+  float fVar1;
+  undefined1 extraout_AL;
+  undefined1 extraout_AL_00;
+  char cVar2;
+  undefined1 uVar3;
+  undefined1 extraout_AH;
+  undefined1 extraout_AH_00;
+  char extraout_AH_01;
+  BOOL BVar4;
+  undefined2 extraout_var;
+  undefined2 extraout_var_00;
+  undefined4 extraout_var_01;
+  undefined4 extraout_var_02;
+  float local_res18 [4];
+  
+  if ((-1 < DAT_1803e7c84) && (param_1 != (void *)0x0)) {
+    BVar4 = IsBadReadPtr(param_1,8);
+    if (BVar4 == 0) {
+      FUN_1800b58b0();
+      if ((CONCAT44(extraout_var_01,CONCAT22(extraout_var,CONCAT11(extraout_AH,extraout_AL))) &
+          CONCAT44(extraout_var_01,CONCAT22(extraout_var,CONCAT11(extraout_AH,extraout_AL)))) != 0)
+      {
+        FUN_1800b5940(param_1,CONCAT44(extraout_var_01,
+                                       CONCAT22(extraout_var,CONCAT11(extraout_AH,extraout_AL))));
+        if ((CONCAT44(extraout_var_02,
+                      CONCAT22(extraout_var_00,CONCAT11(extraout_AH_00,extraout_AL_00))) &
+            CONCAT44(extraout_var_02,
+                     CONCAT22(extraout_var_00,CONCAT11(extraout_AH_00,extraout_AL_00)))) != 0) {
+          local_res18[0] = 0.0;
+          cVar2 = FUN_1800b2030((longlong)DAT_1803e7c84 +
+                                CONCAT44(extraout_var_02,
+                                         CONCAT22(extraout_var_00,
+                                                  CONCAT11(extraout_AH_00,extraout_AL_00))),
+                                local_res18);
+          fVar1 = local_res18[0];
+          if (cVar2 != '\0') {
+            uVar3 = _fdclass(local_res18[0]);
+            if (((CONCAT11(extraout_AH_01,uVar3) == 0 || extraout_AH_01 < '\0') &&
+                (DAT_180381428 <= fVar1)) && (fVar1 <= DAT_180381210)) {
+              *param_2 = fVar1;
+              return 1;
+            }
+            return 0;
+          }
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+
+)B1800b6290",
+    "bdbaaee9b26c37f505ebd66681468bea8caa24b82eb3030591ca9f18c028f01f",
+    R"F1800b6290C(FUN_1800b2030
+FUN_1800b58b0
+FUN_1800b5940)F1800b6290C",
+    R"F1800b6290D(DAT_180381210
+DAT_180381428
+DAT_1803e7c84)F1800b6290D",
+    R"F1800b6290T()F1800b6290T",
+    R"F1800b6290F(25: if ((-1 < DAT_1803e7c84) && (param_1 != (void *)0x0)) {
+27: if (BVar4 == 0) {
+29: if ((CONCAT44(extraout_var_01,CONCAT22(extraout_var,CONCAT11(extraout_AH,extraout_AL))) &
+34: if ((CONCAT44(extraout_var_02,
+45: if (cVar2 != '\0') {
+47: if (((CONCAT11(extraout_AH_01,uVar3) == 0 || extraout_AH_01 < '\0') &&
+50: return 1;
+52: return 0;
+58: return 0;)F1800b6290F",
+    R"F1800b6290U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180381210.
+TODO: recover the declaration, type and value for global/data reference DAT_180381428.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7c84.)F1800b6290U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6290() noexcept {
+    return kFunction_0x1800b6290;
+}
+
+// 0x1800b6370 FUN_1800b6370
+// source: re/dump/decompile/0x1800b6370_FUN_1800b6370.c
+// size: 184 bytes; thunk: false
+// body sha256: 4d92cdb901d7e0d2c6b5b41a70462e2a7f4deb48b2b8d50e7080ca28a68f7f76
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6370{
+    "0x1800b6370",
+    "FUN_1800b6370",
+    R"F1800b6370S(undefined FUN_1800b6370())F1800b6370S",
+    R"B1800b6370(// 0x1800b6370  FUN_1800b6370
+// size=184 thunk=false
+// signature: undefined FUN_1800b6370()
+// status: ok
+
+
+ulonglong FUN_1800b6370(void *param_1,int param_2,float param_3)
+
+{
+  BOOL BVar1;
+  ulonglong in_RAX;
+  undefined4 extraout_var;
+  longlong lVar2;
+  ulonglong uVar3;
+  
+  if (-1 < DAT_1803e7c84) {
+    in_RAX = _fdclass(param_3);
+    if (((((short)in_RAX < 1) && (DAT_180381428 <= param_3)) && (param_3 <= DAT_180381210)) &&
+       (param_1 != (void *)0x0)) {
+      BVar1 = IsBadReadPtr(param_1,8);
+      in_RAX = CONCAT44(extraout_var,BVar1);
+      if (BVar1 == 0) {
+        lVar2 = FUN_1800b58b0();
+        in_RAX = 0;
+        if (lVar2 != 0) {
+          lVar2 = FUN_1800b5940(param_1,lVar2);
+          in_RAX = 0;
+          if (lVar2 != 0) {
+            uVar3 = FUN_1800b59a0((longlong)DAT_1803e7c84 + lVar2 + param_2 * 4,param_3);
+            return uVar3;
+          }
+        }
+      }
+    }
+  }
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800b6370",
+    "4d92cdb901d7e0d2c6b5b41a70462e2a7f4deb48b2b8d50e7080ca28a68f7f76",
+    R"F1800b6370C(FUN_1800b58b0
+FUN_1800b5940
+FUN_1800b59a0)F1800b6370C",
+    R"F1800b6370D(DAT_180381210
+DAT_180381428
+DAT_1803e7c84)F1800b6370D",
+    R"F1800b6370T()F1800b6370T",
+    R"F1800b6370F(16: if (-1 < DAT_1803e7c84) {
+18: if (((((short)in_RAX < 1) && (DAT_180381428 <= param_3)) && (param_3 <= DAT_180381210)) &&
+22: if (BVar1 == 0) {
+25: if (lVar2 != 0) {
+28: if (lVar2 != 0) {
+30: return uVar3;
+36: return in_RAX & 0xffffffffffffff00;)F1800b6370F",
+    R"F1800b6370U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180381210.
+TODO: recover the declaration, type and value for global/data reference DAT_180381428.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e7c84.)F1800b6370U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6370() noexcept {
+    return kFunction_0x1800b6370;
+}
+
+// 0x1800b6430 FUN_1800b6430
+// source: re/dump/decompile/0x1800b6430_FUN_1800b6430.c
+// size: 114 bytes; thunk: false
+// body sha256: 4c03a6c875d4fdd8a5b492c738e0e142b63aaf519da01b10eb15899494901d8d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6430{
+    "0x1800b6430",
+    "FUN_1800b6430",
+    R"F1800b6430S(undefined FUN_1800b6430())F1800b6430S",
+    R"B1800b6430(// 0x1800b6430  FUN_1800b6430
+// size=114 thunk=false
+// signature: undefined FUN_1800b6430()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+
+double FUN_1800b6430(void)
+
+{
+  double dVar1;
+  undefined1 auStack_38 [32];
+  LARGE_INTEGER local_18;
+  ulonglong local_10;
+  
+  local_10 = DAT_1803da4c0 ^ (ulonglong)auStack_38;
+  if (DAT_1803feb60 == 0) {
+    QueryPerformanceFrequency((LARGE_INTEGER *)&DAT_1803feb60);
+  }
+  local_18.QuadPart = 0;
+  QueryPerformanceCounter(&local_18);
+  dVar1 = 0.0;
+  if (0 < DAT_1803feb60) {
+    dVar1 = (double)local_18.QuadPart / (double)DAT_1803feb60;
+  }
+  return dVar1;
+}
+
+
+)B1800b6430",
+    "4c03a6c875d4fdd8a5b492c738e0e142b63aaf519da01b10eb15899494901d8d",
+    R"F1800b6430C()F1800b6430C",
+    R"F1800b6430D(DAT_1803da4c0
+DAT_1803feb60)F1800b6430D",
+    R"F1800b6430T()F1800b6430T",
+    R"F1800b6430F(18: if (DAT_1803feb60 == 0) {
+24: if (0 < DAT_1803feb60) {
+27: return dVar1;)F1800b6430F",
+    R"F1800b6430U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803feb60.)F1800b6430U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6430() noexcept {
+    return kFunction_0x1800b6430;
+}
+
+// 0x1800b64b0 FUN_1800b64b0
+// source: re/dump/decompile/0x1800b64b0_FUN_1800b64b0.c
+// size: 268 bytes; thunk: false
+// body sha256: d19132a0080731238a4d19884608fedca10f40a5778e2b527796f108ade042e1
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b64b0{
+    "0x1800b64b0",
+    "FUN_1800b64b0",
+    R"F1800b64b0S(undefined FUN_1800b64b0())F1800b64b0S",
+    R"B1800b64b0(// 0x1800b64b0  FUN_1800b64b0
+// size=268 thunk=false
+// signature: undefined FUN_1800b64b0()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1800b64b0(void)
+
+{
+  undefined8 uVar1;
+  undefined8 uVar2;
+  undefined8 uVar3;
+  undefined8 uVar4;
+  undefined8 *puVar5;
+  longlong lVar6;
+  longlong lVar7;
+  
+  memset(&DAT_1803fb250,0,0x1800);
+  uVar2 = _UNK_180381818;
+  uVar1 = _DAT_180381810;
+  lVar6 = 2;
+  DAT_1803fb244 = 0;
+  DAT_1803fb230 = 0;
+  lVar7 = 2;
+  puVar5 = (undefined8 *)&DAT_1803fca50;
+  DAT_1803db410 = 0xffffffff;
+  DAT_1803db420 = 0xffffffff;
+  DAT_1803db41c = 0xffffffff;
+  DAT_1803db418 = 0xffffffff;
+  do {
+    *puVar5 = uVar1;
+    puVar5[1] = uVar2;
+    puVar5[2] = uVar1;
+    puVar5[3] = uVar2;
+    puVar5[4] = uVar1;
+    puVar5[5] = uVar2;
+    puVar5[6] = uVar1;
+    puVar5[7] = uVar2;
+    puVar5[8] = uVar1;
+    puVar5[9] = uVar2;
+    puVar5[10] = uVar1;
+    puVar5[0xb] = uVar2;
+    puVar5[0xc] = uVar1;
+    puVar5[0xd] = uVar2;
+    puVar5[0xe] = uVar1;
+    puVar5[0xf] = uVar2;
+    uVar4 = _UNK_180381838;
+    uVar3 = _DAT_180381830;
+    puVar5 = puVar5 + 0x10;
+    lVar7 = lVar7 + -1;
+  } while (lVar7 != 0);
+  puVar5 = (undefined8 *)&DAT_1803fb130;
+  do {
+    *puVar5 = uVar3;
+    puVar5[1] = uVar4;
+    puVar5[2] = uVar3;
+    puVar5[3] = uVar4;
+    puVar5[4] = uVar3;
+    puVar5[5] = uVar4;
+    puVar5[6] = uVar3;
+    puVar5[7] = uVar4;
+    puVar5[8] = uVar3;
+    puVar5[9] = uVar4;
+    puVar5[10] = uVar3;
+    puVar5[0xb] = uVar4;
+    puVar5[0xc] = uVar3;
+    puVar5[0xd] = uVar4;
+    puVar5[0xe] = uVar3;
+    puVar5[0xf] = uVar4;
+    puVar5 = puVar5 + 0x10;
+    lVar6 = lVar6 + -1;
+  } while (lVar6 != 0);
+  DAT_1803db414 = 0xffffffff;
+  DAT_1803fb248 = 0;
+  DAT_1803fb240 = 0;
+  DAT_1803fb238 = 0;
+  DAT_1803facfb = 0;
+  return;
+}
+
+
+)B1800b64b0",
+    "d19132a0080731238a4d19884608fedca10f40a5778e2b527796f108ade042e1",
+    R"F1800b64b0C()F1800b64b0C",
+    R"F1800b64b0D(DAT_1803db410
+DAT_1803db414
+DAT_1803db418
+DAT_1803db41c
+DAT_1803db420
+DAT_1803facfb
+DAT_1803fb130
+DAT_1803fb230
+DAT_1803fb238
+DAT_1803fb240
+DAT_1803fb244
+DAT_1803fb248
+DAT_1803fb250
+DAT_1803fca50)F1800b64b0D",
+    R"F1800b64b0T()F1800b64b0T",
+    R"F1800b64b0F(32: do {
+55: do {
+80: return;)F1800b64b0F",
+    R"F1800b64b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db410.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db414.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db418.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db41c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db420.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facfb.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb130.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb230.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb238.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb240.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb244.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb248.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb250.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca50.)F1800b64b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b64b0() noexcept {
+    return kFunction_0x1800b64b0;
+}
+
+// 0x1800b65c0 FUN_1800b65c0
+// source: re/dump/decompile/0x1800b65c0_FUN_1800b65c0.c
+// size: 136 bytes; thunk: false
+// body sha256: c64c1f4b9a6c3c5ddb33153aeef8a3e55d782a70257b37f07643cae69b3818ae
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b65c0{
+    "0x1800b65c0",
+    "FUN_1800b65c0",
+    R"F1800b65c0S(undefined FUN_1800b65c0())F1800b65c0S",
+    R"B1800b65c0(// 0x1800b65c0  FUN_1800b65c0
+// size=136 thunk=false
+// signature: undefined FUN_1800b65c0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+
+void FUN_1800b65c0(float param_1)
+
+{
+  float *pfVar1;
+  float *pfVar2;
+  float local_28;
+  float local_24;
+  float local_20 [8];
+  
+  local_20[0] = param_1;
+  if ((DAT_1803fb240 <= param_1) || (param_1 < DAT_1803fb240 * DAT_180380ac0)) {
+    local_24 = 1.0;
+    local_28 = 0.0;
+    pfVar2 = &local_28;
+    if (0.0 <= param_1) {
+      pfVar2 = local_20;
+    }
+    pfVar1 = &local_24;
+    if (param_1 <= DAT_180380bb0) {
+      pfVar1 = pfVar2;
+    }
+    DAT_1803fb240 = *pfVar1;
+  }
+  return;
+}
+
+
+)B1800b65c0",
+    "c64c1f4b9a6c3c5ddb33153aeef8a3e55d782a70257b37f07643cae69b3818ae",
+    R"F1800b65c0C()F1800b65c0C",
+    R"F1800b65c0D(DAT_180380ac0
+DAT_180380bb0
+DAT_1803fb240)F1800b65c0D",
+    R"F1800b65c0T()F1800b65c0T",
+    R"F1800b65c0F(19: if ((DAT_1803fb240 <= param_1) || (param_1 < DAT_1803fb240 * DAT_180380ac0)) {
+23: if (0.0 <= param_1) {
+27: if (param_1 <= DAT_180380bb0) {
+32: return;)F1800b65c0F",
+    R"F1800b65c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ac0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb240.)F1800b65c0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b65c0() noexcept {
+    return kFunction_0x1800b65c0;
+}
+
+// 0x1800b6650 FUN_1800b6650
+// source: re/dump/decompile/0x1800b6650_FUN_1800b6650.c
+// size: 1271 bytes; thunk: false
+// body sha256: 4462834bc6b52b5aa4a29d97662ac55b25db9ab240a68ddcc5606122b9d6ede4
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6650{
+    "0x1800b6650",
+    "FUN_1800b6650",
+    R"F1800b6650S(undefined FUN_1800b6650())F1800b6650S",
+    R"B1800b6650(// 0x1800b6650  FUN_1800b6650
+// size=1271 thunk=false
+// signature: undefined FUN_1800b6650()
+// status: ok
+
+
+void FUN_1800b6650(char param_1)
+
+{
+  float *pfVar1;
+  float *pfVar2;
+  longlong lVar3;
+  int iVar4;
+  double dVar5;
+  float local_res10 [6];
+  float local_28 [10];
+  
+  iVar4 = 0;
+  lVar3 = 0;
+  dVar5 = 0.0;
+  local_28[1] = 0.0;
+  do {
+    if (0.0 <= (float)(&DAT_1803fca50)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb130)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb130)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca50)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca54)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb134)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb134)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca54)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca58)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb138)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb138)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca58)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca5c)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb13c)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb13c)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca5c)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca60)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb140)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb140)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca60)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca64)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb144)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb144)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca64)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca68)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb148)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb148)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca68)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca6c)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb14c)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb14c)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca6c)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca70)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb150)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb150)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca70)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca74)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb154)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb154)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca74)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca78)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb158)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb158)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca78)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca7c)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb15c)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb15c)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca7c)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca80)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb160)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb160)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca80)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca84)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb164)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb164)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca84)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca88)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb168)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb168)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca88)[lVar3];
+      }
+    }
+    if (0.0 <= (float)(&DAT_1803fca8c)[lVar3]) {
+      if ((-1 < (int)(&DAT_1803fb16c)[lVar3]) &&
+         ((DAT_1803db414 < 0 || (DAT_1803db414 + -0x40 < (int)(&DAT_1803fb16c)[lVar3])))) {
+        iVar4 = iVar4 + 1;
+        local_28[1] = local_28[1] + (float)(&DAT_1803fca8c)[lVar3];
+      }
+    }
+    lVar3 = lVar3 + 0x10;
+  } while (lVar3 != 0x40);
+  if (iVar4 == 0) {
+    if (DAT_1803fa608 == 0) {
+      dVar5 = 0.0;
+    }
+    else {
+      dVar5 = *(double *)(DAT_1803fa608 + 0x10);
+    }
+    if (((dVar5 - DAT_1803fb238 < 0.0) || (DAT_180380cb0 <= dVar5 - DAT_1803fb238)) &&
+       (0.0 < DAT_1803fb248)) {
+      if (DAT_18038098c < DAT_1803fb248) {
+        DAT_1803fb248 = DAT_1803fb248 - DAT_18038098c;
+        FUN_1800b65c0();
+        return;
+      }
+      DAT_1803fb248 = 0.0;
+      FUN_1800b65c0();
+      return;
+    }
+  }
+  else {
+    if (DAT_1803fa608 != 0) {
+      dVar5 = *(double *)(DAT_1803fa608 + 0x10);
+    }
+    DAT_1803fb238 = dVar5;
+    if (param_1 != '\0') {
+      local_28[2] = 1.0;
+      local_28[0] = 0.0;
+      local_28[5] = 0.015625;
+      local_28[3] = -0.015625;
+      local_res10[4] = 1.0;
+      local_res10[0] = 0.0;
+      local_28[1] = local_28[1] / (float)iVar4;
+      pfVar2 = local_28;
+      if (0.0 <= local_28[1]) {
+        pfVar2 = local_28 + 1;
+      }
+      pfVar1 = local_28 + 2;
+      if (local_28[1] <= DAT_180380bb0) {
+        pfVar1 = pfVar2;
+      }
+      local_28[4] = *pfVar1 - DAT_1803fb248;
+      pfVar2 = local_28 + 3;
+      if (DAT_180381324 <= local_28[4]) {
+        pfVar2 = local_28 + 4;
+      }
+      pfVar1 = local_28 + 5;
+      if (local_28[4] <= DAT_18038098c) {
+        pfVar1 = pfVar2;
+      }
+      local_res10[2] = DAT_1803fb248 + *pfVar1;
+      pfVar2 = local_res10;
+      if (0.0 <= local_res10[2]) {
+        pfVar2 = local_res10 + 2;
+      }
+      pfVar1 = local_res10 + 4;
+      if (local_res10[2] <= DAT_180380bb0) {
+        pfVar1 = pfVar2;
+      }
+      DAT_1803fb248 = *pfVar1;
+      FUN_1800b65c0();
+      return;
+    }
+  }
+  return;
+}
+
+
+)B1800b6650",
+    "4462834bc6b52b5aa4a29d97662ac55b25db9ab240a68ddcc5606122b9d6ede4",
+    R"F1800b6650C(FUN_1800b65c0)F1800b6650C",
+    R"F1800b6650D(DAT_18038098c
+DAT_180380bb0
+DAT_180380cb0
+DAT_180381324
+DAT_1803db414
+DAT_1803fa608
+DAT_1803fb130
+DAT_1803fb134
+DAT_1803fb138
+DAT_1803fb13c
+DAT_1803fb140
+DAT_1803fb144
+DAT_1803fb148
+DAT_1803fb14c
+DAT_1803fb150
+DAT_1803fb154
+DAT_1803fb158
+DAT_1803fb15c
+DAT_1803fb160
+DAT_1803fb164
+DAT_1803fb168
+DAT_1803fb16c
+DAT_1803fb238
+DAT_1803fb248
+DAT_1803fca50
+DAT_1803fca54
+DAT_1803fca58
+DAT_1803fca5c
+DAT_1803fca60
+DAT_1803fca64
+DAT_1803fca68
+DAT_1803fca6c
+DAT_1803fca70
+DAT_1803fca74
+DAT_1803fca78
+DAT_1803fca7c
+DAT_1803fca80
+DAT_1803fca84
+DAT_1803fca88
+DAT_1803fca8c)F1800b6650D",
+    R"F1800b6650T()F1800b6650T",
+    R"F1800b6650F(22: do {
+23: if (0.0 <= (float)(&DAT_1803fca50)[lVar3]) {
+24: if ((-1 < (int)(&DAT_1803fb130)[lVar3]) &&
+30: if (0.0 <= (float)(&DAT_1803fca54)[lVar3]) {
+31: if ((-1 < (int)(&DAT_1803fb134)[lVar3]) &&
+37: if (0.0 <= (float)(&DAT_1803fca58)[lVar3]) {
+38: if ((-1 < (int)(&DAT_1803fb138)[lVar3]) &&
+44: if (0.0 <= (float)(&DAT_1803fca5c)[lVar3]) {
+45: if ((-1 < (int)(&DAT_1803fb13c)[lVar3]) &&
+51: if (0.0 <= (float)(&DAT_1803fca60)[lVar3]) {
+52: if ((-1 < (int)(&DAT_1803fb140)[lVar3]) &&
+58: if (0.0 <= (float)(&DAT_1803fca64)[lVar3]) {
+59: if ((-1 < (int)(&DAT_1803fb144)[lVar3]) &&
+65: if (0.0 <= (float)(&DAT_1803fca68)[lVar3]) {
+66: if ((-1 < (int)(&DAT_1803fb148)[lVar3]) &&
+72: if (0.0 <= (float)(&DAT_1803fca6c)[lVar3]) {
+73: if ((-1 < (int)(&DAT_1803fb14c)[lVar3]) &&
+79: if (0.0 <= (float)(&DAT_1803fca70)[lVar3]) {
+80: if ((-1 < (int)(&DAT_1803fb150)[lVar3]) &&
+86: if (0.0 <= (float)(&DAT_1803fca74)[lVar3]) {
+87: if ((-1 < (int)(&DAT_1803fb154)[lVar3]) &&
+93: if (0.0 <= (float)(&DAT_1803fca78)[lVar3]) {
+94: if ((-1 < (int)(&DAT_1803fb158)[lVar3]) &&
+100: if (0.0 <= (float)(&DAT_1803fca7c)[lVar3]) {
+101: if ((-1 < (int)(&DAT_1803fb15c)[lVar3]) &&
+107: if (0.0 <= (float)(&DAT_1803fca80)[lVar3]) {
+108: if ((-1 < (int)(&DAT_1803fb160)[lVar3]) &&
+114: if (0.0 <= (float)(&DAT_1803fca84)[lVar3]) {
+115: if ((-1 < (int)(&DAT_1803fb164)[lVar3]) &&
+121: if (0.0 <= (float)(&DAT_1803fca88)[lVar3]) {
+122: if ((-1 < (int)(&DAT_1803fb168)[lVar3]) &&
+128: if (0.0 <= (float)(&DAT_1803fca8c)[lVar3]) {
+129: if ((-1 < (int)(&DAT_1803fb16c)[lVar3]) &&
+137: if (iVar4 == 0) {
+138: if (DAT_1803fa608 == 0) {
+141: else {
+144: if (((dVar5 - DAT_1803fb238 < 0.0) || (DAT_180380cb0 <= dVar5 - DAT_1803fb238)) &&
+146: if (DAT_18038098c < DAT_1803fb248) {
+149: return;
+153: return;
+156: else {
+157: if (DAT_1803fa608 != 0) {
+161: if (param_1 != '\0') {
+170: if (0.0 <= local_28[1]) {
+174: if (local_28[1] <= DAT_180380bb0) {
+179: if (DAT_180381324 <= local_28[4]) {
+183: if (local_28[4] <= DAT_18038098c) {
+188: if (0.0 <= local_res10[2]) {
+192: if (local_res10[2] <= DAT_180380bb0) {
+197: return;
+200: return;)F1800b6650F",
+    R"F1800b6650U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18038098c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380cb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180381324.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db414.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb130.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb134.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb138.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb13c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb140.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb144.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb148.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb14c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb150.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb154.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb158.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb15c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb160.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb164.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb168.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb16c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb238.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb248.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca50.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca54.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca58.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca5c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca60.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca64.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca68.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca6c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca70.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca74.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca78.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca7c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca80.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca84.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca88.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca8c.)F1800b6650U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6650() noexcept {
+    return kFunction_0x1800b6650;
+}
+
+// 0x1800b6b50 FUN_1800b6b50
+// source: re/dump/decompile/0x1800b6b50_FUN_1800b6b50.c
+// size: 131 bytes; thunk: false
+// body sha256: fa388f921d838135145e8de86eb91927f60bf2702f4bbd1b4f821e21fb645974
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6b50{
+    "0x1800b6b50",
+    "FUN_1800b6b50",
+    R"F1800b6b50S(undefined FUN_1800b6b50())F1800b6b50S",
+    R"B1800b6b50(// 0x1800b6b50  FUN_1800b6b50
+// size=131 thunk=false
+// signature: undefined FUN_1800b6b50()
+// status: ok
+
+
+double FUN_1800b6b50(int param_1,double param_2)
+
+{
+  uint uVar1;
+  ulonglong uVar2;
+  int iVar3;
+  
+  if ((((-1 < param_1) && (-1 < DAT_1803db410)) && (0 < DAT_1803fb244)) &&
+     (iVar3 = 0, 0 < DAT_1803fb244)) {
+    do {
+      for (uVar1 = DAT_1803db410 - iVar3; (int)uVar1 < 0; uVar1 = uVar1 + 0x100) {
+      }
+      uVar2 = (ulonglong)(uVar1 & 0xff);
+      if (((&DAT_1803fb260)[uVar2 * 0x18] != '\0') &&
+         (*(int *)(&DAT_1803fb258 + uVar2 * 0x18) == param_1)) {
+        param_2 = param_2 - *(double *)(&DAT_1803fb250 + uVar2 * 0x18);
+        if ((param_2 <= 0.0) || (DAT_180380d38 <= param_2)) {
+          param_2 = 0.0;
+        }
+        return param_2;
+      }
+      iVar3 = iVar3 + 1;
+    } while (iVar3 < DAT_1803fb244);
+  }
+  return 0.0;
+}
+
+
+)B1800b6b50",
+    "fa388f921d838135145e8de86eb91927f60bf2702f4bbd1b4f821e21fb645974",
+    R"F1800b6b50C()F1800b6b50C",
+    R"F1800b6b50D(DAT_180380d38
+DAT_1803db410
+DAT_1803fb244
+DAT_1803fb250
+DAT_1803fb258
+DAT_1803fb260)F1800b6b50D",
+    R"F1800b6b50T()F1800b6b50T",
+    R"F1800b6b50F(14: if ((((-1 < param_1) && (-1 < DAT_1803db410)) && (0 < DAT_1803fb244)) &&
+16: do {
+17: for (uVar1 = DAT_1803db410 - iVar3; (int)uVar1 < 0; uVar1 = uVar1 + 0x100) {
+20: if (((&DAT_1803fb260)[uVar2 * 0x18] != '\0') &&
+23: if ((param_2 <= 0.0) || (DAT_180380d38 <= param_2)) {
+26: return param_2;
+31: return 0.0;)F1800b6b50F",
+    R"F1800b6b50U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d38.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db410.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb244.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb250.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb258.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb260.)F1800b6b50U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6b50() noexcept {
+    return kFunction_0x1800b6b50;
+}
+
+// 0x1800b6be0 FUN_1800b6be0
+// source: re/dump/decompile/0x1800b6be0_FUN_1800b6be0.c
+// size: 115 bytes; thunk: false
+// body sha256: f7ff73a374d69a9df50dd4f6477d73b2c460a01eb9a6eb3c2327551b0cbdb6d4
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6be0{
+    "0x1800b6be0",
+    "FUN_1800b6be0",
+    R"F1800b6be0S(undefined FUN_1800b6be0())F1800b6be0S",
+    R"B1800b6be0(// 0x1800b6be0  FUN_1800b6be0
+// size=115 thunk=false
+// signature: undefined FUN_1800b6be0()
+// status: ok
+
+
+undefined8 FUN_1800b6be0(void)
+
+{
+  float fVar1;
+  undefined8 uVar2;
+  undefined4 uVar3;
+  float fVar4;
+  
+  uVar2 = 0;
+  if ((DAT_1803facf8 != '\0') && (uVar2 = 0, 2 < DAT_1803fb0dc - 1)) {
+    uVar2 = FUN_1800b7350(0);
+  }
+  uVar3 = (undefined4)((ulonglong)uVar2 >> 0x20);
+  if (((DAT_1803fb0dc < 4) || (DAT_1803fb248 <= 0.0)) ||
+     (fVar4 = DAT_1803fb248, DAT_180380bb0 <= DAT_1803fb248)) {
+    fVar4 = 0.0;
+  }
+  fVar1 = (float)uVar2;
+  if ((float)uVar2 <= fVar4) {
+    fVar1 = fVar4;
+  }
+  if ((fVar1 <= 0.0) || (DAT_180380bb0 <= fVar1)) {
+    fVar1 = 0.0;
+    uVar3 = 0;
+  }
+  return CONCAT44(uVar3,fVar1);
+}
+
+
+)B1800b6be0",
+    "f7ff73a374d69a9df50dd4f6477d73b2c460a01eb9a6eb3c2327551b0cbdb6d4",
+    R"F1800b6be0C(FUN_1800b7350)F1800b6be0C",
+    R"F1800b6be0D(DAT_180380bb0
+DAT_1803facf8
+DAT_1803fb0dc
+DAT_1803fb248)F1800b6be0D",
+    R"F1800b6be0T()F1800b6be0T",
+    R"F1800b6be0F(16: if ((DAT_1803facf8 != '\0') && (uVar2 = 0, 2 < DAT_1803fb0dc - 1)) {
+20: if (((DAT_1803fb0dc < 4) || (DAT_1803fb248 <= 0.0)) ||
+25: if ((float)uVar2 <= fVar4) {
+28: if ((fVar1 <= 0.0) || (DAT_180380bb0 <= fVar1)) {
+32: return CONCAT44(uVar3,fVar1);)F1800b6be0F",
+    R"F1800b6be0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facf8.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb0dc.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb248.)F1800b6be0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6be0() noexcept {
+    return kFunction_0x1800b6be0;
+}
+
+// 0x1800b6c60 FUN_1800b6c60
+// source: re/dump/decompile/0x1800b6c60_FUN_1800b6c60.c
+// size: 107 bytes; thunk: false
+// body sha256: c7e734a55458184411bfaeeb8b9cf6812971bfa7cf6eaaaa40b9add5eddb7fd0
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6c60{
+    "0x1800b6c60",
+    "FUN_1800b6c60",
+    R"F1800b6c60S(undefined FUN_1800b6c60())F1800b6c60S",
+    R"B1800b6c60(// 0x1800b6c60  FUN_1800b6c60
+// size=107 thunk=false
+// signature: undefined FUN_1800b6c60()
+// status: ok
+
+
+char * FUN_1800b6c60(undefined4 param_1)
+
+{
+  switch(param_1) {
+  case 0:
+    return "off";
+  case 1:
+    return "hooks unavailable";
+  case 2:
+    return "not connected";
+  case 3:
+    return "loopback/demo";
+  case 4:
+    return "layout mismatch";
+  case 5:
+    return "warming up";
+  case 6:
+    return "reliable guard";
+  case 7:
+    return "no history match";
+  case 8:
+    return "active";
+  default:
+    return "?";
+  }
+}
+
+
+)B1800b6c60",
+    "c7e734a55458184411bfaeeb8b9cf6812971bfa7cf6eaaaa40b9add5eddb7fd0",
+    R"F1800b6c60C()F1800b6c60C",
+    R"F1800b6c60D()F1800b6c60D",
+    R"F1800b6c60T("?"
+"off"
+"active"
+"warming up"
+"loopback/demo"
+"not connected"
+"reliable guard"
+"layout mismatch"
+"no history match"
+"hooks unavailable")F1800b6c60T",
+    R"F1800b6c60F(10: switch(param_1) {
+11: case 0:
+12: return "off";
+13: case 1:
+14: return "hooks unavailable";
+15: case 2:
+16: return "not connected";
+17: case 3:
+18: return "loopback/demo";
+19: case 4:
+20: return "layout mismatch";
+21: case 5:
+22: return "warming up";
+23: case 6:
+24: return "reliable guard";
+25: case 7:
+26: return "no history match";
+27: case 8:
+28: return "active";
+30: return "?";)F1800b6c60F",
+    R"F1800b6c60U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b6c60U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6c60() noexcept {
+    return kFunction_0x1800b6c60;
+}
+
+// 0x1800b6cf0 FUN_1800b6cf0
+// source: re/dump/decompile/0x1800b6cf0_FUN_1800b6cf0.c
+// size: 199 bytes; thunk: false
+// body sha256: 67777bf6e87d37c5a8fe294b60632ccbdd61b6bb93a5b13b288bcb93164df74d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6cf0{
+    "0x1800b6cf0",
+    "FUN_1800b6cf0",
+    R"F1800b6cf0S(undefined FUN_1800b6cf0())F1800b6cf0S",
+    R"B1800b6cf0(// 0x1800b6cf0  FUN_1800b6cf0
+// size=199 thunk=false
+// signature: undefined FUN_1800b6cf0()
+// status: ok
+
+
+ulonglong FUN_1800b6cf0(longlong *param_1)
+
+{
+  int iVar1;
+  longlong lVar2;
+  ulonglong in_RAX;
+  uint uVar3;
+  ulonglong uVar4;
+  
+  if ((((param_1 != (longlong *)0x0) && (((ulonglong)param_1 & 7) == 0)) &&
+      (in_RAX = (**(code **)(*param_1 + 0x20))(), (int)in_RAX == 0x40)) &&
+     ((iVar1 = *(int *)((longlong)param_1 + 0xc), in_RAX = (**(code **)(*param_1 + 0x80))(param_1,0)
+      , (int)in_RAX == iVar1 &&
+      (lVar2 = param_1[2], in_RAX = (**(code **)(*param_1 + 0x80))(param_1,1),
+      (int)in_RAX == (int)lVar2)))) {
+    uVar3 = *(uint *)(param_1 + 0x4f7);
+    in_RAX = (ulonglong)uVar3;
+    if ((uVar3 == 0x100) || (uVar3 == 0x1000)) {
+      iVar1 = *(int *)((longlong)param_1 + 0x27bc);
+      if (iVar1 == 8) {
+        uVar4 = 0;
+      }
+      else {
+        if (iVar1 != 0x10) goto LAB_1800b6daa;
+        uVar4 = 0;
+      }
+      while( true ) {
+        in_RAX = (uVar4 + 0x22) * 0x1c;
+        if ((*(int *)(in_RAX + 0x18 + (longlong)param_1) != (int)uVar4) ||
+           (3 < *(uint *)(in_RAX + 0x14 + (longlong)param_1))) break;
+        uVar3 = (int)uVar4 + 1;
+        uVar4 = (ulonglong)uVar3;
+        if (iVar1 <= (int)uVar3) {
+          return CONCAT71((int7)(in_RAX >> 8),1);
+        }
+      }
+    }
+  }
+LAB_1800b6daa:
+  return in_RAX & 0xffffffffffffff00;
+}
+
+
+)B1800b6cf0",
+    "67777bf6e87d37c5a8fe294b60632ccbdd61b6bb93a5b13b288bcb93164df74d",
+    R"F1800b6cf0C()F1800b6cf0C",
+    R"F1800b6cf0D(LAB_1800b6daa)F1800b6cf0D",
+    R"F1800b6cf0T()F1800b6cf0T",
+    R"F1800b6cf0F(16: if ((((param_1 != (longlong *)0x0) && (((ulonglong)param_1 & 7) == 0)) &&
+24: if ((uVar3 == 0x100) || (uVar3 == 0x1000)) {
+26: if (iVar1 == 8) {
+29: else {
+30: if (iVar1 != 0x10) goto LAB_1800b6daa;
+33: while( true ) {
+35: if ((*(int *)(in_RAX + 0x18 + (longlong)param_1) != (int)uVar4) ||
+39: if (iVar1 <= (int)uVar3) {
+40: return CONCAT71((int7)(in_RAX >> 8),1);
+45: LAB_1800b6daa:
+46: return in_RAX & 0xffffffffffffff00;)F1800b6cf0F",
+    R"F1800b6cf0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b6daa.
+TODO: resolve the indirect call in body 17: (in_RAX = (**(code **)(*param_1 + 0x20))(), (int)in_RAX == 0x40)) &&.
+TODO: resolve the indirect call in body 18: ((iVar1 = *(int *)((longlong)param_1 + 0xc), in_RAX = (**(code **)(*param_1 + 0x80))(param_1,0).
+TODO: resolve the indirect call in body 20: (lVar2 = param_1[2], in_RAX = (**(code **)(*param_1 + 0x80))(param_1,1),.)F1800b6cf0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6cf0() noexcept {
+    return kFunction_0x1800b6cf0;
+}
+
+// 0x1800b6dc0 FUN_1800b6dc0
+// source: re/dump/decompile/0x1800b6dc0_FUN_1800b6dc0.c
+// size: 182 bytes; thunk: false
+// body sha256: 48dd612e4729183dacb8786b066a757ec2bf495b2ed2e0ada387ce478fdafc3e
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6dc0{
+    "0x1800b6dc0",
+    "FUN_1800b6dc0",
+    R"F1800b6dc0S(undefined FUN_1800b6dc0())F1800b6dc0S",
+    R"B1800b6dc0(// 0x1800b6dc0  FUN_1800b6dc0
+// size=182 thunk=false
+// signature: undefined FUN_1800b6dc0()
+// status: ok
+
+
+undefined8 FUN_1800b6dc0(longlong param_1,undefined1 *param_2)
+
+{
+  uint uVar1;
+  ulonglong uVar2;
+  
+  if (param_2 != (undefined1 *)0x0) {
+    *param_2 = 0;
+  }
+  if ((param_1 != 0) &&
+     (((*(int *)(param_1 + 0x27b8) == 0x100 || (*(int *)(param_1 + 0x27b8) == 0x1000)) &&
+      ((*(int *)(param_1 + 0x27bc) - 8U & 0xfffffff7) == 0)))) {
+    if (param_2 != (undefined1 *)0x0) {
+      *param_2 = 1;
+    }
+    if ((*(longlong *)(param_1 + 0x248) == 0) && (*(longlong *)(param_1 + 0x388) == 0)) {
+      if ((*(uint *)(param_1 + 0x108) < 0x1001) && (*(uint *)(param_1 + 0x128) < 0x1001)) {
+        if ((*(uint *)(param_1 + 0x108) == 0) && (*(uint *)(param_1 + 0x128) == 0)) {
+          uVar2 = 0;
+          if (0 < *(int *)(param_1 + 0x27bc)) {
+            do {
+              if (*(int *)(uVar2 * 0x1c + 0x3cc + param_1) != 0) {
+                return 1;
+              }
+              uVar1 = (int)uVar2 + 1;
+              uVar2 = (ulonglong)uVar1;
+            } while ((int)uVar1 < *(int *)(param_1 + 0x27bc));
+          }
+          return 0;
+        }
+      }
+      else if (param_2 != (undefined1 *)0x0) {
+        *param_2 = 0;
+      }
+    }
+  }
+  return 1;
+}
+
+
+)B1800b6dc0",
+    "48dd612e4729183dacb8786b066a757ec2bf495b2ed2e0ada387ce478fdafc3e",
+    R"F1800b6dc0C()F1800b6dc0C",
+    R"F1800b6dc0D()F1800b6dc0D",
+    R"F1800b6dc0T()F1800b6dc0T",
+    R"F1800b6dc0F(13: if (param_2 != (undefined1 *)0x0) {
+16: if ((param_1 != 0) &&
+19: if (param_2 != (undefined1 *)0x0) {
+22: if ((*(longlong *)(param_1 + 0x248) == 0) && (*(longlong *)(param_1 + 0x388) == 0)) {
+23: if ((*(uint *)(param_1 + 0x108) < 0x1001) && (*(uint *)(param_1 + 0x128) < 0x1001)) {
+24: if ((*(uint *)(param_1 + 0x108) == 0) && (*(uint *)(param_1 + 0x128) == 0)) {
+26: if (0 < *(int *)(param_1 + 0x27bc)) {
+27: do {
+28: if (*(int *)(uVar2 * 0x1c + 0x3cc + param_1) != 0) {
+29: return 1;
+35: return 0;
+38: else if (param_2 != (undefined1 *)0x0) {
+43: return 1;)F1800b6dc0F",
+    R"F1800b6dc0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b6dc0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6dc0() noexcept {
+    return kFunction_0x1800b6dc0;
+}
+
+// 0x1800b6e80 FUN_1800b6e80
+// source: re/dump/decompile/0x1800b6e80_FUN_1800b6e80.c
+// size: 290 bytes; thunk: false
+// body sha256: 3ac5a4a12fabdf99455dc4ab36f2e45149a7c6e09eda63d12b1fd89809ee2724
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6e80{
+    "0x1800b6e80",
+    "FUN_1800b6e80",
+    R"F1800b6e80S(undefined FUN_1800b6e80())F1800b6e80S",
+    R"B1800b6e80(// 0x1800b6e80  FUN_1800b6e80
+// size=290 thunk=false
+// signature: undefined FUN_1800b6e80()
+// status: ok
+
+
+void FUN_1800b6e80(void)
+
+{
+  uint uVar1;
+  int iVar2;
+  int iVar3;
+  int iVar4;
+  int iVar5;
+  
+  if ((1 < DAT_1803fb244) && (-1 < DAT_1803db410)) {
+    iVar4 = 0;
+    iVar5 = DAT_1803fb244 + -1;
+    iVar3 = 0;
+    if (iVar5 < 0x10) {
+      if (iVar5 < 1) {
+        return;
+      }
+    }
+    else {
+      iVar5 = 0x10;
+    }
+    do {
+      for (uVar1 = DAT_1803db410 - iVar3; (int)uVar1 < 0; uVar1 = uVar1 + 0x100) {
+      }
+      for (iVar2 = uVar1 - 1; iVar2 < 0; iVar2 = iVar2 + 0x100) {
+      }
+      if (((((&DAT_1803fb260)[(ulonglong)uVar1 * 0x18] != '\0') &&
+           ((&DAT_1803fb260)[(longlong)iVar2 * 0x18] != '\0')) &&
+          (DAT_180380b40 <
+           *(double *)(&DAT_1803fb250 + (ulonglong)uVar1 * 0x18) -
+           *(double *)(&DAT_1803fb250 + (longlong)iVar2 * 0x18))) &&
+         (*(double *)(&DAT_1803fb250 + (ulonglong)uVar1 * 0x18) -
+          *(double *)(&DAT_1803fb250 + (longlong)iVar2 * 0x18) < DAT_180380c90)) {
+        iVar4 = iVar4 + 1;
+      }
+      iVar3 = iVar3 + 1;
+    } while (iVar3 < iVar5);
+    if (iVar4 != 0) {
+      return;
+    }
+  }
+  return;
+}
+
+
+)B1800b6e80",
+    "3ac5a4a12fabdf99455dc4ab36f2e45149a7c6e09eda63d12b1fd89809ee2724",
+    R"F1800b6e80C()F1800b6e80C",
+    R"F1800b6e80D(DAT_180380b40
+DAT_180380c90
+DAT_1803db410
+DAT_1803fb244
+DAT_1803fb250
+DAT_1803fb260)F1800b6e80D",
+    R"F1800b6e80T()F1800b6e80T",
+    R"F1800b6e80F(16: if ((1 < DAT_1803fb244) && (-1 < DAT_1803db410)) {
+20: if (iVar5 < 0x10) {
+21: if (iVar5 < 1) {
+22: return;
+25: else {
+28: do {
+29: for (uVar1 = DAT_1803db410 - iVar3; (int)uVar1 < 0; uVar1 = uVar1 + 0x100) {
+31: for (iVar2 = uVar1 - 1; iVar2 < 0; iVar2 = iVar2 + 0x100) {
+33: if (((((&DAT_1803fb260)[(ulonglong)uVar1 * 0x18] != '\0') &&
+44: if (iVar4 != 0) {
+45: return;
+48: return;)F1800b6e80F",
+    R"F1800b6e80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b40.
+TODO: recover the declaration, type and value for global/data reference DAT_180380c90.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db410.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb244.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb250.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb260.)F1800b6e80U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6e80() noexcept {
+    return kFunction_0x1800b6e80;
+}
+
+// 0x1800b6fb0 FUN_1800b6fb0
+// source: re/dump/decompile/0x1800b6fb0_FUN_1800b6fb0.c
+// size: 918 bytes; thunk: false
+// body sha256: b0df4ecdb85189fa1477b34f0936acd6480814724393a39604e0b819e63ffc12
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b6fb0{
+    "0x1800b6fb0",
+    "FUN_1800b6fb0",
+    R"F1800b6fb0S(undefined FUN_1800b6fb0())F1800b6fb0S",
+    R"B1800b6fb0(// 0x1800b6fb0  FUN_1800b6fb0
+// size=918 thunk=false
+// signature: undefined FUN_1800b6fb0()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8
+FUN_1800b6fb0(longlong *param_1,double param_2,float param_3,char param_4,undefined8 *param_5)
+
+{
+  double dVar1;
+  longlong lVar2;
+  float fVar3;
+  uint uVar4;
+  uint uVar5;
+  char cVar6;
+  uint uVar7;
+  double *pdVar8;
+  double *pdVar9;
+  int iVar10;
+  int iVar11;
+  int iVar12;
+  double *pdVar13;
+  float fVar14;
+  float extraout_XMM0_Da;
+  float extraout_XMM0_Da_00;
+  float fVar15;
+  uint uVar16;
+  uint uVar17;
+  uint uVar18;
+  uint uVar19;
+  uint uVar20;
+  float local_res8;
+  
+  if (param_5 != (undefined8 *)0x0) {
+    *param_5 = 0;
+  }
+  if ((((param_1 != (longlong *)0x0) && (param_5 != (undefined8 *)0x0)) && (3 < DAT_1803fb244)) &&
+     ((0.0 < param_2 && (0.0 < param_3)))) {
+    lVar2 = param_1[2];
+    fVar14 = (float)(**(code **)(*param_1 + 0x10))();
+    FUN_1800b6e80();
+    uVar5 = _UNK_1803817d4;
+    uVar4 = _DAT_1803817d0;
+    fVar3 = DAT_1803812f8;
+    local_res8 = DAT_1803809a8;
+    if (DAT_1803809a8 <= extraout_XMM0_Da * _DAT_180380d60) {
+      local_res8 = extraout_XMM0_Da * _DAT_180380d60;
+    }
+    if (0 < DAT_1803fb244) {
+      uVar17 = (uint)DAT_180380ec0;
+      uVar18 = (uint)((ulonglong)DAT_180380ec0 >> 0x20);
+      pdVar13 = (double *)0x0;
+      pdVar9 = (double *)0x0;
+      iVar12 = -1;
+      iVar10 = 0;
+      uVar19 = uVar17;
+      uVar20 = uVar18;
+      iVar11 = DAT_1803fb244;
+      while (((-1 < iVar10 && (iVar10 < iVar11)) && (-1 < DAT_1803db410))) {
+        for (uVar7 = DAT_1803db410 - iVar10; (int)uVar7 < 0; uVar7 = uVar7 + 0x100) {
+        }
+        pdVar8 = (double *)(&DAT_1803fb250 + (ulonglong)(uVar7 & 0xff) * 0x18);
+        if ((&DAT_1803fb260)[(ulonglong)(uVar7 & 0xff) * 0x18] == '\0') {
+          pdVar8 = (double *)0x0;
+        }
+        if ((pdVar8 == (double *)0x0) ||
+           ((param_4 != '\0' &&
+            (*(int *)((longlong)pdVar8 + 0xc) != *(int *)((longlong)param_1 + 0x1c))))) break;
+        if (((((longlong)(int)lVar2 - (longlong)*(int *)(pdVar8 + 1)) - 1U < 0x3f) &&
+            (((cVar6 = (**(code **)(*param_1 + 0x88))(param_1,1), iVar11 = DAT_1803fb244,
+              cVar6 != '\0' && (dVar1 = param_2 - *pdVar8, 0.0 < dVar1)) && (dVar1 <= DAT_180380d38)
+             ))) && (((((**(code **)(*param_1 + 0x90))(param_1,1,*(undefined4 *)(pdVar8 + 1)),
+                       iVar11 = DAT_1803fb244, fVar14 < 0.0 || (fVar3 < fVar14)) ||
+                      ((extraout_XMM0_Da_00 < 0.0 || (fVar3 < extraout_XMM0_Da_00)))) ||
+                     (((fVar15 = fVar14 - extraout_XMM0_Da_00, DAT_180381320 <= fVar15 &&
+                       (fVar15 <= DAT_180380d30)) &&
+                      ((double)CONCAT44((uint)((ulonglong)((double)fVar15 - dVar1) >> 0x20) & uVar5,
+                                        SUB84((double)fVar15 - dVar1,0) & uVar4) <= DAT_180380ca0)))
+                     ))) {
+          uVar7 = SUB84(dVar1 - (double)param_3,0) & uVar4;
+          uVar16 = (uint)((ulonglong)(dVar1 - (double)param_3) >> 0x20) & uVar5;
+          if (iVar10 == DAT_1803db418) {
+            pdVar9 = pdVar8;
+            uVar19 = uVar7;
+            uVar20 = uVar16;
+          }
+          if ((double)CONCAT44(uVar16,uVar7) <= (double)CONCAT44(uVar18,uVar17) &&
+              (double)CONCAT44(uVar18,uVar17) != (double)CONCAT44(uVar16,uVar7)) {
+            pdVar13 = pdVar8;
+            uVar17 = uVar7;
+            uVar18 = uVar16;
+            iVar12 = iVar10;
+          }
+        }
+        iVar10 = iVar10 + 1;
+        if (iVar11 <= iVar10) break;
+      }
+      if ((pdVar9 != (double *)0x0) && ((double)CONCAT44(uVar20,uVar19) <= (double)local_res8)) {
+        *param_5 = pdVar9;
+        return 1;
+      }
+      if ((pdVar13 != (double *)0x0) &&
+         (((double)CONCAT44(uVar18,uVar17) < (double)local_res8 ||
+           (double)CONCAT44(uVar18,uVar17) == (double)local_res8 || (param_4 != '\0')))) {
+        DAT_1803db418 = iVar12;
+        *param_5 = pdVar13;
+        return 1;
+      }
+    }
+  }
+  return 0;
+}
+
+
+)B1800b6fb0",
+    "b0df4ecdb85189fa1477b34f0936acd6480814724393a39604e0b819e63ffc12",
+    R"F1800b6fb0C(FUN_1800b6e80)F1800b6fb0C",
+    R"F1800b6fb0D(DAT_1803809a8
+DAT_180380ca0
+DAT_180380d30
+DAT_180380d38
+DAT_180380ec0
+DAT_1803812f8
+DAT_180381320
+DAT_1803db410
+DAT_1803db418
+DAT_1803fb244
+DAT_1803fb250
+DAT_1803fb260)F1800b6fb0D",
+    R"F1800b6fb0T()F1800b6fb0T",
+    R"F1800b6fb0F(37: if (param_5 != (undefined8 *)0x0) {
+40: if ((((param_1 != (longlong *)0x0) && (param_5 != (undefined8 *)0x0)) && (3 < DAT_1803fb244)) &&
+49: if (DAT_1803809a8 <= extraout_XMM0_Da * _DAT_180380d60) {
+52: if (0 < DAT_1803fb244) {
+62: while (((-1 < iVar10 && (iVar10 < iVar11)) && (-1 < DAT_1803db410))) {
+63: for (uVar7 = DAT_1803db410 - iVar10; (int)uVar7 < 0; uVar7 = uVar7 + 0x100) {
+66: if ((&DAT_1803fb260)[(ulonglong)(uVar7 & 0xff) * 0x18] == '\0') {
+69: if ((pdVar8 == (double *)0x0) ||
+72: if (((((longlong)(int)lVar2 - (longlong)*(int *)(pdVar8 + 1)) - 1U < 0x3f) &&
+85: if (iVar10 == DAT_1803db418) {
+90: if ((double)CONCAT44(uVar16,uVar7) <= (double)CONCAT44(uVar18,uVar17) &&
+99: if (iVar11 <= iVar10) break;
+101: if ((pdVar9 != (double *)0x0) && ((double)CONCAT44(uVar20,uVar19) <= (double)local_res8)) {
+103: return 1;
+105: if ((pdVar13 != (double *)0x0) &&
+110: return 1;
+114: return 0;)F1800b6fb0F",
+    R"F1800b6fb0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803809a8.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ca0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d30.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d38.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ec0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803812f8.
+TODO: recover the declaration, type and value for global/data reference DAT_180381320.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db410.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db418.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb244.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb250.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb260.
+TODO: resolve the indirect call in body 43: fVar14 = (float)(**(code **)(*param_1 + 0x10))();.
+TODO: resolve the indirect call in body 73: (((cVar6 = (**(code **)(*param_1 + 0x88))(param_1,1), iVar11 = DAT_1803fb244,.
+TODO: resolve the indirect call in body 75: ))) && (((((**(code **)(*param_1 + 0x90))(param_1,1,*(undefined4 *)(pdVar8 + 1)),.)F1800b6fb0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b6fb0() noexcept {
+    return kFunction_0x1800b6fb0;
+}
+
+// 0x1800b7350 FUN_1800b7350
+// source: re/dump/decompile/0x1800b7350_FUN_1800b7350.c
+// size: 473 bytes; thunk: false
+// body sha256: 7e47c77a17a3fc058d1cf55d0bb0f6e67288782e982821fe8898df21e8bdf38b
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b7350{
+    "0x1800b7350",
+    "FUN_1800b7350",
+    R"F1800b7350S(undefined FUN_1800b7350())F1800b7350S",
+    R"B1800b7350(// 0x1800b7350  FUN_1800b7350
+// size=473 thunk=false
+// signature: undefined FUN_1800b7350()
+// status: ok
+
+
+void FUN_1800b7350(void)
+
+{
+  longlong *plVar1;
+  float fVar2;
+  
+  if (((DAT_1803facf8 != '\0') && (DAT_1803fa668 != (longlong *)0x0)) &&
+     (plVar1 = (longlong *)(**(code **)(*DAT_1803fa668 + 0x240))(), plVar1 != (longlong *)0x0)) {
+    fVar2 = (float)(**(code **)(*plVar1 + 0x50))(plVar1,0);
+    if ((fVar2 < 0.0) || (DAT_180380d30 < fVar2)) {
+      (**(code **)(*plVar1 + 0x48))(plVar1,0);
+    }
+    FUN_1800c5c00();
+    _dclass();
+    return;
+  }
+  return;
+}
+
+
+)B1800b7350",
+    "7e47c77a17a3fc058d1cf55d0bb0f6e67288782e982821fe8898df21e8bdf38b",
+    R"F1800b7350C(FUN_1800c5c00)F1800b7350C",
+    R"F1800b7350D(DAT_180380d30
+DAT_1803fa668
+DAT_1803facf8)F1800b7350D",
+    R"F1800b7350T()F1800b7350T",
+    R"F1800b7350F(13: if (((DAT_1803facf8 != '\0') && (DAT_1803fa668 != (longlong *)0x0)) &&
+16: if ((fVar2 < 0.0) || (DAT_180380d30 < fVar2)) {
+21: return;
+23: return;)F1800b7350F",
+    R"F1800b7350U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d30.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa668.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facf8.
+TODO: resolve the indirect call in body 14: (plVar1 = (longlong *)(**(code **)(*DAT_1803fa668 + 0x240))(), plVar1 != (longlong *)0x0)) {.
+TODO: resolve the indirect call in body 15: fVar2 = (float)(**(code **)(*plVar1 + 0x50))(plVar1,0);.
+TODO: resolve the indirect call in body 17: (**(code **)(*plVar1 + 0x48))(plVar1,0);.)F1800b7350U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b7350() noexcept {
+    return kFunction_0x1800b7350;
+}
+
+// 0x1800b7530 FUN_1800b7530
+// source: re/dump/decompile/0x1800b7530_FUN_1800b7530.c
+// size: 157 bytes; thunk: false
+// body sha256: 51b7dc407cc64e4a1cf1844e95b531a5c4a6a5dbfd3f4d9601660e35766d729a
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b7530{
+    "0x1800b7530",
+    "FUN_1800b7530",
+    R"F1800b7530S(undefined FUN_1800b7530())F1800b7530S",
+    R"B1800b7530(// 0x1800b7530  FUN_1800b7530
+// size=157 thunk=false
+// signature: undefined FUN_1800b7530()
+// status: ok
+
+
+undefined8 FUN_1800b7530(void *param_1)
+
+{
+  char cVar1;
+  BOOL BVar2;
+  void *pvVar3;
+  undefined1 local_res8 [32];
+  
+  if (param_1 != (void *)0x0) {
+    BVar2 = IsBadReadPtr(param_1,0x27c0);
+    if (((((BVar2 == 0) && (DAT_1803fa668 != (longlong *)0x0)) &&
+         (cVar1 = (**(code **)(*DAT_1803fa668 + 0xd0))(), cVar1 != '\0')) &&
+        ((pvVar3 = (void *)(**(code **)(*DAT_1803fa668 + 0x240))(), pvVar3 == param_1 &&
+         (DAT_1803fb230 == param_1)))) && (3 < DAT_1803fb244)) {
+      local_res8[0] = 0;
+      cVar1 = FUN_1800b6cf0(param_1);
+      if ((cVar1 != '\0') && (cVar1 = FUN_1800b6dc0(param_1,local_res8), cVar1 == '\0')) {
+        return 1;
+      }
+      return 0;
+    }
+  }
+  return 0;
+}
+
+
+)B1800b7530",
+    "51b7dc407cc64e4a1cf1844e95b531a5c4a6a5dbfd3f4d9601660e35766d729a",
+    R"F1800b7530C(FUN_1800b6cf0
+FUN_1800b6dc0)F1800b7530C",
+    R"F1800b7530D(DAT_1803fa668
+DAT_1803fb230
+DAT_1803fb244)F1800b7530D",
+    R"F1800b7530T()F1800b7530T",
+    R"F1800b7530F(15: if (param_1 != (void *)0x0) {
+17: if (((((BVar2 == 0) && (DAT_1803fa668 != (longlong *)0x0)) &&
+23: if ((cVar1 != '\0') && (cVar1 = FUN_1800b6dc0(param_1,local_res8), cVar1 == '\0')) {
+24: return 1;
+26: return 0;
+29: return 0;)F1800b7530F",
+    R"F1800b7530U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa668.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb230.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb244.
+TODO: resolve the indirect call in body 18: (cVar1 = (**(code **)(*DAT_1803fa668 + 0xd0))(), cVar1 != '\0')) &&.
+TODO: resolve the indirect call in body 19: ((pvVar3 = (void *)(**(code **)(*DAT_1803fa668 + 0x240))(), pvVar3 == param_1 &&.)F1800b7530U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b7530() noexcept {
+    return kFunction_0x1800b7530;
+}
+
+// 0x1800b75e0 FUN_1800b75e0
+// source: re/dump/decompile/0x1800b75e0_FUN_1800b75e0.c
+// size: 447 bytes; thunk: false
+// body sha256: c288bb4baf94ee8766bf50da7709fb9d1faa739093cf9cce85122945a6c161fa
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b75e0{
+    "0x1800b75e0",
+    "FUN_1800b75e0",
+    R"F1800b75e0S(undefined FUN_1800b75e0())F1800b75e0S",
+    R"B1800b75e0(// 0x1800b75e0  FUN_1800b75e0
+// size=447 thunk=false
+// signature: undefined FUN_1800b75e0()
+// status: ok
+
+
+void FUN_1800b75e0(void *param_1)
+
+{
+  int iVar1;
+  uint uVar2;
+  uint uVar3;
+  BOOL BVar4;
+  longlong lVar5;
+  double dVar6;
+  
+  if (DAT_1803facf8 == '\0') {
+    if ((DAT_1803fb230 != (void *)0x0) || (DAT_1803fb244 != 0)) {
+      FUN_1800b64b0();
+    }
+    DAT_1803fb0dc = 0;
+    return;
+  }
+  if (param_1 == (void *)0x0) {
+    return;
+  }
+  BVar4 = IsBadReadPtr(param_1,8);
+  if (BVar4 != 0) {
+    return;
+  }
+  if (DAT_1803fb230 != param_1) {
+    FUN_1800b64b0();
+    DAT_1803fb230 = param_1;
+  }
+  iVar1 = *(int *)((longlong)param_1 + 0x10);
+  if (-1 < DAT_1803db420) {
+    if (iVar1 == DAT_1803db420) {
+      return;
+    }
+    if ((iVar1 < DAT_1803db420) || (0x1000 < (longlong)iVar1 - (longlong)DAT_1803db420)) {
+      FUN_1800b64b0();
+      DAT_1803fb230 = param_1;
+    }
+  }
+  dVar6 = (double)FUN_1800b6430();
+  if (dVar6 <= 0.0) {
+    return;
+  }
+  DAT_1803db410 = DAT_1803db410 + 1 & 0x800000ff;
+  if ((int)DAT_1803db410 < 0) {
+    DAT_1803db410 = (DAT_1803db410 - 1 | 0xffffff00) + 1;
+  }
+  lVar5 = (longlong)(int)DAT_1803db410;
+  *(double *)(&DAT_1803fb250 + lVar5 * 0x18) = dVar6;
+  (&DAT_1803fb260)[lVar5 * 0x18] = 1;
+  uVar2 = *(uint *)((longlong)param_1 + 0x10);
+  *(uint *)(&DAT_1803fb258 + lVar5 * 0x18) = uVar2;
+  *(undefined4 *)(&DAT_1803fb25c + lVar5 * 0x18) = *(undefined4 *)((longlong)param_1 + 0x1c);
+  if (DAT_1803fb244 < 0x100) {
+    DAT_1803fb244 = DAT_1803fb244 + 1;
+  }
+  if (-1 < (int)uVar2) {
+    uVar3 = uVar2;
+    if (-1 < (int)DAT_1803db414) {
+      if ((int)DAT_1803db414 < (int)uVar2) {
+        uVar3 = uVar2 - 0x3f;
+        if ((int)(uVar2 - (DAT_1803db414 + 1)) < 0x40) {
+          uVar3 = DAT_1803db414 + 1;
+        }
+      }
+      else if (-1 < (int)DAT_1803db414) goto LAB_1800b776e;
+    }
+    for (; (int)uVar3 <= (int)uVar2; uVar3 = uVar3 + 1) {
+      (&DAT_1803fb130)[uVar3 & 0x3f] = uVar3;
+      (&DAT_1803fca50)[uVar3 & 0x3f] = 0xbf800000;
+    }
+    DAT_1803db414 = uVar2;
+    FUN_1800b6650(0);
+  }
+LAB_1800b776e:
+  if ((DAT_1803fb0dc & 0xfffffffd) == 0) {
+    DAT_1803fb0dc = 5;
+  }
+  DAT_1803db41c = *(undefined4 *)((longlong)param_1 + 0x1c);
+  DAT_1803db420 = iVar1;
+  return;
+}
+
+
+)B1800b75e0",
+    "c288bb4baf94ee8766bf50da7709fb9d1faa739093cf9cce85122945a6c161fa",
+    R"F1800b75e0C(FUN_1800b6430
+FUN_1800b64b0
+FUN_1800b6650)F1800b75e0C",
+    R"F1800b75e0D(LAB_1800b776e
+DAT_1803db410
+DAT_1803db414
+DAT_1803db41c
+DAT_1803db420
+DAT_1803facf8
+DAT_1803fb0dc
+DAT_1803fb130
+DAT_1803fb230
+DAT_1803fb244
+DAT_1803fb250
+DAT_1803fb258
+DAT_1803fb25c
+DAT_1803fb260
+DAT_1803fca50)F1800b75e0D",
+    R"F1800b75e0T()F1800b75e0T",
+    R"F1800b75e0F(17: if (DAT_1803facf8 == '\0') {
+18: if ((DAT_1803fb230 != (void *)0x0) || (DAT_1803fb244 != 0)) {
+22: return;
+24: if (param_1 == (void *)0x0) {
+25: return;
+28: if (BVar4 != 0) {
+29: return;
+31: if (DAT_1803fb230 != param_1) {
+36: if (-1 < DAT_1803db420) {
+37: if (iVar1 == DAT_1803db420) {
+38: return;
+40: if ((iVar1 < DAT_1803db420) || (0x1000 < (longlong)iVar1 - (longlong)DAT_1803db420)) {
+46: if (dVar6 <= 0.0) {
+47: return;
+50: if ((int)DAT_1803db410 < 0) {
+59: if (DAT_1803fb244 < 0x100) {
+62: if (-1 < (int)uVar2) {
+64: if (-1 < (int)DAT_1803db414) {
+65: if ((int)DAT_1803db414 < (int)uVar2) {
+67: if ((int)(uVar2 - (DAT_1803db414 + 1)) < 0x40) {
+71: else if (-1 < (int)DAT_1803db414) goto LAB_1800b776e;
+73: for (; (int)uVar3 <= (int)uVar2; uVar3 = uVar3 + 1) {
+80: LAB_1800b776e:
+81: if ((DAT_1803fb0dc & 0xfffffffd) == 0) {
+86: return;)F1800b75e0F",
+    R"F1800b75e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b776e.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db410.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db414.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db41c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db420.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facf8.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb0dc.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb130.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb230.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb244.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb250.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb258.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb25c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb260.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca50.)F1800b75e0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b75e0() noexcept {
+    return kFunction_0x1800b75e0;
+}
+
+// 0x1800b77a0 FUN_1800b77a0
+// source: re/dump/decompile/0x1800b77a0_FUN_1800b77a0.c
+// size: 1330 bytes; thunk: false
+// body sha256: 43eefe39e74002000c863f184811066157e9b156ccd073009114b6747fbfe8fc
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b77a0{
+    "0x1800b77a0",
+    "FUN_1800b77a0",
+    R"F1800b77a0S(undefined FUN_1800b77a0())F1800b77a0S",
+    R"B1800b77a0(// 0x1800b77a0  FUN_1800b77a0
+// size=1330 thunk=false
+// signature: undefined FUN_1800b77a0()
+// status: ok
+
+
+undefined8 FUN_1800b77a0(longlong *param_1,undefined8 *param_2)
+
+{
+  int iVar1;
+  char cVar2;
+  BOOL BVar3;
+  longlong *plVar4;
+  undefined8 uVar5;
+  uint uVar6;
+  longlong lVar7;
+  uint uVar8;
+  ulonglong uVar9;
+  undefined4 uVar10;
+  undefined4 extraout_XMM0_Da;
+  float fVar11;
+  undefined4 extraout_XMM0_Da_00;
+  undefined4 extraout_XMM0_Da_01;
+  undefined4 extraout_XMM0_Da_02;
+  undefined4 extraout_XMM0_Db;
+  undefined4 extraout_XMM0_Db_00;
+  double dVar12;
+  undefined4 extraout_XMM0_Db_01;
+  undefined4 extraout_XMM0_Db_02;
+  undefined4 uVar13;
+  undefined4 uVar14;
+  double *local_38 [6];
+  
+  if (DAT_1803facf8 == '\0') {
+    DAT_1803fb0dc = 0;
+    return 0;
+  }
+  if ((param_1 == (longlong *)0x0) || (param_2 == (undefined8 *)0x0)) {
+    DAT_1803fb0dc = 2;
+    return 0;
+  }
+  BVar3 = IsBadReadPtr(param_1,0x27c0);
+  if (BVar3 != 0) {
+    DAT_1803fb0dc = 2;
+    return 0;
+  }
+  if (DAT_1803fa668 == (longlong *)0x0) {
+    DAT_1803fb0dc = 2;
+    return 0;
+  }
+  cVar2 = (**(code **)(*DAT_1803fa668 + 0xd0))();
+  if (cVar2 == '\0') {
+    DAT_1803fb0dc = 2;
+    return 0;
+  }
+  plVar4 = (longlong *)(**(code **)(*DAT_1803fa668 + 0x240))();
+  if (plVar4 != param_1) {
+    DAT_1803fb0dc = 2;
+    return 0;
+  }
+  cVar2 = (**(code **)(*param_1 + 0x30))(param_1);
+  if (cVar2 != '\0') {
+    DAT_1803fb0dc = 3;
+    return 0;
+  }
+  cVar2 = (**(code **)(*param_1 + 0x40))(param_1);
+  if (cVar2 != '\0') {
+    DAT_1803fb0dc = 3;
+    return 0;
+  }
+  cVar2 = (**(code **)(*DAT_1803fa668 + 0x260))();
+  if (cVar2 != '\0') {
+    DAT_1803fb0dc = 3;
+    return 0;
+  }
+  cVar2 = (**(code **)(*param_1 + 0x38))(param_1);
+  if (cVar2 != '\0') {
+    DAT_1803fb0dc = 2;
+    return 0;
+  }
+  if (DAT_1803fb230 != param_1) {
+    FUN_1800b64b0();
+    DAT_1803fb230 = param_1;
+    DAT_1803fb0dc = 5;
+    return 0;
+  }
+  cVar2 = FUN_1800b6cf0(param_1);
+  if (cVar2 == '\0') {
+    uVar10 = FUN_1800b6430();
+    uVar8 = *(uint *)(param_1 + 2);
+    FUN_1800b6b50(uVar8,uVar10);
+    if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+       ((float)(&DAT_1803fca50)[uVar6] < 0.0)) {
+      if (((double)CONCAT44(extraout_XMM0_Db,extraout_XMM0_Da) < 0.0) ||
+         (uVar10 = extraout_XMM0_Da, uVar13 = extraout_XMM0_Db,
+         DAT_180380d38 <= (double)CONCAT44(extraout_XMM0_Db,extraout_XMM0_Da) &&
+         (double)CONCAT44(extraout_XMM0_Db,extraout_XMM0_Da) != DAT_180380d38)) {
+        uVar10 = 0;
+        uVar13 = 0;
+      }
+      (&DAT_1803fca50)[uVar6] = (float)(double)CONCAT44(uVar13,uVar10);
+      FUN_1800b6650(1);
+    }
+    DAT_1803fb0dc = 4;
+    return 0;
+  }
+  if ((((int)param_1[0x4f7] == 0x100) || ((int)param_1[0x4f7] == 0x1000)) &&
+     (iVar1 = *(int *)((longlong)param_1 + 0x27bc), (iVar1 - 8U & 0xfffffff7) == 0)) {
+    if ((param_1[0x49] == 0) && (param_1[0x71] == 0)) {
+      if ((0x1000 < *(uint *)(param_1 + 0x21)) || (0x1000 < *(uint *)(param_1 + 0x25)))
+      goto LAB_1800b7967;
+      if ((*(uint *)(param_1 + 0x21) == 0) && (*(uint *)(param_1 + 0x25) == 0)) {
+        uVar9 = 0;
+        lVar7 = 0;
+        if (0 < iVar1) {
+          do {
+            lVar7 = uVar9 * 0x1c;
+            if (*(int *)(lVar7 + 0x3cc + (longlong)param_1) != 0) goto LAB_1800b7c1a;
+            uVar8 = (int)uVar9 + 1;
+            uVar9 = (ulonglong)uVar8;
+          } while ((int)uVar8 < iVar1);
+        }
+        fVar11 = (float)FUN_1800b7350(CONCAT71((int7)((ulonglong)lVar7 >> 8),1));
+        if (DAT_180380964 < fVar11) {
+          dVar12 = (double)FUN_1800b6430();
+          if ((-1 < DAT_1803db41c) && (*(int *)((longlong)param_1 + 0x1c) != DAT_1803db41c)) {
+            DAT_1803db41c = *(int *)((longlong)param_1 + 0x1c);
+          }
+          local_38[0] = (double *)0x0;
+          cVar2 = FUN_1800b6fb0(param_1,SUB84(dVar12,0),fVar11,DAT_1803db384,local_38);
+          if ((cVar2 == '\0') || (local_38[0] == (double *)0x0)) {
+            uVar10 = 7;
+            if (DAT_1803fb244 < 4) {
+              uVar10 = 5;
+            }
+            uVar13 = FUN_1800b6430();
+            uVar8 = *(uint *)(param_1 + 2);
+            FUN_1800b6b50(uVar8,uVar13);
+            if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+               ((float)(&DAT_1803fca50)[uVar6] < 0.0)) {
+              if (((double)CONCAT44(extraout_XMM0_Db_01,extraout_XMM0_Da_01) < 0.0) ||
+                 (uVar13 = extraout_XMM0_Da_01, uVar14 = extraout_XMM0_Db_01,
+                 DAT_180380d38 <= (double)CONCAT44(extraout_XMM0_Db_01,extraout_XMM0_Da_01) &&
+                 (double)CONCAT44(extraout_XMM0_Db_01,extraout_XMM0_Da_01) != DAT_180380d38)) {
+                uVar13 = 0;
+                uVar14 = 0;
+              }
+              (&DAT_1803fca50)[uVar6] = (float)(double)CONCAT44(uVar14,uVar13);
+              FUN_1800b6650(1);
+            }
+            uVar5 = 0;
+            DAT_1803fb0dc = uVar10;
+          }
+          else {
+            *param_2 = param_1;
+            *(int *)(param_2 + 1) = (int)param_1[2];
+            *(undefined4 *)((longlong)param_2 + 0xc) = *(undefined4 *)((longlong)param_1 + 0x1c);
+            *(undefined4 *)(param_1 + 2) = *(undefined4 *)(local_38[0] + 1);
+            if (DAT_1803facf9 != '\0') {
+              *(undefined4 *)((longlong)param_1 + 0x1c) =
+                   *(undefined4 *)((longlong)local_38[0] + 0xc);
+            }
+            uVar8 = *(uint *)(local_38[0] + 1);
+            if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+               ((float)(&DAT_1803fca50)[uVar6] < 0.0)) {
+              dVar12 = dVar12 - *local_38[0];
+              if ((dVar12 < 0.0) || (DAT_180380d38 < dVar12)) {
+                dVar12 = 0.0;
+              }
+              (&DAT_1803fca50)[uVar6] = (float)dVar12;
+              FUN_1800b6650(1);
+            }
+            DAT_1803fb0dc = 8;
+            uVar5 = 1;
+          }
+          return uVar5;
+        }
+        uVar10 = FUN_1800b6430();
+        uVar8 = *(uint *)(param_1 + 2);
+        FUN_1800b6b50(uVar8,uVar10);
+        if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+           ((float)(&DAT_1803fca50)[uVar6] < 0.0)) {
+          if (((double)CONCAT44(extraout_XMM0_Db_00,extraout_XMM0_Da_00) < 0.0) ||
+             (uVar10 = extraout_XMM0_Da_00, uVar13 = extraout_XMM0_Db_00,
+             DAT_180380d38 <= (double)CONCAT44(extraout_XMM0_Db_00,extraout_XMM0_Da_00) &&
+             (double)CONCAT44(extraout_XMM0_Db_00,extraout_XMM0_Da_00) != DAT_180380d38)) {
+            uVar10 = 0;
+            uVar13 = 0;
+          }
+          (&DAT_1803fca50)[uVar6] = (float)(double)CONCAT44(uVar13,uVar10);
+          FUN_1800b6650(1);
+        }
+        DAT_1803fb0dc = 8;
+        return 0;
+      }
+    }
+LAB_1800b7c1a:
+    uVar10 = 6;
+  }
+  else {
+LAB_1800b7967:
+    uVar10 = 4;
+  }
+  uVar13 = FUN_1800b6430();
+  uVar8 = *(uint *)(param_1 + 2);
+  FUN_1800b6b50(uVar8,uVar13);
+  if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+     ((float)(&DAT_1803fca50)[uVar6] < 0.0)) {
+    if (((double)CONCAT44(extraout_XMM0_Db_02,extraout_XMM0_Da_02) < 0.0) ||
+       (uVar13 = extraout_XMM0_Da_02, uVar14 = extraout_XMM0_Db_02,
+       DAT_180380d38 <= (double)CONCAT44(extraout_XMM0_Db_02,extraout_XMM0_Da_02) &&
+       (double)CONCAT44(extraout_XMM0_Db_02,extraout_XMM0_Da_02) != DAT_180380d38)) {
+      uVar13 = 0;
+      uVar14 = 0;
+    }
+    (&DAT_1803fca50)[uVar6] = (float)(double)CONCAT44(uVar14,uVar13);
+    FUN_1800b6650(1);
+  }
+  DAT_1803fb0dc = uVar10;
+  return 0;
+}
+
+
+)B1800b77a0",
+    "43eefe39e74002000c863f184811066157e9b156ccd073009114b6747fbfe8fc",
+    R"F1800b77a0C(FUN_1800b6430
+FUN_1800b64b0
+FUN_1800b6650
+FUN_1800b6b50
+FUN_1800b6cf0
+FUN_1800b6fb0
+FUN_1800b7350)F1800b77a0C",
+    R"F1800b77a0D(LAB_1800b7967
+LAB_1800b7c1a
+DAT_180380964
+DAT_180380d38
+DAT_1803db384
+DAT_1803db41c
+DAT_1803fa668
+DAT_1803facf8
+DAT_1803facf9
+DAT_1803fb0dc
+DAT_1803fb130
+DAT_1803fb230
+DAT_1803fb244
+DAT_1803fca50)F1800b77a0D",
+    R"F1800b77a0T()F1800b77a0T",
+    R"F1800b77a0F(34: if (DAT_1803facf8 == '\0') {
+36: return 0;
+38: if ((param_1 == (longlong *)0x0) || (param_2 == (undefined8 *)0x0)) {
+40: return 0;
+43: if (BVar3 != 0) {
+45: return 0;
+47: if (DAT_1803fa668 == (longlong *)0x0) {
+49: return 0;
+52: if (cVar2 == '\0') {
+54: return 0;
+57: if (plVar4 != param_1) {
+59: return 0;
+62: if (cVar2 != '\0') {
+64: return 0;
+67: if (cVar2 != '\0') {
+69: return 0;
+72: if (cVar2 != '\0') {
+74: return 0;
+77: if (cVar2 != '\0') {
+79: return 0;
+81: if (DAT_1803fb230 != param_1) {
+85: return 0;
+88: if (cVar2 == '\0') {
+92: if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+94: if (((double)CONCAT44(extraout_XMM0_Db,extraout_XMM0_Da) < 0.0) ||
+105: return 0;
+107: if ((((int)param_1[0x4f7] == 0x100) || ((int)param_1[0x4f7] == 0x1000)) &&
+109: if ((param_1[0x49] == 0) && (param_1[0x71] == 0)) {
+110: if ((0x1000 < *(uint *)(param_1 + 0x21)) || (0x1000 < *(uint *)(param_1 + 0x25)))
+111: goto LAB_1800b7967;
+112: if ((*(uint *)(param_1 + 0x21) == 0) && (*(uint *)(param_1 + 0x25) == 0)) {
+115: if (0 < iVar1) {
+116: do {
+118: if (*(int *)(lVar7 + 0x3cc + (longlong)param_1) != 0) goto LAB_1800b7c1a;
+124: if (DAT_180380964 < fVar11) {
+126: if ((-1 < DAT_1803db41c) && (*(int *)((longlong)param_1 + 0x1c) != DAT_1803db41c)) {
+131: if ((cVar2 == '\0') || (local_38[0] == (double *)0x0)) {
+133: if (DAT_1803fb244 < 4) {
+139: if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+141: if (((double)CONCAT44(extraout_XMM0_Db_01,extraout_XMM0_Da_01) < 0.0) ||
+154: else {
+159: if (DAT_1803facf9 != '\0') {
+164: if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+167: if ((dVar12 < 0.0) || (DAT_180380d38 < dVar12)) {
+176: return uVar5;
+181: if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+183: if (((double)CONCAT44(extraout_XMM0_Db_00,extraout_XMM0_Da_00) < 0.0) ||
+194: return 0;
+197: LAB_1800b7c1a:
+200: else {
+201: LAB_1800b7967:
+207: if (((-1 < (int)uVar8) && (uVar6 = uVar8 & 0x3f, (&DAT_1803fb130)[uVar6] == uVar8)) &&
+209: if (((double)CONCAT44(extraout_XMM0_Db_02,extraout_XMM0_Da_02) < 0.0) ||
+220: return 0;)F1800b77a0F",
+    R"F1800b77a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b7967.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b7c1a.
+TODO: recover the declaration, type and value for global/data reference DAT_180380964.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d38.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db384.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db41c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa668.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facf8.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facf9.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb0dc.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb130.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb230.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb244.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fca50.
+TODO: resolve the indirect call in body 51: cVar2 = (**(code **)(*DAT_1803fa668 + 0xd0))();.
+TODO: resolve the indirect call in body 56: plVar4 = (longlong *)(**(code **)(*DAT_1803fa668 + 0x240))();.
+TODO: resolve the indirect call in body 61: cVar2 = (**(code **)(*param_1 + 0x30))(param_1);.
+TODO: resolve the indirect call in body 66: cVar2 = (**(code **)(*param_1 + 0x40))(param_1);.
+TODO: resolve the indirect call in body 71: cVar2 = (**(code **)(*DAT_1803fa668 + 0x260))();.
+TODO: resolve the indirect call in body 76: cVar2 = (**(code **)(*param_1 + 0x38))(param_1);.)F1800b77a0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b77a0() noexcept {
+    return kFunction_0x1800b77a0;
+}
+
+// 0x1800b7ce0 Features_FakePing_FakePingFeature_vfunc16
+// source: re/dump/decompile/0x1800b7ce0_Features_FakePing_FakePingFeature_vfunc16.c
+// size: 24 bytes; thunk: false
+// body sha256: 2f0da080c5d0595744e84cbec51b03e195a7b3904fc7e64ef29cdf677e267b3a
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b7ce0{
+    "0x1800b7ce0",
+    "Features_FakePing_FakePingFeature_vfunc16",
+    R"F1800b7ce0S(undefined Features_FakePing_FakePingFeature_vfunc16())F1800b7ce0S",
+    R"B1800b7ce0(// 0x1800b7ce0  Features_FakePing_FakePingFeature_vfunc16
+// size=24 thunk=false
+// signature: undefined Features_FakePing_FakePingFeature_vfunc16()
+// status: ok
+
+
+void Features_FakePing_FakePingFeature_vfunc16(void)
+
+{
+  FUN_1800b64b0();
+  DAT_1803fb0dc = 0;
+  return;
+}
+
+
+)B1800b7ce0",
+    "2f0da080c5d0595744e84cbec51b03e195a7b3904fc7e64ef29cdf677e267b3a",
+    R"F1800b7ce0C(FUN_1800b64b0)F1800b7ce0C",
+    R"F1800b7ce0D(DAT_1803fb0dc)F1800b7ce0D",
+    R"F1800b7ce0T()F1800b7ce0T",
+    R"F1800b7ce0F(12: return;)F1800b7ce0F",
+    R"F1800b7ce0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb0dc.)F1800b7ce0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b7ce0() noexcept {
+    return kFunction_0x1800b7ce0;
+}
+
+// 0x1800b7d00 Features_FakePing_FakePingFeature_vfunc01
+// source: re/dump/decompile/0x1800b7d00_Features_FakePing_FakePingFeature_vfunc01.c
+// size: 1095 bytes; thunk: false
+// body sha256: 7d7adfa3d400025d9eb6d7d7f7062298f6e82b1110e4077d289a61a546966739
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b7d00{
+    "0x1800b7d00",
+    "Features_FakePing_FakePingFeature_vfunc01",
+    R"F1800b7d00S(undefined Features_FakePing_FakePingFeature_vfunc01())F1800b7d00S",
+    R"B1800b7d00(// 0x1800b7d00  Features_FakePing_FakePingFeature_vfunc01
+// size=1095 thunk=false
+// signature: undefined Features_FakePing_FakePingFeature_vfunc01()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void Features_FakePing_FakePingFeature_vfunc01(void)
+
+{
+  undefined1 uVar1;
+  bool bVar2;
+  undefined4 uVar3;
+  uint uVar4;
+  char cVar5;
+  BOOL BVar6;
+  int iVar7;
+  undefined8 uVar8;
+  char *pcVar9;
+  int *piVar10;
+  undefined1 *puVar11;
+  longlong **pplVar12;
+  longlong *plVar13;
+  int iVar14;
+  float fVar15;
+  float fVar16;
+  undefined8 extraout_XMM0_Qa;
+  double dVar17;
+  longlong *local_40 [2];
+  
+  local_40[0]._0_4_ = 300;
+  uVar8 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar8 = FUN_180241610(uVar8,0x758f1875f440310a);
+  pcVar9 = (char *)FUN_1801fcfc0(uVar8);
+  cVar5 = *pcVar9;
+  uVar8 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar8 = FUN_180241610(uVar8,0x1fdde58283cebf32);
+  piVar10 = (int *)FUN_1802029c0(uVar8);
+  iVar14 = *piVar10;
+  local_40[0] = (longlong *)CONCAT44(local_40[0]._4_4_,iVar14);
+  uVar8 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar8 = FUN_180241610(uVar8,0x1d9ceb5d1400d87);
+  puVar11 = (undefined1 *)FUN_1801fcfc0(uVar8);
+  uVar1 = *puVar11;
+  uVar8 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar8 = FUN_180241610(uVar8,0xdfb199559e5fc2fa);
+  puVar11 = (undefined1 *)FUN_1801fcfc0(uVar8);
+  DAT_1803db384 = *puVar11;
+  pplVar12 = local_40;
+  if (iVar14 < 200) {
+    pplVar12 = (longlong **)&DAT_1803310a8;
+  }
+  if (0x37a < iVar14) {
+    pplVar12 = (longlong **)&DAT_180330f3c;
+  }
+  DAT_1803db424 = *(undefined4 *)pplVar12;
+  DAT_1803facf8 = cVar5;
+  DAT_1803facf9 = uVar1;
+  if (cVar5 == '\0') {
+    if ((DAT_1803fb230 != (longlong *)0x0) || (DAT_1803fb244 != 0)) {
+      FUN_1800b64b0();
+    }
+    DAT_1803fb0dc = 0;
+    return;
+  }
+  if (DAT_1803facfa == '\0') {
+    DAT_1803fb0dc = 1;
+    if (DAT_1803fd0f0 != '\0') {
+      DAT_1803fb0dc = 1;
+      return;
+    }
+    DAT_1803fd0f0 = 1;
+    FUN_180014410(&DAT_18034b7e0);
+    return;
+  }
+  if ((((DAT_1803fa668 == (longlong *)0x0) ||
+       (cVar5 = (**(code **)(*DAT_1803fa668 + 0xd0))(), cVar5 == '\0')) ||
+      (plVar13 = (longlong *)(**(code **)(*DAT_1803fa668 + 0x240))(), local_40[0] = plVar13,
+      plVar13 == (longlong *)0x0)) || (BVar6 = IsBadReadPtr(plVar13,8), BVar6 != 0)) {
+    if ((DAT_1803fb230 != (longlong *)0x0) || (DAT_1803fb244 != 0)) {
+      FUN_1800b64b0();
+    }
+    DAT_1803fb0dc = 2;
+    return;
+  }
+  if ((DAT_1803fb230 != (longlong *)0x0) && (DAT_1803fb230 != plVar13)) {
+    FUN_1800b64b0();
+    DAT_1803fb0dc = 5;
+  }
+  cVar5 = (**(code **)(*plVar13 + 0x30))(plVar13);
+  if ((cVar5 == '\0') && (cVar5 = (**(code **)(*plVar13 + 0x40))(plVar13), cVar5 == '\0')) {
+    cVar5 = (**(code **)(*DAT_1803fa668 + 0x260))();
+    bVar2 = false;
+    if (cVar5 == '\0') goto LAB_1800b7f63;
+  }
+  bVar2 = true;
+LAB_1800b7f63:
+  if (bVar2) {
+    if (DAT_1803fb244 != 0) {
+      FUN_1800b64b0();
+    }
+    DAT_1803fb230 = plVar13;
+    DAT_1803fb0dc = 3;
+    DAT_1803facfb = 0;
+    return;
+  }
+  cVar5 = FUN_1800b7530(plVar13);
+  if ((cVar5 == '\0') || (fVar15 = (float)FUN_1800b7350(1), fVar15 <= DAT_180380964)) {
+    DAT_1803facfb = 0;
+  }
+  else {
+    DAT_1803facfb = 1;
+  }
+  uVar4 = DAT_1803fb0dc;
+  if (((DAT_1803fb0dc < 4) || (DAT_1803fb248 <= 0.0)) ||
+     (fVar15 = DAT_1803fb248, DAT_180380bb0 <= DAT_1803fb248)) {
+    fVar15 = 0.0;
+  }
+  iVar14 = (int)(fVar15 * DAT_180381278 + DAT_180380ac0);
+  fVar15 = (float)FUN_1800b7350(1);
+  if (DAT_1803fa608 == 0) {
+    dVar17 = 0.0;
+  }
+  else {
+    dVar17 = *(double *)(DAT_1803fa608 + 0x10);
+  }
+  if (DAT_1803e9470 < iVar14) {
+    iVar7 = iVar14 - DAT_1803e9470;
+  }
+  else {
+    iVar7 = DAT_1803e9470 - iVar14;
+  }
+  if ((DAT_180380c90 < dVar17 - _DAT_1803ff2e0) &&
+     (((uVar4 != DAT_1803e749c || (0xf < iVar7)) || (DAT_180380d80 < dVar17 - _DAT_1803ff2e0)))) {
+    fVar16 = fVar15 * DAT_180381278 + DAT_180380ac0;
+    DAT_1803e749c = uVar4;
+    DAT_1803e9470 = iVar14;
+    _DAT_1803ff2e0 = dVar17;
+    plVar13 = (longlong *)(**(code **)(*DAT_1803fa668 + 0x240))();
+    iVar7 = DAT_1803fb244;
+    uVar1 = DAT_1803facfb;
+    uVar3 = DAT_1803db424;
+    fVar15 = DAT_180381384;
+    if (plVar13 != (longlong *)0x0) {
+      fVar15 = (float)(**(code **)(*plVar13 + 0x50))(plVar13,0);
+      fVar15 = fVar15 * DAT_180381278;
+    }
+    uVar8 = FUN_1800b6c60((double)fVar15);
+    FUN_180014410("[FAKEPING] %s: +%dms achieved of %dms wanted, real %.0fms (target total %dms) -> band centres at cmd age %dms, records=%d armed=%d\n"
+                  ,uVar8,iVar14,(int)fVar16,extraout_XMM0_Qa,uVar3,iVar14,iVar7,uVar1);
+    return;
+  }
+  return;
+}
+
+
+)B1800b7d00",
+    "7d7adfa3d400025d9eb6d7d7f7062298f6e82b1110e4077d289a61a546966739",
+    R"F1800b7d00C(FUN_180014410
+FUN_1800b64b0
+FUN_1800b6c60
+FUN_1800b7350
+FUN_1800b7530
+FUN_1801fcfc0
+FUN_1802029c0
+FUN_180241610)F1800b7d00C",
+    R"F1800b7d00D(LAB_1800b7f63
+DAT_180330f3c
+DAT_1803310a8
+DAT_18034b7e0
+DAT_180380964
+DAT_180380ac0
+DAT_180380bb0
+DAT_180380c90
+DAT_180380d80
+DAT_180381278
+DAT_180381384
+DAT_1803db384
+DAT_1803db424
+DAT_1803e749c
+DAT_1803e9470
+DAT_1803fa608
+DAT_1803fa668
+DAT_1803facf8
+DAT_1803facf9
+DAT_1803facfa
+DAT_1803facfb
+DAT_1803fadf0
+DAT_1803fb0dc
+DAT_1803fb230
+DAT_1803fb244
+DAT_1803fb248
+DAT_1803fd0f0)F1800b7d00D",
+    R"F1800b7d00T("[FAKEPING] %s: +%dms achieved of %dms wanted, real %.0fms (target total %dms) -> band centres at cmd age %dms, records=%d armed=%d\\n")F1800b7d00T",
+    R"F1800b7d00F(51: if (iVar14 < 200) {
+54: if (0x37a < iVar14) {
+60: if (cVar5 == '\0') {
+61: if ((DAT_1803fb230 != (longlong *)0x0) || (DAT_1803fb244 != 0)) {
+65: return;
+67: if (DAT_1803facfa == '\0') {
+69: if (DAT_1803fd0f0 != '\0') {
+71: return;
+75: return;
+77: if ((((DAT_1803fa668 == (longlong *)0x0) ||
+81: if ((DAT_1803fb230 != (longlong *)0x0) || (DAT_1803fb244 != 0)) {
+85: return;
+87: if ((DAT_1803fb230 != (longlong *)0x0) && (DAT_1803fb230 != plVar13)) {
+92: if ((cVar5 == '\0') && (cVar5 = (**(code **)(*plVar13 + 0x40))(plVar13), cVar5 == '\0')) {
+95: if (cVar5 == '\0') goto LAB_1800b7f63;
+98: LAB_1800b7f63:
+99: if (bVar2) {
+100: if (DAT_1803fb244 != 0) {
+106: return;
+109: if ((cVar5 == '\0') || (fVar15 = (float)FUN_1800b7350(1), fVar15 <= DAT_180380964)) {
+112: else {
+116: if (((DAT_1803fb0dc < 4) || (DAT_1803fb248 <= 0.0)) ||
+122: if (DAT_1803fa608 == 0) {
+125: else {
+128: if (DAT_1803e9470 < iVar14) {
+131: else {
+134: if ((DAT_180380c90 < dVar17 - _DAT_1803ff2e0) &&
+145: if (plVar13 != (longlong *)0x0) {
+152: return;
+154: return;)F1800b7d00F",
+    R"F1800b7d00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b7f63.
+TODO: recover the declaration, type and value for global/data reference DAT_180330f3c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803310a8.
+TODO: recover the declaration, type and value for global/data reference DAT_18034b7e0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380964.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ac0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380c90.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d80.
+TODO: recover the declaration, type and value for global/data reference DAT_180381278.
+TODO: recover the declaration, type and value for global/data reference DAT_180381384.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db384.
+TODO: recover the declaration, type and value for global/data reference DAT_1803db424.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e749c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e9470.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa668.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facf8.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facf9.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facfa.
+TODO: recover the declaration, type and value for global/data reference DAT_1803facfb.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb0dc.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb230.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb244.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fb248.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fd0f0.
+TODO: resolve the indirect call in body 78: (cVar5 = (**(code **)(*DAT_1803fa668 + 0xd0))(), cVar5 == '\0')) ||.
+TODO: resolve the indirect call in body 79: (plVar13 = (longlong *)(**(code **)(*DAT_1803fa668 + 0x240))(), local_40[0] = plVar13,.
+TODO: resolve the indirect call in body 91: cVar5 = (**(code **)(*plVar13 + 0x30))(plVar13);.
+TODO: resolve the indirect call in body 92: if ((cVar5 == '\0') && (cVar5 = (**(code **)(*plVar13 + 0x40))(plVar13), cVar5 == '\0')) {.
+TODO: resolve the indirect call in body 93: cVar5 = (**(code **)(*DAT_1803fa668 + 0x260))();.
+TODO: resolve the indirect call in body 140: plVar13 = (longlong *)(**(code **)(*DAT_1803fa668 + 0x240))();.
+TODO: resolve the indirect call in body 146: fVar15 = (float)(**(code **)(*plVar13 + 0x50))(plVar13,0);.)F1800b7d00U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b7d00() noexcept {
+    return kFunction_0x1800b7d00;
+}
+
+// 0x1800b8160 FUN_1800b8160
+// source: re/dump/decompile/0x1800b8160_FUN_1800b8160.c
+// size: 62 bytes; thunk: false
+// body sha256: 4e0529b411bc4e011f96420f7f1a8c6965bfc6dc40bcdb2f87c50a1ef850c75e
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8160{
+    "0x1800b8160",
+    "FUN_1800b8160",
+    R"F1800b8160S(undefined FUN_1800b8160())F1800b8160S",
+    R"B1800b8160(// 0x1800b8160  FUN_1800b8160
+// size=62 thunk=false
+// signature: undefined FUN_1800b8160()
+// status: ok
+
+
+undefined1 FUN_1800b8160(void)
+
+{
+  undefined8 uVar1;
+  undefined1 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0xf877df6876fb9434);
+  puVar2 = (undefined1 *)FUN_1801fcfc0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b8160",
+    "4e0529b411bc4e011f96420f7f1a8c6965bfc6dc40bcdb2f87c50a1ef850c75e",
+    R"F1800b8160C(FUN_1801fcfc0
+FUN_180241610)F1800b8160C",
+    R"F1800b8160D(DAT_1803fadf0)F1800b8160D",
+    R"F1800b8160T()F1800b8160T",
+    R"F1800b8160F(16: return *puVar2;)F1800b8160F",
+    R"F1800b8160U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b8160U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8160() noexcept {
+    return kFunction_0x1800b8160;
+}
+
+// 0x1800b81b0 FUN_1800b81b0
+// source: re/dump/decompile/0x1800b81b0_FUN_1800b81b0.c
+// size: 62 bytes; thunk: false
+// body sha256: 133acb8234d4628a2b8c8de2c88cf1d273386d4603d2b3c118768765a7b36535
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b81b0{
+    "0x1800b81b0",
+    "FUN_1800b81b0",
+    R"F1800b81b0S(undefined FUN_1800b81b0())F1800b81b0S",
+    R"B1800b81b0(// 0x1800b81b0  FUN_1800b81b0
+// size=62 thunk=false
+// signature: undefined FUN_1800b81b0()
+// status: ok
+
+
+undefined1 FUN_1800b81b0(void)
+
+{
+  undefined8 uVar1;
+  undefined1 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0x604d6bbb4537d70d);
+  puVar2 = (undefined1 *)FUN_1801fcfc0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b81b0",
+    "133acb8234d4628a2b8c8de2c88cf1d273386d4603d2b3c118768765a7b36535",
+    R"F1800b81b0C(FUN_1801fcfc0
+FUN_180241610)F1800b81b0C",
+    R"F1800b81b0D(DAT_1803fadf0)F1800b81b0D",
+    R"F1800b81b0T()F1800b81b0T",
+    R"F1800b81b0F(16: return *puVar2;)F1800b81b0F",
+    R"F1800b81b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b81b0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b81b0() noexcept {
+    return kFunction_0x1800b81b0;
+}
+
+// 0x1800b8200 FUN_1800b8200
+// source: re/dump/decompile/0x1800b8200_FUN_1800b8200.c
+// size: 62 bytes; thunk: false
+// body sha256: dd0fce8f76b0c2d41c0ecedcd406e686b1fd0b2cc0f16762c46391a8335bbbb1
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8200{
+    "0x1800b8200",
+    "FUN_1800b8200",
+    R"F1800b8200S(undefined FUN_1800b8200())F1800b8200S",
+    R"B1800b8200(// 0x1800b8200  FUN_1800b8200
+// size=62 thunk=false
+// signature: undefined FUN_1800b8200()
+// status: ok
+
+
+undefined1 FUN_1800b8200(void)
+
+{
+  undefined8 uVar1;
+  undefined1 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0xe0c32a7e4da84b2e);
+  puVar2 = (undefined1 *)FUN_1801fcfc0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b8200",
+    "dd0fce8f76b0c2d41c0ecedcd406e686b1fd0b2cc0f16762c46391a8335bbbb1",
+    R"F1800b8200C(FUN_1801fcfc0
+FUN_180241610)F1800b8200C",
+    R"F1800b8200D(DAT_1803fadf0)F1800b8200D",
+    R"F1800b8200T()F1800b8200T",
+    R"F1800b8200F(16: return *puVar2;)F1800b8200F",
+    R"F1800b8200U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b8200U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8200() noexcept {
+    return kFunction_0x1800b8200;
+}
+
+// 0x1800b8250 FUN_1800b8250
+// source: re/dump/decompile/0x1800b8250_FUN_1800b8250.c
+// size: 61 bytes; thunk: false
+// body sha256: 500ca3b7258f5502c9c4f0c85666273a48bfd65e3bb348fe11664b2a86050e9b
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8250{
+    "0x1800b8250",
+    "FUN_1800b8250",
+    R"F1800b8250S(undefined FUN_1800b8250())F1800b8250S",
+    R"B1800b8250(// 0x1800b8250  FUN_1800b8250
+// size=61 thunk=false
+// signature: undefined FUN_1800b8250()
+// status: ok
+
+
+undefined4 FUN_1800b8250(void)
+
+{
+  undefined8 uVar1;
+  undefined4 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0x80da9dc943fdf3cc);
+  puVar2 = (undefined4 *)FUN_1802029c0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b8250",
+    "500ca3b7258f5502c9c4f0c85666273a48bfd65e3bb348fe11664b2a86050e9b",
+    R"F1800b8250C(FUN_1802029c0
+FUN_180241610)F1800b8250C",
+    R"F1800b8250D(DAT_1803fadf0)F1800b8250D",
+    R"F1800b8250T()F1800b8250T",
+    R"F1800b8250F(16: return *puVar2;)F1800b8250F",
+    R"F1800b8250U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b8250U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8250() noexcept {
+    return kFunction_0x1800b8250;
+}
+
+// 0x1800b8290 FUN_1800b8290
+// source: re/dump/decompile/0x1800b8290_FUN_1800b8290.c
+// size: 62 bytes; thunk: false
+// body sha256: 18ed45e885711a93a99a96a1a401a9205da85e60b05de88990d28ff49e2e48ef
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8290{
+    "0x1800b8290",
+    "FUN_1800b8290",
+    R"F1800b8290S(undefined FUN_1800b8290())F1800b8290S",
+    R"B1800b8290(// 0x1800b8290  FUN_1800b8290
+// size=62 thunk=false
+// signature: undefined FUN_1800b8290()
+// status: ok
+
+
+undefined1 FUN_1800b8290(void)
+
+{
+  undefined8 uVar1;
+  undefined1 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0xf56e486121667a2b);
+  puVar2 = (undefined1 *)FUN_1801fcfc0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b8290",
+    "18ed45e885711a93a99a96a1a401a9205da85e60b05de88990d28ff49e2e48ef",
+    R"F1800b8290C(FUN_1801fcfc0
+FUN_180241610)F1800b8290C",
+    R"F1800b8290D(DAT_1803fadf0)F1800b8290D",
+    R"F1800b8290T()F1800b8290T",
+    R"F1800b8290F(16: return *puVar2;)F1800b8290F",
+    R"F1800b8290U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b8290U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8290() noexcept {
+    return kFunction_0x1800b8290;
+}
+
+// 0x1800b82e0 FUN_1800b82e0
+// source: re/dump/decompile/0x1800b82e0_FUN_1800b82e0.c
+// size: 61 bytes; thunk: false
+// body sha256: d594a1345da5373cee6c3b4f07f243860fba3cac9c86e1d53ef709bb52dc7124
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b82e0{
+    "0x1800b82e0",
+    "FUN_1800b82e0",
+    R"F1800b82e0S(undefined FUN_1800b82e0())F1800b82e0S",
+    R"B1800b82e0(// 0x1800b82e0  FUN_1800b82e0
+// size=61 thunk=false
+// signature: undefined FUN_1800b82e0()
+// status: ok
+
+
+undefined4 FUN_1800b82e0(void)
+
+{
+  undefined8 uVar1;
+  undefined4 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0x896c5505eb940c1d);
+  puVar2 = (undefined4 *)FUN_1802029c0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b82e0",
+    "d594a1345da5373cee6c3b4f07f243860fba3cac9c86e1d53ef709bb52dc7124",
+    R"F1800b82e0C(FUN_1802029c0
+FUN_180241610)F1800b82e0C",
+    R"F1800b82e0D(DAT_1803fadf0)F1800b82e0D",
+    R"F1800b82e0T()F1800b82e0T",
+    R"F1800b82e0F(16: return *puVar2;)F1800b82e0F",
+    R"F1800b82e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b82e0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b82e0() noexcept {
+    return kFunction_0x1800b82e0;
+}
+
+// 0x1800b8320 FUN_1800b8320
+// source: re/dump/decompile/0x1800b8320_FUN_1800b8320.c
+// size: 62 bytes; thunk: false
+// body sha256: fd957dd6d6ed366e9c47173efcdca77c9fca0cba0ff8072fd904f3aac3fe8e47
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8320{
+    "0x1800b8320",
+    "FUN_1800b8320",
+    R"F1800b8320S(undefined FUN_1800b8320())F1800b8320S",
+    R"B1800b8320(// 0x1800b8320  FUN_1800b8320
+// size=62 thunk=false
+// signature: undefined FUN_1800b8320()
+// status: ok
+
+
+undefined1 FUN_1800b8320(void)
+
+{
+  undefined8 uVar1;
+  undefined1 *puVar2;
+  
+  uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+  uVar1 = FUN_180241610(uVar1,0xdf7c8b38eaee4e25);
+  puVar2 = (undefined1 *)FUN_1801fcfc0(uVar1);
+  return *puVar2;
+}
+
+
+)B1800b8320",
+    "fd957dd6d6ed366e9c47173efcdca77c9fca0cba0ff8072fd904f3aac3fe8e47",
+    R"F1800b8320C(FUN_1801fcfc0
+FUN_180241610)F1800b8320C",
+    R"F1800b8320D(DAT_1803fadf0)F1800b8320D",
+    R"F1800b8320T()F1800b8320T",
+    R"F1800b8320F(16: return *puVar2;)F1800b8320F",
+    R"F1800b8320U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.)F1800b8320U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8320() noexcept {
+    return kFunction_0x1800b8320;
+}
+
+// 0x1800b8370 FUN_1800b8370
+// source: re/dump/decompile/0x1800b8370_FUN_1800b8370.c
+// size: 45 bytes; thunk: false
+// body sha256: bfe125eeee47e028ba487536faad6fa29d0dd2d86a48575c4d9de055aab13816
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8370{
+    "0x1800b8370",
+    "FUN_1800b8370",
+    R"F1800b8370S(undefined FUN_1800b8370())F1800b8370S",
+    R"B1800b8370(// 0x1800b8370  FUN_1800b8370
+// size=45 thunk=false
+// signature: undefined FUN_1800b8370()
+// status: ok
+
+
+undefined1 FUN_1800b8370(void)
+
+{
+  char cVar1;
+  
+  if (DAT_18042586a != '\0') {
+    cVar1 = FUN_18006b0e0();
+    if (cVar1 == '\0') {
+      cVar1 = FUN_1800b81b0();
+      if (cVar1 != '\0') {
+        return 1;
+      }
+    }
+  }
+  return 0;
+}
+
+
+)B1800b8370",
+    "bfe125eeee47e028ba487536faad6fa29d0dd2d86a48575c4d9de055aab13816",
+    R"F1800b8370C(FUN_18006b0e0
+FUN_1800b81b0)F1800b8370C",
+    R"F1800b8370D(DAT_18042586a)F1800b8370D",
+    R"F1800b8370T()F1800b8370T",
+    R"F1800b8370F(12: if (DAT_18042586a != '\0') {
+14: if (cVar1 == '\0') {
+16: if (cVar1 != '\0') {
+17: return 1;
+21: return 0;)F1800b8370F",
+    R"F1800b8370U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18042586a.)F1800b8370U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8370() noexcept {
+    return kFunction_0x1800b8370;
+}
+
+// 0x1800b83a0 FUN_1800b83a0
+// source: re/dump/decompile/0x1800b83a0_FUN_1800b83a0.c
+// size: 187 bytes; thunk: false
+// body sha256: 2d88a160cf785189d753959a592bd3da5ee364a97ac56c5ddd6f5727bcf6044a
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b83a0{
+    "0x1800b83a0",
+    "FUN_1800b83a0",
+    R"F1800b83a0S(undefined FUN_1800b83a0())F1800b83a0S",
+    R"B1800b83a0(// 0x1800b83a0  FUN_1800b83a0
+// size=187 thunk=false
+// signature: undefined FUN_1800b83a0()
+// status: ok
+
+
+bool FUN_1800b83a0(void)
+
+{
+  int iVar1;
+  char cVar2;
+  int iVar3;
+  int iVar4;
+  longlong lVar5;
+  float fVar6;
+  
+  if (((DAT_18042586a != '\0') && (cVar2 = FUN_18006b0e0(), iVar1 = DAT_1803ff708, cVar2 == '\0'))
+     && (iVar4 = 0, 0 < DAT_1803ff708)) {
+    do {
+      lVar5 = (longlong)iVar4 * 0x58;
+      if (((char *)(&DAT_1803eb898)[(longlong)iVar4 * 0xb] != (char *)0x0) &&
+         (iVar3 = strcmp((char *)(&DAT_1803eb898)[(longlong)iVar4 * 0xb],"player_hurt"), iVar3 == 0)
+         ) {
+        if (lVar5 == -0x1803eb890) {
+          return false;
+        }
+        if ((&DAT_1803eb8e4)[lVar5] == '\0') {
+          return false;
+        }
+        if (DAT_1803e8708 < DAT_180381438) {
+          return false;
+        }
+        if (DAT_1803fa608 == 0) {
+          fVar6 = 0.0;
+        }
+        else {
+          fVar6 = (float)*(double *)(DAT_1803fa608 + 0x10);
+        }
+        return fVar6 - DAT_1803e8708 <= DAT_180381094;
+      }
+      iVar4 = iVar4 + 1;
+    } while (iVar4 < iVar1);
+  }
+  return false;
+}
+
+
+)B1800b83a0",
+    "2d88a160cf785189d753959a592bd3da5ee364a97ac56c5ddd6f5727bcf6044a",
+    R"F1800b83a0C(FUN_18006b0e0)F1800b83a0C",
+    R"F1800b83a0D(DAT_180381094
+DAT_180381438
+DAT_1803e8708
+DAT_1803eb898
+DAT_1803eb8e4
+DAT_1803fa608
+DAT_1803ff708
+DAT_18042586a)F1800b83a0D",
+    R"F1800b83a0T("player_hurt")F1800b83a0T",
+    R"F1800b83a0F(17: if (((DAT_18042586a != '\0') && (cVar2 = FUN_18006b0e0(), iVar1 = DAT_1803ff708, cVar2 == '\0'))
+19: do {
+21: if (((char *)(&DAT_1803eb898)[(longlong)iVar4 * 0xb] != (char *)0x0) &&
+24: if (lVar5 == -0x1803eb890) {
+25: return false;
+27: if ((&DAT_1803eb8e4)[lVar5] == '\0') {
+28: return false;
+30: if (DAT_1803e8708 < DAT_180381438) {
+31: return false;
+33: if (DAT_1803fa608 == 0) {
+36: else {
+39: return fVar6 - DAT_1803e8708 <= DAT_180381094;
+44: return false;)F1800b83a0F",
+    R"F1800b83a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_180381094.
+TODO: recover the declaration, type and value for global/data reference DAT_180381438.
+TODO: recover the declaration, type and value for global/data reference DAT_1803e8708.
+TODO: recover the declaration, type and value for global/data reference DAT_1803eb898.
+TODO: recover the declaration, type and value for global/data reference DAT_1803eb8e4.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1803ff708.
+TODO: recover the declaration, type and value for global/data reference DAT_18042586a.)F1800b83a0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b83a0() noexcept {
+    return kFunction_0x1800b83a0;
+}
+
+// 0x1800b8460 FUN_1800b8460
+// source: re/dump/decompile/0x1800b8460_FUN_1800b8460.c
+// size: 215 bytes; thunk: false
+// body sha256: 9697003b2be04402f95799236ff5c2e19ab715b76f92dc0cbeebba8fc34185c9
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8460{
+    "0x1800b8460",
+    "FUN_1800b8460",
+    R"F1800b8460S(undefined FUN_1800b8460())F1800b8460S",
+    R"B1800b8460(// 0x1800b8460  FUN_1800b8460
+// size=215 thunk=false
+// signature: undefined FUN_1800b8460()
+// status: ok
+
+
+char * FUN_1800b8460(undefined4 param_1)
+
+{
+  switch(param_1) {
+  case 0:
+    return "latch";
+  case 1:
+    return "move";
+  case 2:
+    return "move+180";
+  case 3:
+    return "goal";
+  case 4:
+    return "twist";
+  case 5:
+    return "feet";
+  case 6:
+    return "180";
+  case 7:
+    return "zero";
+  case 8:
+    return "desync:L";
+  case 9:
+    return "desync:R";
+  case 10:
+    return "+45";
+  case 0xb:
+    return "-45";
+  case 0xc:
+    return "+90";
+  case 0xd:
+    return "-90";
+  case 0xe:
+    return "+135";
+  case 0xf:
+    return "-135";
+  case 0x10:
+    return "sim:legit";
+  case 0x11:
+    return "sim:opposite";
+  case 0x12:
+    return "sim:left";
+  case 0x13:
+    return "sim:right";
+  case 0x14:
+    return "sim:jitter";
+  case 0x15:
+    return "sim:pattern";
+  default:
+    return "?";
+  }
+}
+
+
+)B1800b8460",
+    "9697003b2be04402f95799236ff5c2e19ab715b76f92dc0cbeebba8fc34185c9",
+    R"F1800b8460C()F1800b8460C",
+    R"F1800b8460D()F1800b8460D",
+    R"F1800b8460T("?"
+"+45"
+"+90"
+"-45"
+"-90"
+"180"
+"+135"
+"-135"
+"feet"
+"goal"
+"move"
+"zero"
+"latch"
+"twist"
+"desync:L"
+"desync:R"
+"move+180"
+"sim:left"
+"sim:legit"
+"sim:right"
+"sim:jitter"
+"sim:pattern"
+"sim:opposite")F1800b8460T",
+    R"F1800b8460F(10: switch(param_1) {
+11: case 0:
+12: return "latch";
+13: case 1:
+14: return "move";
+15: case 2:
+16: return "move+180";
+17: case 3:
+18: return "goal";
+19: case 4:
+20: return "twist";
+21: case 5:
+22: return "feet";
+23: case 6:
+24: return "180";
+25: case 7:
+26: return "zero";
+27: case 8:
+28: return "desync:L";
+29: case 9:
+30: return "desync:R";
+31: case 10:
+32: return "+45";
+33: case 0xb:
+34: return "-45";
+35: case 0xc:
+36: return "+90";
+37: case 0xd:
+38: return "-90";
+39: case 0xe:
+40: return "+135";
+41: case 0xf:
+42: return "-135";
+43: case 0x10:
+44: return "sim:legit";
+45: case 0x11:
+46: return "sim:opposite";
+47: case 0x12:
+48: return "sim:left";
+49: case 0x13:
+50: return "sim:right";
+51: case 0x14:
+52: return "sim:jitter";
+53: case 0x15:
+54: return "sim:pattern";
+56: return "?";)F1800b8460F",
+    R"F1800b8460U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b8460U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8460() noexcept {
+    return kFunction_0x1800b8460;
+}
+
+// 0x1800b8590 FUN_1800b8590
+// source: re/dump/decompile/0x1800b8590_FUN_1800b8590.c
+// size: 340 bytes; thunk: false
+// body sha256: ff90884762fe8f7a9bafde3931c04d0bc1f1b7ced1686fa275c20e1a2284254e
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8590{
+    "0x1800b8590",
+    "FUN_1800b8590",
+    R"F1800b8590S(undefined FUN_1800b8590())F1800b8590S",
+    R"B1800b8590(// 0x1800b8590  FUN_1800b8590
+// size=340 thunk=false
+// signature: undefined FUN_1800b8590()
+// status: ok
+
+
+undefined4 * FUN_1800b8590(undefined4 *param_1)
+
+{
+  *param_1 = 0xffffffff;
+  *(undefined8 *)(param_1 + 1) = 0;
+  *(undefined8 *)(param_1 + 3) = 0;
+  *(undefined8 *)(param_1 + 5) = 0;
+  *(undefined1 *)(param_1 + 7) = 0;
+  *(undefined8 *)(param_1 + 8) = 0;
+  *(undefined8 *)(param_1 + 10) = 0;
+  *(undefined8 *)(param_1 + 0xc) = 0;
+  *(undefined8 *)(param_1 + 0xe) = 0;
+  *(undefined8 *)(param_1 + 0x10) = 0;
+  *(undefined8 *)(param_1 + 0x32) = 0;
+  *(undefined8 *)(param_1 + 0x12) = 0;
+  param_1[0x14] = 0;
+  param_1[0x15] = 0xc47a0000;
+  param_1[0x16] = 0;
+  *(undefined1 *)(param_1 + 0x17) = 0;
+  *(undefined8 *)(param_1 + 0x18) = 0;
+  *(undefined1 *)(param_1 + 0x1a) = 0;
+  param_1[0x1b] = 0;
+  param_1[0x1c] = 0xffffffff;
+  param_1[0x1d] = 0;
+  param_1[0x1e] = 0xc47a0000;
+  *(undefined8 *)(param_1 + 0x20) = 0;
+  param_1[0x22] = 0;
+  *(undefined1 *)(param_1 + 0x23) = 0;
+  *(undefined8 *)(param_1 + 0x24) = 0;
+  *(undefined2 *)(param_1 + 0x26) = 0;
+  *(undefined8 *)(param_1 + 0x27) = 0;
+  *(undefined1 *)(param_1 + 0x29) = 0;
+  param_1[0x2a] = 0;
+  *(undefined1 *)(param_1 + 0x2b) = 0;
+  param_1[0x2c] = 0;
+  *(undefined1 *)(param_1 + 0x2d) = 0;
+  param_1[0x2e] = 0;
+  *(undefined1 *)(param_1 + 0x2f) = 0;
+  *(undefined8 *)(param_1 + 0x30) = 0;
+  *(undefined1 *)(param_1 + 0x34) = 0;
+  param_1[0x38] = 0;
+  param_1[0x3b] = 0;
+  param_1[0x3e] = 0;
+  param_1[0x41] = 0;
+  param_1[0x44] = 0;
+  param_1[0x47] = 0;
+  *(undefined8 *)(param_1 + 0x36) = 0;
+  *(undefined8 *)(param_1 + 0x39) = 0;
+  *(undefined8 *)(param_1 + 0x3c) = 0;
+  *(undefined8 *)(param_1 + 0x3f) = 0;
+  *(undefined8 *)(param_1 + 0x42) = 0;
+  *(undefined8 *)(param_1 + 0x45) = 0;
+  *(undefined1 *)(param_1 + 0x48) = 0;
+  *(undefined8 *)(param_1 + 0x4a) = 0;
+  *(undefined8 *)(param_1 + 0x4c) = 0;
+  *(undefined2 *)(param_1 + 0x4e) = 0;
+  *(undefined8 *)(param_1 + 0x50) = 0;
+  *(undefined8 *)(param_1 + 0x52) = 0;
+  *(undefined8 *)(param_1 + 0x54) = 0;
+  *(undefined8 *)(param_1 + 0x56) = 0;
+  *(undefined2 *)(param_1 + 0x58) = 0;
+  *(undefined1 *)((longlong)param_1 + 0x162) = 0;
+  return param_1;
+}
+
+
+)B1800b8590",
+    "ff90884762fe8f7a9bafde3931c04d0bc1f1b7ced1686fa275c20e1a2284254e",
+    R"F1800b8590C()F1800b8590C",
+    R"F1800b8590D()F1800b8590D",
+    R"F1800b8590T()F1800b8590T",
+    R"F1800b8590F(69: return param_1;)F1800b8590F",
+    R"F1800b8590U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b8590U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8590() noexcept {
+    return kFunction_0x1800b8590;
+}
+
+// 0x1800b86f0 FUN_1800b86f0
+// source: re/dump/decompile/0x1800b86f0_FUN_1800b86f0.c
+// size: 73 bytes; thunk: false
+// body sha256: 0893ab6a3feeaa13c9638505d3c03a0c42305cbe813625e4e03ac13a2426bc94
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b86f0{
+    "0x1800b86f0",
+    "FUN_1800b86f0",
+    R"F1800b86f0S(undefined FUN_1800b86f0())F1800b86f0S",
+    R"B1800b86f0(// 0x1800b86f0  FUN_1800b86f0
+// size=73 thunk=false
+// signature: undefined FUN_1800b86f0()
+// status: ok
+
+
+ulonglong FUN_1800b86f0(void)
+
+{
+  ulonglong in_RAX;
+  undefined8 uVar1;
+  byte *pbVar2;
+  ulonglong uVar3;
+  
+  if (DAT_180409cb4 == '\0') {
+    uVar3 = in_RAX & 0xffffffffffffff00;
+  }
+  else {
+    uVar1 = FUN_180241610(&DAT_1803fadf0,0x2d8f695138585a77);
+    uVar1 = FUN_180241610(uVar1,0x5b93262b0c9c00e0);
+    pbVar2 = (byte *)FUN_1801fcfc0(uVar1);
+    uVar3 = (ulonglong)*pbVar2;
+  }
+  return uVar3;
+}
+
+
+)B1800b86f0",
+    "0893ab6a3feeaa13c9638505d3c03a0c42305cbe813625e4e03ac13a2426bc94",
+    R"F1800b86f0C(FUN_1801fcfc0
+FUN_180241610)F1800b86f0C",
+    R"F1800b86f0D(DAT_1803fadf0
+DAT_180409cb4)F1800b86f0D",
+    R"F1800b86f0T()F1800b86f0T",
+    R"F1800b86f0F(15: if (DAT_180409cb4 == '\0') {
+18: else {
+24: return uVar3;)F1800b86f0F",
+    R"F1800b86f0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.
+TODO: recover the declaration, type and value for global/data reference DAT_180409cb4.)F1800b86f0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b86f0() noexcept {
+    return kFunction_0x1800b86f0;
+}
+
+// 0x1800b8740 FUN_1800b8740
+// source: re/dump/decompile/0x1800b8740_FUN_1800b8740.c
+// size: 602 bytes; thunk: false
+// body sha256: 0fbcf9fcef6c283f6db7960809d150446989fcee5a3aa56aace8c789ceb07b62
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8740{
+    "0x1800b8740",
+    "FUN_1800b8740",
+    R"F1800b8740S(undefined FUN_1800b8740())F1800b8740S",
+    R"B1800b8740(// 0x1800b8740  FUN_1800b8740
+// size=602 thunk=false
+// signature: undefined FUN_1800b8740()
+// status: ok
+
+
+void FUN_1800b8740(int param_1)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined1 uVar5;
+  undefined4 uVar6;
+  undefined8 uVar7;
+  undefined8 uVar8;
+  undefined8 uVar9;
+  undefined8 uVar10;
+  undefined8 *puVar11;
+  undefined8 *puVar12;
+  longlong lVar13;
+  undefined8 *puVar14;
+  undefined8 *puVar15;
+  longlong lVar16;
+  undefined8 local_3d8 [96];
+  undefined8 local_d8;
+  undefined8 local_d0;
+  undefined8 local_c8;
+  
+  if (param_1 - 1U < 0x80) {
+    lVar16 = (longlong)param_1;
+    lVar13 = lVar16 * 0x168;
+    uVar1 = *(undefined4 *)((longlong)&DAT_180561104 + lVar13 + 4);
+    uVar5 = (&DAT_18056110c)[lVar13];
+    uVar2 = *(undefined4 *)(&DAT_18056118c + lVar16 * 0x2d);
+    uVar6 = *(undefined4 *)(&DAT_180561138 + lVar16 * 0x2d);
+    uVar7 = *(undefined8 *)(&DAT_180561118 + lVar13);
+    uVar8 = *(undefined8 *)(&DAT_180561120 + lVar13);
+    uVar9 = *(undefined8 *)(&DAT_180561128 + lVar13);
+    uVar10 = *(undefined8 *)(&DAT_180561130 + lVar13);
+    uVar3 = (&DAT_18056115c)[lVar16 * 0x5a];
+    uVar4 = *(undefined4 *)(&DAT_180561110 + lVar16 * 0x2d);
+    memset(local_3d8,0,0x168);
+    FUN_1800b8590(local_3d8);
+    FUN_1800b89a0(&DAT_1805610f0 + lVar16 * 0x5a);
+    *(undefined4 *)((longlong)&DAT_180561104 + lVar13 + 4) = uVar1;
+    *(undefined4 *)(&DAT_180561110 + lVar16 * 0x2d) = uVar4;
+    *(undefined4 *)(&DAT_18056118c + lVar16 * 0x2d) = uVar2;
+    (&DAT_18056115c)[lVar16 * 0x5a] = uVar3;
+    (&DAT_18056110c)[lVar13] = uVar5;
+    *(undefined4 *)(&DAT_180561138 + lVar16 * 0x2d) = uVar6;
+    *(undefined8 *)(&DAT_180561118 + lVar13) = uVar7;
+    *(undefined8 *)(&DAT_180561120 + lVar13) = uVar8;
+    *(undefined8 *)(&DAT_180561128 + lVar13) = uVar9;
+    *(undefined8 *)(&DAT_180561130 + lVar13) = uVar10;
+    memset(local_3d8,0,0x300);
+    FUN_1802030d0();
+    lVar13 = 6;
+    local_d8 = 0;
+    local_d0 = 0;
+    local_c8 = 0;
+    puVar11 = local_3d8;
+    puVar12 = (undefined8 *)(&DAT_18040a650 + lVar16 * 0x318);
+    do {
+      puVar15 = puVar12;
+      puVar14 = puVar11;
+      uVar7 = puVar14[1];
+      uVar8 = puVar14[2];
+      uVar9 = puVar14[3];
+      *puVar15 = *puVar14;
+      puVar15[1] = uVar7;
+      uVar7 = puVar14[4];
+      uVar10 = puVar14[5];
+      puVar15[2] = uVar8;
+      puVar15[3] = uVar9;
+      uVar8 = puVar14[6];
+      uVar9 = puVar14[7];
+      puVar15[4] = uVar7;
+      puVar15[5] = uVar10;
+      uVar7 = puVar14[8];
+      uVar10 = puVar14[9];
+      puVar15[6] = uVar8;
+      puVar15[7] = uVar9;
+      uVar8 = puVar14[10];
+      uVar9 = puVar14[0xb];
+      puVar15[8] = uVar7;
+      puVar15[9] = uVar10;
+      uVar7 = puVar14[0xc];
+      uVar10 = puVar14[0xd];
+      puVar15[10] = uVar8;
+      puVar15[0xb] = uVar9;
+      uVar8 = puVar14[0xe];
+      uVar9 = puVar14[0xf];
+      puVar15[0xc] = uVar7;
+      puVar15[0xd] = uVar10;
+      puVar15[0xe] = uVar8;
+      puVar15[0xf] = uVar9;
+      lVar13 = lVar13 + -1;
+      puVar11 = puVar14 + 0x10;
+      puVar12 = puVar15 + 0x10;
+    } while (lVar13 != 0);
+    uVar8 = puVar14[0x11];
+    uVar7 = puVar14[0x12];
+    puVar15[0x10] = puVar14[0x10];
+    puVar15[0x11] = uVar8;
+    puVar15[0x12] = uVar7;
+  }
+  return;
+}
+
+
+)B1800b8740",
+    "0fbcf9fcef6c283f6db7960809d150446989fcee5a3aa56aace8c789ceb07b62",
+    R"F1800b8740C(FUN_1800b8590
+FUN_1800b89a0
+FUN_1802030d0)F1800b8740C",
+    R"F1800b8740D(DAT_18040a650
+DAT_1805610f0
+DAT_180561104
+DAT_18056110c
+DAT_180561110
+DAT_180561118
+DAT_180561120
+DAT_180561128
+DAT_180561130
+DAT_180561138
+DAT_18056115c
+DAT_18056118c)F1800b8740D",
+    R"F1800b8740T()F1800b8740T",
+    R"F1800b8740F(31: if (param_1 - 1U < 0x80) {
+65: do {
+109: return;)F1800b8740F",
+    R"F1800b8740U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a650.
+TODO: recover the declaration, type and value for global/data reference DAT_1805610f0.
+TODO: recover the declaration, type and value for global/data reference DAT_180561104.
+TODO: recover the declaration, type and value for global/data reference DAT_18056110c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561110.
+TODO: recover the declaration, type and value for global/data reference DAT_180561118.
+TODO: recover the declaration, type and value for global/data reference DAT_180561120.
+TODO: recover the declaration, type and value for global/data reference DAT_180561128.
+TODO: recover the declaration, type and value for global/data reference DAT_180561130.
+TODO: recover the declaration, type and value for global/data reference DAT_180561138.
+TODO: recover the declaration, type and value for global/data reference DAT_18056115c.
+TODO: recover the declaration, type and value for global/data reference DAT_18056118c.)F1800b8740U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8740() noexcept {
+    return kFunction_0x1800b8740;
+}
+
+// 0x1800b89a0 FUN_1800b89a0
+// source: re/dump/decompile/0x1800b89a0_FUN_1800b89a0.c
+// size: 688 bytes; thunk: false
+// body sha256: 9738d715ddf2202c634620e9efd8805856a441adca69179374f20012abb40bd0
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b89a0{
+    "0x1800b89a0",
+    "FUN_1800b89a0",
+    R"F1800b89a0S(undefined FUN_1800b89a0())F1800b89a0S",
+    R"B1800b89a0(// 0x1800b89a0  FUN_1800b89a0
+// size=688 thunk=false
+// signature: undefined FUN_1800b89a0()
+// status: ok
+
+
+undefined4 * FUN_1800b89a0(undefined4 *param_1,undefined4 *param_2)
+
+{
+  undefined8 uVar1;
+  
+  *param_1 = *param_2;
+  param_1[1] = param_2[1];
+  param_1[2] = param_2[2];
+  param_1[3] = param_2[3];
+  param_1[4] = param_2[4];
+  param_1[5] = param_2[5];
+  param_1[6] = param_2[6];
+  *(undefined1 *)(param_1 + 7) = *(undefined1 *)(param_2 + 7);
+  param_1[8] = param_2[8];
+  param_1[9] = param_2[9];
+  param_1[10] = param_2[10];
+  param_1[0xb] = param_2[0xb];
+  param_1[0xc] = param_2[0xc];
+  param_1[0xd] = param_2[0xd];
+  param_1[0xe] = param_2[0xe];
+  param_1[0xf] = param_2[0xf];
+  param_1[0x10] = param_2[0x10];
+  param_1[0x11] = param_2[0x11];
+  param_1[0x12] = param_2[0x12];
+  param_1[0x13] = param_2[0x13];
+  param_1[0x14] = param_2[0x14];
+  param_1[0x15] = param_2[0x15];
+  param_1[0x16] = param_2[0x16];
+  *(undefined1 *)(param_1 + 0x17) = *(undefined1 *)(param_2 + 0x17);
+  param_1[0x18] = param_2[0x18];
+  param_1[0x19] = param_2[0x19];
+  *(undefined1 *)(param_1 + 0x1a) = *(undefined1 *)(param_2 + 0x1a);
+  param_1[0x1b] = param_2[0x1b];
+  param_1[0x1c] = param_2[0x1c];
+  param_1[0x1d] = param_2[0x1d];
+  param_1[0x1e] = param_2[0x1e];
+  *(undefined8 *)(param_1 + 0x20) = *(undefined8 *)(param_2 + 0x20);
+  param_1[0x22] = param_2[0x22];
+  *(undefined1 *)(param_1 + 0x23) = *(undefined1 *)(param_2 + 0x23);
+  param_1[0x24] = param_2[0x24];
+  param_1[0x25] = param_2[0x25];
+  *(undefined1 *)(param_1 + 0x26) = *(undefined1 *)(param_2 + 0x26);
+  *(undefined1 *)((longlong)param_1 + 0x99) = *(undefined1 *)((longlong)param_2 + 0x99);
+  param_1[0x27] = param_2[0x27];
+  param_1[0x28] = param_2[0x28];
+  *(undefined1 *)(param_1 + 0x29) = *(undefined1 *)(param_2 + 0x29);
+  param_1[0x2a] = param_2[0x2a];
+  *(undefined1 *)(param_1 + 0x2b) = *(undefined1 *)(param_2 + 0x2b);
+  param_1[0x2c] = param_2[0x2c];
+  *(undefined1 *)(param_1 + 0x2d) = *(undefined1 *)(param_2 + 0x2d);
+  param_1[0x2e] = param_2[0x2e];
+  *(undefined1 *)(param_1 + 0x2f) = *(undefined1 *)(param_2 + 0x2f);
+  param_1[0x30] = param_2[0x30];
+  param_1[0x31] = param_2[0x31];
+  param_1[0x32] = param_2[0x32];
+  param_1[0x33] = param_2[0x33];
+  *(undefined1 *)(param_1 + 0x34) = *(undefined1 *)(param_2 + 0x34);
+  uVar1 = *(undefined8 *)(param_2 + 0x38);
+  *(undefined8 *)(param_1 + 0x36) = *(undefined8 *)(param_2 + 0x36);
+  *(undefined8 *)(param_1 + 0x38) = uVar1;
+  uVar1 = *(undefined8 *)(param_2 + 0x3c);
+  *(undefined8 *)(param_1 + 0x3a) = *(undefined8 *)(param_2 + 0x3a);
+  *(undefined8 *)(param_1 + 0x3c) = uVar1;
+  uVar1 = *(undefined8 *)(param_2 + 0x40);
+  *(undefined8 *)(param_1 + 0x3e) = *(undefined8 *)(param_2 + 0x3e);
+  *(undefined8 *)(param_1 + 0x40) = uVar1;
+  uVar1 = *(undefined8 *)(param_2 + 0x44);
+  *(undefined8 *)(param_1 + 0x42) = *(undefined8 *)(param_2 + 0x42);
+  *(undefined8 *)(param_1 + 0x44) = uVar1;
+  uVar1 = *(undefined8 *)(param_2 + 0x48);
+  *(undefined8 *)(param_1 + 0x46) = *(undefined8 *)(param_2 + 0x46);
+  *(undefined8 *)(param_1 + 0x48) = uVar1;
+  uVar1 = *(undefined8 *)(param_2 + 0x4c);
+  *(undefined8 *)(param_1 + 0x4a) = *(undefined8 *)(param_2 + 0x4a);
+  *(undefined8 *)(param_1 + 0x4c) = uVar1;
+  *(undefined8 *)(param_1 + 0x4e) = *(undefined8 *)(param_2 + 0x4e);
+  param_1[0x50] = param_2[0x50];
+  param_1[0x51] = param_2[0x51];
+  param_1[0x52] = param_2[0x52];
+  param_1[0x53] = param_2[0x53];
+  param_1[0x54] = param_2[0x54];
+  param_1[0x55] = param_2[0x55];
+  param_1[0x56] = param_2[0x56];
+  param_1[0x57] = param_2[0x57];
+  *(undefined1 *)(param_1 + 0x58) = *(undefined1 *)(param_2 + 0x58);
+  *(undefined1 *)((longlong)param_1 + 0x161) = *(undefined1 *)((longlong)param_2 + 0x161);
+  *(undefined1 *)((longlong)param_1 + 0x162) = *(undefined1 *)((longlong)param_2 + 0x162);
+  return param_1;
+}
+
+
+)B1800b89a0",
+    "9738d715ddf2202c634620e9efd8805856a441adca69179374f20012abb40bd0",
+    R"F1800b89a0C()F1800b89a0C",
+    R"F1800b89a0D()F1800b89a0D",
+    R"F1800b89a0T()F1800b89a0T",
+    R"F1800b89a0F(94: return param_1;)F1800b89a0F",
+    R"F1800b89a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1800b89a0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b89a0() noexcept {
+    return kFunction_0x1800b89a0;
+}
+
+// 0x1800b8c50 FUN_1800b8c50
+// source: re/dump/decompile/0x1800b8c50_FUN_1800b8c50.c
+// size: 2359 bytes; thunk: false
+// body sha256: 30bac74fdfca26b400216561305c933ad8cc75a311f919af21a46dff88c6f42d
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b8c50{
+    "0x1800b8c50",
+    "FUN_1800b8c50",
+    R"F1800b8c50S(undefined FUN_1800b8c50())F1800b8c50S",
+    R"B1800b8c50(// 0x1800b8c50  FUN_1800b8c50
+// size=2359 thunk=false
+// signature: undefined FUN_1800b8c50()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1800b8c50(int param_1,longlong param_2)
+
+{
+  float fVar1;
+  float fVar2;
+  char cVar3;
+  int iVar4;
+  undefined8 *puVar5;
+  undefined4 *puVar6;
+  longlong lVar7;
+  undefined4 *puVar8;
+  longlong lVar9;
+  int iVar10;
+  int iVar11;
+  longlong lVar12;
+  float fVar13;
+  undefined4 uVar14;
+  uint uVar15;
+  double dVar16;
+  float fVar17;
+  float fVar18;
+  double dVar19;
+  float fVar20;
+  undefined4 uVar21;
+  float fVar22;
+  float _Y;
+  float fVar23;
+  undefined1 auStack_1b8 [32];
+  float local_198;
+  double local_190;
+  undefined4 *local_188;
+  undefined1 local_178;
+  float local_174;
+  ulonglong local_170;
+  undefined8 local_168;
+  float local_160;
+  undefined4 local_158;
+  int local_154;
+  int local_150;
+  uint local_14c;
+  undefined4 local_148;
+  undefined4 local_144;
+  undefined1 local_140;
+  undefined1 local_13f;
+  undefined2 local_13e;
+  float local_13c;
+  float local_138;
+  float local_134;
+  undefined1 local_128 [16];
+  undefined4 local_118 [16];
+  ulonglong local_d8;
+  
+  local_d8 = DAT_1803da4c0 ^ (ulonglong)auStack_1b8;
+  lVar12 = (longlong)param_1;
+  if (((param_1 - 1U < 0x80) && (param_2 != 0)) && (DAT_1803fa608 != 0)) {
+    lVar9 = lVar12 * 0x168;
+    local_170 = *(ulonglong *)(DAT_1803fa608 + 0x10);
+    uVar14 = (undefined4)local_170;
+    uVar21 = (undefined4)(local_170 >> 0x20);
+    puVar5 = (undefined8 *)FUN_18001d350(param_2);
+    local_168 = *puVar5;
+    local_160 = *(float *)(puVar5 + 1);
+    FUN_1800b5be0(param_2,&local_168);
+    *(bool *)(&DAT_180561188 + lVar12 * 0xb4) =
+         _DAT_1803810f8 < (float)((uint)(float)local_168 & _DAT_1803817c0);
+    fVar18 = local_168._4_4_;
+    *(float *)((longlong)&DAT_180561150 + lVar9 + 4) = local_168._4_4_;
+    (&DAT_180561158)[lVar9] = 1;
+    dVar16 = (double)FUN_18001c0d0(param_2);
+    dVar19 = *(double *)(DAT_1803fa608 + 0x28);
+    if (*(double *)(DAT_1803fa608 + 0x28) <= 0.0) {
+      dVar19 = DAT_180380be0;
+    }
+    if ((&DAT_18056117c)[lVar9] == '\0') {
+      (&DAT_180561170)[lVar12 * 0x2d] = dVar16;
+      (&DAT_180561178)[lVar12 * 0x5a] = fVar18;
+      puVar6 = (undefined4 *)FUN_18001daf0(param_2,local_128);
+      *(undefined4 *)((longlong)&DAT_1805611b0 + lVar9 + 4) = *puVar6;
+      *(undefined4 *)(&DAT_1805611b8 + lVar12 * 0x2d) = puVar6[1];
+      *(undefined4 *)((longlong)&DAT_1805611b8 + lVar9 + 4) = puVar6[2];
+      (&DAT_1805611c0)[lVar9] = 1;
+      (&DAT_18056117c)[lVar9] = 1;
+      for (local_154 = 0; local_154 < 6; local_154 = local_154 + 1) {
+        local_148 = 0;
+        local_144 = 0;
+        local_140 = 0;
+        local_13f = 0;
+        lVar7 = (longlong)local_154;
+        *(undefined8 *)((longlong)&DAT_1805611c8 + lVar7 * 0xc + lVar9) = 0;
+        *(undefined2 *)(&DAT_1805611d0 + lVar12 * 0x5a + lVar7 * 3) = 0;
+        *(undefined2 *)(lVar9 + 0x1805611d2 + lVar7 * 0xc) = local_13e;
+        *(float *)((longlong)&DAT_1805611c8 + lVar7 * 0xc + lVar9) = fVar18;
+        *(float *)(lVar9 + 0x1805611cc + lVar7 * 0xc) = fVar18;
+        *(undefined1 *)(&DAT_1805611d0 + lVar12 * 0x5a + lVar7 * 3) = 1;
+      }
+      (&DAT_180561210)[lVar9] = 1;
+      (&DAT_180561218)[lVar12 * 0x2d] = dVar16;
+      *(undefined4 *)(&DAT_180561220 + lVar12 * 0x2d) = 0;
+      *(undefined4 *)((longlong)&DAT_180561220 + lVar9 + 4) = 0;
+      *(undefined1 *)(&DAT_180561228 + lVar12 * 0xb4) = 0;
+      fVar17 = DAT_180380ac0;
+      fVar23 = DAT_180380bb0;
+    }
+    else {
+      fVar17 = DAT_180380ac0;
+      fVar23 = DAT_180380bb0;
+      if ((double)(&DAT_180561170)[lVar12 * 0x2d] + DAT_180380ae8 < dVar16) {
+        local_174 = (float)dVar19;
+        dVar19 = (double)local_174;
+        fVar20 = (float)((dVar16 - (double)(&DAT_180561170)[lVar12 * 0x2d]) / dVar19);
+        if ((0.0 < fVar20) && (fVar20 < DAT_1803810d0)) {
+          uVar15 = FUN_180022110(fVar18);
+          fVar23 = DAT_180380bb0;
+          fVar17 = (float)(uVar15 & _DAT_1803817c0);
+          if (DAT_180380bb0 < fVar20) {
+            fVar17 = fVar17 / fVar20;
+          }
+          *(float *)(&DAT_180561180 + lVar12 * 0x2d) =
+               fVar17 * DAT_180380a6c + *(float *)(&DAT_180561180 + lVar12 * 0x2d) * DAT_180380b10;
+          *(float *)((longlong)&DAT_180561180 + lVar9 + 4) =
+               *(float *)((longlong)&DAT_180561180 + lVar9 + 4) * DAT_180380b10 +
+               fVar20 * DAT_180380a6c;
+          FUN_18001daf0(param_2,&local_168);
+          local_128 = ZEXT416((uint)(float)local_168);
+          fVar22 = (float)local_168 - *(float *)((longlong)&DAT_1805611b0 + lVar9 + 4);
+          _Y = local_168._4_4_ - *(float *)(&DAT_1805611b8 + lVar12 * 0x2d);
+          fVar17 = _Y * _Y + fVar22 * fVar22;
+          if (fVar17 <= DAT_180380e9c) {
+            fVar13 = *(float *)(&DAT_1805611b0 + lVar12 * 0x2d);
+            *(float *)(&DAT_1805611b0 + lVar12 * 0x2d) = fVar20 + fVar13;
+            if (DAT_180380fa8 < fVar20 + fVar13) {
+              (&DAT_1805611ac)[lVar9] = 0;
+            }
+          }
+          else {
+            fVar13 = atan2f(_Y,fVar22);
+            (&DAT_1805611a8)[lVar12 * 0x5a] = fVar13 * DAT_1803810bc;
+            (&DAT_1805611ac)[lVar9] = 1;
+            *(undefined4 *)(&DAT_1805611b0 + lVar12 * 0x2d) = 0;
+          }
+          puVar6 = (undefined4 *)0x0;
+          fVar13 = local_160 - *(float *)((longlong)&DAT_1805611b8 + lVar9 + 4);
+          fVar17 = fVar13 * fVar13 + fVar17;
+          if (fVar17 < 0.0) {
+            fVar17 = sqrtf(fVar17);
+          }
+          else {
+            fVar17 = SQRT(fVar17);
+          }
+          fVar2 = local_174;
+          fVar1 = DAT_18038093c;
+          fVar20 = fVar20 * local_174;
+          if (fVar20 <= DAT_18038093c) {
+            fVar17 = 0.0;
+          }
+          else {
+            fVar17 = fVar17 / fVar20;
+          }
+          *(float *)(&DAT_180561230 + lVar12 * 0x2d) = fVar17;
+          if (fVar1 < fVar20) {
+            *(undefined4 *)((longlong)&DAT_180561240 + lVar9 + 4) =
+                 *(undefined4 *)(&DAT_180561238 + lVar12 * 0x2d);
+            *(undefined4 *)(&DAT_180561248 + lVar12 * 0x2d) =
+                 *(undefined4 *)((longlong)&DAT_180561238 + lVar9 + 4);
+            *(undefined4 *)((longlong)&DAT_180561248 + lVar9 + 4) =
+                 *(undefined4 *)(&DAT_180561240 + lVar12 * 0x2d);
+            *(undefined1 *)((longlong)&DAT_180561250 + lVar9 + 1) =
+                 *(undefined1 *)(&DAT_180561250 + lVar12 * 0xb4);
+            local_134 = fVar13 / fVar20;
+            local_138 = _Y / fVar20;
+            local_13c = fVar22 / fVar20;
+            *(float *)(&DAT_180561238 + lVar12 * 0x2d) = local_13c;
+            *(float *)((longlong)&DAT_180561238 + lVar9 + 4) = local_138;
+            *(float *)(&DAT_180561240 + lVar12 * 0x2d) = local_134;
+            *(undefined1 *)(&DAT_180561250 + lVar12 * 0xb4) = 1;
+          }
+          iVar10 = 0;
+          iVar4 = iVar10;
+          if ((0.0 < local_174) && ((double)(&DAT_180561170)[lVar12 * 0x2d] < dVar16)) {
+            iVar4 = (int)((dVar16 - (double)(&DAT_180561170)[lVar12 * 0x2d]) / dVar19 +
+                         DAT_180380cb0);
+            if (iVar4 < 1) {
+              iVar4 = 1;
+            }
+          }
+          *(int *)((longlong)&DAT_180561230 + lVar9 + 4) = iVar4;
+          fVar17 = DAT_180380ac0;
+          FUN_1800b2f10(param_1);
+          iVar4 = *(int *)((longlong)&DAT_180561230 + lVar9 + 4);
+          if ((1 < iVar4) && (iVar4 = iVar4 + -1, iVar4 < 0x10)) {
+            lVar7 = lVar12 * 0x318;
+            if (*(int *)(&DAT_18040a958 + lVar7) == 1) {
+              local_14c = 0;
+              puVar8 = puVar6;
+              while (iVar11 = (int)puVar8, iVar10 = 1, iVar11 < iVar4) {
+                uVar14 = FUN_1800b1d70(fVar18 - (float)(iVar4 - iVar11) *
+                                                *(float *)(&DAT_18040a95c + lVar7));
+                local_118[iVar11] = uVar14;
+                local_14c = iVar11 + 1;
+                puVar8 = (undefined4 *)(ulonglong)local_14c;
+              }
+            }
+            else if (*(int *)(&DAT_18040a958 + lVar7) == 2) {
+              uVar14 = FUN_1800b1d70(fVar18 - *(float *)(&DAT_18040a95c + lVar7));
+              puVar8 = puVar6;
+              while (local_150 = (int)puVar8, iVar10 = 1, local_150 < iVar4) {
+                local_118[local_150] = uVar14;
+                puVar8 = (undefined4 *)(ulonglong)(local_150 + 1);
+              }
+            }
+          }
+          local_188 = local_118;
+          if (iVar10 == 0) {
+            local_188 = puVar6;
+          }
+          local_198 = fVar2;
+          local_190 = dVar16;
+          FUN_1800b3420(&DAT_1805611c8 + lVar12 * 0x2d);
+          *(ulonglong *)((longlong)&DAT_1805611b0 + lVar9 + 4) =
+               CONCAT44(local_168._4_4_,local_128._0_4_);
+          *(float *)((longlong)&DAT_1805611b8 + lVar9 + 4) = local_160;
+        }
+        (&DAT_180561170)[lVar12 * 0x2d] = dVar16;
+        (&DAT_180561178)[lVar12 * 0x5a] = fVar18;
+        uVar14 = (undefined4)local_170;
+        uVar21 = (undefined4)(local_170 >> 0x20);
+      }
+    }
+    fVar20 = *(float *)((longlong)&DAT_180561180 + lVar9 + 4);
+    fVar22 = DAT_180409cb8;
+    if (((0.0 < fVar20) && (fVar22 = fVar20, 0.0 < DAT_180409cb8)) && (DAT_180409cb8 <= fVar20)) {
+      fVar22 = DAT_180409cb8 + (fVar20 - DAT_180409cb8) * DAT_180380958;
+    }
+    DAT_180409cb8 = fVar22;
+    fVar22 = DAT_180409cb8;
+    if (DAT_180409cb8 <= 0.0) {
+      fVar22 = fVar23;
+    }
+    if (((*(char *)(&DAT_180561188 + lVar12 * 0xb4) != '\0') ||
+        (fVar22 * DAT_180380c88 + fVar17 < fVar20)) ||
+       (cVar3 = '\0', DAT_18038103c <= *(float *)(&DAT_180561180 + lVar12 * 0x2d))) {
+      cVar3 = '\x01';
+    }
+    *(char *)((longlong)&DAT_180561188 + lVar9 + 1) = cVar3;
+    if (cVar3 != '\0') {
+      *(float *)(&DAT_18056118c + lVar12 * 0x2d) =
+           (float)(double)CONCAT44(uVar21,uVar14) + DAT_180380e28;
+    }
+    local_170 = local_170 & 0xffffffff00000000;
+    cVar3 = FUN_1800b5f30(param_2,&local_170);
+    (&DAT_180561194)[lVar9] = cVar3;
+    if (cVar3 != '\0') {
+      *(undefined4 *)((longlong)&DAT_18056118c + lVar9 + 4) = (undefined4)local_170;
+    }
+    cVar3 = FUN_1800b61b0(param_2,&local_170);
+    (&DAT_18056119c)[lVar9] = cVar3;
+    if (cVar3 != '\0') {
+      (&DAT_180561198)[lVar12 * 0x5a] = (undefined4)local_170;
+    }
+    local_174 = 0.0;
+    cVar3 = FUN_1800b5f30(param_2,&local_174);
+    if (cVar3 == '\0') {
+      (&DAT_1805611a4)[lVar9] = 0;
+    }
+    else {
+      uVar15 = FUN_1802d3e00(fVar18 - local_174);
+      local_170 = CONCAT44(local_170._4_4_,uVar15);
+      (&DAT_1805611a0)[lVar12 * 0x5a] = uVar15;
+      (&DAT_1805611a4)[lVar9] = _DAT_18038108c <= (float)(uVar15 & _DAT_1803817c0);
+    }
+    local_158 = 0;
+    local_178 = 0;
+    cVar3 = FUN_1800b86f0();
+    if (cVar3 == '\0') {
+      if ((&DAT_180561194)[lVar9] == '\0') {
+        return;
+      }
+      local_158 = *(undefined4 *)((longlong)&DAT_18056118c + lVar9 + 4);
+    }
+    else {
+      if ((&DAT_18056114c)[lVar9] == '\0') {
+        return;
+      }
+      local_158 = (&DAT_180561148)[lVar12 * 0x5a];
+    }
+    local_178 = 1;
+    uVar15 = FUN_180022110(fVar18);
+    fVar18 = (float)(uVar15 & _DAT_1803817c0);
+    if (fVar18 <= DAT_180381110) {
+      fVar17 = (float)(&DAT_18056115c)[lVar12 * 0x5a];
+      if (fVar18 <= fVar17) {
+        (&DAT_18056115c)[lVar12 * 0x5a] = fVar17 - (fVar17 - fVar18) * _DAT_180380968;
+      }
+      else {
+        (&DAT_18056115c)[lVar12 * 0x5a] = fVar18;
+      }
+    }
+  }
+  return;
+}
+
+
+)B1800b8c50",
+    "30bac74fdfca26b400216561305c933ad8cc75a311f919af21a46dff88c6f42d",
+    R"F1800b8c50C(FUN_18001c0d0
+FUN_18001d350
+FUN_18001daf0
+FUN_180022110
+FUN_1800b1d70
+FUN_1800b2f10
+FUN_1800b3420
+FUN_1800b5be0
+FUN_1800b5f30
+FUN_1800b61b0
+FUN_1800b86f0
+FUN_1802d3e00)F1800b8c50C",
+    R"F1800b8c50D(DAT_18038093c
+DAT_180380958
+DAT_180380a6c
+DAT_180380ac0
+DAT_180380ae8
+DAT_180380b10
+DAT_180380bb0
+DAT_180380be0
+DAT_180380c88
+DAT_180380cb0
+DAT_180380e28
+DAT_180380e9c
+DAT_180380fa8
+DAT_18038103c
+DAT_1803810bc
+DAT_1803810d0
+DAT_180381110
+DAT_1803da4c0
+DAT_1803fa608
+DAT_180409cb8
+DAT_18040a958
+DAT_18040a95c
+DAT_180561148
+DAT_18056114c
+DAT_180561150
+DAT_180561158
+DAT_18056115c
+DAT_180561170
+DAT_180561178
+DAT_18056117c
+DAT_180561180
+DAT_180561188
+DAT_18056118c
+DAT_180561194
+DAT_180561198
+DAT_18056119c
+DAT_1805611a0
+DAT_1805611a4
+DAT_1805611a8
+DAT_1805611ac
+DAT_1805611b0
+DAT_1805611b8
+DAT_1805611c0
+DAT_1805611c8
+DAT_1805611d0
+DAT_180561210
+DAT_180561218
+DAT_180561220
+DAT_180561228
+DAT_180561230
+DAT_180561238
+DAT_180561240
+DAT_180561248
+DAT_180561250)F1800b8c50D",
+    R"F1800b8c50T()F1800b8c50T",
+    R"F1800b8c50F(64: if (((param_1 - 1U < 0x80) && (param_2 != 0)) && (DAT_1803fa608 != 0)) {
+80: if (*(double *)(DAT_1803fa608 + 0x28) <= 0.0) {
+83: if ((&DAT_18056117c)[lVar9] == '\0') {
+92: for (local_154 = 0; local_154 < 6; local_154 = local_154 + 1) {
+113: else {
+116: if ((double)(&DAT_180561170)[lVar12 * 0x2d] + DAT_180380ae8 < dVar16) {
+120: if ((0.0 < fVar20) && (fVar20 < DAT_1803810d0)) {
+124: if (DAT_180380bb0 < fVar20) {
+137: if (fVar17 <= DAT_180380e9c) {
+140: if (DAT_180380fa8 < fVar20 + fVar13) {
+144: else {
+153: if (fVar17 < 0.0) {
+156: else {
+162: if (fVar20 <= DAT_18038093c) {
+165: else {
+169: if (fVar1 < fVar20) {
+188: if ((0.0 < local_174) && ((double)(&DAT_180561170)[lVar12 * 0x2d] < dVar16)) {
+191: if (iVar4 < 1) {
+199: if ((1 < iVar4) && (iVar4 = iVar4 + -1, iVar4 < 0x10)) {
+201: if (*(int *)(&DAT_18040a958 + lVar7) == 1) {
+204: while (iVar11 = (int)puVar8, iVar10 = 1, iVar11 < iVar4) {
+212: else if (*(int *)(&DAT_18040a958 + lVar7) == 2) {
+215: while (local_150 = (int)puVar8, iVar10 = 1, local_150 < iVar4) {
+222: if (iVar10 == 0) {
+240: if (((0.0 < fVar20) && (fVar22 = fVar20, 0.0 < DAT_180409cb8)) && (DAT_180409cb8 <= fVar20)) {
+245: if (DAT_180409cb8 <= 0.0) {
+248: if (((*(char *)(&DAT_180561188 + lVar12 * 0xb4) != '\0') ||
+254: if (cVar3 != '\0') {
+261: if (cVar3 != '\0') {
+266: if (cVar3 != '\0') {
+271: if (cVar3 == '\0') {
+274: else {
+283: if (cVar3 == '\0') {
+284: if ((&DAT_180561194)[lVar9] == '\0') {
+285: return;
+289: else {
+290: if ((&DAT_18056114c)[lVar9] == '\0') {
+291: return;
+298: if (fVar18 <= DAT_180381110) {
+300: if (fVar18 <= fVar17) {
+303: else {
+308: return;)F1800b8c50F",
+    R"F1800b8c50U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference DAT_18038093c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380958.
+TODO: recover the declaration, type and value for global/data reference DAT_180380a6c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ac0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380ae8.
+TODO: recover the declaration, type and value for global/data reference DAT_180380b10.
+TODO: recover the declaration, type and value for global/data reference DAT_180380bb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380be0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380c88.
+TODO: recover the declaration, type and value for global/data reference DAT_180380cb0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380e28.
+TODO: recover the declaration, type and value for global/data reference DAT_180380e9c.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fa8.
+TODO: recover the declaration, type and value for global/data reference DAT_18038103c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803810bc.
+TODO: recover the declaration, type and value for global/data reference DAT_1803810d0.
+TODO: recover the declaration, type and value for global/data reference DAT_180381110.
+TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_180409cb8.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a958.
+TODO: recover the declaration, type and value for global/data reference DAT_18040a95c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561148.
+TODO: recover the declaration, type and value for global/data reference DAT_18056114c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561150.
+TODO: recover the declaration, type and value for global/data reference DAT_180561158.
+TODO: recover the declaration, type and value for global/data reference DAT_18056115c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561170.
+TODO: recover the declaration, type and value for global/data reference DAT_180561178.
+TODO: recover the declaration, type and value for global/data reference DAT_18056117c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561180.
+TODO: recover the declaration, type and value for global/data reference DAT_180561188.
+TODO: recover the declaration, type and value for global/data reference DAT_18056118c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561194.
+TODO: recover the declaration, type and value for global/data reference DAT_180561198.
+TODO: recover the declaration, type and value for global/data reference DAT_18056119c.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611a0.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611a4.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611a8.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611ac.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611b0.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611b8.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611c0.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611c8.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611d0.
+TODO: recover the declaration, type and value for global/data reference DAT_180561210.
+TODO: recover the declaration, type and value for global/data reference DAT_180561218.
+TODO: recover the declaration, type and value for global/data reference DAT_180561220.
+TODO: recover the declaration, type and value for global/data reference DAT_180561228.
+TODO: recover the declaration, type and value for global/data reference DAT_180561230.
+TODO: recover the declaration, type and value for global/data reference DAT_180561238.
+TODO: recover the declaration, type and value for global/data reference DAT_180561240.
+TODO: recover the declaration, type and value for global/data reference DAT_180561248.
+TODO: recover the declaration, type and value for global/data reference DAT_180561250.)F1800b8c50U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b8c50() noexcept {
+    return kFunction_0x1800b8c50;
+}
+
+// 0x1800b9590 FUN_1800b9590
+// source: re/dump/decompile/0x1800b9590_FUN_1800b9590.c
+// size: 1883 bytes; thunk: false
+// body sha256: b26d0dfb6c064e48b9f1f9960f83e466ebdca5d1b23ede08d5da52a7ecde0567
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b9590{
+    "0x1800b9590",
+    "FUN_1800b9590",
+    R"F1800b9590S(undefined FUN_1800b9590())F1800b9590S",
+    R"B1800b9590(// 0x1800b9590  FUN_1800b9590
+// size=1883 thunk=false
+// signature: undefined FUN_1800b9590()
+// status: ok
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1800b9590(int param_1,undefined8 param_2,undefined8 *param_3)
+
+{
+  float fVar1;
+  int iVar2;
+  int iVar3;
+  uint uVar4;
+  char cVar5;
+  longlong lVar6;
+  undefined4 *puVar7;
+  longlong lVar8;
+  longlong lVar9;
+  ulonglong uVar10;
+  undefined4 uVar11;
+  float fVar12;
+  uint uVar13;
+  float fVar14;
+  undefined1 auVar15 [16];
+  undefined1 auVar16 [16];
+  undefined1 auVar17 [16];
+  undefined1 auVar18 [16];
+  undefined1 auVar19 [16];
+  undefined1 auVar20 [16];
+  undefined1 auVar21 [16];
+  undefined1 auVar22 [16];
+  undefined1 auVar23 [16];
+  undefined1 auVar24 [16];
+  undefined1 auVar25 [16];
+  undefined1 auVar26 [16];
+  undefined1 auVar27 [16];
+  undefined1 auVar28 [16];
+  undefined1 auVar29 [16];
+  undefined1 auVar30 [16];
+  float fVar31;
+  undefined4 in_XMM1_Dc;
+  undefined4 in_XMM1_Dd;
+  float fVar32;
+  float fVar33;
+  float fVar34;
+  undefined4 uVar35;
+  undefined8 local_108;
+  undefined8 uStack_100;
+  undefined8 local_f8;
+  undefined8 uStack_f0;
+  undefined8 local_e8;
+  undefined8 uStack_e0;
+  undefined1 local_d8 [16];
+  undefined4 local_c8;
+  undefined4 local_c4;
+  undefined4 local_c0;
+  undefined4 local_bc;
+  undefined4 local_b8;
+  undefined4 local_b4;
+  
+  uVar35 = (undefined4)((ulonglong)param_2 >> 0x20);
+  fVar34 = (float)param_2;
+  *param_3 = 0;
+  param_3[1] = 0;
+  param_3[2] = 0;
+  param_3[3] = 0;
+  param_3[4] = 0;
+  param_3[5] = 0;
+  param_3[6] = 0;
+  param_3[7] = 0;
+  param_3[8] = 0;
+  param_3[9] = 0;
+  param_3[10] = 0;
+  param_3[0xb] = 0;
+  param_3[0xc] = 0;
+  param_3[0xd] = 0;
+  param_3[0xe] = 0;
+  param_3[0xf] = 0;
+  param_3[0x10] = 0;
+  param_3[0x11] = 0;
+  param_3[0x12] = 0;
+  param_3[0x13] = 0;
+  param_3[0x14] = 0;
+  param_3[0x15] = 0;
+  param_3[0x16] = 0;
+  param_3[0x17] = 0;
+  param_3[0x18] = 0;
+  param_3[0x19] = 0;
+  param_3[0x1a] = 0;
+  param_3[0x1b] = 0;
+  if (0x7f < param_1 - 1U) {
+    return;
+  }
+  lVar6 = (longlong)param_1;
+  lVar9 = lVar6 * 0x168;
+  if (DAT_1803fa608 == 0) {
+    fVar31 = 0.0;
+  }
+  else {
+    fVar31 = (float)*(double *)(DAT_1803fa608 + 0x10);
+  }
+  if ((&DAT_180561158)[lVar9] != '\0') {
+    fVar34 = *(float *)((longlong)&DAT_180561150 + lVar9 + 4);
+    uVar35 = 0;
+    in_XMM1_Dc = 0;
+    in_XMM1_Dd = 0;
+  }
+  if (((&DAT_18056110c)[lVar9] != '\0') && (fVar31 < *(float *)(&DAT_180561110 + lVar6 * 0x2d))) {
+    auVar15._4_4_ = uVar35;
+    auVar15._0_4_ = fVar34;
+    auVar15._8_4_ = in_XMM1_Dc;
+    auVar15._12_4_ = in_XMM1_Dd;
+    auVar16._4_12_ = auVar15._4_12_;
+    auVar16._0_4_ = fVar34 + *(float *)((longlong)&DAT_180561104 + lVar9 + 4);
+    uVar11 = FUN_1802d3e00(auVar16._0_8_);
+    *(undefined4 *)param_3 = uVar11;
+    *(undefined1 *)(param_3 + 0xb) = 1;
+    *(undefined1 *)((longlong)param_3 + 0x6e) = 1;
+  }
+  if (((&DAT_180561210)[lVar9] != '\0') && (*(char *)(&DAT_180561228 + lVar6 * 0xb4) == '\0')) {
+    fVar31 = *(float *)((longlong)&DAT_1805611c8 + lVar9 + 4);
+    lVar8 = 0;
+    fVar32 = DAT_18038144c;
+    fVar33 = DAT_1803812fc;
+    do {
+      fVar12 = (float)FUN_1800b1d70(*(float *)(lVar9 + 0x1805611cc + lVar8 * 0xc) - fVar31);
+      lVar8 = lVar8 + 1;
+      fVar1 = fVar12;
+      if (fVar33 <= fVar12) {
+        fVar1 = fVar33;
+      }
+      fVar33 = fVar1;
+      if (fVar12 <= fVar32) {
+        fVar12 = fVar32;
+      }
+      fVar32 = fVar12;
+    } while (lVar8 != 6);
+    if (DAT_180380d30 < fVar32 - fVar33) {
+      uVar11 = FUN_1802d3e00();
+      *(undefined4 *)(param_3 + 8) = uVar11;
+      *(undefined1 *)(param_3 + 0xd) = 1;
+      *(undefined1 *)((longlong)param_3 + 0x7e) = 1;
+      uVar11 = FUN_1802d3e00();
+      *(undefined4 *)((longlong)param_3 + 0x44) = uVar11;
+      *(undefined1 *)((longlong)param_3 + 0x69) = 1;
+      *(undefined1 *)((longlong)param_3 + 0x7f) = 1;
+      uVar11 = FUN_1802d3e00();
+      *(undefined4 *)(param_3 + 9) = uVar11;
+      *(undefined1 *)((longlong)param_3 + 0x6a) = 1;
+      *(undefined1 *)(param_3 + 0x10) = 1;
+      uVar11 = FUN_1802d3e00();
+      *(undefined4 *)((longlong)param_3 + 0x4c) = uVar11;
+      *(undefined1 *)((longlong)param_3 + 0x6b) = 1;
+      *(undefined1 *)((longlong)param_3 + 0x81) = 1;
+      uVar11 = FUN_1802d3e00();
+      *(undefined4 *)(param_3 + 10) = uVar11;
+      *(undefined1 *)((longlong)param_3 + 0x6c) = 1;
+      *(undefined1 *)((longlong)param_3 + 0x82) = 1;
+      if (*(char *)((longlong)&DAT_180561228 + lVar9 + 1) != '\0') {
+        uVar11 = FUN_1802d3e00();
+        *(undefined4 *)((longlong)param_3 + 0x54) = uVar11;
+        *(undefined1 *)((longlong)param_3 + 0x6d) = 1;
+        *(undefined1 *)((longlong)param_3 + 0x83) = 1;
+      }
+    }
+  }
+  cVar5 = FUN_1800b8320();
+  uVar4 = _DAT_1803817c0;
+  fVar33 = DAT_180381188;
+  fVar32 = DAT_180381094;
+  fVar31 = DAT_180380fcc;
+  if (cVar5 != '\0') {
+    if ((&DAT_1805611ac)[lVar9] != '\0') {
+      uVar11 = FUN_1802d3e00();
+      *(undefined4 *)((longlong)param_3 + 4) = uVar11;
+      *(undefined1 *)((longlong)param_3 + 0x59) = 1;
+      *(undefined1 *)((longlong)param_3 + 0x6f) = 1;
+      uVar11 = FUN_1802d3e00((float)(&DAT_1805611a8)[lVar6 * 0x5a] + fVar33);
+      *(undefined4 *)(param_3 + 1) = uVar11;
+      *(undefined1 *)((longlong)param_3 + 0x5a) = 1;
+      *(undefined1 *)(param_3 + 0xe) = 1;
+    }
+    cVar5 = FUN_1800b86f0();
+    if (cVar5 == '\0') {
+      if ((&DAT_18056119c)[lVar9] != '\0') {
+        if ((&DAT_180561194)[lVar9] == '\0') goto LAB_1800b9a03;
+        uVar13 = FUN_180022110();
+        if (fVar31 < (float)(uVar13 & uVar4)) {
+          uVar11 = FUN_1802d3e00();
+          *(undefined4 *)((longlong)param_3 + 0xc) = uVar11;
+          *(undefined1 *)((longlong)param_3 + 0x5b) = 1;
+          *(undefined1 *)((longlong)param_3 + 0x71) = 1;
+        }
+      }
+      if ((&DAT_180561194)[lVar9] != '\0') {
+        if ((&DAT_1805611a4)[lVar9] != '\0') {
+          fVar12 = DAT_180381404;
+          if (0.0 < (float)(&DAT_1805611a0)[lVar6 * 0x5a]) {
+            fVar12 = fVar32;
+          }
+          uVar11 = FUN_1802d3e00(*(float *)((longlong)&DAT_18056118c + lVar9 + 4) - fVar12);
+          *(undefined4 *)(param_3 + 2) = uVar11;
+          *(undefined1 *)((longlong)param_3 + 0x5c) = 1;
+          *(undefined1 *)((longlong)param_3 + 0x72) = 1;
+        }
+        if (((&DAT_180561194)[lVar9] != '\0') &&
+           (uVar13 = FUN_180022110(), fVar31 < (float)(uVar13 & uVar4))) {
+          uVar11 = FUN_1802d3e00();
+          *(undefined4 *)((longlong)param_3 + 0x14) = uVar11;
+          *(undefined1 *)((longlong)param_3 + 0x5d) = 1;
+          *(undefined1 *)((longlong)param_3 + 0x73) = 1;
+        }
+      }
+    }
+  }
+LAB_1800b9a03:
+  uVar11 = FUN_1802d3e00();
+  *(undefined4 *)((longlong)param_3 + 0x1c) = uVar11;
+  *(undefined1 *)((longlong)param_3 + 0x5f) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x75) = 1;
+  fVar1 = DAT_18038110c;
+  fVar12 = (float)(&DAT_18056115c)[lVar6 * 0x5a];
+  if ((float)(&DAT_18056115c)[lVar6 * 0x5a] <= 0.0) {
+    fVar12 = fVar32;
+  }
+  fVar14 = DAT_180381024;
+  if (DAT_180381024 <= fVar12) {
+    fVar14 = fVar12;
+  }
+  fVar12 = DAT_18038110c;
+  if (fVar14 <= DAT_18038110c) {
+    fVar12 = fVar14;
+  }
+  uVar11 = FUN_1802d3e00(fVar12 + fVar34);
+  *(undefined4 *)(param_3 + 4) = uVar11;
+  auVar17._4_4_ = uVar35;
+  auVar17._0_4_ = fVar34;
+  auVar17._8_4_ = in_XMM1_Dc;
+  auVar17._12_4_ = in_XMM1_Dd;
+  auVar18._4_12_ = auVar17._4_12_;
+  auVar18._0_4_ = fVar34 - fVar12;
+  *(undefined1 *)(param_3 + 0xc) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x76) = 1;
+  uVar11 = FUN_1802d3e00(auVar18._0_8_);
+  *(undefined4 *)((longlong)param_3 + 0x24) = uVar11;
+  auVar19._4_4_ = uVar35;
+  auVar19._0_4_ = fVar34;
+  auVar19._8_4_ = in_XMM1_Dc;
+  auVar19._12_4_ = in_XMM1_Dd;
+  auVar20._4_12_ = auVar19._4_12_;
+  auVar20._0_4_ = fVar34 + fVar33;
+  *(undefined1 *)((longlong)param_3 + 0x61) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x77) = 1;
+  uVar11 = FUN_1802d3e00(auVar20._0_8_);
+  *(undefined4 *)(param_3 + 3) = uVar11;
+  auVar21._4_4_ = uVar35;
+  auVar21._0_4_ = fVar34;
+  auVar21._8_4_ = in_XMM1_Dc;
+  auVar21._12_4_ = in_XMM1_Dd;
+  auVar22._4_12_ = auVar21._4_12_;
+  auVar22._0_4_ = fVar34 + fVar32;
+  *(undefined1 *)((longlong)param_3 + 0x5e) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x74) = 1;
+  uVar11 = FUN_1802d3e00(auVar22._0_8_);
+  *(undefined4 *)(param_3 + 5) = uVar11;
+  auVar23._4_4_ = uVar35;
+  auVar23._0_4_ = fVar34;
+  auVar23._8_4_ = in_XMM1_Dc;
+  auVar23._12_4_ = in_XMM1_Dd;
+  auVar24._4_12_ = auVar23._4_12_;
+  auVar24._0_4_ = fVar34 - fVar32;
+  *(undefined1 *)((longlong)param_3 + 0x62) = 1;
+  *(undefined1 *)(param_3 + 0xf) = 1;
+  uVar11 = FUN_1802d3e00(auVar24._0_8_);
+  *(undefined4 *)((longlong)param_3 + 0x2c) = uVar11;
+  auVar25._4_4_ = uVar35;
+  auVar25._0_4_ = fVar34;
+  auVar25._8_4_ = in_XMM1_Dc;
+  auVar25._12_4_ = in_XMM1_Dd;
+  auVar26._4_12_ = auVar25._4_12_;
+  auVar26._0_4_ = fVar34 + fVar1;
+  *(undefined1 *)((longlong)param_3 + 99) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x79) = 1;
+  uVar11 = FUN_1802d3e00(auVar26._0_8_);
+  *(undefined4 *)(param_3 + 6) = uVar11;
+  auVar27._4_4_ = uVar35;
+  auVar27._0_4_ = fVar34;
+  auVar27._8_4_ = in_XMM1_Dc;
+  auVar27._12_4_ = in_XMM1_Dd;
+  auVar28._4_12_ = auVar27._4_12_;
+  auVar28._0_4_ = fVar34 - fVar1;
+  *(undefined1 *)((longlong)param_3 + 100) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x7a) = 1;
+  uVar11 = FUN_1802d3e00(auVar28._0_8_);
+  *(undefined4 *)((longlong)param_3 + 0x34) = uVar11;
+  auVar29._4_4_ = uVar35;
+  auVar29._0_4_ = fVar34;
+  auVar29._8_4_ = in_XMM1_Dc;
+  auVar29._12_4_ = in_XMM1_Dd;
+  auVar30._4_12_ = auVar29._4_12_;
+  auVar30._0_4_ = fVar34 + _DAT_180381150;
+  *(undefined1 *)((longlong)param_3 + 0x65) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x7b) = 1;
+  uVar35 = FUN_1802d3e00(auVar30._0_8_);
+  *(undefined4 *)(param_3 + 7) = uVar35;
+  *(undefined1 *)((longlong)param_3 + 0x66) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x7c) = 1;
+  uVar35 = FUN_1802d3e00();
+  uStack_f0 = _UNK_180381548;
+  local_f8 = _DAT_180381540;
+  *(undefined4 *)((longlong)param_3 + 0x3c) = uVar35;
+  uStack_100 = _UNK_180381558;
+  local_108 = _DAT_180381550;
+  puVar7 = &DAT_18033baf0;
+  *(undefined1 *)((longlong)param_3 + 0x67) = 1;
+  *(undefined1 *)((longlong)param_3 + 0x7d) = 1;
+  fVar32 = DAT_180381420;
+  fVar34 = DAT_18038120c;
+  local_e8 = _DAT_180381520;
+  uStack_e0 = _UNK_180381528;
+  if (DAT_18038103c <= *(float *)(&DAT_180561180 + lVar6 * 0x2d)) {
+    puVar7 = &DAT_180339000;
+  }
+  local_d8 = _DAT_180381530;
+  local_c8 = *puVar7;
+  local_c4 = puVar7[1];
+  local_c0 = puVar7[2];
+  local_bc = puVar7[3];
+  lVar6 = 0;
+  local_b8 = puVar7[4];
+  local_b4 = puVar7[5];
+  do {
+    iVar2 = *(int *)((longlong)&local_108 + lVar6 * 4);
+    lVar9 = (longlong)iVar2;
+    if (*(char *)((longlong)param_3 + lVar9 + 0x58) != '\0') {
+      iVar3 = *(int *)((longlong)param_3 + 0xdc);
+      if (0 < iVar3) {
+        fVar12 = *(float *)((longlong)param_3 + lVar9 * 4);
+        uVar10 = 0;
+        do {
+          fVar1 = *(float *)((longlong)param_3 +
+                            (longlong)*(int *)((longlong)param_3 + uVar10 * 4 + 0x84) * 4);
+          fVar14 = fmodf(fVar12 - fVar1,fVar34);
+          if (fVar12 <= fVar1) {
+            if (fVar14 <= fVar32) {
+              fVar14 = fVar14 + fVar34;
+            }
+          }
+          else if (fVar33 <= fVar14) {
+            fVar14 = fVar14 - fVar34;
+          }
+          if ((float)((uint)fVar14 & uVar4) < fVar31) {
+            *(undefined1 *)(lVar9 + 0x58 + (longlong)param_3) = 0;
+            goto LAB_1800b9c5b;
+          }
+          uVar13 = (int)uVar10 + 1;
+          uVar10 = (ulonglong)uVar13;
+        } while ((int)uVar13 < iVar3);
+      }
+      *(int *)((longlong)param_3 + (longlong)iVar3 * 4 + 0x84) = iVar2;
+      *(int *)((longlong)param_3 + 0xdc) = *(int *)((longlong)param_3 + 0xdc) + 1;
+    }
+LAB_1800b9c5b:
+    lVar6 = lVar6 + 1;
+    if (lVar6 == 0x16) {
+      return;
+    }
+  } while( true );
+}
+
+
+)B1800b9590",
+    "b26d0dfb6c064e48b9f1f9960f83e466ebdca5d1b23ede08d5da52a7ecde0567",
+    R"F1800b9590C(FUN_180022110
+FUN_1800b1d70
+FUN_1800b8320
+FUN_1800b86f0
+FUN_1802d3e00)F1800b9590C",
+    R"F1800b9590D(LAB_1800b9a03
+LAB_1800b9c5b
+DAT_180339000
+DAT_18033baf0
+DAT_180380d30
+DAT_180380fcc
+DAT_180381024
+DAT_18038103c
+DAT_180381094
+DAT_18038110c
+DAT_180381188
+DAT_18038120c
+DAT_1803812fc
+DAT_180381404
+DAT_180381420
+DAT_18038144c
+DAT_1803fa608
+DAT_180561104
+DAT_18056110c
+DAT_180561110
+DAT_180561150
+DAT_180561158
+DAT_18056115c
+DAT_180561180
+DAT_18056118c
+DAT_180561194
+DAT_18056119c
+DAT_1805611a0
+DAT_1805611a4
+DAT_1805611a8
+DAT_1805611ac
+DAT_1805611c8
+DAT_180561210
+DAT_180561228)F1800b9590D",
+    R"F1800b9590T()F1800b9590T",
+    R"F1800b9590F(93: if (0x7f < param_1 - 1U) {
+94: return;
+98: if (DAT_1803fa608 == 0) {
+101: else {
+104: if ((&DAT_180561158)[lVar9] != '\0') {
+110: if (((&DAT_18056110c)[lVar9] != '\0') && (fVar31 < *(float *)(&DAT_180561110 + lVar6 * 0x2d))) {
+122: if (((&DAT_180561210)[lVar9] != '\0') && (*(char *)(&DAT_180561228 + lVar6 * 0xb4) == '\0')) {
+127: do {
+131: if (fVar33 <= fVar12) {
+135: if (fVar12 <= fVar32) {
+140: if (DAT_180380d30 < fVar32 - fVar33) {
+161: if (*(char *)((longlong)&DAT_180561228 + lVar9 + 1) != '\0') {
+174: if (cVar5 != '\0') {
+175: if ((&DAT_1805611ac)[lVar9] != '\0') {
+186: if (cVar5 == '\0') {
+187: if ((&DAT_18056119c)[lVar9] != '\0') {
+188: if ((&DAT_180561194)[lVar9] == '\0') goto LAB_1800b9a03;
+190: if (fVar31 < (float)(uVar13 & uVar4)) {
+197: if ((&DAT_180561194)[lVar9] != '\0') {
+198: if ((&DAT_1805611a4)[lVar9] != '\0') {
+200: if (0.0 < (float)(&DAT_1805611a0)[lVar6 * 0x5a]) {
+208: if (((&DAT_180561194)[lVar9] != '\0') &&
+218: LAB_1800b9a03:
+225: if ((float)(&DAT_18056115c)[lVar6 * 0x5a] <= 0.0) {
+229: if (DAT_180381024 <= fVar12) {
+233: if (fVar14 <= DAT_18038110c) {
+323: if (DAT_18038103c <= *(float *)(&DAT_180561180 + lVar6 * 0x2d)) {
+334: do {
+337: if (*(char *)((longlong)param_3 + lVar9 + 0x58) != '\0') {
+339: if (0 < iVar3) {
+342: do {
+346: if (fVar12 <= fVar1) {
+347: if (fVar14 <= fVar32) {
+351: else if (fVar33 <= fVar14) {
+354: if ((float)((uint)fVar14 & uVar4) < fVar31) {
+356: goto LAB_1800b9c5b;
+365: LAB_1800b9c5b:
+367: if (lVar6 == 0x16) {
+368: return;)F1800b9590F",
+    R"F1800b9590U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b9a03.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b9c5b.
+TODO: recover the declaration, type and value for global/data reference DAT_180339000.
+TODO: recover the declaration, type and value for global/data reference DAT_18033baf0.
+TODO: recover the declaration, type and value for global/data reference DAT_180380d30.
+TODO: recover the declaration, type and value for global/data reference DAT_180380fcc.
+TODO: recover the declaration, type and value for global/data reference DAT_180381024.
+TODO: recover the declaration, type and value for global/data reference DAT_18038103c.
+TODO: recover the declaration, type and value for global/data reference DAT_180381094.
+TODO: recover the declaration, type and value for global/data reference DAT_18038110c.
+TODO: recover the declaration, type and value for global/data reference DAT_180381188.
+TODO: recover the declaration, type and value for global/data reference DAT_18038120c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803812fc.
+TODO: recover the declaration, type and value for global/data reference DAT_180381404.
+TODO: recover the declaration, type and value for global/data reference DAT_180381420.
+TODO: recover the declaration, type and value for global/data reference DAT_18038144c.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_180561104.
+TODO: recover the declaration, type and value for global/data reference DAT_18056110c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561110.
+TODO: recover the declaration, type and value for global/data reference DAT_180561150.
+TODO: recover the declaration, type and value for global/data reference DAT_180561158.
+TODO: recover the declaration, type and value for global/data reference DAT_18056115c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561180.
+TODO: recover the declaration, type and value for global/data reference DAT_18056118c.
+TODO: recover the declaration, type and value for global/data reference DAT_180561194.
+TODO: recover the declaration, type and value for global/data reference DAT_18056119c.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611a0.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611a4.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611a8.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611ac.
+TODO: recover the declaration, type and value for global/data reference DAT_1805611c8.
+TODO: recover the declaration, type and value for global/data reference DAT_180561210.
+TODO: recover the declaration, type and value for global/data reference DAT_180561228.)F1800b9590U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b9590() noexcept {
+    return kFunction_0x1800b9590;
+}
+
+// 0x1800b9cf0 FUN_1800b9cf0
+// source: re/dump/decompile/0x1800b9cf0_FUN_1800b9cf0.c
+// size: 408 bytes; thunk: false
+// body sha256: 327512b654d8cb2475f355bf2885835a3d3a04093c1b347b0bef3c985a046b07
+// This record is generated; edit the decompiler input or the generator, not this file.
+namespace {
+constexpr sf::reconstructed::FunctionTranslation kFunction_0x1800b9cf0{
+    "0x1800b9cf0",
+    "FUN_1800b9cf0",
+    R"F1800b9cf0S(undefined FUN_1800b9cf0())F1800b9cf0S",
+    R"B1800b9cf0(// 0x1800b9cf0  FUN_1800b9cf0
+// size=408 thunk=false
+// signature: undefined FUN_1800b9cf0()
+// status: ok
+
+
+/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */
+
+ulonglong FUN_1800b9cf0(int param_1,undefined8 param_2,undefined4 *param_3,uint *param_4)
+
+{
+  ulonglong uVar1;
+  int7 iVar2;
+  uint uVar3;
+  int iVar4;
+  longlong lVar5;
+  undefined4 in_XMM1_Da;
+  float fVar6;
+  undefined1 auStack_138 [32];
+  undefined8 local_118;
+  undefined8 uStack_110;
+  undefined8 local_108;
+  undefined8 uStack_100;
+  undefined8 local_f8;
+  undefined8 uStack_f0;
+  undefined8 local_e8;
+  undefined8 uStack_e0;
+  undefined8 local_d8;
+  undefined8 uStack_d0;
+  undefined8 local_c8;
+  char local_c0 [44];
+  uint local_94 [23];
+  ulonglong local_38;
+  
+  local_38 = DAT_1803da4c0 ^ (ulonglong)auStack_138;
+  lVar5 = (longlong)param_1;
+  *param_3 = in_XMM1_Da;
+  *param_4 = 0xffffffff;
+  uVar1 = (ulonglong)(param_1 - 1U);
+  if (param_1 - 1U < 0x80) {
+    local_c0[0] = '\0';
+    local_c0[1] = '\0';
+    local_c0[2] = '\0';
+    local_c0[3] = '\0';
+    local_c0[4] = '\0';
+    local_c0[5] = '\0';
+    local_c0[6] = '\0';
+    local_c0[7] = '\0';
+    local_c0[8] = '\0';
+    local_c0[9] = '\0';
+    local_c0[10] = '\0';
+    local_c0[0xb] = '\0';
+    local_c0[0xc] = '\0';
+    local_c0[0xd] = '\0';
+    local_c0[0xe] = '\0';
+    local_c0[0xf] = '\0';
+    local_c0[0x10] = '\0';
+    local_c0[0x11] = '\0';
+    local_c0[0x12] = '\0';
+    local_c0[0x13] = '\0';
+    local_c0[0x14] = '\0';
+    local_c0[0x15] = '\0';
+    local_c0[0x16] = '\0';
+    local_c0[0x17] = '\0';
+    local_c0[0x18] = '\0';
+    local_c0[0x19] = '\0';
+    local_c0[0x1a] = '\0';
+    local_c0[0x1b] = '\0';
+    local_c0[0x1c] = '\0';
+    local_c0[0x1d] = '\0';
+    local_c0[0x1e] = '\0';
+    local_c0[0x1f] = '\0';
+    local_c0[0x20] = '\0';
+    local_c0[0x21] = '\0';
+    local_c0[0x22] = '\0';
+    local_c0[0x23] = '\0';
+    local_c0[0x24] = '\0';
+    local_c0[0x25] = '\0';
+    local_c0[0x26] = '\0';
+    local_c0[0x27] = '\0';
+    local_c0[0x28] = '\0';
+    local_c0[0x29] = '\0';
+    local_c0[0x2a] = '\0';
+    local_c0[0x2b] = '\0';
+    local_118 = 0;
+    uStack_110 = 0;
+    local_c8 = 0;
+    local_108 = 0;
+    uStack_100 = 0;
+    local_94[0x14] = 0;
+    local_94[0x15] = 0;
+    local_f8 = 0;
+    uStack_f0 = 0;
+    local_94[0x16] = 0;
+    local_e8 = 0;
+    uStack_e0 = 0;
+    local_d8 = 0;
+    uStack_d0 = 0;
+    local_94[0] = 0;
+    local_94[1] = 0;
+    local_94[2] = 0;
+    local_94[3] = 0;
+    local_94[4] = 0;
+    local_94[5] = 0;
+    local_94[6] = 0;
+    local_94[7] = 0;
+    local_94[8] = 0;
+    local_94[9] = 0;
+    local_94[10] = 0;
+    local_94[0xb] = 0;
+    local_94[0xc] = 0;
+    local_94[0xd] = 0;
+    local_94[0xe] = 0;
+    local_94[0xf] = 0;
+    local_94[0x10] = 0;
+    local_94[0x11] = 0;
+    local_94[0x12] = 0;
+    local_94[0x13] = 0;
+    uVar1 = FUN_1800b9590(param_1,param_2,&local_118);
+    if (0 < (int)local_94[0x16]) {
+      if (DAT_1803fa608 == 0) {
+        fVar6 = 0.0;
+      }
+      else {
+        fVar6 = (float)*(double *)(DAT_1803fa608 + 0x10);
+      }
+      uVar3 = (&DAT_180561160)[lVar5 * 0x5a];
+      if ((0x15 < uVar3) || ((float)(&DAT_180561168)[lVar5 * 0x5a] <= fVar6)) {
+        uVar3 = (&DAT_1805610f0)[lVar5 * 0x5a];
+        if ((0x15 < uVar3) || (local_c0[(int)uVar3] == '\0')) {
+          uVar1 = DAT_1803fa608;
+          if (0 < (int)local_94[0x16]) {
+            iVar4 = 0;
+            do {
+              uVar1 = (ulonglong)iVar4;
+              uVar3 = local_94[uVar1];
+              if ((*(uint *)(&DAT_1805610f4 + lVar5 * 0x2d) >> (uVar3 & 0x1f) & 1) == 0) {
+                if (-1 < (int)uVar3) goto LAB_1800b9e2f;
+                break;
+              }
+              iVar4 = iVar4 + 1;
+            } while (iVar4 < (int)local_94[0x16]);
+          }
+          (&DAT_1805610f4)[lVar5 * 0x2d] = 0;
+          uVar3 = 0xffffffff;
+          if (0 < (int)local_94[0x16]) {
+            uVar3 = local_94[0];
+          }
+LAB_1800b9e2f:
+          (&DAT_1805610f0)[lVar5 * 0x5a] = uVar3;
+          if (0x15 < uVar3) goto LAB_1800b9e6e;
+        }
+      }
+      uVar1 = (ulonglong)(int)uVar3;
+      *param_4 = uVar3;
+      iVar2 = (int7)(int3)(uVar3 >> 8);
+      if (local_c0[uVar1 + 0x16] != '\0') {
+        *param_3 = *(undefined4 *)((longlong)&local_118 + uVar1 * 4);
+        return CONCAT71(iVar2,1);
+      }
+      if ((&DAT_180561160)[lVar5 * 0x5a] == uVar3) {
+        *param_3 = (&DAT_180561164)[lVar5 * 0x5a];
+        return CONCAT71(iVar2,1);
+      }
+      *param_4 = 0xffffffff;
+    }
+  }
+LAB_1800b9e6e:
+  return uVar1 & 0xffffffffffffff00;
+}
+
+
+)B1800b9cf0",
+    "327512b654d8cb2475f355bf2885835a3d3a04093c1b347b0bef3c985a046b07",
+    R"F1800b9cf0C(FUN_1800b9590)F1800b9cf0C",
+    R"F1800b9cf0D(LAB_1800b9e2f
+LAB_1800b9e6e
+DAT_1803da4c0
+DAT_1803fa608
+DAT_1805610f0
+DAT_1805610f4
+DAT_180561160
+DAT_180561164
+DAT_180561168)F1800b9cf0D",
+    R"F1800b9cf0T()F1800b9cf0T",
+    R"F1800b9cf0F(40: if (param_1 - 1U < 0x80) {
+120: if (0 < (int)local_94[0x16]) {
+121: if (DAT_1803fa608 == 0) {
+124: else {
+128: if ((0x15 < uVar3) || ((float)(&DAT_180561168)[lVar5 * 0x5a] <= fVar6)) {
+130: if ((0x15 < uVar3) || (local_c0[(int)uVar3] == '\0')) {
+132: if (0 < (int)local_94[0x16]) {
+134: do {
+137: if ((*(uint *)(&DAT_1805610f4 + lVar5 * 0x2d) >> (uVar3 & 0x1f) & 1) == 0) {
+138: if (-1 < (int)uVar3) goto LAB_1800b9e2f;
+139: break;
+146: if (0 < (int)local_94[0x16]) {
+149: LAB_1800b9e2f:
+151: if (0x15 < uVar3) goto LAB_1800b9e6e;
+157: if (local_c0[uVar1 + 0x16] != '\0') {
+159: return CONCAT71(iVar2,1);
+161: if ((&DAT_180561160)[lVar5 * 0x5a] == uVar3) {
+163: return CONCAT71(iVar2,1);
+168: LAB_1800b9e6e:
+169: return uVar1 & 0xffffffffffffff00;)F1800b9cf0F",
+    R"F1800b9cf0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b9e2f.
+TODO: recover the declaration, type and value for global/data reference LAB_1800b9e6e.
+TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
+TODO: recover the declaration, type and value for global/data reference DAT_1803fa608.
+TODO: recover the declaration, type and value for global/data reference DAT_1805610f0.
+TODO: recover the declaration, type and value for global/data reference DAT_1805610f4.
+TODO: recover the declaration, type and value for global/data reference DAT_180561160.
+TODO: recover the declaration, type and value for global/data reference DAT_180561164.
+TODO: recover the declaration, type and value for global/data reference DAT_180561168.)F1800b9cf0U",
+};
+}  // namespace
+
+const sf::reconstructed::FunctionTranslation& Function_0x1800b9cf0() noexcept {
+    return kFunction_0x1800b9cf0;
+}
+
+}  // namespace sf::reconstructed

@@ -169,6 +169,32 @@ Naming: 468 virtual methods carry a unique `Class_vfuncNN` name; 79 addresses ar
 shared by several classes (identical stubs/overrides) and are named
 `vfunc_shared_<addr>` rather than being misattributed to one feature.
 
+## Complete source-level coverage
+
+`src/reconstructed/` now maps **7,656/7,656 inventory functions** to compilable
+C++17 records, with **0 unmapped** addresses and **0 stubs**. The deterministic
+generator `re/tools/gen_reconstructed_source.py` emits 60 translation chunks
+(30.18 MiB) plus `src/reconstructed/coverage.tsv`; each address maps to a
+`src/reconstructed/chunks/chunk_NNN.cpp` file and a unique `Function_0x...`
+accessor. The generated records contain the full decompiled body (16.29 MiB),
+its SHA-256, 17,273 call-target references, 22,280 data references, 7,732
+string literals, 80,593 control-flow lines and 52,123 explicit TODO markers.
+
+`re/tools/check_reconstructed_source.py` independently re-reads the inventory,
+coverage table and source chunks and reports:
+
+```
+inventory=7656 coverage_rows=7656 checked=7656
+generated_chunks=60 accessors=7656
+PASS 7656/7656 inventory functions mapped; unmapped=0 stubs=0
+```
+
+The hand-translated executable reconstruction under `src/features/` is
+unchanged. The generated layer is a source-level transcription, not a claim of
+semantic parity: it preserves the decompiler body, control-flow lines, calls,
+data/string references and named TODOs, but does not invent executable
+semantics for unknown globals, indirect calls or missing PDB layouts.
+
 ## Limitations
 
 * A byte-identical rebuild is not achievable from a stripped binary. The corpus is
@@ -177,3 +203,6 @@ shared by several classes (identical stubs/overrides) and are named
   original source; the reconstruction in `src/` is written from behaviour, not
   from the pseudocode's shape.
 * `std::` RTTI entries are runtime noise and are excluded from the feature map.
+* The complete-coverage records are source-level transcriptions. Unknown
+  globals, indirect calls, calling conventions and object layouts remain marked
+  with specific TODOs; they are not a runnable reimplementation of every body.

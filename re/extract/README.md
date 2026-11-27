@@ -19,6 +19,8 @@ in `re/dump/decompile/` as history.
 |---|---:|---|
 | Functions (all inventory entries) | 7,656 | `functions.tsv` |
 | Decompiled function bodies | 7,656 | `re/dump/decompile/` + recovered copies |
+| Reconstructed source records | 7,656 | `src/reconstructed/coverage.tsv` |
+| Generated source chunks | 60 | `src/reconstructed/chunks/` |
 | Call-graph edges | 23,444 | `callgraph.tsv` |
 | Data references | 22,280 | `xrefs.tsv` |
 | Runtime hooks | 24 | `hooks.tsv` |
@@ -65,6 +67,29 @@ with their jump body, and the two long functions use the recovered bodies under
 inventory address has an `ok` body (including the two recovered bodies), every
 `functions.tsv` path exists, and every callgraph/xref caller is an inventory
 function. It exits PASS only when all 7,656 rows close.
+
+## Complete reconstructed-source coverage
+
+`src/reconstructed/` maps **7,656/7,656 inventory addresses** to compilable
+C++17 records, with **0 unmapped** and **0 stubs**. The generator
+`re/tools/gen_reconstructed_source.py` writes 60 chunks (30.18 MiB) and
+`src/reconstructed/coverage.tsv`; every row names the chunk source file and a
+unique `Function_0x...` accessor. The records carry the full decompiled body
+(16.29 MiB), body SHA-256, 80,593 control-flow lines, 17,273 call targets,
+22,280 data references, 7,732 string literals and 52,123 explicit TODO markers
+for unknown globals, indirect calls and missing PDB/layout information.
+
+```
+py -3 re/tools/gen_reconstructed_source.py
+py -3 re/tools/check_reconstructed_source.py
+```
+
+The checker prints `PASS 7656/7656 inventory functions mapped; unmapped=0
+stubs=0`. `re/tools/build_reconstructed_check.bat` compiles all 60 chunks and
+`src/reconstructed/compile_check.cpp` with MSVC C++17. The hand-translated
+executable code under `src/features/**` is unchanged. These records are a
+source-level transcription, not semantic parity: unknown globals, indirect
+calls, calling conventions and object layouts remain explicitly TODO.
 
 ## Hooks / offsets
 

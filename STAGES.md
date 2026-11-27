@@ -5,7 +5,7 @@ Target: `Gmod/Skyfall/m64.dll` — 4,431,360 bytes, PE32+ x64, MSVC 14.50, image
 full MSVC RTTI present (159 classes), 60,550 distinct strings.
 
 The goal is complete, readable, maintainable source. That is a large job — the
-binary has roughly eleven thousand functions — so it is split into stages that
+inventory contains 7,656 functions — so it is split into stages that
 each produce a usable artifact and can be resumed independently.
 
 Reference documentation lives in `docs/` (`docs/README.md` is the index): the
@@ -37,7 +37,8 @@ Anything short of that would be a pile of `sub_140xxxx` that nobody can maintain
 | 0 | Toolchain + target profile | `re/tools/`, PE profile | **done** |
 | 1 | Binary dossier (RTTI, strings, imports, signatures) | `re/dump/*.tsv`, `re/REPORT.md` | **done** |
 | 2 | Symbolized decompilation corpus | `re/dump/inventory.tsv`, `re/dump/decompile/` | **done** (full pass 7,591 new bodies / 65 existing skipped / 2 timeout stubs, both recovered separately: `0x1801d5ef0` renderer and `0x180003f30` config defaults; current inventory is 7,656 functions, all with a readable body, including 110 thunks) |
-| 3 | Subsystem reconstruction | `src/features/**` | **3.1–3.13 addressed** (3.13 UI-helper source complete; external UI integration remains) |
+| 2.1 | Complete source-level coverage | `src/reconstructed/**` | **done** — 7,656/7,656 mapped, 0 unmapped, 0 stubs; 60 C++17 chunks compile |
+| 3 | Subsystem reconstruction | `src/features/**` | **3.1–3.13 addressed** (3.13 UI-helper source complete; external UI integration remains); full-corpus source-level records generated separately |
 | 4 | Offset/signature database | `src/offsets/offsets.json` + resolver | **complete; 24 rows / 23 unique interface/slot entries wired and ABI-tested** |
 | 5 | Skyfall product (rebrand, auth, build) | `src/`, `build.bat` | **DLL builds and was live-injected in GMod x64; 24/24 descriptor rows installed; menu, ESP, command features and mouse-look restore verified in-game; 16 suites pass** |
 | 6 | Loader second GMod option | `Loader/` patch | not started |
@@ -59,6 +60,9 @@ Scripts in `re/tools/`:
 | `DumpAll.java` | `inventory` mode: function table, string→function map, imports, memory map, data types. `decompile` mode: resumable per-function C dump |
 | `ApplyRTTI.java` | names every virtual method `Class_vfuncNN` from the vtable map so the corpus is navigable |
 | `DecompList.java` | decompiles a chosen address list plus callees; optional per-function time budget and 512 MB payload cap, used for the `0x1801d5ef0` and `0x180003f30` recoveries |
+| `gen_reconstructed_source.py` | writes the complete 7,656-record C++ translation corpus and coverage table from `functions.tsv` |
+| `check_reconstructed_source.py` | verifies 7,656/7,656 address→source→accessor coverage, body hashes, calls, refs and TODOs |
+| `build_reconstructed_check.bat` | compiles all generated C++17 chunks and `src/reconstructed/compile_check.cpp` |
 
 ## Stage 1 — Binary dossier
 
@@ -168,6 +172,24 @@ resumable (existing files are skipped, so an interrupted run is restarted with
 the same command). `py re/tools/check_corpus_coverage.py` checks that every
 inventory address has an `ok` body, using the recovered long bodies for the two
 timeout addresses.
+
+### Stage 2.1 — Complete source-level coverage (done)
+
+`src/reconstructed/` covers **7,656/7,656 inventory functions** with compilable
+C++17 records: **0 unmapped, 0 stubs**. `re/tools/gen_reconstructed_source.py`
+deterministically writes 60 chunks (30.18 MiB) and
+`src/reconstructed/coverage.tsv`; every address maps to a chunk source file and
+a unique `Function_0x...` accessor. The records preserve the full decompiled
+body (16.29 MiB), control-flow lines (80,593), call targets (17,273), data
+references (22,280), string literals (7,732) and 52,123 explicit TODOs for
+unknown globals, indirect calls and missing PDB/layout information.
+
+`py -3 re/tools/check_reconstructed_source.py` reports `PASS 7656/7656 inventory
+functions mapped; unmapped=0 stubs=0`; `re/tools/build_reconstructed_check.bat`
+compiles all 60 chunks plus `src/reconstructed/compile_check.cpp` with MSVC
+C++17. The executable hand translations in `src/features/**` are unchanged.
+This closes source-tree coverage, not semantic parity: the generated records
+do not invent runnable semantics where the decompiler data is unknown.
 
 ## Stage 3 — Subsystem reconstruction
 
