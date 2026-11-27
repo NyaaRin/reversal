@@ -84,12 +84,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802322f0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 0x12) [reason: assignment or side effect]
     // body sha256: 727366413015cbefa7c84bbcf495c0748911cc4a365649280aa0978ab19040b2
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 0x12)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 0x12)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 0x12); }); loop.next(); ) {
                 trace.statement("*param_3 = *param_1;");
                 trace.statement("*(undefined8 *)(param_3 + 2) = 0;");
                 trace.statement("*(undefined8 *)(param_3 + 4) = 0;");
@@ -203,12 +202,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802323d0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 10) [reason: assignment or side effect]
     // body sha256: 1ca3a78359cc3c06f6de0ef3418f696799b6931b9e45c2fec7a19e3094e463e8
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 10)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 10)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 10); }); loop.next(); ) {
                 trace.statement("*param_3 = *param_1;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -322,12 +320,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802324b0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 9) [reason: assignment or side effect]
     // body sha256: 7de992e181f483c850fb35a701c14253763506b4c4050e9332912e7e070b8a5a
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 9)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 9)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 9); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -430,12 +427,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180232590() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 7) [reason: assignment or side effect]
     // body sha256: d0812d45a387854f2eaa6b39376c443eb96e7aeabcff65c298235642707a55a9
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 7)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 7)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 7); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -647,12 +643,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802326f0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 0xe) [reason: assignment or side effect]
     // body sha256: d0920ffacd647401632e83fa4ebe0e09b99dda69d575b13adaabb7c2dfbf916c
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 0xe)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 0xe)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 0xe); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -759,12 +754,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180232800() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 5) [reason: assignment or side effect]
     // body sha256: dbeb9fadadd88c78c5030f3846009d9e0f612adfbc6f07e0aab6c3957c5ab92f
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 5)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 5)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 5); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -863,12 +857,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802328a0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 10) [reason: assignment or side effect]
     // body sha256: d4f115e2253efb9cabe9280e1a29fdc2d41606f4d5c1def2da1df36ffcad5fe4
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 10)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 10)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 10); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -968,12 +961,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180232980() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 0xc) [reason: assignment or side effect]
     // body sha256: ab2226e1bfff6de1cd25c06aee2a00d011adb8aee8e4c2170a7de41e6a982bd7
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 0xc)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 0xc)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 0xc); }); loop.next(); ) {
                 trace.statement("*param_3 = *param_1;");
                 trace.statement("*(undefined8 *)(param_3 + 2) = 0;");
                 trace.statement("*(undefined8 *)(param_3 + 4) = 0;");
@@ -1074,12 +1066,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180232a30() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 9) [reason: assignment or side effect]
     // body sha256: f74baa97f44b6cf6715b3b51e54ab38a2f832343eba36a8973d89dab8b17eb07
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 9)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 9)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 9); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -1194,12 +1185,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180232b00() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 10) [reason: assignment or side effect]
     // body sha256: 1bbfb33461c156e5a446eeb0cdd674be5671bf1057c38e11a85abe60ca846a09
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 10)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 10)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 10); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -1305,12 +1295,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180232bf0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 8) [reason: assignment or side effect]
     // body sha256: f8f6c02d306fd2836fa72017416a7aa293bb0b8b956d75db88a359afc648e25a
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 8)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 8)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 8); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -1534,12 +1523,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180232d80() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 6) [reason: assignment or side effect]
     // body sha256: e5cf7f7e94a9dd80245b4ce0bc8fcd95ece161ba7b02be7b649b698622352088
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 6)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 6)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 6); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -2210,12 +2198,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233270() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = param_1 + 10) [reason: assignment or side effect]
     // body sha256: 608eead92308c06beb59c2e300ec97564739942aa99cd5b0980a77e42d0239a3
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 uVar1;");
-            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 10)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_1 != param_2; param_1 = param_1 + 10)", [&]() -> bool { return static_cast<bool>(param_1 = param_1 + 10); }); loop.next(); ) {
                 trace.statement("*param_3 = 0;");
                 trace.statement("param_3[1] = 0;");
                 trace.statement("param_3[2] = 0;");
@@ -2697,7 +2684,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233490() noexcept {
     // TODO: condition expression type not recovered: if (param_2 == DAT_1803e9ba0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: for (plVar6 = DAT_1803e9b98; DAT_1803e9ba0 = plVar8, plVar6 != param_2; plVar6 = plVar6 + 1) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803e9b98 != (longlong *)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: for (; plVar6 != plVar8; plVar6 = plVar6 + 1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if (0xfff < (ulonglong)(((longlong)DAT_1803e9ba8 - (longlong)DAT_1803e9b98 >> 3) * 8)) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_1802d8350", uVar5);
@@ -2819,7 +2805,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233490() noexcept {
                     trace.statement("local_50 = uVar11;");
                     trace.statement("plVar6 = DAT_1803e9b98;");
                     if (trace.condition("if (DAT_1803e9b98 != (longlong *)0x0)")) {
-                        for (auto loop = trace.loop("for (; plVar6 != plVar8; plVar6 = plVar6 + 1)"); loop.next(); ) {
+                        for (auto loop = trace.checked_loop("for (; plVar6 != plVar8; plVar6 = plVar6 + 1)", [&]() -> bool { return static_cast<bool>(plVar6 = plVar6 + 1); }); loop.next(); ) {
                             trace.statement("puVar3 = (undefined8 *)*plVar6;");
                             if (trace.checked_condition("if (puVar3 != (undefined8 *)0x0)", [&]() -> bool { return static_cast<bool>(puVar3 != (undefined8 *)0x0); })) {
                                 trace.statement("pcVar4 = *(code **)*puVar3;");
@@ -3115,7 +3101,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233770() noexcept {
     // TODO: condition expression type not recovered: if (param_2 == DAT_1803eb448) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: for (puVar6 = DAT_1803eb440; DAT_1803eb448 = puVar8, puVar6 != param_2; puVar6 = puVar6 + 1) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803eb440 != (undefined8 *)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: for (; puVar6 != puVar8; puVar6 = puVar6 + 1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if (0xfff < (ulonglong)(((longlong)DAT_1803eb450 - (longlong)DAT_1803eb440 >> 3) * 8)) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_1802d8350", uVar5);
@@ -3239,7 +3224,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233770() noexcept {
                     trace.statement("local_50 = uVar11;");
                     trace.statement("puVar6 = DAT_1803eb440;");
                     if (trace.condition("if (DAT_1803eb440 != (undefined8 *)0x0)")) {
-                        for (auto loop = trace.loop("for (; puVar6 != puVar8; puVar6 = puVar6 + 1)"); loop.next(); ) {
+                        for (auto loop = trace.checked_loop("for (; puVar6 != puVar8; puVar6 = puVar6 + 1)", [&]() -> bool { return static_cast<bool>(puVar6 = puVar6 + 1); }); loop.next(); ) {
                             trace.statement("_Memory = (void *)*puVar6;");
                             if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                                 trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802339b2;");
@@ -3534,7 +3519,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233a50() noexcept {
     // TODO: condition expression type not recovered: if (param_2 == DAT_1803fcc70) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: for (puVar6 = DAT_1803fcc68; DAT_1803fcc70 = puVar8, puVar6 != param_2; puVar6 = puVar6 + 1) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fcc68 != (undefined8 *)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: for (; puVar6 != puVar8; puVar6 = puVar6 + 1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if (0xfff < (ulonglong)(((longlong)DAT_1803fcc78 - (longlong)DAT_1803fcc68 >> 3) * 8)) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_1802d8350", uVar5);
@@ -3658,7 +3642,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233a50() noexcept {
                     trace.statement("local_50 = uVar11;");
                     trace.statement("puVar6 = DAT_1803fcc68;");
                     if (trace.condition("if (DAT_1803fcc68 != (undefined8 *)0x0)")) {
-                        for (auto loop = trace.loop("for (; puVar6 != puVar8; puVar6 = puVar6 + 1)"); loop.next(); ) {
+                        for (auto loop = trace.checked_loop("for (; puVar6 != puVar8; puVar6 = puVar6 + 1)", [&]() -> bool { return static_cast<bool>(puVar6 = puVar6 + 1); }); loop.next(); ) {
                             trace.statement("_Memory = (void *)*puVar6;");
                             if (trace.checked_condition("if (_Memory != (void *)0x0)", [&]() -> bool { return static_cast<bool>(_Memory != (void *)0x0); })) {
                                 trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180233c92;");
@@ -4136,7 +4120,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233f10() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (param_5 == "\n") [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: for (; param_2 != param_3; param_2 = param_2 + 1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if (param_5 != "\r\n") [reason: ambiguous operand type]
     trace.call_arguments("thunk_FUN_1802d5c20", param_2, param_3, &image::DAT_18033bc0d);
     trace.call_arguments("FUN_1802d7070", param_2, param_3, &image::DAT_18033bce8, param_5);
@@ -4161,7 +4144,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233f10() noexcept {
                 trace.statement("*param_1 = uVar1;");
                 trace.statement("return param_1;");
             }
-            for (auto loop = trace.loop("for (; param_2 != param_3; param_2 = param_2 + 1)"); loop.next(); ) {
+            for (auto loop = trace.checked_loop("for (; param_2 != param_3; param_2 = param_2 + 1)", [&]() -> bool { return static_cast<bool>(param_2 = param_2 + 1); }); loop.next(); ) {
                 if (trace.condition("if (param_5 != \"\\r\\n\")")) {
                     trace.statement("pcVar2 = \"\\r\\n\";");
                     do {
@@ -5614,11 +5597,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x180234420() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((char *)*param_1 != (char *)param_1[0x18]) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if (cVar6 == '\r') [reason: ambiguous operand type]
-    // TODO: condition expression type not recovered: if (((uVar8 >> 8 & 1) == 0) && (pbVar1 = (byte *)*param_1, pbVar1 == (byte *)param_1[0x17])) [reason: pointer-cast target not proven]
     // TODO: condition expression type not recovered: if ((&DAT_18033d080)[bVar13] != '\0') [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: for (; pcVar10 != pcVar2; pcVar10 = pcVar10 + 1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((*(uint *)(*plVar11 + (ulonglong)(uVar8 >> 5) * 4) >> ((byte)uVar8 & 0x1f) & 1) == 0) [reason: pointer depth/pointee not proven]
-    // TODO: condition expression type not recovered: for (; pcVar15 != pcVar10; pcVar15 = pcVar15 + 1) [reason: assignment or side effect]
     // TODO: call arguments not type-recovered for CONCAT31: (int3)((uint)iVar7 >> 8),(byte)local_58 == 0 [reason: scalar cast width/kind mismatch]
     // TODO: call arguments not type-recovered for tolower: *(ctype<char> **)(lVar18 + 8),*pcVar10 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for tolower: *(ctype<char> **)(lVar18 + 8),*pcVar15 [reason: ambiguous operand type]
@@ -5741,7 +5721,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180234420() noexcept {
                 case 6:
                 trace.case_label("case 4:");
                 trace.statement("uVar8 = *(uint *)((longlong)param_1 + 0xd4);");
-                if (trace.condition("if (((uVar8 >> 8 & 1) == 0) && (pbVar1 = (byte *)*param_1, pbVar1 == (byte *)param_1[0x17]))")) {
+                if (trace.checked_condition("if (((uVar8 >> 8 & 1) == 0) && (pbVar1 = (byte *)*param_1, pbVar1 == (byte *)param_1[0x17]))", [&]() -> bool { return static_cast<bool>(((uVar8 >> 8 & 1) == 0) && (pbVar1 = (byte *)*param_1, pbVar1 == (byte *)param_1[0x17])); })) {
                     if (trace.checked_condition("if ((pbVar1 != (byte *)param_1[0x18]) && ((uVar8 & 4) == 0))", [&]() -> bool { return static_cast<bool>((pbVar1 != (byte *)param_1[0x18]) && ((uVar8 & 4) == 0)); })) {
                         trace.statement("bVar13 = *pbVar1;");
                         LAB_1802345d0: ;
@@ -5788,7 +5768,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180234420() noexcept {
                     trace.statement("pcVar2 = (char *)param_1[0x18];");
                     trace.statement("pcVar10 = pcVar14;");
                     if (trace.checked_condition("if ((*(uint *)(param_1 + 0x1a) & 0x100) == 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_1 + 0x1a, 0) & 0x100) == 0); })) {
-                        for (auto loop = trace.loop("for (; pcVar10 != pcVar2; pcVar10 = pcVar10 + 1)"); loop.next(); ) {
+                        for (auto loop = trace.checked_loop("for (; pcVar10 != pcVar2; pcVar10 = pcVar10 + 1)", [&]() -> bool { return static_cast<bool>(pcVar10 = pcVar10 + 1); }); loop.next(); ) {
                             trace.statement("bVar22 = true;");
                             if (trace.condition("if (pcVar16 == pcVar15) goto LAB_18023471e; if (*pcVar10 != *pcVar16) goto LAB_180234722; pcVar16 = pcVar16 + 1; } bVar22 = pcVar16 == pcVar15; LAB_18023471e: if (bVar22)")) {
                                 trace.statement("pcVar14 = pcVar10;");
@@ -5867,7 +5847,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180234420() noexcept {
                                         trace.statement("pcVar10 = (char *)param_1[0x18];");
                                         trace.statement("pcVar15 = pcVar16;");
                                         if (trace.checked_condition("if ((*(uint *)(param_1 + 0x1a) & 0x100) == 0)", [&]() -> bool { return static_cast<bool>((load_at<std::uint32_t>(param_1 + 0x1a, 0) & 0x100) == 0); })) {
-                                            for (auto loop = trace.loop("for (; pcVar15 != pcVar10; pcVar15 = pcVar15 + 1)"); loop.next(); ) {
+                                            for (auto loop = trace.checked_loop("for (; pcVar15 != pcVar10; pcVar15 = pcVar15 + 1)", [&]() -> bool { return static_cast<bool>(pcVar15 = pcVar15 + 1); }); loop.next(); ) {
                                                 trace.statement("bVar22 = true;");
                                                 if (trace.condition("if (pcVar14 == pcVar2) goto LAB_18023494e; if (*pcVar15 != *pcVar14) goto LAB_180234952; pcVar14 = pcVar14 + 1; } bVar22 = pcVar14 == pcVar2; LAB_18023494e: if (bVar22)")) {
                                                     trace.statement("pcVar16 = pcVar15;");
@@ -8270,7 +8250,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180235bb0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar3) [reason: pointer-cast target not proven]
@@ -8304,7 +8283,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180235bb0() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -8627,7 +8606,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180235dc0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -8666,7 +8644,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180235dc0() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -8922,7 +8900,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180235f90() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -8961,7 +8938,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180235f90() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -9221,7 +9198,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236180() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -9260,7 +9236,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236180() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -9606,7 +9582,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236430() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar11 = 0x3f; 0xfffffffffffffffU >> lVar11 == 0; lVar11 = lVar11 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar11 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar10 >> lVar11 == 0; lVar11 = lVar11 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar1 == plVar4) [reason: pointer-cast target not proven]
@@ -9640,7 +9615,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236430() noexcept {
             trace.statement("uVar10 = param_2 - 1 | 1;");
             trace.statement("lVar11 = 0x3f;");
             if (trace.checked_condition("if (uVar10 != 0)", [&]() -> bool { return static_cast<bool>(uVar10 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar10 >> lVar11 == 0; lVar11 = lVar11 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar10 >> lVar11 == 0; lVar11 = lVar11 + -1)", [&]() -> bool { return static_cast<bool>(lVar11 = lVar11 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar11 = 1L << ((char)lVar11 + 1U & 0x3f);");
@@ -9887,7 +9862,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802365f0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar3) [reason: pointer-cast target not proven]
@@ -9921,7 +9895,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802365f0() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -10303,7 +10277,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236a40() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -10342,7 +10315,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236a40() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -10594,7 +10567,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236c10() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -10633,7 +10605,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180236c10() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -11808,7 +11780,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180237320() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -11847,7 +11818,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180237320() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -12103,7 +12074,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802374f0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -12142,7 +12112,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802374f0() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -12402,7 +12372,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802376e0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -12441,7 +12410,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802376e0() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -12697,7 +12666,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802378d0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -12736,7 +12704,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802378d0() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -13232,7 +13200,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180237c10() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar11 = 0x3f; 0xfffffffffffffffU >> lVar11 == 0; lVar11 = lVar11 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar11 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar10 >> lVar11 == 0; lVar11 = lVar11 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar1 == plVar3) [reason: pointer-cast target not proven]
@@ -13271,7 +13238,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180237c10() noexcept {
             trace.statement("uVar10 = param_2 - 1 | 1;");
             trace.statement("lVar11 = 0x3f;");
             if (trace.checked_condition("if (uVar10 != 0)", [&]() -> bool { return static_cast<bool>(uVar10 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar10 >> lVar11 == 0; lVar11 = lVar11 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar10 >> lVar11 == 0; lVar11 = lVar11 + -1)", [&]() -> bool { return static_cast<bool>(lVar11 = lVar11 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar11 = 1L << ((char)lVar11 + 1U & 0x3f);");
@@ -13815,7 +13782,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180237fc0() noexcept {
     // TODO: resolve the indirect call in body 35: (*pcVar3)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; local_48 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x70) [reason: assignment or side effect]
     trace.call_arguments("FUN_18020e450", lVar4 + 0x28);
     trace.call_arguments("FUN_18020e450", lVar4 + 8);
     trace.call_arguments("swi", 0x29);
@@ -13836,7 +13802,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180237fc0() noexcept {
             trace.statement("lVar4 = *param_1;");
             if (trace.checked_condition("if (lVar4 != 0)", [&]() -> bool { return static_cast<bool>(lVar4 != 0); })) {
                 trace.statement("lVar1 = param_1[1];");
-                for (auto loop = trace.loop("for (; local_48 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x70)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; local_48 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x70)", [&]() -> bool { return static_cast<bool>(lVar4 = lVar4 + 0x70); }); loop.next(); ) {
                     trace.statement("FUN_18020e450(lVar4 + 0x28);");
                     trace.statement("FUN_18020e450(lVar4 + 8);");
                 }
@@ -14042,7 +14008,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802380e0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar2) [reason: pointer-cast target not proven]
@@ -14081,7 +14046,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802380e0() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -15070,7 +15035,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802386b0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar10 = 0x3f; 0xfffffffffffffffU >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar10 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((longlong *)*puVar11 == plVar3) [reason: pointer-cast target not proven]
@@ -15104,7 +15068,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802386b0() noexcept {
             trace.statement("uVar9 = param_2 - 1 | 1;");
             trace.statement("lVar10 = 0x3f;");
             if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar9 >> lVar10 == 0; lVar10 = lVar10 + -1)", [&]() -> bool { return static_cast<bool>(lVar10 = lVar10 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar10 = 1L << ((char)lVar10 + 1U & 0x3f);");
@@ -16131,7 +16095,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180238ca0() noexcept {
     // TODO: resolve the indirect call in body 36: (*pcVar3)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; local_48 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x68) [reason: assignment or side effect]
     trace.call_arguments("FUN_18020e450", lVar4 + 0x48);
     trace.call_arguments("FUN_18020d5c0", lVar4 + 0x28);
     trace.call_arguments("FUN_18020e450", lVar4 + 8);
@@ -16154,7 +16117,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180238ca0() noexcept {
             trace.statement("lVar4 = *param_1;");
             if (trace.checked_condition("if (lVar4 != 0)", [&]() -> bool { return static_cast<bool>(lVar4 != 0); })) {
                 trace.statement("lVar1 = param_1[1];");
-                for (auto loop = trace.loop("for (; local_48 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x68)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; local_48 = lVar4, lVar4 != lVar1; lVar4 = lVar4 + 0x68)", [&]() -> bool { return static_cast<bool>(lVar4 = lVar4 + 0x68); }); loop.next(); ) {
                     trace.statement("FUN_18020e450(lVar4 + 0x48);");
                     trace.statement("FUN_18020d5c0(lVar4 + 0x28);");
                     trace.statement("FUN_18020e450(lVar4 + 8);");
@@ -16410,7 +16373,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180238d80() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar15 = 0x3f; 0xfffffffffffffffU >> lVar15 == 0; lVar15 = lVar15 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar15 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (uVar10 != plVar4[4]) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (uVar10 == plVar4[4]) [reason: ambiguous operand type]
@@ -16454,7 +16416,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180238d80() noexcept {
             trace.statement("uVar10 = param_2 - 1 | 1;");
             trace.statement("lVar15 = 0x3f;");
             if (trace.checked_condition("if (uVar10 != 0)", [&]() -> bool { return static_cast<bool>(uVar10 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1)", [&]() -> bool { return static_cast<bool>(lVar15 = lVar15 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar15 = 1L << ((char)lVar15 + 1U & 0x3f);");
@@ -16729,8 +16691,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180238ff0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18023921c.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while (puVar11 = puVar5, puVar6 != puVar4) [reason: assignment or side effect]
-    // TODO: condition expression type not recovered: while (puVar11 = puVar4, puVar5 != puVar12) [reason: assignment or side effect]
     trace.call_arguments("FUN_180233d30");
     trace.call_arguments("FUN_180233d30");
     trace.call_arguments("FUN_180233d30");
@@ -16775,7 +16735,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180238ff0() noexcept {
                 trace.statement("FUN_180233d30();");
                 trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
                 trace.statement("puVar6 = param_2;");
-                while (trace.loop_condition("while (puVar11 = puVar5, puVar6 != puVar4)")) {
+                while (trace.checked_loop_condition("while (puVar11 = puVar5, puVar6 != puVar4)", [&]() -> bool { return static_cast<bool>(puVar11 = puVar5, puVar6 != puVar4); })) {
                     if (trace.checked_condition("if (puVar11 == param_3)", [&]() -> bool { return static_cast<bool>(puVar11 == param_3); })) {
                         if (trace.checked_condition("if (puVar12 == param_2)", [&]() -> bool { return static_cast<bool>(puVar12 == param_2); })) {
                             trace.statement("*plVar10 = (longlong)puVar11;");
@@ -16813,7 +16773,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180238ff0() noexcept {
                     trace.statement("FUN_180233d30();");
                     trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
                     trace.statement("puVar5 = puVar11;");
-                    while (trace.loop_condition("while (puVar11 = puVar4, puVar5 != puVar12)")) {
+                    while (trace.checked_loop_condition("while (puVar11 = puVar4, puVar5 != puVar12)", [&]() -> bool { return static_cast<bool>(puVar11 = puVar4, puVar5 != puVar12); })) {
                         if (trace.checked_condition("if (puVar11 == param_3)", [&]() -> bool { return static_cast<bool>(puVar11 == param_3); })) {
                             trace.statement("*plVar10 = (longlong)puVar11;");
                             trace.statement("goto LAB_18023921c;");
@@ -17066,7 +17026,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180239240() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar15 = 0x3f; 0xfffffffffffffffU >> lVar15 == 0; lVar15 = lVar15 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar15 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (uVar10 != plVar4[4]) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (uVar10 == plVar4[4]) [reason: ambiguous operand type]
@@ -17110,7 +17069,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180239240() noexcept {
             trace.statement("uVar10 = param_2 - 1 | 1;");
             trace.statement("lVar15 = 0x3f;");
             if (trace.checked_condition("if (uVar10 != 0)", [&]() -> bool { return static_cast<bool>(uVar10 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1)", [&]() -> bool { return static_cast<bool>(lVar15 = lVar15 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar15 = 1L << ((char)lVar15 + 1U & 0x3f);");
@@ -17837,7 +17796,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180239790() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: for (lVar15 = 0x3f; 0xfffffffffffffffU >> lVar15 == 0; lVar15 = lVar15 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: if ((ulonglong)(1L << ((byte)lVar15 & 0x3f)) < param_2) [reason: scalar cast width/kind mismatch]
-    // TODO: condition expression type not recovered: for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1) [reason: assignment or side effect]
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (uVar10 != plVar4[4]) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if (uVar10 == plVar4[4]) [reason: ambiguous operand type]
@@ -17881,7 +17839,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180239790() noexcept {
             trace.statement("uVar10 = param_2 - 1 | 1;");
             trace.statement("lVar15 = 0x3f;");
             if (trace.checked_condition("if (uVar10 != 0)", [&]() -> bool { return static_cast<bool>(uVar10 != 0); })) {
-                for (auto loop = trace.loop("for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1)"); loop.next(); ) {
+                for (auto loop = trace.checked_loop("for (; uVar10 >> lVar15 == 0; lVar15 = lVar15 + -1)", [&]() -> bool { return static_cast<bool>(lVar15 = lVar15 + -1); }); loop.next(); ) {
                 }
             }
             trace.statement("lVar15 = 1L << ((char)lVar15 + 1U & 0x3f);");
@@ -20528,8 +20486,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18023a7e0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while (puVar15 = puVar14, param_2 < puVar15) [reason: assignment or side effect]
-    // TODO: condition expression type not recovered: while (puVar10 = puVar12, puVar9 = puVar15, puVar12 = puVar10, param_2 < puVar9) [reason: assignment or side effect]
     trace.call_arguments("FUN_180201cf0", puVar14, puVar15);
     trace.call_arguments("FUN_180201cf0", puVar15, puVar14);
     trace.call_arguments("FUN_180201cf0", param_3, puVar15);
@@ -20559,7 +20515,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18023a7e0() noexcept {
             trace.statement("undefined8 *puVar14;");
             trace.statement("undefined8 *puVar15;");
             trace.statement("puVar14 = param_3;");
-            while (trace.loop_condition("while (puVar15 = puVar14, param_2 < puVar15)")) {
+            while (trace.checked_loop_condition("while (puVar15 = puVar14, param_2 < puVar15)", [&]() -> bool { return static_cast<bool>(puVar15 = puVar14, param_2 < puVar15); })) {
                 trace.statement("puVar14 = puVar15 + -4;");
                 trace.statement("cVar11 = FUN_180201cf0(puVar14,puVar15);");
                 if (trace.condition("if ((cVar11 < '\\0') || (cVar11 = FUN_180201cf0(puVar15,puVar14), cVar11 < '\\0')) break; } do")) {
@@ -20568,7 +20524,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18023a7e0() noexcept {
                     trace.statement("puVar12 = puVar15;");
                     if (trace.condition("if (param_4 <= param_3) break; cVar11 = FUN_180201cf0(param_3,puVar15); if ((cVar11 < '\\0') || (cVar11 = FUN_180201cf0(puVar15,param_3), cVar11 < '\\0')) break; } while( true ); joined_r0x00018023a873: puVar13 = puVar14; if (param_4 <= param_3)")) {
                         joined_r0x00018023a8c4: ;
-                        while (trace.loop_condition("while (puVar10 = puVar12, puVar9 = puVar15, puVar12 = puVar10, param_2 < puVar9)")) {
+                        while (trace.checked_loop_condition("while (puVar10 = puVar12, puVar9 = puVar15, puVar12 = puVar10, param_2 < puVar9)", [&]() -> bool { return static_cast<bool>(puVar10 = puVar12, puVar9 = puVar15, puVar12 = puVar10, param_2 < puVar9); })) {
                             trace.statement("puVar15 = puVar9 + -4;");
                             trace.statement("cVar11 = FUN_180201cf0(puVar15,puVar10);");
                             if (trace.checked_condition("if (-1 < cVar11)", [&]() -> bool { return static_cast<bool>(-1 < cVar11); })) {
