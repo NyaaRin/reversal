@@ -333,7 +333,7 @@ def declaration_lines(declarations: dict[str, tuple[str, int | None]]) -> list[s
     return lines
 
 
-def split_top_level(text: str, separator: str) -> list[str]:
+def split_top_level(text: str, separator: str, keep_empty: bool = False) -> list[str]:
     parts: list[str] = []
     start = 0
     depth = 0
@@ -358,7 +358,7 @@ def split_top_level(text: str, separator: str) -> list[str]:
             parts.append(text[start:index].strip())
             start = index + 1
     parts.append(text[start:].strip())
-    return [part for part in parts if part]
+    return parts if keep_empty else [part for part in parts if part]
 
 
 def rewrite_global_address_comparisons(
@@ -803,6 +803,12 @@ def rewrite_assignment_casts(
         left_type, left_count = left_decl
         right_type, right_count = right_decl
         if left_count is not None or right_count is not None:
+            if (left_count is None and right_count is not None
+                    and pointer_shape(left_type)
+                    and left_type.rsplit("*", 1)[0].strip() == right_type.rsplit("*", 1)[0].strip()):
+                # `ppVar = auStack_x` is an ordinary array-to-pointer decay:
+                # the element type matches the pointer's pointee exactly.
+                return match.group(0)
             invalid = True
             return match.group(0)
         left_pointer = bool(pointer_shape(left_type)) or left_count is not None
@@ -989,7 +995,7 @@ def comparison_pointer_depth_conflict(
     return False
 
 
-TYPE_ONLY_CALLEE_RE = re.compile(r"^\**\s*[A-Za-z_][A-Za-z0-9_: ]*\*+$")
+TYPE_ONLY_CALLEE_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_:]*(?:\s*\*)+$")
 
 
 def calls_through_pointer(expr: str) -> bool:
@@ -1030,6 +1036,74 @@ def calls_through_pointer(expr: str) -> bool:
             continue
         return True
     return False
+
+
+COMPARE_OPERANDS_RE = re.compile(
+    r"(?<![&\w*])\b([A-Za-z_][A-Za-z0-9_]*)\b(?!\s*[\[])\s*(<=|>=|==|!=|<|>)\s*"
+    r"(?<![&\w.*])\b([A-Za-z_][A-Za-z0-9_]*)\b(?!\s*[\[])"
+)
+CAST_CONST_COMPARE_RE = re.compile(
+    r"\(\s*([A-Za-z_][A-Za-z0-9_: ]*\*+)\s*\)\s*(0[xX][0-9A-Fa-f]+|\d+)\s*(<=|>=|==|!=|<|>)\s*"
+    r"(?<![&\w.*])\b([A-Za-z_][A-Za-z0-9_]*)\b(?!\s*[\[(])(?!\s*[+\-*/%&|^])"
+)
+
+
+def rewrite_pointer_scalar_comparisons(
+    expr: str,
+    locals: dict[str, tuple[str, int | None]],
+) -> str:
+    """Compare a pointer with a width-proven 8-byte scalar operand.
+
+    Ghidra compares pointer locals and 8-byte integer locals/slots directly.
+    Both declarations prove one machine word per side, so the scalar operand is
+    reinterpreted at the pointer type: the bitwise comparison is unchanged and
+    the compiler still checks the resulting operand types.
+    """
+    if not locals:
+        return expr
+
+    def is_bare_operand(text: str, start: int) -> bool:
+        """True when the operand is not the tail of an arithmetic chain.
+
+        `a + b == p` must not cast `b`: the addition would become pointer
+        arithmetic inside the original integer expression.
+        """
+        index = start - 1
+        while index >= 0 and text[index] == " ":
+            index -= 1
+        return index < 0 or text[index] in "([<>=!&|,;{"
+
+    def declaration(name: str) -> tuple[bool, bool, str]:
+        declared = locals.get(name)
+        if declared is None or declared[1] is not None:
+            return False, False, ""
+        type_name = declared[0]
+        is_pointer = "*" in type_name
+        is_scalar8 = (not is_pointer and scalar_width(type_name) == 8
+                      and type_name not in ("float", "double"))
+        return is_pointer, is_scalar8, type_name
+
+    def replace(match: re.Match[str]) -> str:
+        left_name, operator, right_name = match.group(1), match.group(2), match.group(3)
+        left_pointer, left_scalar8, left_type = declaration(left_name)
+        right_pointer, right_scalar8, right_type = declaration(right_name)
+        if left_pointer and right_scalar8 and is_bare_operand(match.string, match.start(3)):
+            return f"{left_name} {operator} reinterpret_cast<{left_type}>({right_name})"
+        if right_pointer and left_scalar8 and is_bare_operand(match.string, match.start(1)):
+            return f"reinterpret_cast<{right_type}>({left_name}) {operator} {right_name}"
+        return match.group(0)
+
+    def replace_cast(match: re.Match[str]) -> str:
+        cast_type, operator, scalar_name = match.group(1), match.group(3), match.group(4)
+        pointer, scalar8, _ = declaration(scalar_name)
+        target = cpp_type(cast_type)
+        if (pointer or not scalar8 or not target or not pointer_shape(target)
+                or not is_bare_operand(match.string, match.start(4))):
+            return match.group(0)
+        return f"({cast_type}){match.group(2)} {operator} reinterpret_cast<{target}>({scalar_name})"
+
+    expr = COMPARE_OPERANDS_RE.sub(replace, expr)
+    return CAST_CONST_COMPARE_RE.sub(replace_cast, expr)
 
 
 def safe_expression(
@@ -1174,22 +1248,20 @@ def safe_expression(
             return None
     if not re.search(r"[A-Za-z0-9_]", expr):
         return None
-    without_hex = re.sub(r"\b0[xX][0-9A-Fa-f]+\b", "0", expr)
-    if re.search(r"\b\d+[A-Za-z]+\b", without_hex):
+    without_hex = re.sub(r"\b0[xX][0-9A-Fa-f]+(?:[uUlL]{0,3})\b", "0", expr)
+    # `1U`, `2UL`, `3ULL` are ordinary C++ literals; only the decompiler's
+    # malformed spellings such as `3D` remain unrepresentable.
+    without_suffix = re.sub(r"\b(\d+)(?:[uUlL]{1,3})\b", r"\1", without_hex)
+    if re.search(r"\b\d+[A-Za-z]+\b", without_suffix):
         # Malformed decompiler literals such as `3D` are not C++ numbers.
         # Valid hexadecimal tokens ending in a-f were removed above.
         return None
     if re.search(r"\([^()]*\[[^\]]*\][^()]*\)\s*(?:0x[0-9A-Fa-f]+|\d+|\w+)", expr):
         # C-style casts to array types are not valid C++ expressions.
         return None
-    if re.search(r"\)\s*\(", expr) and re.search(
-        r"\bcode\b|\b(?:FUN|DAT|SUB|PTR|UNK)_|\bswitchD_|\bcaseD_", expr
-    ):
-        # Calls through a recovered function pointer/data slot have no
-        # signature yet; do not mistake an ordinary cast-plus-group for one.
-        return None
-    if re.search(r"\(\s*\*+\s*[A-Za-z_]", expr) and re.search(r"\)\s*\(", expr):
-        return None
+    # Indirect calls are already rejected precisely by `calls_through_pointer`
+    # at entry.  A blanket `)(` test here also matched typed reads such as
+    # `(undefined4 *)(lVar + 0x18)`, so it is intentionally absent.
 
     identifiers = IDENT_RE.findall(expr)
     identifier_set = set(identifiers)
@@ -1211,6 +1283,7 @@ def safe_expression(
             analysis_locals = dict(locals)
             for name, declaration in extras.items():
                 analysis_locals.setdefault(name, declaration)
+    expr = rewrite_pointer_scalar_comparisons(expr, analysis_locals)
     for name in identifier_set:
         declaration = analysis_locals.get(name)
         if declaration is None:
@@ -1237,7 +1310,17 @@ def safe_expression(
                 # Unary `*scalar` is not valid C++; `a * b` multiplication is
                 # left alone because its left operand is not an operator.
                 return None
-            if re.search(rf"\b{re.escape(name)}\b\s*(?:==|!=)\s*\([^()]*\*", expr):
+            if re.search(rf"(?<![&\w*])\b{re.escape(name)}\b\s*(?:==|!=)\s*\([^()]*\*", expr):
+                # `&local != (T *)x` compares two pointers; only a bare scalar
+                # compared against a pointer cast lacks a proven type here.
+                return None
+            if re.search(
+                rf"\([^()]*\*[^()]*\)\s*(?:0[xX][0-9A-Fa-f]+|\d+)\s*(?:<=|>=|==|!=|<|>)\s*[^&|(),]*\b{re.escape(name)}\b",
+                expr,
+            ):
+                # A pointer constant compared against a scalar that only appears
+                # inside a larger arithmetic expression: the extent that would
+                # have to be reinterpreted is not recoverable from the text.
                 return None
             if re.search(
                 rf"\([^()]*\*[^()]*\)\s*(?:0x[0-9A-Fa-f]+|0|nullptr)\s*(?:==|!=)\s*\b{re.escape(name)}\b",
@@ -1258,6 +1341,18 @@ def safe_expression(
                 # register views need an explicit subpiece, not array decay.
                 return None
             if not re.search(rf"&\s*{re.escape(name)}\b|\b{re.escape(name)}\s*\[", expr):
+                decay_store = re.search(
+                    rf"\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*{re.escape(name)}\b(?!\s*[\[(])", expr
+                )
+                if decay_store:
+                    # A whole array stored into a pointer local is an ordinary
+                    # lvalue-to-pointer decay; the pointee must match the
+                    # element type exactly.
+                    target = analysis_locals.get(decay_store.group(1))
+                    element = type_name.rsplit("*", 1)[0].strip() if "*" in type_name else type_name
+                    if (target and target[1] is None and "*" in target[0]
+                            and target[0].rsplit("*", 1)[0].strip() == element):
+                        continue
                 if not re.search(
                     rf"\b{re.escape(name)}\b\s*(?:[+\-](?![+\-])|<=|>=|==|!=|(?<![<>])<(?![<=])|(?<![<>])>(?![>=]))", expr
                 ):
@@ -1477,10 +1572,16 @@ def condition_expression(header: str) -> str | None:
 
 
 def for_condition_expression(header: str) -> str | None:
+    """Return the middle clause of a `for` header.
+
+    Empty clauses must be preserved: dropping the empty initializer of
+    `for (; condition; update)` would shift the update into the condition
+    slot and make the generator type-check the increment instead.
+    """
     match = re.match(r"for\s*\((.*)\)\s*$", header.strip(), re.DOTALL)
     if not match:
         return None
-    parts = split_top_level(match.group(1), ";")
+    parts = split_top_level(match.group(1), ";", keep_empty=True)
     return parts[1].strip() if len(parts) >= 2 and parts[1].strip() else None
 
 
@@ -2157,6 +2258,14 @@ def comment_text(text: str) -> str:
 
 def rejection_reason(text: str) -> str:
     """Name the first static-evidence rule that blocked an expression."""
+    normalized = rewrite_known_type_names(text)
+    if calls_through_pointer(normalized):
+        return "call through unproven function pointer"
+    for match in CALL_RE.finditer(text):
+        name = match.group(1)
+        if name in CALL_KEYWORDS or name in TYPE_WORDS or re.match(r"[A-Za-z_][A-Za-z0-9_]*_t$", name):
+            continue
+        return "call return/argument types unresolved"
     if re.search(r"\b_?(?:DAT|UNK|SUB|PTR)_[0-9A-Fa-f]+", text):
         return "unresolved global storage/width"
     if "->" in text or re.search(r"\b[A-Za-z_]\w*\.[A-Za-z_]\w*", text):

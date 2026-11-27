@@ -30,32 +30,28 @@ T& load_at(Base base, std::uintptr_t offset) noexcept {
 // 32-bit or 16-bit subpiece from a byte-array vector.  The slot table records
 // the byte element type and element count; these helpers preserve the exact
 // little-endian bit position while making the access compiler-checked.
-inline std::uint32_t load_bits32(const std::uint8_t* base, std::size_t count,
-                                 std::size_t bit_offset) noexcept {
-    std::uint32_t result = 0;
-    for (std::size_t bit = 0; bit < 32; ++bit) {
+template <class T>
+T load_bits(const std::uint8_t* base, std::size_t count, std::size_t bit_offset) noexcept {
+    T result = 0;
+    for (std::size_t bit = 0; bit < sizeof(T) * 8; ++bit) {
         const std::size_t position = bit_offset + bit;
         const std::size_t byte = position / 8;
         if (byte >= count) {
             break;
         }
-        result |= static_cast<std::uint32_t>((base[byte] >> (position % 8)) & 1u) << bit;
+        result |= static_cast<T>((base[byte] >> (position % 8)) & 1u) << bit;
     }
     return result;
 }
 
+inline std::uint32_t load_bits32(const std::uint8_t* base, std::size_t count,
+                                 std::size_t bit_offset) noexcept {
+    return load_bits<std::uint32_t>(base, count, bit_offset);
+}
+
 inline std::uint16_t load_bits16(const std::uint8_t* base, std::size_t count,
                                  std::size_t bit_offset) noexcept {
-    std::uint16_t result = 0;
-    for (std::size_t bit = 0; bit < 16; ++bit) {
-        const std::size_t position = bit_offset + bit;
-        const std::size_t byte = position / 8;
-        if (byte >= count) {
-            break;
-        }
-        result |= static_cast<std::uint16_t>((base[byte] >> (position % 8)) & 1u) << bit;
-    }
-    return result;
+    return load_bits<std::uint16_t>(base, count, bit_offset);
 }
 
 class TranslationTrace {

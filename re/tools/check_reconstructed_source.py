@@ -16,6 +16,10 @@ COVERAGE = OUT / "coverage.tsv"
 CHUNKS = OUT / "chunks"
 
 EXPECTED_COUNT = 7656
+CHECKED_CONDITION_RE = re.compile(
+    r"(?:if \(trace\.checked_condition\(|while \(trace\.checked_loop_condition\("
+    r"|switch \(trace\.checked_switch\(|for \(auto loop = trace\.checked_loop\()"
+)
 
 
 def normalize(text: str) -> str:
@@ -154,6 +158,11 @@ def main() -> int:
     ))
 
     referenced_files: set[Path] = set()
+    # Each chunk holds up to 128 accessors; the decompiled bodies are read once
+    # per function but only once per file.  Caching keeps the audit linear in
+    # corpus size instead of re-reading ~86 MB sixty times.
+    chunk_texts: dict[Path, str] = {}
+    decompiled_texts: dict[Path, str] = {}
     accessors: set[str] = set()
     stub_count = 0
     checked = 0
@@ -178,7 +187,10 @@ def main() -> int:
             errors.append(f"{address}: source file missing: {row['source_file']}")
             continue
         referenced_files.add(source_file)
-        text = source_file.read_text(encoding="utf-8")
+        text = chunk_texts.get(source_file)
+        if text is None:
+            text = source_file.read_text(encoding="utf-8")
+            chunk_texts[source_file] = text
         accessor = row["function"]
         if accessor in accessors:
             errors.append(f"{address}: duplicate accessor {accessor}")
@@ -207,10 +219,19 @@ def main() -> int:
             errors.append(f"{address}: statement lines {statements} != coverage {row['statement_lines']}")
         if controls != int(row["control_flow_nodes"]):
             errors.append(f"{address}: control nodes {controls} != coverage {row['control_flow_nodes']}")
-        typed_conditions = accessor_body.count("trace.checked_condition(") + accessor_body.count("trace.checked_loop_condition(") + accessor_body.count("trace.checked_switch(") + accessor_body.count("trace.checked_loop(")
+        # Count only statements that the compiler instantiates, i.e. lines that
+        # begin with a checked-control construct.  A bare substring count could
+        # also match text inside the recorded string literals.
+        typed_conditions = sum(
+            1 for line in accessor_body.splitlines()
+            if CHECKED_CONDITION_RE.match(line.strip())
+        )
         if typed_conditions != int(row["typed_conditions"]):
             errors.append(f"{address}: typed conditions {typed_conditions} != coverage {row['typed_conditions']}")
-        typed_calls = accessor_body.count("trace.call_arguments(")
+        typed_calls = sum(
+            1 for line in accessor_body.splitlines()
+            if line.strip().startswith("trace.call_arguments(")
+        )
         if typed_calls != int(row["typed_calls"]):
             errors.append(f"{address}: typed call sites {typed_calls} != coverage {row['typed_calls']}")
         unresolved_conditions = len(re.findall(r"// TODO: condition expression type not recovered:", accessor_body))
@@ -248,7 +269,11 @@ def main() -> int:
             stub_count += 1
             continue
         digest = hashlib.sha256(body.encode("utf-8")).hexdigest()
-        expected_body = normalize((DUMP / expected["decompile_file"]).read_text(encoding="utf-8", errors="replace"))
+        decompiled_path = DUMP / expected["decompile_file"]
+        expected_body = decompiled_texts.get(decompiled_path)
+        if expected_body is None:
+            expected_body = normalize(decompiled_path.read_text(encoding="utf-8", errors="replace"))
+            decompiled_texts[decompiled_path] = expected_body
         expected_digest = hashlib.sha256(expected_body.encode("utf-8")).hexdigest()
         if digest != expected_digest:
             errors.append(f"{address}: body digest does not match decompiled source")

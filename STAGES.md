@@ -177,9 +177,9 @@ timeout addresses.
 
 `src/reconstructed/` covers **7,656/7,656 inventory functions** with compiled
 C++17 accessors: **0 unmapped, 0 stubs**. `re/tools/gen_reconstructed_source.py`
-deterministically writes 60 chunks (86,125,935 bytes; 82.13 MiB) and
+deterministically writes 60 chunks (86,110,008 bytes; 82.12 MiB) and
 `src/reconstructed/coverage.tsv`; every address maps to a chunk source file and
-a unique `Function_0x...` accessor. The accessors contain **462,614 executable
+a unique `Function_0x...` accessor. The accessors contain **462,740 executable
 statement/reference lines**, **306,161 `trace.statement` calls**, **49,305 real
 C++ `if`/`else`/loop/`switch` control nodes**, **7,732 actual string-literal
 calls**, plus resolved references to **4,331 extern call thunks** and **5,414
@@ -189,8 +189,8 @@ subfields, admitted scalar/pointer casts, global decay, typed assignments,
 multiline signatures, wrapped `if`/`for`/`while` headers joined before typing,
 Windows/CRT typedefs, decimal-literal typing and
 table-admitted vector slots and function-scoped global access widths feed
-**39,421 compiler-checked condition expressions** and **51,466
-`trace.call_arguments` sites**; **5,339 condition sites** and **1,841
+**40,103 compiler-checked condition expressions** and **51,592
+`trace.call_arguments` sites**; **4,584 condition sites** and **1,715
 call-argument sites** remain explicit TODOs because their types or referenced
 entities are not recoverable from the available evidence (including every call
 through a recovered function pointer and every comparison whose cast depth

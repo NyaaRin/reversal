@@ -29155,7 +29155,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180012bf0() noexcept {
                         trace.statement("uVar5 = ~uVar5;");
                         trace.statement("uVar6 = 0;");
                         if (trace.checked_condition("if (uVar5 != 0)", [&]() -> bool { return static_cast<bool>(uVar5 != 0); })) {
-                            for (auto loop = trace.checked_loop("for (; (uVar5 >> uVar6 & 1) == 0; uVar6 = uVar6 + 1)", [&]() -> bool { return static_cast<bool>(uVar6 = uVar6 + 1); }); loop.next(); ) {
+                            for (auto loop = trace.checked_loop("for (; (uVar5 >> uVar6 & 1) == 0; uVar6 = uVar6 + 1)", [&]() -> bool { return static_cast<bool>((uVar5 >> uVar6 & 1) == 0); }); loop.next(); ) {
                             }
                         }
                         trace.statement("uVar9 = 1;");
@@ -29199,7 +29199,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180012bf0() noexcept {
                     trace.statement("uVar6 = ~(uint)uVar1;");
                     trace.statement("uVar5 = 0;");
                     if (trace.checked_condition("if (uVar6 != 0)", [&]() -> bool { return static_cast<bool>(uVar6 != 0); })) {
-                        for (auto loop = trace.checked_loop("for (; (uVar6 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1)", [&]() -> bool { return static_cast<bool>(uVar5 = uVar5 + 1); }); loop.next(); ) {
+                        for (auto loop = trace.checked_loop("for (; (uVar6 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1)", [&]() -> bool { return static_cast<bool>((uVar6 >> uVar5 & 1) == 0); }); loop.next(); ) {
                         }
                     }
                     trace.statement("uVar9 = 1;");
@@ -29220,7 +29220,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180012bf0() noexcept {
                     trace.statement("uVar7 = *(ulonglong *)*pauVar10 ^ *(ulonglong *)*pauVar8;");
                     trace.statement("uVar3 = 0;");
                     if (trace.checked_condition("if (uVar7 != 0)", [&]() -> bool { return static_cast<bool>(uVar7 != 0); })) {
-                        for (auto loop = trace.checked_loop("for (; (uVar7 >> uVar3 & 1) == 0; uVar3 = uVar3 + 1)", [&]() -> bool { return static_cast<bool>(uVar3 = uVar3 + 1); }); loop.next(); ) {
+                        for (auto loop = trace.checked_loop("for (; (uVar7 >> uVar3 & 1) == 0; uVar3 = uVar3 + 1)", [&]() -> bool { return static_cast<bool>((uVar7 >> uVar3 & 1) == 0); }); loop.next(); ) {
                         }
                     }
                     trace.statement("uVar9 = 1;");

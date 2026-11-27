@@ -1,24 +1,25 @@
 site_type	decision	reason	count
-condition	admitted	declared pointer-to-64-bit integer	1094
-condition	admitted	declared scalar or indexed element	2673
-condition	rejected	ambiguous operand type	421
-condition	rejected	assignment or side effect	394
-condition	rejected	nested call/return type unresolved	13
-condition	rejected	pointer depth/pointee not proven	964
-condition	rejected	pointer-cast target not proven	803
-condition	rejected	scalar cast of pointer element	25
-condition	rejected	scalar cast width/kind mismatch	209
-condition	rejected	unknown aggregate layout	93
-condition	rejected	unresolved global storage/width	2417
-call	admitted	declared pointer-to-64-bit integer	857
-call	admitted	declared scalar or indexed element	1377
+condition	admitted	declared pointer-to-64-bit integer	1220
+condition	admitted	declared scalar or indexed element	2736
+condition	rejected	ambiguous operand type	296
+condition	rejected	assignment or side effect	41
+condition	rejected	call return/argument types unresolved	1120
+condition	rejected	call through unproven function pointer	510
+condition	rejected	pointer depth/pointee not proven	413
+condition	rejected	pointer-cast target not proven	614
+condition	rejected	scalar cast of pointer element	10
+condition	rejected	scalar cast width/kind mismatch	61
+condition	rejected	unknown aggregate layout	81
+condition	rejected	unresolved global storage/width	1438
+call	admitted	declared pointer-to-64-bit integer	866
+call	admitted	declared scalar or indexed element	1390
 call	admitted	table-admitted vector/register slot	934
-call	rejected	ambiguous operand type	694
-call	rejected	assignment or side effect	5
-call	rejected	nested call/return type unresolved	11
-call	rejected	pointer depth/pointee not proven	45
-call	rejected	pointer-cast target not proven	56
-call	rejected	scalar cast of pointer element	2
-call	rejected	scalar cast width/kind mismatch	176
-call	rejected	unknown aggregate layout	78
-call	rejected	unresolved global storage/width	774
+call	rejected	ambiguous operand type	539
+call	rejected	assignment or side effect	2
+call	rejected	call return/argument types unresolved	240
+call	rejected	call through unproven function pointer	37
+call	rejected	pointer depth/pointee not proven	24
+call	rejected	pointer-cast target not proven	55
+call	rejected	scalar cast width/kind mismatch	128
+call	rejected	unknown aggregate layout	66
+call	rejected	unresolved global storage/width	624
