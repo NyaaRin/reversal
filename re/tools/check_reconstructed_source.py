@@ -149,7 +149,7 @@ def main() -> int:
     symbols_text = (OUT / "symbols.h").read_text(encoding="utf-8")
     declared_calls = set(re.findall(r"void (FUN_[0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)?)\(\) noexcept", symbols_text))
     declared_data = set(re.findall(
-        r"extern std::byte ((?:DAT|UNK|SUB)_[0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)?|PTR_[A-Za-z0-9_]+)\[",
+        r"extern\s+[^;\n]+?\s(_?(?:DAT|UNK|SUB)_[0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)?|_?PTR_[A-Za-z0-9_]+)\s*(?:\[[^\]]*\])?\s*;",
         symbols_text,
     ))
 

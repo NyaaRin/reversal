@@ -2125,7 +2125,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021e940() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((param_1[0xd] == 0) || (*(char *)((longlong)param_1 + 0x71) == '\0'))
     // TODO: condition expression type not recovered: if ((_Count == 0) || (sVar2 = fwrite(local_30,1,_Count,(FILE *)param_1[0x10]), _Count == sVar2))
-    // TODO: call arguments not type-recovered for fwrite: local_30,1,_Count,(FILE *)param_1[0x10]
+    trace.call_arguments("fwrite", local_30, 1, _Count, (FILE *)param_1[0x10]);
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
     // body sha256: bc32a8397e59dcbc41196c1c9f35eb650b0440bcf0cd53fa1bc90fae8e0e8afe
     // Structured control-flow trace derived from the decompiled body:
@@ -8267,10 +8267,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180220c70() noexcept {
     // TODO: call arguments not type-recovered for WideCharToMultiByte: 0xfde9,0,local_248,-1,(LPSTR)0x0,0,(LPCSTR)0x0,(LPBOOL)0x0
     // TODO: call arguments not type-recovered for FUN_18020ea80: local_278,(longlong)cbMultiByte + -1,0
     // TODO: call arguments not type-recovered for WideCharToMultiByte: 0xfde9,0,local_248,-1,(LPSTR)pppCVar3,cbMultiByte,(LPCSTR)0x0,(LPBOOL)0x0
-    // TODO: call arguments not type-recovered for FUN_180241a30: &DAT_1803fadf0,local_340,&local_258
-    // TODO: call arguments not type-recovered for FUN_180241a30: *plVar2 + 0x28,local_330,&local_250
     // TODO: call arguments not type-recovered for FUN_180212700: pppCVar3,pppCVar4,local_268
     // TODO: call arguments not type-recovered for FUN_18020e450: local_278
+    trace.call_arguments("FUN_180241a30", &image::DAT_1803fadf0, local_340, &local_258);
+    trace.call_arguments("FUN_180241a30", *plVar2 + 0x28, local_330, &local_250);
     trace.call_arguments("FUN_1802028c0", *plVar2 + 0x28);
     trace.call_arguments("LOCK");
     trace.call_arguments("UNLOCK");
@@ -9377,7 +9377,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180221450() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_180230a50: param_1,lVar4,lVar3,local_88
+    trace.call_arguments("FUN_180230a50", param_1, lVar4, lVar3, local_88);
     trace.call_arguments("FUN_18020e450", &local_60);
     trace.call_arguments("FUN_18020e450", &local_80);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
@@ -10823,7 +10823,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180221dd0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (param_2 == DAT_1803fcc10)
-    // TODO: condition expression type not recovered: if (DAT_1803fcc08 != DAT_1803fcc10)
     // TODO: condition expression type not recovered: if (param_2 != DAT_1803fcc10)
     // TODO: condition expression type not recovered: if (DAT_1803fcc08 != (void *)0x0)
     trace.call_arguments("FUN_18020cc40");
@@ -10939,7 +10938,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180221dd0() noexcept {
                     trace.statement("uStack_b0 = uVar11;");
                     trace.statement("local_a8 = puVar14;");
                     trace.statement("uVar4 = local_88;");
-                    if (trace.condition("if (DAT_1803fcc08 != DAT_1803fcc10)")) {
+                    if (trace.checked_condition("if (DAT_1803fcc08 != DAT_1803fcc10)", [&]() -> bool { return static_cast<bool>(image::DAT_1803fcc08 != image::DAT_1803fcc10); })) {
                         do {
                             trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180221f55;");
                             trace.statement("uStack_b0 = uVar5;");
@@ -13597,11 +13596,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x180223030() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_180425a10 != (void *)0x0)
-    // TODO: call arguments not type-recovered for memmove: _Dst,DAT_180425a10,(longlong)DAT_180425a18 - (longlong)DAT_180425a10
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_1802d8350", uVar4);
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("swi", 0x29);
+    trace.call_arguments("memmove", _Dst, image::DAT_180425a10, (longlong)image::DAT_180425a18 - (longlong)image::DAT_180425a10);
     trace.call_arguments("swi", 0x29);
     trace.call_arguments("free", _Memory);
     trace.call_arguments("FUN_180012fe0");
@@ -14176,12 +14175,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180223420() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803eb808 != (void *)0x0)
-    // TODO: call arguments not type-recovered for memmove: _Dst,DAT_1803eb808,(longlong)DAT_1803eb810 - (longlong)DAT_1803eb808
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_1802d8350", uVar3);
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("swi", 0x29);
     trace.call_arguments("memset", pvVar5, (uint)uVar4 & 0xffffff00, lVar9 * 0x3c);
+    trace.call_arguments("memmove", _Dst, image::DAT_1803eb808, (longlong)image::DAT_1803eb810 - (longlong)image::DAT_1803eb808);
     trace.call_arguments("swi", 0x29);
     trace.call_arguments("free", pvVar5);
     trace.call_arguments("FUN_180012fe0");
@@ -14755,12 +14754,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180223850() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803eb360 != (void *)0x0)
-    // TODO: call arguments not type-recovered for memmove: _Dst,DAT_1803eb360,(longlong)DAT_1803eb368 - (longlong)DAT_1803eb360
     trace.call_arguments("FUN_18020cc40");
     trace.call_arguments("FUN_1802d8350", uVar3);
     trace.call_arguments("FUN_1802d8350");
     trace.call_arguments("swi", 0x29);
     trace.call_arguments("memset", pvVar5, (uint)uVar4 & 0xffffff00, lVar9 * 0x20);
+    trace.call_arguments("memmove", _Dst, image::DAT_1803eb360, (longlong)image::DAT_1803eb368 - (longlong)image::DAT_1803eb360);
     trace.call_arguments("swi", 0x29);
     trace.call_arguments("free", pvVar5);
     trace.call_arguments("FUN_180012fe0");

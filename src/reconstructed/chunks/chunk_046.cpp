@@ -2917,7 +2917,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e3ae6() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180425558.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_180425558 < 6)
     trace.call_arguments("FUN_180014410", "[SAFE] Aimbot Render2D exception #%d\n");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1803db43b", static_cast<const void*>(&image::DAT_1803db43b));
@@ -2928,7 +2927,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e3ae6() noexcept {
         {
             trace.statement("DAT_1803db43b = 0;");
             trace.statement("DAT_180425558 = DAT_180425558 + 1;");
-            if (trace.condition("if (DAT_180425558 < 6)")) {
+            if (trace.checked_condition("if (DAT_180425558 < 6)", [&]() -> bool { return static_cast<bool>(image::DAT_180425558 < 6); })) {
                 trace.statement("FUN_180014410(\"[SAFE] Aimbot Render2D exception #%d\\n\");");
             }
             trace.statement("return 0;");

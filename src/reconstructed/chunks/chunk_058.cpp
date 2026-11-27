@@ -5086,7 +5086,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1803094d0() noexcept {
     // TODO: resolve the indirect call in body 43: (*pcVar1)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1805c3988 != 0)
     // TODO: condition expression type not recovered: if (DAT_1805c3970 != (void *)0x0)
     trace.call_arguments("free", pvVar3);
     trace.call_arguments("swi", 0x29);
@@ -5106,7 +5105,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1803094d0() noexcept {
             trace.statement("void *pvVar2;");
             trace.statement("void *pvVar3;");
             trace.statement("longlong lVar4;");
-            if (trace.condition("if (DAT_1805c3988 != 0)")) {
+            if (trace.checked_condition("if (DAT_1805c3988 != 0)", [&]() -> bool { return static_cast<bool>(image::DAT_1805c3988 != 0); })) {
                 do {
                     trace.statement("FUN_18006e960(*(undefined8 *)");
                     trace.statement("((longlong)DAT_1805c3970 +");
@@ -6807,7 +6806,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x180309b60() noexcept {
     // TODO: resolve the indirect call in body 40: (*pcVar1)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_18056ffa8 != 0)
     // TODO: condition expression type not recovered: if (DAT_18056ff90 != (void *)0x0)
     trace.call_arguments("free", pvVar3);
     trace.call_arguments("swi", 0x29);
@@ -6826,7 +6824,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180309b60() noexcept {
             trace.statement("void *pvVar2;");
             trace.statement("void *pvVar3;");
             trace.statement("longlong lVar4;");
-            if (trace.condition("if (DAT_18056ffa8 != 0)")) {
+            if (trace.checked_condition("if (DAT_18056ffa8 != 0)", [&]() -> bool { return static_cast<bool>(image::DAT_18056ffa8 != 0); })) {
                 do {
                     trace.statement("DAT_18056ffa8 = DAT_18056ffa8 + -1;");
                 } while (trace.loop_condition("while (DAT_18056ffa8 != 0);"));

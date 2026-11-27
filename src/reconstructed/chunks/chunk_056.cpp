@@ -3534,7 +3534,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fab00() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803ff798.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803ff798 < 4)
     trace.call_arguments("FUN_180014410", "[SAFE] StartPrediction CRASHED #%d\n");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1803ff798", static_cast<const void*>(&image::DAT_1803ff798));
@@ -3543,7 +3542,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fab00() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("DAT_1803ff798 = DAT_1803ff798 + 1;");
-            if (trace.condition("if (DAT_1803ff798 < 4)")) {
+            if (trace.checked_condition("if (DAT_1803ff798 < 4)", [&]() -> bool { return static_cast<bool>(image::DAT_1803ff798 < 4); })) {
                 trace.statement("FUN_180014410(\"[SAFE] StartPrediction CRASHED #%d\\n\");");
             }
             trace.statement("return 0;");
@@ -4370,7 +4369,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fade8() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1804253e8.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1804253e8 < 6)
     trace.call_arguments("FUN_180014410", "[SAFE] streamproof pass1 exception #%d\n");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1804253e8", static_cast<const void*>(&image::DAT_1804253e8));
@@ -4379,7 +4377,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fade8() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("DAT_1804253e8 = DAT_1804253e8 + 1;");
-            if (trace.condition("if (DAT_1804253e8 < 6)")) {
+            if (trace.checked_condition("if (DAT_1804253e8 < 6)", [&]() -> bool { return static_cast<bool>(image::DAT_1804253e8 < 6); })) {
                 trace.statement("FUN_180014410(\"[SAFE] streamproof pass1 exception #%d\\n\");");
             }
             trace.statement("return 0;");
@@ -4435,7 +4433,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fae26() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fd0d8.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DAT_1803fd0d8 < 6)
     trace.call_arguments("FUN_180014410", "[SAFE] streamproof state restore exception #%d\n");
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1803fd0d8", static_cast<const void*>(&image::DAT_1803fd0d8));
@@ -4444,7 +4441,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802fae26() noexcept {
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("DAT_1803fd0d8 = DAT_1803fd0d8 + 1;");
-            if (trace.condition("if (DAT_1803fd0d8 < 6)")) {
+            if (trace.checked_condition("if (DAT_1803fd0d8 < 6)", [&]() -> bool { return static_cast<bool>(image::DAT_1803fd0d8 < 6); })) {
                 trace.statement("FUN_180014410(\"[SAFE] streamproof state restore exception #%d\\n\");");
             }
             trace.statement("return 0;");

@@ -4334,16 +4334,16 @@ const sf::reconstructed::FunctionTranslation& Function_0x180233fb0() noexcept {
     // TODO: condition expression type not recovered: if (0xf < *(ulonglong *)(pcVar6 + 0x18))
     // TODO: call arguments not type-recovered for _Lockit: local_40,0
     // TODO: call arguments not type-recovered for FUN_1802106d0: id_exref
-    // TODO: call arguments not type-recovered for FUN_180013a20: param_1,local_c8
     // TODO: call arguments not type-recovered for _Locinfo: local_a8,pcVar6
     // TODO: call arguments not type-recovered for facet: this,0
     // TODO: call arguments not type-recovered for _Getcoll: this_00,&local_d8
     // TODO: call arguments not type-recovered for _Locinfo: local_a8
-    // TODO: call arguments not type-recovered for FUN_18020e450: local_c8
     // TODO: call arguments not type-recovered for FUN_1802d81e8: this
     // TODO: call arguments not type-recovered for _Lockit: local_40
     trace.call_arguments("_Getgloballocale");
     trace.call_arguments("FUN_1802d8350", 0x20);
+    trace.call_arguments("FUN_180013a20", param_1, local_c8);
+    trace.call_arguments("FUN_18020e450", local_c8);
     trace.call_target("FUN_180013a20", reinterpret_cast<const void*>(&image::FUN_180013a20));
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     trace.call_target("FUN_1802106d0", reinterpret_cast<const void*>(&image::FUN_1802106d0));
@@ -5640,12 +5640,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x180234420() noexcept {
     // TODO: call arguments not type-recovered for _Xregex_error: 0xb
     // TODO: call arguments not type-recovered for CONCAT31: (int3)((uint)iVar7 >> 8),(byte)local_58 == 0
     // TODO: call arguments not type-recovered for tolower: *(ctype<char> **)(lVar18 + 8),*pcVar10
-    // TODO: call arguments not type-recovered for FUN_1802342e0: param_1,local_40,param_2,*param_1
     // TODO: call arguments not type-recovered for tolower: *(ctype<char> **)(lVar18 + 8),*pcVar15
     // TODO: call arguments not type-recovered for tolower: *(ctype<char> **)(lVar18 + 8),cVar6
     // TODO: call arguments not type-recovered for FUN_18023d0b0: param_1 + 0xd,lVar18,param_1[6] - lVar18 >> 4
     trace.call_arguments("swi", 3);
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_1802342e0", param_1, local_40, param_2, *param_1);
     trace.call_arguments("FUN_180234420", param_1);
     trace.call_arguments("FUN_18023d1f0", param_1);
     trace.call_arguments("FUN_180234420", param_1);
@@ -13048,10 +13048,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x180237b30() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_180214d00: *(undefined8 *)(lVar1 + 0x18),*(undefined8 *)(lVar1 + 0x20),local_18
     trace.call_arguments("FUN_18023df20", lVar1, *puVar2, puVar2);
     trace.call_arguments("FUN_18020e450", puVar2 + 3);
     trace.call_arguments("free", puVar2);
+    trace.call_arguments("FUN_180214d00", *(undefined8 *)(lVar1 + 0x18), *(undefined8 *)(lVar1 + 0x20), local_18);
     trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
     trace.call_target("FUN_180214d00", reinterpret_cast<const void*>(&image::FUN_180214d00));
     trace.call_target("FUN_18023df20", reinterpret_cast<const void*>(&image::FUN_18023df20));
@@ -18513,9 +18513,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180239b60() noexcept {
     // TODO: condition expression type not recovered: if (0x7fffffffffffffffU - param_1[3] < param_3)
     // TODO: condition expression type not recovered: if ((ulonglong)(param_1[2] - lVar5 >> 2) < uVar7)
     // TODO: condition expression type not recovered: while (((uint *)(lVar5 + lVar1) != puVar9 || (((uint)uVar13 & 0x1f) != uVar7)))
-    // TODO: call arguments not type-recovered for FUN_18023e400: param_1,uVar7,local_28
     trace.call_arguments("FUN_18022ebe0");
     trace.call_arguments("swi", 3);
+    trace.call_arguments("FUN_18023e400", param_1, uVar7, local_28);
     trace.call_arguments("memset", _Dst, 0, lVar8 * 4);
     trace.call_arguments("memset", _Dst, 0, lVar8 * 4);
     trace.call_target("FUN_18022ebe0", reinterpret_cast<const void*>(&image::FUN_18022ebe0));
@@ -18773,9 +18773,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x180239dc0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_18023c7e0: param_1,local_18,&local_38,&local_28
     trace.call_arguments("FUN_180239b60", param_1, &local_38, lVar3);
     trace.call_arguments("FUN_18023b1d0", &local_28, &local_38, 0);
+    trace.call_arguments("FUN_18023c7e0", param_1, local_18, &local_38, &local_28);
     trace.call_target("FUN_180239b60", reinterpret_cast<const void*>(&image::FUN_180239b60));
     trace.call_target("FUN_18023b1d0", reinterpret_cast<const void*>(&image::FUN_18023b1d0));
     trace.call_target("FUN_18023c7e0", reinterpret_cast<const void*>(&image::FUN_18023c7e0));
