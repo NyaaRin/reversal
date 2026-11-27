@@ -120,7 +120,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802ceaa0() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     trace.call_arguments("FUN_1802b32c0", param_1);
-    trace.call_arguments("FUN_180268750", &local_58, 0x40, local_80, (double)param_3);
+    trace.call_arguments("FUN_180268750", &local_58, 0x40, local_80, static_cast<double>(param_3));
     trace.call_arguments("atof", _String);
     trace.call_target("FUN_180268750", reinterpret_cast<const void*>(&image::FUN_180268750));
     trace.call_target("FUN_1802b32c0", reinterpret_cast<const void*>(&image::FUN_1802b32c0));
@@ -150,7 +150,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802ceaa0() noexcept {
                             trace.statement("bVar1 = *param_1;");
                             trace.statement("param_1 = param_1 + 1;");
                             trace.statement("uVar3 = bVar1 - 0x24;");
-                            if (trace.checked_condition("if ((0x3b < (byte)uVar3) || ((0x800000000000009U >> ((ulonglong)uVar3 & 0x3f) & 1) == 0))", [&]() -> bool { return static_cast<bool>((0x3b < (byte)uVar3) || ((0x800000000000009U >> ((ulonglong)uVar3 & 0x3f) & 1) == 0)); })) {
+                            if (trace.checked_condition("if ((0x3b < (byte)uVar3) || ((0x800000000000009U >> ((ulonglong)uVar3 & 0x3f) & 1) == 0))", [&]() -> bool { return static_cast<bool>((0x3b < static_cast<std::uint8_t>(uVar3)) || ((0x800000000000009U >> (static_cast<std::uint64_t>(uVar3) & 0x3f) & 1) == 0)); })) {
                                 trace.statement("*pbVar4 = bVar1;");
                                 trace.statement("pbVar4 = pbVar4 + 1;");
                             }
@@ -398,24 +398,24 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802cebb0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for _UNK_1803817f4.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_3 == param_4)
-    // TODO: condition expression type not recovered: if (param_3 < param_4)
-    // TODO: condition expression type not recovered: if ((dVar8 <= param_2) && (dVar8 = dVar7, param_2 <= dVar7))
-    // TODO: condition expression type not recovered: if (param_5 <= 0.0)
-    // TODO: condition expression type not recovered: if (param_4 < param_3)
-    // TODO: condition expression type not recovered: if ((double)CONCAT44(uVar14 & _UNK_1803817d4,uVar13 & _DAT_1803817d0) < dVar3)
-    // TODO: condition expression type not recovered: if (0.0 < (double)CONCAT44(uVar14,uVar13) || (double)CONCAT44(uVar14,uVar13) == 0.0)
-    // TODO: condition expression type not recovered: if (dVar7 < 0.0)
-    // TODO: condition expression type not recovered: if (((double)CONCAT44(uVar14,uVar13) != 0.0) || (0.0 <= dVar7))
-    // TODO: condition expression type not recovered: if ((dVar2 < dVar8) && (uVar12 = 0, fVar11 = DAT_180380bb0, dVar8 < dVar1))
-    // TODO: condition expression type not recovered: if (0.0 <= (double)CONCAT44(uVar14,uVar13) * dVar7)
-    // TODO: condition expression type not recovered: if (param_2 != 0.0)
-    // TODO: condition expression type not recovered: if (0.0 <= param_2)
-    // TODO: condition expression type not recovered: if (param_3 <= param_4)
-    // TODO: call arguments not type-recovered for SUB84: param_3,0
-    // TODO: call arguments not type-recovered for SUB84: param_4,0
-    // TODO: call arguments not type-recovered for CONCAT44: uVar14 & _UNK_1803817d4,uVar13 & _DAT_1803817d0
-    // TODO: call arguments not type-recovered for CONCAT44: uVar15 ^ uVar6,SUB84(dVar2,0) ^ uVar5
+    // TODO: condition expression type not recovered: if (param_3 == param_4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_3 < param_4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((dVar8 <= param_2) && (dVar8 = dVar7, param_2 <= dVar7)) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (param_5 <= 0.0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 < param_3) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((double)CONCAT44(uVar14 & _UNK_1803817d4,uVar13 & _DAT_1803817d0) < dVar3) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (0.0 < (double)CONCAT44(uVar14,uVar13) || (double)CONCAT44(uVar14,uVar13) == 0.0) [reason: scalar cast width/kind mismatch]
+    // TODO: condition expression type not recovered: if (dVar7 < 0.0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (((double)CONCAT44(uVar14,uVar13) != 0.0) || (0.0 <= dVar7)) [reason: scalar cast width/kind mismatch]
+    // TODO: condition expression type not recovered: if ((dVar2 < dVar8) && (uVar12 = 0, fVar11 = DAT_180380bb0, dVar8 < dVar1)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (0.0 <= (double)CONCAT44(uVar14,uVar13) * dVar7) [reason: scalar cast width/kind mismatch]
+    // TODO: condition expression type not recovered: if (param_2 != 0.0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= param_2) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_3 <= param_4) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB84: param_3,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB84: param_4,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT44: uVar14 & _UNK_1803817d4,uVar13 & _DAT_1803817d0 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for CONCAT44: uVar15 ^ uVar6,SUB84(dVar2,0) ^ uVar5 [reason: ambiguous operand type]
     trace.call_arguments("CONCAT44", uVar14, uVar13);
     trace.call_arguments("CONCAT44", uVar14, uVar13);
     trace.call_arguments("CONCAT44", uVar14, uVar13);
@@ -777,25 +777,25 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802cef00() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803817f0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((0.0 < param_2) && (param_3 != param_4))
-    // TODO: condition expression type not recovered: if (DAT_180380bb0 <= param_2)
-    // TODO: condition expression type not recovered: if (param_5 <= 0.0)
-    // TODO: condition expression type not recovered: if (param_1 - 8U < 2)
-    // TODO: condition expression type not recovered: if (param_3 <= param_4)
-    // TODO: condition expression type not recovered: if (0.0 <= param_3)
-    // TODO: condition expression type not recovered: if (param_4 < 0.0)
-    // TODO: condition expression type not recovered: if (param_4 < param_3)
-    // TODO: condition expression type not recovered: if ((param_4 == 0.0) && (param_3 < 0.0))
-    // TODO: condition expression type not recovered: if (param_4 < param_3)
-    // TODO: condition expression type not recovered: if (0.0 <= param_3 * param_4)
-    // TODO: condition expression type not recovered: if ((param_3 < 0.0) || (param_4 < 0.0))
-    // TODO: condition expression type not recovered: if (param_4 <= param_3)
-    // TODO: condition expression type not recovered: if ((param_2 < fVar6 - param_6) || (fVar5 < param_2))
-    // TODO: condition expression type not recovered: if (fVar6 <= param_2)
-    // TODO: call arguments not type-recovered for SUB84: param_3,0
-    // TODO: call arguments not type-recovered for SUB84: param_4,0
-    // TODO: call arguments not type-recovered for pow: dVar7 / dVar1,(double)param_2
-    // TODO: call arguments not type-recovered for pow: dVar7 / dVar8,(double)((param_2 - fVar5) / (DAT_180380bb0 - fVar5))
+    // TODO: condition expression type not recovered: if ((0.0 < param_2) && (param_3 != param_4)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (DAT_180380bb0 <= param_2) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (param_5 <= 0.0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_1 - 8U < 2) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_3 <= param_4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= param_3) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 < 0.0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 < param_3) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 == 0.0) && (param_3 < 0.0)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 < param_3) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= param_3 * param_4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_3 < 0.0) || (param_4 < 0.0)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 <= param_3) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_2 < fVar6 - param_6) || (fVar5 < param_2)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (fVar6 <= param_2) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB84: param_3,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB84: param_4,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pow: dVar7 / dVar1,(double)param_2 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for pow: dVar7 / dVar8,(double)((param_2 - fVar5) / (DAT_180380bb0 - fVar5)) [reason: unresolved global storage/width]
     trace.call_arguments("SUB84", dVar7, 0);
     trace.call_arguments("SUB84", dVar1, 0);
     trace.call_arguments("SUB84", dVar4 * dVar8, 0);
@@ -1057,7 +1057,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802cf1f0() noexcept {
                             trace.statement("bVar1 = *param_1;");
                             trace.statement("param_1 = param_1 + 1;");
                             trace.statement("uVar3 = bVar1 - 0x24;");
-                            if (trace.checked_condition("if ((0x3b < (byte)uVar3) || ((0x800000000000009U >> ((ulonglong)uVar3 & 0x3f) & 1) == 0))", [&]() -> bool { return static_cast<bool>((0x3b < (byte)uVar3) || ((0x800000000000009U >> ((ulonglong)uVar3 & 0x3f) & 1) == 0)); })) {
+                            if (trace.checked_condition("if ((0x3b < (byte)uVar3) || ((0x800000000000009U >> ((ulonglong)uVar3 & 0x3f) & 1) == 0))", [&]() -> bool { return static_cast<bool>((0x3b < static_cast<std::uint8_t>(uVar3)) || ((0x800000000000009U >> (static_cast<std::uint64_t>(uVar3) & 0x3f) & 1) == 0)); })) {
                                 trace.statement("*pbVar4 = bVar1;");
                                 trace.statement("pbVar4 = pbVar4 + 1;");
                             }
@@ -1204,7 +1204,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802cf300() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (iVar1 == *param_1)
+    // TODO: condition expression type not recovered: if (iVar1 == *param_1) [reason: ambiguous operand type]
     trace.call_arguments("FUN_18026f580");
     trace.call_arguments("memcpy", pvVar4, *(void **)(param_1 + 2), (longlong)*param_1 * 0xb0);
     trace.call_arguments("FUN_18026f680");
@@ -1336,8 +1336,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802cf430() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_1[1] < param_2)
-    trace.call_arguments("FUN_18026f580", (longlong)param_2 * 0x18);
+    // TODO: condition expression type not recovered: if (param_1[1] < param_2) [reason: ambiguous operand type]
+    trace.call_arguments("FUN_18026f580", static_cast<std::int64_t>(param_2) * 0x18);
     trace.call_arguments("memcpy", _Dst, *(void **)(param_1 + 2), (longlong)*param_1 * 0x18);
     trace.call_arguments("FUN_18026f680", load_at<std::uint64_t>(param_1 + 2, 0));
     trace.call_target("FUN_18026f580", reinterpret_cast<const void*>(&image::FUN_18026f580));
@@ -2519,17 +2519,17 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802cfbc0() noexcept {
     // TODO: resolve the indirect call in body 237: (**(code **)(*local_140 + 0x10))();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*(float *)(param_1 + 0x28) <= 0.0)
-    // TODO: condition expression type not recovered: if (*(float *)(param_1 + 0x2c) <= 0.0)
-    // TODO: condition expression type not recovered: for (; plVar14 != plVar3; plVar14 = plVar14 + 1)
-    // TODO: condition expression type not recovered: for (; plVar14 != plVar3; plVar14 = plVar14 + 1)
-    // TODO: call arguments not type-recovered for CONCAT44: local_168._4_4_,(uint)pfVar4[10] / 3
-    // TODO: call arguments not type-recovered for CONCAT44: local_170._4_4_,(int)pfVar4[9] + iVar18
+    // TODO: condition expression type not recovered: if (*(float *)(param_1 + 0x28) <= 0.0) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (*(float *)(param_1 + 0x2c) <= 0.0) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: for (; plVar14 != plVar3; plVar14 = plVar14 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; plVar14 != plVar3; plVar14 = plVar14 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for CONCAT44: local_170._4_4_,(int)pfVar4[9] + iVar18 [reason: unknown aggregate layout]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("FUN_1802d0360");
     trace.call_arguments("memcpy", local_138, *(void **)(lVar8 + 0x18), (longlong)*(int *)(lVar8 + 0x10) * 2);
     trace.call_arguments("FUN_1802cf520", param_1);
+    trace.call_arguments("CONCAT44", static_cast<std::uint32_t>((std::uint64_t(local_168) >> 32)), static_cast<std::uint32_t>(pfVar4[10]) / 3);
     trace.call_arguments("FUN_1802cf520", param_1);
     trace.call_target("FUN_1802cf520", reinterpret_cast<const void*>(&image::FUN_1802cf520));
     trace.call_target("FUN_1802d0360", reinterpret_cast<const void*>(&image::FUN_1802d0360));
@@ -2862,10 +2862,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0220() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((*(char *)(lVar4 + 0x20) == '\0') && (param_1 != '\0'))
-    // TODO: condition expression type not recovered: if (0 < param_7)
-    // TODO: condition expression type not recovered: for (; 0 < iVar3; iVar3 = iVar3 + -1)
-    // TODO: call arguments not type-recovered for memcpy: _Dst,_Src,(longlong)(param_6 * 4)
+    // TODO: condition expression type not recovered: if ((*(char *)(lVar4 + 0x20) == '\0') && (param_1 != '\0')) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (0 < param_7) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; 0 < iVar3; iVar3 = iVar3 + -1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for memcpy: _Dst,_Src,(longlong)(param_6 * 4) [reason: scalar cast width/kind mismatch]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("__dyn_tls_on_demand_init");
     // body sha256: 3cf2ab2d14630fa022b9015f85513cd89e46175aa3b88c2732e22799de3a4fe2
@@ -3123,7 +3123,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0360() noexcept {
     // TODO: resolve the indirect call in body 115: (**(code **)(**(longlong **)(param_1 + 0x10) + 0x10))();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; local_58 = (longlong *)uVar4, puVar8 != puVar1; puVar8 = puVar8 + 4)
+    // TODO: condition expression type not recovered: for (; local_58 = (longlong *)uVar4, puVar8 != puVar1; puVar8 = puVar8 + 4) [reason: pointer-cast target not proven]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("CONCAT24", load_at<std::uint16_t>(param_1 + 0x3a, 0), (uint)*(ushort *)(param_1 + 0x38));
@@ -3339,7 +3339,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0630() noexcept {
     // TODO: resolve the indirect call in body 41: (**(code **)(*(longlong *)plVar3[2] + 0x10))();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; plVar4 != plVar1; plVar4 = plVar4 + 1)
+    // TODO: condition expression type not recovered: for (; plVar4 != plVar1; plVar4 = plVar4 + 1) [reason: assignment or side effect]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("__dyn_tls_on_demand_init");
@@ -3628,7 +3628,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0770() noexcept {
     // TODO: resolve the indirect call in body 86: (**(code **)(*local_68 + 0x10))();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((iVar2 == 0) && (iVar2 = (**(code **)(*plVar5 + 0x40))(plVar5,0,&local_60), iVar2 == 0))
+    // TODO: condition expression type not recovered: if ((iVar2 == 0) && (iVar2 = (**(code **)(*plVar5 + 0x40))(plVar5,0,&local_60), iVar2 == 0)) [reason: pointer depth/pointee not proven]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("FUN_18026f580", 0x28);
     trace.call_arguments("__dyn_tls_on_demand_init");
@@ -4119,9 +4119,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0ab0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((BVar4 != 0) && (BVar4 = QueryPerformanceCounter(&local_48), BVar4 != 0))
-    // TODO: call arguments not type-recovered for QueryPerformanceFrequency: &local_50
-    // TODO: call arguments not type-recovered for QueryPerformanceCounter: &local_48
+    // TODO: condition expression type not recovered: if ((BVar4 != 0) && (BVar4 = QueryPerformanceCounter(&local_48), BVar4 != 0)) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for QueryPerformanceFrequency: &local_50 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for QueryPerformanceCounter: &local_48 [reason: ambiguous operand type]
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("FUN_18026f580", 0x58);
     trace.call_arguments("GetKeyboardLayout", 0);
@@ -4312,8 +4312,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0cb0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*(HMODULE *)(lVar3 + 0x38) != (HMODULE)0x0)
-    // TODO: call arguments not type-recovered for FreeLibrary: *(HMODULE *)(lVar3 + 0x38)
+    // TODO: condition expression type not recovered: if (*(HMODULE *)(lVar3 + 0x38) != (HMODULE)0x0) [reason: pointer depth/pointee not proven]
+    // TODO: call arguments not type-recovered for FreeLibrary: *(HMODULE *)(lVar3 + 0x38) [reason: pointer depth/pointee not proven]
     trace.call_arguments("FUN_1802d0a30");
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("__dyn_tls_on_demand_init");
@@ -4475,27 +4475,27 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0d70() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f01
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f86
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f85
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f84
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f83
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f82
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f89
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f02
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f8a
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,lpCursorName
-    // TODO: call arguments not type-recovered for SetCursor: pHVar1
-    // TODO: call arguments not type-recovered for SetCursor: (HCURSOR)0x0
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f01 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f86 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f85 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f84 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f83 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f82 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f89 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f02 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,(LPCWSTR)0x7f8a [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LoadCursorW: (HINSTANCE)0x0,lpCursorName [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: pHVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursor: (HCURSOR)0x0 [reason: ambiguous operand type]
     // body sha256: 3f8d486b83ddd99b0a36c0f8894ff8dba6c15c45ae5763fbcf1f5cb77e4fb6ff
     // Structured control-flow trace derived from the decompiled body:
         {
@@ -4982,17 +4982,17 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0f20() noexcept {
     // TODO: resolve the indirect call in body 52: (iVar3 = (**(code **)(lVar1 + 0x48))(0,&local_88), iVar3 == 0)) {.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (*(code **)(lVar1 + 0x40) != (code *)0x0)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar6)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar7)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar6)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar8)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar8)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar8)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar8)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar8)
-    // TODO: condition expression type not recovered: if (0.0 <= fVar6)
-    // TODO: condition expression type not recovered: if ((0.0 <= fVar7) && (fVar6 = fVar2, fVar7 <= fVar2))
+    // TODO: condition expression type not recovered: if (*(code **)(lVar1 + 0x40) != (code *)0x0) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar6) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar7) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar6) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar8) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar8) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar8) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar8) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar8) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 <= fVar6) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((0.0 <= fVar7) && (fVar6 = fVar2, fVar7 <= fVar2)) [reason: assignment or side effect]
     trace.call_arguments("FUN_180267b90", param_1, 0x278, bVar4, fVar9);
     trace.call_arguments("FUN_180267b90", param_1, 0x279, bVar4, fVar9);
     trace.call_arguments("FUN_180267b90", param_1, 0x27a, bVar4 & 1, fVar9);
@@ -5001,14 +5001,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0f20() noexcept {
     trace.call_arguments("FUN_180267b90", param_1, 0x27d, bVar4 & 1, fVar9);
     trace.call_arguments("FUN_180267b90", param_1, 0x27e, bVar4, fVar9);
     trace.call_arguments("FUN_180267b90", param_1, 0x27f, bVar4, fVar9);
-    trace.call_arguments("FUN_180267b90", param_1, 0x280, (byte)local_84 & 1, fVar9);
+    trace.call_arguments("FUN_180267b90", param_1, 0x280, static_cast<std::uint8_t>(local_84) & 1, fVar9);
     trace.call_arguments("FUN_180267b90", param_1, 0x281, bVar4, fVar9);
     trace.call_arguments("FUN_180267b90", param_1, 0x282, (byte)(local_84 >> 8) & 1, fVar9);
     trace.call_arguments("FUN_180267b90", param_1, 0x283, bVar4 & 1, fVar9);
     trace.call_arguments("FUN_180267b90", param_1, 0x284, image::DAT_1803809ec < fVar6, fVar8);
     trace.call_arguments("FUN_180267b90", param_1, 0x285, fVar9 < fVar7, fVar6);
     trace.call_arguments("FUN_180267b90", param_1, 0x286, bVar4, fVar7);
-    trace.call_arguments("FUN_180267b90", param_1, 0x287, -((char)(byte)local_84 >> 7), fVar7);
+    trace.call_arguments("FUN_180267b90", param_1, 0x287, -((char)static_cast<std::uint8_t>(local_84) >> 7), fVar7);
     trace.call_arguments("FUN_180267b90", param_1, 0x288, fVar9 < fVar6, fVar8);
     trace.call_arguments("FUN_180267b90", param_1, 0x289, fVar9 < fVar8, fVar10);
     trace.call_arguments("FUN_180267b90", param_1, 0x28a, fVar9 < fVar8, fVar10);
@@ -5100,7 +5100,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0f20() noexcept {
                                     trace.statement("FUN_180267b90(param_1,0x27b,bVar4 & 1,fVar9);");
                                     if (trace.checked_condition("if (*(char *)(param_1 + 0xba5) != '\\0')", [&]() -> bool { return static_cast<bool>(load_at<char>(param_1 + 0xba5, 0) != '\0'); })) {
                                         trace.statement("fVar9 = fVar2;");
-                                        if (trace.checked_condition("if (-1 < (short)local_84)", [&]() -> bool { return static_cast<bool>(-1 < (short)local_84); })) {
+                                        if (trace.checked_condition("if (-1 < (short)local_84)", [&]() -> bool { return static_cast<bool>(-1 < static_cast<std::int16_t>(local_84)); })) {
                                             trace.statement("fVar9 = 0.0;");
                                         }
                                         trace.statement("FUN_180267b90(param_1,0x27c,local_84 >> 0xf,fVar9);");
@@ -5194,7 +5194,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d0f20() noexcept {
                         trace.statement("FUN_180267b90(param_1,0x286,bVar4,fVar7);");
                         if (trace.checked_condition("if (*(char *)(param_1 + 0xba5) != '\\0')", [&]() -> bool { return static_cast<bool>(load_at<char>(param_1 + 0xba5, 0) != '\0'); })) {
                             trace.statement("fVar7 = fVar2;");
-                            if (trace.checked_condition("if ((char)-((char)(byte)local_84 >> 7) == '\\0')", [&]() -> bool { return static_cast<bool>((char)-((char)(byte)local_84 >> 7) == '\0'); })) {
+                            if (trace.checked_condition("if ((char)-((char)(byte)local_84 >> 7) == '\\0')", [&]() -> bool { return static_cast<bool>((char)-((char)static_cast<std::uint8_t>(local_84) >> 7) == '\0'); })) {
                                 trace.statement("fVar7 = 0.0;");
                             }
                             trace.statement("FUN_180267b90(param_1,0x287,-((char)(byte)local_84 >> 7),fVar7);");
@@ -5489,17 +5489,17 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d1540() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (pHVar8 == (HWND)*puVar3)
-    // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0'))
-    // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0'))
-    // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0'))
-    // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0'))
-    // TODO: call arguments not type-recovered for GetClientRect: (HWND)*puVar7,&local_68
-    // TODO: call arguments not type-recovered for QueryPerformanceCounter: &local_50
-    // TODO: call arguments not type-recovered for ClientToScreen: (HWND)*puVar3,&local_58
-    // TODO: call arguments not type-recovered for SetCursorPos: local_58.x,local_58.y
-    // TODO: call arguments not type-recovered for GetCursorPos: &local_58
-    // TODO: call arguments not type-recovered for ScreenToClient: (HWND)*puVar3,&local_58
+    // TODO: condition expression type not recovered: if (pHVar8 == (HWND)*puVar3) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0')) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0')) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0')) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if ((-1 < SVar5) && (*(char *)(lVar2 + 0xbcd) != '\0')) [reason: pointer depth/pointee not proven]
+    // TODO: call arguments not type-recovered for GetClientRect: (HWND)*puVar7,&local_68 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for QueryPerformanceCounter: &local_50 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for ClientToScreen: (HWND)*puVar3,&local_58 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCursorPos: local_58.x,local_58.y [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for GetCursorPos: &local_58 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for ScreenToClient: (HWND)*puVar3,&local_58 [reason: ambiguous operand type]
     trace.call_arguments("FUN_1802d0a30");
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_arguments("GetForegroundWindow");
@@ -6190,7 +6190,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d1850() noexcept {
     // body sha256: d7133b9acf238f6622820d595dfabdddd0738c37fb15f1d08900c9fda061546d
     // Structured control-flow trace derived from the decompiled body:
         {
-            if (trace.checked_condition("if ((param_1 == 0xd) && (((ushort)((ulonglong)param_2 >> 0x10) >> 8 & 1) != 0))", [&]() -> bool { return static_cast<bool>((param_1 == 0xd) && (((ushort)((ulonglong)param_2 >> 0x10) >> 8 & 1) != 0)); })) {
+            if (trace.checked_condition("if ((param_1 == 0xd) && (((ushort)((ulonglong)param_2 >> 0x10) >> 8 & 1) != 0))", [&]() -> bool { return static_cast<bool>((param_1 == 0xd) && (((ushort)(static_cast<std::uint64_t>(param_2) >> 0x10) >> 8 & 1) != 0)); })) {
                 trace.statement("return 0x273;");
             }
             switch (trace.checked_switch("switch(param_1)", [&]() -> std::size_t { return static_cast<std::size_t>(param_1); })) {
@@ -6521,7 +6521,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d1850() noexcept {
                 switchD_1802d1892_caseD_be: ;
                 trace.statement("return 599;");
             }
-            switch (trace.checked_switch("switch((uint)((ulonglong)param_2 >> 0x10) & 0xff)", [&]() -> std::size_t { return static_cast<std::size_t>((uint)((ulonglong)param_2 >> 0x10) & 0xff); })) {
+            switch (trace.checked_switch("switch((uint)((ulonglong)param_2 >> 0x10) & 0xff)", [&]() -> std::size_t { return static_cast<std::size_t>((uint)(static_cast<std::uint64_t>(param_2) >> 0x10) & 0xff); })) {
                 case 0:
                 trace.case_label("case 0xc:");
                 trace.statement("return 0x256;");
@@ -7461,100 +7461,100 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d1f10() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_2 < 0x201)
-    // TODO: condition expression type not recovered: if (param_2 == 0x200)
-    // TODO: condition expression type not recovered: if (param_2 != 0x200)
-    // TODO: condition expression type not recovered: if (param_2 == 0xa0)
-    // TODO: condition expression type not recovered: if (param_2 < 8)
-    // TODO: condition expression type not recovered: if (param_2 == 7)
-    // TODO: condition expression type not recovered: if (param_2 != 2)
-    // TODO: condition expression type not recovered: if (*(HWND *)(lVar2 + 8) != param_1)
-    // TODO: condition expression type not recovered: if (param_2 < 0x102)
-    // TODO: condition expression type not recovered: if (param_2 == 0x20)
-    // TODO: condition expression type not recovered: if ((short)param_4 != 1)
-    // TODO: condition expression type not recovered: if (param_2 == 0x51)
-    // TODO: condition expression type not recovered: if (param_2 != 0x100)
-    // TODO: condition expression type not recovered: if (param_2 == 0x102)
-    // TODO: condition expression type not recovered: if ((WCHAR)local_78 == L'\0')
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) == '\0')
-    // TODO: condition expression type not recovered: if ((param_2 != 0x104) && (param_2 != 0x105))
-    // TODO: condition expression type not recovered: if (param_2 != 0x10f)
-    // TODO: condition expression type not recovered: if ((param_4 >> 0xb & 1) != 0)
-    // TODO: condition expression type not recovered: if (0xff < param_3)
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0')
-    // TODO: condition expression type not recovered: if (-1 < SVar4)
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0')
-    // TODO: condition expression type not recovered: if (-1 < SVar4)
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0')
-    // TODO: condition expression type not recovered: if (-1 < SVar4)
-    // TODO: condition expression type not recovered: if (((uVar5 & 0x8000) == 0) && (uVar5 = GetKeyState(0x5c), (uVar5 & 0x8000) == 0))
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0')
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0')
-    // TODO: condition expression type not recovered: if (((char)-(char)(SVar4 >> 0xf) == cVar23) && (*(char *)(param_5 + 0xba5) != '\0'))
-    // TODO: condition expression type not recovered: if ((char)-(char)(SVar4 >> 0xf) != cVar23)
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) == '\0')
-    // TODO: condition expression type not recovered: if (((char)-(char)(SVar4 >> 0xf) == cVar23) && (*(char *)(param_5 + 0xba5) != '\0'))
-    // TODO: condition expression type not recovered: if ((char)-(char)(SVar4 >> 0xf) != cVar23)
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) == '\0')
-    // TODO: condition expression type not recovered: if (((char)-(char)(SVar4 >> 0xf) == cVar23) && (*(char *)(param_5 + 0xba5) != '\0'))
-    // TODO: condition expression type not recovered: if ((char)-(char)(SVar4 >> 0xf) != cVar23)
-    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) == '\0')
-    // TODO: condition expression type not recovered: switch(param_2)
-    // TODO: condition expression type not recovered: if ((param_2 == 0x204) || (param_2 == 0x206))
-    // TODO: condition expression type not recovered: if ((param_2 - 0x207 & 0xfffffffd) == 0)
-    // TODO: condition expression type not recovered: if ((param_2 - 0x20b & 0xfffffffd) == 0)
-    // TODO: condition expression type not recovered: if (pHVar14 == (HWND)0x0)
-    // TODO: condition expression type not recovered: if (param_2 != 0x208)
-    // TODO: condition expression type not recovered: if (param_2 == 0x20c)
-    // TODO: condition expression type not recovered: if ((uVar9 == 0) && (pHVar14 = GetCapture(), pHVar14 == param_1))
-    // TODO: condition expression type not recovered: if ((int)param_3 == 7)
-    // TODO: condition expression type not recovered: if (*(int *)(lVar2 + 0x10) != (param_2 != 0x2a3) + 1)
-    // TODO: condition expression type not recovered: if (*(HWND *)(lVar2 + 8) == param_1)
-    // TODO: call arguments not type-recovered for TrackMouseEvent: &local_90
-    // TODO: call arguments not type-recovered for TrackMouseEvent: &local_b0
-    // TODO: call arguments not type-recovered for ScreenToClient: param_1,&local_68
-    // TODO: call arguments not type-recovered for FUN_180267dd0: param_5
-    // TODO: call arguments not type-recovered for CONCAT44: local_b0.hwndTrack._4_4_,(int)local_b0.hwndTrack
-    // TODO: call arguments not type-recovered for CONCAT44: local_b0.dwHoverTime,local_b0.hwndTrack._4_4_
-    // TODO: call arguments not type-recovered for CONCAT44: local_98,local_b0._20_4_
-    // TODO: call arguments not type-recovered for TrackMouseEvent: &local_90
-    // TODO: call arguments not type-recovered for FUN_1802d0d70: param_5,*(undefined4 *)(lVar2 + 0x28)
-    // TODO: call arguments not type-recovered for IsWindowUnicode: param_1
-    // TODO: call arguments not type-recovered for FUN_180267a60: param_5
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: *(UINT *)(lVar2 + 0x2c),1,(LPCSTR)&local_70,2,(LPWSTR)&local_78,1
-    // TODO: call arguments not type-recovered for CONCAT44: local_b0.hwndTrack._4_4_,(int)local_b0.hwndTrack
-    // TODO: call arguments not type-recovered for CONCAT44: local_b0.dwHoverTime,local_b0.hwndTrack._4_4_
-    // TODO: call arguments not type-recovered for CONCAT44: local_98,local_b0._20_4_
-    // TODO: call arguments not type-recovered for DefWindowProcW: param_1,0x10f,param_3,param_4
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x1000,(byte)((ushort)SVar4 >> 0xf),uVar26
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x2000,(byte)((ushort)SVar4 >> 0xf),uVar26
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x4000,(byte)((ushort)SVar4 >> 0xf),uVar26
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x8000,cVar20,uVar26
-    // TODO: call arguments not type-recovered for FUN_1802d1850: local_70,param_4
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x262,1,uVar27
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,iVar7,cVar23,uVar26
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x210,cVar23,uVar26
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x214,cVar23,uVar27
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x20f,cVar23,uVar26
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x213,cVar23,uVar27
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x211,cVar23,uVar26
-    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x215,cVar23,uVar27
-    // TODO: call arguments not type-recovered for SetCapture: param_1
-    // TODO: call arguments not type-recovered for FUN_180267fb0: param_5,iVar7,1
-    // TODO: call arguments not type-recovered for FUN_180267fb0: param_5,uVar15,0
-    // TODO: call arguments not type-recovered for FUN_180268220: param_5,0x180000000,(float)(int)sVar21 / DAT_180381138
-    // TODO: call arguments not type-recovered for FUN_180268220: param_5,auVar25._0_8_
-    // TODO: call arguments not type-recovered for IsWindowUnicode: param_1
-    // TODO: call arguments not type-recovered for IsDBCSLeadByte: (BYTE)(local_70 >> 8)
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: *(UINT *)(lVar2 + 0x2c),1,(LPCSTR)&local_70,2,(LPWSTR)&local_78,1
-    // TODO: call arguments not type-recovered for FUN_180267a60: param_5,(WCHAR)local_78
-    // TODO: call arguments not type-recovered for FUN_180267dd0: param_5
+    // TODO: condition expression type not recovered: if (param_2 < 0x201) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 == 0x200) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 != 0x200) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 == 0xa0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 < 8) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 == 7) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 != 2) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (*(HWND *)(lVar2 + 8) != param_1) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (param_2 < 0x102) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 == 0x20) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((short)param_4 != 1) [reason: scalar cast width/kind mismatch]
+    // TODO: condition expression type not recovered: if (param_2 == 0x51) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 != 0x100) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 == 0x102) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((WCHAR)local_78 == L'\0') [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) == '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if ((param_2 != 0x104) && (param_2 != 0x105)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 != 0x10f) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 >> 0xb & 1) != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0xff < param_3) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (-1 < SVar4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (-1 < SVar4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (-1 < SVar4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (((uVar5 & 0x8000) == 0) && (uVar5 = GetKeyState(0x5c), (uVar5 & 0x8000) == 0)) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) != '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (((char)-(char)(SVar4 >> 0xf) == cVar23) && (*(char *)(param_5 + 0xba5) != '\0')) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if ((char)-(char)(SVar4 >> 0xf) != cVar23) [reason: scalar cast width/kind mismatch]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) == '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (((char)-(char)(SVar4 >> 0xf) == cVar23) && (*(char *)(param_5 + 0xba5) != '\0')) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if ((char)-(char)(SVar4 >> 0xf) != cVar23) [reason: scalar cast width/kind mismatch]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) == '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (((char)-(char)(SVar4 >> 0xf) == cVar23) && (*(char *)(param_5 + 0xba5) != '\0')) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if ((char)-(char)(SVar4 >> 0xf) != cVar23) [reason: scalar cast width/kind mismatch]
+    // TODO: condition expression type not recovered: if (*(char *)(param_5 + 0xba5) == '\0') [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: switch(param_2) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_2 == 0x204) || (param_2 == 0x206)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_2 - 0x207 & 0xfffffffd) == 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_2 - 0x20b & 0xfffffffd) == 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (pHVar14 == (HWND)0x0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 != 0x208) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_2 == 0x20c) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((uVar9 == 0) && (pHVar14 = GetCapture(), pHVar14 == param_1)) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if ((int)param_3 == 7) [reason: scalar cast width/kind mismatch]
+    // TODO: condition expression type not recovered: if (*(int *)(lVar2 + 0x10) != (param_2 != 0x2a3) + 1) [reason: pointer depth/pointee not proven]
+    // TODO: condition expression type not recovered: if (*(HWND *)(lVar2 + 8) == param_1) [reason: pointer depth/pointee not proven]
+    // TODO: call arguments not type-recovered for TrackMouseEvent: &local_90 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for TrackMouseEvent: &local_b0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for ScreenToClient: param_1,&local_68 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267dd0: param_5 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT44: local_b0.hwndTrack._4_4_,(int)local_b0.hwndTrack [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for CONCAT44: local_b0.dwHoverTime,local_b0.hwndTrack._4_4_ [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for CONCAT44: local_98,local_b0._20_4_ [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for TrackMouseEvent: &local_90 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_1802d0d70: param_5,*(undefined4 *)(lVar2 + 0x28) [reason: pointer depth/pointee not proven]
+    // TODO: call arguments not type-recovered for IsWindowUnicode: param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267a60: param_5 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for MultiByteToWideChar: *(UINT *)(lVar2 + 0x2c),1,(LPCSTR)&local_70,2,(LPWSTR)&local_78,1 [reason: pointer depth/pointee not proven]
+    // TODO: call arguments not type-recovered for CONCAT44: local_b0.hwndTrack._4_4_,(int)local_b0.hwndTrack [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for CONCAT44: local_b0.dwHoverTime,local_b0.hwndTrack._4_4_ [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for CONCAT44: local_98,local_b0._20_4_ [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for DefWindowProcW: param_1,0x10f,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x1000,(byte)((ushort)SVar4 >> 0xf),uVar26 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x2000,(byte)((ushort)SVar4 >> 0xf),uVar26 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x4000,(byte)((ushort)SVar4 >> 0xf),uVar26 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x8000,cVar20,uVar26 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_1802d1850: local_70,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x262,1,uVar27 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,iVar7,cVar23,uVar26 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x210,cVar23,uVar26 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x214,cVar23,uVar27 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x20f,cVar23,uVar26 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x213,cVar23,uVar27 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x211,cVar23,uVar26 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267b90: param_5,0x215,cVar23,uVar27 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetCapture: param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267fb0: param_5,iVar7,1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267fb0: param_5,uVar15,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180268220: param_5,0x180000000,(float)(int)sVar21 / DAT_180381138 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for FUN_180268220: param_5,auVar25._0_8_ [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for IsWindowUnicode: param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for IsDBCSLeadByte: (BYTE)(local_70 >> 8) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for MultiByteToWideChar: *(UINT *)(lVar2 + 0x2c),1,(LPCSTR)&local_70,2,(LPWSTR)&local_78,1 [reason: pointer depth/pointee not proven]
+    // TODO: call arguments not type-recovered for FUN_180267a60: param_5,(WCHAR)local_78 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_180267dd0: param_5 [reason: ambiguous operand type]
     trace.call_arguments("GetMessageExtraInfo");
-    trace.call_arguments("FUN_18026f580", (longlong)iVar18 * 0x1c);
+    trace.call_arguments("FUN_18026f580", static_cast<std::int64_t>(iVar18) * 0x1c);
     trace.call_arguments("memcpy", pvVar11, *(void **)(lVar3 + 0x14a0), (longlong)*(int *)(lVar3 + 0x1498) * 0x1c);
     trace.call_arguments("FUN_18026f680", load_at<std::uint64_t>(lVar3 + 0x14a0, 0));
     trace.call_arguments("GetKeyboardLayout", 0);
-    trace.call_arguments("FUN_18026f580", (longlong)iVar19 * 0x1c);
+    trace.call_arguments("FUN_18026f580", static_cast<std::int64_t>(iVar19) * 0x1c);
     trace.call_arguments("memcpy", pvVar11, *(void **)(lVar2 + 0x14a0), (longlong)*(int *)(lVar2 + 0x1498) * 0x1c);
     trace.call_arguments("FUN_18026f680", load_at<std::uint64_t>(lVar2 + 0x14a0, 0));
     trace.call_arguments("GetKeyState", 0x11);
@@ -7680,9 +7680,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d1f10() noexcept {
                         trace.statement("lVar3 = *(longlong *)(param_5 + 0xd0);");
                         trace.statement("iVar7 = *(int *)(lVar3 + 0x1498);");
                         trace.statement("uVar15 = iVar7 - 1;");
-                        if (trace.checked_condition("if (-1 < (int)uVar15)", [&]() -> bool { return static_cast<bool>(-1 < (int)uVar15); })) {
+                        if (trace.checked_condition("if (-1 < (int)uVar15)", [&]() -> bool { return static_cast<bool>(-1 < static_cast<std::int32_t>(uVar15)); })) {
                             do {
-                                if (trace.checked_condition("if (*(int *)((ulonglong)uVar15 * 0x1c + *(longlong *)(lVar3 + 0x14a0)) == 6)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>((ulonglong)uVar15 * 0x1c + load_at<std::int64_t>(lVar3 + 0x14a0, 0), 0) == 6); })) {
+                                if (trace.checked_condition("if (*(int *)((ulonglong)uVar15 * 0x1c + *(longlong *)(lVar3 + 0x14a0)) == 6)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(static_cast<std::uint64_t>(uVar15) * 0x1c + load_at<std::int64_t>(lVar3 + 0x14a0, 0), 0) == 6); })) {
                                     trace.statement("cVar23 = *(char *)((ulonglong)uVar15 * 0x1c + 0xc + *(longlong *)(lVar3 + 0x14a0));");
                                     trace.statement("goto LAB_1802d20ec;");
                                 }
@@ -8173,7 +8173,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d2b00() noexcept {
     // TODO: resolve the indirect call in body 27: uVar2 = (*(code *)puVar1[1])();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0xf < (ulonglong)plVar3[3])
     trace.call_arguments("FUN_18020e770", plVar3, (longlong)*(int *)(param_1 + 0x30));
     trace.call_target("FUN_18020e770", reinterpret_cast<const void*>(&image::FUN_18020e770));
     // body sha256: 550f73748dadb2dc19407cad88579a666be146edfd969719cb57a25cf2f152b0
@@ -8186,7 +8185,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d2b00() noexcept {
             if (trace.checked_condition("if (*(int *)(param_1 + 8) == 0x400000)", [&]() -> bool { return static_cast<bool>(load_at<std::int32_t>(param_1 + 8, 0) == 0x400000); })) {
                 trace.statement("plVar3 = (longlong *)*puVar1;");
                 trace.statement("FUN_18020e770(plVar3,(longlong)*(int *)(param_1 + 0x30));");
-                if (trace.condition("if (0xf < (ulonglong)plVar3[3])")) {
+                if (trace.checked_condition("if (0xf < (ulonglong)plVar3[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(plVar3[3])); })) {
                     trace.statement("plVar3 = (longlong *)*plVar3;");
                 }
                 trace.statement("*(longlong **)(param_1 + 0x28) = plVar3;");
@@ -9114,14 +9113,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d31a0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180426230.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((char)uVar4 != '\0') && (uVar4 = 0, DAT_18042622c = iVar2, DAT_180426230 = bVar6, !bVar6))
-    // TODO: condition expression type not recovered: if ((DAT_18042622c == iVar2) && (param_2 != (int *)0x0))
-    // TODO: condition expression type not recovered: if (-1 < SVar1)
-    // TODO: condition expression type not recovered: if (1 < iVar2 - 1U)
-    // TODO: condition expression type not recovered: if (SVar1 < 0)
-    // TODO: call arguments not type-recovered for CONCAT62: extraout_var,SVar1
-    // TODO: call arguments not type-recovered for CONCAT62: extraout_var_00,SVar1
-    // TODO: call arguments not type-recovered for CONCAT62: extraout_var_01,SVar1
+    // TODO: condition expression type not recovered: if (((char)uVar4 != '\0') && (uVar4 = 0, DAT_18042622c = iVar2, DAT_180426230 = bVar6, !bVar6)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if ((DAT_18042622c == iVar2) && (param_2 != (int *)0x0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (-1 < SVar1) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (1 < iVar2 - 1U) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (SVar1 < 0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT62: extraout_var,SVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT62: extraout_var_00,SVar1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT62: extraout_var_01,SVar1 [reason: ambiguous operand type]
     trace.call_arguments("FUN_18027b010");
     trace.call_arguments("FUN_1802d2b60", iVar5);
     trace.call_arguments("FUN_180012ac0", local_78, 0x40, "[%s]###%s", uVar3);
@@ -9338,9 +9337,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3320() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fae40.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((0.0 < fVar1) && (0.0 < param_4))
-    // TODO: condition expression type not recovered: if ((float)((uint)(fVar6 - fVar5) & _DAT_1803817c0) < fVar1)
-    // TODO: call arguments not type-recovered for expf: (float)((uint)param_4 ^ DAT_1803817f0) * fVar1
+    // TODO: condition expression type not recovered: if ((0.0 < fVar1) && (0.0 < param_4)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((float)((uint)(fVar6 - fVar5) & _DAT_1803817c0) < fVar1) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for expf: (float)((uint)param_4 ^ DAT_1803817f0) * fVar1 [reason: unresolved global storage/width]
     trace.call_arguments("FUN_1802155b0", &image::DAT_1803fae40, local_50, local_40);
     trace.call_arguments("__dyn_tls_on_demand_init");
     trace.call_target("FUN_1802155b0", reinterpret_cast<const void*>(&image::FUN_1802155b0));
@@ -9938,22 +9937,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d35e0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uint)local_70._33_4_ >> 0xc & 1) != 0)
-    // TODO: condition expression type not recovered: if ((local_70.AllocationBase._5_1_ & 199) == 5)
-    // TODO: condition expression type not recovered: if ((local_70.AllocationBase._3_1_ == 0xff) && (local_70.AllocationBase._7_1_ == '\x04'))
-    // TODO: condition expression type not recovered: if ((local_70.AllocationBase._3_1_ & 0xfd) == 0xe9)
-    // TODO: condition expression type not recovered: if (local_70.AllocationBase._3_1_ != 0xeb)
-    // TODO: condition expression type not recovered: if ((puVar7 < (ulonglong *)*param_1) || ((ulonglong *)(*param_1 + 5) <= puVar7))
-    // TODO: condition expression type not recovered: if ((puVar7 < (ulonglong *)*param_1) || ((ulonglong *)(*param_1 + 5) <= puVar7))
-    // TODO: condition expression type not recovered: if ((local_70.AllocationBase._3_1_ & 0xfc) == 0xe0)
-    // TODO: condition expression type not recovered: if (local_70.AllocationBase._3_1_ == 0xf)
-    // TODO: condition expression type not recovered: if ((puVar10 < puVar14) && ((uint)uVar3 != (uint)(byte)local_70.BaseAddress))
-    // TODO: condition expression type not recovered: if (7 < *(uint *)((longlong)param_1 + 0x24))
-    // TODO: condition expression type not recovered: for (; uVar3 != 0; uVar3 = uVar3 - 1)
-    // TODO: call arguments not type-recovered for FUN_180242250: puVar10,&local_70
-    // TODO: call arguments not type-recovered for VirtualQuery: (LPCVOID)(lVar6 + -5),&local_70,0x30
-    // TODO: call arguments not type-recovered for CONCAT31: local_70.State._1_3_,(undefined1)local_70.State
-    // TODO: call arguments not type-recovered for CONCAT26: uStack_9a,CONCAT42(uStack_9e,local_a0)
+    // TODO: condition expression type not recovered: if (((uint)local_70._33_4_ >> 0xc & 1) != 0) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if ((local_70.AllocationBase._5_1_ & 199) == 5) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if ((local_70.AllocationBase._3_1_ == 0xff) && (local_70.AllocationBase._7_1_ == '\x04')) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if ((local_70.AllocationBase._3_1_ & 0xfd) == 0xe9) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if (local_70.AllocationBase._3_1_ != 0xeb) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if ((puVar7 < (ulonglong *)*param_1) || ((ulonglong *)(*param_1 + 5) <= puVar7)) [reason: pointer-cast target not proven]
+    // TODO: condition expression type not recovered: if ((puVar7 < (ulonglong *)*param_1) || ((ulonglong *)(*param_1 + 5) <= puVar7)) [reason: pointer-cast target not proven]
+    // TODO: condition expression type not recovered: if ((local_70.AllocationBase._3_1_ & 0xfc) == 0xe0) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if (local_70.AllocationBase._3_1_ == 0xf) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if ((puVar10 < puVar14) && ((uint)uVar3 != (uint)(byte)local_70.BaseAddress)) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: for (; uVar3 != 0; uVar3 = uVar3 - 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_180242250: puVar10,&local_70 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for VirtualQuery: (LPCVOID)(lVar6 + -5),&local_70,0x30 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT31: local_70.State._1_3_,(undefined1)local_70.State [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for CONCAT26: uStack_9a,CONCAT42(uStack_9e,local_a0) [reason: ambiguous operand type]
     trace.call_arguments("SUB82", puVar7, 0);
     trace.call_arguments("CONCAT71", static_cast<std::uint64_t>((std::uint64_t(local_90) >> 8) & 0xffffffffffffff), bVar2);
     trace.call_arguments("SUB82", puVar10, 0);
@@ -10100,10 +10098,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d35e0() noexcept {
         if (trace.condition("if ((puVar10 < puVar14) && ((uint)uVar3 != (uint)(byte)local_70.BaseAddress))")) {
             trace.statement("return 0;");
         }
-        if (trace.checked_condition("if (0x32 < (uint)uVar3 + (uint)local_a8)", [&]() -> bool { return static_cast<bool>(0x32 < (uint)uVar3 + (uint)local_a8); })) {
+        if (trace.checked_condition("if (0x32 < (uint)uVar3 + (uint)local_a8)", [&]() -> bool { return static_cast<bool>(0x32 < static_cast<std::uint32_t>(uVar3) + static_cast<std::uint32_t>(local_a8)); })) {
             trace.statement("return 0;");
         }
-        if (trace.condition("if (7 < *(uint *)((longlong)param_1 + 0x24))")) {
+        if (trace.checked_condition("if (7 < *(uint *)((longlong)param_1 + 0x24))", [&]() -> bool { return static_cast<bool>(7 < load_at<std::uint32_t>(reinterpret_cast<std::int64_t>(param_1) + 0x24, 0)); })) {
             trace.statement("return 0;");
         }
         trace.statement("*(byte *)((ulonglong)*(uint *)((longlong)param_1 + 0x24) + 0x28 + (longlong)param_1) = local_a7;");
@@ -10219,8 +10217,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3a10() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("sin", (double)param_1);
-    trace.call_arguments("cos", (double)param_1);
+    trace.call_arguments("sin", static_cast<double>(param_1));
+    trace.call_arguments("cos", static_cast<double>(param_1));
     // body sha256: 729db4cdcf4b288ad7d2964e19b976d4eaa99756f67b543edbcbe5d1138fc2f8
     // Structured control-flow trace derived from the decompiled body:
         {
@@ -10285,7 +10283,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3a70() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0.0 <= param_1)
+    // TODO: condition expression type not recovered: if (0.0 <= param_1) [reason: ambiguous operand type]
     trace.call_arguments("SQRT", param_1);
     trace.call_arguments("sqrtf", param_1);
     // body sha256: c1fc73dceda90a2185ba465835dde52b2af6aba8f058197ecfb11168e5d41e6f
@@ -10354,7 +10352,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3a90() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180380bb0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0.0 <= param_1)
+    // TODO: condition expression type not recovered: if (0.0 <= param_1) [reason: ambiguous operand type]
     trace.call_arguments("SQRT", param_1);
     trace.call_arguments("sqrtf", param_1);
     trace.data_ref("DAT_180380bb0", static_cast<const void*>(&image::DAT_180380bb0));
@@ -10436,7 +10434,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3ad0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180380bb0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (fVar1 < 0.0)
+    // TODO: condition expression type not recovered: if (fVar1 < 0.0) [reason: ambiguous operand type]
     trace.call_arguments("sqrtf", fVar1);
     trace.call_arguments("SQRT", fVar1);
     trace.data_ref("_DAT_18030d324", static_cast<const void*>(&image::_DAT_18030d324));
@@ -10525,7 +10523,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3b60() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180380bb0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (fVar1 < 0.0)
+    // TODO: condition expression type not recovered: if (fVar1 < 0.0) [reason: ambiguous operand type]
     trace.call_arguments("sqrtf", fVar1);
     trace.call_arguments("SQRT", fVar1);
     trace.data_ref("_DAT_18030d324", static_cast<const void*>(&image::_DAT_18030d324));
@@ -10642,8 +10640,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3c20() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803817f0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("sin", (double)fVar1);
-    trace.call_arguments("cos", (double)fVar1);
+    trace.call_arguments("sin", static_cast<double>(fVar1));
+    trace.call_arguments("cos", static_cast<double>(fVar1));
     trace.call_arguments("sin", dVar2);
     trace.call_arguments("cos", dVar2);
     trace.call_arguments("sin", dVar2);
@@ -10890,7 +10888,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3e40() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18038120c.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (fVar1 < 0.0)
+    // TODO: condition expression type not recovered: if (fVar1 < 0.0) [reason: ambiguous operand type]
     trace.call_arguments("fmodf", param_1, image::DAT_18038120c);
     trace.data_ref("DAT_18038120c", static_cast<const void*>(&image::DAT_18038120c));
     // body sha256: 7196481a434609b2fa26f0712fdd52a86cdde44a190ae6c3228bc37a5dfa89b6
@@ -11016,8 +11014,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d3e70() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803817f0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("sin", (double)fVar2);
-    trace.call_arguments("cos", (double)fVar2);
+    trace.call_arguments("sin", static_cast<double>(fVar2));
+    trace.call_arguments("cos", static_cast<double>(fVar2));
     trace.call_arguments("sin", dVar3);
     trace.call_arguments("cos", dVar3);
     trace.call_arguments("sin", dVar3);
@@ -11142,10 +11140,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d4050() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803817f0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    trace.call_arguments("cos", (double)fVar1);
-    trace.call_arguments("cos", (double)fVar4);
-    trace.call_arguments("sin", (double)fVar4);
-    trace.call_arguments("sin", (double)fVar1);
+    trace.call_arguments("cos", static_cast<double>(fVar1));
+    trace.call_arguments("cos", static_cast<double>(fVar4));
+    trace.call_arguments("sin", static_cast<double>(fVar4));
+    trace.call_arguments("sin", static_cast<double>(fVar1));
     trace.data_ref("DAT_180380994", static_cast<const void*>(&image::DAT_180380994));
     trace.data_ref("DAT_1803817f0", static_cast<const void*>(&image::DAT_1803817f0));
     // body sha256: e33d3ea4757dda19267a875ad8fd15fdc6d48132502444746143d992f0ebf22c
@@ -11520,8 +11518,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d4200() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803817f0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (fVar3 < 0.0)
-    // TODO: call arguments not type-recovered for atan2f: (float)((uint)param_1[8] ^ DAT_1803817f0),fVar3
+    // TODO: condition expression type not recovered: if (fVar3 < 0.0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for atan2f: (float)((uint)param_1[8] ^ DAT_1803817f0),fVar3 [reason: unresolved global storage/width]
     trace.call_arguments("sqrtf", fVar3);
     trace.call_arguments("SQRT", fVar3);
     trace.call_arguments("atan2f", param_1[9], param_1[10]);
@@ -11922,12 +11920,12 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d4540() noexcept {
     // TODO: resolve the indirect call in body 32: fVar2 = (float)(*(code *)PTR_FUN_1803da018)(fVar1 * fVar1 + fVar2 * fVar2);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((fVar2 == 0.0) && (*param_1 == 0.0))
-    // TODO: condition expression type not recovered: if (0.0 < param_1[2])
-    // TODO: condition expression type not recovered: if (fVar4 < 0.0)
-    // TODO: condition expression type not recovered: if (fVar2 < 0.0)
-    // TODO: call arguments not type-recovered for atan2: (double)(float)((uint)param_1[2] ^ DAT_1803817f0),(double)fVar2
-    trace.call_arguments("atan2", (double)fVar2, (double)fVar1);
+    // TODO: condition expression type not recovered: if ((fVar2 == 0.0) && (*param_1 == 0.0)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (0.0 < param_1[2]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (fVar4 < 0.0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (fVar2 < 0.0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for atan2: (double)(float)((uint)param_1[2] ^ DAT_1803817f0),(double)fVar2 [reason: unresolved global storage/width]
+    trace.call_arguments("atan2", static_cast<double>(fVar2), static_cast<double>(fVar1));
     trace.data_ref("_DAT_18030d328", static_cast<const void*>(&image::_DAT_18030d328));
     trace.data_ref("DAT_180380d50", static_cast<const void*>(&image::DAT_180380d50));
     trace.data_ref("DAT_18038110c", static_cast<const void*>(&image::DAT_18038110c));
@@ -12588,13 +12586,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d4c50() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803da514 & 4) == 0)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01
+    // TODO: condition expression type not recovered: if ((DAT_1803da514 & 4) == 0) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01 [reason: unresolved global storage/width]
     trace.call_arguments("memset", local_140, 0, 0x100);
     trace.call_arguments("FUN_1802d6970", param_3, param_4);
-    trace.call_arguments("memcpy", &local_40, param_1, (ulonglong)uVar7);
+    trace.call_arguments("memcpy", &local_40, param_1, static_cast<std::uint64_t>(uVar7));
     trace.call_arguments("vpmovzxbd_avx2", auVar3);
     trace.call_arguments("vpandn_avx2", auVar9, image::_DAT_18030fa80);
     trace.call_arguments("vpsrld_avx2", auVar9, 5);
@@ -12893,13 +12891,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d4e90() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803da514 & 4) == 0)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01
+    // TODO: condition expression type not recovered: if ((DAT_1803da514 & 4) == 0) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01 [reason: unresolved global storage/width]
     trace.call_arguments("memset", local_140, 0, 0x100);
     trace.call_arguments("FUN_1802d6970", param_3, param_4);
-    trace.call_arguments("memcpy", &local_40, param_1, (ulonglong)uVar8);
+    trace.call_arguments("memcpy", &local_40, param_1, static_cast<std::uint64_t>(uVar8));
     trace.call_arguments("vpmovzxbd_avx2", auVar3);
     trace.call_arguments("vpandn_avx2", auVar9, image::_DAT_18030fa80);
     trace.call_arguments("vpsrld_avx2", auVar9, 5);
@@ -13203,10 +13201,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d50d0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; (uVar8 & 1) == 0; uVar8 = uVar8 >> 1 | 0x80000000)
-    // TODO: condition expression type not recovered: for (; (uVar8 & 1) == 0; uVar8 = uVar8 >> 1 | 0x80000000)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01
+    // TODO: condition expression type not recovered: for (; (uVar8 & 1) == 0; uVar8 = uVar8 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar8 & 1) == 0; uVar8 = uVar8 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01 [reason: unresolved global storage/width]
     trace.call_arguments("FUN_1802d6970", param_3, param_4);
     trace.call_arguments("vpmovzxbd_avx2", auVar2);
     trace.call_arguments("vpsrld_avx2", auVar4, 5);
@@ -13214,7 +13212,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d50d0() noexcept {
     trace.call_arguments("vpandn_avx2", auVar4, image::_DAT_18030fa80);
     trace.call_arguments("vpsllvd_avx2", auVar12, auVar4);
     trace.call_arguments("vmovmskps_avx", auVar4);
-    trace.call_arguments("memcpy", &local_40, (void *)(uVar10 + param_1), (ulonglong)uVar8);
+    trace.call_arguments("memcpy", &local_40, (void *)(uVar10 + param_1), static_cast<std::uint64_t>(uVar8));
     trace.call_arguments("vpmovzxbd_avx2", auVar3);
     trace.call_arguments("vpandn_avx2", auVar12, image::_DAT_18030fa80);
     trace.call_arguments("vpsrld_avx2", auVar12, 5);
@@ -13515,10 +13513,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d52d0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; (uVar8 & 1) == 0; uVar8 = uVar8 >> 1 | 0x80000000)
-    // TODO: condition expression type not recovered: for (; (uVar9 & 1) == 0; uVar9 = uVar9 >> 1 | 0x80000000)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01
+    // TODO: condition expression type not recovered: for (; (uVar8 & 1) == 0; uVar8 = uVar8 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar9 & 1) == 0; uVar9 = uVar9 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01 [reason: unresolved global storage/width]
     trace.call_arguments("FUN_1802d6970", param_3, param_4);
     trace.call_arguments("vpmovzxbd_avx2", auVar2);
     trace.call_arguments("vpsrld_avx2", auVar4, 5);
@@ -13526,7 +13524,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d52d0() noexcept {
     trace.call_arguments("vpandn_avx2", auVar4, image::_DAT_18030fa80);
     trace.call_arguments("vpsllvd_avx2", auVar12, auVar4);
     trace.call_arguments("vmovmskps_avx", auVar4);
-    trace.call_arguments("memcpy", &local_40, (void *)(uVar10 + param_1), (ulonglong)uVar8);
+    trace.call_arguments("memcpy", &local_40, (void *)(uVar10 + param_1), static_cast<std::uint64_t>(uVar8));
     trace.call_arguments("vpmovzxbd_avx2", auVar3);
     trace.call_arguments("vpandn_avx2", auVar12, image::_DAT_18030fa80);
     trace.call_arguments("vpsrld_avx2", auVar12, 5);
@@ -14302,176 +14300,176 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d54d0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 < 0x21)
-    // TODO: condition expression type not recovered: if ((auVar1 & (local_a0 ^ local_80)) == (undefined1  [32])0x0)
-    // TODO: condition expression type not recovered: while (pauVar12 != (undefined1 (*) [32])(*param_1 + uVar15))
-    // TODO: condition expression type not recovered: if ((uVar10 != 0) && (uVar10 = (1 << (sbyte)uVar15) - 1U & uVar10, uVar10 != 0))
-    // TODO: condition expression type not recovered: if (param_2 != pauVar12)
-    // TODO: call arguments not type-recovered for memcpy: local_a0,param_3,param_4
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: local_120,local_168[-1]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for memcpy: local_80,pauVar14,(longlong)local_168 - (longlong)pauVar14
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: local_120,pauVar12[-1]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: *param_1,local_120
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for memcmp: param_2 + 1,param_3,param_4 - 0x20
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: *param_2,auVar2
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for memcmp: (undefined1 (*) [32])(*param_2 + uVar10) + 1,param_3,param_4 - 0x20
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: *local_170,auVar8
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for FUN_1802d6d50: local_100,(1 << ((byte)local_178 & 0x1f)) - 1U & uVar15
+    // TODO: condition expression type not recovered: if (param_4 < 0x21) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((auVar1 & (local_a0 ^ local_80)) == (undefined1  [32])0x0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: while (pauVar12 != (undefined1 (*) [32])(*param_1 + uVar15)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((uVar10 != 0) && (uVar10 = (1 << (sbyte)uVar15) - 1U & uVar10, uVar10 != 0)) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (param_2 != pauVar12) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_a0,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: local_120,local_168[-1] [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_80,pauVar14,(longlong)local_168 - (longlong)pauVar14 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: local_120,pauVar12[-1] [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: *param_1,local_120 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcmp: param_2 + 1,param_3,param_4 - 0x20 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: *param_2,auVar2 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcmp: (undefined1 (*) [32])(*param_2 + uVar10) + 1,param_3,param_4 - 0x20 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: *local_170,auVar8 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_1802d6d50: local_100,(1 << ((byte)local_178 & 0x1f)) - 1U & uVar15 [reason: scalar cast width/kind mismatch]
     trace.call_arguments("LZCOUNT", uVar15);
     trace.call_arguments("LZCOUNT", uVar15);
     trace.call_arguments("LZCOUNT", uVar10);
@@ -14716,7 +14714,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d54d0() noexcept {
                         }
                     }
                 }
-                if (trace.checked_condition("if ((ulonglong)uVar15 != 0)", [&]() -> bool { return static_cast<bool>((ulonglong)uVar15 != 0); })) {
+                if (trace.checked_condition("if ((ulonglong)uVar15 != 0)", [&]() -> bool { return static_cast<bool>(static_cast<std::uint64_t>(uVar15) != 0); })) {
                     trace.statement("auVar2 = vpcmpeqb_avx2(*param_1,local_120);");
                     trace.statement("uVar10 = (uint)(SUB321(auVar2 >> 7,0) & 1) | (uint)(SUB321(auVar2 >> 0xf,0) & 1) << 1 |");
                     trace.statement("(uint)(SUB321(auVar2 >> 0x17,0) & 1) << 2 | (uint)(SUB321(auVar2 >> 0x1f,0) & 1) << 3");
@@ -15291,34 +15289,34 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d5870() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 != 0)
-    // TODO: condition expression type not recovered: if (param_4 == 1)
-    // TODO: condition expression type not recovered: if (param_4 <= uVar11)
-    // TODO: condition expression type not recovered: if (((DAT_1803da514 & 0x20) != 0) && (0x1f < uVar11))
-    // TODO: condition expression type not recovered: if (((DAT_1803da514 & 4) == 0) || (uVar11 < 0x10))
-    // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if ((*param_2)[0] == (*param_3)[0])
-    // TODO: condition expression type not recovered: while ((*param_2)[uVar11] == (*param_3)[uVar11])
-    // TODO: condition expression type not recovered: if (uVar11 == param_4)
-    // TODO: condition expression type not recovered: if (param_4 < 0x11)
-    // TODO: condition expression type not recovered: for (; uVar4 >> uVar9 == 0; uVar9 = uVar9 - 1)
-    // TODO: condition expression type not recovered: if (param_2 != (undefined1 (*) [16])(puVar2 + uVar4))
-    // TODO: condition expression type not recovered: for (; uVar8 >> uVar1 == 0; uVar1 = uVar1 - 1)
-    // TODO: condition expression type not recovered: for (; uVar10 >> uVar4 == 0; uVar4 = uVar4 - 1)
-    // TODO: condition expression type not recovered: for (; uVar10 >> uVar8 == 0; uVar8 = uVar8 - 1)
-    // TODO: condition expression type not recovered: for (; uVar4 >> uVar9 == 0; uVar9 = uVar9 - 1)
-    // TODO: condition expression type not recovered: if (param_2 != (undefined1 (*) [16])(*param_1 + uVar11))
-    // TODO: condition expression type not recovered: for (; uVar9 >> uVar17 == 0; uVar17 = uVar17 - 1)
-    // TODO: call arguments not type-recovered for FUN_1802d5fe0: param_1,param_2,(*param_3)[0]
-    // TODO: call arguments not type-recovered for memcpy: &local_78,param_3,param_4
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,iVar6,0x10
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,iVar6,0x10
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_1,0xc,iVar6,0x10
-    // TODO: call arguments not type-recovered for memcmp: param_2 + 1,param_3,param_4 - 0x10
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,0x10,0x10
-    // TODO: call arguments not type-recovered for memcmp: pauVar7 + 1,param_3,param_4 - 0x10
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_1,0xc,0x10,0x10
-    // TODO: call arguments not type-recovered for FUN_1802d6e00: local_a8
+    // TODO: condition expression type not recovered: if (param_4 != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 == 1) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 <= uVar11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (((DAT_1803da514 & 0x20) != 0) && (0x1f < uVar11)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((DAT_1803da514 & 4) == 0) || (uVar11 < 0x10)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((*param_2)[0] == (*param_3)[0]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: while ((*param_2)[uVar11] == (*param_3)[uVar11]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (uVar11 == param_4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 < 0x11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; uVar4 >> uVar9 == 0; uVar9 = uVar9 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (param_2 != (undefined1 (*) [16])(puVar2 + uVar4)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; uVar8 >> uVar1 == 0; uVar1 = uVar1 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; uVar10 >> uVar4 == 0; uVar4 = uVar4 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; uVar10 >> uVar8 == 0; uVar8 = uVar8 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; uVar4 >> uVar9 == 0; uVar9 = uVar9 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (param_2 != (undefined1 (*) [16])(*param_1 + uVar11)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; uVar9 >> uVar17 == 0; uVar17 = uVar17 - 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_1802d5fe0: param_1,param_2,(*param_3)[0] [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: &local_78,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,iVar6,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,iVar6,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_1,0xc,iVar6,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcmp: param_2 + 1,param_3,param_4 - 0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcmp: pauVar7 + 1,param_3,param_4 - 0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_1,0xc,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_1802d6e00: local_a8 [reason: ambiguous operand type]
     trace.call_arguments("FUN_1802d54d0");
     trace.call_target("FUN_1802d54d0", reinterpret_cast<const void*>(&image::FUN_1802d54d0));
     trace.call_target("FUN_1802d5fe0", reinterpret_cast<const void*>(&image::FUN_1802d5fe0));
@@ -15446,7 +15444,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d5870() noexcept {
                                             trace.statement("param_1 = local_b8;");
                                         } while (trace.loop_condition("while (param_2 != (undefined1 (*) [16])(puVar2 + uVar4));"));
                                     }
-                                    if (trace.checked_condition("if ((ulonglong)uVar4 != 0)", [&]() -> bool { return static_cast<bool>((ulonglong)uVar4 != 0); })) {
+                                    if (trace.checked_condition("if ((ulonglong)uVar4 != 0)", [&]() -> bool { return static_cast<bool>(static_cast<std::uint64_t>(uVar4) != 0); })) {
                                         trace.statement("auVar13 = pcmpestrm(auVar13,*param_1,0xc,iVar6,0x10);");
                                         trace.statement("uVar4 = auVar13._0_4_ & (1 << (sbyte)uVar4) - 1U;");
                                         if (trace.checked_condition("if (uVar4 != 0)", [&]() -> bool { return static_cast<bool>(uVar4 != 0); })) {
@@ -15750,95 +15748,95 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d5c20() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1)
-    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000)
-    // TODO: call arguments not type-recovered for pshufb: ZEXT116(param_3),ZEXT816(0)
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x77,0
-    // TODO: call arguments not type-recovered for vpshufb_avx: ZEXT416((uint)(int)(char)param_3),(undefined1  [16])0x0
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: auVar10,*param_1
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar10,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7)
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xf7,0
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for pshufb: ZEXT116(param_3),ZEXT816(0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpshufb_avx: ZEXT416((uint)(int)(char)param_3),(undefined1  [16])0x0 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: auVar10,*param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar10,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("ZEXT116", param_3);
     trace.call_arguments("ZEXT816", 0);
-    trace.call_arguments("ZEXT416", (uint)(int)(char)param_3);
+    trace.call_arguments("ZEXT416", (uint)(int)static_cast<char>(param_3));
     trace.call_arguments("vpcmpeqb_avx2", auVar2, auVar10);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
@@ -16195,92 +16193,92 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d5d20() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1)
-    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000)
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x6f,0
-    // TODO: call arguments not type-recovered for vpunpcklwd_avx: ZEXT416((uint)(int)param_3),ZEXT416((uint)(int)param_3)
-    // TODO: call arguments not type-recovered for vpcmpeqw_avx2: auVar9,*param_1
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7)
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf7,0
-    trace.call_arguments("ZEXT416", (uint)(int)param_3);
-    trace.call_arguments("ZEXT416", (uint)(int)param_3);
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpunpcklwd_avx: ZEXT416((uint)(int)param_3),ZEXT416((uint)(int)param_3) [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for vpcmpeqw_avx2: auVar9,*param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf7,0 [reason: ambiguous operand type]
+    trace.call_arguments("ZEXT416", (uint)static_cast<std::int32_t>(param_3));
+    trace.call_arguments("ZEXT416", (uint)static_cast<std::int32_t>(param_3));
     trace.call_arguments("vpshufd_avx", auVar8, 0);
     trace.call_arguments("vpcmpeqw_avx2", auVar2, auVar9);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
@@ -16615,88 +16613,88 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d5e20() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1)
-    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000)
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for vpshufd_avx: ZEXT416(param_3),0
-    // TODO: call arguments not type-recovered for vpcmpeqd_avx2: auVar9,*param_1
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7)
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf7,0
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpshufd_avx: ZEXT416(param_3),0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpcmpeqd_avx2: auVar9,*param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("ZEXT416", param_3);
     trace.call_arguments("vpcmpeqd_avx2", auVar2, auVar9);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
@@ -17034,76 +17032,76 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d5f00() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar5 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar5 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar4 & 1) == 0; uVar4 = uVar4 + 1)
-    // TODO: condition expression type not recovered: for (; (uVar4 & 1) == 0; uVar4 = uVar4 >> 1 | 0x80000000)
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB248: *(undefined1 (*) [24])*param_1,0x10
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xbf,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar6),*param_1
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar6)
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf7,0
+    // TODO: condition expression type not recovered: if (((uVar5 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar5 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar4 & 1) == 0; uVar4 = uVar4 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar4 & 1) == 0; uVar4 = uVar4 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB248: *(undefined1 (*) [24])*param_1,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar6),*param_1 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar6) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("vpunpcklqdq_avx", auVar11, auVar11);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
@@ -17491,95 +17489,95 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d5fe0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar21 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar21 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; uVar1 >> uVar19 == 0; uVar19 = uVar19 - 1)
-    // TODO: condition expression type not recovered: if (pauVar20 == param_1)
-    // TODO: call arguments not type-recovered for pshufb: ZEXT116(param_3),ZEXT816(0)
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x77,0
-    // TODO: call arguments not type-recovered for vpshufb_avx: ZEXT416((uint)(int)(char)param_3),(undefined1  [16])0x0
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: auVar25,pauVar20[-1]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar22),*pauVar20
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar25,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar22)
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xf7,0
+    // TODO: condition expression type not recovered: if (((uVar21 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar21 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; uVar1 >> uVar19 == 0; uVar19 = uVar19 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (pauVar20 == param_1) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pshufb: ZEXT116(param_3),ZEXT816(0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpshufb_avx: ZEXT416((uint)(int)(char)param_3),(undefined1  [16])0x0 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: auVar25,pauVar20[-1] [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar22),*pauVar20 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar25,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar22) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("ZEXT116", param_3);
     trace.call_arguments("ZEXT816", 0);
-    trace.call_arguments("ZEXT416", (uint)(int)(char)param_3);
+    trace.call_arguments("ZEXT416", (uint)(int)static_cast<char>(param_3));
     trace.call_arguments("vpcmpeqb_avx2", auVar2, auVar25);
     trace.call_arguments("LZCOUNT", uVar19);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
@@ -18001,21 +17999,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6110() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 < 0x11)
-    // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0)
-    // TODO: condition expression type not recovered: for (; uVar2 >> iVar3 == 0; iVar3 = iVar3 + -1)
-    // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0)
-    // TODO: condition expression type not recovered: if ((uVar7 != 0) && (iVar3 = 0x1f, uVar7 != 0))
-    // TODO: condition expression type not recovered: for (; uVar7 >> iVar3 == 0; iVar3 = iVar3 + -1)
-    // TODO: call arguments not type-recovered for memcpy: local_78,param_3,param_4
-    // TODO: call arguments not type-recovered for memcpy: local_78,param_1,param_2
-    // TODO: call arguments not type-recovered for pcmpestri: local_78,*pauVar6,0x70,uVar7,0x10
-    // TODO: call arguments not type-recovered for memcpy: local_78,pauVar6,(ulonglong)uVar7
-    // TODO: call arguments not type-recovered for pcmpestrm: *param_3,auVar14,0x30,0x10,0x10
-    // TODO: call arguments not type-recovered for memcpy: local_78,param_1,param_2
-    // TODO: call arguments not type-recovered for pcmpestrm: *param_3,local_78,0x30,0x10,uVar8
+    // TODO: condition expression type not recovered: if (param_4 < 0x11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; uVar2 >> iVar3 == 0; iVar3 = iVar3 + -1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((uVar7 != 0) && (iVar3 = 0x1f, uVar7 != 0)) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; uVar7 >> iVar3 == 0; iVar3 = iVar3 + -1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for memcpy: local_78,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_78,param_1,param_2 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: local_78,*pauVar6,0x70,uVar7,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_78,pauVar6,(ulonglong)uVar7 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for pcmpestrm: *param_3,auVar14,0x30,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_78,param_1,param_2 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: *param_3,local_78,0x30,0x10,uVar8 [reason: ambiguous operand type]
     trace.call_arguments("pcmpestri", auVar15, local_78, 0x70, uVar7, uVar8);
     trace.call_arguments("pcmpestrm", auVar13, auVar14, 0x30, 0x10, 0x10);
     trace.call_arguments("pcmpestrm", local_78, auVar14, 0x30, uVar7, 0x10);
@@ -18061,13 +18059,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6110() noexcept {
                     if (trace.checked_condition("if (puVar5 == puVar1)", [&]() -> bool { return static_cast<bool>(puVar5 == puVar1); })) {
                         if (trace.checked_condition("if (uVar9 != 0)", [&]() -> bool { return static_cast<bool>(uVar9 != 0); })) {
                             trace.statement("uVar11 = param_2 < 0x10;");
-                            if (trace.checked_condition("if ((bool)uVar11)", [&]() -> bool { return static_cast<bool>((bool)uVar11); })) {
+                            if (trace.checked_condition("if ((bool)uVar11)", [&]() -> bool { return static_cast<bool>(static_cast<bool>(uVar11)); })) {
                                 trace.statement("memcpy(local_78,param_1,param_2);");
                             } else {
                             trace.statement("local_78 = *param_1;");
                             }
                             trace.statement("iVar3 = pcmpestri(auVar15,local_78,0x70,uVar7,uVar8);");
-                            if (trace.checked_condition("if ((bool)uVar11)", [&]() -> bool { return static_cast<bool>((bool)uVar11); })) {
+                            if (trace.checked_condition("if ((bool)uVar11)", [&]() -> bool { return static_cast<bool>(static_cast<bool>(uVar11)); })) {
                                 trace.statement("return (undefined1 *)(longlong)iVar3;");
                             }
                         }
@@ -18346,19 +18344,19 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6350() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 < 0x11)
-    // TODO: condition expression type not recovered: if (puVar6 == *param_1 + uVar11)
-    // TODO: condition expression type not recovered: if (puVar6 == *param_1 + uVar11)
-    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0)
-    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0)
-    // TODO: call arguments not type-recovered for memcpy: &local_88,param_3,param_4
-    // TODO: call arguments not type-recovered for memcpy: &local_88,param_1,param_2
-    // TODO: call arguments not type-recovered for pcmpestri: auVar2,*pauVar9,0x40,uVar7,0x10
-    // TODO: call arguments not type-recovered for memcpy: local_78,pauVar9,(ulonglong)uVar7
-    // TODO: call arguments not type-recovered for memcpy: local_78,param_1,local_88
-    // TODO: call arguments not type-recovered for pcmpestri: *param_3,local_78,0x40,0x10,uVar10
-    // TODO: call arguments not type-recovered for pcmpestri: *pauVar8,*pauVar1,0x40,0x10,0x10
-    // TODO: call arguments not type-recovered for pcmpestri: local_78,*pauVar1,0x40,uVar7,0x10
+    // TODO: condition expression type not recovered: if (param_4 < 0x11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (puVar6 == *param_1 + uVar11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (puVar6 == *param_1 + uVar11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: &local_88,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: &local_88,param_1,param_2 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: auVar2,*pauVar9,0x40,uVar7,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_78,pauVar9,(ulonglong)uVar7 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for memcpy: local_78,param_1,local_88 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: *param_3,local_78,0x40,0x10,uVar10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: *pauVar8,*pauVar1,0x40,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: local_78,*pauVar1,0x40,uVar7,0x10 [reason: ambiguous operand type]
     trace.call_arguments("pcmpestri", auVar2, auVar14, 0x40, uVar7, uVar10);
     trace.call_arguments("pcmpestri", auVar2, local_78, 0x40, uVar7, uVar10);
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
@@ -18402,7 +18400,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6350() noexcept {
                     if (trace.condition("if (puVar6 == *param_1 + uVar11)")) {
                         if (trace.checked_condition("if (uVar11 != 0)", [&]() -> bool { return static_cast<bool>(uVar11 != 0); })) {
                             trace.statement("uVar13 = param_2 < 0x10;");
-                            if (trace.checked_condition("if ((bool)uVar13)", [&]() -> bool { return static_cast<bool>((bool)uVar13); })) {
+                            if (trace.checked_condition("if ((bool)uVar13)", [&]() -> bool { return static_cast<bool>(static_cast<bool>(uVar13)); })) {
                                 trace.statement("memcpy(&local_88,param_1,param_2);");
                                 trace.statement("auVar14._8_8_ = uStack_80;");
                                 trace.statement("auVar14._0_8_ = local_88;");
@@ -18410,7 +18408,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6350() noexcept {
                             trace.statement("auVar14 = *param_1;");
                             }
                             trace.statement("iVar3 = pcmpestri(auVar2,auVar14,0x40,uVar7,uVar10);");
-                            if (trace.checked_condition("if ((bool)uVar13)", [&]() -> bool { return static_cast<bool>((bool)uVar13); })) {
+                            if (trace.checked_condition("if ((bool)uVar13)", [&]() -> bool { return static_cast<bool>(static_cast<bool>(uVar13)); })) {
                                 trace.statement("return (undefined1 *)(longlong)iVar3;");
                             }
                         }
@@ -18433,14 +18431,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6350() noexcept {
                         trace.statement("return (undefined1 *)0xffffffffffffffff;");
                     }
                     trace.statement("uVar13 = local_88 < 0x10;");
-                    if (trace.checked_condition("if ((bool)uVar13)", [&]() -> bool { return static_cast<bool>((bool)uVar13); })) {
+                    if (trace.checked_condition("if ((bool)uVar13)", [&]() -> bool { return static_cast<bool>(static_cast<bool>(uVar13)); })) {
                         trace.statement("memcpy(local_78,param_1,local_88);");
                     } else {
                     trace.statement("local_78 = *param_1;");
                     }
                     do {
                         trace.statement("iVar5 = pcmpestri(*param_3,local_78,0x40,0x10,uVar10);");
-                        if (trace.checked_condition("if (((bool)uVar13) && (iVar3 < iVar5))", [&]() -> bool { return static_cast<bool>(((bool)uVar13) && (iVar3 < iVar5)); })) {
+                        if (trace.checked_condition("if (((bool)uVar13) && (iVar3 < iVar5))", [&]() -> bool { return static_cast<bool>((static_cast<bool>(uVar13)) && (iVar3 < iVar5)); })) {
                             trace.statement("iVar3 = iVar5;");
                         }
                         trace.statement("param_3 = param_3 + 1;");
@@ -18692,22 +18690,22 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6570() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 < 0x11)
-    // TODO: condition expression type not recovered: for (; param_1 != pauVar6; param_1 = param_1 + 1)
-    // TODO: condition expression type not recovered: if (param_1 != pauVar6)
-    // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0)
-    // TODO: condition expression type not recovered: for (; (uVar4 >> iVar1 & 1) == 0; iVar1 = iVar1 + 1)
-    // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0)
-    // TODO: condition expression type not recovered: for (; (uVar3 >> uVar13 & 1) == 0; uVar13 = uVar13 + 1)
-    // TODO: call arguments not type-recovered for memcpy: local_68,param_3,param_4
-    // TODO: call arguments not type-recovered for pcmpestri: local_68,*param_1,0x30,uVar3,0x10
-    // TODO: call arguments not type-recovered for memcpy: local_68,param_1,(ulonglong)uVar4
-    // TODO: call arguments not type-recovered for memcpy: local_68,_Src,(ulonglong)uVar3
-    // TODO: call arguments not type-recovered for pcmpestrm: *param_3,auVar10,0x30,0x10,0x10
-    // TODO: call arguments not type-recovered for memcpy: local_68,param_1,(ulonglong)uVar4
-    // TODO: call arguments not type-recovered for pcmpestrm: *param_3,local_68,0x30,0x10,uVar4
+    // TODO: condition expression type not recovered: if (param_4 < 0x11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; param_1 != pauVar6; param_1 = param_1 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (param_1 != pauVar6) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; (uVar4 >> iVar1 & 1) == 0; iVar1 = iVar1 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; (uVar3 >> uVar13 & 1) == 0; uVar13 = uVar13 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for memcpy: local_68,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: local_68,*param_1,0x30,uVar3,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_68,param_1,(ulonglong)uVar4 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for memcpy: local_68,_Src,(ulonglong)uVar3 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for pcmpestrm: *param_3,auVar10,0x30,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_68,param_1,(ulonglong)uVar4 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for pcmpestrm: *param_3,local_68,0x30,0x10,uVar4 [reason: ambiguous operand type]
     trace.call_arguments("pcmpestri", auVar11, local_68, 0x30, uVar3, uVar4);
     trace.call_arguments("pcmpestrm", auVar9, auVar10, 0x30, 0x10, 0x10);
     trace.call_arguments("pcmpestrm", local_68, auVar10, 0x30, uVar3, 0x10);
@@ -18814,7 +18812,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6570() noexcept {
                                 for (auto loop = trace.loop("for (; (uVar3 >> uVar13 & 1) == 0; uVar13 = uVar13 + 1)"); loop.next(); ) {
                                 }
                             }
-                            if (trace.checked_condition("if ((int)uVar13 < (int)uVar4)", [&]() -> bool { return static_cast<bool>((int)uVar13 < (int)uVar4); })) {
+                            if (trace.checked_condition("if ((int)uVar13 < (int)uVar4)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(uVar13) < static_cast<std::int32_t>(uVar4)); })) {
                                 trace.statement("uVar4 = uVar13;");
                             }
                         }
@@ -18995,19 +18993,19 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6790() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 < 0x11)
-    // TODO: condition expression type not recovered: for (; param_1 != pauVar9; param_1 = param_1 + 1)
-    // TODO: condition expression type not recovered: for (; param_1 != pauVar9; param_1 = param_1 + 1)
-    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0)
-    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0)
-    // TODO: call arguments not type-recovered for memcpy: local_68,param_3,param_4
-    // TODO: call arguments not type-recovered for pcmpestri: local_68,*param_1,0,uVar5,0x10
-    // TODO: call arguments not type-recovered for memcpy: local_68,param_1,(ulonglong)uVar8
-    // TODO: call arguments not type-recovered for memcpy: local_68,_Src,(ulonglong)uVar5
-    // TODO: call arguments not type-recovered for pcmpestri: *pauVar7,*param_1,0,0x10,0x10
-    // TODO: call arguments not type-recovered for pcmpestri: local_68,*param_1,0,uVar5,0x10
-    // TODO: call arguments not type-recovered for memcpy: local_68,param_1,(ulonglong)uVar8
-    // TODO: call arguments not type-recovered for pcmpestri: *param_3,local_68,0,0x10,uVar8
+    // TODO: condition expression type not recovered: if (param_4 < 0x11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; param_1 != pauVar9; param_1 = param_1 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; param_1 != pauVar9; param_1 = param_1 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((param_4 & 0xf) != 0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_68,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: local_68,*param_1,0,uVar5,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_68,param_1,(ulonglong)uVar8 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for memcpy: local_68,_Src,(ulonglong)uVar5 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for pcmpestri: *pauVar7,*param_1,0,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: local_68,*param_1,0,uVar5,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_68,param_1,(ulonglong)uVar8 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for pcmpestri: *param_3,local_68,0,0x10,uVar8 [reason: ambiguous operand type]
     trace.call_arguments("pcmpestri", auVar1, local_68, 0, uVar5, uVar8);
     trace.call_arguments("pcmpestri", auVar1, local_68, 0, uVar5, uVar8);
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
@@ -19082,7 +19080,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6790() noexcept {
                     trace.statement("uVar6 = uVar8;");
                     do {
                         trace.statement("uVar4 = pcmpestri(*param_3,local_68,0,0x10,uVar8);");
-                        if (trace.checked_condition("if (((bool)uVar11) && ((int)uVar4 < (int)uVar6))", [&]() -> bool { return static_cast<bool>(((bool)uVar11) && ((int)uVar4 < (int)uVar6)); })) {
+                        if (trace.checked_condition("if (((bool)uVar11) && ((int)uVar4 < (int)uVar6))", [&]() -> bool { return static_cast<bool>((static_cast<bool>(uVar11)) && (static_cast<std::int32_t>(uVar4) < static_cast<std::int32_t>(uVar6))); })) {
                             trace.statement("uVar6 = uVar4;");
                         }
                         trace.statement("param_3 = param_3 + 1;");
@@ -19220,43 +19218,43 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6970() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_1 != pbVar1; param_1 = param_1 + 1)
-    // TODO: call arguments not type-recovered for ZEXT1664: (undefined1  [16])0x0
-    // TODO: call arguments not type-recovered for vpmovzxbq_avx2: ZEXT416((uint)(1 << (bVar2 >> 3 & 0x18)))
-    // TODO: call arguments not type-recovered for vpsllq_avx2: auVar3,ZEXT416(bVar2 & 0x3f)
-    // TODO: call arguments not type-recovered for vpor_avx2: auVar3,auVar5._0_32_
-    // TODO: call arguments not type-recovered for memset: local_120,0,0x100
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xf7,0
+    // TODO: condition expression type not recovered: for (; param_1 != pbVar1; param_1 = param_1 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for ZEXT1664: (undefined1  [16])0x0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmovzxbq_avx2: ZEXT416((uint)(1 << (bVar2 >> 3 & 0x18))) [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for vpsllq_avx2: auVar3,ZEXT416(bVar2 & 0x3f) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpor_avx2: auVar3,auVar5._0_32_ [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for memset: local_120,0,0x100 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: local_120[0] >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("ZEXT416", (uint)(1 << (bVar2 >> 3 & 0x18)));
     trace.call_arguments("ZEXT416", bVar2 & 0x3f);
     trace.call_arguments("ZEXT3264", auVar3);
@@ -19651,23 +19649,23 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6b60() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 != 0)
-    // TODO: condition expression type not recovered: if (param_4 == 1)
-    // TODO: condition expression type not recovered: if (param_4 <= uVar4)
-    // TODO: condition expression type not recovered: if ((((byte)DAT_1803da514 & 4) == 0) || (uVar4 < 0x10))
-    // TODO: condition expression type not recovered: if (param_1 != pauVar5)
-    // TODO: condition expression type not recovered: if ((*param_1)[0] == (*param_3)[0])
-    // TODO: condition expression type not recovered: while ((*param_1)[uVar4] == (*param_3)[uVar4])
-    // TODO: condition expression type not recovered: if (uVar4 == param_4)
-    // TODO: condition expression type not recovered: if (pauVar5 < param_1)
-    // TODO: call arguments not type-recovered for FUN_1802d5c20: param_1,param_2,(*param_3)[0]
-    // TODO: call arguments not type-recovered for memcpy: local_58,param_3,param_4
-    // TODO: call arguments not type-recovered for pcmpestri: local_58,*param_1,0xc,uVar6,0x10
-    // TODO: call arguments not type-recovered for memcpy: local_58,param_1,_Size
-    // TODO: call arguments not type-recovered for CARRY8: (longlong)param_1 - param_4,uVar4
-    // TODO: call arguments not type-recovered for pcmpestri: auVar1,*param_1,0xc,0x10,0x10
-    // TODO: call arguments not type-recovered for memcmp: param_1 + 1,param_3 + 1,param_4 - 0x10
-    trace.call_arguments("pcmpestri", auVar1, local_58, 0xc, uVar6, (int)_Size);
+    // TODO: condition expression type not recovered: if (param_4 != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 == 1) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 <= uVar4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((((byte)DAT_1803da514 & 4) == 0) || (uVar4 < 0x10)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (param_1 != pauVar5) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((*param_1)[0] == (*param_3)[0]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: while ((*param_1)[uVar4] == (*param_3)[uVar4]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (uVar4 == param_4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (pauVar5 < param_1) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_1802d5c20: param_1,param_2,(*param_3)[0] [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_58,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: local_58,*param_1,0xc,uVar6,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: local_58,param_1,_Size [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CARRY8: (longlong)param_1 - param_4,uVar4 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for pcmpestri: auVar1,*param_1,0xc,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcmp: param_1 + 1,param_3 + 1,param_4 - 0x10 [reason: ambiguous operand type]
+    trace.call_arguments("pcmpestri", auVar1, local_58, 0xc, uVar6, static_cast<std::int32_t>(_Size));
     trace.call_target("FUN_1802d5c20", reinterpret_cast<const void*>(&image::FUN_1802d5c20));
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
@@ -19722,7 +19720,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6b60() noexcept {
                     trace.statement("auVar1 = local_58;");
                     do {
                         trace.statement("iVar3 = pcmpestri(local_58,*param_1,0xc,uVar6,0x10);");
-                        if (trace.checked_condition("if ((bool)uVar7)", [&]() -> bool { return static_cast<bool>((bool)uVar7); })) {
+                        if (trace.checked_condition("if ((bool)uVar7)", [&]() -> bool { return static_cast<bool>(static_cast<bool>(uVar7)); })) {
                             trace.statement("param_1 = (undefined1 (*) [16])(*param_1 + iVar3);");
                             if (trace.checked_condition("if (iVar3 <= (int)(0x10 - uVar6))", [&]() -> bool { return static_cast<bool>(iVar3 <= (int)(0x10 - uVar6)); })) {
                                 trace.statement("return param_1;");
@@ -19860,7 +19858,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6d50() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for CONCAT71: (int7)(CONCAT44(extraout_var,iVar4) >> 8),1
+    // TODO: call arguments not type-recovered for CONCAT71: (int7)(CONCAT44(extraout_var,iVar4) >> 8),1 [reason: ambiguous operand type]
     trace.call_arguments("LZCOUNT", param_2);
     trace.call_arguments("memcmp", (void *)(lVar1 + 0x20), (void *)param_1[8], param_1[9] - 0x20);
     trace.call_arguments("CONCAT44", extraout_var, iVar4);
@@ -19880,7 +19878,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6d50() noexcept {
                 do {
                     trace.statement("uVar5 = 0x1f - LZCOUNT(param_2);");
                     trace.statement("lVar1 = (ulonglong)uVar5 + lVar3;");
-                    if (trace.checked_condition("if (*(undefined1 (*) [32])((ulonglong)uVar5 + lVar3) == *(undefined1 (*) [32])(param_1 + 4))", [&]() -> bool { return static_cast<bool>(*(undefined1 (*) [32])((ulonglong)uVar5 + lVar3) == *(undefined1 (*) [32])(param_1 + 4)); })) {
+                    if (trace.checked_condition("if (*(undefined1 (*) [32])((ulonglong)uVar5 + lVar3) == *(undefined1 (*) [32])(param_1 + 4))", [&]() -> bool { return static_cast<bool>(*(undefined1 (*) [32])(static_cast<std::uint64_t>(uVar5) + lVar3) == *(undefined1 (*) [32])(param_1 + 4)); })) {
                         trace.statement("iVar4 = memcmp((void *)(lVar1 + 0x20),(void *)param_1[8],param_1[9] - 0x20);");
                         if (trace.checked_condition("if (iVar4 == 0)", [&]() -> bool { return static_cast<bool>(iVar4 == 0); })) {
                             trace.statement("*plVar2 = lVar1;");
@@ -19992,8 +19990,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6e00() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (; param_2 >> uVar4 == 0; uVar4 = uVar4 - 1)
-    // TODO: call arguments not type-recovered for CONCAT71: (int7)(CONCAT44(extraout_var,iVar3) >> 8),1
+    // TODO: condition expression type not recovered: for (; param_2 >> uVar4 == 0; uVar4 = uVar4 - 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for CONCAT71: (int7)(CONCAT44(extraout_var,iVar3) >> 8),1 [reason: ambiguous operand type]
     trace.call_arguments("memcmp", puVar5 + 4, (void *)param_1[4], param_1[5] - 0x10);
     trace.call_arguments("CONCAT44", extraout_var, iVar3);
     // body sha256: 5a9de44ab687e00d0ca9ab20353347aa27aaea6c932fab666a20e81cea85d438
@@ -20191,9 +20189,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6ea0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((0xf < (ulonglong)((longlong)param_2 - (longlong)param_1)) && (((byte)DAT_1803da514 & 4) != 0)
-    // TODO: condition expression type not recovered: if (7 < (ulonglong)((longlong)param_2 - (longlong)param_1))
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = (undefined8 *)((longlong)param_1 + 1))
+    // TODO: condition expression type not recovered: if ((0xf < (ulonglong)((longlong)param_2 - (longlong)param_1)) && (((byte)DAT_1803da514 & 4) != 0) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = (undefined8 *)((longlong)param_1 + 1)) [reason: pointer-cast target not proven]
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
     // body sha256: 1a567ccc78162f18540a700b7d4c42c0eb5436b1ce66d3b57a6a7cc82befcfa1
     // Structured control-flow trace derived from the decompiled body:
@@ -20263,7 +20260,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6ea0() noexcept {
                     trace.statement("param_4 = param_4 + 2;");
                 } while (trace.loop_condition("while (param_1 != puVar13);"));
             }
-            if (trace.condition("if (7 < (ulonglong)((longlong)param_2 - (longlong)param_1))")) {
+            if (trace.checked_condition("if (7 < (ulonglong)((longlong)param_2 - (longlong)param_1))", [&]() -> bool { return static_cast<bool>(7 < (ulonglong)(reinterpret_cast<std::int64_t>(param_2) - reinterpret_cast<std::int64_t>(param_1))); })) {
                 trace.statement("puVar13 = (undefined8 *)");
                 trace.statement("(((longlong)param_2 - (longlong)param_1 & 0xfffffffffffffff8U) + (longlong)param_1);");
                 do {
@@ -20634,34 +20631,34 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6fc0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 != 0)
-    // TODO: condition expression type not recovered: if (param_4 == 1)
-    // TODO: condition expression type not recovered: if (param_4 <= uVar11)
-    // TODO: condition expression type not recovered: if (((DAT_1803da514 & 0x20) != 0) && (0x1f < uVar11))
-    // TODO: condition expression type not recovered: if (((DAT_1803da514 & 4) == 0) || (uVar11 < 0x10))
-    // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: if ((*param_2)[0] == (*param_3)[0])
-    // TODO: condition expression type not recovered: while ((*param_2)[uVar11] == (*param_3)[uVar11])
-    // TODO: condition expression type not recovered: if (uVar11 == param_4)
-    // TODO: condition expression type not recovered: if (param_4 < 0x11)
-    // TODO: condition expression type not recovered: for (; uVar4 >> uVar9 == 0; uVar9 = uVar9 - 1)
-    // TODO: condition expression type not recovered: if (param_2 != (undefined1 (*) [16])(puVar2 + uVar4))
-    // TODO: condition expression type not recovered: for (; uVar8 >> uVar1 == 0; uVar1 = uVar1 - 1)
-    // TODO: condition expression type not recovered: for (; uVar10 >> uVar4 == 0; uVar4 = uVar4 - 1)
-    // TODO: condition expression type not recovered: for (; uVar10 >> uVar8 == 0; uVar8 = uVar8 - 1)
-    // TODO: condition expression type not recovered: for (; uVar4 >> uVar9 == 0; uVar9 = uVar9 - 1)
-    // TODO: condition expression type not recovered: if (param_2 != (undefined1 (*) [16])(*param_1 + uVar11))
-    // TODO: condition expression type not recovered: for (; uVar9 >> uVar17 == 0; uVar17 = uVar17 - 1)
-    // TODO: call arguments not type-recovered for FUN_1802d5fe0: param_1,param_2,(*param_3)[0]
-    // TODO: call arguments not type-recovered for memcpy: &pauStack_78,param_3,param_4
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,iVar6,0x10
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,iVar6,0x10
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_1,0xc,iVar6,0x10
-    // TODO: call arguments not type-recovered for memcmp: param_2 + 1,param_3,param_4 - 0x10
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,0x10,0x10
-    // TODO: call arguments not type-recovered for memcmp: pauVar7 + 1,param_3,param_4 - 0x10
-    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_1,0xc,0x10,0x10
-    // TODO: call arguments not type-recovered for FUN_1802d6e00: appauStack_a8
+    // TODO: condition expression type not recovered: if (param_4 != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 == 1) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 <= uVar11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (((DAT_1803da514 & 0x20) != 0) && (0x1f < uVar11)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((DAT_1803da514 & 4) == 0) || (uVar11 < 0x10)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((*param_2)[0] == (*param_3)[0]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: while ((*param_2)[uVar11] == (*param_3)[uVar11]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (uVar11 == param_4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 < 0x11) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; uVar4 >> uVar9 == 0; uVar9 = uVar9 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (param_2 != (undefined1 (*) [16])(puVar2 + uVar4)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; uVar8 >> uVar1 == 0; uVar1 = uVar1 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; uVar10 >> uVar4 == 0; uVar4 = uVar4 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; uVar10 >> uVar8 == 0; uVar8 = uVar8 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; uVar4 >> uVar9 == 0; uVar9 = uVar9 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (param_2 != (undefined1 (*) [16])(*param_1 + uVar11)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (; uVar9 >> uVar17 == 0; uVar17 = uVar17 - 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_1802d5fe0: param_1,param_2,(*param_3)[0] [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: &pauStack_78,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,iVar6,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,iVar6,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_1,0xc,iVar6,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcmp: param_2 + 1,param_3,param_4 - 0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_2,0xc,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcmp: pauVar7 + 1,param_3,param_4 - 0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestrm: auVar13,*param_1,0xc,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_1802d6e00: appauStack_a8 [reason: ambiguous operand type]
     trace.call_arguments("FUN_1802d54d0");
     trace.call_target("FUN_1802d54d0", reinterpret_cast<const void*>(&image::FUN_1802d54d0));
     trace.call_target("FUN_1802d5fe0", reinterpret_cast<const void*>(&image::FUN_1802d5fe0));
@@ -20789,7 +20786,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6fc0() noexcept {
                                             trace.statement("param_1 = pauStack_b8;");
                                         } while (trace.loop_condition("while (param_2 != (undefined1 (*) [16])(puVar2 + uVar4));"));
                                     }
-                                    if (trace.checked_condition("if ((ulonglong)uVar4 != 0)", [&]() -> bool { return static_cast<bool>((ulonglong)uVar4 != 0); })) {
+                                    if (trace.checked_condition("if ((ulonglong)uVar4 != 0)", [&]() -> bool { return static_cast<bool>(static_cast<std::uint64_t>(uVar4) != 0); })) {
                                         trace.statement("auVar13 = pcmpestrm(auVar13,*param_1,0xc,iVar6,0x10);");
                                         trace.statement("uVar4 = auVar13._0_4_ & (1 << (sbyte)uVar4) - 1U;");
                                         if (trace.checked_condition("if (uVar4 != 0)", [&]() -> bool { return static_cast<bool>(uVar4 != 0); })) {
@@ -20952,8 +20949,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d6fd0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((byte)DAT_1803da514 & 4) != 0)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
+    // TODO: condition expression type not recovered: if (((byte)DAT_1803da514 & 4) != 0) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
     trace.call_arguments("FUN_1802d50d0");
     trace.call_arguments("memset", local_128, 0, 0x100);
     trace.call_target("FUN_1802d50d0", reinterpret_cast<const void*>(&image::FUN_1802d50d0));
@@ -21064,7 +21061,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7070() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((byte)DAT_1803da514 & 4) != 0)
+    // TODO: condition expression type not recovered: if (((byte)DAT_1803da514 & 4) != 0) [reason: unresolved global storage/width]
     trace.call_target("FUN_1802d6790", reinterpret_cast<const void*>(&image::FUN_1802d6790));
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
     // body sha256: b10f6dae4c700de896bd3881e93eb0763b8d6ed1d2aa442030a246d051dc0c9e
@@ -21174,8 +21171,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d70c0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((byte)DAT_1803da514 & 4) != 0)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
+    // TODO: condition expression type not recovered: if (((byte)DAT_1803da514 & 4) != 0) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
     trace.call_arguments("FUN_1802d52d0");
     trace.call_arguments("memset", local_128, 0, 0x100);
     trace.call_target("FUN_1802d52d0", reinterpret_cast<const void*>(&image::FUN_1802d52d0));
@@ -21392,13 +21389,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7160() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803da514 & 4) == 0)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01
+    // TODO: condition expression type not recovered: if ((DAT_1803da514 & 4) == 0) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01 [reason: unresolved global storage/width]
     trace.call_arguments("memset", acStack_140, 0, 0x100);
     trace.call_arguments("FUN_1802d6970", param_3, param_4);
-    trace.call_arguments("memcpy", &uStack_40, param_1, (ulonglong)uVar7);
+    trace.call_arguments("memcpy", &uStack_40, param_1, static_cast<std::uint64_t>(uVar7));
     trace.call_arguments("vpmovzxbd_avx2", auVar3);
     trace.call_arguments("vpandn_avx2", auVar9, image::_DAT_18030fa80);
     trace.call_arguments("vpsrld_avx2", auVar9, 5);
@@ -21697,13 +21694,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7170() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DAT_1803da514 & 4) == 0)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1)
-    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01
+    // TODO: condition expression type not recovered: if ((DAT_1803da514 & 4) == 0) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; param_3 != pbVar1; param_3 = param_3 + 1) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for FUN_1802d6ad0: param_2,param_4,DAT_1803da514 >> 5 & 0xffffff01 [reason: unresolved global storage/width]
     trace.call_arguments("memset", acStack_140, 0, 0x100);
     trace.call_arguments("FUN_1802d6970", param_3, param_4);
-    trace.call_arguments("memcpy", &uStack_40, param_1, (ulonglong)uVar8);
+    trace.call_arguments("memcpy", &uStack_40, param_1, static_cast<std::uint64_t>(uVar8));
     trace.call_arguments("vpmovzxbd_avx2", auVar3);
     trace.call_arguments("vpandn_avx2", auVar9, image::_DAT_18030fa80);
     trace.call_arguments("vpsrld_avx2", auVar9, 5);
@@ -22069,95 +22066,95 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7180() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar21 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar21 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; uVar1 >> uVar19 == 0; uVar19 = uVar19 - 1)
-    // TODO: condition expression type not recovered: if (pauVar20 == param_1)
-    // TODO: call arguments not type-recovered for pshufb: ZEXT116(param_3),ZEXT816(0)
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x77,0
-    // TODO: call arguments not type-recovered for vpshufb_avx: ZEXT416((uint)(int)(char)param_3),(undefined1  [16])0x0
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: auVar25,pauVar20[-1]
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar22),*pauVar20
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar25,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar22)
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xf7,0
+    // TODO: condition expression type not recovered: if (((uVar21 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar21 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; uVar1 >> uVar19 == 0; uVar19 = uVar19 - 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (pauVar20 == param_1) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pshufb: ZEXT116(param_3),ZEXT816(0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar23 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpshufb_avx: ZEXT416((uint)(int)(char)param_3),(undefined1  [16])0x0 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: auVar25,pauVar20[-1] [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar22),*pauVar20 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar25,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar22) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar25 >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("ZEXT116", param_3);
     trace.call_arguments("ZEXT816", 0);
-    trace.call_arguments("ZEXT416", (uint)(int)(char)param_3);
+    trace.call_arguments("ZEXT416", (uint)(int)static_cast<char>(param_3));
     trace.call_arguments("vpcmpeqb_avx2", auVar2, auVar25);
     trace.call_arguments("LZCOUNT", uVar19);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
@@ -22561,95 +22558,95 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7190() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1)
-    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000)
-    // TODO: call arguments not type-recovered for pshufb: ZEXT116(param_3),ZEXT816(0)
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x77,0
-    // TODO: call arguments not type-recovered for vpshufb_avx: ZEXT416((uint)(int)(char)param_3),(undefined1  [16])0x0
-    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: auVar10,*param_1
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar10,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7)
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xf7,0
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for pshufb: ZEXT116(param_3),ZEXT816(0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpshufb_avx: ZEXT416((uint)(int)(char)param_3),(undefined1  [16])0x0 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for vpcmpeqb_avx2: auVar10,*param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar10,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar10 >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("ZEXT116", param_3);
     trace.call_arguments("ZEXT816", 0);
-    trace.call_arguments("ZEXT416", (uint)(int)(char)param_3);
+    trace.call_arguments("ZEXT416", (uint)(int)static_cast<char>(param_3));
     trace.call_arguments("vpcmpeqb_avx2", auVar2, auVar10);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
@@ -23006,92 +23003,92 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d71a0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1)
-    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000)
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x6f,0
-    // TODO: call arguments not type-recovered for vpunpcklwd_avx: ZEXT416((uint)(int)param_3),ZEXT416((uint)(int)param_3)
-    // TODO: call arguments not type-recovered for vpcmpeqw_avx2: auVar9,*param_1
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7)
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf7,0
-    trace.call_arguments("ZEXT416", (uint)(int)param_3);
-    trace.call_arguments("ZEXT416", (uint)(int)param_3);
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpunpcklwd_avx: ZEXT416((uint)(int)param_3),ZEXT416((uint)(int)param_3) [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for vpcmpeqw_avx2: auVar9,*param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf7,0 [reason: ambiguous operand type]
+    trace.call_arguments("ZEXT416", (uint)static_cast<std::int32_t>(param_3));
+    trace.call_arguments("ZEXT416", (uint)static_cast<std::int32_t>(param_3));
     trace.call_arguments("vpshufd_avx", auVar8, 0);
     trace.call_arguments("vpcmpeqw_avx2", auVar2, auVar9);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
@@ -23426,88 +23423,88 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d71b0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1)
-    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000)
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for vpshufd_avx: ZEXT416(param_3),0
-    // TODO: call arguments not type-recovered for vpcmpeqd_avx2: auVar9,*param_1
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7)
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf7,0
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar6 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar5 & 1) == 0; uVar5 = uVar5 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar5 & 1) == 0; uVar5 = uVar5 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpshufd_avx: ZEXT416(param_3),0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpcmpeqd_avx2: auVar9,*param_1 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar2 >> 0xf7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7),*param_1 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar7) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar9 >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("ZEXT416", param_3);
     trace.call_arguments("vpcmpeqd_avx2", auVar2, auVar9);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
@@ -23845,76 +23842,76 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d71c0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (((uVar5 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0))
-    // TODO: condition expression type not recovered: if (((uVar5 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0))
-    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar4 & 1) == 0; uVar4 = uVar4 + 1)
-    // TODO: condition expression type not recovered: for (; (uVar4 & 1) == 0; uVar4 = uVar4 >> 1 | 0x80000000)
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 7,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB248: *(undefined1 (*) [24])*param_1,0x10
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xbf,0
-    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar6),*param_1
-    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar6)
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x17,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x1f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x27,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x2f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x37,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x3f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x47,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x4f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x57,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x5f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x67,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x6f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x77,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x7f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x87,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x8f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x97,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x9f,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xa7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xaf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xb7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xbf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 199,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xcf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xd7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xdf,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xe7,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xef,0
-    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf7,0
+    // TODO: condition expression type not recovered: if (((uVar5 & 0xffffffffffffffe0) == 0) || ((DAT_1803da514 & 0x20) == 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (((uVar5 & 0xfffffffffffffff0) != 0) && ((DAT_1803da514 & 4) != 0)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; (uVar1 >> uVar4 & 1) == 0; uVar4 = uVar4 + 1) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: for (; (uVar4 & 1) == 0; uVar4 = uVar4 >> 1 | 0x80000000) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB161: auVar7 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB248: *(undefined1 (*) [24])*param_1,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for vpmaskmovd_avx2: *(undefined1 (*) [32])(&DAT_18030fa30 + -uVar6),*param_1 [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for vpand_avx2: auVar9,*(undefined1 (*) [32])(&DAT_18030fa30 + -uVar6) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x17,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x1f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x27,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x2f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x37,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x3f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x47,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x4f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x57,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x5f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x67,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x6f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x77,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x7f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x87,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x8f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x97,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0x9f,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xa7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xaf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xb7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xbf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 199,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xcf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xd7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xdf,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xe7,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xef,0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SUB321: auVar8 >> 0xf7,0 [reason: ambiguous operand type]
     trace.call_arguments("vpunpcklqdq_avx", auVar11, auVar11);
     trace.data_ref("DAT_18030fa30", static_cast<const void*>(&image::DAT_18030fa30));
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
@@ -24206,15 +24203,14 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d71d0() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: while( true )
-    // TODO: condition expression type not recovered: while (pvVar3 != (void *)((longlong)param_1 + _Size_00))
-    // TODO: condition expression type not recovered: for (pvVar3 = param_1; pvVar3 != (void *)((_Size_00 & 0xffffffffffffe000) + (longlong)param_1)
-    // TODO: call arguments not type-recovered for FUN_1802d6ea0: param_2,param_3,(void *)(_Size_00 + (longlong)param_1),param_1
+    // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: for (pvVar3 = param_1; pvVar3 != (void *)((_Size_00 & 0xffffffffffffe000) + (longlong)param_1) [reason: pointer-cast target not proven]
     trace.call_arguments("memcpy", local_248, param_2, _Size_00);
     trace.call_arguments("memmove", pvVar3, _Src, _Size - uVar1);
     trace.call_arguments("memmove", pvVar3, _Src, 0x2000);
     trace.call_arguments("memcpy", param_1, local_248, _Size_00);
     trace.call_arguments("FUN_1802d7410", param_2, param_3, param_1);
+    trace.call_arguments("FUN_1802d6ea0", param_2, param_3, (void *)(_Size_00 + reinterpret_cast<std::int64_t>(param_1)), param_1);
     trace.call_arguments("memcpy", local_248, param_1, _Size);
     trace.call_arguments("memmove", pvVar3, param_2, 0x2000);
     trace.call_arguments("memmove", pvVar3, param_2, _Size_01);
@@ -24252,7 +24248,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d71d0() noexcept {
                         if (trace.checked_condition("if (_Size - uVar1 != 0)", [&]() -> bool { return static_cast<bool>(_Size - uVar1 != 0); })) {
                             trace.statement("memmove(pvVar3,_Src,_Size - uVar1);");
                         }
-                        while (trace.loop_condition("while (pvVar3 != (void *)((longlong)param_1 + _Size_00))")) {
+                        while (trace.checked_loop_condition("while (pvVar3 != (void *)((longlong)param_1 + _Size_00))", [&]() -> bool { return static_cast<bool>(pvVar3 != (void *)(reinterpret_cast<std::int64_t>(param_1) + _Size_00)); })) {
                             trace.statement("pvVar3 = (void *)((longlong)pvVar3 + -0x2000);");
                             trace.statement("_Src = (void *)((longlong)_Src + -0x2000);");
                             trace.statement("memmove(pvVar3,_Src,0x2000);");
@@ -24499,23 +24495,23 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7400() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_4 != 0)
-    // TODO: condition expression type not recovered: if (param_4 == 1)
-    // TODO: condition expression type not recovered: if (param_4 <= uVar4)
-    // TODO: condition expression type not recovered: if ((((byte)DAT_1803da514 & 4) == 0) || (uVar4 < 0x10))
-    // TODO: condition expression type not recovered: if (param_1 != pauVar5)
-    // TODO: condition expression type not recovered: if ((*param_1)[0] == (*param_3)[0])
-    // TODO: condition expression type not recovered: while ((*param_1)[uVar4] == (*param_3)[uVar4])
-    // TODO: condition expression type not recovered: if (uVar4 == param_4)
-    // TODO: condition expression type not recovered: if (pauVar5 < param_1)
-    // TODO: call arguments not type-recovered for FUN_1802d5c20: param_1,param_2,(*param_3)[0]
-    // TODO: call arguments not type-recovered for memcpy: auStack_58,param_3,param_4
-    // TODO: call arguments not type-recovered for pcmpestri: auStack_58,*param_1,0xc,uVar6,0x10
-    // TODO: call arguments not type-recovered for memcpy: auStack_58,param_1,_Size
-    // TODO: call arguments not type-recovered for CARRY8: (longlong)param_1 - param_4,uVar4
-    // TODO: call arguments not type-recovered for pcmpestri: auVar1,*param_1,0xc,0x10,0x10
-    // TODO: call arguments not type-recovered for memcmp: param_1 + 1,param_3 + 1,param_4 - 0x10
-    trace.call_arguments("pcmpestri", auVar1, auStack_58, 0xc, uVar6, (int)_Size);
+    // TODO: condition expression type not recovered: if (param_4 != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 == 1) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (param_4 <= uVar4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((((byte)DAT_1803da514 & 4) == 0) || (uVar4 < 0x10)) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: if (param_1 != pauVar5) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((*param_1)[0] == (*param_3)[0]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: while ((*param_1)[uVar4] == (*param_3)[uVar4]) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (uVar4 == param_4) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (pauVar5 < param_1) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_1802d5c20: param_1,param_2,(*param_3)[0] [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: auStack_58,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for pcmpestri: auStack_58,*param_1,0xc,uVar6,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcpy: auStack_58,param_1,_Size [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CARRY8: (longlong)param_1 - param_4,uVar4 [reason: scalar cast width/kind mismatch]
+    // TODO: call arguments not type-recovered for pcmpestri: auVar1,*param_1,0xc,0x10,0x10 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for memcmp: param_1 + 1,param_3 + 1,param_4 - 0x10 [reason: ambiguous operand type]
+    trace.call_arguments("pcmpestri", auVar1, auStack_58, 0xc, uVar6, static_cast<std::int32_t>(_Size));
     trace.call_target("FUN_1802d5c20", reinterpret_cast<const void*>(&image::FUN_1802d5c20));
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
@@ -24570,7 +24566,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7400() noexcept {
                     trace.statement("auVar1 = auStack_58;");
                     do {
                         trace.statement("iVar3 = pcmpestri(auStack_58,*param_1,0xc,uVar6,0x10);");
-                        if (trace.checked_condition("if ((bool)uVar7)", [&]() -> bool { return static_cast<bool>((bool)uVar7); })) {
+                        if (trace.checked_condition("if ((bool)uVar7)", [&]() -> bool { return static_cast<bool>(static_cast<bool>(uVar7)); })) {
                             trace.statement("param_1 = (undefined1 (*) [16])(*param_1 + iVar3);");
                             if (trace.checked_condition("if (iVar3 <= (int)(0x10 - uVar6))", [&]() -> bool { return static_cast<bool>(iVar3 <= (int)(0x10 - uVar6)); })) {
                                 trace.statement("return param_1;");
@@ -24756,9 +24752,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7410() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da514.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((0xf < (ulonglong)((longlong)param_2 - (longlong)param_1)) && (((byte)DAT_1803da514 & 4) != 0)
-    // TODO: condition expression type not recovered: if (7 < (ulonglong)((longlong)param_2 - (longlong)param_1))
-    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = (undefined8 *)((longlong)param_1 + 1))
+    // TODO: condition expression type not recovered: if ((0xf < (ulonglong)((longlong)param_2 - (longlong)param_1)) && (((byte)DAT_1803da514 & 4) != 0) [reason: unresolved global storage/width]
+    // TODO: condition expression type not recovered: for (; param_1 != param_2; param_1 = (undefined8 *)((longlong)param_1 + 1)) [reason: pointer-cast target not proven]
     trace.data_ref("DAT_1803da514", static_cast<const void*>(&image::DAT_1803da514));
     // body sha256: 16f47cb981ab920947035ffc746e28e45a6b408cf927c9ed8427ea6bc9a408c8
     // Structured control-flow trace derived from the decompiled body:
@@ -24810,7 +24805,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7410() noexcept {
                     trace.statement("param_3 = param_3 + 2;");
                 } while (trace.loop_condition("while (param_1 != puVar9);"));
             }
-            if (trace.condition("if (7 < (ulonglong)((longlong)param_2 - (longlong)param_1))")) {
+            if (trace.checked_condition("if (7 < (ulonglong)((longlong)param_2 - (longlong)param_1))", [&]() -> bool { return static_cast<bool>(7 < (ulonglong)(reinterpret_cast<std::int64_t>(param_2) - reinterpret_cast<std::int64_t>(param_1))); })) {
                 trace.statement("puVar9 = (undefined8 *)");
                 trace.statement("(((longlong)param_2 - (longlong)param_1 & 0xfffffffffffffff8U) + (longlong)param_1);");
                 do {
@@ -24909,10 +24904,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d74ec() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DVar2 != 1)
-    // TODO: condition expression type not recovered: if (DVar2 == 5)
-    // TODO: condition expression type not recovered: if ((DVar2 != 0x32) && (DVar2 != 0x57))
-    // TODO: call arguments not type-recovered for SetFileInformationByHandle: param_1,FileDispositionInfo,local_res10,1
+    // TODO: condition expression type not recovered: if (DVar2 != 1) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (DVar2 == 5) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((DVar2 != 0x32) && (DVar2 != 0x57)) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetFileInformationByHandle: param_1,FileDispositionInfo,local_res10,1 [reason: ambiguous operand type]
     trace.call_arguments("SetFileInformationByHandle", param_1, 0x15, local_res18, 4);
     trace.call_arguments("GetLastError");
     trace.call_arguments("GetLastError");
@@ -25124,7 +25119,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d75e4() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (UVar1 != 0xfde9)
+    // TODO: condition expression type not recovered: if (UVar1 != 0xfde9) [reason: ambiguous operand type]
     trace.call_arguments("___lc_codepage_func");
     trace.call_arguments("AreFileApisANSI");
     // body sha256: 7731828169bf24554f21e505a5f6abff8c21cf100e694349c6942d4a537aabcf
@@ -25201,7 +25196,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d760c() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: param_1,8,param_2,param_3,param_4,param_5
+    // TODO: call arguments not type-recovered for MultiByteToWideChar: param_1,8,param_2,param_3,param_4,param_5 [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     trace.call_arguments("CONCAT44", uStack_14, iVar1);
     // body sha256: 8b16efd453f491eb16da39cf75c5db2c9f8ce4a7486deafd4c250c390f278b8e
@@ -25312,9 +25307,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7654() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802d7772.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((param_1 == 0xfde9) || (param_1 == 0xd698))
-    // TODO: condition expression type not recovered: if (DStack_24 == 0x3ec)
-    // TODO: call arguments not type-recovered for CONCAT44: DStack_24,local_28
+    // TODO: condition expression type not recovered: if ((param_1 == 0xfde9) || (param_1 == 0xd698)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (DStack_24 == 0x3ec) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT44: DStack_24,local_28 [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     trace.call_arguments("GetLastError");
     // body sha256: d4ce0700e24b24ff0a31dfd49f10d2ca135b3423ca3fbf609e7df78d874777af
@@ -25526,11 +25521,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d786c() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DStackX_14 == 0xb7)
-    // TODO: condition expression type not recovered: if ((DStackX_14 == 0) && ((local_18 & 0x10) == 0))
-    // TODO: call arguments not type-recovered for CreateDirectoryW: param_1,(LPSECURITY_ATTRIBUTES)0x0
-    // TODO: call arguments not type-recovered for FUN_1802d7a0c: param_1,local_28,3,0xffffffff
-    // TODO: call arguments not type-recovered for CONCAT44: DStackX_14,local_res10
+    // TODO: condition expression type not recovered: if (DStackX_14 == 0xb7) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((DStackX_14 == 0) && ((local_18 & 0x10) == 0)) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CreateDirectoryW: param_1,(LPSECURITY_ATTRIBUTES)0x0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FUN_1802d7a0c: param_1,local_28,3,0xffffffff [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT44: DStackX_14,local_res10 [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     trace.call_arguments("CONCAT31", static_cast<std::uint64_t>((std::uint64_t(local_res10) >> 8) & 0xffffff), 1);
     trace.call_target("FUN_1802d7a0c", reinterpret_cast<const void*>(&image::FUN_1802d7a0c));
@@ -25616,7 +25611,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d78e0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FindNextFileW: param_1,param_2
+    // TODO: call arguments not type-recovered for FindNextFileW: param_1,param_2 [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     // body sha256: 14703283b68167a84bcbb251d4ed48c70a082e37df4ce5a8cca307cfff2671e7
     // Structured control-flow trace derived from the decompiled body:
@@ -25771,7 +25766,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7920() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FindFirstFileExW: param_1,FindExInfoBasic,param_3,FindExSearchNameMatch,(LPVOID)0x0,0
+    // TODO: call arguments not type-recovered for FindFirstFileExW: param_1,FindExInfoBasic,param_3,FindExSearchNameMatch,(LPVOID)0x0,0 [reason: ambiguous operand type]
     trace.call_arguments("FindClose", (HANDLE)*param_2);
     trace.call_arguments("abort");
     trace.call_arguments("GetLastError");
@@ -25853,9 +25848,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d799c() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((DVar1 == 0) || (param_1 < DVar1))
-    // TODO: call arguments not type-recovered for GetCurrentDirectoryW: param_1,param_2
-    // TODO: call arguments not type-recovered for CONCAT44: uStackX_1c,DVar1
+    // TODO: condition expression type not recovered: if ((DVar1 == 0) || (param_1 < DVar1)) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for GetCurrentDirectoryW: param_1,param_2 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT44: uStackX_1c,DVar1 [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     // body sha256: fba49759aac94fc002f80b73946f11af24735db724854cce206771c07328aa01
     // Structured control-flow trace derived from the decompiled body:
@@ -25928,9 +25923,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d79dc() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DVar1 == 0)
-    // TODO: call arguments not type-recovered for GetFinalPathNameByHandleW: param_1,param_2,param_3,param_4
-    // TODO: call arguments not type-recovered for CONCAT44: uStack_14,DVar1
+    // TODO: condition expression type not recovered: if (DVar1 == 0) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for GetFinalPathNameByHandleW: param_1,param_2,param_3,param_4 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT44: uStack_14,DVar1 [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     // body sha256: c40f0033bc0b046113249980214743b526665cb968c8f188e39a7a77842456fe
     // Structured control-flow trace derived from the decompiled body:
@@ -26214,18 +26209,18 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7a0c() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DVar2 != 0x20)
-    // TODO: condition expression type not recovered: if (((param_3 & 1) == 0) || ((local_288.dwFileAttributes & 0x400) == 0))
-    // TODO: condition expression type not recovered: if (((local_288.dwFileAttributes & 0x400) == 0) && ((uVar4 & 4) != 0))
-    // TODO: condition expression type not recovered: if (DVar2 == 0)
-    // TODO: condition expression type not recovered: if ((HANDLE)CONCAT44(uStack_2b4,local_2b8) == (HANDLE)0xffffffffffffffff)
-    // TODO: call arguments not type-recovered for GetFileAttributesExW: param_1,GetFileExInfoStandard,local_2b0
-    // TODO: call arguments not type-recovered for FindFirstFileW: param_1,&local_288
-    // TODO: call arguments not type-recovered for CONCAT44: local_288.nFileSizeHigh,local_288.nFileSizeLow
-    // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: pvVar3,FileBasicInfo,local_2b0,0x28
-    // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: pvVar3,FileAttributeTagInfo,&local_2b8,8
-    // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: pvVar3,FileStandardInfo,local_2b0,0x18
-    // TODO: call arguments not type-recovered for CloseHandle: (HANDLE)CONCAT44(uStack_2b4,local_2b8)
+    // TODO: condition expression type not recovered: if (DVar2 != 0x20) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (((param_3 & 1) == 0) || ((local_288.dwFileAttributes & 0x400) == 0)) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if (((local_288.dwFileAttributes & 0x400) == 0) && ((uVar4 & 4) != 0)) [reason: unknown aggregate layout]
+    // TODO: condition expression type not recovered: if (DVar2 == 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((HANDLE)CONCAT44(uStack_2b4,local_2b8) == (HANDLE)0xffffffffffffffff) [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for GetFileAttributesExW: param_1,GetFileExInfoStandard,local_2b0 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for FindFirstFileW: param_1,&local_288 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT44: local_288.nFileSizeHigh,local_288.nFileSizeLow [reason: unknown aggregate layout]
+    // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: pvVar3,FileBasicInfo,local_2b0,0x28 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: pvVar3,FileAttributeTagInfo,&local_2b8,8 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: pvVar3,FileStandardInfo,local_2b0,0x18 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CloseHandle: (HANDLE)CONCAT44(uStack_2b4,local_2b8) [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     trace.call_arguments("GetLastError");
     trace.call_arguments("FindClose", pvVar3);
@@ -26459,7 +26454,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7d44() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for FUN_1802d7564: param_2,param_3,7,0,3,param_4,0
+    // TODO: call arguments not type-recovered for FUN_1802d7564: param_2,param_3,7,0,3,param_4,0 [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     trace.call_target("FUN_1802d7564", reinterpret_cast<const void*>(&image::FUN_1802d7564));
     // body sha256: be2e1775842fa4f3e57c6b085e6f5b7663e4483ea732217d822ae68f61a4a79a
@@ -26685,15 +26680,15 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7d9c() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DStack_54 == 0)
-    // TODO: condition expression type not recovered: if (((DStack_54 == 1) || (DStack_54 == 0x32)) || (DStack_54 == 0x57))
-    // TODO: condition expression type not recovered: if ((local_50 != (HANDLE)0xffffffffffffffff) && (BVar2 = CloseHandle(local_50), BVar2 == 0))
-    // TODO: condition expression type not recovered: if (DStack_54 == 5)
-    // TODO: condition expression type not recovered: if ((local_50 != (HANDLE)0xffffffffffffffff) && (BVar2 = CloseHandle(local_50), BVar2 == 0))
-    // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: local_50,FileBasicInfo,local_40,0x28
-    // TODO: call arguments not type-recovered for SetFileInformationByHandle: local_50,FileBasicInfo,local_40,0x28
-    // TODO: call arguments not type-recovered for SetFileInformationByHandle: local_50,FileBasicInfo,local_40,0x28
-    // TODO: call arguments not type-recovered for CONCAT44: DStack_54,local_58
+    // TODO: condition expression type not recovered: if (DStack_54 == 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if (((DStack_54 == 1) || (DStack_54 == 0x32)) || (DStack_54 == 0x57)) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((local_50 != (HANDLE)0xffffffffffffffff) && (BVar2 = CloseHandle(local_50), BVar2 == 0)) [reason: assignment or side effect]
+    // TODO: condition expression type not recovered: if (DStack_54 == 5) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((local_50 != (HANDLE)0xffffffffffffffff) && (BVar2 = CloseHandle(local_50), BVar2 == 0)) [reason: assignment or side effect]
+    // TODO: call arguments not type-recovered for GetFileInformationByHandleEx: local_50,FileBasicInfo,local_40,0x28 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetFileInformationByHandle: local_50,FileBasicInfo,local_40,0x28 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for SetFileInformationByHandle: local_50,FileBasicInfo,local_40,0x28 [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for CONCAT44: DStack_54,local_58 [reason: ambiguous operand type]
     trace.call_arguments("__std_fs_open_handle", &local_50, param_1, 0x10180, 0x2200000);
     trace.call_arguments("SetFileInformationByHandle", local_50, 0x15, local_48, 4);
     trace.call_arguments("GetLastError");
@@ -26845,7 +26840,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7fcc() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for MoveFileExW: param_1,param_2,3
+    // TODO: call arguments not type-recovered for MoveFileExW: param_1,param_2,3 [reason: ambiguous operand type]
     trace.call_arguments("GetLastError");
     // body sha256: 16180e15d6351f44038f46578453071088bb66622481049566d60cbd71c58040
     // Structured control-flow trace derived from the decompiled body:
@@ -26960,9 +26955,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d7ff4() noexcept {
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18030faa0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (DVar2 != 0)
-    // TODO: condition expression type not recovered: if ((&DAT_18030faa0)[*(byte *)(*param_2 + -1 + uVar3)] == '\0')
-    // TODO: call arguments not type-recovered for GetLocaleInfoEx: L"!x-sys-default-locale",0x20000001,(LPWSTR)local_res18,2
+    // TODO: condition expression type not recovered: if (DVar2 != 0) [reason: ambiguous operand type]
+    // TODO: condition expression type not recovered: if ((&DAT_18030faa0)[*(byte *)(*param_2 + -1 + uVar3)] == '\0') [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for GetLocaleInfoEx: L"!x-sys-default-locale",0x20000001,(LPWSTR)local_res18,2 [reason: ambiguous operand type]
     trace.data_ref("DAT_18030faa0", static_cast<const void*>(&image::DAT_18030faa0));
     trace.string_literal("!x-sys-default-locale");
     // body sha256: ac37426a2cd5bcd9b5ee321c3405bcb1c650bab14295d0d9a6ea34d67b72ff7d
@@ -27049,8 +27044,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d80c4() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for LocalFree: HLOCAL hMem
-    // TODO: call arguments not type-recovered for LocalFree: hMem
+    // TODO: call arguments not type-recovered for LocalFree: HLOCAL hMem [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for LocalFree: hMem [reason: ambiguous operand type]
     // body sha256: 64e2fe5556fe1f72384afb082c671a1f0a636eb9940085a6a342a5157185502c
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("HLOCAL __stdcall LocalFree(HLOCAL hMem)");
@@ -27161,9 +27156,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d80cc() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (param_5 == (UINT *)0x0)
-    // TODO: condition expression type not recovered: if ((_Plocinfo == (_locale_t)0x0) && (_CchDest == 0))
-    // TODO: condition expression type not recovered: if (_Size <= (ulonglong)(param_2 - (longlong)param_1))
+    // TODO: condition expression type not recovered: if (param_5 == (UINT *)0x0) [reason: pointer-cast target not proven]
+    // TODO: condition expression type not recovered: if ((_Plocinfo == (_locale_t)0x0) && (_CchDest == 0)) [reason: ambiguous operand type]
     trace.call_arguments("___lc_locale_name_func");
     trace.call_arguments("___lc_collate_cp_func");
     trace.call_arguments("memcpy", param_1, param_3, _Size);
@@ -27191,7 +27185,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d80cc() noexcept {
             }
             if (trace.condition("if ((_Plocinfo == (_locale_t)0x0) && (_CchDest == 0))")) {
                 trace.statement("uVar4 = _Size;");
-                if (trace.condition("if (_Size <= (ulonglong)(param_2 - (longlong)param_1))")) {
+                if (trace.checked_condition("if (_Size <= (ulonglong)(param_2 - (longlong)param_1))", [&]() -> bool { return static_cast<bool>(_Size <= (ulonglong)(param_2 - reinterpret_cast<std::int64_t>(param_1))); })) {
                     trace.statement("memcpy(param_1,param_3,_Size);");
                 }
             } else {
@@ -27259,7 +27253,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d81e0() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _Xbad_alloc: void
+    // TODO: call arguments not type-recovered for _Xbad_alloc: void [reason: ambiguous operand type]
     trace.call_arguments("_Xbad_alloc");
     // body sha256: dc6564acaac5377e3459868f384999ec1dd9ea6f9dfea16ee5a7aaec65e0b5a3
     // Structured control-flow trace derived from the decompiled body:
@@ -27393,7 +27387,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8236() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _Lock: this
+    // TODO: call arguments not type-recovered for _Lock: this [reason: ambiguous operand type]
     // body sha256: 73d25bc2d01cca8bdd7b94d7e33bb10ca332d734e4b76294d19833319bd2a7b9
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void __thiscall");
@@ -27454,7 +27448,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d823c() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for _Unlock: this
+    // TODO: call arguments not type-recovered for _Unlock: this [reason: ambiguous operand type]
     // body sha256: 4dc1d446fc4309d979668b17f47d7edd072bbf94746c70674df0b6c5c670d953
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void __thiscall");
@@ -27516,7 +27510,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8242() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for showmanyc: this
+    // TODO: call arguments not type-recovered for showmanyc: this [reason: ambiguous operand type]
     // body sha256: 119dec88b493f95ee3f19b21eef661a17302dfc5d658cec41cca9d0afcf8af36
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("__int64 __thiscall");
@@ -27580,7 +27574,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8248() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for uflow: this
+    // TODO: call arguments not type-recovered for uflow: this [reason: ambiguous operand type]
     // body sha256: 373ae019596e248986c70537598b446559b6e81ee4531d1b4b539688172d0c28
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("int __thiscall");
@@ -27644,7 +27638,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d824e() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for xsgetn: this,param_1,param_2
+    // TODO: call arguments not type-recovered for xsgetn: this,param_1,param_2 [reason: ambiguous operand type]
     // body sha256: c09fa052edd7fe3a7a06da1f94c609a7805ac60e77d54b353b83b673475650d4
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("__int64 __thiscall");
@@ -27708,7 +27702,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8254() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for xsputn: this,param_1,param_2
+    // TODO: call arguments not type-recovered for xsputn: this,param_1,param_2 [reason: ambiguous operand type]
     // body sha256: 3f29e944c58c733bf9a108f484d12793ac557d1191f819dc923ec5f09a8cfd79
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("__int64 __thiscall");
@@ -27772,7 +27766,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d825a() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for setbuf: this,param_1,param_2
+    // TODO: call arguments not type-recovered for setbuf: this,param_1,param_2 [reason: ambiguous operand type]
     // body sha256: a880c6d2db65cb2acd708fcf5d965cc4e983ff8224ee6a8e471f52cd2ee0d9f8
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("basic_streambuf<char,struct_std::char_traits<char>_> * __thiscall");
@@ -27837,7 +27831,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8260() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for sync: this
+    // TODO: call arguments not type-recovered for sync: this [reason: ambiguous operand type]
     // body sha256: 8dea518585ac25d0ed689f6e0459008e7dd2c43532e798e19cf22c38b295fb1f
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("int __thiscall");
@@ -27899,7 +27893,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8266() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for imbue: this,param_1
+    // TODO: call arguments not type-recovered for imbue: this,param_1 [reason: ambiguous operand type]
     // body sha256: fa7a626759c2ab5fd579943fb31dee830edff9b8ad1d00024426ad341d232a43
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void __thiscall");
@@ -27959,8 +27953,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8272() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for std_D___collate_vfunc02: facet *this
-    // TODO: call arguments not type-recovered for _Decref: this
+    // TODO: call arguments not type-recovered for std_D___collate_vfunc02: facet *this [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for _Decref: this [reason: ambiguous operand type]
     // body sha256: 4a8a517ba9d0d58085db95dd8f9dcc7dcc26db5389fb31e6b2d67d82deab8b15
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("_Facet_base * __thiscall std::locale::facet::std_D___collate_vfunc02(facet *this)");
@@ -28016,8 +28010,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8278() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for std_D___collate_vfunc01: facet *this
-    // TODO: call arguments not type-recovered for _Incref: this
+    // TODO: call arguments not type-recovered for std_D___collate_vfunc01: facet *this [reason: ambiguous operand type]
+    // TODO: call arguments not type-recovered for _Incref: this [reason: ambiguous operand type]
     // body sha256: 30aec5e32e8fc53d568a88b6d0fd7d2daa8592ee3116ed8428ffd35246f36df1
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void __thiscall std::locale::facet::std_D___collate_vfunc01(facet *this)");
@@ -28158,8 +28152,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d828c() noexcept {
     // TODO: resolve the indirect call in body 19: (*(code *)PTR__guard_dispatch_icall_18030cca8)();.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: for (plVar2 = &DAT_18030d2b0; plVar2 != &DAT_18030d2b0; plVar2 = plVar2 + 1)
-    // TODO: call arguments not type-recovered for tls_callback_0: undefined8 param_1,int param_2
+    // TODO: condition expression type not recovered: for (plVar2 = &DAT_18030d2b0; plVar2 != &DAT_18030d2b0; plVar2 = plVar2 + 1) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for tls_callback_0: undefined8 param_1,int param_2 [reason: ambiguous operand type]
     trace.data_ref("PTR__guard_dispatch_icall_18030cca8", static_cast<const void*>(&image::PTR__guard_dispatch_icall_18030cca8));
     trace.data_ref("DAT_18030d2b0", static_cast<const void*>(&image::DAT_18030d2b0));
     // body sha256: 5a3c93992d54b1c785f349a904ddb1e311bb9e1631e0c19c9134fedbedca38cf
@@ -28228,7 +28222,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d82f4() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: call arguments not type-recovered for __dyn_tls_on_demand_init: void
+    // TODO: call arguments not type-recovered for __dyn_tls_on_demand_init: void [reason: ambiguous operand type]
     trace.call_arguments("tls_callback_0", 0, 2);
     // body sha256: 424cd141d609b5b7f5d05228736795ce7f5cdfd2e9d39e89790f23af85d8d132
     // Structured control-flow trace derived from the decompiled body:
@@ -28299,8 +28293,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802d8320() noexcept {
     // TODO: resolve the indirect call in body 18: (*pcVar1)(2);.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if ((_StackCookie == DAT_1803da4c0) && ((short)(_StackCookie >> 0x30) == 0))
-    // TODO: call arguments not type-recovered for __security_check_cookie: uintptr_t _StackCookie
+    // TODO: condition expression type not recovered: if ((_StackCookie == DAT_1803da4c0) && ((short)(_StackCookie >> 0x30) == 0)) [reason: unresolved global storage/width]
+    // TODO: call arguments not type-recovered for __security_check_cookie: uintptr_t _StackCookie [reason: ambiguous operand type]
     trace.call_arguments("swi", 0x29);
     trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
     // body sha256: 506e95663adc21d7b6473c161036a5229315cc53bf5a90bad0377db9753f3f20

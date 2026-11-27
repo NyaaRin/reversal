@@ -72,17 +72,17 @@ function. It exits PASS only when all 7,656 rows close.
 
 `src/reconstructed/` maps **7,656/7,656 inventory addresses** to compiled
 C++17 accessors, with **0 unmapped** and **0 stubs**. The generator
-`re/tools/gen_reconstructed_source.py` writes 60 chunks (**84,980,874 bytes**,
-81.04 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
+`re/tools/gen_reconstructed_source.py` writes 60 chunks (**85,660,178 bytes**,
+81.69 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
 source file and a unique `Function_0x...` accessor. Accessors contain
-**458,688 audited executable statement/reference lines**, **306,161
+**459,081 audited executable statement/reference lines**, **306,161
 `trace.statement` calls**, **49,305 real C++ control nodes**, **7,732 actual
 string-literal calls**, and resolved references to **4,331 extern call thunks**
 plus **5,414 extern data symbols** in `src/reconstructed/symbols.h`.
 Recovered declarations, whole-array argument decay, typed field reads and
-synthetic scalar subfields produce **29,912 compiler-checked condition
-expressions** and **47,540 `trace.call_arguments` sites**; **11,809 condition
-sites** and **7,140 call-argument sites** remain explicit TODOs where the
+synthetic scalar subfields and admitted scalar/pointer casts produce **31,647
+compiler-checked condition expressions** and **47,933 `trace.call_arguments`
+sites**; **9,957 condition sites** and **6,747 call-argument sites** remain explicit TODOs where the
 evidence is insufficient. Global scalar types are mined from the actual memory
 operands in `m64.dll` by `re/tools/mine_data_types.py`; only slots whose
 observed accesses agree on one width/kind are typed, via

@@ -378,14 +378,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x1802e0100() noexcept {
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (0xf < (ulonglong)puVar1[3])
     // body sha256: 990cad04f937242c48babd67d7884cceaefa3a59ffee7468833b77bd1d12b209
     // Structured control-flow trace derived from the decompiled body:
         {
             trace.statement("undefined8 *puVar1;");
             trace.statement("puVar1 = *(undefined8 **)(param_2 + 0x20);");
             trace.statement("puVar1[2] = 0;");
-            if (trace.condition("if (0xf < (ulonglong)puVar1[3])")) {
+            if (trace.checked_condition("if (0xf < (ulonglong)puVar1[3])", [&]() -> bool { return static_cast<bool>(0xf < static_cast<std::uint64_t>(puVar1[3])); })) {
                 trace.statement("puVar1 = (undefined8 *)*puVar1;");
             }
             trace.statement("*(undefined1 *)puVar1 = 0;");

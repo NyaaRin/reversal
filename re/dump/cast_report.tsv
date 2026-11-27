@@ -1,0 +1,23 @@
+site_type	decision	reason	count
+condition	admitted	declared pointer-to-64-bit integer	554
+condition	admitted	declared scalar or indexed element	2125
+condition	rejected	ambiguous operand type	2638
+condition	rejected	assignment or side effect	1079
+condition	rejected	nested call/return type unresolved	7
+condition	rejected	pointer depth/pointee not proven	1121
+condition	rejected	pointer-cast target not proven	1043
+condition	rejected	scalar cast of pointer element	116
+condition	rejected	scalar cast width/kind mismatch	408
+condition	rejected	unknown aggregate layout	56
+condition	rejected	unresolved global storage/width	3489
+call	admitted	declared pointer-to-64-bit integer	362
+call	admitted	declared scalar or indexed element	1302
+call	rejected	ambiguous operand type	4547
+call	rejected	assignment or side effect	104
+call	rejected	nested call/return type unresolved	13
+call	rejected	pointer depth/pointee not proven	167
+call	rejected	pointer-cast target not proven	91
+call	rejected	scalar cast of pointer element	10
+call	rejected	scalar cast width/kind mismatch	257
+call	rejected	unknown aggregate layout	538
+call	rejected	unresolved global storage/width	1020
