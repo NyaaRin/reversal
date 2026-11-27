@@ -264,6 +264,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18011aae0() noexcept {
     [[maybe_unused]] std::uint64_t *** local_188[2]{};
     [[maybe_unused]] std::uint64_t local_178{};
     [[maybe_unused]] std::uint64_t local_170{};
+    [[maybe_unused]] char local_168[272]{};
     [[maybe_unused]] std::uint64_t local_58{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18011ae00.
@@ -278,11 +279,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18011aae0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (lVar10 + 3U < 0x10) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for atexit: (_func_5014 *)&LAB_180309da0 [reason: pointer-cast target not proven]
-    // TODO: call arguments not type-recovered for memset: local_168,0,0x104 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for GetModuleFileNameA: hModule,local_168,0x104 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for strlen: local_168 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_18001d080: &local_1a8,local_168,sVar3 [reason: ambiguous operand type]
     trace.call_arguments("GetModuleHandleA", "menusystem.dll");
+    trace.call_arguments("memset", local_168, 0, 0x104);
+    trace.call_arguments("GetModuleFileNameA", hModule, local_168, 0x104);
+    trace.call_arguments("strlen", local_168);
+    trace.call_arguments("FUN_18001d080", &local_1a8, local_168, sVar3);
     trace.call_arguments("memset", local_2a8, 0, 0x100);
     trace.call_arguments("thunk_FUN_1802d4e90", ppppbVar7, lVar10 + 1, &image::DAT_180356e90, 2);
     trace.call_arguments("FUN_18022a720", &local_1a8, _Size);
@@ -794,6 +795,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18011afa0() noexcept {
     [[maybe_unused]] char* **** pppppCVar5{};
     [[maybe_unused]] std::uint8_t auStack_208[32]{};
     [[maybe_unused]] std::int64_t local_1e8{};
+    [[maybe_unused]] char * local_1e0{};
     [[maybe_unused]] std::size_t local_1d8{};
     [[maybe_unused]] std::uint32_t local_1c8{};
     [[maybe_unused]] char* *** local_1c0[3]{};
@@ -5886,6 +5888,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18011ca90() noexcept {
     [[maybe_unused]] std::uint64_t param_1{};
     [[maybe_unused]] char cVar1{};
     [[maybe_unused]] std::uintptr_t hModule{};
+    [[maybe_unused]] std::intptr_t IVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fa668.
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fd108.
@@ -5897,7 +5900,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18011ca90() noexcept {
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (DAT_1803fd108 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((char)IVar2 == '\0') [reason: scalar cast width/kind mismatch]
     trace.call_arguments("FUN_18011c490");
     trace.call_arguments("GetModuleHandleA", "tier0.dll");
     trace.call_arguments("GetProcAddress", hModule, "ThreadInMainThread");
@@ -5934,7 +5936,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18011ca90() noexcept {
                     trace.statement("return;");
                 }
                 trace.statement("IVar2 = (*DAT_1803fd108)();");
-                if (trace.condition("if ((char)IVar2 == '\\0')")) {
+                if (trace.checked_condition("if ((char)IVar2 == '\\0')", [&]() -> bool { return static_cast<bool>(static_cast<char>(IVar2) == '\0'); })) {
                     trace.statement("return;");
                 }
             }
@@ -38606,9 +38608,13 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012c830() noexcept {
     [[maybe_unused]] std::uint8_t local_1b40[16]{};
     [[maybe_unused]] std::int64_t local_1b30{};
     [[maybe_unused]] std::uint8_t local_1b18[128]{};
+    [[maybe_unused]] char local_1a98[64]{};
     [[maybe_unused]] std::uint8_t local_1a58[224]{};
     [[maybe_unused]] char local_1978[192]{};
+    [[maybe_unused]] char local_18b8[192]{};
     [[maybe_unused]] std::uint8_t local_17f8[896]{};
+    [[maybe_unused]] wchar_t local_1478[512]{};
+    [[maybe_unused]] wchar_t local_1078[2048]{};
     [[maybe_unused]] std::uint64_t local_78{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18012cd2c.
@@ -38688,19 +38694,8 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012c830() noexcept {
     // TODO: condition expression type not recovered: if (7 < (ulonglong)(&DAT_1803ea008)[(longlong)iVar7 * 4]) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_1cc0,L"skybox",6 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_1ce0,L"materials",9 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180204f10: local_1a98,"sk%08x%s",local_1b90 & 0xffffffff,puVar32 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memset: local_1078,0,0x400 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,local_1a98,-1,local_1078,0x1ff [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for wcslen: local_1078 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_1c50,local_1078,sVar13 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211740: &local_1c50,L".vtf",4 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_1ca0,L"materials",9 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180204ff0: local_18b8,"materials/skybox/%s%s.vmt",param_1,(&PTR_DAT_18033bf38)[uVar24] [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for memset: local_1478,0,0x400 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,local_18b8,-1,local_1478,0x1ff [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for wcslen: local_1478 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_1d28,local_1478,sVar13 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180212f60: &local_1ba8,pbStack_1ba0,local_1078,(longlong)iVar30 [reason: scalar cast width/kind mismatch]
     // TODO: call arguments not type-recovered for s: %zu bytes [reason: ambiguous operand type]
     trace.call_arguments("_stricmp", param_2, param_1);
     trace.call_arguments("strncpy_s", &image::DAT_180401180, 0x40, param_1, 0xffffffffffffffff);
@@ -38728,6 +38723,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012c830() noexcept {
     trace.call_arguments("FUN_180012b20", &image::DAT_180400d30, 0x60, 0xffffffffffffffff, "sk%08x%s");
     trace.call_arguments("FUN_180012b20", &image::DAT_180400d90, 0x60, 0xffffffffffffffff, "sk%08x%s");
     trace.call_arguments("FUN_180012b20", &image::DAT_180400df0, 0x60, 0xffffffffffffffff, "sk%08x%s");
+    trace.call_arguments("FUN_180204f10", local_1a98, "sk%08x%s", local_1b90 & 0xffffffff, puVar32);
+    trace.call_arguments("memset", local_1078, 0, 0x400);
+    trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, local_1a98, -1, local_1078, 0x1ff);
+    trace.call_arguments("wcslen", local_1078);
+    trace.call_arguments("FUN_180211510", &local_1c50, local_1078, sVar13);
     trace.call_arguments("FUN_180066720", local_1bc8, local_1b40, &local_1ca0);
     trace.call_arguments("FUN_180066720", local_1b80, uVar12, &local_1c70);
     trace.call_arguments("FUN_18021e290", local_1bc8);
@@ -38744,6 +38744,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012c830() noexcept {
     trace.call_arguments("FUN_180012b20", &image::DAT_180400d30, 0x60, 0xffffffffffffffff, "skybox/%s%s");
     trace.call_arguments("FUN_180012b20", &image::DAT_180400d90, 0x60, 0xffffffffffffffff, "skybox/%s%s");
     trace.call_arguments("FUN_180012b20", &image::DAT_180400df0, 0x60, 0xffffffffffffffff, "skybox/%s%s");
+    trace.call_arguments("FUN_180204ff0", local_18b8, "materials/skybox/%s%s.vmt", param_1, (&image::PTR_DAT_18033bf38)[uVar24]);
+    trace.call_arguments("memset", local_1478, 0, 0x400);
+    trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, local_18b8, -1, local_1478, 0x1ff);
+    trace.call_arguments("wcslen", local_1478);
+    trace.call_arguments("FUN_180211510", &local_1d28, local_1478, sVar13);
     trace.call_arguments("FUN_180066720", local_1b60, local_1b40, &local_1c30);
     trace.call_arguments("FUN_18021e290", &local_1c30);
     trace.call_arguments("FUN_18021e290", &local_1d28);
@@ -38759,6 +38764,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012c830() noexcept {
     trace.call_arguments("FUN_18021a7b0", &image::DAT_1803e9ff0 + lVar26 * 4, ppppuVar25, local_1b50);
     trace.call_arguments("FUN_18021e290", local_1b60);
     trace.call_arguments("FUN_180204ff0", local_1978, "materials/skybox/%s%s.vmt", param_1, &image::DAT_18035871c);
+    trace.call_arguments("FUN_180212f60", &local_1ba8, pbStack_1ba0, local_1078, static_cast<std::int64_t>(iVar30));
     trace.call_arguments("strlen", &image::DAT_180400c10);
     trace.call_arguments("FUN_180014410", "[SKY] fs readback '%s': %s (%zu bytes)\n", local_1978, pcVar27, lVar26);
     trace.call_arguments("swi", 0x29);
@@ -40468,6 +40474,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012dc30() noexcept {
     [[maybe_unused]] std::uint8_t local_498[32]{};
     [[maybe_unused]] std::uint8_t local_478[16]{};
     [[maybe_unused]] std::int64_t local_468{};
+    [[maybe_unused]] wchar_t local_458[512]{};
     [[maybe_unused]] std::uint64_t local_58{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18012df81.
@@ -40496,10 +40503,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012dc30() noexcept {
     // TODO: condition expression type not recovered: while( true ) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((ulonglong)((&DAT_1803ea178)[lVar25 * 3] - *plVar19) < 0x1c) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (0x1b < (ulonglong)(DAT_1803ea178 - DAT_1803ea170)) [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for memset: local_458,0,0x400 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,&DAT_180400ec0,-1,local_458,0x1ff [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for wcslen: local_458 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_818,local_458,sVar13 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180204f70: local_738,uVar14,L".vtf" [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180067c80: local_7f8,uVar14 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180204f70: local_6b8,uVar14,L".vtf" [reason: ambiguous operand type]
@@ -40512,6 +40515,10 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012dc30() noexcept {
     trace.call_arguments("FUN_18012ae90", local_478);
     trace.call_arguments("FUN_18012ab30", "Couldn't locate the garrysmod folder.");
     trace.call_arguments("FUN_18012bc40", local_478);
+    trace.call_arguments("memset", local_458, 0, 0x400);
+    trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, &image::DAT_180400ec0, -1, local_458, 0x1ff);
+    trace.call_arguments("wcslen", local_458);
+    trace.call_arguments("FUN_180211510", &local_818, local_458, sVar13);
     trace.call_arguments("FUN_18021e290", &local_818);
     trace.call_arguments("FUN_180065cd0", &local_4d8, local_498);
     trace.call_arguments("FUN_180065ec0", &local_4d8, local_7a8);
@@ -41655,13 +41662,17 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012e770() noexcept {
     [[maybe_unused]] std::uint8_t local_fa0[16]{};
     [[maybe_unused]] std::int64_t local_f90{};
     [[maybe_unused]] char local_f78[64]{};
+    [[maybe_unused]] char local_f38[64]{};
     [[maybe_unused]] std::uint8_t local_ef8[64]{};
     [[maybe_unused]] std::uint8_t local_eb8[64]{};
     [[maybe_unused]] std::uint8_t local_e78[64]{};
     [[maybe_unused]] std::uint8_t local_e38[64]{};
     [[maybe_unused]] std::uint8_t local_df8[64]{};
     [[maybe_unused]] std::uint8_t local_db8[224]{};
+    [[maybe_unused]] char local_cd8[192]{};
     [[maybe_unused]] std::uint8_t local_c18[896]{};
+    [[maybe_unused]] wchar_t local_898[512]{};
+    [[maybe_unused]] wchar_t local_498[512]{};
     [[maybe_unused]] std::uint64_t local_98{};
     [[maybe_unused]] std::uint64_t local_48{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -41712,19 +41723,9 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012e770() noexcept {
     // TODO: condition expression type not recovered: if (7 < (ulonglong)(&DAT_1803ea008)[(longlong)iVar5 * 4]) [reason: unresolved global storage/width]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_1110,L"skybox",6 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_1150,L"materials",9 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180204f10: local_f38,"sk%08x%s",uVar4,&DAT_18033e5ea [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for FUN_180204f10: local_f38,"sk%08x%s",uVar4,PTR_DAT_18033bf38 [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for memset: local_898,0,0x400 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,local_f38 + lVar14 * 0x40,-1,local_898,0x1ff [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for wcslen: local_898 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_1090,local_898,sVar8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211740: &local_1090,L".vtf",4 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_10f0,L"materials",9 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180204ff0: local_cd8,"materials/skybox/%s%s.vmt",local_f78,(&PTR_DAT_18033bf38)[uVar16] [reason: unresolved global storage/width]
-    // TODO: call arguments not type-recovered for memset: local_498,0,0x400 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for MultiByteToWideChar: 0xfde9,0,local_cd8,-1,local_498,0x1ff [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for wcslen: local_498 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_1130,local_498,sVar8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for load: %d/6 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for ready: engine [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for s: %d/6 [reason: ambiguous operand type]
@@ -41745,15 +41746,20 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012e770() noexcept {
     trace.call_arguments("FUN_18021e290", local_1030);
     trace.call_arguments("FUN_18021e290", &local_1150);
     trace.call_arguments("FUN_18021e290", &local_1110);
+    trace.call_arguments("FUN_180204f10", local_f38, "sk%08x%s", uVar4, &image::DAT_18033e5ea);
     trace.call_arguments("FUN_180204f10", local_ef8, "sk%08x%s", uVar4, &image::DAT_18033e5ea);
     trace.call_arguments("FUN_180204f10", local_eb8, "sk%08x%s", uVar4, &image::DAT_18033e5ea);
     trace.call_arguments("FUN_180204f10", local_e78, "sk%08x%s", uVar4, &image::DAT_18033e5ea);
     trace.call_arguments("FUN_180204f10", local_e38, "sk%08x%s", uVar4, &image::DAT_18033e5ea);
+    trace.call_arguments("FUN_180204f10", local_f38, "sk%08x%s", uVar4, image::PTR_DAT_18033bf38);
     trace.call_arguments("FUN_180204f10", local_ef8, "sk%08x%s", uVar4, image::PTR_DAT_18033bf40);
     trace.call_arguments("FUN_180204f10", local_eb8, "sk%08x%s", uVar4, image::PTR_DAT_18033bf48);
     trace.call_arguments("FUN_180204f10", local_e78, "sk%08x%s", uVar4, image::PTR_DAT_18033bf50);
     trace.call_arguments("FUN_180204f10", local_e38, "sk%08x%s", uVar4, image::PTR_DAT_18033bf58);
     trace.call_arguments("FUN_180204f10", local_df8, "sk%08x%s", uVar4, puVar17);
+    trace.call_arguments("memset", local_898, 0, 0x400);
+    trace.call_arguments("wcslen", local_898);
+    trace.call_arguments("FUN_180211510", &local_1090, local_898, sVar8);
     trace.call_arguments("FUN_180066720", local_1010, local_fa0, &local_10f0);
     trace.call_arguments("FUN_180066720", local_fc0, uVar10, &local_10b0);
     trace.call_arguments("FUN_18021e290", local_1010);
@@ -41766,6 +41772,11 @@ const sf::reconstructed::FunctionTranslation& Function_0x18012e770() noexcept {
     trace.call_arguments("FUN_18021e290", local_fc0);
     trace.call_arguments("FUN_18021a7b0", &image::DAT_1803e9ff0 + lVar14 * 4, pppppppuVar13, local_fb0);
     trace.call_arguments("FUN_18021e290", local_fc0);
+    trace.call_arguments("FUN_180204ff0", local_cd8, "materials/skybox/%s%s.vmt", local_f78, (&image::PTR_DAT_18033bf38)[uVar16]);
+    trace.call_arguments("memset", local_498, 0, 0x400);
+    trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, local_cd8, -1, local_498, 0x1ff);
+    trace.call_arguments("wcslen", local_498);
+    trace.call_arguments("FUN_180211510", &local_1130, local_498, sVar8);
     trace.call_arguments("FUN_180066720", local_fe0, local_fa0, &local_1070);
     trace.call_arguments("FUN_18021e290", &local_1070);
     trace.call_arguments("FUN_18021e290", &local_1130);

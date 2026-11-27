@@ -10147,6 +10147,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18029dd40() noexcept {
     sf::reconstructed::TranslationTrace trace("0x18029dd40", "FUN_18029dd40");
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::uint32_t uVar1{};
+    [[maybe_unused]] std::int8_t sVar2{};
     [[maybe_unused]] std::int32_t iVar3{};
     [[maybe_unused]] char * pcVar4{};
     [[maybe_unused]] std::uint32_t uVar5{};

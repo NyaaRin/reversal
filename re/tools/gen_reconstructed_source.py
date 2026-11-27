@@ -105,6 +105,22 @@ TYPE_ALIASES = {
     "LRESULT": "std::intptr_t",
     "HRESULT": "std::int32_t",
     "ATOM": "std::uint16_t",
+    "WCHAR": "wchar_t",
+    "CHAR": "char",
+    "SHORT": "std::int16_t",
+    "USHORT": "std::uint16_t",
+    "INT": "int",
+    "LONG": "std::int32_t",
+    "LONGLONG": "std::int64_t",
+    "SIZE_T": "std::size_t",
+    "INT_PTR": "std::intptr_t",
+    "UINT_PTR": "std::uintptr_t",
+    "LSTATUS": "std::int32_t",
+    "sbyte": "std::int8_t",
+    "__uint64": "std::uint64_t",
+    "__time64_t": "std::int64_t",
+    "HGLOBAL": "void*",
+    "LPVOID": "void*",
     "BOOL": "int",
     "HMODULE": "std::uintptr_t",
     "HANDLE": "void*",
@@ -156,8 +172,11 @@ TYPE_WORDS = set(TYPE_ALIASES) | {
 CALL_KEYWORDS = {
     "if", "for", "while", "switch", "return", "sizeof", "static_cast",
     "reinterpret_cast", "const_cast", "dynamic_cast", "alignof", "decltype",
-    "load_at", "field_address",
+    "load_at", "field_address", "load_bits32", "load_bits16",
 }
+PSEUDO_INTRINSIC_RE = re.compile(
+    r"^(?:SUB|CONCAT|ZEXT|SEXT|CARRY|SCARRY|SBORROW|BSWAP|POPCOUNT|LZCOUNT)\d*$"
+)
 CPP_RESERVED = {
     "alignas", "alignof", "and", "and_eq", "asm", "auto", "bitand", "bitor",
     "bool", "break", "case", "catch", "char", "char16_t", "char32_t", "class",
@@ -364,9 +383,32 @@ def data_symbol_type(name: str, data_types: dict[int, str]) -> str | None:
 
 
 def load_data_types() -> dict[int, str]:
-    if not DATA_TYPES_TSV.exists():
-        return {}
     widths = {1: "std::uint8_t", 2: "std::uint16_t", 4: "std::uint32_t", 8: "std::uint64_t"}
+    data_types: dict[int, str] = {}
+    agreement = ROOT / "re" / "dump" / "global_agreement.tsv"
+    if agreement.exists():
+        # The agreement table is the multi-use projection of data_types.tsv.
+        # Only rows whose every observed use agrees are admitted here.
+        with agreement.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle, delimiter="\t"):
+                if row.get("status") != "consistent":
+                    continue
+                try:
+                    address = int(row["address"], 16)
+                    width = int(row["unique_width"])
+                except (KeyError, ValueError):
+                    continue
+                kind = row.get("unique_type", "int")
+                if kind == "float" and width == 4:
+                    data_types[address] = "float"
+                elif kind == "double" and width == 8:
+                    data_types[address] = "double"
+                else:
+                    mapped = widths.get(width)
+                    if mapped:
+                        data_types[address] = mapped
+    if not DATA_TYPES_TSV.exists():
+        return data_types
     result: dict[int, str] = {}
     with DATA_TYPES_TSV.open(encoding="utf-8", newline="") as handle:
         for row in csv.DictReader(handle, delimiter="\t"):
@@ -382,6 +424,8 @@ def load_data_types() -> dict[int, str]:
                 result[address] = "double"
             elif kind == "int" and width in widths:
                 result[address] = widths[width]
+    for address, type_name in data_types.items():
+        result.setdefault(address, type_name)
     return result
 
 
@@ -619,16 +663,69 @@ def rewrite_assignment_casts(
 
 
 KNOWN_CAST_RE = re.compile(r"\(\s*([A-Za-z_][A-Za-z0-9_ ]*(?:\*+)?)\s*\)")
+VECTOR_SUB_RE = re.compile(
+    r"\bSUB(32|16)1\(\s*([A-Za-z_][A-Za-z0-9_]*)\s*>>\s*(0[xX][0-9A-Fa-f]+|\d+)\s*,\s*0\s*\)"
+)
+SLOT_SHAPES: set[tuple[str, str, int]] | None = None
+
+
+def load_slot_shapes() -> set[tuple[str, str, int]]:
+    global SLOT_SHAPES
+    if SLOT_SHAPES is not None:
+        return SLOT_SHAPES
+    SLOT_SHAPES = set()
+    path = ROOT / "re" / "dump" / "slot_types.tsv"
+    if path.exists():
+        with path.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle, delimiter="\t"):
+                if row.get("status") != "admissible":
+                    continue
+                try:
+                    SLOT_SHAPES.add((row["slot"], row["element_type"], int(row["element_count"])))
+                except (KeyError, ValueError):
+                    continue
+    return SLOT_SHAPES
+
+
+def rewrite_vector_subpieces(expr: str, locals: dict[str, tuple[str, int | None]]) -> str:
+    """Lower Ghidra vector subpieces through table-admitted slot shapes.
+
+    `SUB321(auVar >> n,0)` extracts 32 bits starting at bit `n` from the
+    byte-array vector.  The slot table must record exactly one byte element
+    type and one element count for that slot; the generated helper then reads
+    those bits little-endian from the declared array.
+    """
+    shapes = load_slot_shapes()
+
+    def replace(match: re.Match[str]) -> str:
+        width = match.group(1)
+        name = match.group(2)
+        bit_offset = int(match.group(3), 0)
+        declaration = locals.get(name)
+        if not declaration:
+            return match.group(0)
+        element_type, count = declaration
+        if count is None or element_type != "std::uint8_t":
+            return match.group(0)
+        required = 4 if width == "32" else 2
+        if count < required or (name, element_type, count) not in shapes:
+            return match.group(0)
+        return f"load_bits{width}({name}, {count}, {bit_offset})"
+
+    return VECTOR_SUB_RE.sub(replace, expr)
 WINDOWS_POINTER_ALIASES = {
     "LPCSTR", "PCSTR", "LPSTR", "PSTR", "LPCWSTR", "PCWSTR", "LPWSTR",
     "PWSTR", "LPCVOID", "LPVOID", "PVOID", "LPBYTE", "PBYTE", "LPWORD",
     "PWORD", "LPDWORD", "PDWORD", "LPHANDLE", "PHANDLE", "HANDLE",
     "FARPROC", "HLOCAL", "HWND", "HINSTANCE", "HICON", "HCURSOR",
-    "HMENU", "HBRUSH", "HDC", "HBITMAP",
+    "HMENU", "HBRUSH", "HDC", "HBITMAP", "HGLOBAL",
 }
 WINDOWS_SCALAR_ALIASES = {
     "DWORD", "DWORD64", "UINT", "UINT64", "WORD", "BYTE", "ULONG",
     "ULONGLONG", "WPARAM", "LPARAM", "LRESULT", "HRESULT", "ATOM",
+    "WCHAR", "CHAR", "SHORT", "USHORT", "INT", "LONG", "LONGLONG",
+    "SIZE_T", "INT_PTR", "UINT_PTR", "LSTATUS", "sbyte", "__uint64",
+    "__time64_t",
 }
 
 
@@ -656,6 +753,7 @@ def safe_expression(
     data_types: dict[int, str] | None = None,
 ) -> str | None:
     expr = rewrite_known_type_names(expr.strip())
+    expr = rewrite_vector_subpieces(expr, locals)
     expr = rewrite_memory_dereferences(expr)
     expr = rewrite_synthetic_subfields(expr, locals)
     expr = rewrite_admitted_casts(expr, locals)
@@ -994,6 +1092,23 @@ def recover_typed_sites(
                 continue
             args_text = line[open_index + 1:close_index]
             args = split_top_level(args_text, ",") if args_text.strip() else []
+            # Ghidra's vector subpiece pseudo-call has two operands: a vector
+            # shifted by a bit offset and the subpiece offset 0.  The slot
+            # table proves the byte element type and count, so lower it to the
+            # compiler-checked bit extractor instead of guessing a vector type.
+            if target in ("SUB321", "SUB161") and len(args) == 2 and args[1].strip() == "0":
+                shift = re.fullmatch(r"([A-Za-z_][A-Za-z0-9_]*)\s*>>\s*(0[xX][0-9A-Fa-f]+|\d+)", args[0].strip())
+                if shift:
+                    name = shift.group(1)
+                    declaration = declarations.get(name)
+                    if declaration:
+                        element_type, count = declaration
+                        if (count is not None and count >= (4 if target == "SUB321" else 2)
+                                and element_type == "std::uint8_t"
+                                and (name, element_type, count) in load_slot_shapes()):
+                            typed_calls.append((f"load_bits{target[3:5]}",
+                                                [name, str(count), str(int(shift.group(2), 0))]))
+                            continue
             translated_args: list[str] = []
             for arg in args:
                 translated = safe_expression(arg, declarations, allow_data=True, data_types=data_types)

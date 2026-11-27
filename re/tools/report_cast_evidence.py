@@ -45,7 +45,9 @@ def main() -> int:
             match = CALL_RE.search(line)
             if match:
                 arguments = match.group(2)
-                if "reinterpret_cast<" in arguments:
+                if match.group(1) in ("load_bits32", "load_bits16"):
+                    admitted[("call", "table-admitted vector/register slot")] += 1
+                elif "reinterpret_cast<" in arguments:
                     admitted[("call", "declared pointer-to-64-bit integer")] += 1
                 elif re.search(r"static_cast<(?!bool)[^>]+>", arguments):
                     admitted[("call", "declared scalar or indexed element")] += 1

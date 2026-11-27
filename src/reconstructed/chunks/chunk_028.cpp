@@ -12923,6 +12923,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021af80() noexcept {
     // Recovered local/parameter types; values and aggregate layouts remain TODO.
     [[maybe_unused]] std::int64_t lVar1{};
     [[maybe_unused]] std::uint64_t uVar2{};
+    [[maybe_unused]] std::uint64_t _Var4{};
     [[maybe_unused]] std::uint8_t auStack_68[32]{};
     [[maybe_unused]] std::uint64_t local_30{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
@@ -12935,7 +12936,6 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021af80() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if (uVar2 < *(ulonglong *)(p_Var3 + 0x18)) [reason: pointer depth/pointee not proven]
     // TODO: condition expression type not recovered: if (local_40 == (facet *)0x0) [reason: pointer-cast target not proven]
-    // TODO: condition expression type not recovered: if (_Var4 == 0xffffffffffffffff) [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Lockit: local_38,0 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_1802106d0: id_exref [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for _Getcat: &local_40,param_1 [reason: ambiguous operand type]
@@ -12984,7 +12984,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x18021af80() noexcept {
                     if (trace.condition("if (local_40 == (facet *)0x0)")) {
                         trace.statement("_Var4 = std::codecvt<char,char,_Mbstatet>::_Getcat(&local_40,param_1);");
                         trace.statement("pfVar5 = local_40;");
-                        if (trace.condition("if (_Var4 == 0xffffffffffffffff)")) {
+                        if (trace.checked_condition("if (_Var4 == 0xffffffffffffffff)", [&]() -> bool { return static_cast<bool>(_Var4 == 0xffffffffffffffff); })) {
                             trace.statement("FUN_180013970();");
                         }
                         trace.statement("local_48 = local_40;");

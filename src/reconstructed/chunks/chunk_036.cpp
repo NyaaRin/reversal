@@ -27073,21 +27073,21 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288de0() noexcept {
     [[maybe_unused]] char* param_2{};
     [[maybe_unused]] int BVar1{};
     [[maybe_unused]] std::int32_t cchWideChar{};
+    [[maybe_unused]] void* hMem{};
     [[maybe_unused]] wchar_t* lpWideCharStr{};
     [[maybe_unused]] void* pvVar2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
-    // TODO: condition expression type not recovered: if (hMem != (HGLOBAL)0x0) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for GlobalLock: hMem [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for GlobalUnlock: hMem [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for SetClipboardData: 0xd,hMem [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for GlobalFree: hMem [reason: ambiguous operand type]
     trace.call_arguments("OpenClipboard", (void*)0x0);
     trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, param_2, -1, (wchar_t*)0x0, 0);
     trace.call_arguments("GlobalAlloc", 2, static_cast<std::int64_t>(cchWideChar) * 2);
+    trace.call_arguments("GlobalLock", hMem);
     trace.call_arguments("MultiByteToWideChar", 0xfde9, 0, param_2, -1, lpWideCharStr, cchWideChar);
+    trace.call_arguments("GlobalUnlock", hMem);
     trace.call_arguments("EmptyClipboard");
+    trace.call_arguments("SetClipboardData", 0xd, hMem);
+    trace.call_arguments("GlobalFree", hMem);
     trace.call_arguments("CloseClipboard");
     // body sha256: b6496c2f567be008b7a8d064b3f224b79751bcea454a9f746318d957a770015a
     // Structured control-flow trace derived from the decompiled body:
@@ -27101,7 +27101,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180288de0() noexcept {
             if (trace.checked_condition("if (BVar1 != 0)", [&]() -> bool { return static_cast<bool>(BVar1 != 0); })) {
                 trace.statement("cchWideChar = MultiByteToWideChar(0xfde9,0,param_2,-1,(LPWSTR)0x0,0);");
                 trace.statement("hMem = GlobalAlloc(2,(longlong)cchWideChar * 2);");
-                if (trace.condition("if (hMem != (HGLOBAL)0x0)")) {
+                if (trace.checked_condition("if (hMem != (HGLOBAL)0x0)", [&]() -> bool { return static_cast<bool>(hMem != (void*)0x0); })) {
                     trace.statement("lpWideCharStr = GlobalLock(hMem);");
                     trace.statement("MultiByteToWideChar(0xfde9,0,param_2,-1,lpWideCharStr,cchWideChar);");
                     trace.statement("GlobalUnlock(hMem);");

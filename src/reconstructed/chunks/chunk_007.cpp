@@ -22421,6 +22421,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800689f0() noexcept {
     [[maybe_unused]] std::int64_t * plVar9{};
     [[maybe_unused]] std::uintptr_t pHVar10{};
     [[maybe_unused]] std::uint64_t uVar11{};
+    [[maybe_unused]] std::intptr_t IVar12{};
     [[maybe_unused]] char * pcVar13{};
     [[maybe_unused]] std::uint64_t * puVar14{};
     [[maybe_unused]] std::uint64_t **** ppppuVar15{};
@@ -22475,9 +22476,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800689f0() noexcept {
     // TODO: condition expression type not recovered: if (DAT_1803fcfa0 == (FARPROC)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if ((lVar2 != 0) && (DAT_1803fafd8 != (code *)0x0)) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar12 == 6) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_1803fe490 == (FARPROC)0x0) [reason: unresolved global storage/width]
-    // TODO: condition expression type not recovered: if ((int)IVar12 == 4) [reason: scalar cast width/kind mismatch]
     // TODO: condition expression type not recovered: if (DAT_1803ff978 != (code *)0x0) [reason: unresolved global storage/width]
     // TODO: condition expression type not recovered: if (DAT_180425540 == (FARPROC)0x0) [reason: unresolved global storage/width]
     trace.call_arguments("FUN_180039770");
@@ -22611,7 +22610,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800689f0() noexcept {
                                 trace.statement("DAT_1803fe490 = GetProcAddress(pHVar10,\"lua_type\");");
                             }
                             trace.statement("IVar12 = (*DAT_1803fe490)(lVar1,0xffffffff);");
-                            if (trace.condition("if ((int)IVar12 == 6)")) {
+                            if (trace.checked_condition("if ((int)IVar12 == 6)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar12) == 6); })) {
                                 trace.statement("DAT_1803ff8e8 = DAT_1803ff8e8 + 1;");
                                 trace.statement("iVar8 = FUN_180023180(lVar1,0,0);");
                                 if (trace.checked_condition("if (iVar8 != 0)", [&]() -> bool { return static_cast<bool>(iVar8 != 0); })) {
@@ -22620,7 +22619,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x1800689f0() noexcept {
                                         trace.statement("DAT_1803fe490 = GetProcAddress(pHVar10,\"lua_type\");");
                                     }
                                     trace.statement("IVar12 = (*DAT_1803fe490)(lVar1,0xffffffff);");
-                                    if (trace.condition("if ((int)IVar12 == 4)")) {
+                                    if (trace.checked_condition("if ((int)IVar12 == 4)", [&]() -> bool { return static_cast<bool>(static_cast<std::int32_t>(IVar12) == 4); })) {
                                         trace.statement("pcVar13 = (char *)(**(code **)(*plVar9 + 0xb8))(plVar9,0xffffffff,0);");
                                     } else {
                                     trace.statement("pcVar13 = \"(non-string error)\";");
@@ -22912,6 +22911,7 @@ const sf::reconstructed::FunctionTranslation& Function_0x180068ea0() noexcept {
     [[maybe_unused]] std::uint8_t local_488[32]{};
     [[maybe_unused]] std::uint64_t local_468{};
     [[maybe_unused]] wchar_t local_458[264]{};
+    [[maybe_unused]] wchar_t local_248[264]{};
     [[maybe_unused]] std::uint64_t local_38{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180345b1c.
@@ -22920,24 +22920,24 @@ const sf::reconstructed::FunctionTranslation& Function_0x180068ea0() noexcept {
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
     // TODO: condition expression type not recovered: if ((iVar1 < 0) || (local_458[0] == L'\0')) [reason: ambiguous operand type]
     // TODO: condition expression type not recovered: if ((DVar2 == 0) || (local_248[0] == L'\0')) [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for memset: local_248,0,0x208 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for GetTempPathW: 0x104,local_248 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_500,L"scriptdata",10 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_4e0,L"mayrrX64",8 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_500,L"scriptdata",10 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_4e0,L"mayrrX64",8 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for wcslen: local_248 [reason: ambiguous operand type]
-    // TODO: call arguments not type-recovered for FUN_180211510: &local_4c0,local_248,sVar3 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_4c0,L"scriptdata",10 [reason: ambiguous operand type]
     // TODO: call arguments not type-recovered for FUN_180211510: &local_4e0,L"mayrrX64",8 [reason: ambiguous operand type]
     trace.call_arguments("memset", local_458, 0, 0x208);
     trace.call_arguments("SHGetFolderPathW", 0, 0x8005, 0, 0);
+    trace.call_arguments("memset", local_248, 0, 0x208);
+    trace.call_arguments("GetTempPathW", 0x104, local_248);
     trace.call_arguments("FUN_180211510", &local_4c0, &image::DAT_180345b1c, 1);
     trace.call_arguments("FUN_180066720", local_488, &local_4c0, &local_4e0);
     trace.call_arguments("FUN_180066720", param_1, uVar4, &local_500);
     trace.call_arguments("FUN_18021e290", local_488);
     trace.call_arguments("FUN_18021e290", &local_4c0);
     trace.call_arguments("FUN_18021e290", &local_4e0);
+    trace.call_arguments("wcslen", local_248);
+    trace.call_arguments("FUN_180211510", &local_4c0, local_248, sVar3);
     trace.call_arguments("FUN_180066720", local_488, &local_4c0, &local_4e0);
     trace.call_arguments("FUN_180066720", param_1, uVar4, &local_500);
     trace.call_arguments("FUN_18021e290", local_488);
