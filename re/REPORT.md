@@ -169,31 +169,42 @@ Naming: 468 virtual methods carry a unique `Class_vfuncNN` name; 79 addresses ar
 shared by several classes (identical stubs/overrides) and are named
 `vfunc_shared_<addr>` rather than being misattributed to one feature.
 
-## Complete source-level coverage
+## Complete compiled-source coverage
 
-`src/reconstructed/` now maps **7,656/7,656 inventory functions** to compilable
-C++17 records, with **0 unmapped** addresses and **0 stubs**. The deterministic
-generator `re/tools/gen_reconstructed_source.py` emits 60 translation chunks
-(30.18 MiB) plus `src/reconstructed/coverage.tsv`; each address maps to a
-`src/reconstructed/chunks/chunk_NNN.cpp` file and a unique `Function_0x...`
-accessor. The generated records contain the full decompiled body (16.29 MiB),
-its SHA-256, 17,273 call-target references, 22,280 data references, 7,732
-string literals, 80,593 control-flow lines and 52,123 explicit TODO markers.
+`src/reconstructed/` maps **7,656/7,656 inventory functions** to compiled C++17
+accessors, with **0 unmapped** addresses and **0 stubs**. The deterministic
+generator `re/tools/gen_reconstructed_source.py` emits 60 chunks (**73,423,017
+bytes**, 70.02 MiB) plus `src/reconstructed/coverage.tsv`; each address maps to a
+`chunk_NNN.cpp` source file and a unique `Function_0x...` accessor. Every
+accessor contains **416,099 audited executable C++ statement/reference lines**,
+including **312,958 `trace.statement` calls**, **49,305 real C++ control nodes**
+(`if`/`else`/loops/`switch`) and **7,732 actual string-literal calls**.
+
+Call targets are resolved through **4,331 declared extern `FUN_*` thunks** and
+data references through **4,333 declared extern `DAT_*`/`PTR_*`/`UNK_*`/
+`SUB_*` byte-array symbols** in `src/reconstructed/symbols.h`. The complete
+decompiled body remains in each record as a SHA-256-verified audit payload
+(16.29 MiB); it is no longer the accessor payload. The extracted source record
+also retains 17,273 call references, 22,280 data references, 80,593 original
+control-flow lines and 59,779 explicit TODO markers for unresolved runtime
+pages, globals, indirect calls, calling conventions and PDB/layout facts.
 
 `re/tools/check_reconstructed_source.py` independently re-reads the inventory,
-coverage table and source chunks and reports:
+coverage table, accessor bodies, symbols header and hashed bodies and reports:
 
 ```
 inventory=7656 coverage_rows=7656 checked=7656
 generated_chunks=60 accessors=7656
+executable_accessor_lines=416099 statement_lines=312958 control_nodes=49305
+literal_refs=7732 symbols_calls=4331 symbols_data=4333
 PASS 7656/7656 inventory functions mapped; unmapped=0 stubs=0
 ```
 
 The hand-translated executable reconstruction under `src/features/` is
-unchanged. The generated layer is a source-level transcription, not a claim of
-semantic parity: it preserves the decompiler body, control-flow lines, calls,
-data/string references and named TODOs, but does not invent executable
-semantics for unknown globals, indirect calls or missing PDB layouts.
+unchanged. The generated accessors are compile-checked **structural traces**,
+not behaviorally equivalent implementations: condition expressions, loop
+counts, globals, indirect calls and object layouts remain TODO-marked and are
+not executable parity.
 
 ## Limitations
 
@@ -203,6 +214,7 @@ semantics for unknown globals, indirect calls or missing PDB layouts.
   original source; the reconstruction in `src/` is written from behaviour, not
   from the pseudocode's shape.
 * `std::` RTTI entries are runtime noise and are excluded from the feature map.
-* The complete-coverage records are source-level transcriptions. Unknown
-  globals, indirect calls, calling conventions and object layouts remain marked
-  with specific TODOs; they are not a runnable reimplementation of every body.
+* The complete-coverage accessors are compiled structural traces, not semantic
+  equivalents. Unknown globals, indirect calls, calling conventions and object
+  layouts remain marked with specific TODOs; they are not a runnable
+  reimplementation of every body.

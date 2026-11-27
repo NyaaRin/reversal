@@ -68,16 +68,19 @@ inventory address has an `ok` body (including the two recovered bodies), every
 `functions.tsv` path exists, and every callgraph/xref caller is an inventory
 function. It exits PASS only when all 7,656 rows close.
 
-## Complete reconstructed-source coverage
+## Complete compiled reconstructed-source coverage
 
-`src/reconstructed/` maps **7,656/7,656 inventory addresses** to compilable
-C++17 records, with **0 unmapped** and **0 stubs**. The generator
-`re/tools/gen_reconstructed_source.py` writes 60 chunks (30.18 MiB) and
-`src/reconstructed/coverage.tsv`; every row names the chunk source file and a
-unique `Function_0x...` accessor. The records carry the full decompiled body
-(16.29 MiB), body SHA-256, 80,593 control-flow lines, 17,273 call targets,
-22,280 data references, 7,732 string literals and 52,123 explicit TODO markers
-for unknown globals, indirect calls and missing PDB/layout information.
+`src/reconstructed/` maps **7,656/7,656 inventory addresses** to compiled
+C++17 accessors, with **0 unmapped** and **0 stubs**. The generator
+`re/tools/gen_reconstructed_source.py` writes 60 chunks (**73,423,017 bytes**,
+70.02 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
+source file and a unique `Function_0x...` accessor. Accessors contain
+**416,099 audited executable statement/reference lines**, **312,958
+`trace.statement` calls**, **49,305 real C++ control nodes**, **7,732 actual
+string-literal calls**, and resolved references to **4,331 extern call thunks**
+plus **4,333 extern data-table symbols** in `src/reconstructed/symbols.h`. The
+complete decompiled body (16.29 MiB) remains a SHA-256-verified audit payload,
+not the executable accessor payload.
 
 ```
 py -3 re/tools/gen_reconstructed_source.py
@@ -85,11 +88,14 @@ py -3 re/tools/check_reconstructed_source.py
 ```
 
 The checker prints `PASS 7656/7656 inventory functions mapped; unmapped=0
-stubs=0`. `re/tools/build_reconstructed_check.bat` compiles all 60 chunks and
+stubs=0` and mechanically audits each accessor's executable/statement/control
+counts, actual call/data/string references, symbol declarations and body hash.
+`re/tools/build_reconstructed_check.bat` compiles all 60 chunks and
 `src/reconstructed/compile_check.cpp` with MSVC C++17. The hand-translated
-executable code under `src/features/**` is unchanged. These records are a
-source-level transcription, not semantic parity: unknown globals, indirect
-calls, calling conventions and object layouts remain explicitly TODO.
+executable code under `src/features/**` is unchanged. The generated accessors
+are compiled structural traces, not behaviorally equivalent implementations:
+unknown globals, indirect calls, calling conventions and object layouts remain
+explicitly TODO.
 
 ## Hooks / offsets
 

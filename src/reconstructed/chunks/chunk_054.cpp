@@ -1,6 +1,8 @@
 // Generated complete-corpus translation chunk.
 // Generator: re/tools/gen_reconstructed_source.py
 #include "../reconstruction.h"
+#include "../trace_runtime.h"
+#include "../symbols.h"
 
 namespace sf::reconstructed {
 
@@ -38,12 +40,27 @@ void FUN_1802f4fd1(undefined8 param_1,longlong param_2)
     R"F1802f4fd1T()F1802f4fd1T",
     R"F1802f4fd1F(10: if ((*(uint *)(param_2 + 0x24) & 0x10) != 0) {
 14: return;)F1802f4fd1F",
-    R"F1802f4fd1U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f4fd1U",
+    R"F1802f4fd1U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f4fd1U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f4fd1() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f4fd1", "FUN_1802f4fd1");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 35fcca4220d797621ab09d93021e3e663e39a90fc8a0cc49c4d2e1375c5994fd
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f4fd1(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x24) & 0x10) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xffffffef;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x188);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f4fd1;
 }
 
@@ -81,12 +98,27 @@ void FUN_1802f501e(undefined8 param_1,longlong param_2)
     R"F1802f501eT()F1802f501eT",
     R"F1802f501eF(10: if ((*(uint *)(param_2 + 0x24) & 0x80) != 0) {
 14: return;)F1802f501eF",
-    R"F1802f501eU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f501eU",
+    R"F1802f501eU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f501eU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f501e() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f501e", "FUN_1802f501e");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: d77245e3efb56d9594a79725322242f899a9b082489d78ac8227b4fac7ccea44
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f501e(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x24) & 0x80) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xffffff7f;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x188);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f501e;
 }
 
@@ -124,12 +156,27 @@ void FUN_1802f504c(undefined8 param_1,longlong param_2)
     R"F1802f504cT()F1802f504cT",
     R"F1802f504cF(10: if ((*(uint *)(param_2 + 0x24) & 0x100) != 0) {
 14: return;)F1802f504cF",
-    R"F1802f504cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f504cU",
+    R"F1802f504cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f504cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f504c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f504c", "FUN_1802f504c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 1f93ec32e525a77deb5de9ddac5da1958d95b7b2c37b5be879d50200a78a4934
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f504c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x24) & 0x100) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xfffffeff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1a8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f504c;
 }
 
@@ -167,12 +214,27 @@ void FUN_1802f509e(undefined8 param_1,longlong param_2)
     R"F1802f509eT()F1802f509eT",
     R"F1802f509eF(10: if ((*(uint *)(param_2 + 0x24) & 0x800) != 0) {
 14: return;)F1802f509eF",
-    R"F1802f509eU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f509eU",
+    R"F1802f509eU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f509eU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f509e() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f509e", "FUN_1802f509e");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 49aa562efb8650e8fcf76b32fbd7420674998fa027e53adf47a625f8080f7893
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f509e(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x24) & 0x800) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xfffff7ff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1a8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f509e;
 }
 
@@ -210,12 +272,27 @@ void FUN_1802f50cc(undefined8 param_1,longlong param_2)
     R"F1802f50ccT()F1802f50ccT",
     R"F1802f50ccF(10: if ((*(uint *)(param_2 + 0x24) & 0x1000) != 0) {
 14: return;)F1802f50ccF",
-    R"F1802f50ccU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f50ccU",
+    R"F1802f50ccU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f50ccU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f50cc() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f50cc", "FUN_1802f50cc");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 274cc48895b47af26c58b51445ca7f8b4ef88ae000bd780941b1e4e1859be52b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f50cc(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x24) & 0x1000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x24) = *(uint *)(param_2 + 0x24) & 0xffffefff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x28);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f50cc;
 }
 
@@ -253,12 +330,27 @@ void FUN_1802f5268(undefined8 param_1,longlong param_2)
     R"F1802f5268T()F1802f5268T",
     R"F1802f5268F(10: if ((*(uint *)(param_2 + 0x20) & 1) != 0) {
 14: return;)F1802f5268F",
-    R"F1802f5268U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5268U",
+    R"F1802f5268U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5268U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5268() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5268", "FUN_1802f5268");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 6904572d0f34fac8b798f2f1f5e7f15deace68871aae5d5a61f9dd254b37359d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5268(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x120);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5268;
 }
 
@@ -296,12 +388,27 @@ void FUN_1802f52b5(undefined8 param_1,longlong param_2)
     R"F1802f52b5T()F1802f52b5T",
     R"F1802f52b5F(10: if ((*(uint *)(param_2 + 0x20) & 8) != 0) {
 14: return;)F1802f52b5F",
-    R"F1802f52b5U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f52b5U",
+    R"F1802f52b5U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f52b5U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f52b5() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f52b5", "FUN_1802f52b5");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: d4b5ef78c45797a91904c91743cb764d05b246bcad84f4a36b38a6d5c694878d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f52b5(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffff7;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x120);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f52b5;
 }
 
@@ -339,12 +446,27 @@ void FUN_1802f52f6(undefined8 param_1,longlong param_2)
     R"F1802f52f6T()F1802f52f6T",
     R"F1802f52f6F(10: if ((*(uint *)(param_2 + 0x20) & 0x1000) != 0) {
 14: return;)F1802f52f6F",
-    R"F1802f52f6U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f52f6U",
+    R"F1802f52f6U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f52f6U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f52f6() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f52f6", "FUN_1802f52f6");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: bcc852a9b8494dc1b2c9f1a9e3663c7907fd0dce343766bd39c0ef958cd9abfa
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f52f6(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x1000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffefff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x140);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f52f6;
 }
 
@@ -382,12 +504,27 @@ void FUN_1802f5348(undefined8 param_1,longlong param_2)
     R"F1802f5348T()F1802f5348T",
     R"F1802f5348F(10: if ((*(uint *)(param_2 + 0x20) & 0x8000) != 0) {
 14: return;)F1802f5348F",
-    R"F1802f5348U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5348U",
+    R"F1802f5348U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5348U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5348() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5348", "FUN_1802f5348");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: fe2914ed16f13f7e18f4818fe8f377ff21e89280211c52da1888856d7fcd601f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5348(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x8000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffff7fff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x140);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5348;
 }
 
@@ -425,12 +562,27 @@ void FUN_1802f5376(undefined8 param_1,longlong param_2)
     R"F1802f5376T()F1802f5376T",
     R"F1802f5376F(10: if ((*(uint *)(param_2 + 0x20) & 0x10000) != 0) {
 14: return;)F1802f5376F",
-    R"F1802f5376U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5376U",
+    R"F1802f5376U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5376U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5376() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5376", "FUN_1802f5376");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 8d45987b56d8bc1c8cd7be922373b941f1498dc30ad45f315c05d954705a9f47
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5376(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x10000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffeffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x160);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5376;
 }
 
@@ -468,12 +620,27 @@ void FUN_1802f53c8(undefined8 param_1,longlong param_2)
     R"F1802f53c8T()F1802f53c8T",
     R"F1802f53c8F(10: if ((*(uint *)(param_2 + 0x20) & 0x80000) != 0) {
 14: return;)F1802f53c8F",
-    R"F1802f53c8U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f53c8U",
+    R"F1802f53c8U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f53c8U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f53c8() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f53c8", "FUN_1802f53c8");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 926eccdebdb8badd128e3ef0f68aab6983da30c50b62136f734441671830a597
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f53c8(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x80000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfff7ffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x160);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f53c8;
 }
 
@@ -511,12 +678,27 @@ void FUN_1802f53f6(undefined8 param_1,longlong param_2)
     R"F1802f53f6T()F1802f53f6T",
     R"F1802f53f6F(10: if ((*(uint *)(param_2 + 0x20) & 0x100000) != 0) {
 14: return;)F1802f53f6F",
-    R"F1802f53f6U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f53f6U",
+    R"F1802f53f6U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f53f6U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f53f6() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f53f6", "FUN_1802f53f6");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 4c7d811f5ad036f3272de6fec34b9cf95c69fd34285ce5c0a29294b6fd69548c
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f53f6(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x100000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffefffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x180);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f53f6;
 }
 
@@ -554,12 +736,27 @@ void FUN_1802f5448(undefined8 param_1,longlong param_2)
     R"F1802f5448T()F1802f5448T",
     R"F1802f5448F(10: if ((*(uint *)(param_2 + 0x20) & 0x800000) != 0) {
 14: return;)F1802f5448F",
-    R"F1802f5448U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5448U",
+    R"F1802f5448U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5448U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5448() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5448", "FUN_1802f5448");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 02e57c2740e857b30676dd9cb15a8dfa0ca56cf0ac7f496528011624a8642bf5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5448(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x800000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xff7fffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x180);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5448;
 }
 
@@ -597,12 +794,27 @@ void FUN_1802f5476(undefined8 param_1,longlong param_2)
     R"F1802f5476T()F1802f5476T",
     R"F1802f5476F(10: if ((*(uint *)(param_2 + 0x20) & 0x1000000) != 0) {
 14: return;)F1802f5476F",
-    R"F1802f5476U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5476U",
+    R"F1802f5476U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5476U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5476() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5476", "FUN_1802f5476");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 3b29eeece865c31f3022de94dfa1f1faa1549cf8e31ba9a2049d0a55e29e86df
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5476(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x1000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfeffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1a0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5476;
 }
 
@@ -640,12 +852,27 @@ void FUN_1802f54c8(undefined8 param_1,longlong param_2)
     R"F1802f54c8T()F1802f54c8T",
     R"F1802f54c8F(10: if ((*(uint *)(param_2 + 0x20) & 0x8000000) != 0) {
 14: return;)F1802f54c8F",
-    R"F1802f54c8U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f54c8U",
+    R"F1802f54c8U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f54c8U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f54c8() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f54c8", "FUN_1802f54c8");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: ee1568d98ac41f044f9fcc277fde2950ffab7bc1171c687e8d6540da55116ed8
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f54c8(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x8000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xf7ffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1a0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f54c8;
 }
 
@@ -683,12 +910,27 @@ void FUN_1802f54f6(undefined8 param_1,longlong param_2)
     R"F1802f54f6T()F1802f54f6T",
     R"F1802f54f6F(10: if ((*(uint *)(param_2 + 0x20) & 0x10000000) != 0) {
 14: return;)F1802f54f6F",
-    R"F1802f54f6U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f54f6U",
+    R"F1802f54f6U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f54f6U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f54f6() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f54f6", "FUN_1802f54f6");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 99211b437e97b5459a4ea04fd872ed20570d86fbfe0b59fa61c0ec72fc4b1054
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f54f6(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x10000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xefffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1c0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f54f6;
 }
 
@@ -726,12 +968,27 @@ void FUN_1802f5548(undefined8 param_1,longlong param_2)
     R"F1802f5548T()F1802f5548T",
     R"F1802f5548F(10: if ((*(uint *)(param_2 + 0x20) & 0x80000000) != 0) {
 14: return;)F1802f5548F",
-    R"F1802f5548U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5548U",
+    R"F1802f5548U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5548U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5548() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5548", "FUN_1802f5548");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: f7e70a6fd0ddc9c03011bd0850de3856914797140cc290147db7681d9e5eddb0
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5548(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x80000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0x7fffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1c0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5548;
 }
 
@@ -769,12 +1026,27 @@ void FUN_1802f5576(undefined8 param_1,longlong param_2)
     R"F1802f5576T()F1802f5576T",
     R"F1802f5576F(10: if ((*(uint *)(param_2 + 0x2c) & 1) != 0) {
 14: return;)F1802f5576F",
-    R"F1802f5576U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5576U",
+    R"F1802f5576U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5576U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5576() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5576", "FUN_1802f5576");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 5b7e4a528ce50a589310de7926dd6ebed3a27b929bcb9c1a6ca80b3fbaae67d4
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5576(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x2c) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x2c) = *(uint *)(param_2 + 0x2c) & 0xfffffffe;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1e0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5576;
 }
 
@@ -812,12 +1084,27 @@ void FUN_1802f55c3(undefined8 param_1,longlong param_2)
     R"F1802f55c3T()F1802f55c3T",
     R"F1802f55c3F(10: if ((*(uint *)(param_2 + 0x2c) & 8) != 0) {
 14: return;)F1802f55c3F",
-    R"F1802f55c3U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f55c3U",
+    R"F1802f55c3U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f55c3U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f55c3() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f55c3", "FUN_1802f55c3");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: c79f88d23f5b9e346a25c96dacb93fd0ee235d38d17b37517641449cb650e5a1
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f55c3(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x2c) & 8) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x2c) = *(uint *)(param_2 + 0x2c) & 0xfffffff7;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1e0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f55c3;
 }
 
@@ -855,12 +1142,27 @@ void FUN_1802f55ec(undefined8 param_1,longlong param_2)
     R"F1802f55ecT()F1802f55ecT",
     R"F1802f55ecF(10: if ((*(uint *)(param_2 + 0x20) & 0x10) != 0) {
 14: return;)F1802f55ecF",
-    R"F1802f55ecU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f55ecU",
+    R"F1802f55ecU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f55ecU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f55ec() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f55ec", "FUN_1802f55ec");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7818dc1b8536047d2d7f3b59955b9ec429ff6903e45fcf756b2c78c28b65964e
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f55ec(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x10) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffffef;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xc0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f55ec;
 }
 
@@ -898,12 +1200,27 @@ void FUN_1802f5639(undefined8 param_1,longlong param_2)
     R"F1802f5639T()F1802f5639T",
     R"F1802f5639F(10: if ((*(uint *)(param_2 + 0x20) & 0x80) != 0) {
 14: return;)F1802f5639F",
-    R"F1802f5639U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5639U",
+    R"F1802f5639U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5639U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5639() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5639", "FUN_1802f5639");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: a330de019288b96ca18a738a44cf8b9c380b9e2e4c86940f4a4aaad2d3ac7aef
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5639(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x80) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffff7f;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xc0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5639;
 }
 
@@ -941,12 +1258,27 @@ void FUN_1802f5667(undefined8 param_1,longlong param_2)
     R"F1802f5667T()F1802f5667T",
     R"F1802f5667F(10: if ((*(uint *)(param_2 + 0x20) & 0x100) != 0) {
 14: return;)F1802f5667F",
-    R"F1802f5667U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5667U",
+    R"F1802f5667U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5667U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5667() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5667", "FUN_1802f5667");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 05ed372b91b79fdc868ebb4d1f3a18ed134b9c95cb5842cd7fb24ca2a8796cd6
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5667(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x100) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffeff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xe0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5667;
 }
 
@@ -984,12 +1316,27 @@ void FUN_1802f56b9(undefined8 param_1,longlong param_2)
     R"F1802f56b9T()F1802f56b9T",
     R"F1802f56b9F(10: if ((*(uint *)(param_2 + 0x20) & 0x800) != 0) {
 14: return;)F1802f56b9F",
-    R"F1802f56b9U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f56b9U",
+    R"F1802f56b9U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f56b9U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f56b9() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f56b9", "FUN_1802f56b9");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7db9131466317a680392796364e97529c8f0301a9fe3fd5b50e8c4a5bb1ff709
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f56b9(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x800) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffff7ff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xe0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f56b9;
 }
 
@@ -1027,12 +1374,27 @@ void FUN_1802f5867(undefined8 param_1,longlong param_2)
     R"F1802f5867T()F1802f5867T",
     R"F1802f5867F(10: if ((*(uint *)(param_2 + 0x2c) & 0x20) != 0) {
 14: return;)F1802f5867F",
-    R"F1802f5867U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5867U",
+    R"F1802f5867U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5867U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5867() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5867", "FUN_1802f5867");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 75ecdd0e7fc1ad8aa320f89d41bf5644096c0d1f6fc8f2334c4785dd71ec2ada
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5867(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x2c) & 0x20) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x2c) = *(uint *)(param_2 + 0x2c) & 0xffffffdf;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x100);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5867;
 }
 
@@ -1070,12 +1432,27 @@ void FUN_1802f58b4(undefined8 param_1,longlong param_2)
     R"F1802f58b4T()F1802f58b4T",
     R"F1802f58b4F(10: if ((*(uint *)(param_2 + 0x2c) & 0x100) != 0) {
 14: return;)F1802f58b4F",
-    R"F1802f58b4U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f58b4U",
+    R"F1802f58b4U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f58b4U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f58b4() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f58b4", "FUN_1802f58b4");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 5bcda262c31f04bbb8e0e0ff3015e40caf5530ada93a8a05cd371bb927d4db24
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f58b4(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x2c) & 0x100) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x2c) = *(uint *)(param_2 + 0x2c) & 0xfffffeff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x100);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f58b4;
 }
 
@@ -1113,12 +1490,28 @@ void FUN_1802f5a6c(undefined8 param_1,longlong param_2)
     R"F1802f5a6cT()F1802f5a6cT",
     R"F1802f5a6cF(10: if ((*(uint *)(param_2 + 0x20) & 1) != 0) {
 14: return;)F1802f5a6cF",
-    R"F1802f5a6cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5a6cU",
+    R"F1802f5a6cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5a6cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5a6c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5a6c", "FUN_1802f5a6c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180025840", reinterpret_cast<const void*>(&image::FUN_180025840));
+    // body sha256: 888e94892a6fa5ed8b556a64ab0cba57d6d77cb2530f1c08c7710787d8f2e80c
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5a6c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
+                trace.statement("FUN_180025840(*(undefined8 *)(param_2 + 0x70));");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5a6c;
 }
 
@@ -1157,12 +1550,28 @@ void FUN_1802f5a92(undefined8 param_1,longlong param_2)
     R"F1802f5a92T()F1802f5a92T",
     R"F1802f5a92F(10: if ((*(uint *)(param_2 + 0x20) & 8) != 0) {
 15: return;)F1802f5a92F",
-    R"F1802f5a92U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5a92U",
+    R"F1802f5a92U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5a92U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5a92() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5a92", "FUN_1802f5a92");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 0ac415d377caf5f5d17986c00f441bd185573908d333c2af1b94c0d63d96afcf
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5a92(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffff7;");
+                trace.statement("std::basic_ios<char,std::char_traits<char>_>::~basic_ios<char,std::char_traits<char>_>");
+                trace.statement("((basic_ios<char,std::char_traits<char>_> *)(param_2 + 0x130));");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5a92;
 }
 
@@ -1200,12 +1609,27 @@ void FUN_1802f5b0b(undefined8 param_1,longlong param_2)
     R"F1802f5b0bT()F1802f5b0bT",
     R"F1802f5b0bF(10: if ((*(uint *)(param_2 + 0x20) & 2) != 0) {
 14: return;)F1802f5b0bF",
-    R"F1802f5b0bU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5b0bU",
+    R"F1802f5b0bU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5b0bU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5b0b() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5b0b", "FUN_1802f5b0b");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: c33d932a594a5dc2c0ab69363ded5435c85c7653da199ef390c8e57333e348b9
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5b0b(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x50);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5b0b;
 }
 
@@ -1243,12 +1667,27 @@ void FUN_1802f5b31(undefined8 param_1,longlong param_2)
     R"F1802f5b31T()F1802f5b31T",
     R"F1802f5b31F(10: if ((*(uint *)(param_2 + 0x20) & 4) != 0) {
 14: return;)F1802f5b31F",
-    R"F1802f5b31U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5b31U",
+    R"F1802f5b31U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5b31U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5b31() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5b31", "FUN_1802f5b31");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 77605decbbf5b3ac552e8edfb2ca3bf3211397957cb6b3eb5aa61910d49c2922
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5b31(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x30);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5b31;
 }
 
@@ -1287,12 +1726,28 @@ void FUN_1802f5b90(undefined8 param_1,longlong param_2)
     R"F1802f5b90T()F1802f5b90T",
     R"F1802f5b90F(10: if ((*(uint *)(param_2 + 0x20) & 1) != 0) {
 15: return;)F1802f5b90F",
-    R"F1802f5b90U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5b90U",
+    R"F1802f5b90U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5b90U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5b90() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5b90", "FUN_1802f5b90");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 72076474a9b55e1c2f28b2936f76e5119f131845cb9ce3847bf4e455f4f4e768
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5b90(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
+                trace.statement("std::basic_ios<char,std::char_traits<char>_>::~basic_ios<char,std::char_traits<char>_>");
+                trace.statement("((basic_ios<char,std::char_traits<char>_> *)(param_2 + 0x118));");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5b90;
 }
 
@@ -1330,12 +1785,27 @@ void FUN_1802f5c09(undefined8 param_1,longlong param_2)
     R"F1802f5c09T()F1802f5c09T",
     R"F1802f5c09F(10: if ((*(uint *)(param_2 + 0x20) & 2) != 0) {
 14: return;)F1802f5c09F",
-    R"F1802f5c09U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5c09U",
+    R"F1802f5c09U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5c09U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5c09() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5c09", "FUN_1802f5c09");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: e8b972fb642a3fad5006517bb366badf98d65e91d3dbc989daedb084fd0feb69
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5c09(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x30);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5c09;
 }
 
@@ -1373,12 +1843,27 @@ void FUN_1802f5c2f(undefined8 param_1,longlong param_2)
     R"F1802f5c2fT()F1802f5c2fT",
     R"F1802f5c2fF(10: if ((*(uint *)(param_2 + 0x20) & 4) != 0) {
 14: return;)F1802f5c2fF",
-    R"F1802f5c2fU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5c2fU",
+    R"F1802f5c2fU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5c2fU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5c2f() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5c2f", "FUN_1802f5c2f");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: aa1871e85c074086652dc35561173176b0d1f1f39ce46b54a7cb1c5dadbbd10d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5c2f(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x30);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5c2f;
 }
 
@@ -1412,13 +1897,27 @@ void FUN_1802f5d40(void)
     R"F1802f5d40D(DAT_180426244)F1802f5d40D",
     R"F1802f5d40T()F1802f5d40T",
     R"F1802f5d40F(11: return;)F1802f5d40F",
-    R"F1802f5d40U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802f5d40U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_180426244.)F1802f5d40U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180426244.)F1802f5d40U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5d40() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5d40", "FUN_1802f5d40");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180426244.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.data_ref("DAT_180426244", static_cast<const void*>(&image::DAT_180426244));
+    // body sha256: 2fa3ea4bdcb43b26f48ba280b43a3f240c82390dd0c07950b3eb974d035124f5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5d40(void)");
+        {
+            trace.statement("DAT_180426244 = DAT_180426244 & 0xfffffffe;");
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5d40;
 }
 
@@ -1456,12 +1955,27 @@ void FUN_1802f5dac(undefined8 param_1,longlong param_2)
     R"F1802f5dacT()F1802f5dacT",
     R"F1802f5dacF(10: if ((*(uint *)(param_2 + 0x30) & 1) != 0) {
 14: return;)F1802f5dacF",
-    R"F1802f5dacU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5dacU",
+    R"F1802f5dacU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5dacU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5dac() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5dac", "FUN_1802f5dac");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: c556acecde20e7c1ffeede4f52dabd3db86db99272e3bff1c66ea79ad24106c4
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5dac(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffe;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x58);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5dac;
 }
 
@@ -1499,12 +2013,28 @@ void FUN_1802f5de0(undefined8 param_1,longlong param_2)
     R"F1802f5de0T()F1802f5de0T",
     R"F1802f5de0F(10: if ((*(uint *)(param_2 + 0x20) & 1) != 0) {
 14: return;)F1802f5de0F",
-    R"F1802f5de0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5de0U",
+    R"F1802f5de0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5de0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5de0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5de0", "FUN_1802f5de0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180209990", reinterpret_cast<const void*>(&image::FUN_180209990));
+    // body sha256: 0c7d39910675b618577982fac8f5ad6534a013128c0e1d99bdb69c2b9028fde2
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5de0(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
+                trace.statement("FUN_180209990(*(undefined8 *)(param_2 + 0x28));");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5de0;
 }
 
@@ -1542,12 +2072,27 @@ void FUN_1802f5e55(undefined8 param_1,longlong param_2)
     R"F1802f5e55T()F1802f5e55T",
     R"F1802f5e55F(10: if ((*(uint *)(param_2 + 0x20) & 2) != 0) {
 14: return;)F1802f5e55F",
-    R"F1802f5e55U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5e55U",
+    R"F1802f5e55U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5e55U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5e55() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5e55", "FUN_1802f5e55");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7377d5fa9ea749fe2bf35831258012eb4e2fc86897bcd00a90322b930761703c
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5e55(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xe8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5e55;
 }
 
@@ -1585,12 +2130,27 @@ void FUN_1802f5e7e(undefined8 param_1,longlong param_2)
     R"F1802f5e7eT()F1802f5e7eT",
     R"F1802f5e7eF(10: if ((*(uint *)(param_2 + 0x20) & 4) != 0) {
 14: return;)F1802f5e7eF",
-    R"F1802f5e7eU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5e7eU",
+    R"F1802f5e7eU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5e7eU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5e7e() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5e7e", "FUN_1802f5e7e");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 926c63c03cad87b74817be408c82ea7cff28e0a608427f0fb6ec60b88dff65cd
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5e7e(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xa0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5e7e;
 }
 
@@ -1623,12 +2183,23 @@ undefined8 FUN_1802f5eea(void)
     R"F1802f5eeaD()F1802f5eeaD",
     R"F1802f5eeaT()F1802f5eeaT",
     R"F1802f5eeaF(10: return 0;)F1802f5eeaF",
-    R"F1802f5eeaU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5eeaU",
+    R"F1802f5eeaU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5eeaU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5eea() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5eea", "FUN_1802f5eea");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 33d231f17a1f5ec65bb7fd16e910da22f0443dbab908a5b9cd3e945fd5c40886
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f5eea(void)");
+        {
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f5eea;
 }
 
@@ -1661,12 +2232,23 @@ undefined8 FUN_1802f5f08(void)
     R"F1802f5f08D()F1802f5f08D",
     R"F1802f5f08T()F1802f5f08T",
     R"F1802f5f08F(10: return 0;)F1802f5f08F",
-    R"F1802f5f08U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5f08U",
+    R"F1802f5f08U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5f08U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5f08() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5f08", "FUN_1802f5f08");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 872e7a52c3c17c5f858a7c4d1dc198528f1723639be9c49f77a1749c4f350b14
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f5f08(void)");
+        {
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f5f08;
 }
 
@@ -1700,13 +2282,27 @@ void FUN_1802f5f26(void)
     R"F1802f5f26D(DAT_180427800)F1802f5f26D",
     R"F1802f5f26T()F1802f5f26T",
     R"F1802f5f26F(11: return;)F1802f5f26F",
-    R"F1802f5f26U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802f5f26U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_180427800.)F1802f5f26U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180427800.)F1802f5f26U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5f26() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5f26", "FUN_1802f5f26");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180427800.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.data_ref("DAT_180427800", static_cast<const void*>(&image::DAT_180427800));
+    // body sha256: 8f66355270d46db8631f3fdf03733d162ff2b333e75b53e51dbc3bbba7b6ec5a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f5f26(void)");
+        {
+            trace.statement("DAT_180427800 = DAT_180427800 & 0xfffffffe;");
+            trace.statement("return;");
+        }
     return kFunction_0x1802f5f26;
 }
 
@@ -1739,12 +2335,23 @@ undefined8 FUN_1802f5f78(void)
     R"F1802f5f78D()F1802f5f78D",
     R"F1802f5f78T()F1802f5f78T",
     R"F1802f5f78F(10: return 0;)F1802f5f78F",
-    R"F1802f5f78U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5f78U",
+    R"F1802f5f78U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5f78U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5f78() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5f78", "FUN_1802f5f78");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 50a01fcd8b103685a5edc491ae2879dcb32499f670ef0b120a740848d8495678
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f5f78(void)");
+        {
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f5f78;
 }
 
@@ -1777,12 +2384,23 @@ undefined8 FUN_1802f5f96(void)
     R"F1802f5f96D()F1802f5f96D",
     R"F1802f5f96T()F1802f5f96T",
     R"F1802f5f96F(10: return 0;)F1802f5f96F",
-    R"F1802f5f96U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f5f96U",
+    R"F1802f5f96U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f5f96U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f5f96() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f5f96", "FUN_1802f5f96");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: be6882c7e9f962950e500e66d368290d075bd7fa3aa9922ff066af3678bfa667
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f5f96(void)");
+        {
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f5f96;
 }
 
@@ -1816,12 +2434,24 @@ undefined8 FUN_1802f6070(undefined8 param_1,longlong param_2)
     R"F1802f6070D()F1802f6070D",
     R"F1802f6070T()F1802f6070T",
     R"F1802f6070F(11: return 0;)F1802f6070F",
-    R"F1802f6070U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6070U",
+    R"F1802f6070U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6070U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6070() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6070", "FUN_1802f6070");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: b09991d39b36ae9a830426a443a76ce5bb26c38001be3232af873800ce43a61d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f6070(undefined8 param_1,longlong param_2)");
+        {
+            trace.statement("*(undefined8 *)(*(longlong *)(param_2 + 0x80) + 8) = 0;");
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f6070;
 }
 
@@ -1859,13 +2489,29 @@ undefined8 FUN_1802f60a0(undefined8 param_1,longlong param_2)
     R"F1802f60a0D()F1802f60a0D",
     R"F1802f60a0T()F1802f60a0T",
     R"F1802f60a0F(15: return 0;)F1802f60a0F",
-    R"F1802f60a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802f60a0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 12: puVar1 = (undefined8 *)(**(code **)(**(longlong **)(param_2 + 0xa8) + 0x48))();.)F1802f60a0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f60a0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f60a0", "FUN_1802f60a0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 12: puVar1 = (undefined8 *)(**(code **)(**(longlong **)(param_2 + 0xa8) + 0x48))();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: af581bd675eae3f1cd49562504fb035b865ff4a7489aeffea049fa62717487c8
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f60a0(undefined8 param_1,longlong param_2)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("puVar1 = (undefined8 *)(**(code **)(**(longlong **)(param_2 + 0xa8) + 0x48))();");
+            trace.statement("*(undefined8 *)(param_2 + 0xf0) = *puVar1;");
+            trace.statement("*(undefined4 *)(param_2 + 0xf8) = *(undefined4 *)(puVar1 + 1);");
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f60a0;
 }
 
@@ -1898,12 +2544,23 @@ undefined8 FUN_1802f60e0(void)
     R"F1802f60e0D()F1802f60e0D",
     R"F1802f60e0T()F1802f60e0T",
     R"F1802f60e0F(10: return 0;)F1802f60e0F",
-    R"F1802f60e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f60e0U",
+    R"F1802f60e0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f60e0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f60e0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f60e0", "FUN_1802f60e0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 369a50314b7711463ab66d5b25063f7a3b034d398995674fdd23230aee0d6e55
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f60e0(void)");
+        {
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f60e0;
 }
 
@@ -1936,12 +2593,23 @@ undefined8 FUN_1802f60fe(void)
     R"F1802f60feD()F1802f60feD",
     R"F1802f60feT()F1802f60feT",
     R"F1802f60feF(10: return 0;)F1802f60feF",
-    R"F1802f60feU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f60feU",
+    R"F1802f60feU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f60feU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f60fe() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f60fe", "FUN_1802f60fe");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 2141a9c7f1475542ee3d4e837c583e41c7c5de269f304c25cf6f369d3ac96829
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f60fe(void)");
+        {
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f60fe;
 }
 
@@ -1974,12 +2642,23 @@ undefined8 FUN_1802f611c(void)
     R"F1802f611cD()F1802f611cD",
     R"F1802f611cT()F1802f611cT",
     R"F1802f611cF(10: return 0;)F1802f611cF",
-    R"F1802f611cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f611cU",
+    R"F1802f611cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f611cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f611c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f611c", "FUN_1802f611c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: c6c2930aa6c8780b1254bfc180553711fe5281060ccd7aef90dd0911cc6ad410
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802f611c(void)");
+        {
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802f611c;
 }
 
@@ -2017,12 +2696,27 @@ void FUN_1802f614c(undefined8 param_1,longlong param_2)
     R"F1802f614cT()F1802f614cT",
     R"F1802f614cF(10: if ((*(uint *)(param_2 + 0x40) & 0x10000) != 0) {
 14: return;)F1802f614cF",
-    R"F1802f614cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f614cU",
+    R"F1802f614cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f614cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f614c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f614c", "FUN_1802f614c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: fc74db0a57b13e9882bc961fa021fe368615bc05fbda1906b20626c9f33cc874
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f614c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x10000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffeffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x90);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f614c;
 }
 
@@ -2060,12 +2754,27 @@ void FUN_1802f617a(undefined8 param_1,longlong param_2)
     R"F1802f617aT()F1802f617aT",
     R"F1802f617aF(10: if ((*(uint *)(param_2 + 0x40) & 0x20000) != 0) {
 14: return;)F1802f617aF",
-    R"F1802f617aU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f617aU",
+    R"F1802f617aU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f617aU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f617a() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f617a", "FUN_1802f617a");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 5595a69e22f4f1facf35b922ffe293cac403ac4694cc82631a4864dc886a6330
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f617a(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x20000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffdffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x90);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f617a;
 }
 
@@ -2103,12 +2812,27 @@ void FUN_1802f61b4(undefined8 param_1,longlong param_2)
     R"F1802f61b4T()F1802f61b4T",
     R"F1802f61b4F(10: if ((*(uint *)(param_2 + 0x40) & 0x40000) != 0) {
 14: return;)F1802f61b4F",
-    R"F1802f61b4U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f61b4U",
+    R"F1802f61b4U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f61b4U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f61b4() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f61b4", "FUN_1802f61b4");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: c6b3e3e7778474fff22ba91edd822dda2087f5c19f371d1b42b7ca38e8b745f0
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f61b4(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x40000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffbffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xb0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f61b4;
 }
 
@@ -2146,12 +2870,27 @@ void FUN_1802f61e2(undefined8 param_1,longlong param_2)
     R"F1802f61e2T()F1802f61e2T",
     R"F1802f61e2F(10: if ((*(uint *)(param_2 + 0x40) & 0x80000) != 0) {
 14: return;)F1802f61e2F",
-    R"F1802f61e2U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f61e2U",
+    R"F1802f61e2U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f61e2U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f61e2() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f61e2", "FUN_1802f61e2");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 1295e6a5ca1abdfbbae04dbddc297d153c63c61af0188f1083b48e3af987c3d2
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f61e2(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x80000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfff7ffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xb0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f61e2;
 }
 
@@ -2189,12 +2928,27 @@ void FUN_1802f621c(undefined8 param_1,longlong param_2)
     R"F1802f621cT()F1802f621cT",
     R"F1802f621cF(10: if ((*(uint *)(param_2 + 0x40) & 0x100000) != 0) {
 14: return;)F1802f621cF",
-    R"F1802f621cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f621cU",
+    R"F1802f621cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f621cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f621c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f621c", "FUN_1802f621c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 981e6892a17487e77b1c9ab279a57d75537b1e6d52a45573bf6f4f5a0abc84af
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f621c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x100000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffefffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xd0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f621c;
 }
 
@@ -2232,12 +2986,27 @@ void FUN_1802f624a(undefined8 param_1,longlong param_2)
     R"F1802f624aT()F1802f624aT",
     R"F1802f624aF(10: if ((*(uint *)(param_2 + 0x40) & 0x200000) != 0) {
 14: return;)F1802f624aF",
-    R"F1802f624aU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f624aU",
+    R"F1802f624aU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f624aU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f624a() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f624a", "FUN_1802f624a");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 9d6f3b39594d9f37c1efec4d37248a715964d5b0969e6833c772922f3e87d645
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f624a(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x200000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffdfffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xd0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f624a;
 }
 
@@ -2275,12 +3044,27 @@ void FUN_1802f6284(undefined8 param_1,longlong param_2)
     R"F1802f6284T()F1802f6284T",
     R"F1802f6284F(10: if ((*(uint *)(param_2 + 0x40) & 0x400000) != 0) {
 14: return;)F1802f6284F",
-    R"F1802f6284U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6284U",
+    R"F1802f6284U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6284U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6284() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6284", "FUN_1802f6284");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 54a77e8d62c4df7ac80167d999eb6ceedec8daa2deadac502f383ebdc563e29a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6284(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x400000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffbfffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xf0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6284;
 }
 
@@ -2318,12 +3102,27 @@ void FUN_1802f62b2(undefined8 param_1,longlong param_2)
     R"F1802f62b2T()F1802f62b2T",
     R"F1802f62b2F(10: if ((*(uint *)(param_2 + 0x40) & 0x800000) != 0) {
 14: return;)F1802f62b2F",
-    R"F1802f62b2U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f62b2U",
+    R"F1802f62b2U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f62b2U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f62b2() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f62b2", "FUN_1802f62b2");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 067af2506bfa7656ff0b0b55ad0aeb10ba402ead3d1268274e804c00b3299865
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f62b2(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x800000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xff7fffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xf0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f62b2;
 }
 
@@ -2361,12 +3160,27 @@ void FUN_1802f62ec(undefined8 param_1,longlong param_2)
     R"F1802f62ecT()F1802f62ecT",
     R"F1802f62ecF(10: if ((*(uint *)(param_2 + 0x40) & 0x1000000) != 0) {
 14: return;)F1802f62ecF",
-    R"F1802f62ecU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f62ecU",
+    R"F1802f62ecU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f62ecU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f62ec() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f62ec", "FUN_1802f62ec");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: f781c2ad32a1b75440b0dc5bf5c95f20c4764733770c010d2c0b6a9b3ff5b151
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f62ec(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x1000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfeffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x110);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f62ec;
 }
 
@@ -2404,12 +3218,27 @@ void FUN_1802f631a(undefined8 param_1,longlong param_2)
     R"F1802f631aT()F1802f631aT",
     R"F1802f631aF(10: if ((*(uint *)(param_2 + 0x40) & 0x2000000) != 0) {
 14: return;)F1802f631aF",
-    R"F1802f631aU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f631aU",
+    R"F1802f631aU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f631aU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f631a() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f631a", "FUN_1802f631a");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 1ac3bf5e80145e381a1e06f1b4087bf53ef46f2efb43deeba4b5fba5c8a7b9c1
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f631a(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x2000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfdffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x110);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f631a;
 }
 
@@ -2447,12 +3276,27 @@ void FUN_1802f6354(undefined8 param_1,longlong param_2)
     R"F1802f6354T()F1802f6354T",
     R"F1802f6354F(10: if ((*(uint *)(param_2 + 0x40) & 0x4000000) != 0) {
 14: return;)F1802f6354F",
-    R"F1802f6354U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6354U",
+    R"F1802f6354U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6354U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6354() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6354", "FUN_1802f6354");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: d436dea027732b535f6441632d9747eaba5e25115d1ed8f865f594e52fa29783
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6354(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x4000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfbffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x130);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6354;
 }
 
@@ -2490,12 +3334,27 @@ void FUN_1802f6382(undefined8 param_1,longlong param_2)
     R"F1802f6382T()F1802f6382T",
     R"F1802f6382F(10: if ((*(uint *)(param_2 + 0x40) & 0x8000000) != 0) {
 14: return;)F1802f6382F",
-    R"F1802f6382U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6382U",
+    R"F1802f6382U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6382U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6382() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6382", "FUN_1802f6382");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: d09d6cb8688a8383e2f9b07d6daf6fe108e4c5624315ced6e0c4bb3a3dd9f890
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6382(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x8000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xf7ffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x130);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6382;
 }
 
@@ -2533,12 +3392,27 @@ void FUN_1802f63bc(undefined8 param_1,longlong param_2)
     R"F1802f63bcT()F1802f63bcT",
     R"F1802f63bcF(10: if ((*(uint *)(param_2 + 0x40) & 0x10000000) != 0) {
 14: return;)F1802f63bcF",
-    R"F1802f63bcU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f63bcU",
+    R"F1802f63bcU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f63bcU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f63bc() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f63bc", "FUN_1802f63bc");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: b70674219403c6fb62031d11dec49f11ca0a53323e709064d24b804ac86ae393
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f63bc(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x10000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xefffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x150);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f63bc;
 }
 
@@ -2576,12 +3450,27 @@ void FUN_1802f63ea(undefined8 param_1,longlong param_2)
     R"F1802f63eaT()F1802f63eaT",
     R"F1802f63eaF(10: if ((*(uint *)(param_2 + 0x40) & 0x20000000) != 0) {
 14: return;)F1802f63eaF",
-    R"F1802f63eaU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f63eaU",
+    R"F1802f63eaU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f63eaU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f63ea() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f63ea", "FUN_1802f63ea");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 47b193342dcf57539d22b1aceffb778540944a169acce58ce788294a13ed5aee
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f63ea(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x20000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xdfffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x150);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f63ea;
 }
 
@@ -2619,12 +3508,27 @@ void FUN_1802f6424(undefined8 param_1,longlong param_2)
     R"F1802f6424T()F1802f6424T",
     R"F1802f6424F(10: if ((*(uint *)(param_2 + 0x40) & 0x40000000) != 0) {
 14: return;)F1802f6424F",
-    R"F1802f6424U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6424U",
+    R"F1802f6424U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6424U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6424() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6424", "FUN_1802f6424");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 94eb3b27de48bbe0eddea8aa34034395fb0b979857eeb5701c801a44ab30f466
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6424(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x40000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xbfffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x170);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6424;
 }
 
@@ -2662,12 +3566,27 @@ void FUN_1802f6452(undefined8 param_1,longlong param_2)
     R"F1802f6452T()F1802f6452T",
     R"F1802f6452F(10: if ((*(uint *)(param_2 + 0x40) & 0x80000000) != 0) {
 14: return;)F1802f6452F",
-    R"F1802f6452U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6452U",
+    R"F1802f6452U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6452U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6452() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6452", "FUN_1802f6452");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 70a21dcd97d50b859a8fde83444d00a4a770d95d5ff4796b59d605bdcdf17efc
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6452(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x80000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0x7fffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x170);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6452;
 }
 
@@ -2705,12 +3624,27 @@ void FUN_1802f648c(undefined8 param_1,longlong param_2)
     R"F1802f648cT()F1802f648cT",
     R"F1802f648cF(10: if ((*(uint *)(param_2 + 0x48) & 1) != 0) {
 14: return;)F1802f648cF",
-    R"F1802f648cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f648cU",
+    R"F1802f648cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f648cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f648c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f648c", "FUN_1802f648c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: c34c971070c1d8ae563648a055346f89d98725815c1440dc7df4b8ddd6f6034c
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f648c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x48) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x48) = *(uint *)(param_2 + 0x48) & 0xfffffffe;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 400);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f648c;
 }
 
@@ -2748,12 +3682,27 @@ void FUN_1802f64b5(undefined8 param_1,longlong param_2)
     R"F1802f64b5T()F1802f64b5T",
     R"F1802f64b5F(10: if ((*(uint *)(param_2 + 0x48) & 2) != 0) {
 14: return;)F1802f64b5F",
-    R"F1802f64b5U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f64b5U",
+    R"F1802f64b5U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f64b5U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f64b5() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f64b5", "FUN_1802f64b5");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: a59bad32e0e2ced7cb4e0f0e99b7b3710479e3206d0dd6da0505579894ad7b3e
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f64b5(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x48) & 2) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x48) = *(uint *)(param_2 + 0x48) & 0xfffffffd;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 400);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f64b5;
 }
 
@@ -2791,12 +3740,27 @@ void FUN_1802f64ea(undefined8 param_1,longlong param_2)
     R"F1802f64eaT()F1802f64eaT",
     R"F1802f64eaF(10: if ((*(uint *)(param_2 + 0x44) & 0x40000) != 0) {
 14: return;)F1802f64eaF",
-    R"F1802f64eaU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f64eaU",
+    R"F1802f64eaU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f64eaU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f64ea() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f64ea", "FUN_1802f64ea");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 62deaad6027af86951afeb82a7a2e22eb15ed79fae8f9cc0b3c10fca86638e10
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f64ea(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x40000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffbffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x470);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f64ea;
 }
 
@@ -2834,12 +3798,27 @@ void FUN_1802f6518(undefined8 param_1,longlong param_2)
     R"F1802f6518T()F1802f6518T",
     R"F1802f6518F(10: if ((*(uint *)(param_2 + 0x44) & 0x80000) != 0) {
 14: return;)F1802f6518F",
-    R"F1802f6518U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6518U",
+    R"F1802f6518U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6518U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6518() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6518", "FUN_1802f6518");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: ecf9c87700210ce43de1805eb63e604c329f58b702e5e86f105d2d133508f886
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6518(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x80000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfff7ffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x6d0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6518;
 }
 
@@ -2877,12 +3856,27 @@ void FUN_1802f6546(undefined8 param_1,longlong param_2)
     R"F1802f6546T()F1802f6546T",
     R"F1802f6546F(10: if ((*(uint *)(param_2 + 0x44) & 0x100000) != 0) {
 14: return;)F1802f6546F",
-    R"F1802f6546U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6546U",
+    R"F1802f6546U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6546U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6546() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6546", "FUN_1802f6546");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: b8d81fbeafedf6c6246d869d64b5df855e1b240a8fe96d588f7c82fd7350c59a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6546(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x100000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffefffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x490);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6546;
 }
 
@@ -2920,12 +3914,27 @@ void FUN_1802f6574(undefined8 param_1,longlong param_2)
     R"F1802f6574T()F1802f6574T",
     R"F1802f6574F(10: if ((*(uint *)(param_2 + 0x44) & 0x200000) != 0) {
 14: return;)F1802f6574F",
-    R"F1802f6574U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6574U",
+    R"F1802f6574U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6574U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6574() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6574", "FUN_1802f6574");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 68c1f4c69fe1297d6f97c82d7530063e9a4c659109cd394a63ba7d04b0ea9347
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6574(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x200000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffdfffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1b0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6574;
 }
 
@@ -2963,12 +3972,27 @@ void FUN_1802f65a2(undefined8 param_1,longlong param_2)
     R"F1802f65a2T()F1802f65a2T",
     R"F1802f65a2F(10: if ((*(uint *)(param_2 + 0x44) & 0x400000) != 0) {
 14: return;)F1802f65a2F",
-    R"F1802f65a2U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f65a2U",
+    R"F1802f65a2U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f65a2U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f65a2() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f65a2", "FUN_1802f65a2");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: f7c7cf9ae90ebf663a0d6f843005ad1d82421a40dd73a0c2bb176db6851867a5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f65a2(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x400000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffbfffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1b0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f65a2;
 }
 
@@ -3006,12 +4030,27 @@ void FUN_1802f65d0(undefined8 param_1,longlong param_2)
     R"F1802f65d0T()F1802f65d0T",
     R"F1802f65d0F(10: if ((*(uint *)(param_2 + 0x44) & 0x800000) != 0) {
 14: return;)F1802f65d0F",
-    R"F1802f65d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f65d0U",
+    R"F1802f65d0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f65d0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f65d0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f65d0", "FUN_1802f65d0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 867c7f54beaf445196bcfcf0ac2eeb22c441275005f024d2b71f5dd7df2861a4
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f65d0(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x800000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xff7fffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x4b0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f65d0;
 }
 
@@ -3049,12 +4088,27 @@ void FUN_1802f65fe(undefined8 param_1,longlong param_2)
     R"F1802f65feT()F1802f65feT",
     R"F1802f65feF(10: if ((*(uint *)(param_2 + 0x44) & 0x1000000) != 0) {
 14: return;)F1802f65feF",
-    R"F1802f65feU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f65feU",
+    R"F1802f65feU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f65feU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f65fe() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f65fe", "FUN_1802f65fe");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7dcbad9f29ad6f185b45d5e0bab72e9c73beb334faa13342a83119ae671e2f26
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f65fe(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x1000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfeffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1d0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f65fe;
 }
 
@@ -3092,12 +4146,27 @@ void FUN_1802f662c(undefined8 param_1,longlong param_2)
     R"F1802f662cT()F1802f662cT",
     R"F1802f662cF(10: if ((*(uint *)(param_2 + 0x44) & 0x2000000) != 0) {
 14: return;)F1802f662cF",
-    R"F1802f662cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f662cU",
+    R"F1802f662cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f662cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f662c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f662c", "FUN_1802f662c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: e6a701da370173548ac8c2cf61209dd3e33a7d9cc62a7a74465dd16f7ce84756
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f662c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x2000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfdffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1d0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f662c;
 }
 
@@ -3135,12 +4204,27 @@ void FUN_1802f665a(undefined8 param_1,longlong param_2)
     R"F1802f665aT()F1802f665aT",
     R"F1802f665aF(10: if ((*(uint *)(param_2 + 0x44) & 0x4000000) != 0) {
 14: return;)F1802f665aF",
-    R"F1802f665aU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f665aU",
+    R"F1802f665aU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f665aU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f665a() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f665a", "FUN_1802f665a");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 1d34dcd7db17bb27bdcd4852add553344cfcac9e25122105470ccd365b2e8a2c
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f665a(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x4000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfbffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x4d0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f665a;
 }
 
@@ -3178,12 +4262,27 @@ void FUN_1802f6688(undefined8 param_1,longlong param_2)
     R"F1802f6688T()F1802f6688T",
     R"F1802f6688F(10: if ((*(uint *)(param_2 + 0x44) & 0x8000000) != 0) {
 14: return;)F1802f6688F",
-    R"F1802f6688U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6688U",
+    R"F1802f6688U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6688U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6688() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6688", "FUN_1802f6688");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 5a4930f5f0119091d6f01048ec90c5842360526b500255964d1ce41021d94e02
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6688(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x8000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xf7ffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1f0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6688;
 }
 
@@ -3221,12 +4320,27 @@ void FUN_1802f66b6(undefined8 param_1,longlong param_2)
     R"F1802f66b6T()F1802f66b6T",
     R"F1802f66b6F(10: if ((*(uint *)(param_2 + 0x44) & 0x10000000) != 0) {
 14: return;)F1802f66b6F",
-    R"F1802f66b6U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f66b6U",
+    R"F1802f66b6U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f66b6U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f66b6() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f66b6", "FUN_1802f66b6");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 9aae7c5a0882700bc886c6aef88808ae0ef5b3311b6b04db64ac2488161205bd
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f66b6(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x10000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xefffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1f0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f66b6;
 }
 
@@ -3264,12 +4378,27 @@ void FUN_1802f66e4(undefined8 param_1,longlong param_2)
     R"F1802f66e4T()F1802f66e4T",
     R"F1802f66e4F(10: if ((*(uint *)(param_2 + 0x44) & 0x20000000) != 0) {
 14: return;)F1802f66e4F",
-    R"F1802f66e4U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f66e4U",
+    R"F1802f66e4U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f66e4U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f66e4() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f66e4", "FUN_1802f66e4");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 470424b5418f2e5d81d38e36d0dcd6ba0215367b02067aeaa1703aee90b0580a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f66e4(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x20000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xdfffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x4f0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f66e4;
 }
 
@@ -3307,12 +4436,27 @@ void FUN_1802f6712(undefined8 param_1,longlong param_2)
     R"F1802f6712T()F1802f6712T",
     R"F1802f6712F(10: if ((*(uint *)(param_2 + 0x44) & 0x40000000) != 0) {
 14: return;)F1802f6712F",
-    R"F1802f6712U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6712U",
+    R"F1802f6712U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6712U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6712() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6712", "FUN_1802f6712");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 9ac042f3051b31ff15dbae59c804a44042b5fabde170101fd65576bd718d6116
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6712(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x40000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xbfffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x210);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6712;
 }
 
@@ -3350,12 +4494,27 @@ void FUN_1802f6740(undefined8 param_1,longlong param_2)
     R"F1802f6740T()F1802f6740T",
     R"F1802f6740F(10: if ((*(uint *)(param_2 + 0x44) & 0x80000000) != 0) {
 14: return;)F1802f6740F",
-    R"F1802f6740U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6740U",
+    R"F1802f6740U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6740U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6740() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6740", "FUN_1802f6740");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 1b0a7c4786a570bcd0acea182d1798b0331f519030027ee4adfe6b0bc3c0e928
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6740(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x80000000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0x7fffffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x210);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6740;
 }
 
@@ -3393,12 +4552,27 @@ void FUN_1802f676e(undefined8 param_1,longlong param_2)
     R"F1802f676eT()F1802f676eT",
     R"F1802f676eF(10: if ((*(uint *)(param_2 + 0x40) & 2) != 0) {
 14: return;)F1802f676eF",
-    R"F1802f676eU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f676eU",
+    R"F1802f676eU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f676eU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f676e() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f676e", "FUN_1802f676e");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 4710cb96d15e2e16b8ed3ea0bf9d0441d5a0e5cd0fc68f0899b6628c197546e5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f676e(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x510);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f676e;
 }
 
@@ -3436,12 +4610,27 @@ void FUN_1802f6797(undefined8 param_1,longlong param_2)
     R"F1802f6797T()F1802f6797T",
     R"F1802f6797F(10: if ((*(uint *)(param_2 + 0x40) & 4) != 0) {
 14: return;)F1802f6797F",
-    R"F1802f6797U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6797U",
+    R"F1802f6797U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6797U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6797() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6797", "FUN_1802f6797");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 03098190f9c611d53c3b08768bcd0d2d4a89c8b90bcc5fbebba9404ea34deb9f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6797(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffb;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x230);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6797;
 }
 
@@ -3479,12 +4668,27 @@ void FUN_1802f67c0(undefined8 param_1,longlong param_2)
     R"F1802f67c0T()F1802f67c0T",
     R"F1802f67c0F(10: if ((*(uint *)(param_2 + 0x40) & 8) != 0) {
 14: return;)F1802f67c0F",
-    R"F1802f67c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f67c0U",
+    R"F1802f67c0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f67c0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f67c0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f67c0", "FUN_1802f67c0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 0978478e6f669c54ae05258f268f72608b8f1ea962ccc5f6b3157239d9eb61c8
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f67c0(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 8) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffff7;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x230);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f67c0;
 }
 
@@ -3522,12 +4726,27 @@ void FUN_1802f67e9(undefined8 param_1,longlong param_2)
     R"F1802f67e9T()F1802f67e9T",
     R"F1802f67e9F(10: if ((*(uint *)(param_2 + 0x40) & 0x10) != 0) {
 14: return;)F1802f67e9F",
-    R"F1802f67e9U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f67e9U",
+    R"F1802f67e9U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f67e9U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f67e9() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f67e9", "FUN_1802f67e9");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 6d699d3ea506b070684253bd52d1668dbba908a97485a164f517b8f5d1a0a435
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f67e9(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x10) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffef;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x530);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f67e9;
 }
 
@@ -3565,12 +4784,27 @@ void FUN_1802f6812(undefined8 param_1,longlong param_2)
     R"F1802f6812T()F1802f6812T",
     R"F1802f6812F(10: if ((*(uint *)(param_2 + 0x40) & 0x20) != 0) {
 14: return;)F1802f6812F",
-    R"F1802f6812U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6812U",
+    R"F1802f6812U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6812U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6812() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6812", "FUN_1802f6812");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: f2a95349b69d3bf498c09c4545cf14a601168190ff487811295b67ae88814749
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6812(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x20) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffdf;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x250);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6812;
 }
 
@@ -3608,12 +4842,27 @@ void FUN_1802f683b(undefined8 param_1,longlong param_2)
     R"F1802f683bT()F1802f683bT",
     R"F1802f683bF(10: if ((*(uint *)(param_2 + 0x40) & 0x40) != 0) {
 14: return;)F1802f683bF",
-    R"F1802f683bU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f683bU",
+    R"F1802f683bU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f683bU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f683b() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f683b", "FUN_1802f683b");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 43c76764473c105eb699de0e436802058f960f036503091bb743e724a964e340
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f683b(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x40) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffbf;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x250);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f683b;
 }
 
@@ -3651,12 +4900,27 @@ void FUN_1802f6864(undefined8 param_1,longlong param_2)
     R"F1802f6864T()F1802f6864T",
     R"F1802f6864F(10: if ((*(uint *)(param_2 + 0x40) & 0x80) != 0) {
 14: return;)F1802f6864F",
-    R"F1802f6864U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6864U",
+    R"F1802f6864U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6864U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6864() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6864", "FUN_1802f6864");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 222c4937438bdd7fd8040edb941f959e3738b34d1d4595b959e21fbf2688b23a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6864(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x80) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffff7f;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x550);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6864;
 }
 
@@ -3694,12 +4958,27 @@ void FUN_1802f6892(undefined8 param_1,longlong param_2)
     R"F1802f6892T()F1802f6892T",
     R"F1802f6892F(10: if ((*(uint *)(param_2 + 0x40) & 0x100) != 0) {
 14: return;)F1802f6892F",
-    R"F1802f6892U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6892U",
+    R"F1802f6892U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6892U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6892() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6892", "FUN_1802f6892");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 1522a54569b3efa42f9aaa130556a7bf673cc39b94a4bfc3a5f69a8fec565dfa
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6892(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x100) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffeff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x270);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6892;
 }
 
@@ -3737,12 +5016,27 @@ void FUN_1802f68c0(undefined8 param_1,longlong param_2)
     R"F1802f68c0T()F1802f68c0T",
     R"F1802f68c0F(10: if ((*(uint *)(param_2 + 0x40) & 0x200) != 0) {
 14: return;)F1802f68c0F",
-    R"F1802f68c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f68c0U",
+    R"F1802f68c0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f68c0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f68c0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f68c0", "FUN_1802f68c0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: b5f613e5c78c1b51c1c96490e6cd4d9ec7d84e46dd9665124216bbde1d0b6a53
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f68c0(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x200) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffdff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x270);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f68c0;
 }
 
@@ -3780,12 +5074,27 @@ void FUN_1802f68ee(undefined8 param_1,longlong param_2)
     R"F1802f68eeT()F1802f68eeT",
     R"F1802f68eeF(10: if ((*(uint *)(param_2 + 0x40) & 0x400) != 0) {
 14: return;)F1802f68eeF",
-    R"F1802f68eeU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f68eeU",
+    R"F1802f68eeU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f68eeU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f68ee() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f68ee", "FUN_1802f68ee");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 8a88d130f4e034b0f2b1babe8f93f94b62926af124e863b2f3fc86e0417812ea
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f68ee(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x400) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffbff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x570);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f68ee;
 }
 
@@ -3823,12 +5132,27 @@ void FUN_1802f691c(undefined8 param_1,longlong param_2)
     R"F1802f691cT()F1802f691cT",
     R"F1802f691cF(10: if ((*(uint *)(param_2 + 0x40) & 0x800) != 0) {
 14: return;)F1802f691cF",
-    R"F1802f691cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f691cU",
+    R"F1802f691cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f691cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f691c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f691c", "FUN_1802f691c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 75a63bb7dda8dce21d21e58a35b94429451a9b903639fdcd9810997a543f9d78
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f691c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x800) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffff7ff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x290);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f691c;
 }
 
@@ -3866,12 +5190,27 @@ void FUN_1802f694a(undefined8 param_1,longlong param_2)
     R"F1802f694aT()F1802f694aT",
     R"F1802f694aF(10: if ((*(uint *)(param_2 + 0x40) & 0x1000) != 0) {
 14: return;)F1802f694aF",
-    R"F1802f694aU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f694aU",
+    R"F1802f694aU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f694aU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f694a() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f694a", "FUN_1802f694a");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: b8b63b75eac83dbc49ab8c1812708cf343f5f9868a2950758f2caf18ae8fe49b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f694a(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x1000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffefff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x290);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f694a;
 }
 
@@ -3909,12 +5248,27 @@ void FUN_1802f6978(undefined8 param_1,longlong param_2)
     R"F1802f6978T()F1802f6978T",
     R"F1802f6978F(10: if ((*(uint *)(param_2 + 0x40) & 0x2000) != 0) {
 14: return;)F1802f6978F",
-    R"F1802f6978U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6978U",
+    R"F1802f6978U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6978U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6978() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6978", "FUN_1802f6978");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 8fe913d6b21bb5215dd2a75cb1b02de4abe09caa550d0ae8fb6905ffe21c8919
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6978(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x2000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffdfff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x590);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6978;
 }
 
@@ -3952,12 +5306,27 @@ void FUN_1802f69a6(undefined8 param_1,longlong param_2)
     R"F1802f69a6T()F1802f69a6T",
     R"F1802f69a6F(10: if ((*(uint *)(param_2 + 0x40) & 0x4000) != 0) {
 14: return;)F1802f69a6F",
-    R"F1802f69a6U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f69a6U",
+    R"F1802f69a6U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f69a6U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f69a6() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f69a6", "FUN_1802f69a6");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 0bb8e4347e50e4bbf55610735188e147f4aa4771ab0eb9ac0c8dd6d9ed993f3b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f69a6(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x4000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffbfff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2b0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f69a6;
 }
 
@@ -3995,12 +5364,27 @@ void FUN_1802f69d4(undefined8 param_1,longlong param_2)
     R"F1802f69d4T()F1802f69d4T",
     R"F1802f69d4F(10: if ((*(uint *)(param_2 + 0x40) & 0x8000) != 0) {
 14: return;)F1802f69d4F",
-    R"F1802f69d4U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f69d4U",
+    R"F1802f69d4U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f69d4U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f69d4() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f69d4", "FUN_1802f69d4");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7a612a7cd40bce20213f12c1d2ee20120038ead70f4f7d138263bcf0a743189d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f69d4(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x8000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffff7fff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2b0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f69d4;
 }
 
@@ -4038,12 +5422,27 @@ void FUN_1802f6a02(undefined8 param_1,longlong param_2)
     R"F1802f6a02T()F1802f6a02T",
     R"F1802f6a02F(10: if ((*(uint *)(param_2 + 0x44) & 1) != 0) {
 14: return;)F1802f6a02F",
-    R"F1802f6a02U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6a02U",
+    R"F1802f6a02U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6a02U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6a02() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6a02", "FUN_1802f6a02");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: abca41027b45bc16dcb793f133360a2c12e59bb1e44f8e0e2b649eb352d00ce9
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6a02(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffffe;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x5b0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6a02;
 }
 
@@ -4081,12 +5480,27 @@ void FUN_1802f6a2b(undefined8 param_1,longlong param_2)
     R"F1802f6a2bT()F1802f6a2bT",
     R"F1802f6a2bF(10: if ((*(uint *)(param_2 + 0x44) & 2) != 0) {
 14: return;)F1802f6a2bF",
-    R"F1802f6a2bU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6a2bU",
+    R"F1802f6a2bU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6a2bU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6a2b() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6a2b", "FUN_1802f6a2b");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: ff2d8b0188d72e8aaad7d3d848abdba6a5aefdb1e06669900dd85c730a2f5c60
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6a2b(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 2) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffffd;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2d0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6a2b;
 }
 
@@ -4124,12 +5538,27 @@ void FUN_1802f6a54(undefined8 param_1,longlong param_2)
     R"F1802f6a54T()F1802f6a54T",
     R"F1802f6a54F(10: if ((*(uint *)(param_2 + 0x44) & 4) != 0) {
 14: return;)F1802f6a54F",
-    R"F1802f6a54U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6a54U",
+    R"F1802f6a54U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6a54U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6a54() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6a54", "FUN_1802f6a54");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 68c9dd82b45371e70a8bb3241779c046adbc60728dcd723e9f039e148d7dcce8
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6a54(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 4) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffffb;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2d0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6a54;
 }
 
@@ -4167,12 +5596,27 @@ void FUN_1802f6a7d(undefined8 param_1,longlong param_2)
     R"F1802f6a7dT()F1802f6a7dT",
     R"F1802f6a7dF(10: if ((*(uint *)(param_2 + 0x44) & 8) != 0) {
 14: return;)F1802f6a7dF",
-    R"F1802f6a7dU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6a7dU",
+    R"F1802f6a7dU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6a7dU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6a7d() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6a7d", "FUN_1802f6a7d");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 0b689121d805eaed6b354ac3893e50fdb3a8c2c58d4c7a987d0bda4c0f300180
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6a7d(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 8) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffff7;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x5d0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6a7d;
 }
 
@@ -4210,12 +5654,27 @@ void FUN_1802f6aa6(undefined8 param_1,longlong param_2)
     R"F1802f6aa6T()F1802f6aa6T",
     R"F1802f6aa6F(10: if ((*(uint *)(param_2 + 0x44) & 0x10) != 0) {
 14: return;)F1802f6aa6F",
-    R"F1802f6aa6U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6aa6U",
+    R"F1802f6aa6U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6aa6U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6aa6() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6aa6", "FUN_1802f6aa6");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 4dac4422fc1b55e5bc3425e70fcf3db8cdc896bbd2203caceea55a2828de52a5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6aa6(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x10) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffef;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2f0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6aa6;
 }
 
@@ -4253,12 +5712,27 @@ void FUN_1802f6acf(undefined8 param_1,longlong param_2)
     R"F1802f6acfT()F1802f6acfT",
     R"F1802f6acfF(10: if ((*(uint *)(param_2 + 0x44) & 0x20) != 0) {
 14: return;)F1802f6acfF",
-    R"F1802f6acfU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6acfU",
+    R"F1802f6acfU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6acfU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6acf() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6acf", "FUN_1802f6acf");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: aabc08f6b9e53a30bf447097774189a296ab8b38e20dbb4e59daff7692641e51
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6acf(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x20) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffdf;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2f0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6acf;
 }
 
@@ -4296,12 +5770,27 @@ void FUN_1802f6af8(undefined8 param_1,longlong param_2)
     R"F1802f6af8T()F1802f6af8T",
     R"F1802f6af8F(10: if ((*(uint *)(param_2 + 0x44) & 0x40) != 0) {
 14: return;)F1802f6af8F",
-    R"F1802f6af8U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6af8U",
+    R"F1802f6af8U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6af8U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6af8() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6af8", "FUN_1802f6af8");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: fca49140e214539c6ff6cdb7ca4fe82c89a31c2f889f861620f74ac73fb27458
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6af8(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x40) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffbf;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x5f0);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6af8;
 }
 
@@ -4339,12 +5828,27 @@ void FUN_1802f6b21(undefined8 param_1,longlong param_2)
     R"F1802f6b21T()F1802f6b21T",
     R"F1802f6b21F(10: if ((*(uint *)(param_2 + 0x44) & 0x80) != 0) {
 14: return;)F1802f6b21F",
-    R"F1802f6b21U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6b21U",
+    R"F1802f6b21U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6b21U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6b21() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6b21", "FUN_1802f6b21");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 6baf99432f7d9e19284f1b4526cb0525f0d6d85d2b4da03f4387e5f59138d690
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6b21(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x80) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffff7f;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x310);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6b21;
 }
 
@@ -4382,12 +5886,27 @@ void FUN_1802f6b4f(undefined8 param_1,longlong param_2)
     R"F1802f6b4fT()F1802f6b4fT",
     R"F1802f6b4fF(10: if ((*(uint *)(param_2 + 0x44) & 0x100) != 0) {
 14: return;)F1802f6b4fF",
-    R"F1802f6b4fU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6b4fU",
+    R"F1802f6b4fU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6b4fU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6b4f() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6b4f", "FUN_1802f6b4f");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: ddbab27bd1766ebf826266d3e6e2c90ca22314b06ec3974dc94c4a1a510418ec
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6b4f(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x100) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffeff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x310);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6b4f;
 }
 
@@ -4425,12 +5944,27 @@ void FUN_1802f6b7d(undefined8 param_1,longlong param_2)
     R"F1802f6b7dT()F1802f6b7dT",
     R"F1802f6b7dF(10: if ((*(uint *)(param_2 + 0x44) & 0x200) != 0) {
 14: return;)F1802f6b7dF",
-    R"F1802f6b7dU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6b7dU",
+    R"F1802f6b7dU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6b7dU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6b7d() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6b7d", "FUN_1802f6b7d");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 877ad5224e23bfbcdaa12ddea66cdd5e3e2b33fa575c99e54cc752e0ad3f1a2e
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6b7d(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x200) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffdff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x610);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6b7d;
 }
 
@@ -4468,12 +6002,27 @@ void FUN_1802f6bab(undefined8 param_1,longlong param_2)
     R"F1802f6babT()F1802f6babT",
     R"F1802f6babF(10: if ((*(uint *)(param_2 + 0x44) & 0x400) != 0) {
 14: return;)F1802f6babF",
-    R"F1802f6babU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6babU",
+    R"F1802f6babU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6babU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6bab() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6bab", "FUN_1802f6bab");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: b809b38a5800b82e8abad5629249424396edcdc5cdb03c571abbb042a7a1fa2b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6bab(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x400) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffbff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x330);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6bab;
 }
 
@@ -4511,12 +6060,27 @@ void FUN_1802f6bd9(undefined8 param_1,longlong param_2)
     R"F1802f6bd9T()F1802f6bd9T",
     R"F1802f6bd9F(10: if ((*(uint *)(param_2 + 0x44) & 0x800) != 0) {
 14: return;)F1802f6bd9F",
-    R"F1802f6bd9U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6bd9U",
+    R"F1802f6bd9U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6bd9U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6bd9() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6bd9", "FUN_1802f6bd9");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: bed9f398cab1db5333a84815740ec59f703a8d0e43480b7a1f3294e0eb27d5db
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6bd9(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x800) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffff7ff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x330);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6bd9;
 }
 
@@ -4554,12 +6118,27 @@ void FUN_1802f6c07(undefined8 param_1,longlong param_2)
     R"F1802f6c07T()F1802f6c07T",
     R"F1802f6c07F(10: if ((*(uint *)(param_2 + 0x40) & 1) != 0) {
 14: return;)F1802f6c07F",
-    R"F1802f6c07U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6c07U",
+    R"F1802f6c07U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6c07U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6c07() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6c07", "FUN_1802f6c07");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: c5da62843c0232e94a9e5640c2fbeb7c9a55281c3556f65dcbdbada126c81512
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6c07(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x670);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6c07;
 }
 
@@ -4597,12 +6176,27 @@ void FUN_1802f6c3c(undefined8 param_1,longlong param_2)
     R"F1802f6c3cT()F1802f6c3cT",
     R"F1802f6c3cF(10: if ((*(uint *)(param_2 + 0x44) & 0x1000) != 0) {
 14: return;)F1802f6c3cF",
-    R"F1802f6c3cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6c3cU",
+    R"F1802f6c3cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6c3cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6c3c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6c3c", "FUN_1802f6c3c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 8bc437e80e8b7c14fea2a02e75c2bf6e0dcef009afd1cb49331db248a3a3341f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6c3c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x1000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffefff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x630);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6c3c;
 }
 
@@ -4640,12 +6234,27 @@ void FUN_1802f6c6a(undefined8 param_1,longlong param_2)
     R"F1802f6c6aT()F1802f6c6aT",
     R"F1802f6c6aF(10: if ((*(uint *)(param_2 + 0x44) & 0x2000) != 0) {
 14: return;)F1802f6c6aF",
-    R"F1802f6c6aU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6c6aU",
+    R"F1802f6c6aU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6c6aU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6c6a() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6c6a", "FUN_1802f6c6a");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: a9bbd4789d2cc5789726fd6c207f3f59f8824841db46d8606ee0f4ae31cb642f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6c6a(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x2000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffdfff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x50);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6c6a;
 }
 
@@ -4683,12 +6292,27 @@ void FUN_1802f6c95(undefined8 param_1,longlong param_2)
     R"F1802f6c95T()F1802f6c95T",
     R"F1802f6c95F(10: if ((*(uint *)(param_2 + 0x44) & 0x4000) != 0) {
 14: return;)F1802f6c95F",
-    R"F1802f6c95U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6c95U",
+    R"F1802f6c95U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6c95U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6c95() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6c95", "FUN_1802f6c95");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: e02eda683847b7b67e8228ae45b938f51615c8d29bf4429af803d42be8ecf406
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6c95(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x4000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffbfff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x50);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6c95;
 }
 
@@ -4726,12 +6350,27 @@ void FUN_1802f6cc0(undefined8 param_1,longlong param_2)
     R"F1802f6cc0T()F1802f6cc0T",
     R"F1802f6cc0F(10: if ((*(uint *)(param_2 + 0x44) & 0x8000) != 0) {
 14: return;)F1802f6cc0F",
-    R"F1802f6cc0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6cc0U",
+    R"F1802f6cc0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6cc0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6cc0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6cc0", "FUN_1802f6cc0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 099c1355b471a4dcb12356081e5521a492679a061b9d27b8eeee76655b69c88a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6cc0(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x8000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffff7fff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x650);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6cc0;
 }
 
@@ -4769,12 +6408,27 @@ void FUN_1802f6cee(undefined8 param_1,longlong param_2)
     R"F1802f6ceeT()F1802f6ceeT",
     R"F1802f6ceeF(10: if ((*(uint *)(param_2 + 0x44) & 0x10000) != 0) {
 14: return;)F1802f6ceeF",
-    R"F1802f6ceeU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6ceeU",
+    R"F1802f6ceeU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6ceeU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6cee() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6cee", "FUN_1802f6cee");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 9021828cc52b4796ee8a886510be5b7dbb809554953fa449f53539c7b64d6b0b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6cee(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x10000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffeffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x70);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6cee;
 }
 
@@ -4812,12 +6466,27 @@ void FUN_1802f6d19(undefined8 param_1,longlong param_2)
     R"F1802f6d19T()F1802f6d19T",
     R"F1802f6d19F(10: if ((*(uint *)(param_2 + 0x44) & 0x20000) != 0) {
 14: return;)F1802f6d19F",
-    R"F1802f6d19U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6d19U",
+    R"F1802f6d19U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6d19U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6d19() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6d19", "FUN_1802f6d19");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 2c77b1141a237f5f65ac594e71b5666efe9b979f17079b93bf327ef774c8bb7b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6d19(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x20000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffdffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x70);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6d19;
 }
 
@@ -4855,12 +6524,27 @@ void FUN_1802f6dc8(undefined8 param_1,longlong param_2)
     R"F1802f6dc8T()F1802f6dc8T",
     R"F1802f6dc8F(10: if ((*(uint *)(param_2 + 0x40) & 1) != 0) {
 14: return;)F1802f6dc8F",
-    R"F1802f6dc8U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6dc8U",
+    R"F1802f6dc8U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6dc8U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6dc8() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6dc8", "FUN_1802f6dc8");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: ea093cc5ebd93a166681a93d2eeb3312543f09a7cc40c2ef9dc414875ddac0c9
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6dc8(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1a8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6dc8;
 }
 
@@ -4898,12 +6582,27 @@ void FUN_1802f6dfd(undefined8 param_1,longlong param_2)
     R"F1802f6dfdT()F1802f6dfdT",
     R"F1802f6dfdF(10: if ((*(uint *)(param_2 + 0x40) & 4) != 0) {
 14: return;)F1802f6dfdF",
-    R"F1802f6dfdU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6dfdU",
+    R"F1802f6dfdU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6dfdU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6dfd() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6dfd", "FUN_1802f6dfd");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 820b15137ea539113fd21d2f2128ce48e46683e31cf23c5fb3963190144784b5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6dfd(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffb;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1c8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6dfd;
 }
 
@@ -4941,12 +6640,27 @@ void FUN_1802f6e26(undefined8 param_1,longlong param_2)
     R"F1802f6e26T()F1802f6e26T",
     R"F1802f6e26F(10: if ((*(uint *)(param_2 + 0x40) & 0x10000) != 0) {
 14: return;)F1802f6e26F",
-    R"F1802f6e26U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6e26U",
+    R"F1802f6e26U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6e26U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6e26() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6e26", "FUN_1802f6e26");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: bb9e3c12007f2d646d534577cb15adad501daf5b49a679cbd8159257d47d1f5a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6e26(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x10000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffeffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1e8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6e26;
 }
 
@@ -4984,12 +6698,27 @@ void FUN_1802f6e54(undefined8 param_1,longlong param_2)
     R"F1802f6e54T()F1802f6e54T",
     R"F1802f6e54F(10: if ((*(uint *)(param_2 + 0x40) & 0x20000) != 0) {
 14: return;)F1802f6e54F",
-    R"F1802f6e54U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6e54U",
+    R"F1802f6e54U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6e54U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6e54() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6e54", "FUN_1802f6e54");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: e660cc491c2125c7387b92875d5aee8e18f80bda4b94401a7255202fe21dba3f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6e54(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x20000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffdffff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x208);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6e54;
 }
 
@@ -5027,12 +6756,27 @@ void FUN_1802f6e82(undefined8 param_1,longlong param_2)
     R"F1802f6e82T()F1802f6e82T",
     R"F1802f6e82F(10: if ((*(uint *)(param_2 + 0x40) & 8) != 0) {
 14: return;)F1802f6e82F",
-    R"F1802f6e82U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6e82U",
+    R"F1802f6e82U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6e82U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6e82() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6e82", "FUN_1802f6e82");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7d6abd6e32aceeb27dfdc4db0aed1f86bad3247df8b9984bec7146ffe30bb040
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6e82(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 8) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffff7;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x228);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6e82;
 }
 
@@ -5070,12 +6814,27 @@ void FUN_1802f6eab(undefined8 param_1,longlong param_2)
     R"F1802f6eabT()F1802f6eabT",
     R"F1802f6eabF(10: if ((*(uint *)(param_2 + 0x40) & 0x10) != 0) {
 14: return;)F1802f6eabF",
-    R"F1802f6eabU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6eabU",
+    R"F1802f6eabU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6eabU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6eab() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6eab", "FUN_1802f6eab");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 0afae6ed1393b4a37213bfe39223db5c2495d32fe0c674facff32a21515c46ad
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6eab(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x10) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffef;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x248);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6eab;
 }
 
@@ -5113,12 +6872,27 @@ void FUN_1802f6ed4(undefined8 param_1,longlong param_2)
     R"F1802f6ed4T()F1802f6ed4T",
     R"F1802f6ed4F(10: if ((*(uint *)(param_2 + 0x40) & 0x20) != 0) {
 14: return;)F1802f6ed4F",
-    R"F1802f6ed4U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6ed4U",
+    R"F1802f6ed4U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6ed4U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6ed4() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6ed4", "FUN_1802f6ed4");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7163f96cf315a6393e5283d33de80d6db2545055ffc47b9331119ffe0eb254f8
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6ed4(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x20) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffdf;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x88);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6ed4;
 }
 
@@ -5156,12 +6930,27 @@ void FUN_1802f6efd(undefined8 param_1,longlong param_2)
     R"F1802f6efdT()F1802f6efdT",
     R"F1802f6efdF(10: if ((*(uint *)(param_2 + 0x40) & 0x40) != 0) {
 14: return;)F1802f6efdF",
-    R"F1802f6efdU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6efdU",
+    R"F1802f6efdU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6efdU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6efd() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6efd", "FUN_1802f6efd");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 2915cd0fd7aabff5e18cadd4b1c4789ac61ff623cbcd29f860eac4c43d5e59d8
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6efd(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x40) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffbf;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x308);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6efd;
 }
 
@@ -5199,12 +6988,27 @@ void FUN_1802f6f26(undefined8 param_1,longlong param_2)
     R"F1802f6f26T()F1802f6f26T",
     R"F1802f6f26F(10: if ((*(uint *)(param_2 + 0x40) & 0x80) != 0) {
 14: return;)F1802f6f26F",
-    R"F1802f6f26U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6f26U",
+    R"F1802f6f26U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6f26U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6f26() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6f26", "FUN_1802f6f26");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: c93f033e2f7147f233969892605183a94a0e470fd7b352177a0f6b7d4962d2b3
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6f26(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x80) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffff7f;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x268);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6f26;
 }
 
@@ -5242,12 +7046,27 @@ void FUN_1802f6f54(undefined8 param_1,longlong param_2)
     R"F1802f6f54T()F1802f6f54T",
     R"F1802f6f54F(10: if ((*(uint *)(param_2 + 0x40) & 0x100) != 0) {
 14: return;)F1802f6f54F",
-    R"F1802f6f54U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6f54U",
+    R"F1802f6f54U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6f54U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6f54() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6f54", "FUN_1802f6f54");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 4bb7c578cc2baa68b2e9c9dca068ce0877841b5aa3a37ddcdb7b3925bafe920b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6f54(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x100) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffeff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x288);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6f54;
 }
 
@@ -5285,12 +7104,27 @@ void FUN_1802f6f82(undefined8 param_1,longlong param_2)
     R"F1802f6f82T()F1802f6f82T",
     R"F1802f6f82F(10: if ((*(uint *)(param_2 + 0x40) & 0x200) != 0) {
 14: return;)F1802f6f82F",
-    R"F1802f6f82U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6f82U",
+    R"F1802f6f82U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6f82U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6f82() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6f82", "FUN_1802f6f82");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 86113057e56e5eae04bc18cb60d0715ed51889874065a7525f01ed0574a2c678
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6f82(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x200) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffdff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2a8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6f82;
 }
 
@@ -5328,12 +7162,27 @@ void FUN_1802f6fb0(undefined8 param_1,longlong param_2)
     R"F1802f6fb0T()F1802f6fb0T",
     R"F1802f6fb0F(10: if ((*(uint *)(param_2 + 0x40) & 0x400) != 0) {
 14: return;)F1802f6fb0F",
-    R"F1802f6fb0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6fb0U",
+    R"F1802f6fb0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6fb0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6fb0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6fb0", "FUN_1802f6fb0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: be34902dfdc5bf1e4627c7619217def66402f564a79f99eb98cade07c4062bcc
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6fb0(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x400) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffbff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2c8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6fb0;
 }
 
@@ -5371,12 +7220,27 @@ void FUN_1802f6fde(undefined8 param_1,longlong param_2)
     R"F1802f6fdeT()F1802f6fdeT",
     R"F1802f6fdeF(10: if ((*(uint *)(param_2 + 0x40) & 0x800) != 0) {
 14: return;)F1802f6fdeF",
-    R"F1802f6fdeU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f6fdeU",
+    R"F1802f6fdeU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f6fdeU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f6fde() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f6fde", "FUN_1802f6fde");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 57df6026f037fc602c2e3a8f415fc2dee924e19487869b34a2af1937a3ef77fc
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f6fde(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x800) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffff7ff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x328);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f6fde;
 }
 
@@ -5414,12 +7278,27 @@ void FUN_1802f700c(undefined8 param_1,longlong param_2)
     R"F1802f700cT()F1802f700cT",
     R"F1802f700cF(10: if ((*(uint *)(param_2 + 0x40) & 0x1000) != 0) {
 14: return;)F1802f700cF",
-    R"F1802f700cU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f700cU",
+    R"F1802f700cU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f700cU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f700c() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f700c", "FUN_1802f700c");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 74f2c12831767f83cca4d0092b608a47fbb80d0413726eb24d41640b11b6c2f7
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f700c(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x1000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffefff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2e8);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f700c;
 }
 
@@ -5457,12 +7336,27 @@ void FUN_1802f703a(undefined8 param_1,longlong param_2)
     R"F1802f703aT()F1802f703aT",
     R"F1802f703aF(10: if ((*(uint *)(param_2 + 0x40) & 0x2000) != 0) {
 14: return;)F1802f703aF",
-    R"F1802f703aU(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802f703aU",
+    R"F1802f703aU(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802f703aU",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802f703a() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802f703a", "FUN_1802f703a");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 11559eff5c14fa39714e97865c827010136b902e2ebd2a99c95102acfae95eca
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802f703a(undefined8 param_1,longlong param_2)");
+        {
+            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x2000) != 0)")) {
+                trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffdfff;");
+                trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x348);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802f703a;
 }
 

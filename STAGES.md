@@ -37,7 +37,7 @@ Anything short of that would be a pile of `sub_140xxxx` that nobody can maintain
 | 0 | Toolchain + target profile | `re/tools/`, PE profile | **done** |
 | 1 | Binary dossier (RTTI, strings, imports, signatures) | `re/dump/*.tsv`, `re/REPORT.md` | **done** |
 | 2 | Symbolized decompilation corpus | `re/dump/inventory.tsv`, `re/dump/decompile/` | **done** (full pass 7,591 new bodies / 65 existing skipped / 2 timeout stubs, both recovered separately: `0x1801d5ef0` renderer and `0x180003f30` config defaults; current inventory is 7,656 functions, all with a readable body, including 110 thunks) |
-| 2.1 | Complete source-level coverage | `src/reconstructed/**` | **done** — 7,656/7,656 mapped, 0 unmapped, 0 stubs; 60 C++17 chunks compile |
+| 2.1 | Complete compiled-source coverage | `src/reconstructed/**` | **done** — 7,656/7,656 mapped, 0 unmapped, 0 stubs; 60 C++17 chunks compile |
 | 3 | Subsystem reconstruction | `src/features/**` | **3.1–3.13 addressed** (3.13 UI-helper source complete; external UI integration remains); full-corpus source-level records generated separately |
 | 4 | Offset/signature database | `src/offsets/offsets.json` + resolver | **complete; 24 rows / 23 unique interface/slot entries wired and ABI-tested** |
 | 5 | Skyfall product (rebrand, auth, build) | `src/`, `build.bat` | **DLL builds and was live-injected in GMod x64; 24/24 descriptor rows installed; menu, ESP, command features and mouse-look restore verified in-game; 16 suites pass** |
@@ -173,23 +173,28 @@ the same command). `py re/tools/check_corpus_coverage.py` checks that every
 inventory address has an `ok` body, using the recovered long bodies for the two
 timeout addresses.
 
-### Stage 2.1 — Complete source-level coverage (done)
+### Stage 2.1 — Complete compiled-source coverage (done)
 
-`src/reconstructed/` covers **7,656/7,656 inventory functions** with compilable
-C++17 records: **0 unmapped, 0 stubs**. `re/tools/gen_reconstructed_source.py`
-deterministically writes 60 chunks (30.18 MiB) and
+`src/reconstructed/` covers **7,656/7,656 inventory functions** with compiled
+C++17 accessors: **0 unmapped, 0 stubs**. `re/tools/gen_reconstructed_source.py`
+deterministically writes 60 chunks (73,423,017 bytes; 70.02 MiB) and
 `src/reconstructed/coverage.tsv`; every address maps to a chunk source file and
-a unique `Function_0x...` accessor. The records preserve the full decompiled
-body (16.29 MiB), control-flow lines (80,593), call targets (17,273), data
-references (22,280), string literals (7,732) and 52,123 explicit TODOs for
-unknown globals, indirect calls and missing PDB/layout information.
+a unique `Function_0x...` accessor. The accessors contain **416,099 executable
+statement/reference lines**, **312,958 `trace.statement` calls**, **49,305 real
+C++ `if`/`else`/loop/`switch` control nodes**, **7,732 actual string-literal
+calls**, plus resolved references to **4,331 extern call thunks** and **4,333
+extern data-table symbols** in `src/reconstructed/symbols.h`. The complete
+decompiler body (16.29 MiB) remains as a SHA-256-verified audit payload and is
+not the executable accessor payload.
 
 `py -3 re/tools/check_reconstructed_source.py` reports `PASS 7656/7656 inventory
-functions mapped; unmapped=0 stubs=0`; `re/tools/build_reconstructed_check.bat`
-compiles all 60 chunks plus `src/reconstructed/compile_check.cpp` with MSVC
-C++17. The executable hand translations in `src/features/**` are unchanged.
-This closes source-tree coverage, not semantic parity: the generated records
-do not invent runnable semantics where the decompiler data is unknown.
+functions mapped; unmapped=0 stubs=0` and mechanically checks each accessor's
+executable/control/statement counts, symbol resolution and body hash.
+`re/tools/build_reconstructed_check.bat` compiles all 60 chunks plus
+`src/reconstructed/compile_check.cpp` with MSVC C++17. The executable hand
+translations in `src/features/**` are unchanged. This closes source-tree
+coverage, not semantic parity: the generated accessors are structural traces
+and do not invent runnable semantics where the decompiler data is unknown.
 
 ## Stage 3 — Subsystem reconstruction
 

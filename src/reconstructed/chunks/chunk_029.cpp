@@ -1,6 +1,8 @@
 // Generated complete-corpus translation chunk.
 // Generator: re/tools/gen_reconstructed_source.py
 #include "../reconstruction.h"
+#include "../trace_runtime.h"
+#include "../symbols.h"
 
 namespace sf::reconstructed {
 
@@ -59,14 +61,48 @@ void FUN_18021ddb0(longlong *param_1)
     R"F18021ddb0F(18: if (pvVar1 != (void *)0x0) {
 21: if ((0xfff < (param_1[2] - (longlong)pvVar1 & 0xffffffffffffffc0U)) &&
 34: return;)F18021ddb0F",
-    R"F18021ddb0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021ddb0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 24: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 25: _Memory = (void *)(*pcVar2)(5);.)F18021ddb0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ddb0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ddb0", "FUN_18021ddb0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 24: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 25: _Memory = (void *)(*pcVar2)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: fcb7620d639419aad619ce5a9e12accf1a788b1adbef98caf01cd58153159119
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021ddb0(longlong *param_1)");
+        {
+            trace.statement("void *pvVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("void *_Memory;");
+            trace.statement("undefined1 *puVar3;");
+            trace.statement("undefined1 auStack_28 [8];");
+            trace.statement("undefined1 auStack_20 [24];");
+            trace.statement("pvVar1 = (void *)*param_1;");
+            if (trace.condition("if (pvVar1 != (void *)0x0)")) {
+                trace.statement("_Memory = pvVar1;");
+                trace.statement("puVar3 = auStack_28;");
+                if (trace.condition("if ((0xfff < (param_1[2] - (longlong)pvVar1 & 0xffffffffffffffc0U)) && (_Memory = *(void **)((longlong)pvVar1 + -8), puVar3 = auStack_28, 0x1f < (ulonglong)((longlong)pvVar1 + (-8 - (longlong)_Memory))))")) {
+                    trace.statement("pcVar2 = (code *)swi(0x29);");
+                    trace.statement("_Memory = (void *)(*pcVar2)(5);");
+                    trace.statement("puVar3 = auStack_20;");
+                }
+                trace.statement("*(undefined8 *)(puVar3 + -8) = 0x18021ddfb;");
+                trace.statement("free(_Memory);");
+                trace.statement("*param_1 = 0;");
+                trace.statement("param_1[1] = 0;");
+                trace.statement("param_1[2] = 0;");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x18021ddb0;
 }
 
@@ -211,13 +247,116 @@ LAB_18021e01a:
 97: if (plVar4 == param_2) {
 100: LAB_18021e01a:
 103: return param_3;)F18021de10F",
-    R"F18021de10U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021de10U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18021e01a.)F18021de10U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021e01a.)F18021de10U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021de10() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021de10", "FUN_18021de10");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021e01a.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    // body sha256: a749ec101058618fb13f71836aceea3023e85421904b71cbc09195b114cef0b2
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong * FUN_18021de10(longlong param_1,longlong *param_2,longlong *param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("undefined8 *puVar3;");
+            trace.statement("longlong *plVar4;");
+            trace.statement("longlong lVar5;");
+            trace.statement("longlong *plVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("longlong *_Memory;");
+            trace.statement("longlong *plVar9;");
+            trace.statement("longlong *plVar10;");
+            trace.statement("longlong *plVar11;");
+            trace.statement("longlong local_a8;");
+            if (trace.condition("if (param_2 == param_3)")) {
+                trace.statement("return param_3;");
+            }
+            trace.statement("lVar1 = *(longlong *)(param_1 + 8);");
+            trace.statement("lVar2 = *(longlong *)(param_1 + 0x18);");
+            trace.statement("puVar3 = (undefined8 *)param_2[1];");
+            trace.statement("local_a8 = param_2[1];");
+            trace.statement("plVar11 = param_2 + 2;");
+            if (trace.condition("if (0xf < (ulonglong)param_2[5])")) {
+                trace.statement("plVar11 = (longlong *)*plVar11;");
+            }
+            trace.statement("uVar8 = 0xcbf29ce484222325;");
+            trace.statement("uVar7 = 0;");
+            if (trace.condition("if (param_2[4] != 0)")) {
+                do {
+                    trace.statement("uVar8 = (uVar8 ^ *(byte *)((longlong)plVar11 + uVar7)) * 0x100000001b3;");
+                    trace.statement("uVar7 = uVar7 + 1;");
+                } while (trace.loop_condition("while (uVar7 < (ulonglong)param_2[4]);"));
+            }
+            trace.statement("lVar5 = (*(ulonglong *)(param_1 + 0x30) & uVar8) * 0x10;");
+            trace.statement("plVar11 = (longlong *)(lVar5 + lVar2);");
+            trace.statement("plVar6 = (longlong *)(lVar5 + 8 + lVar2);");
+            trace.statement("plVar4 = (longlong *)*plVar11;");
+            trace.statement("plVar9 = (longlong *)*plVar6;");
+            trace.statement("_Memory = param_2;");
+            do {
+                trace.statement("plVar10 = (longlong *)*_Memory;");
+                trace.statement("FUN_18020e450(_Memory + 2);");
+                trace.statement("free(_Memory);");
+                trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
+                if (trace.condition("if (_Memory == plVar9)")) {
+                    if (trace.condition("if (plVar4 == param_2)")) {
+                        trace.statement("*plVar11 = lVar1;");
+                        trace.statement("local_a8 = lVar1;");
+                    }
+                    trace.statement("*plVar6 = local_a8;");
+                    while (trace.loop_condition("while (plVar10 != param_3)")) {
+                        trace.statement("plVar11 = plVar10 + 2;");
+                        if (trace.condition("if (0xf < (ulonglong)plVar10[5])")) {
+                            trace.statement("plVar11 = (longlong *)*plVar11;");
+                        }
+                        trace.statement("uVar8 = 0xcbf29ce484222325;");
+                        trace.statement("uVar7 = 0;");
+                        if (trace.condition("if (plVar10[4] != 0)")) {
+                            do {
+                                trace.statement("uVar8 = (uVar8 ^ *(byte *)((longlong)plVar11 + uVar7)) * 0x100000001b3;");
+                                trace.statement("uVar7 = uVar7 + 1;");
+                            } while (trace.loop_condition("while (uVar7 < (ulonglong)plVar10[4]);"));
+                        }
+                        trace.statement("uVar8 = *(ulonglong *)(param_1 + 0x30) & uVar8;");
+                        trace.statement("plVar11 = (longlong *)(lVar2 + uVar8 * 0x10);");
+                        trace.statement("lVar5 = lVar2 + uVar8 * 0x10;");
+                        trace.statement("plVar4 = *(longlong **)(lVar5 + 8);");
+                        trace.statement("plVar9 = plVar10;");
+                        while (trace.loop_condition("while( true )")) {
+                            trace.statement("plVar10 = (longlong *)*plVar9;");
+                            trace.statement("FUN_18020e450(plVar9 + 2);");
+                            trace.statement("free(plVar9);");
+                            trace.statement("*(longlong *)(param_1 + 0x10) = *(longlong *)(param_1 + 0x10) + -1;");
+                            if (trace.condition("if (plVar9 == plVar4) break; plVar9 = plVar10; if (plVar10 == param_3)")) {
+                                trace.statement("*plVar11 = (longlong)plVar10;");
+                                trace.statement("goto LAB_18021e01a;");
+                            }
+                        }
+                        trace.statement("*plVar11 = lVar1;");
+                        trace.statement("*(longlong *)(lVar5 + 8) = lVar1;");
+                    }
+                    trace.statement("goto LAB_18021e01a;");
+                }
+                trace.statement("_Memory = plVar10;");
+            } while (trace.loop_condition("while (plVar10 != param_3);"));
+            if (trace.condition("if (plVar4 == param_2)")) {
+                trace.statement("*plVar11 = (longlong)plVar10;");
+            }
+            LAB_18021e01a: ;
+            trace.statement("*puVar3 = plVar10;");
+            trace.statement("plVar10[1] = (longlong)puVar3;");
+            trace.statement("return param_3;");
+        }
     return kFunction_0x18021de10;
 }
 
@@ -281,14 +420,54 @@ void FUN_18021e060(longlong *param_1)
 21: if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 2) * 4)) {
 25: if ((void *)0x1f < pvVar2) {
 38: return;)F18021e060F",
-    R"F18021e060U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e060U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 26: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 28: (*pcVar1)(5);.)F18021e060U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e060() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e060", "FUN_18021e060");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 26: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 28: (*pcVar1)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7d1d77104b5a2c5352e604d13b114757f498392d4078832ad76728cfa56cb2ec
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021e060(longlong *param_1)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("void *_Memory;");
+            trace.statement("void *pvVar2;");
+            trace.statement("undefined1 *puVar3;");
+            trace.statement("undefined1 auStack_28 [8];");
+            trace.statement("undefined1 auStack_20 [24];");
+            trace.statement("pvVar2 = (void *)*param_1;");
+            if (trace.condition("if (pvVar2 != (void *)0x0)")) {
+                trace.statement("_Memory = pvVar2;");
+                trace.statement("puVar3 = auStack_28;");
+                if (trace.condition("if (0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 2) * 4))")) {
+                    trace.statement("_Memory = *(void **)((longlong)pvVar2 + -8);");
+                    trace.statement("pvVar2 = (void *)((longlong)pvVar2 + (-8 - (longlong)_Memory));");
+                    trace.statement("puVar3 = auStack_28;");
+                    if (trace.condition("if ((void *)0x1f < pvVar2)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("_Memory = pvVar2;");
+                        trace.statement("(*pcVar1)(5);");
+                        trace.statement("puVar3 = auStack_20;");
+                    }
+                }
+                trace.statement("*(undefined8 *)(puVar3 + -8) = 0x18021e0b5;");
+                trace.statement("free(_Memory);");
+                trace.statement("*param_1 = 0;");
+                trace.statement("param_1[1] = 0;");
+                trace.statement("param_1[2] = 0;");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x18021e060;
 }
 
@@ -349,13 +528,48 @@ void FUN_18021e0d0(longlong *param_1)
 23: while (puVar4 != (undefined8 *)0x0) {
 30: return;
 34: return;)F18021e0d0F",
-    R"F18021e0d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e0d0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 26: (**(code **)*puVar4)(puVar4,1);.)F18021e0d0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e0d0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e0d0", "FUN_18021e0d0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 26: (**(code **)*puVar4)(puVar4,1);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 0f8e805c16b2a6834ba21dc7c39be0a52a7f3da8a18eb117609a32918382293e
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021e0d0(longlong *param_1)");
+        {
+            trace.statement("int *piVar1;");
+            trace.statement("int iVar2;");
+            trace.statement("undefined8 *puVar3;");
+            trace.statement("undefined8 *puVar4;");
+            if (trace.condition("if (*param_1 != 0)")) {
+                trace.statement("LOCK();");
+                trace.statement("piVar1 = (int *)(*param_1 + 0x2c);");
+                trace.statement("iVar2 = *piVar1;");
+                trace.statement("*piVar1 = *piVar1 + -1;");
+                trace.statement("UNLOCK();");
+                if (trace.condition("if (iVar2 == 1)")) {
+                    trace.statement("puVar4 = (undefined8 *)*param_1;");
+                    while (trace.loop_condition("while (puVar4 != (undefined8 *)0x0)")) {
+                        trace.statement("puVar3 = (undefined8 *)puVar4[2];");
+                        trace.statement("puVar4[2] = 0;");
+                        trace.statement("(**(code **)*puVar4)(puVar4,1);");
+                        trace.statement("puVar4 = puVar3;");
+                    }
+                    trace.statement("*param_1 = 0;");
+                    trace.statement("return;");
+                }
+            }
+            trace.statement("*param_1 = 0;");
+            trace.statement("return;");
+        }
     return kFunction_0x18021e0d0;
 }
 
@@ -431,14 +645,62 @@ FUN_18022eb50)F18021e150C",
 27: if (pvVar1 != (void *)0x0) {
 30: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar1 >> 2) * 4)) &&
 45: return;)F18021e150F",
-    R"F18021e150U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e150U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 34: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 35: (*pcVar2)();.)F18021e150U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e150() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e150", "FUN_18021e150");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 34: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 35: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18022eb50", reinterpret_cast<const void*>(&image::FUN_18022eb50));
+    // body sha256: d92e54f2e257433985da6196921d1e646787d195fde01294a6c480ae83200a13
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021e150(longlong *param_1,ulonglong param_2)");
+        {
+            trace.statement("void *pvVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("undefined1 *puVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("undefined1 auStack_28 [8];");
+            trace.statement("undefined1 auStack_20 [24];");
+            if (trace.condition("if (param_2 < 0x4000000000000000)")) {
+                trace.statement("pvVar1 = (void *)*param_1;");
+                trace.statement("uVar5 = param_1[2] - (longlong)pvVar1 >> 2;");
+                trace.statement("uVar3 = 0x3fffffffffffffff;");
+                if (trace.condition("if ((uVar5 <= 0x3fffffffffffffff - (uVar5 >> 1)) && (uVar3 = uVar5 + (uVar5 >> 1), uVar3 < param_2))")) {
+                    trace.statement("uVar3 = param_2;");
+                }
+                if (trace.condition("if (pvVar1 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar1;");
+                    trace.statement("puVar4 = auStack_28;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar1 >> 2) * 4)) && (_Memory = *(void **)((longlong)pvVar1 + -8), puVar4 = auStack_28, 0x1f < (ulonglong)((longlong)pvVar1 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar4 = auStack_20;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar4 + -8) = 0x18021e1e6;");
+                    trace.statement("free(_Memory);");
+                    trace.statement("*param_1 = 0;");
+                    trace.statement("param_1[1] = 0;");
+                    trace.statement("param_1[2] = 0;");
+                }
+                trace.statement("FUN_18022eb50(param_1,uVar3);");
+                trace.statement("return;");
+            }
+            trace.statement("FUN_18020cc40();");
+        }
     return kFunction_0x18021e150;
 }
 
@@ -478,13 +740,30 @@ void FUN_18021e210(longlong *param_1)
     R"F18021e210T()F18021e210T",
     R"F18021e210F(13: if (plVar1 != (longlong *)0x0) {
 16: return;)F18021e210F",
-    R"F18021e210U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e210U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 14: (**(code **)(*plVar1 + 0x10))();.)F18021e210U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e210() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e210", "FUN_18021e210");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 14: (**(code **)(*plVar1 + 0x10))();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 1884dbdfbd84f6c714be3abbbe0c84e30844de8a0430023e2ff4e1bc66b40180
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021e210(longlong *param_1)");
+        {
+            trace.statement("longlong *plVar1;");
+            trace.statement("plVar1 = *(longlong **)((longlong)*(int *)(*(longlong *)*param_1 + 4) + 0x48 + *param_1);");
+            if (trace.condition("if (plVar1 != (longlong *)0x0)")) {
+                trace.statement("(**(code **)(*plVar1 + 0x10))();");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x18021e210;
 }
 
@@ -531,13 +810,36 @@ void FUN_18021e240(longlong *param_1)
     R"F18021e240F(14: if (iVar2 == 0) {
 19: if (plVar1 != (longlong *)0x0) {
 22: return;)F18021e240F",
-    R"F18021e240U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e240U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 20: (**(code **)(*plVar1 + 0x10))();.)F18021e240U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e240() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e240", "FUN_18021e240");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 20: (**(code **)(*plVar1 + 0x10))();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 4b3068f39e226b9f663966c7c002dfa05dac70fcaf103b159711a80925b4bb94
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021e240(longlong *param_1)");
+        {
+            trace.statement("longlong *plVar1;");
+            trace.statement("int iVar2;");
+            trace.statement("iVar2 = std::uncaught_exceptions();");
+            if (trace.condition("if (iVar2 == 0)")) {
+                trace.statement("std::basic_ostream<char,std::char_traits<char>_>::_Osfx");
+                trace.statement("((basic_ostream<char,std::char_traits<char>_> *)*param_1);");
+            }
+            trace.statement("plVar1 = *(longlong **)((longlong)*(int *)(*(longlong *)*param_1 + 4) + 0x48 + *param_1);");
+            if (trace.condition("if (plVar1 != (longlong *)0x0)")) {
+                trace.statement("(**(code **)(*plVar1 + 0x10))();");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x18021e240;
 }
 
@@ -596,14 +898,48 @@ void FUN_18021e290(longlong *param_1)
     R"F18021e290F(17: if (7 < (ulonglong)param_1[3]) {
 21: if ((0xfff < param_1[3] * 2 + 2U) &&
 34: return;)F18021e290F",
-    R"F18021e290U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e290U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 24: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 25: _Memory = (void *)(*pcVar2)(5);.)F18021e290U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e290() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e290", "FUN_18021e290");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 24: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 25: _Memory = (void *)(*pcVar2)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: d3ea403b8115daf9e0a77ff13dad08045f08ecb89660b44270cc6e45f0a21a31
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021e290(longlong *param_1)");
+        {
+            trace.statement("void *pvVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("void *_Memory;");
+            trace.statement("undefined1 *puVar3;");
+            trace.statement("undefined1 auStack_28 [8];");
+            trace.statement("undefined1 auStack_20 [24];");
+            if (trace.condition("if (7 < (ulonglong)param_1[3])")) {
+                trace.statement("pvVar1 = (void *)*param_1;");
+                trace.statement("_Memory = pvVar1;");
+                trace.statement("puVar3 = auStack_28;");
+                if (trace.condition("if ((0xfff < param_1[3] * 2 + 2U) && (_Memory = *(void **)((longlong)pvVar1 + -8), puVar3 = auStack_28, 0x1f < (ulonglong)((longlong)pvVar1 + (-8 - (longlong)_Memory))))")) {
+                    trace.statement("pcVar2 = (code *)swi(0x29);");
+                    trace.statement("_Memory = (void *)(*pcVar2)(5);");
+                    trace.statement("puVar3 = auStack_20;");
+                }
+                trace.statement("*(undefined8 *)(puVar3 + -8) = 0x18021e2dd;");
+                trace.statement("free(_Memory);");
+            }
+            trace.statement("param_1[2] = 0;");
+            trace.statement("*(undefined2 *)param_1 = 0;");
+            trace.statement("param_1[3] = 7;");
+            trace.statement("return;");
+        }
     return kFunction_0x18021e290;
 }
 
@@ -777,16 +1113,144 @@ LAB_18021e506)F18021e300D",
 117: if (7 < (ulonglong)param_3[3]) {
 122: if (7 < (ulonglong)param_4[3]) {
 127: return param_1;)F18021e300F",
-    R"F18021e300U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e300U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18021e4a4.
-TODO: recover the declaration, type and value for global/data reference LAB_18021e506.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021e4a4.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021e506.
 TODO: resolve the indirect call in body 105: pcVar4 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 106: lVar8 = (*pcVar4)(5);.)F18021e300U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e300() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e300", "FUN_18021e300");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021e4a4.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021e506.
+    // TODO: resolve the indirect call in body 105: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 106: lVar8 = (*pcVar4)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 10ce35b1db2e6d2fc58e4478c2bae4733a789cfd1c3f1d2934db28eceb934ef7
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 *");
+        trace.statement("FUN_18021e300(undefined8 *param_1,undefined8 param_2,undefined8 *param_3,undefined8 *param_4)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("ulonglong uVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("code *pcVar4;");
+            trace.statement("undefined8 uVar5;");
+            trace.statement("undefined8 *puVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("longlong lVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("undefined1 *puVar11;");
+            trace.statement("void *pvVar12;");
+            trace.statement("undefined1 auStack_58 [8];");
+            trace.statement("undefined1 auStack_50 [24];");
+            trace.statement("puVar10 = auStack_58;");
+            trace.statement("puVar11 = auStack_58;");
+            trace.statement("pvVar12 = (void *)0x0;");
+            trace.statement("*param_1 = 0;");
+            trace.statement("param_1[1] = 0;");
+            trace.statement("param_1[2] = 0;");
+            trace.statement("param_1[3] = 0;");
+            trace.statement("uVar2 = param_3[2];");
+            trace.statement("uVar3 = param_4[2];");
+            trace.statement("uVar1 = uVar3 + uVar2;");
+            if (trace.condition("if ((uVar3 <= param_3[3] - uVar2) && ((ulonglong)param_4[3] <= (ulonglong)param_3[3]))")) {
+                trace.statement("uVar5 = param_3[1];");
+                trace.statement("*param_1 = *param_3;");
+                trace.statement("param_1[1] = uVar5;");
+                trace.statement("uVar5 = param_3[3];");
+                trace.statement("param_1[2] = param_3[2];");
+                trace.statement("param_1[3] = uVar5;");
+                trace.statement("param_3[2] = 0;");
+                trace.statement("param_3[3] = 7;");
+                trace.statement("*(undefined2 *)param_3 = 0;");
+                trace.statement("puVar6 = param_1;");
+                if (trace.condition("if (7 < (ulonglong)param_1[3])")) {
+                    trace.statement("puVar6 = (undefined8 *)*param_1;");
+                }
+                if (trace.condition("if (7 < (ulonglong)param_4[3])")) {
+                    trace.statement("param_4 = (undefined8 *)*param_4;");
+                }
+                trace.statement("memcpy((void *)((longlong)puVar6 + uVar2 * 2),param_4,uVar3 * 2 + 2);");
+                trace.statement("param_1[2] = uVar1;");
+                trace.statement("return param_1;");
+            }
+            if (trace.condition("if (uVar2 <= param_4[3] - uVar3)")) {
+                trace.statement("uVar5 = param_4[1];");
+                trace.statement("*param_1 = *param_4;");
+                trace.statement("param_1[1] = uVar5;");
+                trace.statement("uVar5 = param_4[3];");
+                trace.statement("param_1[2] = param_4[2];");
+                trace.statement("param_1[3] = uVar5;");
+                trace.statement("param_4[2] = 0;");
+                trace.statement("param_4[3] = 7;");
+                trace.statement("*(undefined2 *)param_4 = 0;");
+                trace.statement("pvVar12 = (void *)*param_1;");
+                trace.statement("memmove((void *)((longlong)pvVar12 + uVar2 * 2),pvVar12,uVar3 * 2 + 2);");
+                if (trace.condition("if (7 < (ulonglong)param_3[3])")) {
+                    trace.statement("param_3 = (undefined8 *)*param_3;");
+                }
+                trace.statement("memcpy(pvVar12,param_3,uVar2 * 2);");
+                trace.statement("param_1[2] = uVar1;");
+                trace.statement("return param_1;");
+            }
+            if (trace.condition("if (0x7ffffffffffffffe - uVar2 < uVar3)")) {
+                trace.statement("FUN_1800130a0();");
+            }
+            trace.statement("uVar7 = uVar1 | 7;");
+            if (trace.condition("if (uVar7 < 0x7fffffffffffffff)")) {
+                if (trace.condition("if (uVar7 < 10)")) {
+                    trace.statement("uVar7 = 10;");
+                }
+                if (trace.condition("if (0x7fffffffffffffff < uVar7 + 1) goto LAB_18021e506; uVar9 = (uVar7 + 1) * 2; if (uVar9 == 0) goto LAB_18021e4a4; } else")) {
+                    trace.statement("uVar9 = 0xfffffffffffffffe;");
+                    trace.statement("uVar7 = 0x7ffffffffffffffe;");
+                }
+                if (trace.condition("if (uVar9 < 0x1000)")) {
+                    trace.statement("pvVar12 = (void *)FUN_1802d8350();");
+                    trace.statement("puVar11 = auStack_58;");
+                } else {
+                if (trace.condition("if (uVar9 + 0x27 <= uVar9)")) {
+                    LAB_18021e506: ;
+                    trace.statement("FUN_180012fe0();");
+                }
+                trace.statement("lVar8 = FUN_1802d8350(uVar9 + 0x27);");
+                if (trace.condition("if (lVar8 == 0)")) {
+                    trace.statement("pcVar4 = (code *)swi(0x29);");
+                    trace.statement("lVar8 = (*pcVar4)(5);");
+                    trace.statement("puVar10 = auStack_50;");
+                }
+                trace.statement("pvVar12 = (void *)(lVar8 + 0x27U & 0xffffffffffffffe0);");
+                trace.statement("*(longlong *)((longlong)pvVar12 - 8) = lVar8;");
+                trace.statement("puVar11 = puVar10;");
+                }
+                LAB_18021e4a4: ;
+                trace.statement("*param_1 = pvVar12;");
+                trace.statement("param_1[2] = uVar1;");
+                trace.statement("param_1[3] = uVar7;");
+                if (trace.condition("if (7 < (ulonglong)param_3[3])")) {
+                    trace.statement("param_3 = (undefined8 *)*param_3;");
+                }
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021e4ca;");
+                trace.statement("memcpy(pvVar12,param_3,uVar2 * 2);");
+                if (trace.condition("if (7 < (ulonglong)param_4[3])")) {
+                    trace.statement("param_4 = (undefined8 *)*param_4;");
+                }
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021e4e8;");
+                trace.statement("memcpy((void *)((longlong)pvVar12 + uVar2 * 2),param_4,uVar3 * 2 + 2);");
+                trace.statement("return param_1;");
+            }
+        }
     return kFunction_0x18021e300;
 }
 
@@ -830,12 +1294,33 @@ void FUN_18021e510(undefined8 *param_1,undefined8 *param_2)
     R"F18021e510D()F18021e510D",
     R"F18021e510T()F18021e510T",
     R"F18021e510F(21: return;)F18021e510F",
-    R"F18021e510U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021e510U",
+    R"F18021e510U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021e510U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e510() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e510", "FUN_18021e510");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 31fc7aeae5f27fdceee3b6e3b4680eb903ab8f46ac19956779297443e25e0f80
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021e510(undefined8 *param_1,undefined8 *param_2)");
+        {
+            trace.statement("undefined8 uVar1;");
+            trace.statement("uVar1 = param_2[1];");
+            trace.statement("*param_1 = *param_2;");
+            trace.statement("param_1[1] = uVar1;");
+            trace.statement("uVar1 = param_2[3];");
+            trace.statement("param_1[2] = param_2[2];");
+            trace.statement("param_1[3] = uVar1;");
+            trace.statement("*(undefined1 *)param_2 = 0;");
+            trace.statement("param_2[2] = 0;");
+            trace.statement("param_2[3] = 0xf;");
+            trace.statement("return;");
+        }
     return kFunction_0x18021e510;
 }
 
@@ -1007,17 +1492,137 @@ UNK_18021e725)F18021e540D",
 116: if (0xf < (ulonglong)param_1[3]) {
 119: if (0xf < (ulonglong)param_4[3]) {
 125: return param_1;)F18021e540F",
-    R"F18021e540U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e540U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18021e682.
-TODO: recover the declaration, type and value for global/data reference LAB_18021e6c4.
-TODO: recover the declaration, type and value for global/data reference UNK_18021e725.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021e682.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021e6c4.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference UNK_18021e725.
 TODO: resolve the indirect call in body 49: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 50: uVar6 = (*pcVar3)(5);.)F18021e540U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e540() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e540", "FUN_18021e540");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021e682.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021e6c4.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for UNK_18021e725.
+    // TODO: resolve the indirect call in body 49: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 50: uVar6 = (*pcVar3)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("UNK_18021e725", static_cast<const void*>(&image::UNK_18021e725));
+    // body sha256: 6cb069635bf7eca154380e62fbcf0972223c53b8880fa14f3e79f1cc25e7cb65
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 *");
+        trace.statement("FUN_18021e540(undefined8 *param_1,undefined8 param_2,undefined8 *param_3,undefined8 *param_4)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("size_t _Size;");
+            trace.statement("ulonglong uVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("undefined8 uVar4;");
+            trace.statement("undefined8 *puVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("longlong lVar8;");
+            trace.statement("void *pvVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("undefined8 uStack_60;");
+            trace.statement("undefined1 auStack_58 [32];");
+            trace.statement("puVar10 = auStack_58;");
+            trace.statement("pvVar9 = (void *)0x0;");
+            trace.statement("*param_1 = 0;");
+            trace.statement("param_1[1] = 0;");
+            trace.statement("param_1[2] = 0;");
+            trace.statement("param_1[3] = 0;");
+            trace.statement("_Size = param_3[2];");
+            trace.statement("uVar2 = param_4[2];");
+            trace.statement("uVar1 = uVar2 + _Size;");
+            if (trace.condition("if ((param_3[3] - _Size < uVar2) || ((ulonglong)param_3[3] < (ulonglong)param_4[3]))")) {
+                if (trace.condition("if (param_4[3] - uVar2 < _Size)")) {
+                    if (trace.condition("if (0x7fffffffffffffff - _Size < uVar2)")) {
+                        trace.statement("FUN_1800130a0();");
+                    }
+                    trace.statement("uVar6 = uVar1 | 0xf;");
+                    if (trace.condition("if (uVar6 < 0x8000000000000000) goto LAB_18021e682; uVar7 = 0x8000000000000027; puVar10 = auStack_58; uVar6 = 0x7fffffffffffffff; while( true )")) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18021e676;");
+                        trace.statement("lVar8 = FUN_1802d8350(uVar7);");
+                        if (trace.condition("if (lVar8 != 0) break; pcVar3 = (code *)swi(0x29); uVar6 = (*pcVar3)(5); puVar10 = puVar10 + 8; LAB_18021e682: if (uVar6 < 0x16)")) {
+                            trace.statement("uVar6 = 0x16;");
+                        }
+                        if (trace.condition("if (uVar6 == 0xffffffffffffffff) goto LAB_18021e6c4; if (uVar6 + 1 < 0x1000)")) {
+                            trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18021e6c1;");
+                            trace.statement("pvVar9 = (void *)FUN_1802d8350();");
+                            trace.statement("goto LAB_18021e6c4;");
+                        }
+                        trace.statement("uVar7 = uVar6 + 0x28;");
+                        if (trace.condition("if (uVar7 <= uVar6 + 1)")) {
+                            trace.statement("*(undefined **)(puVar10 + -8) = &UNK_18021e725;");
+                            trace.statement("FUN_180012fe0();");
+                        }
+                    }
+                    trace.statement("pvVar9 = (void *)(lVar8 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("*(longlong *)((longlong)pvVar9 - 8) = lVar8;");
+                    LAB_18021e6c4: ;
+                    trace.statement("*param_1 = pvVar9;");
+                    trace.statement("param_1[2] = uVar1;");
+                    trace.statement("param_1[3] = uVar6;");
+                    if (trace.condition("if (0xf < (ulonglong)param_3[3])")) {
+                        trace.statement("param_3 = (undefined8 *)*param_3;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18021e6e7;");
+                    trace.statement("memcpy(pvVar9,param_3,_Size);");
+                    if (trace.condition("if (0xf < (ulonglong)param_4[3])")) {
+                        trace.statement("param_4 = (undefined8 *)*param_4;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18021e702;");
+                    trace.statement("memcpy((void *)(_Size + (longlong)pvVar9),param_4,uVar2 + 1);");
+                } else {
+                trace.statement("uVar4 = param_4[1];");
+                trace.statement("*param_1 = *param_4;");
+                trace.statement("param_1[1] = uVar4;");
+                trace.statement("uVar4 = param_4[3];");
+                trace.statement("param_1[2] = param_4[2];");
+                trace.statement("param_1[3] = uVar4;");
+                trace.statement("param_4[2] = 0;");
+                trace.statement("param_4[3] = 0xf;");
+                trace.statement("*(undefined1 *)param_4 = 0;");
+                trace.statement("pvVar9 = (void *)*param_1;");
+                trace.statement("memmove((void *)((longlong)pvVar9 + _Size),pvVar9,uVar2 + 1);");
+                if (trace.condition("if (0xf < (ulonglong)param_3[3])")) {
+                    trace.statement("param_3 = (undefined8 *)*param_3;");
+                }
+                trace.statement("memcpy(pvVar9,param_3,_Size);");
+                trace.statement("param_1[2] = uVar1;");
+                }
+            } else {
+            trace.statement("uVar4 = param_3[1];");
+            trace.statement("*param_1 = *param_3;");
+            trace.statement("param_1[1] = uVar4;");
+            trace.statement("uVar4 = param_3[3];");
+            trace.statement("param_1[2] = param_3[2];");
+            trace.statement("param_1[3] = uVar4;");
+            trace.statement("param_3[2] = 0;");
+            trace.statement("param_3[3] = 0xf;");
+            trace.statement("*(undefined1 *)param_3 = 0;");
+            trace.statement("puVar5 = param_1;");
+            if (trace.condition("if (0xf < (ulonglong)param_1[3])")) {
+                trace.statement("puVar5 = (undefined8 *)*param_1;");
+            }
+            if (trace.condition("if (0xf < (ulonglong)param_4[3])")) {
+                trace.statement("param_4 = (undefined8 *)*param_4;");
+            }
+            trace.statement("memcpy((void *)(_Size + (longlong)puVar5),param_4,uVar2 + 1);");
+            trace.statement("param_1[2] = uVar1;");
+            }
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021e540;
 }
 
@@ -1139,17 +1744,112 @@ DAT_180570808)F18021e730D",
 84: if (this != (basic_streambuf<char,std::char_traits<char>_> *)0x0) {
 85: return param_1;
 91: return param_1;)F18021e730F",
-    R"F18021e730U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e730U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_18033d798.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
-TODO: recover the declaration, type and value for global/data reference DAT_180570808.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_18033d798.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180570808.
 TODO: resolve the indirect call in body 81: (puVar4 = (undefined8 *)(**(code **)(*local_30 + 0x10))(), puVar4 != (undefined8 *)0x0)) {.
 TODO: resolve the indirect call in body 82: (**(code **)*puVar4)(puVar4,1);.)F18021e730U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e730() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e730", "FUN_18021e730");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18033d798.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180570808.
+    // TODO: resolve the indirect call in body 81: (puVar4 = (undefined8 *)(**(code **)(*local_30 + 0x10))(), puVar4 != (undefined8 *)0x0)) {.
+    // TODO: resolve the indirect call in body 82: (**(code **)*puVar4)(puVar4,1);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18021af80", reinterpret_cast<const void*>(&image::FUN_18021af80));
+    trace.data_ref("DAT_18033d798", static_cast<const void*>(&image::DAT_18033d798));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    trace.data_ref("DAT_180570808", static_cast<const void*>(&image::DAT_180570808));
+    // body sha256: 7c6acf9d1d75d2290832ac720b17040ac5e108268938fb404c096bf31c8a4588
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("basic_istream<char,std::char_traits<char>_> *");
+        trace.statement("FUN_18021e730(basic_istream<char,std::char_traits<char>_> *param_1,char *param_2)");
+        {
+            trace.statement("basic_streambuf<char,std::char_traits<char>_> *this;");
+            trace.statement("bool bVar1;");
+            trace.statement("_iobuf *p_Var2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("codecvt_base *this_00;");
+            trace.statement("undefined8 *puVar4;");
+            trace.statement("undefined1 auStack_88 [32];");
+            trace.statement("undefined4 local_68;");
+            trace.statement("basic_istream<char,std::char_traits<char>_> *local_58;");
+            trace.statement("undefined8 local_48;");
+            trace.statement("undefined8 local_40;");
+            trace.statement("basic_streambuf<char,std::char_traits<char>_> *local_38;");
+            trace.statement("longlong *local_30;");
+            trace.statement("ulonglong local_28;");
+            trace.statement("local_28 = DAT_1803da4c0 ^ (ulonglong)auStack_88;");
+            trace.statement("local_68 = 0;");
+            trace.statement("*(undefined **)param_1 = &DAT_18033d798;");
+            trace.statement("local_58 = param_1;");
+            trace.statement("std::basic_ios<char,std::char_traits<char>_>::basic_ios<char,std::char_traits<char>_>");
+            trace.statement("((basic_ios<char,std::char_traits<char>_> *)(param_1 + 0xb0));");
+            trace.statement("local_68 = 1;");
+            trace.statement("this = (basic_streambuf<char,std::char_traits<char>_> *)(param_1 + 0x10);");
+            trace.statement("std::basic_istream<char,std::char_traits<char>_>::basic_istream<char,std::char_traits<char>_>");
+            trace.statement("(param_1,this,false);");
+            trace.statement("*(undefined ***)(param_1 + *(int *)(*(longlong *)param_1 + 4)) =");
+            trace.statement("vftable_std_std_D_DU__char_traits___basic_ifstream;");
+            trace.statement("*(int *)(param_1 + (longlong)*(int *)(*(longlong *)param_1 + 4) + -4) =");
+            trace.statement("*(int *)(*(longlong *)param_1 + 4) + -0xb0;");
+            trace.statement("local_38 = this;");
+            trace.statement("std::basic_streambuf<char,std::char_traits<char>_>::basic_streambuf<char,std::char_traits<char>_>");
+            trace.statement("(this);");
+            trace.statement("*(undefined ***)this = vftable_std_std_D_DU__char_traits___basic_filebuf;");
+            trace.statement("param_1[0x8c] = (basic_istream<char,std::char_traits<char>_>)0x0;");
+            trace.statement("param_1[0x81] = (basic_istream<char,std::char_traits<char>_>)0x0;");
+            trace.statement("std::basic_streambuf<char,std::char_traits<char>_>::_Init(this);");
+            trace.statement("*(undefined8 *)(param_1 + 0x90) = 0;");
+            trace.statement("*(undefined8 *)(param_1 + 0x84) = DAT_180570808;");
+            trace.statement("*(undefined8 *)(param_1 + 0x78) = 0;");
+            if (trace.condition("if ((*(longlong *)(param_1 + 0x90) == 0) && (p_Var2 = std::_Fiopen(param_2,0x21,0x40), p_Var2 != (_iobuf *)0x0))")) {
+                trace.statement("param_1[0x8c] = (basic_istream<char,std::char_traits<char>_>)0x1;");
+                trace.statement("param_1[0x81] = (basic_istream<char,std::char_traits<char>_>)0x0;");
+                trace.statement("std::basic_streambuf<char,std::char_traits<char>_>::_Init(this);");
+                trace.statement("local_48 = 0;");
+                trace.statement("local_40 = 0;");
+                trace.statement("local_38 = (basic_streambuf<char,std::char_traits<char>_> *)0x0;");
+                trace.statement("_get_stream_buffer_pointers(p_Var2,&local_48,&local_40,&local_38);");
+                trace.statement("*(undefined8 *)(param_1 + 0x28) = local_48;");
+                trace.statement("*(undefined8 *)(param_1 + 0x30) = local_48;");
+                trace.statement("*(undefined8 *)(param_1 + 0x48) = local_40;");
+                trace.statement("*(undefined8 *)(param_1 + 0x50) = local_40;");
+                trace.statement("*(basic_streambuf<char,std::char_traits<char>_> **)(param_1 + 0x60) = local_38;");
+                trace.statement("*(basic_streambuf<char,std::char_traits<char>_> **)(param_1 + 0x68) = local_38;");
+                trace.statement("*(_iobuf **)(param_1 + 0x90) = p_Var2;");
+                trace.statement("*(undefined8 *)(param_1 + 0x84) = DAT_180570808;");
+                trace.statement("*(undefined8 *)(param_1 + 0x78) = 0;");
+                trace.statement("uVar3 = std::basic_streambuf<char,std::char_traits<char>_>::getloc(this);");
+                trace.statement("this_00 = (codecvt_base *)FUN_18021af80(uVar3);");
+                trace.statement("bVar1 = std::codecvt_base::always_noconv(this_00);");
+                if (trace.condition("if (bVar1)")) {
+                    trace.statement("*(undefined8 *)(param_1 + 0x78) = 0;");
+                } else {
+                trace.statement("*(codecvt_base **)(param_1 + 0x78) = this_00;");
+                trace.statement("std::basic_streambuf<char,std::char_traits<char>_>::_Init(this);");
+                }
+                if (trace.condition("if ((local_30 != (longlong *)0x0) && (puVar4 = (undefined8 *)(**(code **)(*local_30 + 0x10))(), puVar4 != (undefined8 *)0x0))")) {
+                    trace.statement("(**(code **)*puVar4)(puVar4,1);");
+                }
+                if (trace.condition("if (this != (basic_streambuf<char,std::char_traits<char>_> *)0x0)")) {
+                    trace.statement("return param_1;");
+                }
+            }
+            trace.statement("std::basic_ios<char,std::char_traits<char>_>::setstate");
+            trace.statement("((basic_ios<char,std::char_traits<char>_> *)");
+            trace.statement("(param_1 + *(int *)(*(longlong *)param_1 + 4)),2,false);");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021e730;
 }
 
@@ -1228,14 +1928,59 @@ bool FUN_18021e940(longlong *param_1)
 41: if ((_Count == 0) || (sVar2 = fwrite(local_30,1,_Count,(FILE *)param_1[0x10]), _Count == sVar2))
 43: return *(char *)((longlong)param_1 + 0x71) == '\0';
 46: return false;)F18021e940F",
-    R"F18021e940U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021e940U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.
 TODO: resolve the indirect call in body 24: iVar1 = (**(code **)(*param_1 + 0x18))(param_1,0xffffffff);.)F18021e940U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021e940() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021e940", "FUN_18021e940");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: resolve the indirect call in body 24: iVar1 = (**(code **)(*param_1 + 0x18))(param_1,0xffffffff);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    // body sha256: bc32a8397e59dcbc41196c1c9f35eb650b0440bcf0cd53fa1bc90fae8e0e8afe
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("bool FUN_18021e940(longlong *param_1)");
+        {
+            trace.statement("int iVar1;");
+            trace.statement("size_t sVar2;");
+            trace.statement("size_t _Count;");
+            trace.statement("undefined1 auStackY_68 [32];");
+            trace.statement("char *local_38;");
+            trace.statement("char local_30 [32];");
+            trace.statement("ulonglong local_10;");
+            trace.statement("local_10 = DAT_1803da4c0 ^ (ulonglong)auStackY_68;");
+            if (trace.condition("if ((param_1[0xd] == 0) || (*(char *)((longlong)param_1 + 0x71) == '\\0'))")) {
+                trace.statement("return true;");
+            }
+            trace.statement("iVar1 = (**(code **)(*param_1 + 0x18))(param_1,0xffffffff);");
+            if (trace.condition("if (iVar1 != -1)")) {
+                trace.statement("iVar1 = std::codecvt<char,char,_Mbstatet>::unshift");
+                trace.statement("((codecvt<char,char,_Mbstatet> *)param_1[0xd],");
+                trace.statement("(_Mbstatet *)((longlong)param_1 + 0x74),local_30,(char *)&local_10,&local_38)");
+                trace.statement(";");
+                if (trace.condition("if (iVar1 == 0)")) {
+                    trace.statement("*(undefined1 *)((longlong)param_1 + 0x71) = 0;");
+                } else {
+                if (trace.condition("if (iVar1 != 3)")) {
+                    trace.statement("return false;");
+                }
+                trace.statement("*(undefined1 *)((longlong)param_1 + 0x71) = 0;");
+                trace.statement("return true;");
+                }
+                trace.statement("_Count = (longlong)local_38 - (longlong)local_30;");
+                if (trace.condition("if ((_Count == 0) || (sVar2 = fwrite(local_30,1,_Count,(FILE *)param_1[0x10]), _Count == sVar2))")) {
+                    trace.statement("return *(char *)((longlong)param_1 + 0x71) == '\\0';");
+                }
+            }
+            trace.statement("return false;");
+        }
     return kFunction_0x18021e940;
 }
 
@@ -1310,13 +2055,61 @@ FUN_18021ea30(basic_streambuf<char,std::char_traits<char>_> *param_1)
 32: if (cVar3 != '\0') {
 37: if (iVar4 == 0) {
 47: return pbVar6;)F18021ea30F",
-    R"F18021ea30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021ea30U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_180570808.)F18021ea30U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180570808.)F18021ea30U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ea30() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ea30", "FUN_18021ea30");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180570808.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18021e940", reinterpret_cast<const void*>(&image::FUN_18021e940));
+    trace.data_ref("DAT_180570808", static_cast<const void*>(&image::DAT_180570808));
+    // body sha256: d52b0094099fbbfa4a10d530621c4d19bc4ff0dfc896dc79908d7bc7b168d459
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("basic_streambuf<char,std::char_traits<char>_> *");
+        trace.statement("FUN_18021ea30(basic_streambuf<char,std::char_traits<char>_> *param_1)");
+        {
+            trace.statement("undefined8 uVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("char cVar3;");
+            trace.statement("int iVar4;");
+            trace.statement("basic_streambuf<char,std::char_traits<char>_> *pbVar5;");
+            trace.statement("basic_streambuf<char,std::char_traits<char>_> *pbVar6;");
+            if (trace.condition("if (*(longlong *)(param_1 + 0x80) == 0)")) {
+                trace.statement("pbVar6 = (basic_streambuf<char,std::char_traits<char>_> *)0x0;");
+            } else {
+            if (trace.condition("if ((basic_streambuf<char,std::char_traits<char>_> *)**(longlong **)(param_1 + 0x18) == param_1 + 0x70)")) {
+                trace.statement("uVar1 = *(undefined8 *)(param_1 + 0x90);");
+                trace.statement("lVar2 = *(longlong *)(param_1 + 0x88);");
+                trace.statement("**(longlong **)(param_1 + 0x18) = lVar2;");
+                trace.statement("**(longlong **)(param_1 + 0x38) = lVar2;");
+                trace.statement("**(int **)(param_1 + 0x50) = (int)uVar1 - (int)lVar2;");
+            }
+            trace.statement("cVar3 = FUN_18021e940(param_1);");
+            trace.statement("pbVar5 = (basic_streambuf<char,std::char_traits<char>_> *)0x0;");
+            if (trace.condition("if (cVar3 != '\\0')")) {
+                trace.statement("pbVar5 = param_1;");
+            }
+            trace.statement("iVar4 = fclose(*(FILE **)(param_1 + 0x80));");
+            trace.statement("pbVar6 = (basic_streambuf<char,std::char_traits<char>_> *)0x0;");
+            if (trace.condition("if (iVar4 == 0)")) {
+                trace.statement("pbVar6 = pbVar5;");
+            }
+            }
+            trace.statement("param_1[0x7c] = (basic_streambuf<char,std::char_traits<char>_>)0x0;");
+            trace.statement("param_1[0x71] = (basic_streambuf<char,std::char_traits<char>_>)0x0;");
+            trace.statement("std::basic_streambuf<char,std::char_traits<char>_>::_Init(param_1);");
+            trace.statement("*(undefined8 *)(param_1 + 0x74) = DAT_180570808;");
+            trace.statement("*(undefined8 *)(param_1 + 0x80) = 0;");
+            trace.statement("*(undefined8 *)(param_1 + 0x68) = 0;");
+            trace.statement("return pbVar6;");
+        }
     return kFunction_0x18021ea30;
 }
 
@@ -1380,12 +2173,50 @@ FUN_18021eaf0(basic_streambuf<char,std::char_traits<char>_> *param_1,undefined8 
 29: if ((param_3 & 4) == 0) {
 33: if (0xf < (ulonglong)param_2[3]) {
 37: return param_1;)F18021eaf0F",
-    R"F18021eaf0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021eaf0U",
+    R"F18021eaf0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021eaf0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021eaf0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021eaf0", "FUN_18021eaf0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18022ed80", reinterpret_cast<const void*>(&image::FUN_18022ed80));
+    // body sha256: dff03e38224d8fcddd71120aaf268087dbfea237da8907d659bc443dd9150858
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("basic_streambuf<char,std::char_traits<char>_> *");
+        trace.statement("FUN_18021eaf0(basic_streambuf<char,std::char_traits<char>_> *param_1,undefined8 *param_2,");
+        trace.statement("uint param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("uint uVar2;");
+            trace.statement("uint uVar3;");
+            trace.statement("std::basic_streambuf<char,std::char_traits<char>_>::basic_streambuf<char,std::char_traits<char>_>");
+            trace.statement("(param_1);");
+            trace.statement("*(undefined ***)param_1 = vftable_std_2_D_V__allocator_std_D_DU__char_traits___basic_stringbuf;");
+            trace.statement("uVar3 = (~param_3 & 1) << 2;");
+            trace.statement("uVar2 = uVar3 | 2;");
+            if (trace.condition("if ((param_3 & 2) != 0)")) {
+                trace.statement("uVar2 = uVar3;");
+            }
+            trace.statement("uVar3 = uVar2 | 8;");
+            if (trace.condition("if ((param_3 & 8) == 0)")) {
+                trace.statement("uVar3 = uVar2;");
+            }
+            trace.statement("uVar2 = uVar3 | 0x10;");
+            if (trace.condition("if ((param_3 & 4) == 0)")) {
+                trace.statement("uVar2 = uVar3;");
+            }
+            trace.statement("puVar1 = param_2 + 2;");
+            if (trace.condition("if (0xf < (ulonglong)param_2[3])")) {
+                trace.statement("param_2 = (undefined8 *)*param_2;");
+            }
+            trace.statement("FUN_18022ed80(param_1,param_2,*puVar1,uVar2);");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021eaf0;
 }
 
@@ -1426,12 +2257,32 @@ FUN_18022b850)F18021eb80C",
     R"F18021eb80D()F18021eb80D",
     R"F18021eb80T()F18021eb80T",
     R"F18021eb80F(16: return;)F18021eb80F",
-    R"F18021eb80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021eb80U",
+    R"F18021eb80U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021eb80U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021eb80() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021eb80", "FUN_18021eb80");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020d430", reinterpret_cast<const void*>(&image::FUN_18020d430));
+    trace.call_target("FUN_18021e060", reinterpret_cast<const void*>(&image::FUN_18021e060));
+    trace.call_target("FUN_18022b850", reinterpret_cast<const void*>(&image::FUN_18022b850));
+    // body sha256: 91226c6ef12ae6ced5abe26c422885575d3485a6e4febb9396d29cd947ff9020
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021eb80(longlong param_1)");
+        {
+            trace.statement("FUN_18022b850(param_1 + 0x98);");
+            trace.statement("FUN_18020d430(param_1 + 0x80);");
+            trace.statement("FUN_18020d430(param_1 + 0x68);");
+            trace.statement("FUN_18021e060();");
+            trace.statement("FUN_18020d430(param_1 + 0x28);");
+            trace.statement("FUN_18021e060();");
+            trace.statement("return;");
+        }
     return kFunction_0x18021eb80;
 }
 
@@ -1467,12 +2318,27 @@ FUN_18021e060)F18021ebf0C",
     R"F18021ebf0D()F18021ebf0D",
     R"F18021ebf0T()F18021ebf0T",
     R"F18021ebf0F(12: return;)F18021ebf0F",
-    R"F18021ebf0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ebf0U",
+    R"F18021ebf0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ebf0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ebf0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ebf0", "FUN_18021ebf0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020d430", reinterpret_cast<const void*>(&image::FUN_18020d430));
+    trace.call_target("FUN_18021e060", reinterpret_cast<const void*>(&image::FUN_18021e060));
+    // body sha256: d81c484b89fe42a4a07a07ec0bb31100b981ac83f9cb6dd37f3bcf1016971b01
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021ebf0(longlong param_1)");
+        {
+            trace.statement("FUN_18020d430(param_1 + 0x28);");
+            trace.statement("FUN_18021e060();");
+            trace.statement("return;");
+        }
     return kFunction_0x18021ebf0;
 }
 
@@ -1506,12 +2372,25 @@ void FUN_18021ec20(void)
     R"F18021ec20D()F18021ec20D",
     R"F18021ec20T()F18021ec20T",
     R"F18021ec20F(11: return;)F18021ec20F",
-    R"F18021ec20U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ec20U",
+    R"F18021ec20U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ec20U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ec20() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ec20", "FUN_18021ec20");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18021e060", reinterpret_cast<const void*>(&image::FUN_18021e060));
+    // body sha256: d2d055c821659493c639a16afef1928cb72a30e07ce97c92d9298aef11ce83cd
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021ec20(void)");
+        {
+            trace.statement("FUN_18021e060();");
+            trace.statement("return;");
+        }
     return kFunction_0x18021ec20;
 }
 
@@ -1548,12 +2427,26 @@ void * Features_Autowall_ArcCWAutowall_vfunc00(void *param_1,ulonglong param_2)
     R"F18021ec40T()F18021ec40T",
     R"F18021ec40F(10: if ((param_2 & 1) != 0) {
 13: return param_1;)F18021ec40F",
-    R"F18021ec40U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ec40U",
+    R"F18021ec40U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ec40U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ec40() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ec40", "Features_Autowall_ArcCWAutowall_vfunc00");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: d9baf05d68514bc9d7fde4137363244f2c9a89bab8450d1ecc221f2313244814
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void * Features_Autowall_ArcCWAutowall_vfunc00(void *param_1,ulonglong param_2)");
+        {
+            if (trace.condition("if ((param_2 & 1) != 0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021ec40;
 }
 
@@ -1590,12 +2483,26 @@ void * vfunc_shared_18021ec70(void *param_1,ulonglong param_2)
     R"F18021ec70T()F18021ec70T",
     R"F18021ec70F(10: if ((param_2 & 1) != 0) {
 13: return param_1;)F18021ec70F",
-    R"F18021ec70U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ec70U",
+    R"F18021ec70U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ec70U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ec70() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ec70", "vfunc_shared_18021ec70");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: d95313c2b13408474d94f8f2841a18f53725da930753721210ca4b9a0b801108
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void * vfunc_shared_18021ec70(void *param_1,ulonglong param_2)");
+        {
+            if (trace.condition("if ((param_2 & 1) != 0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021ec70;
 }
 
@@ -1632,12 +2539,26 @@ void * vfunc_shared_18021eca0(void *param_1,ulonglong param_2)
     R"F18021eca0T()F18021eca0T",
     R"F18021eca0F(10: if ((param_2 & 1) != 0) {
 13: return param_1;)F18021eca0F",
-    R"F18021eca0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021eca0U",
+    R"F18021eca0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021eca0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021eca0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021eca0", "vfunc_shared_18021eca0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 5143b9be9be958d77f2d50affb916b76de9c22a22fec15891c52d37968109925
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void * vfunc_shared_18021eca0(void *param_1,ulonglong param_2)");
+        {
+            if (trace.condition("if ((param_2 & 1) != 0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021eca0;
 }
 
@@ -1674,12 +2595,26 @@ void * vfunc_shared_18021ecd0(void *param_1,ulonglong param_2)
     R"F18021ecd0T()F18021ecd0T",
     R"F18021ecd0F(10: if ((param_2 & 1) != 0) {
 13: return param_1;)F18021ecd0F",
-    R"F18021ecd0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ecd0U",
+    R"F18021ecd0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ecd0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ecd0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ecd0", "vfunc_shared_18021ecd0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 42569a1bfcf718722383a0868cf69b9cde737d193426053dbb5fae4ce10d67be
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void * vfunc_shared_18021ecd0(void *param_1,ulonglong param_2)");
+        {
+            if (trace.condition("if ((param_2 & 1) != 0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021ecd0;
 }
 
@@ -1716,12 +2651,26 @@ void * Features_Autowall_FAS2Autowall_vfunc00(void *param_1,ulonglong param_2)
     R"F18021ed00T()F18021ed00T",
     R"F18021ed00F(10: if ((param_2 & 1) != 0) {
 13: return param_1;)F18021ed00F",
-    R"F18021ed00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ed00U",
+    R"F18021ed00U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ed00U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ed00() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ed00", "Features_Autowall_FAS2Autowall_vfunc00");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 7dadd4bb875d2229bb2868aa6ebf2bb5ba4732397a56d40ee25cc7f8b86dffa3
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void * Features_Autowall_FAS2Autowall_vfunc00(void *param_1,ulonglong param_2)");
+        {
+            if (trace.condition("if ((param_2 & 1) != 0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021ed00;
 }
 
@@ -1798,12 +2747,59 @@ undefined4 * FUN_18021ed30(undefined4 *param_1,undefined4 *param_2)
 38: if ((longlong *)(param_1 + 0x1c) != plVar2) {
 39: if (0xf < *(ulonglong *)(param_2 + 0x22)) {
 46: return param_1;)F18021ed30F",
-    R"F18021ed30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ed30U",
+    R"F18021ed30U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ed30U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ed30() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ed30", "FUN_18021ed30");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180212700", reinterpret_cast<const void*>(&image::FUN_180212700));
+    // body sha256: 37d9816fda41c9266aaac82676338d1e906d4bf062ff7e3bf156070a697222fa
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_18021ed30(undefined4 *param_1,undefined4 *param_2)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("*param_1 = *param_2;");
+            trace.statement("puVar1 = (undefined8 *)(param_2 + 2);");
+            trace.statement("param_1[1] = param_2[1];");
+            if (trace.condition("if ((undefined8 *)(param_1 + 2) != puVar1)")) {
+                if (trace.condition("if (0xf < *(ulonglong *)(param_2 + 8))")) {
+                    trace.statement("puVar1 = (undefined8 *)*puVar1;");
+                }
+                trace.statement("FUN_180212700(param_1 + 2,puVar1,*(undefined8 *)(param_2 + 6));");
+            }
+            trace.statement("plVar2 = (longlong *)(param_2 + 10);");
+            if (trace.condition("if ((longlong *)(param_1 + 10) != plVar2)")) {
+                if (trace.condition("if (0xf < *(ulonglong *)(param_2 + 0x10))")) {
+                    trace.statement("plVar2 = (longlong *)*plVar2;");
+                }
+                trace.statement("FUN_180212700(param_1 + 10,plVar2,*(undefined8 *)(param_2 + 0xe));");
+            }
+            trace.statement("plVar2 = (longlong *)(param_2 + 0x14);");
+            trace.statement("param_1[0x12] = param_2[0x12];");
+            if (trace.condition("if ((longlong *)(param_1 + 0x14) != plVar2)")) {
+                if (trace.condition("if (0xf < *(ulonglong *)(param_2 + 0x1a))")) {
+                    trace.statement("plVar2 = (longlong *)*plVar2;");
+                }
+                trace.statement("FUN_180212700(param_1 + 0x14,plVar2,*(undefined8 *)(param_2 + 0x18));");
+            }
+            trace.statement("plVar2 = (longlong *)(param_2 + 0x1c);");
+            if (trace.condition("if ((longlong *)(param_1 + 0x1c) != plVar2)")) {
+                if (trace.condition("if (0xf < *(ulonglong *)(param_2 + 0x22))")) {
+                    trace.statement("plVar2 = (longlong *)*plVar2;");
+                }
+                trace.statement("FUN_180212700(param_1 + 0x1c,plVar2,*(undefined8 *)(param_2 + 0x20));");
+            }
+            trace.statement("param_1[0x24] = param_2[0x24];");
+            trace.statement("*(undefined1 *)(param_1 + 0x25) = *(undefined1 *)(param_2 + 0x25);");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021ed30;
 }
 
@@ -1861,12 +2857,45 @@ FUN_180219bd0)F18021ee00C",
 17: if (0xf < *(ulonglong *)(param_2 + 8)) {
 25: if (param_1 + 0xe != param_2 + 0xe) {
 30: return param_1;)F18021ee00F",
-    R"F18021ee00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ee00U",
+    R"F18021ee00U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ee00U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ee00() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ee00", "FUN_18021ee00");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020ca40", reinterpret_cast<const void*>(&image::FUN_18020ca40));
+    trace.call_target("FUN_180212700", reinterpret_cast<const void*>(&image::FUN_180212700));
+    trace.call_target("FUN_180219bd0", reinterpret_cast<const void*>(&image::FUN_180219bd0));
+    // body sha256: 9d80c07ab0d4074987c838e487c4311f5e8499c8e607d277c3e6dac2bae96b71
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_18021ee00(undefined4 *param_1,undefined4 *param_2)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("undefined8 *puVar2;");
+            trace.statement("*param_1 = *param_2;");
+            trace.statement("puVar2 = (undefined8 *)(param_2 + 2);");
+            trace.statement("*(undefined1 *)(param_1 + 1) = *(undefined1 *)(param_2 + 1);");
+            if (trace.condition("if ((undefined8 *)(param_1 + 2) != puVar2)")) {
+                if (trace.condition("if (0xf < *(ulonglong *)(param_2 + 8))")) {
+                    trace.statement("puVar2 = (undefined8 *)*puVar2;");
+                }
+                trace.statement("FUN_180212700(param_1 + 2,puVar2,*(undefined8 *)(param_2 + 6));");
+            }
+            trace.statement("param_1[10] = param_2[10];");
+            trace.statement("param_1[0xb] = param_2[0xb];");
+            trace.statement("*(undefined8 *)(param_1 + 0xc) = *(undefined8 *)(param_2 + 0xc);");
+            if (trace.condition("if (param_1 + 0xe != param_2 + 0xe)")) {
+                trace.statement("lVar1 = *(longlong *)(param_2 + 0xe);");
+                trace.statement("FUN_180219bd0(param_1 + 0xe,lVar1,*(longlong *)(param_2 + 0x10) - lVar1 >> 5);");
+            }
+            trace.statement("FUN_18020ca40(param_1 + 0x14,param_2 + 0x14);");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021ee00;
 }
 
@@ -1931,12 +2960,51 @@ undefined4 * FUN_18021ee90(undefined4 *param_1,undefined4 *param_2)
 23: if ((longlong *)(param_1 + 10) != plVar2) {
 24: if (0xf < *(ulonglong *)(param_2 + 0x10)) {
 38: return param_1;)F18021ee90F",
-    R"F18021ee90U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ee90U",
+    R"F18021ee90U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ee90U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ee90() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ee90", "FUN_18021ee90");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180212700", reinterpret_cast<const void*>(&image::FUN_180212700));
+    // body sha256: 6c45ca8856b1198a5e41ad45356c346698064e7a5feffd3b1650cc3ff65a1d04
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_18021ee90(undefined4 *param_1,undefined4 *param_2)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("*param_1 = *param_2;");
+            trace.statement("puVar1 = (undefined8 *)(param_2 + 2);");
+            trace.statement("*(undefined1 *)(param_1 + 1) = *(undefined1 *)(param_2 + 1);");
+            if (trace.condition("if ((undefined8 *)(param_1 + 2) != puVar1)")) {
+                if (trace.condition("if (0xf < *(ulonglong *)(param_2 + 8))")) {
+                    trace.statement("puVar1 = (undefined8 *)*puVar1;");
+                }
+                trace.statement("FUN_180212700(param_1 + 2,puVar1,*(undefined8 *)(param_2 + 6));");
+            }
+            trace.statement("plVar2 = (longlong *)(param_2 + 10);");
+            if (trace.condition("if ((longlong *)(param_1 + 10) != plVar2)")) {
+                if (trace.condition("if (0xf < *(ulonglong *)(param_2 + 0x10))")) {
+                    trace.statement("plVar2 = (longlong *)*plVar2;");
+                }
+                trace.statement("FUN_180212700(param_1 + 10,plVar2,*(undefined8 *)(param_2 + 0xe));");
+            }
+            trace.statement("param_1[0x12] = param_2[0x12];");
+            trace.statement("param_1[0x13] = param_2[0x13];");
+            trace.statement("param_1[0x14] = param_2[0x14];");
+            trace.statement("param_1[0x15] = param_2[0x15];");
+            trace.statement("param_1[0x16] = param_2[0x16];");
+            trace.statement("param_1[0x17] = param_2[0x17];");
+            trace.statement("*(undefined1 *)(param_1 + 0x18) = *(undefined1 *)(param_2 + 0x18);");
+            trace.statement("param_1[0x19] = param_2[0x19];");
+            trace.statement("*(undefined1 *)(param_1 + 0x1a) = *(undefined1 *)(param_2 + 0x1a);");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021ee90;
 }
 
@@ -1970,12 +3038,25 @@ void FUN_18021ef40(void)
     R"F18021ef40D()F18021ef40D",
     R"F18021ef40T()F18021ef40T",
     R"F18021ef40F(11: return;)F18021ef40F",
-    R"F18021ef40U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ef40U",
+    R"F18021ef40U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ef40U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ef40() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ef40", "FUN_18021ef40");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18021e060", reinterpret_cast<const void*>(&image::FUN_18021e060));
+    // body sha256: 868622d87017e1f572a020726c9d05af7c0f125b64c20533112a21ec67146a99
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021ef40(void)");
+        {
+            trace.statement("FUN_18021e060();");
+            trace.statement("return;");
+        }
     return kFunction_0x18021ef40;
 }
 
@@ -2009,12 +3090,25 @@ void FUN_18021ef60(void)
     R"F18021ef60D()F18021ef60D",
     R"F18021ef60T()F18021ef60T",
     R"F18021ef60F(11: return;)F18021ef60F",
-    R"F18021ef60U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ef60U",
+    R"F18021ef60U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ef60U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ef60() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ef60", "FUN_18021ef60");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020c270", reinterpret_cast<const void*>(&image::FUN_18020c270));
+    // body sha256: c75ef70fa1ec191e7a95ba075fec44e9b6b4f7191d67ae4ca1ad2b279dbc0863
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021ef60(void)");
+        {
+            trace.statement("FUN_18020c270();");
+            trace.statement("return;");
+        }
     return kFunction_0x18021ef60;
 }
 
@@ -2053,12 +3147,28 @@ void FUN_18021ef80(longlong param_1)
     R"F18021ef80T()F18021ef80T",
     R"F18021ef80F(12: for (uVar1 = 0; uVar1 < 0x102; uVar1 = uVar1 + 1) {
 15: return;)F18021ef80F",
-    R"F18021ef80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021ef80U",
+    R"F18021ef80U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021ef80U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ef80() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ef80", "FUN_18021ef80");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18022f090", reinterpret_cast<const void*>(&image::FUN_18022f090));
+    // body sha256: 82508a775412e942c474a52743c5e08d48b9fce548eaf5d852ae043c26dca411
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021ef80(longlong param_1)");
+        {
+            trace.statement("ulonglong uVar1;");
+            for (auto loop = trace.loop("for (uVar1 = 0; uVar1 < 0x102; uVar1 = uVar1 + 1)"); loop.next(); ) {
+                trace.statement("FUN_18022f090(param_1 + uVar1 * 0x18);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x18021ef80;
 }
 
@@ -2101,12 +3211,33 @@ undefined8 * FUN_18021efd0(undefined8 *param_1,undefined1 *param_2)
     R"F18021efd0D()F18021efd0D",
     R"F18021efd0T()F18021efd0T",
     R"F18021efd0F(20: return param_1;)F18021efd0F",
-    R"F18021efd0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021efd0U",
+    R"F18021efd0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021efd0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021efd0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021efd0", "FUN_18021efd0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 71781eda46fcf940554a2fc289ffabfb2bf671ed09500a57a29f68e6e3eddf3c
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_18021efd0(undefined8 *param_1,undefined1 *param_2)");
+        {
+            trace.statement("*param_1 = 0;");
+            trace.statement("param_1[1] = 0;");
+            trace.statement("param_1[2] = 0;");
+            trace.statement("param_1[3] = 0;");
+            trace.statement("param_1[4] = 0;");
+            trace.statement("param_1[5] = 0;");
+            trace.statement("param_1[6] = 0;");
+            trace.statement("param_1[7] = 0;");
+            trace.statement("*(undefined1 *)param_1 = *param_2;");
+            trace.statement("param_1[7] = &._N::RTTI_Type_Descriptor;");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021efd0;
 }
 
@@ -2160,12 +3291,43 @@ undefined8 * FUN_18021f000(undefined8 *param_1,undefined8 *param_2)
     R"F18021f000D()F18021f000D",
     R"F18021f000T()F18021f000T",
     R"F18021f000F(31: return param_1;)F18021f000F",
-    R"F18021f000U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021f000U",
+    R"F18021f000U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021f000U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021f000() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021f000", "FUN_18021f000");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 8549956b4a7b621499379ad7b02d3f4b8790884f2cc1efa5de2c9e3a23858bab
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_18021f000(undefined8 *param_1,undefined8 *param_2)");
+        {
+            trace.statement("undefined8 uVar1;");
+            trace.statement("param_1[4] = 0;");
+            trace.statement("param_1[5] = 0;");
+            trace.statement("param_1[6] = 0;");
+            trace.statement("param_1[7] = 0;");
+            trace.statement("*param_1 = 0;");
+            trace.statement("param_1[1] = 0;");
+            trace.statement("param_1[2] = 0;");
+            trace.statement("param_1[3] = 0;");
+            trace.statement("uVar1 = param_2[1];");
+            trace.statement("*param_1 = *param_2;");
+            trace.statement("param_1[1] = uVar1;");
+            trace.statement("uVar1 = param_2[3];");
+            trace.statement("param_1[2] = param_2[2];");
+            trace.statement("param_1[3] = uVar1;");
+            trace.statement("*(undefined1 *)param_2 = 0;");
+            trace.statement("param_2[2] = 0;");
+            trace.statement("param_2[3] = 0xf;");
+            trace.statement("param_1[6] = &PTR_Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09_18033daa8;");
+            trace.statement("param_1[7] = 0x1803ee0d2;");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021f000;
 }
 
@@ -2208,12 +3370,33 @@ undefined8 * FUN_18021f060(undefined8 *param_1,undefined4 *param_2)
     R"F18021f060D()F18021f060D",
     R"F18021f060T()F18021f060T",
     R"F18021f060F(20: return param_1;)F18021f060F",
-    R"F18021f060U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021f060U",
+    R"F18021f060U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021f060U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021f060() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021f060", "FUN_18021f060");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 5675447200fa677fdf03836a06e13e86a0aed05556e57d19659fbe45db46387d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_18021f060(undefined8 *param_1,undefined4 *param_2)");
+        {
+            trace.statement("*param_1 = 0;");
+            trace.statement("param_1[1] = 0;");
+            trace.statement("param_1[2] = 0;");
+            trace.statement("param_1[3] = 0;");
+            trace.statement("param_1[4] = 0;");
+            trace.statement("param_1[5] = 0;");
+            trace.statement("param_1[6] = 0;");
+            trace.statement("param_1[7] = 0;");
+            trace.statement("*(undefined4 *)param_1 = *param_2;");
+            trace.statement("param_1[7] = &.H::RTTI_Type_Descriptor;");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021f060;
 }
 
@@ -2256,12 +3439,33 @@ undefined8 * FUN_18021f090(undefined8 *param_1,undefined4 *param_2)
     R"F18021f090D()F18021f090D",
     R"F18021f090T()F18021f090T",
     R"F18021f090F(20: return param_1;)F18021f090F",
-    R"F18021f090U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021f090U",
+    R"F18021f090U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021f090U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021f090() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021f090", "FUN_18021f090");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 3fceb4475ec5165ae8b398f5db627907fb5b990fcc6009a59210bd58a041f98c
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_18021f090(undefined8 *param_1,undefined4 *param_2)");
+        {
+            trace.statement("*param_1 = 0;");
+            trace.statement("param_1[1] = 0;");
+            trace.statement("param_1[2] = 0;");
+            trace.statement("param_1[3] = 0;");
+            trace.statement("param_1[4] = 0;");
+            trace.statement("param_1[5] = 0;");
+            trace.statement("param_1[6] = 0;");
+            trace.statement("param_1[7] = 0;");
+            trace.statement("*(undefined4 *)param_1 = *param_2;");
+            trace.statement("param_1[7] = &.M::RTTI_Type_Descriptor;");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x18021f090;
 }
 
@@ -2397,12 +3601,107 @@ void FUN_18021f0c0(longlong *param_1,void *param_2,longlong param_3)
 69: if ((uVar8 != 0) && (uVar7 = uVar11, uVar8 <= uVar13)) {
 81: for (; uVar8 < uVar18 + uVar14; uVar8 = uVar8 + 1) {
 99: return;)F18021f0c0F",
-    R"F18021f0c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021f0c0U",
+    R"F18021f0c0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021f0c0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021f0c0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021f0c0", "FUN_18021f0c0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: b61154797dfe432ae5c3b5dab37bb5a10ee1d063a37f354cc3453adf4c58d1b3
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021f0c0(longlong *param_1,void *param_2,longlong param_3)");
+        {
+            trace.statement("uint *puVar1;");
+            trace.statement("int *piVar2;");
+            trace.statement("uint uVar3;");
+            trace.statement("undefined1 auVar4 [16];");
+            trace.statement("undefined1 auVar5 [16];");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("int iVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("ulonglong uVar13;");
+            trace.statement("ulonglong uVar14;");
+            trace.statement("uint uVar15;");
+            trace.statement("uint uVar16;");
+            trace.statement("ulonglong uVar17;");
+            trace.statement("ulonglong uVar18;");
+            trace.statement("uVar14 = param_3 - (longlong)param_2 >> 2;");
+            if (trace.condition("if (uVar14 != 0)")) {
+                trace.statement("uVar13 = param_1[1] - *param_1 >> 2;");
+                if (trace.condition("if (uVar14 < 0x26f)")) {
+                    if (trace.condition("if (uVar14 < 0x44)")) {
+                        if (trace.condition("if (uVar14 < 0x27)")) {
+                            if (trace.condition("if (uVar14 < 7)")) {
+                                trace.statement("uVar6 = uVar14 - 1 >> 1;");
+                            } else {
+                            trace.statement("uVar6 = 3;");
+                            }
+                        } else {
+                        trace.statement("uVar6 = 5;");
+                        }
+                    } else {
+                    trace.statement("uVar6 = 7;");
+                    }
+                } else {
+                trace.statement("uVar6 = 0xb;");
+                }
+                trace.statement("uVar17 = uVar14 - uVar6 >> 1;");
+                trace.statement("uVar18 = uVar13 + 1;");
+                if (trace.condition("if (uVar13 < uVar14)")) {
+                    trace.statement("uVar18 = uVar14;");
+                }
+                trace.statement("memset(param_2,-0x74747475,uVar14 << 2);");
+                trace.statement("uVar8 = 0;");
+                if (trace.condition("if (uVar18 != 0)")) {
+                    do {
+                        trace.statement("uVar10 = (uVar8 + uVar17) % uVar14;");
+                        trace.statement("uVar3 = *(uint *)((longlong)param_2 + uVar10 * 4);");
+                        trace.statement("uVar11 = uVar8 % uVar14;");
+                        trace.statement("puVar1 = (uint *)((longlong)param_2 + uVar11 * 4);");
+                        trace.statement("uVar15 = uVar3 ^ *(uint *)((longlong)param_2 + ((uVar8 - 1) % uVar14) * 4) ^ *puVar1;");
+                        trace.statement("iVar9 = (uVar15 >> 0x1b ^ uVar15) * 0x19660d;");
+                        trace.statement("uVar7 = uVar13;");
+                        if (trace.condition("if ((uVar8 != 0) && (uVar7 = uVar11, uVar8 <= uVar13))")) {
+                            trace.statement("uVar7 = *(uint *)(*param_1 + -4 + uVar8 * 4) + uVar11;");
+                        }
+                        trace.statement("uVar15 = (int)uVar7 + iVar9;");
+                        trace.statement("*(uint *)((longlong)param_2 + uVar10 * 4) = uVar3 + iVar9;");
+                        trace.statement("uVar7 = uVar8 + uVar17 + uVar6;");
+                        trace.statement("uVar8 = uVar8 + 1;");
+                        trace.statement("piVar2 = (int *)((longlong)param_2 + (uVar7 % uVar14) * 4);");
+                        trace.statement("*piVar2 = *piVar2 + uVar15;");
+                        trace.statement("*puVar1 = uVar15;");
+                    } while (trace.loop_condition("while (uVar8 < uVar18);"));
+                }
+                for (auto loop = trace.loop("for (; uVar8 < uVar18 + uVar14; uVar8 = uVar8 + 1)"); loop.next(); ) {
+                    trace.statement("uVar13 = (uVar8 + uVar17) % uVar14;");
+                    trace.statement("uVar3 = *(uint *)((longlong)param_2 + uVar13 * 4);");
+                    trace.statement("auVar4._8_8_ = 0;");
+                    trace.statement("auVar4._0_8_ = uVar14;");
+                    trace.statement("auVar5._8_8_ = 0;");
+                    trace.statement("auVar5._0_8_ = uVar8;");
+                    trace.statement("lVar12 = SUB168(auVar5 % auVar4,0);");
+                    trace.statement("uVar15 = *(int *)((longlong)param_2 + ((uVar8 - 1) % uVar14) * 4) + uVar3 +");
+                    trace.statement("*(int *)((longlong)param_2 + lVar12 * 4);");
+                    trace.statement("uVar15 = (uVar15 >> 0x1b ^ uVar15) * 0x5d588b65;");
+                    trace.statement("uVar16 = uVar15 - SUB164(auVar5 % auVar4,0);");
+                    trace.statement("*(uint *)((longlong)param_2 + uVar13 * 4) = uVar3 ^ uVar15;");
+                    trace.statement("puVar1 = (uint *)((longlong)param_2 + ((uVar8 + uVar17 + uVar6) % uVar14) * 4);");
+                    trace.statement("*puVar1 = *puVar1 ^ uVar16;");
+                    trace.statement("*(uint *)((longlong)param_2 + lVar12 * 4) = uVar16;");
+                }
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x18021f0c0;
 }
 
@@ -2543,12 +3842,113 @@ FUN_18023cf10)F18021f2b0C",
 72: if ((*(uint *)(puVar7[1] + (ulonglong)(uVar8 >> 5) * 4) >> ((byte)uVar8 & 0x1f) & 1) == 0) {
 77: else {
 100: return 1;)F18021f2b0F",
-    R"F18021f2b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F18021f2b0U",
+    R"F18021f2b0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F18021f2b0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021f2b0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021f2b0", "FUN_18021f2b0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180234420", reinterpret_cast<const void*>(&image::FUN_180234420));
+    trace.call_target("FUN_180239ad0", reinterpret_cast<const void*>(&image::FUN_180239ad0));
+    trace.call_target("FUN_180239dc0", reinterpret_cast<const void*>(&image::FUN_180239dc0));
+    trace.call_target("FUN_18023cf10", reinterpret_cast<const void*>(&image::FUN_18023cf10));
+    // body sha256: 16c410c9723c9858100ca8694c833eb5e558e94b96a99b0abf2e687932f72fe4
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined1 FUN_18021f2b0(undefined8 *param_1,undefined8 *param_2)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("char cVar2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("undefined8 *puVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined8 *puVar7;");
+            trace.statement("uint uVar8;");
+            trace.statement("ulonglong uVar9;");
+            if (trace.condition("if (param_2 != (undefined8 *)0x0)")) {
+                trace.statement("*(undefined1 *)(param_2 + 1) = 1;");
+                trace.statement("FUN_180239ad0(param_2,0);");
+            }
+            trace.statement("*param_1 = param_1[0x17];");
+            if (trace.condition("if (1 < *(uint *)((longlong)param_1 + 0xdc))")) {
+                trace.statement("FUN_180239dc0(param_1 + 1,*(uint *)((longlong)param_1 + 0xdc));");
+                trace.statement("puVar4 = (undefined8 *)param_1[6];");
+                trace.statement("lVar6 = param_1[5];");
+                trace.statement("uVar5 = (ulonglong)*(uint *)((longlong)param_1 + 0xdc);");
+                trace.statement("uVar9 = (longlong)puVar4 - lVar6 >> 4;");
+                if (trace.condition("if (uVar5 < uVar9)")) {
+                    trace.statement("param_1[6] = uVar5 * 0x10 + lVar6;");
+                } else {
+                if (trace.condition("if ((ulonglong)(param_1[7] - lVar6 >> 4) < uVar5)")) {
+                    trace.statement("FUN_18023cf10(param_1 + 5);");
+                } else {
+                for (auto loop = trace.loop("for (lVar6 = uVar5 - uVar9; lVar6 != 0; lVar6 = lVar6 + -1)"); loop.next(); ) {
+                    trace.statement("*puVar4 = 0;");
+                    trace.statement("puVar4[1] = 0;");
+                    trace.statement("puVar4 = puVar4 + 2;");
+                }
+                trace.statement("param_1[6] = puVar4;");
+                }
+                }
+            }
+            trace.statement("*(undefined1 *)(param_1 + 0x1e) = 0;");
+            trace.statement("*(undefined4 *)((longlong)param_1 + 0xf4) = 10000000;");
+            trace.statement("*(undefined4 *)(param_1 + 0x1f) = 600;");
+            trace.statement("param_1[0x16] = 0;");
+            trace.statement("*(undefined1 *)(param_1 + 0x1b) = 0;");
+            trace.statement("cVar2 = FUN_180234420(param_1,param_1[0x19]);");
+            if (trace.condition("if (cVar2 == '\\0')")) {
+                trace.statement("return 0;");
+            }
+            if (trace.condition("if (param_2 != (undefined8 *)0x0)")) {
+                trace.statement("FUN_180239ad0(param_2,*(undefined4 *)((longlong)param_1 + 0xdc));");
+                trace.statement("puVar4 = (undefined8 *)param_2[2];");
+                trace.statement("uVar8 = 1;");
+                trace.statement("puVar7 = param_1 + 8;");
+                if (trace.condition("if (*(char *)(param_1 + 0x1c) == '\\0')")) {
+                    trace.statement("puVar7 = param_1;");
+                }
+                trace.statement("*(undefined1 *)(puVar4 + 2) = 1;");
+                trace.statement("*puVar4 = param_1[0x17];");
+                trace.statement("puVar4[1] = *puVar7;");
+                if (trace.condition("if (1 < *(uint *)((longlong)param_1 + 0xdc))")) {
+                    do {
+                        trace.statement("uVar5 = (ulonglong)uVar8;");
+                        trace.statement("lVar6 = uVar5 * 0x18;");
+                        if (trace.condition("if ((*(uint *)(puVar7[1] + (ulonglong)(uVar8 >> 5) * 4) >> ((byte)uVar8 & 0x1f) & 1) == 0)")) {
+                            trace.statement("*(undefined1 *)(param_2[2] + 0x10 + lVar6) = 0;");
+                            trace.statement("*(undefined8 *)(lVar6 + param_2[2]) = param_1[0x18];");
+                            trace.statement("uVar3 = param_1[0x18];");
+                        } else {
+                        trace.statement("*(undefined1 *)(param_2[2] + 0x10 + lVar6) = 1;");
+                        trace.statement("*(undefined8 *)(lVar6 + param_2[2]) = *(undefined8 *)(puVar7[5] + uVar5 * 0x10);");
+                        trace.statement("uVar3 = *(undefined8 *)(puVar7[5] + 8 + uVar5 * 0x10);");
+                        }
+                        trace.statement("uVar8 = uVar8 + 1;");
+                        trace.statement("*(undefined8 *)(lVar6 + 8 + param_2[2]) = uVar3;");
+                    } while (trace.loop_condition("while (uVar8 < *(uint *)((longlong)param_1 + 0xdc));"));
+                }
+                trace.statement("*param_2 = param_1[0x17];");
+                trace.statement("lVar6 = param_1[0x17];");
+                trace.statement("param_2[5] = lVar6;");
+                trace.statement("lVar1 = *(longlong *)param_2[2];");
+                trace.statement("param_2[6] = lVar1;");
+                trace.statement("*(bool *)(param_2 + 7) = lVar6 != lVar1;");
+                trace.statement("lVar6 = ((longlong *)param_2[2])[1];");
+                trace.statement("param_2[8] = lVar6;");
+                trace.statement("lVar1 = param_1[0x18];");
+                trace.statement("param_2[9] = lVar1;");
+                trace.statement("*(bool *)(param_2 + 10) = lVar6 != lVar1;");
+                trace.statement("param_2[0xb] = param_1[0x18];");
+                trace.statement("param_2[0xc] = param_1[0x18];");
+            }
+            trace.statement("return 1;");
+        }
     return kFunction_0x18021f2b0;
 }
 
@@ -2684,13 +4084,101 @@ FUN_18020e8a0)F18021f510C",
 79: else {
 82: if (!bVar2) break;
 99: return param_2;)F18021f510F",
-    R"F18021f510U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021f510U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F18021f510U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.)F18021f510U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021f510() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021f510", "FUN_18021f510");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020d5c0", reinterpret_cast<const void*>(&image::FUN_18020d5c0));
+    trace.call_target("FUN_18020d830", reinterpret_cast<const void*>(&image::FUN_18020d830));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_18020e8a0", reinterpret_cast<const void*>(&image::FUN_18020e8a0));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    // body sha256: 3106dd037c57fe86465ca89e50262cc41c3d0db96f2e1fa57865f414e130f6b2
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_18021f510(undefined8 *param_1,undefined8 *param_2)");
+        {
+            trace.statement("int iVar1;");
+            trace.statement("bool bVar2;");
+            trace.statement("undefined8 *puVar3;");
+            trace.statement("undefined8 *puVar4;");
+            trace.statement("undefined8 *puVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined1 auStack_c8 [32];");
+            trace.statement("longlong *local_a8;");
+            trace.statement("undefined8 *local_a0;");
+            trace.statement("undefined8 local_98;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined8 local_88;");
+            trace.statement("undefined8 uStack_80;");
+            trace.statement("int local_78;");
+            trace.statement("longlong local_70;");
+            trace.statement("longlong local_68;");
+            trace.statement("longlong local_60;");
+            trace.statement("ulonglong local_58;");
+            trace.statement("local_58 = DAT_1803da4c0 ^ (ulonglong)auStack_c8;");
+            if (trace.condition("if ((param_1 != param_2) && (puVar4 = param_1 + 8, puVar4 != param_2))")) {
+                trace.statement("local_a8 = param_1 + 0xd;");
+                trace.statement("local_a0 = param_2;");
+                do {
+                    trace.statement("local_98 = *puVar4;");
+                    trace.statement("uStack_90 = puVar4[1];");
+                    trace.statement("local_88 = puVar4[2];");
+                    trace.statement("uStack_80 = puVar4[3];");
+                    trace.statement("*(undefined1 *)puVar4 = 0;");
+                    trace.statement("puVar4[2] = 0;");
+                    trace.statement("puVar4[3] = 0xf;");
+                    trace.statement("iVar1 = *(int *)(puVar4 + 4);");
+                    trace.statement("local_60 = local_a8[2];");
+                    trace.statement("local_a8[2] = 0;");
+                    trace.statement("local_68 = local_a8[1];");
+                    trace.statement("local_a8[1] = 0;");
+                    trace.statement("local_70 = *local_a8;");
+                    trace.statement("*local_a8 = 0;");
+                    if (trace.condition("if (iVar1 == *(int *)(param_1 + 4))")) {
+                        trace.statement("lVar6 = local_68 - local_70;");
+                        trace.statement("bVar2 = (ulonglong)((longlong)(param_1[6] - param_1[5]) >> 5) < (ulonglong)(lVar6 >> 5);");
+                    } else {
+                    trace.statement("bVar2 = *(int *)(param_1 + 4) <= iVar1;");
+                    trace.statement("lVar6 = local_68 - local_70;");
+                    }
+                    trace.statement("puVar5 = puVar4;");
+                    trace.statement("local_78 = iVar1;");
+                    if (trace.condition("if (bVar2)")) {
+                        trace.statement("puVar5 = puVar4 + 8;");
+                        trace.statement("puVar3 = puVar4;");
+                        while (trace.loop_condition("while (puVar3 != param_1)")) {
+                            trace.statement("FUN_18020e8a0(puVar5 + -8,puVar3 + -8);");
+                            trace.statement("*(undefined4 *)(puVar5 + -4) = *(undefined4 *)(puVar3 + -4);");
+                            trace.statement("FUN_18020d830(puVar5 + -3,puVar3 + -3);");
+                            trace.statement("puVar5 = puVar5 + -8;");
+                            trace.statement("puVar3 = puVar3 + -8;");
+                        }
+                        trace.statement("FUN_18020e8a0(param_1,&local_98);");
+                        trace.statement("*(int *)(param_1 + 4) = local_78;");
+                        trace.statement("FUN_18020d830(param_1 + 5,&local_70);");
+                    } else {
+                    while (trace.loop_condition("while( true )")) {
+                        if (trace.condition("if (iVar1 == *(int *)(puVar5 + -4))")) {
+                            trace.statement("bVar2 = (ulonglong)((longlong)(puVar5[-2] - puVar5[-3]) >> 5) < (ulonglong)(lVar6 >> 5);");
+                        } else {
+                        trace.statement("bVar2 = *(int *)(puVar5 + -4) <= iVar1;");
+                        }
+                        if (trace.condition("if (!bVar2) break; FUN_18020e8a0(puVar5,puVar5 + -8); *(undefined4 *)(puVar5 + 4) = *(undefined4 *)(puVar5 + -4); FUN_18020d830(puVar5 + 5,puVar5 + -3); puVar5 = puVar5 + -8; } FUN_18020e8a0(puVar5,&local_98); *(int *)(puVar5 + 4) = local_78; FUN_18020d830(puVar5 + 5,&local_70); } puVar4 = puVar4 + 8; FUN_18020d5c0(&local_70); FUN_18020e450(&local_98); local_a8 = local_a8 + 8; param_2 = local_a0; } while (puVar4 != local_a0); } return param_2; }")) {
+                        }
+                    }
+                    }
+                } while (trace.loop_condition("do/while"));
+            }
+        }
     return kFunction_0x18021f510;
 }
 
@@ -2892,13 +4380,14 @@ DAT_1803eb7e0)F18021f750D",
 136: if (0xfff < (DAT_1803eb7e0 - (longlong)DAT_1803eb7d0 & 0xffffffffffffffc0U)) {
 139: if ((void *)0x1f < pvVar9) {
 152: return *(undefined8 *)(puVar11 + 0x28);)F18021f750F",
-    R"F18021f750U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021f750U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18021f83b.
-TODO: recover the declaration, type and value for global/data reference LAB_18021f9f7.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb7d0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb7d8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb7e0.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021f83b.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021f9f7.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb7d0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb7d8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb7e0.
 TODO: resolve the indirect call in body 75: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 76: lVar12 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 140: pcVar3 = (code *)swi(0x29);.
@@ -2907,6 +4396,170 @@ TODO: resolve the indirect call in body 141: (*pcVar3)(5);.)F18021f750U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021f750() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021f750", "FUN_18021f750");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021f83b.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021f9f7.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb7d0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb7d8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb7e0.
+    // TODO: resolve the indirect call in body 75: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 76: lVar12 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 140: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 141: (*pcVar3)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18001d080", reinterpret_cast<const void*>(&image::FUN_18001d080));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_18022f730", reinterpret_cast<const void*>(&image::FUN_18022f730));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803eb7d0", static_cast<const void*>(&image::DAT_1803eb7d0));
+    trace.data_ref("DAT_1803eb7d8", static_cast<const void*>(&image::DAT_1803eb7d8));
+    trace.data_ref("DAT_1803eb7e0", static_cast<const void*>(&image::DAT_1803eb7e0));
+    // body sha256: 8400ccca7770e9c6c17a281f035ade67a92172733a1df91f5bd5a790b4a567ba
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_18021f750(undefined8 param_1,void *param_2,undefined8 param_3,undefined8 param_4)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("char *pcVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("size_t sVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("void *pvVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("void *pvVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("undefined1 *puVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("ulonglong uVar13;");
+            trace.statement("undefined8 *puVar14;");
+            trace.statement("ulonglong uVar15;");
+            trace.statement("undefined8 *puVar16;");
+            trace.statement("undefined8 uStack_b0;");
+            trace.statement("undefined1 auStack_a8 [8];");
+            trace.statement("undefined1 auStack_a0 [24];");
+            trace.statement("undefined8 local_88;");
+            trace.statement("undefined8 local_80 [9];");
+            trace.statement("puVar10 = auStack_a8;");
+            trace.statement("puVar11 = auStack_a8;");
+            trace.statement("local_88 = param_4;");
+            trace.statement("local_80[1] = param_3;");
+            trace.statement("lVar12 = (longlong)DAT_1803eb7d8 - (longlong)DAT_1803eb7d0 >> 6;");
+            trace.statement("uVar8 = 0x3ffffffffffffff;");
+            if (trace.condition("if (lVar12 == 0x3ffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar15 = (longlong)param_2 - (longlong)DAT_1803eb7d0;");
+            trace.statement("uVar13 = lVar12 + 1;");
+            trace.statement("uVar5 = DAT_1803eb7e0 - (longlong)DAT_1803eb7d0 >> 6;");
+            if (trace.condition("if (0x3ffffffffffffff - (uVar5 >> 1) < uVar5)")) {
+                trace.statement("uVar6 = 0xffffffffffffffe7;");
+                trace.statement("uVar5 = 0xffffffffffffffc0;");
+            } else {
+            trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+            trace.statement("uVar8 = uVar13;");
+            if (trace.condition("if (uVar13 <= uVar5)")) {
+                trace.statement("uVar8 = uVar5;");
+            }
+            if (trace.condition("if (0x3ffffffffffffff < uVar8)")) {
+                LAB_18021f9f7: ;
+                trace.statement("FUN_180012fe0();");
+            }
+            trace.statement("uVar5 = uVar8 * 0x40;");
+            if (trace.condition("if (uVar5 == 0)")) {
+                trace.statement("puVar14 = (undefined8 *)0x0;");
+                trace.statement("puVar11 = auStack_a8;");
+                trace.statement("goto LAB_18021f83b;");
+            }
+            if (trace.condition("if (uVar5 < 0x1000)")) {
+                trace.statement("puVar14 = (undefined8 *)FUN_1802d8350(uVar5);");
+                trace.statement("goto LAB_18021f83b;");
+            }
+            trace.statement("uVar6 = uVar5 + 0x27;");
+            if (trace.condition("if (uVar6 <= uVar5) goto LAB_18021f9f7; } lVar12 = FUN_1802d8350(uVar6); if (lVar12 == 0)")) {
+                trace.statement("pcVar3 = (code *)swi(0x29);");
+                trace.statement("lVar12 = (*pcVar3)(5);");
+                trace.statement("puVar10 = auStack_a0;");
+            }
+            trace.statement("puVar14 = (undefined8 *)(lVar12 + 0x27U & 0xffffffffffffffe0);");
+            trace.statement("puVar14[-1] = lVar12;");
+            trace.statement("puVar11 = puVar10;");
+            LAB_18021f83b: ;
+            trace.statement("puVar16 = (undefined8 *)((uVar15 & 0xffffffffffffffc0) + (longlong)puVar14);");
+            trace.statement("*(undefined8 **)(puVar11 + 0x28) = puVar16;");
+            trace.statement("puVar1 = puVar16 + 8;");
+            trace.statement("*(undefined8 ***)(puVar11 + 0x38) = &DAT_1803eb7d0;");
+            trace.statement("*(undefined8 **)(puVar11 + 0x40) = puVar14;");
+            trace.statement("*(ulonglong *)(puVar11 + 0x48) = uVar8;");
+            trace.statement("*(undefined8 **)(puVar11 + 0x50) = puVar1;");
+            trace.statement("*(undefined8 **)(puVar11 + 0x58) = puVar1;");
+            trace.statement("*(undefined8 **)(puVar11 + 0x60) = puVar16;");
+            trace.statement("pcVar2 = (char *)**(undefined8 **)(puVar11 + 0x30);");
+            trace.statement("*puVar16 = 0;");
+            trace.statement("puVar16[1] = 0;");
+            trace.statement("puVar16[2] = 0;");
+            trace.statement("puVar16[3] = 0;");
+            trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f896;");
+            trace.statement("sVar4 = strlen(pcVar2);");
+            trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f8a4;");
+            trace.statement("FUN_18001d080(puVar16,pcVar2,sVar4);");
+            trace.statement("pcVar2 = (char *)**(undefined8 **)(puVar11 + 0x20);");
+            trace.statement("puVar16[4] = 0;");
+            trace.statement("puVar16[5] = 0;");
+            trace.statement("puVar16[6] = 0;");
+            trace.statement("puVar16[7] = 0;");
+            trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f8c6;");
+            trace.statement("sVar4 = strlen(pcVar2);");
+            trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f8d5;");
+            trace.statement("FUN_18001d080(puVar16 + 4,pcVar2,sVar4);");
+            trace.statement("*(undefined8 **)(puVar11 + 0x50) = puVar16;");
+            trace.statement("puVar16 = puVar14;");
+            trace.statement("pvVar7 = DAT_1803eb7d0;");
+            if (trace.condition("if (param_2 != DAT_1803eb7d8)")) {
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f90b;");
+                trace.statement("FUN_18022f730(DAT_1803eb7d0,param_2,puVar14,&DAT_1803eb7d0);");
+                trace.statement("*(undefined8 **)(puVar11 + 0x50) = puVar14;");
+                trace.statement("puVar16 = puVar1;");
+                trace.statement("pvVar7 = param_2;");
+            }
+            trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f925;");
+            trace.statement("FUN_18022f730(pvVar7,DAT_1803eb7d8,puVar16,&DAT_1803eb7d0);");
+            trace.statement("pvVar7 = DAT_1803eb7d8;");
+            trace.statement("*(undefined8 *)(puVar11 + 0x40) = 0;");
+            if (trace.condition("if (DAT_1803eb7d0 != (void *)0x0)")) {
+                trace.statement("*(undefined8 **)(puVar11 + 0x20) = DAT_1803eb7d0;");
+                trace.statement("pvVar9 = DAT_1803eb7d0;");
+                while (trace.loop_condition("while (pvVar9 != pvVar7)")) {
+                    trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f959;");
+                    trace.statement("FUN_18020e450((longlong)pvVar9 + 0x20);");
+                    trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f962;");
+                    trace.statement("FUN_18020e450(pvVar9);");
+                    trace.statement("pvVar9 = (void *)((longlong)pvVar9 + 0x40);");
+                    trace.statement("*(void **)(puVar11 + 0x20) = pvVar9;");
+                }
+                trace.statement("pvVar7 = DAT_1803eb7d0;");
+                if (trace.condition("if (0xfff < (DAT_1803eb7e0 - (longlong)DAT_1803eb7d0 & 0xffffffffffffffc0U))")) {
+                    trace.statement("pvVar7 = *(void **)((longlong)DAT_1803eb7d0 + -8);");
+                    trace.statement("pvVar9 = (void *)((longlong)DAT_1803eb7d0 + (-8 - (longlong)pvVar7));");
+                    if (trace.condition("if ((void *)0x1f < pvVar9)")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar3)(5);");
+                        trace.statement("puVar11 = puVar11 + 8;");
+                        trace.statement("pvVar7 = pvVar9;");
+                    }
+                }
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18021f9b4;");
+                trace.statement("free(pvVar7);");
+            }
+            trace.statement("DAT_1803eb7d0 = puVar14;");
+            trace.statement("DAT_1803eb7d8 = puVar14 + uVar13 * 8;");
+            trace.statement("DAT_1803eb7e0 = uVar5 + (longlong)puVar14;");
+            trace.statement("return *(undefined8 *)(puVar11 + 0x28);");
+            }
+        }
     return kFunction_0x18021f750;
 }
 
@@ -3057,9 +4710,10 @@ FUN_1802d8350)F18021fa00C",
 94: if ((0xfff < (param_1[2] - (longlong)pvVar4 & 0xfffffffffffffff0U)) &&
 107: return puVar2;
 110: LAB_18021fbbd:)F18021fa00F",
-    R"F18021fa00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021fa00U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18021fbbd.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021fbbd.
 TODO: resolve the indirect call in body 57: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 58: lVar7 = (*pcVar5)(5);.
 TODO: resolve the indirect call in body 97: pcVar5 = (code *)swi(0x29);.
@@ -3068,6 +4722,116 @@ TODO: resolve the indirect call in body 98: _Memory = (void *)(*pcVar5)(5);.)F18
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021fa00() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021fa00", "FUN_18021fa00");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021fbbd.
+    // TODO: resolve the indirect call in body 57: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 58: lVar7 = (*pcVar5)(5);.
+    // TODO: resolve the indirect call in body 97: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 98: _Memory = (void *)(*pcVar5)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: c1a29406cbee671e87aa794dbc5bef9b672e58d4adf3b6e737113b54274fd788
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_18021fa00(longlong *param_1,void *param_2)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("undefined8 *puVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("void *pvVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("longlong lVar7;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar8 = auStack_88;");
+            trace.statement("puVar9 = auStack_88;");
+            trace.statement("lVar3 = *param_1;");
+            trace.statement("lVar7 = param_1[1] - lVar3 >> 4;");
+            if (trace.condition("if (lVar7 == 0xfffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar6 = param_1[2] - lVar3 >> 4;");
+            if (trace.condition("if (uVar6 <= 0xfffffffffffffff - (uVar6 >> 1))")) {
+                trace.statement("uVar1 = lVar7 + 1;");
+                trace.statement("uVar6 = uVar6 + (uVar6 >> 1);");
+                trace.statement("uVar10 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar6)")) {
+                    trace.statement("uVar10 = uVar6;");
+                }
+                if (trace.condition("if (uVar10 < 0x1000000000000000)")) {
+                    trace.statement("uVar6 = uVar10 * 0x10;");
+                    if (trace.condition("if (uVar6 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar9 = auStack_88;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar6);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar6 + 0x27 <= uVar6) goto LAB_18021fbbd; lVar7 = FUN_1802d8350(); if (lVar7 == 0)")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("lVar7 = (*pcVar5)(5);");
+                        trace.statement("puVar8 = auStack_80;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar7 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar7;");
+                    trace.statement("puVar9 = puVar8;");
+                }
+                trace.statement("puVar2 = (undefined8 *)(((longlong)param_2 - lVar3 & 0xfffffffffffffff0U) + (longlong)_Dst_00)");
+                trace.statement(";");
+                trace.statement("_Dst = puVar2 + 2;");
+                trace.statement("*(longlong **)(puVar9 + 0x20) = param_1;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x28) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x30) = uVar10;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = _Dst;");
+                trace.statement("*puVar2 = 0;");
+                trace.statement("puVar2[1] = 0;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = puVar2;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                    trace.statement("_Size = param_1[1] - (longlong)pvVar4;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = pvVar4;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x18021fb24;");
+                trace.statement("memmove(_Dst_00,pvVar4,(longlong)param_2 - (longlong)pvVar4);");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = _Dst_00;");
+                trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x18021fb3b;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x28) = 0;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (pvVar4 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar4;");
+                    if (trace.condition("if ((0xfff < (param_1[2] - (longlong)pvVar4 & 0xfffffffffffffff0U)) && (_Memory = *(void **)((longlong)pvVar4 + -8), 0x1f < (ulonglong)((longlong)pvVar4 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("_Memory = (void *)(*pcVar5)(5);");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x18021fb86;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = (longlong)_Dst_00;");
+                trace.statement("param_1[1] = (longlong)(_Dst_00 + uVar1 * 2);");
+                trace.statement("param_1[2] = (longlong)(_Dst_00 + uVar10 * 2);");
+                trace.statement("return puVar2;");
+            }
+        }
+        LAB_18021fbbd: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x18021fa00;
 }
 
@@ -3224,9 +4988,10 @@ FUN_1802d8350)F18021fbd0C",
 100: if ((0xfff < (param_1[2] - (longlong)pvVar4 & 0xfffffffffffffff0U)) &&
 113: return puVar1;
 116: LAB_18021fd9e:)F18021fbd0F",
-    R"F18021fbd0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021fbd0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18021fd9e.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021fd9e.
 TODO: resolve the indirect call in body 62: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 63: lVar9 = (*pcVar5)(5);.
 TODO: resolve the indirect call in body 103: pcVar5 = (code *)swi(0x29);.
@@ -3235,6 +5000,122 @@ TODO: resolve the indirect call in body 104: _Memory = (void *)(*pcVar5)(5);.)F1
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021fbd0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021fbd0", "FUN_18021fbd0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021fd9e.
+    // TODO: resolve the indirect call in body 62: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 63: lVar9 = (*pcVar5)(5);.
+    // TODO: resolve the indirect call in body 103: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 104: _Memory = (void *)(*pcVar5)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 3775a7de2b32638e81f70f5bed6c3ceac18020bee1a7ce62f220bc2a84c74382
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_18021fbd0(longlong *param_1,void *param_2,undefined8 param_3,undefined8 param_4)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("void *pvVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("size_t _Size;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [24];");
+            trace.statement("undefined8 local_78;");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar7 = auStack_98;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("local_78 = param_4;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("lVar2 = *param_1;");
+            trace.statement("lVar9 = param_1[1] - lVar2 >> 4;");
+            if (trace.condition("if (lVar9 == 0xfffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar6 = param_1[2] - lVar2 >> 4;");
+            if (trace.condition("if (uVar6 <= 0xfffffffffffffff - (uVar6 >> 1))")) {
+                trace.statement("uVar10 = lVar9 + 1;");
+                trace.statement("uVar6 = uVar6 + (uVar6 >> 1);");
+                trace.statement("uVar11 = uVar10;");
+                if (trace.condition("if (uVar10 <= uVar6)")) {
+                    trace.statement("uVar11 = uVar6;");
+                }
+                if (trace.condition("if (uVar11 < 0x1000000000000000)")) {
+                    trace.statement("uVar6 = uVar11 * 0x10;");
+                    if (trace.condition("if (uVar6 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar8 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar6);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar6 + 0x27 <= uVar6) goto LAB_18021fd9e; lVar9 = FUN_1802d8350(); if (lVar9 == 0)")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("lVar9 = (*pcVar5)(5);");
+                        trace.statement("puVar7 = auStack_90;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar9 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar9;");
+                    trace.statement("puVar8 = puVar7;");
+                }
+                trace.statement("puVar1 = (undefined8 *)(((longlong)param_2 - lVar2 & 0xfffffffffffffff0U) + (longlong)_Dst_00)");
+                trace.statement(";");
+                trace.statement("_Dst = puVar1 + 2;");
+                trace.statement("*(longlong **)(puVar8 + 0x30) = param_1;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x40) = uVar11;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x48) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x50) = _Dst;");
+                trace.statement("uVar3 = **(undefined8 **)(puVar8 + 0x20);");
+                trace.statement("*puVar1 = **(undefined8 **)(puVar8 + 0x28);");
+                trace.statement("puVar1[1] = uVar3;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x48) = puVar1;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                    trace.statement("_Size = param_1[1] - (longlong)pvVar4;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = pvVar4;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18021fd05;");
+                trace.statement("memmove(_Dst_00,pvVar4,(longlong)param_2 - (longlong)pvVar4);");
+                trace.statement("*(undefined8 **)(puVar8 + 0x48) = _Dst_00;");
+                trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18021fd1c;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar8 + 0x38) = 0;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (pvVar4 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar4;");
+                    if (trace.condition("if ((0xfff < (param_1[2] - (longlong)pvVar4 & 0xfffffffffffffff0U)) && (_Memory = *(void **)((longlong)pvVar4 + -8), 0x1f < (ulonglong)((longlong)pvVar4 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("_Memory = (void *)(*pcVar5)(5);");
+                        trace.statement("puVar8 = puVar8 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18021fd67;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = (longlong)_Dst_00;");
+                trace.statement("param_1[1] = (longlong)(_Dst_00 + uVar10 * 2);");
+                trace.statement("param_1[2] = (longlong)(_Dst_00 + uVar11 * 2);");
+                trace.statement("return puVar1;");
+            }
+        }
+        LAB_18021fd9e: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x18021fbd0;
 }
 
@@ -3381,19 +5262,113 @@ LAB_18021ff36)F18021fdb0D",
 87: LAB_18021fef2:
 94: LAB_18021ff16:
 96: return;)F18021fdb0F",
-    R"F18021fdb0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021fdb0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18021fe49.
-TODO: recover the declaration, type and value for global/data reference LAB_18021fe86.
-TODO: recover the declaration, type and value for global/data reference LAB_18021fef2.
-TODO: recover the declaration, type and value for global/data reference LAB_18021ff16.
-TODO: recover the declaration, type and value for global/data reference LAB_18021ff36.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021fe49.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021fe86.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021fef2.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021ff16.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021ff36.
 TODO: resolve the indirect call in body 88: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 89: (*pcVar5)(5);.)F18021fdb0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021fdb0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021fdb0", "FUN_18021fdb0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021fe49.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021fe86.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021fef2.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021ff16.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021ff36.
+    // TODO: resolve the indirect call in body 88: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 89: (*pcVar5)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: b52abca203dc9b7e4317ac359aa3de89d5a079c9ca9bc2460584200493d60608
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021fdb0(undefined8 *param_1,ulonglong param_2,undefined8 param_3,undefined8 param_4,");
+        trace.statement("void *param_5,longlong param_6)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("size_t _Size;");
+            trace.statement("longlong lVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("size_t _Size_00;");
+            trace.statement("longlong lVar6;");
+            trace.statement("void *pvVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("void *_Src;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("void *unaff_RDI;");
+            trace.statement("undefined1 auStack_48 [8];");
+            trace.statement("undefined1 auStack_40 [24];");
+            trace.statement("puVar9 = auStack_48;");
+            trace.statement("lVar3 = param_1[2];");
+            trace.statement("_Src = (void *)0x7ffffffffffffffe;");
+            if (trace.condition("if (0x7ffffffffffffffeU - lVar3 < param_2)")) {
+                trace.statement("FUN_1800130a0();");
+            }
+            trace.statement("uVar4 = param_1[3];");
+            trace.statement("pvVar7 = (void *)(lVar3 + param_2 | 7);");
+            if (trace.condition("if ((pvVar7 < (void *)0x7fffffffffffffff) && (uVar4 <= 0x7ffffffffffffffe - (uVar4 >> 1)))")) {
+                trace.statement("pvVar2 = (void *)(uVar4 + (uVar4 >> 1));");
+                trace.statement("_Src = pvVar7;");
+                if (trace.condition("if (pvVar7 < pvVar2)")) {
+                    trace.statement("_Src = pvVar2;");
+                }
+                if (trace.condition("if (0x7fffffffffffffff < (longlong)_Src + 1U) goto LAB_18021ff36; uVar8 = ((longlong)_Src + 1U) * 2; if (uVar8 != 0) goto LAB_18021fe49; unaff_RDI = (void *)0x0; LAB_18021fe86: _Size = lVar3 * 2 + 2; param_1[2] = lVar3 + param_2; param_1[3] = _Src; _Size_00 = param_6 * 2; if (uVar4 < 8)")) {
+                    trace.statement("memcpy(unaff_RDI,param_5,_Size_00);");
+                    trace.statement("memcpy((void *)(_Size_00 + (longlong)unaff_RDI),param_1,_Size);");
+                    trace.statement("goto LAB_18021ff16;");
+                }
+                trace.statement("_Src = (void *)*param_1;");
+                trace.statement("memcpy(unaff_RDI,param_5,_Size_00);");
+                trace.statement("memcpy((void *)(_Size_00 + (longlong)unaff_RDI),_Src,_Size);");
+                if (trace.condition("if (0xfff < uVar4 * 2 + 2)")) {
+                    trace.statement("puVar1 = (undefined8 *)((longlong)_Src + -8);");
+                    trace.statement("_Src = (void *)((longlong)_Src + (-8 - (longlong)*puVar1));");
+                    if (trace.condition("if (_Src < (void *)0x20)")) {
+                        trace.statement("free((void *)*puVar1);");
+                        trace.statement("goto LAB_18021ff16;");
+                    }
+                    trace.statement("goto LAB_18021fef2;");
+                }
+            } else {
+            trace.statement("uVar8 = 0xfffffffffffffffe;");
+            LAB_18021fe49: ;
+            if (trace.condition("if (uVar8 < 0x1000)")) {
+                trace.statement("unaff_RDI = (void *)FUN_1802d8350();");
+                trace.statement("goto LAB_18021fe86;");
+            }
+            if (trace.condition("if (uVar8 + 0x27 <= uVar8)")) {
+                LAB_18021ff36: ;
+                trace.statement("FUN_180012fe0();");
+            }
+            trace.statement("lVar6 = FUN_1802d8350(uVar8 + 0x27);");
+            if (trace.condition("if (lVar6 != 0)")) {
+                trace.statement("unaff_RDI = (void *)(lVar6 + 0x27U & 0xffffffffffffffe0);");
+                trace.statement("*(longlong *)((longlong)unaff_RDI - 8) = lVar6;");
+                trace.statement("goto LAB_18021fe86;");
+            }
+            LAB_18021fef2: ;
+            trace.statement("pcVar5 = (code *)swi(0x29);");
+            trace.statement("(*pcVar5)(5);");
+            trace.statement("puVar9 = auStack_40;");
+            }
+            trace.statement("*(undefined8 *)(puVar9 + -8) = 0x18021ff01;");
+            trace.statement("free(_Src);");
+            LAB_18021ff16: ;
+            trace.statement("*param_1 = unaff_RDI;");
+            trace.statement("return;");
+        }
     return kFunction_0x18021fdb0;
 }
 
@@ -3542,19 +5517,115 @@ LAB_1802200f3)F18021ff50D",
 89: LAB_1802200a1:
 96: LAB_1802200ce:
 98: return;)F18021ff50F",
-    R"F18021ff50U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F18021ff50U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18021ffec.
-TODO: recover the declaration, type and value for global/data reference LAB_180220029.
-TODO: recover the declaration, type and value for global/data reference LAB_1802200a1.
-TODO: recover the declaration, type and value for global/data reference LAB_1802200ce.
-TODO: recover the declaration, type and value for global/data reference LAB_1802200f3.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18021ffec.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180220029.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802200a1.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802200ce.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802200f3.
 TODO: resolve the indirect call in body 90: pcVar6 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 91: (*pcVar6)(5);.)F18021ff50U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x18021ff50() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x18021ff50", "FUN_18021ff50");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18021ffec.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180220029.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802200a1.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802200ce.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802200f3.
+    // TODO: resolve the indirect call in body 90: pcVar6 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 91: (*pcVar6)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_1800130a0", reinterpret_cast<const void*>(&image::FUN_1800130a0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 52ff71be65cadcac66d87bbd73095360d49031c81adc95cd1ce6e6f8f0cc906b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_18021ff50(undefined8 *param_1,ulonglong param_2,undefined8 param_3,void *param_4,");
+        trace.statement("longlong param_5)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("undefined2 *puVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("code *pcVar6;");
+            trace.statement("size_t _Size;");
+            trace.statement("longlong lVar7;");
+            trace.statement("void *pvVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("void *_Src;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("void *unaff_RDI;");
+            trace.statement("undefined1 auStack_58 [8];");
+            trace.statement("undefined1 auStack_50 [24];");
+            trace.statement("puVar10 = auStack_58;");
+            trace.statement("lVar4 = param_1[2];");
+            trace.statement("_Src = (void *)0x7ffffffffffffffe;");
+            if (trace.condition("if (0x7ffffffffffffffeU - lVar4 < param_2)")) {
+                trace.statement("FUN_1800130a0();");
+            }
+            trace.statement("uVar5 = param_1[3];");
+            trace.statement("pvVar8 = (void *)(lVar4 + param_2 | 7);");
+            if (trace.condition("if ((pvVar8 < (void *)0x7fffffffffffffff) && (uVar5 <= 0x7ffffffffffffffe - (uVar5 >> 1)))")) {
+                trace.statement("pvVar2 = (void *)(uVar5 + (uVar5 >> 1));");
+                trace.statement("_Src = pvVar8;");
+                if (trace.condition("if (pvVar8 < pvVar2)")) {
+                    trace.statement("_Src = pvVar2;");
+                }
+                if (trace.condition("if (0x7fffffffffffffff < (longlong)_Src + 1U) goto LAB_1802200f3; uVar9 = ((longlong)_Src + 1U) * 2; if (uVar9 != 0) goto LAB_18021ffec; unaff_RDI = (void *)0x0; LAB_180220029: _Size = lVar4 * 2; param_1[2] = lVar4 + param_2; param_1[3] = _Src; puVar3 = (undefined2 *)((longlong)unaff_RDI + (param_5 + lVar4) * 2); if (uVar5 < 8)")) {
+                    trace.statement("memcpy(unaff_RDI,param_1,_Size);");
+                    trace.statement("memcpy((void *)(_Size + (longlong)unaff_RDI),param_4,param_5 * 2);");
+                    trace.statement("*puVar3 = 0;");
+                    trace.statement("goto LAB_1802200ce;");
+                }
+                trace.statement("_Src = (void *)*param_1;");
+                trace.statement("memcpy(unaff_RDI,_Src,_Size);");
+                trace.statement("memcpy((void *)(_Size + (longlong)unaff_RDI),param_4,param_5 * 2);");
+                trace.statement("*puVar3 = 0;");
+                if (trace.condition("if (0xfff < uVar5 * 2 + 2)")) {
+                    trace.statement("puVar1 = (undefined8 *)((longlong)_Src + -8);");
+                    trace.statement("_Src = (void *)((longlong)_Src + (-8 - (longlong)*puVar1));");
+                    if (trace.condition("if (_Src < (void *)0x20)")) {
+                        trace.statement("free((void *)*puVar1);");
+                        trace.statement("goto LAB_1802200ce;");
+                    }
+                    trace.statement("goto LAB_1802200a1;");
+                }
+            } else {
+            trace.statement("uVar9 = 0xfffffffffffffffe;");
+            LAB_18021ffec: ;
+            if (trace.condition("if (uVar9 < 0x1000)")) {
+                trace.statement("unaff_RDI = (void *)FUN_1802d8350();");
+                trace.statement("goto LAB_180220029;");
+            }
+            if (trace.condition("if (uVar9 + 0x27 <= uVar9)")) {
+                LAB_1802200f3: ;
+                trace.statement("FUN_180012fe0();");
+            }
+            trace.statement("lVar7 = FUN_1802d8350(uVar9 + 0x27);");
+            if (trace.condition("if (lVar7 != 0)")) {
+                trace.statement("unaff_RDI = (void *)(lVar7 + 0x27U & 0xffffffffffffffe0);");
+                trace.statement("*(longlong *)((longlong)unaff_RDI - 8) = lVar7;");
+                trace.statement("goto LAB_180220029;");
+            }
+            LAB_1802200a1: ;
+            trace.statement("pcVar6 = (code *)swi(0x29);");
+            trace.statement("(*pcVar6)(5);");
+            trace.statement("puVar10 = auStack_50;");
+            }
+            trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802200b0;");
+            trace.statement("free(_Src);");
+            LAB_1802200ce: ;
+            trace.statement("*param_1 = unaff_RDI;");
+            trace.statement("return;");
+        }
     return kFunction_0x18021ff50;
 }
 
@@ -3605,12 +5676,40 @@ FUN_180227870)F180220100C",
     R"F180220100T()F180220100T",
     R"F180220100F(17: for (; param_2 != 0; param_2 = param_2 + -1) {
 26: return param_3;)F180220100F",
-    R"F180220100U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180220100U",
+    R"F180220100U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180220100U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220100() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220100", "FUN_180220100");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180217fc0", reinterpret_cast<const void*>(&image::FUN_180217fc0));
+    trace.call_target("FUN_180227870", reinterpret_cast<const void*>(&image::FUN_180227870));
+    // body sha256: 075ee51f21422d9cda2ed2a135e5245ef07c13baed7e298c5e9da53c671f85f0
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180220100(longlong *param_1,longlong param_2,longlong param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("ulonglong uVar2;");
+            trace.statement("undefined4 uVar3;");
+            trace.statement("lVar1 = *param_1;");
+            trace.statement("uVar2 = param_1[1];");
+            trace.statement("uVar3 = 0;");
+            for (auto loop = trace.loop("for (; param_2 != 0; param_2 = param_2 + -1)"); loop.next(); ) {
+                trace.statement("uVar3 = FUN_180227870(uVar3,param_3,");
+                trace.statement("*(undefined8 *)");
+                trace.statement("(*(longlong *)(lVar1 + 8) +");
+                trace.statement("(*(longlong *)(lVar1 + 0x10) - 1U & uVar2) * 8));");
+                trace.statement("param_3 = param_3 + 0x98;");
+                trace.statement("uVar2 = uVar2 + 1;");
+            }
+            trace.statement("FUN_180217fc0(param_3,param_3);");
+            trace.statement("return param_3;");
+        }
     return kFunction_0x180220100;
 }
 
@@ -3657,12 +5756,35 @@ FUN_180227870)F180220190C",
     R"F180220190F(13: if (param_1 != param_2) {
 14: do {
 21: return param_3;)F180220190F",
-    R"F180220190U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180220190U",
+    R"F180220190U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180220190U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220190() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220190", "FUN_180220190");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180217fc0", reinterpret_cast<const void*>(&image::FUN_180217fc0));
+    trace.call_target("FUN_180227870", reinterpret_cast<const void*>(&image::FUN_180227870));
+    // body sha256: 459cc3fb632c0bfd17c35d757793f65ab4d102a27384b573b646bded750d67f7
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180220190(longlong param_1,longlong param_2,longlong param_3)");
+        {
+            trace.statement("undefined4 uVar1;");
+            trace.statement("uVar1 = 0;");
+            if (trace.condition("if (param_1 != param_2)")) {
+                do {
+                    trace.statement("uVar1 = FUN_180227870(uVar1,param_3);");
+                    trace.statement("param_3 = param_3 + 0x98;");
+                    trace.statement("param_1 = param_1 + 0x98;");
+                } while (trace.loop_condition("while (param_1 != param_2);"));
+            }
+            trace.statement("FUN_180217fc0(param_3,param_3);");
+            trace.statement("return param_3;");
+        }
     return kFunction_0x180220190;
 }
 
@@ -3708,12 +5830,36 @@ undefined4 * FUN_180220200(undefined4 *param_1,undefined4 *param_2,undefined4 *p
     R"F180220200T()F180220200T",
     R"F180220200F(10: for (; param_1 != param_2; param_1 = param_1 + 0x26) {
 22: return param_3;)F180220200F",
-    R"F180220200U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180220200U",
+    R"F180220200U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180220200U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220200() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220200", "FUN_180220200");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e8a0", reinterpret_cast<const void*>(&image::FUN_18020e8a0));
+    // body sha256: 3f3b543f24b55c71a42b2bef580e166faa3a6580bc82aa677892dc0640107903
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_180220200(undefined4 *param_1,undefined4 *param_2,undefined4 *param_3)");
+        {
+            for (auto loop = trace.loop("for (; param_1 != param_2; param_1 = param_1 + 0x26)"); loop.next(); ) {
+                trace.statement("*param_3 = *param_1;");
+                trace.statement("param_3[1] = param_1[1];");
+                trace.statement("FUN_18020e8a0(param_3 + 2,param_1 + 2);");
+                trace.statement("FUN_18020e8a0(param_3 + 10,param_1 + 10);");
+                trace.statement("param_3[0x12] = param_1[0x12];");
+                trace.statement("FUN_18020e8a0(param_3 + 0x14,param_1 + 0x14);");
+                trace.statement("FUN_18020e8a0(param_3 + 0x1c,param_1 + 0x1c);");
+                trace.statement("param_3[0x24] = param_1[0x24];");
+                trace.statement("*(undefined1 *)(param_3 + 0x25) = *(undefined1 *)(param_1 + 0x25);");
+                trace.statement("param_3 = param_3 + 0x26;");
+            }
+            trace.statement("return param_3;");
+        }
     return kFunction_0x180220200;
 }
 
@@ -3814,12 +5960,88 @@ undefined8 * FUN_1802202b0(longlong *param_1,longlong param_2,undefined8 *param_
     R"F1802202b0F(21: for (; param_2 != 0; param_2 = param_2 + -1) {
 26: do {
 76: return param_3;)F1802202b0F",
-    R"F1802202b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802202b0U",
+    R"F1802202b0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802202b0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802202b0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802202b0", "FUN_1802202b0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 07fe57209939834747837de7e9f14658b8b6c545f9529a938be1a8f9eca1d44f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802202b0(longlong *param_1,longlong param_2,undefined8 *param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("undefined8 uVar2;");
+            trace.statement("undefined8 *puVar3;");
+            trace.statement("undefined8 *puVar4;");
+            trace.statement("longlong lVar5;");
+            trace.statement("undefined8 *puVar6;");
+            trace.statement("undefined8 *puVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("lVar1 = *param_1;");
+            trace.statement("uVar8 = param_1[1];");
+            for (auto loop = trace.loop("for (; param_2 != 0; param_2 = param_2 + -1)"); loop.next(); ) {
+                trace.statement("lVar5 = 2;");
+                trace.statement("puVar3 = param_3;");
+                trace.statement("puVar4 = *(undefined8 **)");
+                trace.statement("(*(longlong *)(lVar1 + 8) + (*(longlong *)(lVar1 + 0x10) - 1U & uVar8) * 8);");
+                do {
+                    trace.statement("puVar7 = puVar4;");
+                    trace.statement("puVar6 = puVar3;");
+                    trace.statement("uVar2 = puVar7[1];");
+                    trace.statement("*puVar6 = *puVar7;");
+                    trace.statement("puVar6[1] = uVar2;");
+                    trace.statement("uVar2 = puVar7[3];");
+                    trace.statement("puVar6[2] = puVar7[2];");
+                    trace.statement("puVar6[3] = uVar2;");
+                    trace.statement("uVar2 = puVar7[5];");
+                    trace.statement("puVar6[4] = puVar7[4];");
+                    trace.statement("puVar6[5] = uVar2;");
+                    trace.statement("uVar2 = puVar7[7];");
+                    trace.statement("puVar6[6] = puVar7[6];");
+                    trace.statement("puVar6[7] = uVar2;");
+                    trace.statement("uVar2 = puVar7[9];");
+                    trace.statement("puVar6[8] = puVar7[8];");
+                    trace.statement("puVar6[9] = uVar2;");
+                    trace.statement("uVar2 = puVar7[0xb];");
+                    trace.statement("puVar6[10] = puVar7[10];");
+                    trace.statement("puVar6[0xb] = uVar2;");
+                    trace.statement("uVar2 = puVar7[0xd];");
+                    trace.statement("puVar6[0xc] = puVar7[0xc];");
+                    trace.statement("puVar6[0xd] = uVar2;");
+                    trace.statement("uVar2 = puVar7[0xf];");
+                    trace.statement("puVar6[0xe] = puVar7[0xe];");
+                    trace.statement("puVar6[0xf] = uVar2;");
+                    trace.statement("lVar5 = lVar5 + -1;");
+                    trace.statement("puVar3 = puVar6 + 0x10;");
+                    trace.statement("puVar4 = puVar7 + 0x10;");
+                } while (trace.loop_condition("while (lVar5 != 0);"));
+                trace.statement("uVar2 = puVar7[0x11];");
+                trace.statement("param_3 = (undefined8 *)((longlong)param_3 + 0x154);");
+                trace.statement("uVar8 = uVar8 + 1;");
+                trace.statement("puVar6[0x10] = puVar7[0x10];");
+                trace.statement("puVar6[0x11] = uVar2;");
+                trace.statement("uVar2 = puVar7[0x13];");
+                trace.statement("puVar6[0x12] = puVar7[0x12];");
+                trace.statement("puVar6[0x13] = uVar2;");
+                trace.statement("uVar2 = puVar7[0x15];");
+                trace.statement("puVar6[0x14] = puVar7[0x14];");
+                trace.statement("puVar6[0x15] = uVar2;");
+                trace.statement("uVar2 = puVar7[0x17];");
+                trace.statement("puVar6[0x16] = puVar7[0x16];");
+                trace.statement("puVar6[0x17] = uVar2;");
+                trace.statement("uVar2 = puVar7[0x19];");
+                trace.statement("puVar6[0x18] = puVar7[0x18];");
+                trace.statement("puVar6[0x19] = uVar2;");
+                trace.statement("*(undefined4 *)(puVar6 + 0x1a) = *(undefined4 *)(puVar7 + 0x1a);");
+            }
+            trace.statement("return param_3;");
+        }
     return kFunction_0x1802202b0;
 }
 
@@ -3889,14 +6111,58 @@ longlong * FUN_180220390(longlong *param_1,longlong *param_2)
 19: if (pvVar1 != (void *)0x0) {
 22: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar1 >> 3) * 8)) &&
 44: return param_1;)F180220390F",
-    R"F180220390U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180220390U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 26: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 27: (*pcVar2)();.)F180220390U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220390() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220390", "FUN_180220390");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 26: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 27: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 078689d68248df505f2a3deae0a6df5d159d945924034cfe52e1155d60ec72b1
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong * FUN_180220390(longlong *param_1,longlong *param_2)");
+        {
+            trace.statement("void *pvVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("void *_Memory;");
+            trace.statement("undefined1 *puVar3;");
+            trace.statement("undefined1 auStack_28 [8];");
+            trace.statement("undefined1 auStack_20 [24];");
+            if (trace.condition("if (param_1 != param_2)")) {
+                trace.statement("pvVar1 = (void *)*param_1;");
+                if (trace.condition("if (pvVar1 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar1;");
+                    trace.statement("puVar3 = auStack_28;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar1 >> 3) * 8)) && (_Memory = *(void **)((longlong)pvVar1 + -8), puVar3 = auStack_28, 0x1f < (ulonglong)((longlong)pvVar1 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar3 = auStack_20;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar3 + -8) = 0x18022040a;");
+                    trace.statement("free(_Memory);");
+                    trace.statement("*param_1 = 0;");
+                    trace.statement("param_1[1] = 0;");
+                    trace.statement("param_1[2] = 0;");
+                }
+                trace.statement("*param_1 = *param_2;");
+                trace.statement("param_1[1] = param_2[1];");
+                trace.statement("param_1[2] = param_2[2];");
+                trace.statement("*param_2 = 0;");
+                trace.statement("param_2[1] = 0;");
+                trace.statement("param_2[2] = 0;");
+            }
+            trace.statement("*(int *)(param_1 + 3) = (int)param_2[3];");
+            trace.statement("return param_1;");
+        }
     return kFunction_0x180220390;
 }
 
@@ -4048,13 +6314,124 @@ FUN_18023cbe0)F180220450C",
 92: do {
 94: if (0x3f < (longlong)((longlong)param_2 - param_1 & 0xffffffffffffffe0U)) {
 112: return;)F180220450F",
-    R"F180220450U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180220450U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F180220450U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.)F180220450U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220450() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220450", "FUN_180220450");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_18020e8a0", reinterpret_cast<const void*>(&image::FUN_18020e8a0));
+    trace.call_target("FUN_18022ff50", reinterpret_cast<const void*>(&image::FUN_18022ff50));
+    trace.call_target("FUN_18023a6d0", reinterpret_cast<const void*>(&image::FUN_18023a6d0));
+    trace.call_target("FUN_18023a7e0", reinterpret_cast<const void*>(&image::FUN_18023a7e0));
+    trace.call_target("FUN_18023cbe0", reinterpret_cast<const void*>(&image::FUN_18023cbe0));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    // body sha256: a507ffc88ab37ebf76d5d86758f695ca4b31753fb9e8635729dac9ce9768a620
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180220450(longlong param_1,undefined4 *param_2,longlong param_3,undefined1 param_4)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("ulonglong uVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("undefined4 *puVar5;");
+            trace.statement("undefined4 *puVar6;");
+            trace.statement("longlong lVar7;");
+            trace.statement("undefined1 auStack_a8 [32];");
+            trace.statement("undefined1 local_88;");
+            trace.statement("longlong local_78;");
+            trace.statement("undefined4 local_70;");
+            trace.statement("undefined4 uStack_6c;");
+            trace.statement("undefined4 uStack_68;");
+            trace.statement("undefined4 uStack_64;");
+            trace.statement("undefined8 local_60;");
+            trace.statement("undefined8 uStack_58;");
+            trace.statement("ulonglong local_50;");
+            trace.statement("local_50 = DAT_1803da4c0 ^ (ulonglong)auStack_a8;");
+            trace.statement("uVar2 = (longlong)param_2 - param_1;");
+            while (trace.loop_condition("while( true )")) {
+                if (trace.condition("if ((longlong)(uVar2 & 0xffffffffffffffe0) < 0x401)")) {
+                    trace.statement("FUN_18022ff50(param_1,param_2);");
+                    trace.statement("return;");
+                }
+                trace.statement("lVar4 = (longlong)param_2 - param_1 >> 6;");
+                if (trace.condition("if (param_3 < 1) break; local_78 = lVar4 * 0x20 + param_1; puVar5 = param_2 + -8; lVar7 = (longlong)puVar5 - param_1 >> 5; lVar4 = param_1; if (0x28 < lVar7)")) {
+                    trace.statement("lVar7 = lVar7 + 1 >> 3;");
+                    trace.statement("lVar4 = lVar7 * 0x20 + param_1;");
+                    trace.statement("FUN_18023cbe0(param_1,lVar4,lVar7 * 0x40 + param_1);");
+                    trace.statement("FUN_18023cbe0(local_78 + lVar7 * -0x20,local_78,lVar7 * 0x20 + local_78);");
+                    trace.statement("puVar5 = puVar5 + lVar7 * -8;");
+                    trace.statement("FUN_18023cbe0(param_2 + lVar7 * -0x10 + -8,puVar5);");
+                }
+                trace.statement("lVar7 = local_78;");
+                trace.statement("FUN_18023cbe0(lVar4,local_78,puVar5);");
+                trace.statement("FUN_18023a7e0(&local_70,param_1,lVar7,param_2);");
+                trace.statement("param_3 = (param_3 >> 1) + (param_3 >> 2);");
+                trace.statement("lVar4 = CONCAT44(uStack_64,uStack_68);");
+                trace.statement("puVar5 = (undefined4 *)CONCAT44(uStack_6c,local_70);");
+                if (trace.condition("if ((longlong)((longlong)puVar5 - param_1 & 0xffffffffffffffe0U) < (longlong)((longlong)param_2 - lVar4 & 0xffffffffffffffe0U))")) {
+                    trace.statement("FUN_180220450(param_1,puVar5,param_3,param_4);");
+                    trace.statement("param_1 = lVar4;");
+                    trace.statement("puVar5 = param_2;");
+                } else {
+                trace.statement("FUN_180220450(lVar4,param_2,param_3,param_4);");
+                }
+                trace.statement("uVar2 = (longlong)puVar5 - param_1;");
+                trace.statement("param_2 = puVar5;");
+            }
+            trace.statement("lVar7 = (longlong)param_2 - param_1 >> 5;");
+            while (trace.loop_condition("while (0 < lVar4)")) {
+                trace.statement("lVar4 = lVar4 + -1;");
+                trace.statement("lVar3 = lVar4 * 0x20;");
+                trace.statement("puVar5 = (undefined4 *)(lVar3 + param_1);");
+                trace.statement("local_70 = *puVar5;");
+                trace.statement("uStack_6c = puVar5[1];");
+                trace.statement("uStack_68 = puVar5[2];");
+                trace.statement("uStack_64 = puVar5[3];");
+                trace.statement("puVar1 = (undefined8 *)(lVar3 + 0x10 + param_1);");
+                trace.statement("local_60 = *puVar1;");
+                trace.statement("uStack_58 = puVar1[1];");
+                trace.statement("*(undefined1 *)(lVar3 + param_1) = 0;");
+                trace.statement("*(undefined8 *)(lVar3 + 0x10 + param_1) = 0;");
+                trace.statement("*(undefined8 *)(lVar3 + 0x18 + param_1) = 0xf;");
+                trace.statement("local_88 = param_4;");
+                trace.statement("FUN_18023a6d0(param_1,lVar4,lVar7,&local_70);");
+                trace.statement("FUN_18020e450(&local_70);");
+            }
+            trace.statement("puVar5 = param_2;");
+            if (trace.condition("if (lVar7 < 2)")) {
+                trace.statement("return;");
+            }
+            do {
+                trace.statement("puVar6 = puVar5 + -8;");
+                if (trace.condition("if (0x3f < (longlong)((longlong)param_2 - param_1 & 0xffffffffffffffe0U))")) {
+                    trace.statement("local_70 = *puVar6;");
+                    trace.statement("uStack_6c = puVar5[-7];");
+                    trace.statement("uStack_68 = puVar5[-6];");
+                    trace.statement("uStack_64 = puVar5[-5];");
+                    trace.statement("local_60 = *(undefined8 *)(puVar5 + -4);");
+                    trace.statement("uStack_58 = *(undefined8 *)(puVar5 + -2);");
+                    trace.statement("*(undefined1 *)puVar6 = 0;");
+                    trace.statement("*(undefined8 *)(puVar5 + -4) = 0;");
+                    trace.statement("*(undefined8 *)(puVar5 + -2) = 0xf;");
+                    trace.statement("FUN_18020e8a0(puVar6,param_1);");
+                    trace.statement("local_88 = param_4;");
+                    trace.statement("FUN_18023a6d0(param_1,0,(longlong)puVar6 - param_1 >> 5,&local_70);");
+                    trace.statement("FUN_18020e450(&local_70);");
+                }
+                trace.statement("param_2 = param_2 + -8;");
+                trace.statement("puVar5 = puVar6;");
+            } while (trace.loop_condition("while (0x3f < (longlong)((longlong)param_2 - param_1 & 0xffffffffffffffe0U));"));
+            trace.statement("return;");
+        }
     return kFunction_0x180220450;
 }
 
@@ -4301,18 +6678,188 @@ DAT_1803da4c0)F1802206f0D",
 178: if (puVar10 == local_90) {
 179: return local_90;
 181: goto LAB_180220750;)F1802206f0F",
-    R"F1802206f0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802206f0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180220750.
-TODO: recover the declaration, type and value for global/data reference LAB_18022080f.
-TODO: recover the declaration, type and value for global/data reference LAB_1802208e5.
-TODO: recover the declaration, type and value for global/data reference LAB_180220910.
-TODO: recover the declaration, type and value for global/data reference LAB_18022093f.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F1802206f0U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180220750.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022080f.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802208e5.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180220910.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022093f.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.)F1802206f0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802206f0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802206f0", "FUN_1802206f0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180220750.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022080f.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802208e5.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180220910.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022093f.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_18020e8a0", reinterpret_cast<const void*>(&image::FUN_18020e8a0));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    // body sha256: e11c54fcc3ba399d67c2ddc7ee53fbbb6a7e8ee719be469ca248e8ec4b3be4cc
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_1802206f0(undefined4 *param_1,undefined4 *param_2)");
+        {
+            trace.statement("undefined4 uVar1;");
+            trace.statement("int iVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("bool bVar5;");
+            trace.statement("undefined4 *puVar6;");
+            trace.statement("undefined8 *****pppppuVar7;");
+            trace.statement("int iVar8;");
+            trace.statement("undefined8 ******ppppppuVar9;");
+            trace.statement("undefined8 *_Buf2;");
+            trace.statement("undefined4 *puVar10;");
+            trace.statement("undefined4 *puVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("ulonglong _Size;");
+            trace.statement("undefined8 *puVar13;");
+            trace.statement("undefined1 auStack_e8 [32];");
+            trace.statement("undefined4 local_c8;");
+            trace.statement("undefined4 *local_c0;");
+            trace.statement("undefined8 *local_b8;");
+            trace.statement("undefined8 *****local_b0;");
+            trace.statement("ulonglong local_a8;");
+            trace.statement("undefined4 *local_a0;");
+            trace.statement("undefined8 *local_98;");
+            trace.statement("undefined4 *local_90;");
+            trace.statement("undefined4 local_88;");
+            trace.statement("undefined8 *****local_80;");
+            trace.statement("undefined8 uStack_78;");
+            trace.statement("ulonglong local_70;");
+            trace.statement("ulonglong uStack_68;");
+            trace.statement("int local_60;");
+            trace.statement("ulonglong local_58;");
+            trace.statement("local_58 = DAT_1803da4c0 ^ (ulonglong)auStack_e8;");
+            if (trace.condition("if ((param_1 == param_2) || (local_c0 = param_1 + 0xc, local_c0 == param_2))")) {
+                trace.statement("return param_2;");
+            }
+            trace.statement("puVar13 = (undefined8 *)(param_1 + 2);");
+            trace.statement("local_b8 = (undefined8 *)(param_1 + 0xe);");
+            trace.statement("puVar11 = local_c0;");
+            trace.statement("local_a0 = param_1;");
+            trace.statement("local_98 = puVar13;");
+            trace.statement("local_90 = param_2;");
+            LAB_180220750: ;
+            trace.statement("uVar1 = *puVar11;");
+            trace.statement("local_b0 = (undefined8 *****)*local_b8;");
+            trace.statement("uStack_78 = local_b8[1];");
+            trace.statement("uVar3 = local_b8[2];");
+            trace.statement("local_a8 = local_b8[3];");
+            trace.statement("*(undefined1 *)local_b8 = 0;");
+            trace.statement("local_b8[2] = 0;");
+            trace.statement("local_b8[3] = 0xf;");
+            trace.statement("iVar2 = puVar11[10];");
+            trace.statement("local_c8 = uVar1;");
+            trace.statement("local_88 = uVar1;");
+            trace.statement("local_80 = local_b0;");
+            trace.statement("local_70 = uVar3;");
+            trace.statement("uStack_68 = local_a8;");
+            trace.statement("local_60 = iVar2;");
+            if (trace.condition("if (iVar2 == param_1[10])")) {
+                trace.statement("uVar4 = *(ulonglong *)(param_1 + 6);");
+                trace.statement("_Buf2 = puVar13;");
+                if (trace.condition("if (0xf < *(ulonglong *)(param_1 + 8))")) {
+                    trace.statement("_Buf2 = (undefined8 *)*puVar13;");
+                }
+                trace.statement("ppppppuVar9 = &local_80;");
+                if (trace.condition("if (0xf < local_a8)")) {
+                    trace.statement("ppppppuVar9 = (undefined8 ******)local_b0;");
+                }
+                trace.statement("uVar12 = uVar3;");
+                if (trace.condition("if (uVar4 < uVar3)")) {
+                    trace.statement("uVar12 = uVar4;");
+                }
+                trace.statement("iVar8 = memcmp(ppppppuVar9,_Buf2,uVar12);");
+                if (trace.condition("if (iVar8 == 0)")) {
+                    if (trace.condition("if (uVar3 < uVar4)")) {
+                        trace.statement("bVar5 = true;");
+                    } else {
+                    if (trace.condition("if (uVar4 < uVar3) goto LAB_18022080f; bVar5 = false; } } else if (iVar8 < 0)")) {
+                        trace.statement("bVar5 = true;");
+                    } else {
+                    LAB_18022080f: ;
+                    trace.statement("bVar5 = false;");
+                    }
+                    }
+                    trace.statement("else {");
+                    trace.statement("bVar5 = (int)param_1[10] <= iVar2;");
+                }
+                trace.statement("uVar4 = local_a8;");
+                trace.statement("pppppuVar7 = local_b0;");
+                if (trace.condition("if (!bVar5)")) {
+                    do {
+                        if (trace.condition("if (iVar2 == puVar11[-2])")) {
+                            trace.statement("uVar12 = *(ulonglong *)(puVar11 + -6);");
+                            if (trace.condition("if (*(ulonglong *)(puVar11 + -4) < 0x10)")) {
+                                trace.statement("puVar10 = puVar11 + -10;");
+                            } else {
+                            trace.statement("puVar10 = *(undefined4 **)(puVar11 + -10);");
+                            }
+                            trace.statement("ppppppuVar9 = &local_80;");
+                            if (trace.condition("if (0xf < uVar4)")) {
+                                trace.statement("ppppppuVar9 = (undefined8 ******)pppppuVar7;");
+                            }
+                            trace.statement("_Size = uVar3;");
+                            if (trace.condition("if (uVar12 < uVar3)")) {
+                                trace.statement("_Size = uVar12;");
+                            }
+                            trace.statement("iVar8 = memcmp(ppppppuVar9,puVar10,_Size);");
+                            if (trace.condition("if (iVar8 == 0)")) {
+                                if (trace.condition("if (uVar3 < uVar12)")) {
+                                    trace.statement("bVar5 = true;");
+                                } else {
+                                if (trace.condition("if (uVar12 < uVar3) goto LAB_1802208e5; bVar5 = false; } } else if (iVar8 < 0)")) {
+                                    trace.statement("bVar5 = true;");
+                                } else {
+                                LAB_1802208e5: ;
+                                trace.statement("bVar5 = false;");
+                                }
+                                }
+                                trace.statement("else {");
+                                trace.statement("bVar5 = (int)puVar11[-2] <= iVar2;");
+                            }
+                            if (trace.condition("if (!bVar5) goto LAB_180220910; *puVar11 = puVar11[-0xc]; FUN_18020e8a0(puVar11 + 2,puVar11 + -10); puVar11[10] = puVar11[-2]; puVar11 = puVar11 + -0xc; } while( true ); } puVar10 = puVar11 + 0xc; puVar6 = puVar10; while (param_1 != puVar11)")) {
+                                trace.statement("puVar6[-0xc] = puVar11[-0xc];");
+                                trace.statement("FUN_18020e8a0(puVar6 + -10,puVar11 + -10);");
+                                trace.statement("puVar6[-2] = puVar11[-2];");
+                                trace.statement("puVar6 = puVar6 + -0xc;");
+                                trace.statement("puVar11 = puVar11 + -0xc;");
+                            }
+                            trace.statement("*param_1 = uVar1;");
+                            trace.statement("FUN_18020e8a0(puVar13,&local_80);");
+                            trace.statement("param_1[10] = local_60;");
+                            trace.statement("goto LAB_18022093f;");
+                            LAB_180220910: ;
+                            trace.statement("*puVar11 = local_c8;");
+                            trace.statement("FUN_18020e8a0(puVar11 + 2,&local_80);");
+                            trace.statement("puVar11[10] = local_60;");
+                            trace.statement("puVar10 = local_c0 + 0xc;");
+                            trace.statement("param_1 = local_a0;");
+                            trace.statement("puVar13 = local_98;");
+                            LAB_18022093f: ;
+                            trace.statement("local_c0 = puVar10;");
+                            trace.statement("FUN_18020e450(&local_80);");
+                            trace.statement("local_b8 = local_b8 + 6;");
+                            trace.statement("puVar11 = puVar10;");
+                            if (trace.condition("if (puVar10 == local_90)")) {
+                                trace.statement("return local_90;");
+                            }
+                            trace.statement("goto LAB_180220750;");
+                        }
+                    } while (trace.loop_condition("do/while"));
+                }
+            }
+        }
     return kFunction_0x1802206f0;
 }
 
@@ -4533,18 +7080,164 @@ DAT_1803da4c0)F1802209a0D",
 153: if (puVar10 == local_88) {
 154: return local_88;
 156: goto LAB_1802209e3;)F1802209a0F",
-    R"F1802209a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802209a0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802209e3.
-TODO: recover the declaration, type and value for global/data reference LAB_180220a87.
-TODO: recover the declaration, type and value for global/data reference LAB_180220b39.
-TODO: recover the declaration, type and value for global/data reference LAB_180220b5d.
-TODO: recover the declaration, type and value for global/data reference LAB_180220b78.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F1802209a0U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802209e3.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180220a87.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180220b39.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180220b5d.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180220b78.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.)F1802209a0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802209a0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802209a0", "FUN_1802209a0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802209e3.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180220a87.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180220b39.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180220b5d.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180220b78.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_18020e8a0", reinterpret_cast<const void*>(&image::FUN_18020e8a0));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    // body sha256: 5ffc812e5db6e8323a5fa789d0d9792d9742f784c2709f48e42b89da5dd9bf03
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802209a0(undefined8 *param_1,undefined8 *param_2)");
+        {
+            trace.statement("int iVar1;");
+            trace.statement("undefined8 ******ppppppuVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("bool bVar5;");
+            trace.statement("int iVar6;");
+            trace.statement("undefined8 ******ppppppuVar7;");
+            trace.statement("undefined8 *puVar8;");
+            trace.statement("undefined8 *_Buf2;");
+            trace.statement("undefined8 *puVar9;");
+            trace.statement("undefined8 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("ulonglong _Size;");
+            trace.statement("undefined1 auStack_b8 [32];");
+            trace.statement("ulonglong local_98;");
+            trace.statement("undefined8 *local_90;");
+            trace.statement("undefined8 *local_88;");
+            trace.statement("undefined8 *****local_80;");
+            trace.statement("undefined8 uStack_78;");
+            trace.statement("ulonglong local_70;");
+            trace.statement("ulonglong uStack_68;");
+            trace.statement("int local_60;");
+            trace.statement("ulonglong local_58;");
+            trace.statement("local_58 = DAT_1803da4c0 ^ (ulonglong)auStack_b8;");
+            if (trace.condition("if ((param_1 == param_2) || (puVar10 = param_1 + 5, local_90 = param_1, local_88 = param_2, puVar10 == param_2))")) {
+                trace.statement("return param_2;");
+            }
+            LAB_1802209e3: ;
+            trace.statement("ppppppuVar2 = (undefined8 ******)*puVar10;");
+            trace.statement("uStack_78 = puVar10[1];");
+            trace.statement("uVar3 = puVar10[2];");
+            trace.statement("local_98 = puVar10[3];");
+            trace.statement("*(undefined1 *)puVar10 = 0;");
+            trace.statement("puVar10[2] = 0;");
+            trace.statement("puVar10[3] = 0xf;");
+            trace.statement("iVar1 = *(int *)(puVar10 + 4);");
+            trace.statement("local_80 = ppppppuVar2;");
+            trace.statement("local_70 = uVar3;");
+            trace.statement("uStack_68 = local_98;");
+            trace.statement("local_60 = iVar1;");
+            if (trace.condition("if (iVar1 == *(int *)(param_1 + 4))")) {
+                trace.statement("uVar4 = param_1[2];");
+                trace.statement("puVar8 = param_1;");
+                if (trace.condition("if (0xf < (ulonglong)param_1[3])")) {
+                    trace.statement("puVar8 = (undefined8 *)*param_1;");
+                }
+                trace.statement("ppppppuVar7 = &local_80;");
+                if (trace.condition("if (0xf < local_98)")) {
+                    trace.statement("ppppppuVar7 = ppppppuVar2;");
+                }
+                trace.statement("uVar11 = uVar3;");
+                if (trace.condition("if (uVar4 < uVar3)")) {
+                    trace.statement("uVar11 = uVar4;");
+                }
+                trace.statement("iVar6 = memcmp(ppppppuVar7,puVar8,uVar11);");
+                if (trace.condition("if (iVar6 == 0)")) {
+                    if (trace.condition("if (uVar3 < uVar4)")) {
+                        trace.statement("bVar5 = true;");
+                    } else {
+                    if (trace.condition("if (uVar4 < uVar3) goto LAB_180220a87; bVar5 = false; } } else if (iVar6 < 0)")) {
+                        trace.statement("bVar5 = true;");
+                    } else {
+                    LAB_180220a87: ;
+                    trace.statement("bVar5 = false;");
+                    }
+                    }
+                    trace.statement("else {");
+                    trace.statement("bVar5 = *(int *)(param_1 + 4) <= iVar1;");
+                }
+                trace.statement("uVar4 = local_98;");
+                trace.statement("puVar8 = puVar10;");
+                if (trace.condition("if (!bVar5)")) {
+                    do {
+                        trace.statement("puVar9 = puVar8 + -5;");
+                        if (trace.condition("if (iVar1 == *(int *)(puVar8 + -1))")) {
+                            trace.statement("uVar11 = puVar8[-3];");
+                            trace.statement("_Buf2 = puVar9;");
+                            if (trace.condition("if (0xf < (ulonglong)puVar8[-2])")) {
+                                trace.statement("_Buf2 = (undefined8 *)*puVar9;");
+                            }
+                            trace.statement("ppppppuVar7 = &local_80;");
+                            if (trace.condition("if (0xf < uVar4)")) {
+                                trace.statement("ppppppuVar7 = ppppppuVar2;");
+                            }
+                            trace.statement("_Size = uVar3;");
+                            if (trace.condition("if (uVar11 < uVar3)")) {
+                                trace.statement("_Size = uVar11;");
+                            }
+                            trace.statement("iVar6 = memcmp(ppppppuVar7,_Buf2,_Size);");
+                            if (trace.condition("if (iVar6 == 0)")) {
+                                if (trace.condition("if (uVar3 < uVar11)")) {
+                                    trace.statement("bVar5 = true;");
+                                } else {
+                                if (trace.condition("if (uVar11 < uVar3) goto LAB_180220b39; bVar5 = false; } } else if (iVar6 < 0)")) {
+                                    trace.statement("bVar5 = true;");
+                                } else {
+                                LAB_180220b39: ;
+                                trace.statement("bVar5 = false;");
+                                }
+                                }
+                                trace.statement("else {");
+                                trace.statement("bVar5 = *(int *)(puVar8 + -1) <= iVar1;");
+                            }
+                            if (trace.condition("if (!bVar5) goto LAB_180220b5d; FUN_18020e8a0(puVar8,puVar9); *(undefined4 *)(puVar8 + 4) = *(undefined4 *)(puVar8 + -1); puVar8 = puVar9; } while( true ); } puVar8 = puVar10 + 5; puVar9 = puVar10; while (puVar9 != param_1)")) {
+                                trace.statement("FUN_18020e8a0(puVar8 + -5,puVar9 + -5);");
+                                trace.statement("*(undefined4 *)(puVar8 + -1) = *(undefined4 *)(puVar9 + -1);");
+                                trace.statement("puVar8 = puVar8 + -5;");
+                                trace.statement("puVar9 = puVar9 + -5;");
+                            }
+                            trace.statement("FUN_18020e8a0(param_1,&local_80);");
+                            trace.statement("*(int *)(param_1 + 4) = local_60;");
+                            trace.statement("goto LAB_180220b78;");
+                            LAB_180220b5d: ;
+                            trace.statement("FUN_18020e8a0(puVar8,&local_80);");
+                            trace.statement("*(int *)(puVar8 + 4) = local_60;");
+                            trace.statement("param_1 = local_90;");
+                            LAB_180220b78: ;
+                            trace.statement("puVar10 = puVar10 + 5;");
+                            trace.statement("FUN_18020e450(&local_80);");
+                            if (trace.condition("if (puVar10 == local_88)")) {
+                                trace.statement("return local_88;");
+                            }
+                            trace.statement("goto LAB_1802209e3;");
+                        }
+                    } while (trace.loop_condition("do/while"));
+                }
+            }
+        }
     return kFunction_0x1802209a0;
 }
 
@@ -4578,12 +7271,24 @@ longlong FUN_180220bc0(void *param_1,longlong param_2,void *param_3)
     R"F180220bc0D()F180220bc0D",
     R"F180220bc0T()F180220bc0T",
     R"F180220bc0F(11: return (longlong)param_3 + (param_2 - (longlong)param_1);)F180220bc0F",
-    R"F180220bc0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180220bc0U",
+    R"F180220bc0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180220bc0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220bc0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220bc0", "FUN_180220bc0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 8efe66304c425f4fa56116dbe650e5bf5c8a5adbfb9dbe6d39af983fb4d55d0f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180220bc0(void *param_1,longlong param_2,void *param_3)");
+        {
+            trace.statement("memmove(param_3,param_1,param_2 - (longlong)param_1);");
+            trace.statement("return (longlong)param_3 + (param_2 - (longlong)param_1);");
+        }
     return kFunction_0x180220bc0;
 }
 
@@ -4617,12 +7322,24 @@ longlong FUN_180220c00(void *param_1,longlong param_2,void *param_3)
     R"F180220c00D()F180220c00D",
     R"F180220c00T()F180220c00T",
     R"F180220c00F(11: return (param_2 - (longlong)param_1) + (longlong)param_3;)F180220c00F",
-    R"F180220c00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180220c00U",
+    R"F180220c00U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180220c00U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220c00() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220c00", "FUN_180220c00");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 67071eeb1ab6e35f6ce4f70b95def697e6cd46821ecf420f6e2a527b563fb78d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180220c00(void *param_1,longlong param_2,void *param_3)");
+        {
+            trace.statement("memmove(param_3,param_1,param_2 - (longlong)param_1);");
+            trace.statement("return (param_2 - (longlong)param_1) + (longlong)param_3;");
+        }
     return kFunction_0x180220c00;
 }
 
@@ -4658,13 +7375,28 @@ undefined8 FUN_180220c30(undefined8 *param_1)
     R"F180220c30D()F180220c30D",
     R"F180220c30T()F180220c30T",
     R"F180220c30F(13: return 0;)F180220c30F",
-    R"F180220c30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180220c30U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 10: (*(code *)*param_1)();.)F180220c30U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220c30() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220c30", "FUN_180220c30");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 10: (*(code *)*param_1)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 1b53544bc215dac27ee73b1bc01872bf0382d0d7258670a5895272f90dcc70eb
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_180220c30(undefined8 *param_1)");
+        {
+            trace.statement("(*(code *)*param_1)();");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            trace.statement("free(param_1);");
+            trace.statement("return 0;");
+        }
     return kFunction_0x180220c30;
 }
 
@@ -4790,15 +7522,116 @@ DAT_180423739)F180220c70D",
 75: if (0xf < local_260) {
 87: if (param_1 != (void *)0x0) {
 90: return 0;)F180220c70F",
-    R"F180220c70U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180220c70U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fadf0.
-TODO: recover the declaration, type and value for global/data reference DAT_180423739.)F180220c70U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fadf0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180423739.)F180220c70U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220c70() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220c70", "FUN_180220c70");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fadf0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180423739.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_1802028c0", reinterpret_cast<const void*>(&image::FUN_1802028c0));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_18020ea80", reinterpret_cast<const void*>(&image::FUN_18020ea80));
+    trace.call_target("FUN_180212700", reinterpret_cast<const void*>(&image::FUN_180212700));
+    trace.call_target("FUN_180241a30", reinterpret_cast<const void*>(&image::FUN_180241a30));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    trace.data_ref("DAT_1803fadf0", static_cast<const void*>(&image::DAT_1803fadf0));
+    trace.data_ref("DAT_180423739", static_cast<const void*>(&image::DAT_180423739));
+    trace.string_literal("Web pages");
+    trace.string_literal("Pick a loading screen page");
+    // body sha256: 663c687f7ddb446d429c7ba3e5ead1b32c5dd8d374c2ad1e8b0e00ec57ce2e48
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_180220c70(void *param_1)");
+        {
+            trace.statement("BOOL BVar1;");
+            trace.statement("int cbMultiByte;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("LPSTR **pppCVar3;");
+            trace.statement("LPSTR **pppCVar4;");
+            trace.statement("undefined1 auStackY_388 [32];");
+            trace.statement("undefined1 local_340 [16];");
+            trace.statement("undefined1 local_330 [24];");
+            trace.statement("tagOFNW local_318;");
+            trace.statement("LPSTR *local_278 [2];");
+            trace.statement("undefined8 local_268;");
+            trace.statement("ulonglong local_260;");
+            trace.statement("undefined8 local_258;");
+            trace.statement("undefined8 local_250;");
+            trace.statement("WCHAR local_248 [264];");
+            trace.statement("ulonglong local_38;");
+            trace.statement("local_38 = DAT_1803da4c0 ^ (ulonglong)auStackY_388;");
+            trace.statement("memset(local_248,0,0x208);");
+            trace.statement("local_318.hwndOwner = (HWND)0x0;");
+            trace.statement("local_318.hInstance = (HINSTANCE)0x0;");
+            trace.statement("local_318.lpstrCustomFilter = (LPWSTR)0x0;");
+            trace.statement("local_318.nMaxCustFilter = 0;");
+            trace.statement("local_318.nFilterIndex = 0;");
+            trace.statement("local_318.lpstrFileTitle = (LPWSTR)0x0;");
+            trace.statement("local_318.nMaxFileTitle = 0;");
+            trace.statement("local_318._76_4_ = 0;");
+            trace.statement("local_318.lpstrInitialDir = (LPCWSTR)0x0;");
+            trace.statement("local_318.lpstrDefExt = (LPCWSTR)0x0;");
+            trace.statement("local_318.lCustData = 0;");
+            trace.statement("local_318.lpfnHook = (LPOFNHOOKPROC)0x0;");
+            trace.statement("local_318.lpTemplateName = (LPCWSTR)0x0;");
+            trace.statement("local_318.pvReserved = (void *)0x0;");
+            trace.statement("local_318.dwReserved = 0;");
+            trace.statement("local_318.FlagsEx = 0;");
+            trace.statement("local_318.lStructSize = 0x98;");
+            trace.statement("local_318._4_4_ = 0;");
+            trace.statement("local_318.lpstrFilter = L\"Web pages\";");
+            trace.statement("local_318.lpstrFile = local_248;");
+            trace.statement("local_318.nMaxFile = 0x104;");
+            trace.statement("local_318._60_4_ = 0;");
+            trace.statement("local_318.lpstrTitle = L\"Pick a loading screen page\";");
+            trace.statement("local_318.Flags = 0x1808;");
+            trace.statement("local_318.nFileOffset = 0;");
+            trace.statement("local_318.nFileExtension = 0;");
+            trace.statement("BVar1 = GetOpenFileNameW(&local_318);");
+            if (trace.condition("if ((BVar1 != 0) && (local_248[0] != L'\\0'))")) {
+                trace.statement("cbMultiByte = WideCharToMultiByte(0xfde9,0,local_248,-1,(LPSTR)0x0,0,(LPCSTR)0x0,(LPBOOL)0x0);");
+                if (trace.condition("if (1 < cbMultiByte)")) {
+                    trace.statement("FUN_18020ea80(local_278,(longlong)cbMultiByte + -1,0);");
+                    trace.statement("pppCVar3 = local_278;");
+                    if (trace.condition("if (0xf < local_260)")) {
+                        trace.statement("pppCVar3 = (LPSTR **)local_278[0];");
+                    }
+                    trace.statement("WideCharToMultiByte(0xfde9,0,local_248,-1,(LPSTR)pppCVar3,cbMultiByte,(LPCSTR)0x0,(LPBOOL)0x0)");
+                    trace.statement(";");
+                    trace.statement("local_258 = 0x93fd561a96ab0c67;");
+                    trace.statement("local_250 = 0xdf2349e24f8aaf7d;");
+                    trace.statement("plVar2 = (longlong *)FUN_180241a30(&DAT_1803fadf0,local_340,&local_258);");
+                    trace.statement("plVar2 = (longlong *)FUN_180241a30(*plVar2 + 0x28,local_330,&local_250);");
+                    trace.statement("pppCVar3 = (LPSTR **)FUN_1802028c0(*plVar2 + 0x28);");
+                    if (trace.condition("if (pppCVar3 != local_278)")) {
+                        trace.statement("pppCVar4 = local_278;");
+                        if (trace.condition("if (0xf < local_260)")) {
+                            trace.statement("pppCVar4 = (LPSTR **)local_278[0];");
+                        }
+                        trace.statement("FUN_180212700(pppCVar3,pppCVar4,local_268);");
+                    }
+                    trace.statement("FUN_18020e450(local_278);");
+                }
+            }
+            trace.statement("LOCK();");
+            trace.statement("DAT_180423739 = 0;");
+            trace.statement("UNLOCK();");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            if (trace.condition("if (param_1 != (void *)0x0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return 0;");
+        }
     return kFunction_0x180220c70;
 }
 
@@ -4883,15 +7716,78 @@ DAT_1804011c0)F180220e70D",
     R"F180220e70F(47: if ((BVar1 != 0) && (local_228[0] != L'\0')) {
 54: if (param_1 != (void *)0x0) {
 57: return 0;)F180220e70F",
-    R"F180220e70U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180220e70U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.
-TODO: recover the declaration, type and value for global/data reference DAT_180400ec0.
-TODO: recover the declaration, type and value for global/data reference DAT_1804011c0.)F180220e70U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180400ec0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1804011c0.)F180220e70U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220e70() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220e70", "FUN_180220e70");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180400ec0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1804011c0.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    trace.data_ref("DAT_180400ec0", static_cast<const void*>(&image::DAT_180400ec0));
+    trace.data_ref("DAT_1804011c0", static_cast<const void*>(&image::DAT_1804011c0));
+    trace.string_literal("Select skybox VTF");
+    trace.string_literal("Valve Texture (*.vtf)");
+    // body sha256: 0e39736ce834c5a127b3e5befe4ec58f46a6a73330411adda2000246b335be31
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_180220e70(void *param_1)");
+        {
+            trace.statement("BOOL BVar1;");
+            trace.statement("undefined1 auStackY_318 [32];");
+            trace.statement("tagOFNW local_2c8;");
+            trace.statement("WCHAR local_228 [264];");
+            trace.statement("ulonglong local_18;");
+            trace.statement("local_18 = DAT_1803da4c0 ^ (ulonglong)auStackY_318;");
+            trace.statement("memset(local_228,0,0x208);");
+            trace.statement("local_2c8.hwndOwner = (HWND)0x0;");
+            trace.statement("local_2c8.hInstance = (HINSTANCE)0x0;");
+            trace.statement("local_2c8.lpstrCustomFilter = (LPWSTR)0x0;");
+            trace.statement("local_2c8.nMaxCustFilter = 0;");
+            trace.statement("local_2c8.nFilterIndex = 0;");
+            trace.statement("local_2c8.lpstrFileTitle = (LPWSTR)0x0;");
+            trace.statement("local_2c8.nMaxFileTitle = 0;");
+            trace.statement("local_2c8._76_4_ = 0;");
+            trace.statement("local_2c8.lpstrInitialDir = (LPCWSTR)0x0;");
+            trace.statement("local_2c8.lpstrDefExt = (LPCWSTR)0x0;");
+            trace.statement("local_2c8.lCustData = 0;");
+            trace.statement("local_2c8.lpfnHook = (LPOFNHOOKPROC)0x0;");
+            trace.statement("local_2c8.lpTemplateName = (LPCWSTR)0x0;");
+            trace.statement("local_2c8.pvReserved = (void *)0x0;");
+            trace.statement("local_2c8.dwReserved = 0;");
+            trace.statement("local_2c8.FlagsEx = 0;");
+            trace.statement("local_2c8.lStructSize = 0x98;");
+            trace.statement("local_2c8._4_4_ = 0;");
+            trace.statement("local_2c8.lpstrFilter = L\"Valve Texture (*.vtf)\";");
+            trace.statement("local_2c8.lpstrFile = local_228;");
+            trace.statement("local_2c8.nMaxFile = 0x104;");
+            trace.statement("local_2c8._60_4_ = 0;");
+            trace.statement("local_2c8.lpstrTitle = L\"Select skybox VTF\";");
+            trace.statement("local_2c8.Flags = 0x81008;");
+            trace.statement("local_2c8.nFileOffset = 0;");
+            trace.statement("local_2c8.nFileExtension = 0;");
+            trace.statement("BVar1 = GetOpenFileNameW(&local_2c8);");
+            if (trace.condition("if ((BVar1 != 0) && (local_228[0] != L'\\0'))")) {
+                trace.statement("WideCharToMultiByte(0xfde9,0,local_228,-1,&DAT_180400ec0,0x200,(LPCSTR)0x0,(LPBOOL)0x0);");
+            }
+            trace.statement("LOCK();");
+            trace.statement("DAT_1804011c0 = 0;");
+            trace.statement("UNLOCK();");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            if (trace.condition("if (param_1 != (void *)0x0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return 0;");
+        }
     return kFunction_0x180220e70;
 }
 
@@ -4933,12 +7829,32 @@ FUN_18020e450)F180220fe0C",
     R"F180220fe0T()F180220fe0T",
     R"F180220fe0F(12: if (param_1 != (void *)0x0) {
 17: return 0;)F180220fe0F",
-    R"F180220fe0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180220fe0U",
+    R"F180220fe0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180220fe0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180220fe0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180220fe0", "FUN_180220fe0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18013d3d0", reinterpret_cast<const void*>(&image::FUN_18013d3d0));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    // body sha256: 45417a330ecb090846fb15b16fc4adafd17564a58e1394ac85c7b58e96264633
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_180220fe0(void *param_1)");
+        {
+            trace.statement("FUN_18013d3d0();");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            if (trace.condition("if (param_1 != (void *)0x0)")) {
+                trace.statement("FUN_18020e450((longlong)param_1 + 0x20);");
+                trace.statement("FUN_18020e450(param_1);");
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return 0;");
+        }
     return kFunction_0x180220fe0;
 }
 
@@ -4980,12 +7896,32 @@ FUN_18020e450)F180221040C",
     R"F180221040T()F180221040T",
     R"F180221040F(12: if (param_1 != (void *)0x0) {
 17: return 0;)F180221040F",
-    R"F180221040U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180221040U",
+    R"F180221040U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180221040U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221040() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221040", "FUN_180221040");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18013dfa0", reinterpret_cast<const void*>(&image::FUN_18013dfa0));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    // body sha256: 52db752a49f9bc58aef74af7215794c7dd5a7b2d94d10390f52d0059091abc7f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_180221040(void *param_1)");
+        {
+            trace.statement("FUN_18013dfa0();");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            if (trace.condition("if (param_1 != (void *)0x0)")) {
+                trace.statement("FUN_18020e450((longlong)param_1 + 0x28);");
+                trace.statement("FUN_18020e450(param_1);");
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return 0;");
+        }
     return kFunction_0x180221040;
 }
 
@@ -5026,12 +7962,31 @@ FUN_18020e450)F1802210a0C",
     R"F1802210a0T()F1802210a0T",
     R"F1802210a0F(12: if (param_1 != (void *)0x0) {
 16: return 0;)F1802210a0F",
-    R"F1802210a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802210a0U",
+    R"F1802210a0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802210a0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802210a0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802210a0", "FUN_1802210a0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18013ed20", reinterpret_cast<const void*>(&image::FUN_18013ed20));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    // body sha256: c8e00d3d35f7fac78e0eee06a30cca7218fbdaad2f499a43f55ca067942668b5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_1802210a0(void *param_1)");
+        {
+            trace.statement("FUN_18013ed20();");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            if (trace.condition("if (param_1 != (void *)0x0)")) {
+                trace.statement("FUN_18020e450(param_1);");
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return 0;");
+        }
     return kFunction_0x1802210a0;
 }
 
@@ -5070,12 +8025,29 @@ undefined8 FUN_180221100(void *param_1)
     R"F180221100T()F180221100T",
     R"F180221100F(12: if (param_1 != (void *)0x0) {
 15: return 0;)F180221100F",
-    R"F180221100U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180221100U",
+    R"F180221100U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180221100U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221100() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221100", "FUN_180221100");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18013eee0", reinterpret_cast<const void*>(&image::FUN_18013eee0));
+    // body sha256: 7d998e1286a84c012f9840c5e705ecc28ad684e50204a6cff73b4d6fdf53a754
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_180221100(void *param_1)");
+        {
+            trace.statement("FUN_18013eee0();");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            if (trace.condition("if (param_1 != (void *)0x0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return 0;");
+        }
     return kFunction_0x180221100;
 }
 
@@ -5116,13 +8088,32 @@ undefined8 FUN_180221140(undefined8 *param_1)
     R"F180221140D()F180221140D",
     R"F180221140T()F180221140T",
     R"F180221140F(18: return 0;)F180221140F",
-    R"F180221140U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180221140U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
 TODO: resolve the indirect call in body 15: (*(code *)param_1[2])(&local_18);.)F180221140U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221140() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221140", "FUN_180221140");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: resolve the indirect call in body 15: (*(code *)param_1[2])(&local_18);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: d4c1f396698acd36091bbcef4537f34760eb5dc05dd73884c2ceeeebcced8bad
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_180221140(undefined8 *param_1)");
+        {
+            trace.statement("undefined8 local_18;");
+            trace.statement("undefined1 local_10;");
+            trace.statement("local_18 = *param_1;");
+            trace.statement("local_10 = *(undefined1 *)(param_1 + 1);");
+            trace.statement("(*(code *)param_1[2])(&local_18);");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            trace.statement("free(param_1);");
+            trace.statement("return 0;");
+        }
     return kFunction_0x180221140;
 }
 
@@ -5304,13 +8295,143 @@ FUN_18020e8a0)F180221190C",
 117: else {
 120: while (piVar8 != param_1) {
 143: return param_2;)F180221190F",
-    R"F180221190U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180221190U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F180221190U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.)F180221190U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221190() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221190", "FUN_180221190");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_18020e8a0", reinterpret_cast<const void*>(&image::FUN_18020e8a0));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    // body sha256: b9cb8df70d6724980b3996d69eb85045a5112e3e6a2f11d441e0281d39719572
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("int * FUN_180221190(int *param_1,int *param_2)");
+        {
+            trace.statement("bool bVar1;");
+            trace.statement("int iVar2;");
+            trace.statement("char ****ppppcVar3;");
+            trace.statement("int *piVar4;");
+            trace.statement("int *piVar5;");
+            trace.statement("int *piVar6;");
+            trace.statement("int *piVar7;");
+            trace.statement("int *piVar8;");
+            trace.statement("int *piVar10;");
+            trace.statement("undefined1 auStack_d8 [32];");
+            trace.statement("int *local_b8;");
+            trace.statement("int *local_b0;");
+            trace.statement("int local_a8;");
+            trace.statement("char ***local_a0;");
+            trace.statement("undefined8 uStack_98;");
+            trace.statement("undefined8 local_90;");
+            trace.statement("ulonglong local_88;");
+            trace.statement("undefined8 local_80;");
+            trace.statement("undefined8 uStack_78;");
+            trace.statement("undefined8 local_70;");
+            trace.statement("undefined8 local_68;");
+            trace.statement("int local_60;");
+            trace.statement("undefined1 local_5c;");
+            trace.statement("ulonglong local_58;");
+            trace.statement("int *piVar9;");
+            trace.statement("local_58 = DAT_1803da4c0 ^ (ulonglong)auStack_d8;");
+            if (trace.condition("if ((param_1 != param_2) && (piVar6 = param_1 + 0x14, piVar6 != param_2))")) {
+                trace.statement("piVar10 = param_1 + 0x16;");
+                trace.statement("local_b8 = param_1 + 0x1e;");
+                trace.statement("local_b0 = param_2;");
+                do {
+                    trace.statement("piVar5 = param_1 + 2;");
+                    trace.statement("local_a8 = *piVar6;");
+                    trace.statement("local_a0 = *(char ****)piVar10;");
+                    trace.statement("uStack_98 = *(undefined8 *)(piVar10 + 2);");
+                    trace.statement("local_90 = *(undefined8 *)(piVar10 + 4);");
+                    trace.statement("local_88 = *(ulonglong *)(piVar10 + 6);");
+                    trace.statement("piVar10[6] = 0xf;");
+                    trace.statement("piVar10[7] = 0;");
+                    trace.statement("*(undefined1 *)piVar10 = 0;");
+                    trace.statement("piVar10[4] = 0;");
+                    trace.statement("piVar10[5] = 0;");
+                    trace.statement("local_80 = *(undefined8 *)local_b8;");
+                    trace.statement("uStack_78 = *(undefined8 *)(local_b8 + 2);");
+                    trace.statement("local_70 = *(undefined8 *)(local_b8 + 4);");
+                    trace.statement("local_68 = *(undefined8 *)(local_b8 + 6);");
+                    trace.statement("*(undefined1 *)local_b8 = 0;");
+                    trace.statement("local_b8[4] = 0;");
+                    trace.statement("local_b8[5] = 0;");
+                    trace.statement("local_b8[6] = 0xf;");
+                    trace.statement("local_b8[7] = 0;");
+                    trace.statement("local_60 = piVar6[0x12];");
+                    trace.statement("local_5c = (undefined1)piVar6[0x13];");
+                    trace.statement("piVar4 = piVar5;");
+                    if (trace.condition("if (0xf < *(ulonglong *)(param_1 + 8))")) {
+                        trace.statement("piVar4 = *(int **)piVar5;");
+                    }
+                    trace.statement("ppppcVar3 = &local_a0;");
+                    if (trace.condition("if (0xf < local_88)")) {
+                        trace.statement("ppppcVar3 = (char ****)local_a0;");
+                    }
+                    trace.statement("iVar2 = _stricmp((char *)ppppcVar3,(char *)piVar4);");
+                    if (trace.condition("if (iVar2 == 0)")) {
+                        trace.statement("bVar1 = local_a8 < *param_1;");
+                    } else {
+                    trace.statement("bVar1 = SUB41((uint)iVar2 >> 0x1f,0);");
+                    }
+                    trace.statement("piVar4 = piVar6;");
+                    trace.statement("piVar8 = piVar10;");
+                    if (trace.condition("if (bVar1 == false)")) {
+                        while (trace.loop_condition("while( true )")) {
+                            trace.statement("piVar9 = piVar8 + -0x14;");
+                            trace.statement("piVar7 = piVar4 + -0x14;");
+                            trace.statement("piVar5 = piVar9;");
+                            if (trace.condition("if (0xf < *(ulonglong *)(piVar8 + -0xe))")) {
+                                trace.statement("piVar5 = *(int **)piVar9;");
+                            }
+                            trace.statement("ppppcVar3 = &local_a0;");
+                            if (trace.condition("if (0xf < local_88)")) {
+                                trace.statement("ppppcVar3 = (char ****)local_a0;");
+                            }
+                            trace.statement("iVar2 = _stricmp((char *)ppppcVar3,(char *)piVar5);");
+                            if (trace.condition("if (iVar2 == 0)")) {
+                                trace.statement("bVar1 = local_a8 < *piVar7;");
+                            } else {
+                            trace.statement("bVar1 = SUB41((uint)iVar2 >> 0x1f,0);");
+                            }
+                            if (trace.condition("if (bVar1 == false) break; *piVar4 = *piVar7; FUN_18020e8a0(piVar4 + 2,piVar9); FUN_18020e8a0(piVar4 + 10,piVar4 + -10); piVar4[0x12] = piVar4[-2]; *(char *)(piVar4 + 0x13) = (char)piVar4[-1]; piVar4 = piVar7; piVar8 = piVar9; } *piVar4 = local_a8; FUN_18020e8a0(piVar4 + 2,&local_a0); FUN_18020e8a0(piVar4 + 10,&local_80); piVar4[0x12] = local_60; *(undefined1 *)(piVar4 + 0x13) = local_5c; } else")) {
+                                trace.statement("piVar4 = piVar6 + 0x14;");
+                                trace.statement("piVar8 = piVar6;");
+                                while (trace.loop_condition("while (piVar8 != param_1)")) {
+                                    trace.statement("piVar4[-0x14] = piVar8[-0x14];");
+                                    trace.statement("FUN_18020e8a0(piVar4 + -0x12,piVar8 + -0x12);");
+                                    trace.statement("FUN_18020e8a0(piVar4 + -10,piVar8 + -10);");
+                                    trace.statement("piVar4[-2] = piVar8[-2];");
+                                    trace.statement("*(char *)(piVar4 + -1) = (char)piVar8[-1];");
+                                    trace.statement("piVar4 = piVar4 + -0x14;");
+                                    trace.statement("piVar8 = piVar8 + -0x14;");
+                                }
+                                trace.statement("*param_1 = local_a8;");
+                                trace.statement("FUN_18020e8a0(piVar5,&local_a0);");
+                                trace.statement("FUN_18020e8a0(param_1 + 10,&local_80);");
+                                trace.statement("param_1[0x12] = local_60;");
+                                trace.statement("*(undefined1 *)(param_1 + 0x13) = local_5c;");
+                            }
+                            trace.statement("piVar6 = piVar6 + 0x14;");
+                            trace.statement("FUN_18020e450(&local_80);");
+                            trace.statement("FUN_18020e450(&local_a0);");
+                            trace.statement("piVar10 = piVar10 + 0x14;");
+                            trace.statement("local_b8 = local_b8 + 0x14;");
+                            trace.statement("param_2 = local_b0;");
+                        }
+                    }
+                } while (trace.loop_condition("while (piVar6 != local_b0);"));
+            }
+            trace.statement("return param_2;");
+        }
     return kFunction_0x180221190;
 }
 
@@ -5399,13 +8520,78 @@ FUN_180230a50)F180221450C",
     R"F180221450F(34: if (0 < lVar4) {
 36: do {
 63: return;)F180221450F",
-    R"F180221450U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180221450U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F180221450U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.)F180221450U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221450() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221450", "FUN_180221450");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180230a50", reinterpret_cast<const void*>(&image::FUN_180230a50));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    // body sha256: 6bc1122bc25e534be071e02ec1701ae807bcee1588d3afbfa818be647f2ca282
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180221450(longlong param_1,longlong param_2,undefined1 param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("undefined1 auStack_b8 [32];");
+            trace.statement("undefined1 local_98;");
+            trace.statement("undefined4 local_88 [2];");
+            trace.statement("undefined8 local_80;");
+            trace.statement("undefined8 uStack_78;");
+            trace.statement("undefined8 local_70;");
+            trace.statement("undefined8 local_68;");
+            trace.statement("undefined8 local_60;");
+            trace.statement("undefined8 uStack_58;");
+            trace.statement("undefined8 local_50;");
+            trace.statement("undefined8 local_48;");
+            trace.statement("undefined4 local_40;");
+            trace.statement("undefined1 local_3c;");
+            trace.statement("ulonglong local_38;");
+            trace.statement("local_38 = DAT_1803da4c0 ^ (ulonglong)auStack_b8;");
+            trace.statement("lVar3 = (param_2 - param_1 >> 4) * -0x3333333333333333;");
+            trace.statement("lVar4 = lVar3 >> 1;");
+            if (trace.condition("if (0 < lVar4)")) {
+                trace.statement("lVar2 = lVar4 * 0x50;");
+                do {
+                    trace.statement("lVar1 = lVar2 + -0x50;");
+                    trace.statement("lVar4 = lVar4 + -1;");
+                    trace.statement("local_88[0] = *(undefined4 *)(param_1 + lVar1);");
+                    trace.statement("local_80 = *(undefined8 *)(param_1 + 8 + lVar1);");
+                    trace.statement("uStack_78 = *(undefined8 *)(param_1 + 0x10 + lVar1);");
+                    trace.statement("local_70 = *(undefined8 *)(param_1 + 0x18 + lVar1);");
+                    trace.statement("local_68 = *(undefined8 *)(param_1 + 0x20 + lVar1);");
+                    trace.statement("*(undefined8 *)(param_1 + -0x30 + lVar2) = 0xf;");
+                    trace.statement("*(undefined1 *)(param_1 + -0x48 + lVar2) = 0;");
+                    trace.statement("*(undefined8 *)(param_1 + -0x38 + lVar2) = 0;");
+                    trace.statement("local_60 = *(undefined8 *)(param_1 + 0x28 + lVar1);");
+                    trace.statement("uStack_58 = *(undefined8 *)(param_1 + 0x30 + lVar1);");
+                    trace.statement("local_50 = *(undefined8 *)(param_1 + 0x38 + lVar1);");
+                    trace.statement("local_48 = *(undefined8 *)(param_1 + 0x40 + lVar1);");
+                    trace.statement("*(undefined1 *)(param_1 + -0x28 + lVar2) = 0;");
+                    trace.statement("*(undefined8 *)(param_1 + -0x18 + lVar2) = 0;");
+                    trace.statement("*(undefined8 *)(param_1 + -0x10 + lVar2) = 0xf;");
+                    trace.statement("local_40 = *(undefined4 *)(param_1 + 0x48 + lVar1);");
+                    trace.statement("local_3c = *(undefined1 *)(param_1 + 0x4c + lVar1);");
+                    trace.statement("local_98 = param_3;");
+                    trace.statement("FUN_180230a50(param_1,lVar4,lVar3,local_88);");
+                    trace.statement("FUN_18020e450(&local_60);");
+                    trace.statement("FUN_18020e450(&local_80);");
+                    trace.statement("lVar2 = lVar1;");
+                } while (trace.loop_condition("while (0 < lVar4);"));
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x180221450;
 }
 
@@ -5500,13 +8686,83 @@ FUN_180230a50)F1802215d0C",
 32: do {
 34: if (1 < ((longlong)param_2 - (longlong)param_1 >> 4) * -0x3333333333333333) {
 67: return;)F1802215d0F",
-    R"F1802215d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802215d0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference DAT_1803da4c0.)F1802215d0U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803da4c0.)F1802215d0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802215d0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802215d0", "FUN_1802215d0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803da4c0.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_18020e8a0", reinterpret_cast<const void*>(&image::FUN_18020e8a0));
+    trace.call_target("FUN_180230a50", reinterpret_cast<const void*>(&image::FUN_180230a50));
+    trace.data_ref("DAT_1803da4c0", static_cast<const void*>(&image::DAT_1803da4c0));
+    // body sha256: 79b4e620d237fe3d414206540b9b1a873f13d7de3e004125c6dedca91aeec353
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802215d0(undefined4 *param_1,undefined4 *param_2,undefined1 param_3)");
+        {
+            trace.statement("undefined4 *puVar1;");
+            trace.statement("undefined8 *puVar2;");
+            trace.statement("undefined1 auStack_b8 [32];");
+            trace.statement("undefined1 local_98;");
+            trace.statement("undefined4 local_88 [2];");
+            trace.statement("undefined8 local_80;");
+            trace.statement("undefined8 uStack_78;");
+            trace.statement("undefined8 local_70;");
+            trace.statement("undefined8 local_68;");
+            trace.statement("undefined8 local_60;");
+            trace.statement("undefined8 uStack_58;");
+            trace.statement("undefined8 local_50;");
+            trace.statement("undefined8 local_48;");
+            trace.statement("undefined4 local_40;");
+            trace.statement("undefined1 local_3c;");
+            trace.statement("ulonglong local_38;");
+            trace.statement("local_38 = DAT_1803da4c0 ^ (ulonglong)auStack_b8;");
+            if (trace.condition("if (0x9f < (longlong)param_2 - (longlong)param_1)")) {
+                trace.statement("puVar2 = (undefined8 *)(param_2 + -0x12);");
+                do {
+                    trace.statement("puVar1 = param_2 + -0x14;");
+                    if (trace.condition("if (1 < ((longlong)param_2 - (longlong)param_1 >> 4) * -0x3333333333333333)")) {
+                        trace.statement("local_88[0] = *puVar1;");
+                        trace.statement("local_80 = *puVar2;");
+                        trace.statement("uStack_78 = puVar2[1];");
+                        trace.statement("local_70 = puVar2[2];");
+                        trace.statement("local_68 = puVar2[3];");
+                        trace.statement("puVar2[3] = 0xf;");
+                        trace.statement("*(undefined1 *)puVar2 = 0;");
+                        trace.statement("puVar2[2] = 0;");
+                        trace.statement("local_60 = *(undefined8 *)(param_2 + -10);");
+                        trace.statement("uStack_58 = *(undefined8 *)(param_2 + -8);");
+                        trace.statement("local_50 = *(undefined8 *)(param_2 + -6);");
+                        trace.statement("local_48 = *(undefined8 *)(param_2 + -4);");
+                        trace.statement("*(undefined1 *)(param_2 + -10) = 0;");
+                        trace.statement("*(undefined8 *)(param_2 + -6) = 0;");
+                        trace.statement("*(undefined8 *)(param_2 + -4) = 0xf;");
+                        trace.statement("local_40 = param_2[-2];");
+                        trace.statement("local_3c = *(undefined1 *)(param_2 + -1);");
+                        trace.statement("*puVar1 = *param_1;");
+                        trace.statement("FUN_18020e8a0(puVar2,param_1 + 2);");
+                        trace.statement("FUN_18020e8a0(param_2 + -10,param_1 + 10);");
+                        trace.statement("param_2[-2] = param_1[0x12];");
+                        trace.statement("*(undefined1 *)(param_2 + -1) = *(undefined1 *)(param_1 + 0x13);");
+                        trace.statement("local_98 = param_3;");
+                        trace.statement("FUN_180230a50(param_1,0,((longlong)puVar1 - (longlong)param_1 >> 4) * -0x3333333333333333,");
+                        trace.statement("local_88);");
+                        trace.statement("FUN_18020e450(&local_60);");
+                        trace.statement("FUN_18020e450(&local_80);");
+                    }
+                    trace.statement("puVar2 = puVar2 + -10;");
+                    trace.statement("param_2 = puVar1;");
+                } while (trace.loop_condition("while (0x9f < (longlong)puVar1 - (longlong)param_1);"));
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802215d0;
 }
 
@@ -5622,13 +8878,90 @@ FUN_180231960)F1802217a0C",
 71: if (0x7f < param_3 + -1) {
 72: do {
 79: return;)F1802217a0F",
-    R"F1802217a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802217a0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180221895.)F1802217a0U",
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180221895.)F1802217a0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802217a0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802217a0", "FUN_1802217a0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180221895.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180214490", reinterpret_cast<const void*>(&image::FUN_180214490));
+    trace.call_target("FUN_180231960", reinterpret_cast<const void*>(&image::FUN_180231960));
+    // body sha256: 8980a6cf687bc2113c593cd03f48afcbbea6bb61633e825992dd4c08563d9a55
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_1802217a0(int *param_1,longlong param_2,longlong param_3,int *param_4,longlong *param_5)");
+        {
+            trace.statement("int *_Dst;");
+            trace.statement("int *piVar1;");
+            trace.statement("int *_Src;");
+            trace.statement("int iVar2;");
+            trace.statement("int iVar3;");
+            trace.statement("int *piVar4;");
+            trace.statement("longlong lVar5;");
+            trace.statement("int *_Src_00;");
+            trace.statement("size_t _Size;");
+            trace.statement("longlong lVar6;");
+            trace.statement("int *piVar7;");
+            trace.statement("longlong lVar8;");
+            trace.statement("piVar4 = param_1;");
+            for (auto loop = trace.loop("for (lVar6 = param_3; 0x20 < lVar6; lVar6 = lVar6 + -0x20)"); loop.next(); ) {
+                trace.statement("piVar4 = (int *)FUN_180214490(piVar4,piVar4 + 0x20,param_5);");
+            }
+            trace.statement("FUN_180214490(piVar4,param_2,param_5);");
+            trace.statement("piVar4 = param_4;");
+            trace.statement("piVar7 = param_1;");
+            trace.statement("lVar6 = param_3;");
+            if (trace.condition("if (0x20 < param_3)")) {
+                do {
+                    trace.statement("lVar8 = lVar6 + -0x20;");
+                    trace.statement("piVar1 = piVar7 + 0x20;");
+                    trace.statement("lVar5 = 0x20;");
+                    if (trace.condition("if (lVar8 < 0x20)")) {
+                        trace.statement("lVar5 = lVar8;");
+                    }
+                    trace.statement("_Src = piVar1 + lVar5;");
+                    trace.statement("_Src_00 = piVar1;");
+                    do {
+                        while (trace.loop_condition("while( true )")) {
+                            trace.statement("_Dst = piVar4 + 1;");
+                            trace.statement("iVar2 = *piVar7;");
+                            trace.statement("iVar3 = *_Src_00;");
+                            if (trace.condition("if (*(int *)(*param_5 + (longlong)iVar3 * 4) <= *(int *)(*param_5 + (longlong)iVar2 * 4)) break; _Src_00 = _Src_00 + 1; *piVar4 = iVar3; piVar4 = _Dst; if (_Src_00 == _Src)")) {
+                                trace.statement("_Size = (longlong)piVar1 - (longlong)piVar7;");
+                                trace.statement("_Src_00 = piVar7;");
+                                trace.statement("goto LAB_180221895;");
+                            }
+                        }
+                        trace.statement("piVar7 = piVar7 + 1;");
+                        trace.statement("*piVar4 = iVar2;");
+                        trace.statement("piVar4 = _Dst;");
+                    } while (trace.loop_condition("while (piVar7 != piVar1);"));
+                    trace.statement("_Size = (longlong)_Src - (longlong)_Src_00;");
+                    LAB_180221895: ;
+                    trace.statement("memmove(_Dst,_Src_00,_Size);");
+                    trace.statement("piVar4 = (int *)((longlong)_Dst + _Size);");
+                    trace.statement("piVar7 = _Src;");
+                    trace.statement("lVar6 = lVar8 - lVar5;");
+                } while (trace.loop_condition("while (0x20 < lVar8 - lVar5);"));
+                trace.statement("memmove((int *)((longlong)_Dst + _Size),_Src,param_2 - (longlong)_Src);");
+                trace.statement("lVar6 = 0x40;");
+                trace.statement("FUN_180231960(param_4,param_4 + param_3,param_1,0x40,param_3,param_5);");
+                if (trace.condition("if (0x7f < param_3 + -1)")) {
+                    do {
+                        trace.statement("FUN_180231960(param_1,param_2,param_4,lVar6 * 2,param_3,param_5);");
+                        trace.statement("lVar6 = lVar6 * 4;");
+                        trace.statement("FUN_180231960(param_4,param_4 + param_3,param_1,lVar6,param_3,param_5);");
+                    } while (trace.loop_condition("while (lVar6 <= (param_3 + -1) / 2);"));
+                }
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x1802217a0;
 }
 
@@ -5713,12 +9046,63 @@ void FUN_180221960(int *param_1,int *param_2,int *param_3,longlong param_4,longl
 38: return;
 41: return;
 52: return;)F180221960F",
-    R"F180221960U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180221960U",
+    R"F180221960U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180221960U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221960() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221960", "FUN_180221960");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180231a60", reinterpret_cast<const void*>(&image::FUN_180231a60));
+    // body sha256: 0a85b38e817d3d8b0a517225682da1b7235808842206401844068de75e8f9819
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180221960(int *param_1,int *param_2,int *param_3,longlong param_4,longlong param_5,");
+        trace.statement("undefined8 param_6,undefined8 param_7,longlong *param_8)");
+        {
+            trace.statement("int iVar1;");
+            trace.statement("int iVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("int *piVar4;");
+            trace.statement("int *piVar5;");
+            if (trace.condition("if ((param_2 != param_3) && (param_1 != param_2))")) {
+                trace.statement("iVar1 = *param_2;");
+                trace.statement("lVar3 = *param_8;");
+                while (trace.loop_condition("while (iVar2 = *param_1, *(int *)(lVar3 + (longlong)iVar1 * 4) <= *(int *)(lVar3 + (longlong)iVar2 * 4))")) {
+                    trace.statement("param_1 = param_1 + 1;");
+                    trace.statement("param_4 = param_4 + -1;");
+                    if (trace.condition("if (param_1 == param_2)")) {
+                        trace.statement("return;");
+                    }
+                }
+                if (trace.condition("if (param_2 != param_3 + -1)")) {
+                    trace.statement("piVar5 = param_3;");
+                    trace.statement("piVar4 = param_3 + -1;");
+                    do {
+                        trace.statement("param_3 = piVar4;");
+                        if (trace.condition("if (*(int *)(lVar3 + (longlong)param_2[-1] * 4) < *(int *)(lVar3 + (longlong)*param_3 * 4))")) {
+                            if (trace.condition("if (param_4 == 1)")) {
+                                trace.statement("memmove(param_1,param_2,(longlong)piVar5 - (longlong)param_2);");
+                                trace.statement("*(int *)(((longlong)piVar5 - (longlong)param_2) + (longlong)param_1) = iVar2;");
+                                trace.statement("return;");
+                            }
+                            trace.statement("FUN_180231a60(param_1,param_2,piVar5,param_4,param_5,param_6,param_7,param_8);");
+                            trace.statement("return;");
+                        }
+                        trace.statement("param_5 = param_5 + -1;");
+                        trace.statement("piVar5 = param_3;");
+                        trace.statement("piVar4 = param_3 + -1;");
+                    } while (trace.loop_condition("while (param_2 != param_3 + -1);"));
+                }
+                trace.statement("memmove((void *)((longlong)param_3 - ((longlong)param_2 - (longlong)param_1)),param_1,");
+                trace.statement("(longlong)param_2 - (longlong)param_1);");
+                trace.statement("*param_1 = iVar1;");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x180221960;
 }
 
@@ -5799,12 +9183,65 @@ FUN_180238590)F180221a80C",
 21: return param_3;
 36: if (*(longlong *)(puVar3 + 0x16) != *(longlong *)(puVar3 + 0x14)) {
 37: if (0x7fffffffffffffff <)F180221a80F",
-    R"F180221a80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180221a80U",
+    R"F180221a80U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180221a80U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221a80() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221a80", "FUN_180221a80");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020d910", reinterpret_cast<const void*>(&image::FUN_18020d910));
+    trace.call_target("FUN_180238590", reinterpret_cast<const void*>(&image::FUN_180238590));
+    // body sha256: 6f34f6f3cbb8ffb213abba366c4eef4a689102aa08825db5d33a51f27427a5c5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_180221a80(longlong *param_1,longlong param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("undefined4 *puVar3;");
+            trace.statement("void *_Dst;");
+            trace.statement("size_t _Size;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("lVar2 = *param_1;");
+            trace.statement("uVar4 = param_1[1];");
+            do {
+                if (trace.condition("if (param_2 == 0)")) {
+                    trace.statement("return param_3;");
+                }
+                trace.statement("puVar3 = *(undefined4 **)");
+                trace.statement("(*(longlong *)(lVar2 + 8) + (*(longlong *)(lVar2 + 0x10) - 1U & uVar4) * 8);");
+                trace.statement("*param_3 = *puVar3;");
+                trace.statement("*(undefined1 *)(param_3 + 1) = *(undefined1 *)(puVar3 + 1);");
+                trace.statement("FUN_18016d4c0(param_3 + 2,puVar3 + 2);");
+                trace.statement("param_3[10] = puVar3[10];");
+                trace.statement("param_3[0xb] = puVar3[0xb];");
+                trace.statement("*(undefined8 *)(param_3 + 0xc) = *(undefined8 *)(puVar3 + 0xc);");
+                trace.statement("FUN_18020d910(param_3 + 0xe,puVar3 + 0xe);");
+                trace.statement("puVar1 = (undefined8 *)(param_3 + 0x14);");
+                trace.statement("*puVar1 = 0;");
+                trace.statement("*(undefined8 *)(param_3 + 0x16) = 0;");
+                trace.statement("*(undefined8 *)(param_3 + 0x18) = 0;");
+                if (trace.condition("if (*(longlong *)(puVar3 + 0x16) != *(longlong *)(puVar3 + 0x14))")) {
+                    if (trace.condition("if (0x7fffffffffffffff < (ulonglong)(*(longlong *)(puVar3 + 0x16) - *(longlong *)(puVar3 + 0x14)))")) {
+                        trace.statement("FUN_18020cc40();");
+                    }
+                    trace.statement("FUN_180238590(puVar1);");
+                    trace.statement("_Dst = (void *)*puVar1;");
+                    trace.statement("_Size = *(longlong *)(puVar3 + 0x16) - (longlong)*(void **)(puVar3 + 0x14);");
+                    trace.statement("memmove(_Dst,*(void **)(puVar3 + 0x14),_Size);");
+                    trace.statement("*(size_t *)(param_3 + 0x16) = _Size + (longlong)_Dst;");
+                }
+                trace.statement("param_3 = param_3 + 0x1a;");
+                trace.statement("uVar4 = uVar4 + 1;");
+                trace.statement("param_2 = param_2 + -1;");
+            } while (trace.loop_condition("while( true );"));
+        }
     return kFunction_0x180221a80;
 }
 
@@ -5843,12 +9280,29 @@ undefined8 FUN_180221bc0(void *param_1)
     R"F180221bc0T()F180221bc0T",
     R"F180221bc0F(12: if (param_1 != (void *)0x0) {
 15: return 0;)F180221bc0F",
-    R"F180221bc0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180221bc0U",
+    R"F180221bc0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180221bc0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221bc0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221bc0", "FUN_180221bc0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_1801fb3a0", reinterpret_cast<const void*>(&image::FUN_1801fb3a0));
+    // body sha256: a919fa15fabeee7f9e5ae61840157f7f030529a41da75fdb6cada5418c83c6fc
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 FUN_180221bc0(void *param_1)");
+        {
+            trace.statement("FUN_1801fb3a0();");
+            trace.statement("_Cnd_do_broadcast_at_thread_exit();");
+            if (trace.condition("if (param_1 != (void *)0x0)")) {
+                trace.statement("free(param_1);");
+            }
+            trace.statement("return 0;");
+        }
     return kFunction_0x180221bc0;
 }
 
@@ -6000,9 +9454,10 @@ FUN_1802d8350)F180221c00C",
 94: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar4 >> 3) * 8)) &&
 108: return puVar2;
 111: LAB_180221dc7:)F180221c00F",
-    R"F180221c00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180221c00U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180221dc7.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180221dc7.
 TODO: resolve the indirect call in body 59: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 60: lVar7 = (*pcVar5)(5);.
 TODO: resolve the indirect call in body 98: pcVar5 = (code *)swi(0x29);.
@@ -6011,6 +9466,117 @@ TODO: resolve the indirect call in body 99: (*pcVar5)();.)F180221c00U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221c00() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221c00", "FUN_180221c00");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180221dc7.
+    // TODO: resolve the indirect call in body 59: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 60: lVar7 = (*pcVar5)(5);.
+    // TODO: resolve the indirect call in body 98: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 99: (*pcVar5)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: f9912946f2824eabb71d1a3a9b60e9121c88721b506bbce3121b2b1e5f693805
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180221c00(longlong *param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("undefined8 *puVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("void *pvVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar7;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined8 local_68;");
+            trace.statement("puVar8 = auStack_88;");
+            trace.statement("puVar9 = auStack_88;");
+            trace.statement("local_68 = param_3;");
+            trace.statement("lVar3 = *param_1;");
+            trace.statement("lVar7 = param_1[1] - lVar3 >> 3;");
+            if (trace.condition("if (lVar7 == 0x1fffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar6 = param_1[2] - lVar3 >> 3;");
+            if (trace.condition("if (uVar6 <= 0x1fffffffffffffff - (uVar6 >> 1))")) {
+                trace.statement("uVar1 = lVar7 + 1;");
+                trace.statement("uVar6 = uVar6 + (uVar6 >> 1);");
+                trace.statement("uVar10 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar6)")) {
+                    trace.statement("uVar10 = uVar6;");
+                }
+                if (trace.condition("if (uVar10 < 0x2000000000000000)")) {
+                    trace.statement("uVar6 = uVar10 * 8;");
+                    if (trace.condition("if (uVar6 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar9 = auStack_88;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar6);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar6 + 0x27 <= uVar6) goto LAB_180221dc7; lVar7 = FUN_1802d8350(); if (lVar7 == 0)")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("lVar7 = (*pcVar5)(5);");
+                        trace.statement("puVar8 = auStack_80;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar7 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar7;");
+                    trace.statement("puVar9 = puVar8;");
+                }
+                trace.statement("puVar2 = _Dst_00 + ((longlong)param_2 - lVar3 >> 3);");
+                trace.statement("_Dst = puVar2 + 1;");
+                trace.statement("*(longlong **)(puVar9 + 0x28) = param_1;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x30) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x38) = uVar10;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x48) = _Dst;");
+                trace.statement("*puVar2 = **(undefined8 **)(puVar9 + 0x20);");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = puVar2;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                    trace.statement("_Size = param_1[1] - (longlong)pvVar4;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = pvVar4;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180221d26;");
+                trace.statement("memmove(_Dst_00,pvVar4,(longlong)param_2 - (longlong)pvVar4);");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = _Dst_00;");
+                trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180221d3d;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x30) = 0;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (pvVar4 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar4;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar4 >> 3) * 8)) && (_Memory = *(void **)((longlong)pvVar4 + -8), 0x1f < (ulonglong)((longlong)pvVar4 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar5)();");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180221d93;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = (longlong)_Dst_00;");
+                trace.statement("param_1[1] = (longlong)(_Dst_00 + uVar1);");
+                trace.statement("param_1[2] = (longlong)(_Dst_00 + uVar10);");
+                trace.statement("return puVar2;");
+            }
+        }
+        LAB_180221dc7: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180221c00;
 }
 
@@ -6235,12 +9801,13 @@ DAT_1803fcc18)F180221dd0D",
 157: if ((0xfff < (ulonglong)((DAT_1803fcc18 - (longlong)DAT_1803fcc08 >> 4) << 4)) &&
 171: return local_70;
 174: LAB_1802220e7:)F180221dd0F",
-    R"F180221dd0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180221dd0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802220e7.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcc08.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcc10.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcc18.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802220e7.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcc08.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcc10.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcc18.
 TODO: resolve the indirect call in body 73: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 74: lVar7 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 161: pcVar1 = (code *)swi(0x29);.
@@ -6249,6 +9816,187 @@ TODO: resolve the indirect call in body 162: (*pcVar1)();.)F180221dd0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180221dd0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180221dd0", "FUN_180221dd0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802220e7.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcc08.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcc10.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcc18.
+    // TODO: resolve the indirect call in body 73: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 74: lVar7 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 161: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 162: (*pcVar1)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_180214c90", reinterpret_cast<const void*>(&image::FUN_180214c90));
+    trace.call_target("FUN_18023a090", reinterpret_cast<const void*>(&image::FUN_18023a090));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803fcc08", static_cast<const void*>(&image::DAT_1803fcc08));
+    trace.data_ref("DAT_1803fcc10", static_cast<const void*>(&image::DAT_1803fcc10));
+    trace.data_ref("DAT_1803fcc18", static_cast<const void*>(&image::DAT_1803fcc18));
+    // body sha256: b27ddb593f59f153faadaf7ccbd5a8c02aed609c54703510a6c6dc8c3a837561
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("ulonglong FUN_180221dd0(undefined8 param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("ulonglong uVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("longlong lVar7;");
+            trace.statement("void *pvVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("void *pvVar13;");
+            trace.statement("undefined8 *puVar14;");
+            trace.statement("undefined8 uStack_e0;");
+            trace.statement("undefined1 auStack_d8 [8];");
+            trace.statement("undefined1 auStack_d0 [24];");
+            trace.statement("ulonglong local_b8;");
+            trace.statement("ulonglong uStack_b0;");
+            trace.statement("undefined8 *local_a8;");
+            trace.statement("ulonglong local_a0;");
+            trace.statement("ulonglong uStack_98;");
+            trace.statement("undefined8 *local_90;");
+            trace.statement("ulonglong local_88;");
+            trace.statement("ulonglong uStack_80;");
+            trace.statement("undefined8 *local_78;");
+            trace.statement("ulonglong local_70;");
+            trace.statement("undefined8 *local_68;");
+            trace.statement("ulonglong local_60;");
+            trace.statement("ulonglong local_58;");
+            trace.statement("ulonglong local_50;");
+            trace.statement("ulonglong local_48;");
+            trace.statement("puVar9 = auStack_d8;");
+            trace.statement("puVar10 = auStack_d8;");
+            trace.statement("lVar7 = ((longlong)DAT_1803fcc10 - (longlong)DAT_1803fcc08 >> 4) * -0x71c71c71c71c71c7;");
+            if (trace.condition("if (lVar7 == 0x1c71c71c71c71c7)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar3 = (DAT_1803fcc18 - (longlong)DAT_1803fcc08 >> 4) * -0x71c71c71c71c71c7;");
+            trace.statement("uVar2 = 0x1c71c71c71c71c7 - (uVar3 >> 1);");
+            if (trace.condition("if (uVar3 < uVar2 || uVar3 - uVar2 == 0)")) {
+                trace.statement("lVar12 = (longlong)param_2 - (longlong)DAT_1803fcc08;");
+                trace.statement("uVar2 = lVar7 + 1;");
+                trace.statement("uVar3 = uVar3 + (uVar3 >> 1);");
+                trace.statement("uVar6 = uVar2;");
+                if (trace.condition("if (uVar2 <= uVar3)")) {
+                    trace.statement("uVar6 = uVar3;");
+                }
+                if (trace.condition("if (uVar6 < 0x1c71c71c71c71c8)")) {
+                    trace.statement("uVar3 = uVar6 * 0x90;");
+                    if (trace.condition("if (uVar3 == 0)")) {
+                        trace.statement("uVar11 = 0;");
+                        trace.statement("puVar10 = auStack_d8;");
+                    } else {
+                    trace.statement("uVar11 = FUN_1802d8350(uVar3);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar3 + 0x27 <= uVar3) goto LAB_1802220e7; lVar7 = FUN_1802d8350(); if (lVar7 == 0)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("lVar7 = (*pcVar1)(5);");
+                        trace.statement("puVar9 = auStack_d0;");
+                    }
+                    trace.statement("uVar11 = lVar7 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar11 - 8) = lVar7;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("uVar4 = (lVar12 / 0x90) * 0x90 + uVar11;");
+                trace.statement("uVar5 = uVar4 + 0x90;");
+                trace.statement("puVar14 = &DAT_1803fcc08;");
+                trace.statement("local_68 = &DAT_1803fcc08;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180221f15;");
+                trace.statement("local_70 = uVar4;");
+                trace.statement("local_60 = uVar11;");
+                trace.statement("local_58 = uVar6;");
+                trace.statement("local_50 = uVar5;");
+                trace.statement("local_48 = uVar5;");
+                trace.statement("FUN_18023a090(uVar4,param_3);");
+                trace.statement("local_50 = uVar4;");
+                trace.statement("uVar6 = uVar11;");
+                trace.statement("uVar4 = uVar11;");
+                trace.statement("pvVar8 = DAT_1803fcc08;");
+                if (trace.condition("if (param_2 == DAT_1803fcc10)")) {
+                    trace.statement("uVar5 = uVar11;");
+                    trace.statement("pvVar13 = DAT_1803fcc10;");
+                    trace.statement("local_b8 = uVar11;");
+                    trace.statement("uStack_b0 = uVar11;");
+                    trace.statement("local_a8 = puVar14;");
+                    trace.statement("uVar4 = local_88;");
+                    if (trace.condition("if (DAT_1803fcc08 != DAT_1803fcc10)")) {
+                        do {
+                            trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180221f55;");
+                            trace.statement("uStack_b0 = uVar5;");
+                            trace.statement("FUN_18023a090();");
+                            trace.statement("uVar5 = uVar5 + 0x90;");
+                            trace.statement("pvVar8 = (void *)((longlong)pvVar8 + 0x90);");
+                            trace.statement("uVar6 = uVar5;");
+                            trace.statement("uStack_b0 = uVar5;");
+                            trace.statement("uVar4 = local_88;");
+                        } while (trace.loop_condition("while (pvVar8 != pvVar13);"));
+                    }
+                } else {
+                for (auto loop = trace.loop("for (; local_90 = puVar14, local_a0 = uVar4, uStack_98 = uVar6, pvVar8 != param_2; pvVar8 = (void *)((longlong)pvVar8 + 0x90))"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180221f96;");
+                    trace.statement("FUN_18023a090();");
+                    trace.statement("uVar6 = uVar6 + 0x90;");
+                    trace.statement("uVar4 = local_a0;");
+                    trace.statement("puVar14 = local_90;");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180221fb9;");
+                trace.statement("local_a0 = uVar6;");
+                trace.statement("FUN_180214c90(uVar6,uVar6);");
+                trace.statement("local_78 = &DAT_1803fcc08;");
+                trace.statement("pvVar8 = DAT_1803fcc10;");
+                trace.statement("uVar6 = local_b8;");
+                trace.statement("local_88 = uVar5;");
+                trace.statement("uVar4 = uVar5;");
+                trace.statement("uStack_80 = uVar5;");
+                trace.statement("local_50 = uVar11;");
+                if (trace.condition("if (param_2 != DAT_1803fcc10)")) {
+                    do {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180221ffb;");
+                        trace.statement("uStack_80 = uVar5;");
+                        trace.statement("FUN_18023a090(uVar5,param_2);");
+                        trace.statement("uVar5 = uVar5 + 0x90;");
+                        trace.statement("param_2 = (void *)((longlong)param_2 + 0x90);");
+                        trace.statement("uVar6 = local_b8;");
+                        trace.statement("uVar4 = uVar5;");
+                        trace.statement("uStack_80 = uVar5;");
+                    } while (trace.loop_condition("while (param_2 != pvVar8);"));
+                }
+                }
+                trace.statement("local_88 = uVar4;");
+                trace.statement("local_b8 = uVar6;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180222021;");
+                trace.statement("FUN_180214c90(uVar5,uVar5);");
+                trace.statement("local_60 = 0;");
+                if (trace.condition("if (DAT_1803fcc08 != (void *)0x0)")) {
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180222041;");
+                    trace.statement("FUN_180214c90(DAT_1803fcc08,DAT_1803fcc10);");
+                    trace.statement("pvVar8 = DAT_1803fcc08;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((DAT_1803fcc18 - (longlong)DAT_1803fcc08 >> 4) << 4)) && (pvVar8 = *(void **)((longlong)DAT_1803fcc08 + -8), 0x1f < (ulonglong)((longlong)DAT_1803fcc08 + (-8 - (longlong)pvVar8))))")) {
+                        trace.statement("pvVar8 = (void *)0x5;");
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar1)();");
+                        trace.statement("puVar10 = puVar10 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18022209e;");
+                    trace.statement("free(pvVar8);");
+                }
+                trace.statement("DAT_1803fcc08 = (void *)uVar11;");
+                trace.statement("DAT_1803fcc10 = (void *)(uVar2 * 0x90 + uVar11);");
+                trace.statement("DAT_1803fcc18 = uVar3 + uVar11;");
+                trace.statement("return local_70;");
+            }
+        }
+        LAB_1802220e7: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180221dd0;
 }
 
@@ -6397,12 +10145,13 @@ DAT_1803fcf98)F1802220f0D",
 88: if ((0xfff < (ulonglong)(((longlong)DAT_1803fcf98 - (longlong)DAT_1803fcf88 >> 3) * 8)) &&
 102: return puVar2;
 105: LAB_1802222d0:)F1802220f0F",
-    R"F1802220f0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802220f0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802222d0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcf88.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcf90.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcf98.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802222d0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcf88.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcf90.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcf98.
 TODO: resolve the indirect call in body 55: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 56: lVar6 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 92: pcVar3 = (code *)swi(0x29);.
@@ -6411,6 +10160,117 @@ TODO: resolve the indirect call in body 93: (*pcVar3)();.)F1802220f0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802220f0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802220f0", "FUN_1802220f0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802222d0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcf88.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcf90.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcf98.
+    // TODO: resolve the indirect call in body 55: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 56: lVar6 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 92: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 93: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803fcf88", static_cast<const void*>(&image::DAT_1803fcf88));
+    trace.data_ref("DAT_1803fcf90", static_cast<const void*>(&image::DAT_1803fcf90));
+    trace.data_ref("DAT_1803fcf98", static_cast<const void*>(&image::DAT_1803fcf98));
+    // body sha256: cb9d15259341f212bfff4d472944c2ec79e06bba78dbf2bc63151eed424f3298
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802220f0(undefined8 param_1,void *param_2,undefined8 *param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("undefined8 *puVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("void *pvVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [80];");
+            trace.statement("pvVar5 = DAT_1803fcf88;");
+            trace.statement("puVar7 = auStack_98;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("lVar6 = (longlong)DAT_1803fcf90 - (longlong)DAT_1803fcf88 >> 3;");
+            if (trace.condition("if (lVar6 == 0x1fffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = (longlong)DAT_1803fcf98 - (longlong)DAT_1803fcf88 >> 3;");
+            if (trace.condition("if (uVar4 <= 0x1fffffffffffffff - (uVar4 >> 1))")) {
+                trace.statement("uVar1 = lVar6 + 1;");
+                trace.statement("uVar4 = (uVar4 >> 1) + uVar4;");
+                trace.statement("uVar9 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar4)")) {
+                    trace.statement("uVar9 = uVar4;");
+                }
+                if (trace.condition("if (uVar9 < 0x2000000000000000)")) {
+                    trace.statement("uVar4 = uVar9 * 8;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar8 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_1802222d0; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar3)(5);");
+                        trace.statement("puVar7 = auStack_90;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar6 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar6;");
+                    trace.statement("puVar8 = puVar7;");
+                }
+                trace.statement("puVar2 = _Dst_00 + ((longlong)param_2 - (longlong)pvVar5 >> 3);");
+                trace.statement("_Dst = puVar2 + 1;");
+                trace.statement("*(undefined8 ***)(puVar8 + 0x20) = &DAT_1803fcf88;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x28) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar9;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x40) = _Dst;");
+                trace.statement("*puVar2 = *param_3;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = puVar2;");
+                if (trace.condition("if (param_2 == DAT_1803fcf90)")) {
+                    trace.statement("_Size = (longlong)DAT_1803fcf90 - (longlong)DAT_1803fcf88;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = DAT_1803fcf88;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180222222;");
+                trace.statement("memmove(_Dst_00,DAT_1803fcf88,(longlong)param_2 - (longlong)DAT_1803fcf88);");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst_00;");
+                trace.statement("_Size = (longlong)DAT_1803fcf90 - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18022223c;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar8 + 0x28) = 0;");
+                if (trace.condition("if (DAT_1803fcf88 != (void *)0x0)")) {
+                    trace.statement("pvVar5 = DAT_1803fcf88;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_1803fcf98 - (longlong)DAT_1803fcf88 >> 3) * 8)) && (pvVar5 = *(void **)((longlong)DAT_1803fcf88 + -8), 0x1f < (ulonglong)((longlong)DAT_1803fcf88 + (-8 - (longlong)pvVar5))))")) {
+                        trace.statement("pvVar5 = (void *)0x5;");
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar3)();");
+                        trace.statement("puVar8 = puVar8 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180222299;");
+                    trace.statement("free(pvVar5);");
+                }
+                trace.statement("DAT_1803fcf88 = _Dst_00;");
+                trace.statement("DAT_1803fcf90 = _Dst_00 + uVar1;");
+                trace.statement("DAT_1803fcf98 = _Dst_00 + uVar9;");
+                trace.statement("return puVar2;");
+            }
+        }
+        LAB_1802222d0: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x1802220f0;
 }
 
@@ -6569,9 +10429,10 @@ FUN_1802d8350)F1802222e0C",
 98: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar1) >> 4) * 0x10)) &&
 112: return lVar5;
 115: LAB_1802224f5:)F1802222e0F",
-    R"F1802222e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802222e0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802224f5.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802224f5.
 TODO: resolve the indirect call in body 58: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 59: lVar5 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 102: pcVar2 = (code *)swi(0x29);.
@@ -6580,6 +10441,124 @@ TODO: resolve the indirect call in body 103: (*pcVar2)();.)F1802222e0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802222e0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802222e0", "FUN_1802222e0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802224f5.
+    // TODO: resolve the indirect call in body 58: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 59: lVar5 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 102: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 103: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18022a210", reinterpret_cast<const void*>(&image::FUN_18022a210));
+    trace.call_target("FUN_180231d50", reinterpret_cast<const void*>(&image::FUN_180231d50));
+    trace.call_target("FUN_180231e30", reinterpret_cast<const void*>(&image::FUN_180231e30));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: dfc05aba082543bf5fedd62ae1853555a048d58650c7da01ab11d5f1bf7862e7
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_1802222e0(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("void *pvVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined8 local_68;");
+            trace.statement("puVar7 = auStack_88;");
+            trace.statement("puVar8 = auStack_88;");
+            trace.statement("local_68 = param_3;");
+            trace.statement("uVar6 = *param_1;");
+            trace.statement("lVar5 = ((longlong)(param_1[1] - uVar6) >> 4) * 0x2e8ba2e8ba2e8ba3;");
+            if (trace.condition("if (lVar5 == 0x1745d1745d1745d)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = ((longlong)(param_1[2] - uVar6) >> 4) * 0x2e8ba2e8ba2e8ba3;");
+            trace.statement("uVar3 = 0x1745d1745d1745d - (uVar4 >> 1);");
+            if (trace.condition("if (uVar4 < uVar3 || uVar4 - uVar3 == 0)")) {
+                trace.statement("uVar3 = lVar5 + 1;");
+                trace.statement("uVar4 = uVar4 + (uVar4 >> 1);");
+                trace.statement("uVar9 = uVar3;");
+                if (trace.condition("if (uVar3 <= uVar4)")) {
+                    trace.statement("uVar9 = uVar4;");
+                }
+                if (trace.condition("if (uVar9 < 0x1745d1745d1745e)")) {
+                    trace.statement("uVar4 = uVar9 * 0xb0;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("uVar10 = 0;");
+                        trace.statement("puVar8 = auStack_88;");
+                    } else {
+                    trace.statement("uVar10 = FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_1802224f5; lVar5 = FUN_1802d8350(); if (lVar5 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar5 = (*pcVar2)(5);");
+                        trace.statement("puVar7 = auStack_80;");
+                    }
+                    trace.statement("uVar10 = lVar5 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar10 - 8) = lVar5;");
+                    trace.statement("puVar8 = puVar7;");
+                }
+                trace.statement("lVar5 = ((longlong)(param_2 - uVar6) / 0xb0) * 0xb0 + uVar10;");
+                trace.statement("uVar11 = lVar5 + 0xb0;");
+                trace.statement("*(ulonglong **)(puVar8 + 0x28) = param_1;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar10;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x38) = uVar9;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x40) = uVar11;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x48) = uVar11;");
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18022240e;");
+                trace.statement("FUN_180231d50(-((longlong)(param_2 - uVar6) >> 0x3f),lVar5,*(undefined8 *)(puVar8 + 0x20));");
+                trace.statement("*(longlong *)(puVar8 + 0x40) = lVar5;");
+                trace.statement("uVar6 = param_1[1];");
+                if (trace.condition("if (param_2 == uVar6)")) {
+                    trace.statement("param_2 = *param_1;");
+                    trace.statement("uVar11 = uVar10;");
+                } else {
+                trace.statement("uVar6 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180222435;");
+                trace.statement("FUN_180231e30(uVar6,param_2,uVar10,param_1);");
+                trace.statement("*(ulonglong *)(puVar8 + 0x40) = uVar10;");
+                trace.statement("uVar6 = param_1[1];");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18022244c;");
+                trace.statement("FUN_180231e30(param_2,uVar6,uVar11,param_1);");
+                trace.statement("*(undefined8 *)(puVar8 + 0x30) = 0;");
+                trace.statement("uVar6 = *param_1;");
+                if (trace.condition("if (uVar6 != 0)")) {
+                    trace.statement("uVar9 = param_1[1];");
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180222466;");
+                    trace.statement("FUN_18022a210(uVar6,uVar9);");
+                    trace.statement("pvVar1 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar1;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar1) >> 4) * 0x10)) && (_Memory = *(void **)((longlong)pvVar1 + -8), 0x1f < (ulonglong)((longlong)pvVar1 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar8 = puVar8 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x1802224bb;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar10;");
+                trace.statement("param_1[1] = uVar3 * 0xb0 + uVar10;");
+                trace.statement("param_1[2] = uVar4 + uVar10;");
+                trace.statement("return lVar5;");
+            }
+        }
+        LAB_1802224f5: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x1802222e0;
 }
 
@@ -6624,12 +10603,33 @@ void FUN_180222500(undefined8 param_1,undefined8 param_2,longlong *param_3)
     R"F180222500T()F180222500T",
     R"F180222500F(14: while (cVar1 == '\0') {
 21: return;)F180222500F",
-    R"F180222500U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180222500U",
+    R"F180222500U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180222500U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180222500() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180222500", "FUN_180222500");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 92bc7abaa6eeb0b3a9f61790c2fd48169c92efef05356db20acce9cc6d337288
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180222500(undefined8 param_1,undefined8 param_2,longlong *param_3)");
+        {
+            trace.statement("char cVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("cVar1 = *(char *)((longlong)param_3 + 0x19);");
+            while (trace.loop_condition("while (cVar1 == '\\0')")) {
+                trace.statement("FUN_180222500(param_1,param_2,param_3[2]);");
+                trace.statement("plVar2 = (longlong *)*param_3;");
+                trace.statement("free(param_3);");
+                trace.statement("param_3 = plVar2;");
+                trace.statement("cVar1 = *(char *)((longlong)plVar2 + 0x19);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x180222500;
 }
 
@@ -6675,12 +10675,35 @@ void FUN_180222550(undefined8 param_1,undefined8 param_2,longlong *param_3)
     R"F180222550T()F180222550T",
     R"F180222550F(14: while (cVar1 == '\0') {
 22: return;)F180222550F",
-    R"F180222550U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180222550U",
+    R"F180222550U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180222550U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180222550() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180222550", "FUN_180222550");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    // body sha256: 80cd57f4eedbef1adc1d6500f5978c91dc2ba69c8bbd55f1a7f528f33ec5e5c6
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180222550(undefined8 param_1,undefined8 param_2,longlong *param_3)");
+        {
+            trace.statement("char cVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("cVar1 = *(char *)((longlong)param_3 + 0x19);");
+            while (trace.loop_condition("while (cVar1 == '\\0')")) {
+                trace.statement("FUN_180222550(param_1,param_2,param_3[2]);");
+                trace.statement("plVar2 = (longlong *)*param_3;");
+                trace.statement("FUN_18020e450(param_3 + 5);");
+                trace.statement("free(param_3);");
+                trace.statement("param_3 = plVar2;");
+                trace.statement("cVar1 = *(char *)((longlong)plVar2 + 0x19);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x180222550;
 }
 
@@ -6840,12 +10863,13 @@ DAT_1803edcf0)F1802225c0D",
 99: if ((0xfff < (ulonglong)(((longlong)DAT_1803edcf0 - (longlong)DAT_1803edce0 >> 3) * 8)) &&
 113: return puVar10;
 116: LAB_1802227f7:)F1802225c0F",
-    R"F1802225c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802225c0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802227f7.
-TODO: recover the declaration, type and value for global/data reference DAT_1803edce0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803edce8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803edcf0.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802227f7.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803edce0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803edce8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803edcf0.
 TODO: resolve the indirect call in body 57: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 58: lVar6 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 103: pcVar1 = (code *)swi(0x29);.
@@ -6854,6 +10878,128 @@ TODO: resolve the indirect call in body 104: (*pcVar1)();.)F1802225c0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802225c0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802225c0", "FUN_1802225c0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802227f7.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803edce0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803edce8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803edcf0.
+    // TODO: resolve the indirect call in body 57: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 58: lVar6 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 103: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 104: (*pcVar1)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803edce0", static_cast<const void*>(&image::DAT_1803edce0));
+    trace.data_ref("DAT_1803edce8", static_cast<const void*>(&image::DAT_1803edce8));
+    trace.data_ref("DAT_1803edcf0", static_cast<const void*>(&image::DAT_1803edcf0));
+    // body sha256: 62c473a37865c55e33b6fef94a393a40ee7ee8f6c6720a2b92038c55e262ba8b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802225c0(undefined8 param_1,void *param_2,undefined8 *param_3)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("undefined8 uVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("void *pvVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 *puVar10;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [80];");
+            trace.statement("pvVar5 = DAT_1803edce0;");
+            trace.statement("puVar7 = auStack_98;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("lVar6 = ((longlong)DAT_1803edce8 - (longlong)DAT_1803edce0 >> 3) * 0x6db6db6db6db6db7;");
+            if (trace.condition("if (lVar6 == 0x492492492492492)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = ((longlong)DAT_1803edcf0 - (longlong)DAT_1803edce0 >> 3) * 0x6db6db6db6db6db7;");
+            trace.statement("uVar3 = 0x492492492492492 - (uVar4 >> 1);");
+            if (trace.condition("if (uVar4 < uVar3 || uVar4 - uVar3 == 0)")) {
+                trace.statement("uVar3 = lVar6 + 1;");
+                trace.statement("uVar4 = (uVar4 >> 1) + uVar4;");
+                trace.statement("uVar9 = uVar3;");
+                if (trace.condition("if (uVar3 <= uVar4)")) {
+                    trace.statement("uVar9 = uVar4;");
+                }
+                if (trace.condition("if (uVar9 < 0x492492492492493)")) {
+                    trace.statement("uVar4 = uVar9 * 0x38;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar8 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_1802227f7; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar1)(5);");
+                        trace.statement("puVar7 = auStack_90;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar6 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar6;");
+                    trace.statement("puVar8 = puVar7;");
+                }
+                trace.statement("puVar10 = _Dst_00 + (((longlong)param_2 - (longlong)pvVar5) / 0x38) * 7;");
+                trace.statement("_Dst = puVar10 + 7;");
+                trace.statement("*(undefined8 ***)(puVar8 + 0x20) = &DAT_1803edce0;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x28) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar9;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x40) = _Dst;");
+                trace.statement("uVar2 = param_3[1];");
+                trace.statement("*puVar10 = *param_3;");
+                trace.statement("puVar10[1] = uVar2;");
+                trace.statement("uVar2 = param_3[3];");
+                trace.statement("puVar10[2] = param_3[2];");
+                trace.statement("puVar10[3] = uVar2;");
+                trace.statement("uVar2 = param_3[5];");
+                trace.statement("puVar10[4] = param_3[4];");
+                trace.statement("puVar10[5] = uVar2;");
+                trace.statement("puVar10[6] = param_3[6];");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = puVar10;");
+                if (trace.condition("if (param_2 == DAT_1803edce8)")) {
+                    trace.statement("_Size = (longlong)DAT_1803edce8 - (longlong)DAT_1803edce0;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = DAT_1803edce0;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18022273c;");
+                trace.statement("memmove(_Dst_00,DAT_1803edce0,(longlong)param_2 - (longlong)DAT_1803edce0);");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst_00;");
+                trace.statement("_Size = (longlong)DAT_1803edce8 - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180222756;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar8 + 0x28) = 0;");
+                if (trace.condition("if (DAT_1803edce0 != (void *)0x0)")) {
+                    trace.statement("pvVar5 = DAT_1803edce0;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_1803edcf0 - (longlong)DAT_1803edce0 >> 3) * 8)) && (pvVar5 = *(void **)((longlong)DAT_1803edce0 + -8), 0x1f < (ulonglong)((longlong)DAT_1803edce0 + (-8 - (longlong)pvVar5))))")) {
+                        trace.statement("pvVar5 = (void *)0x5;");
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar1)();");
+                        trace.statement("puVar8 = puVar8 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x1802227bd;");
+                    trace.statement("free(pvVar5);");
+                }
+                trace.statement("DAT_1803edce0 = _Dst_00;");
+                trace.statement("DAT_1803edce8 = _Dst_00 + uVar3 * 7;");
+                trace.statement("DAT_1803edcf0 = _Dst_00 + uVar9 * 7;");
+                trace.statement("return puVar10;");
+            }
+        }
+        LAB_1802227f7: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x1802225c0;
 }
 
@@ -7054,12 +11200,13 @@ DAT_1803fb110)F180222800D",
 135: if ((longlong *)0x1f < plVar8) {
 148: return plVar2;
 151: LAB_180222ad8:)F180222800F",
-    R"F180222800U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180222800U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180222ad8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fb100.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fb108.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fb110.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180222ad8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fb100.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fb108.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fb110.
 TODO: resolve the indirect call in body 69: pcVar4 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 70: lVar7 = (*pcVar4)(5);.
 TODO: resolve the indirect call in body 126: pcVar4 = *(code **)*puVar3;.
@@ -7070,6 +11217,165 @@ TODO: resolve the indirect call in body 137: (*pcVar4)(5);.)F180222800U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180222800() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180222800", "FUN_180222800");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180222ad8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fb100.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fb108.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fb110.
+    // TODO: resolve the indirect call in body 69: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 70: lVar7 = (*pcVar4)(5);.
+    // TODO: resolve the indirect call in body 126: pcVar4 = *(code **)*puVar3;.
+    // TODO: resolve the indirect call in body 128: (*pcVar4)(puVar3,1);.
+    // TODO: resolve the indirect call in body 136: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 137: (*pcVar4)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803fb100", static_cast<const void*>(&image::DAT_1803fb100));
+    trace.data_ref("DAT_1803fb108", static_cast<const void*>(&image::DAT_1803fb108));
+    trace.data_ref("DAT_1803fb110", static_cast<const void*>(&image::DAT_1803fb110));
+    // body sha256: 9f73b7b33494243944052b983b20b3dfa26f825cfbb88bd0bae025b4137fb778
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong * FUN_180222800(undefined8 param_1,longlong *param_2,longlong *param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("undefined8 *puVar3;");
+            trace.statement("code *pcVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("longlong *plVar6;");
+            trace.statement("longlong lVar7;");
+            trace.statement("longlong *plVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("longlong *plVar12;");
+            trace.statement("longlong lVar13;");
+            trace.statement("undefined8 uStack_d0;");
+            trace.statement("undefined1 auStack_c8 [8];");
+            trace.statement("undefined1 auStack_c0 [24];");
+            trace.statement("longlong *local_a8;");
+            trace.statement("longlong *plStack_a0;");
+            trace.statement("undefined8 *local_98;");
+            trace.statement("longlong *local_90;");
+            trace.statement("longlong *plStack_88;");
+            trace.statement("undefined8 *local_80;");
+            trace.statement("longlong *local_78;");
+            trace.statement("longlong *plStack_70;");
+            trace.statement("undefined8 *local_68;");
+            trace.statement("undefined8 *local_60;");
+            trace.statement("undefined8 local_58;");
+            trace.statement("ulonglong local_50;");
+            trace.statement("longlong *local_48;");
+            trace.statement("longlong *local_40;");
+            trace.statement("puVar10 = auStack_c8;");
+            trace.statement("puVar9 = auStack_c8;");
+            trace.statement("lVar7 = (longlong)DAT_1803fb108 - (longlong)DAT_1803fb100 >> 3;");
+            if (trace.condition("if (lVar7 == 0x1fffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = (longlong)DAT_1803fb110 - (longlong)DAT_1803fb100 >> 3;");
+            if (trace.condition("if (uVar5 <= 0x1fffffffffffffff - (uVar5 >> 1))")) {
+                trace.statement("lVar13 = (longlong)param_2 - (longlong)DAT_1803fb100;");
+                trace.statement("uVar1 = lVar7 + 1;");
+                trace.statement("uVar5 = (uVar5 >> 1) + uVar5;");
+                trace.statement("uVar11 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar5)")) {
+                    trace.statement("uVar11 = uVar5;");
+                }
+                if (trace.condition("if (uVar11 < 0x2000000000000000)")) {
+                    trace.statement("uVar5 = uVar11 * 8;");
+                    trace.statement("plVar12 = (longlong *)0x0;");
+                    if (trace.condition("if (uVar5 != 0)")) {
+                        if (trace.condition("if (uVar5 < 0x1000)")) {
+                            trace.statement("plVar12 = (longlong *)FUN_1802d8350(uVar5);");
+                            trace.statement("puVar10 = auStack_c8;");
+                        } else {
+                        if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_180222ad8; lVar7 = FUN_1802d8350(); if (lVar7 == 0)")) {
+                            trace.statement("pcVar4 = (code *)swi(0x29);");
+                            trace.statement("lVar7 = (*pcVar4)(5);");
+                            trace.statement("puVar9 = auStack_c0;");
+                        }
+                        trace.statement("plVar12 = (longlong *)(lVar7 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("plVar12[-1] = lVar7;");
+                        trace.statement("puVar10 = puVar9;");
+                        }
+                    }
+                    trace.statement("plVar2 = plVar12 + (lVar13 >> 3);");
+                    trace.statement("local_40 = plVar2 + 1;");
+                    trace.statement("local_60 = &DAT_1803fb100;");
+                    trace.statement("lVar7 = *param_3;");
+                    trace.statement("*param_3 = 0;");
+                    trace.statement("*plVar2 = lVar7;");
+                    trace.statement("plVar6 = DAT_1803fb108;");
+                    if (trace.condition("if (param_2 == DAT_1803fb108)")) {
+                        trace.statement("local_98 = &DAT_1803fb100;");
+                        trace.statement("local_a8 = plVar12;");
+                        for (auto loop = trace.loop("for (plVar8 = DAT_1803fb100; plStack_a0 = local_a8, local_48 = plVar2, plVar8 != plVar6; plVar8 = plVar8 + 1)"); loop.next(); ) {
+                            trace.statement("lVar7 = *plVar8;");
+                            trace.statement("*plVar8 = 0;");
+                            trace.statement("*local_a8 = lVar7;");
+                            trace.statement("local_a8 = local_a8 + 1;");
+                        }
+                    } else {
+                    trace.statement("local_80 = &DAT_1803fb100;");
+                    trace.statement("local_90 = plVar12;");
+                    trace.statement("plVar8 = DAT_1803fb108;");
+                    for (auto loop = trace.loop("for (plVar6 = DAT_1803fb100; DAT_1803fb108 = plVar8, plVar6 != param_2; plVar6 = plVar6 + 1)"); loop.next(); ) {
+                        trace.statement("lVar7 = *plVar6;");
+                        trace.statement("*plVar6 = 0;");
+                        trace.statement("*local_90 = lVar7;");
+                        trace.statement("local_90 = local_90 + 1;");
+                        trace.statement("plVar8 = DAT_1803fb108;");
+                    }
+                    trace.statement("local_68 = &DAT_1803fb100;");
+                    trace.statement("local_78 = local_40;");
+                    for (auto loop = trace.loop("for (; plStack_88 = local_90, plStack_70 = local_78, local_48 = plVar12, param_2 != plVar8; param_2 = param_2 + 1)"); loop.next(); ) {
+                        trace.statement("lVar7 = *param_2;");
+                        trace.statement("*param_2 = 0;");
+                        trace.statement("*local_78 = lVar7;");
+                        trace.statement("local_78 = local_78 + 1;");
+                    }
+                    }
+                    trace.statement("plVar8 = DAT_1803fb108;");
+                    trace.statement("local_58 = 0;");
+                    trace.statement("local_50 = uVar11;");
+                    trace.statement("plVar6 = DAT_1803fb100;");
+                    if (trace.condition("if (DAT_1803fb100 != (longlong *)0x0)")) {
+                        for (auto loop = trace.loop("for (; plVar6 != plVar8; plVar6 = plVar6 + 1)"); loop.next(); ) {
+                            trace.statement("puVar3 = (undefined8 *)*plVar6;");
+                            if (trace.condition("if (puVar3 != (undefined8 *)0x0)")) {
+                                trace.statement("pcVar4 = *(code **)*puVar3;");
+                                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180222a42;");
+                                trace.statement("(*pcVar4)(puVar3,1);");
+                            }
+                        }
+                        trace.statement("plVar6 = DAT_1803fb100;");
+                        if (trace.condition("if (0xfff < (ulonglong)(((longlong)DAT_1803fb110 - (longlong)DAT_1803fb100 >> 3) * 8))")) {
+                            trace.statement("plVar6 = (longlong *)DAT_1803fb100[-1];");
+                            trace.statement("plVar8 = (longlong *)((longlong)DAT_1803fb100 + (-8 - (longlong)plVar6));");
+                            if (trace.condition("if ((longlong *)0x1f < plVar8)")) {
+                                trace.statement("pcVar4 = (code *)swi(0x29);");
+                                trace.statement("(*pcVar4)(5);");
+                                trace.statement("puVar10 = puVar10 + 8;");
+                                trace.statement("plVar6 = plVar8;");
+                            }
+                        }
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180222a97;");
+                        trace.statement("free(plVar6);");
+                    }
+                    trace.statement("DAT_1803fb100 = plVar12;");
+                    trace.statement("DAT_1803fb108 = plVar12 + uVar1;");
+                    trace.statement("DAT_1803fb110 = plVar12 + uVar11;");
+                    trace.statement("return plVar2;");
+                }
+            }
+            LAB_180222ad8: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x180222800;
 }
 
@@ -7225,11 +11531,12 @@ UNK_180222c82)F180222ae0D",
 102: if (uVar8 < 0x1000) {
 105: goto LAB_180222b99;
 108: if (uVar6 <= uVar8) {)F180222ae0F",
-    R"F180222ae0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180222ae0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180222b51.
-TODO: recover the declaration, type and value for global/data reference LAB_180222b99.
-TODO: recover the declaration, type and value for global/data reference UNK_180222c82.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180222b51.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180222b99.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference UNK_180222c82.
 TODO: resolve the indirect call in body 77: pcVar4 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 78: _Memory = (void *)(*pcVar4)(5);.
 TODO: resolve the indirect call in body 90: pcVar4 = (code *)swi(0x29);.
@@ -7238,6 +11545,122 @@ TODO: resolve the indirect call in body 91: (*pcVar4)();.)F180222ae0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180222ae0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180222ae0", "FUN_180222ae0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180222b51.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180222b99.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for UNK_180222c82.
+    // TODO: resolve the indirect call in body 77: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 78: _Memory = (void *)(*pcVar4)(5);.
+    // TODO: resolve the indirect call in body 90: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 91: (*pcVar4)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("UNK_180222c82", static_cast<const void*>(&image::UNK_180222c82));
+    // body sha256: c8debb4b684f47b0f6f7e2bf3bd632e0f3918c0896f539be953f8a1667e95811
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined1 * FUN_180222ae0(longlong *param_1,void *param_2,undefined1 *param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("void *pvVar3;");
+            trace.statement("code *pcVar4;");
+            trace.statement("longlong lVar5;");
+            trace.statement("undefined1 *_Dst;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("undefined1 *_Dst_00;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [80];");
+            trace.statement("puVar9 = auStack_88;");
+            trace.statement("lVar2 = *param_1;");
+            trace.statement("uVar8 = 0x7fffffffffffffff;");
+            if (trace.condition("if (param_1[1] - lVar2 == 0x7fffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar1 = (param_1[1] - lVar2) + 1;");
+            trace.statement("uVar6 = param_1[2] - lVar2;");
+            trace.statement("uVar7 = uVar6 >> 1;");
+            if (trace.condition("if (uVar6 <= 0x7fffffffffffffff - uVar7) goto LAB_180222b51; uVar6 = 0x8000000000000026; puVar9 = auStack_88; do")) {
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180222b45;");
+                trace.statement("lVar5 = FUN_1802d8350(uVar6);");
+                if (trace.condition("if (lVar5 != 0)")) {
+                    trace.statement("_Dst = (undefined1 *)(lVar5 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("*(longlong *)(_Dst + -8) = lVar5;");
+                    LAB_180222b99: ;
+                    trace.statement("puVar10 = _Dst + ((longlong)param_2 - lVar2);");
+                    trace.statement("_Dst_00 = puVar10 + 1;");
+                    trace.statement("*(longlong **)(puVar9 + 0x20) = param_1;");
+                    trace.statement("*(undefined1 **)(puVar9 + 0x28) = _Dst;");
+                    trace.statement("*(ulonglong *)(puVar9 + 0x30) = uVar8;");
+                    trace.statement("*(undefined1 **)(puVar9 + 0x38) = _Dst_00;");
+                    trace.statement("*(undefined1 **)(puVar9 + 0x40) = _Dst_00;");
+                    trace.statement("*puVar10 = *param_3;");
+                    trace.statement("*(undefined1 **)(puVar9 + 0x38) = puVar10;");
+                    trace.statement("pvVar3 = (void *)*param_1;");
+                    if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                        trace.statement("_Size = param_1[1] - (longlong)pvVar3;");
+                        trace.statement("_Dst_00 = _Dst;");
+                        trace.statement("param_2 = pvVar3;");
+                    } else {
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180222beb;");
+                    trace.statement("memmove(_Dst,pvVar3,(longlong)param_2 - (longlong)pvVar3);");
+                    trace.statement("*(undefined1 **)(puVar9 + 0x38) = _Dst;");
+                    trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180222c02;");
+                    trace.statement("memmove(_Dst_00,param_2,_Size);");
+                    trace.statement("*(undefined8 *)(puVar9 + 0x28) = 0;");
+                    trace.statement("pvVar3 = (void *)*param_1;");
+                    if (trace.condition("if (pvVar3 != (void *)0x0)")) {
+                        trace.statement("_Memory = pvVar3;");
+                        if (trace.condition("if ((0xfff < (ulonglong)(param_1[2] - (longlong)pvVar3)) && (_Memory = *(void **)((longlong)pvVar3 + -8), 0x1f < (ulonglong)((longlong)pvVar3 + (-8 - (longlong)_Memory))))")) {
+                            trace.statement("pcVar4 = (code *)swi(0x29);");
+                            trace.statement("_Memory = (void *)(*pcVar4)(5);");
+                            trace.statement("puVar9 = puVar9 + 8;");
+                        }
+                        trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180222c49;");
+                        trace.statement("free(_Memory);");
+                    }
+                    trace.statement("*param_1 = (longlong)_Dst;");
+                    trace.statement("param_1[1] = (longlong)(_Dst + uVar1);");
+                    trace.statement("param_1[2] = (longlong)(_Dst + uVar8);");
+                    trace.statement("return puVar10;");
+                }
+                trace.statement("uVar6 = 5;");
+                trace.statement("pcVar4 = (code *)swi(0x29);");
+                trace.statement("(*pcVar4)();");
+                trace.statement("puVar9 = puVar9 + 8;");
+                LAB_180222b51: ;
+                trace.statement("uVar8 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar6 + uVar7)")) {
+                    trace.statement("uVar8 = uVar6 + uVar7;");
+                }
+                if (trace.condition("if (uVar8 == 0)")) {
+                    trace.statement("_Dst = (undefined1 *)0x0;");
+                    trace.statement("goto LAB_180222b99;");
+                }
+                if (trace.condition("if (uVar8 < 0x1000)")) {
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180222b96;");
+                    trace.statement("_Dst = (undefined1 *)FUN_1802d8350(uVar8);");
+                    trace.statement("goto LAB_180222b99;");
+                }
+                trace.statement("uVar6 = uVar8 + 0x27;");
+                if (trace.condition("if (uVar6 <= uVar8)")) {
+                    trace.statement("*(undefined **)(puVar9 + -8) = &UNK_180222c82;");
+                    trace.statement("FUN_180012fe0();");
+                }
+            }
+        }
+        trace.statement("} while( true );");
     return kFunction_0x180222ae0;
 }
 
@@ -7389,12 +11812,13 @@ DAT_1803ea288)F180222c90D",
 92: if ((0xfff < ((longlong)DAT_1803ea288 - (longlong)DAT_1803ea278 & 0xfffffffffffffff0U)) &&
 105: return puVar1;
 108: LAB_180222e68:)F180222c90F",
-    R"F180222c90U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180222c90U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180222e68.
-TODO: recover the declaration, type and value for global/data reference DAT_1803ea278.
-TODO: recover the declaration, type and value for global/data reference DAT_1803ea280.
-TODO: recover the declaration, type and value for global/data reference DAT_1803ea288.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180222e68.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803ea278.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803ea280.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803ea288.
 TODO: resolve the indirect call in body 56: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 57: lVar9 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 95: pcVar2 = (code *)swi(0x29);.
@@ -7403,6 +11827,120 @@ TODO: resolve the indirect call in body 96: pvVar4 = (void *)(*pcVar2)(5);.)F180
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180222c90() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180222c90", "FUN_180222c90");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180222e68.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803ea278.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803ea280.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803ea288.
+    // TODO: resolve the indirect call in body 56: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 57: lVar9 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 95: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 96: pvVar4 = (void *)(*pcVar2)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803ea278", static_cast<const void*>(&image::DAT_1803ea278));
+    trace.data_ref("DAT_1803ea280", static_cast<const void*>(&image::DAT_1803ea280));
+    trace.data_ref("DAT_1803ea288", static_cast<const void*>(&image::DAT_1803ea288));
+    // body sha256: 2e772435ba289f209a32dec9d3e46c13943dec04474ecfc83e62965100c390c5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180222c90(undefined8 param_1,void *param_2,undefined8 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("void *pvVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar6;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [80];");
+            trace.statement("pvVar4 = DAT_1803ea278;");
+            trace.statement("puVar6 = auStack_98;");
+            trace.statement("puVar7 = auStack_98;");
+            trace.statement("lVar9 = (longlong)DAT_1803ea280 - (longlong)DAT_1803ea278 >> 4;");
+            if (trace.condition("if (lVar9 == 0xfffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = (longlong)DAT_1803ea288 - (longlong)DAT_1803ea278 >> 4;");
+            if (trace.condition("if (uVar5 <= 0xfffffffffffffff - (uVar5 >> 1))")) {
+                trace.statement("uVar10 = lVar9 + 1;");
+                trace.statement("uVar5 = (uVar5 >> 1) + uVar5;");
+                trace.statement("uVar8 = uVar10;");
+                if (trace.condition("if (uVar10 <= uVar5)")) {
+                    trace.statement("uVar8 = uVar5;");
+                }
+                if (trace.condition("if (uVar8 < 0x1000000000000000)")) {
+                    trace.statement("uVar5 = uVar8 * 0x10;");
+                    if (trace.condition("if (uVar5 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar7 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar5);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_180222e68; lVar9 = FUN_1802d8350(); if (lVar9 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar9 = (*pcVar2)(5);");
+                        trace.statement("puVar6 = auStack_90;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar9 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar9;");
+                    trace.statement("puVar7 = puVar6;");
+                }
+                trace.statement("puVar1 = (undefined8 *)");
+                trace.statement("(((longlong)param_2 - (longlong)pvVar4 & 0xfffffffffffffff0U) + (longlong)_Dst_00);");
+                trace.statement("_Dst = puVar1 + 2;");
+                trace.statement("*(undefined8 ***)(puVar7 + 0x20) = &DAT_1803ea278;");
+                trace.statement("*(undefined8 **)(puVar7 + 0x28) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar7 + 0x30) = uVar8;");
+                trace.statement("*(undefined8 **)(puVar7 + 0x38) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar7 + 0x40) = _Dst;");
+                trace.statement("uVar3 = param_3[1];");
+                trace.statement("*puVar1 = *param_3;");
+                trace.statement("puVar1[1] = uVar3;");
+                trace.statement("*(undefined8 **)(puVar7 + 0x38) = puVar1;");
+                if (trace.condition("if (param_2 == DAT_1803ea280)")) {
+                    trace.statement("_Size = (longlong)DAT_1803ea280 - (longlong)DAT_1803ea278;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = DAT_1803ea278;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar7 + -8) = 0x180222dc2;");
+                trace.statement("memmove(_Dst_00,DAT_1803ea278,(longlong)param_2 - (longlong)DAT_1803ea278);");
+                trace.statement("*(undefined8 **)(puVar7 + 0x38) = _Dst_00;");
+                trace.statement("_Size = (longlong)DAT_1803ea280 - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar7 + -8) = 0x180222ddc;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar7 + 0x28) = 0;");
+                if (trace.condition("if (DAT_1803ea278 != (void *)0x0)")) {
+                    trace.statement("pvVar4 = DAT_1803ea278;");
+                    if (trace.condition("if ((0xfff < ((longlong)DAT_1803ea288 - (longlong)DAT_1803ea278 & 0xfffffffffffffff0U)) && (pvVar4 = *(void **)((longlong)DAT_1803ea278 + -8), 0x1f < (ulonglong)((longlong)DAT_1803ea278 + (-8 - (longlong)pvVar4))))")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("pvVar4 = (void *)(*pcVar2)(5);");
+                        trace.statement("puVar7 = puVar7 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar7 + -8) = 0x180222e2e;");
+                    trace.statement("free(pvVar4);");
+                }
+                trace.statement("DAT_1803ea278 = _Dst_00;");
+                trace.statement("DAT_1803ea280 = _Dst_00 + uVar10 * 2;");
+                trace.statement("DAT_1803ea288 = _Dst_00 + uVar8 * 2;");
+                trace.statement("return puVar1;");
+            }
+        }
+        LAB_180222e68: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180222c90;
 }
 
@@ -7533,9 +12071,10 @@ FUN_1802d8350)F180222e70C",
 77: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar5 >> 4) << 4)) &&
 91: return;
 93: LAB_180223024:)F180222e70F",
-    R"F180222e70U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180222e70U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180223024.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180223024.
 TODO: resolve the indirect call in body 50: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 51: lVar4 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 81: pcVar2 = (code *)swi(0x29);.
@@ -7544,6 +12083,98 @@ TODO: resolve the indirect call in body 82: (*pcVar2)();.)F180222e70U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180222e70() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180222e70", "FUN_180222e70");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180223024.
+    // TODO: resolve the indirect call in body 50: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 51: lVar4 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 81: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 82: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 8c0380410663d2f8359a130e0d39727c1e566113742234540d77ab48e0860222
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180222e70(longlong *param_1,ulonglong param_2)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("void *pvVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("void *_Memory;");
+            trace.statement("void *_Dst;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar7 = auStack_88;");
+            trace.statement("puVar8 = auStack_88;");
+            if (trace.condition("if (0x555555555555555 < param_2)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("lVar9 = *param_1;");
+            trace.statement("uVar6 = (param_1[2] - lVar9 >> 4) * -0x5555555555555555;");
+            trace.statement("uVar3 = 0x555555555555555 - (uVar6 >> 1);");
+            if (trace.condition("if ((uVar6 < uVar3 || uVar6 - uVar3 == 0) && ((uVar6 = uVar6 + (uVar6 >> 1), uVar3 = param_2, uVar6 < param_2 || (uVar3 = uVar6, uVar6 < 0x555555555555556))))")) {
+                trace.statement("lVar1 = param_1[1];");
+                trace.statement("uVar6 = uVar3 * 0x30;");
+                if (trace.condition("if (uVar6 == 0)")) {
+                    trace.statement("_Dst = (void *)0x0;");
+                    trace.statement("puVar8 = auStack_88;");
+                } else {
+                trace.statement("_Dst = (void *)FUN_1802d8350(uVar6);");
+                }
+                trace.statement("else {");
+                if (trace.condition("if (uVar6 + 0x27 <= uVar6) goto LAB_180223024; lVar4 = FUN_1802d8350(); if (lVar4 == 0)")) {
+                    trace.statement("pcVar2 = (code *)swi(0x29);");
+                    trace.statement("lVar4 = (*pcVar2)(5);");
+                    trace.statement("puVar7 = auStack_80;");
+                }
+                trace.statement("_Dst = (void *)(lVar4 + 0x27U & 0xffffffffffffffe0);");
+                trace.statement("*(longlong *)((longlong)_Dst - 8) = lVar4;");
+                trace.statement("puVar8 = puVar7;");
+            }
+            trace.statement("lVar9 = lVar1 - lVar9 >> 4;");
+            trace.statement("pvVar5 = (void *)(lVar9 * 0x10 + (longlong)_Dst);");
+            trace.statement("*(longlong **)(puVar8 + 0x20) = param_1;");
+            trace.statement("*(void **)(puVar8 + 0x28) = _Dst;");
+            trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar3;");
+            trace.statement("*(void **)(puVar8 + 0x38) = pvVar5;");
+            trace.statement("*(void **)(puVar8 + 0x40) = pvVar5;");
+            for (auto loop = trace.loop("for (lVar9 = param_2 + lVar9 * 0x5555555555555555; lVar9 != 0; lVar9 = lVar9 + -1)"); loop.next(); ) {
+                trace.statement("pvVar5 = (void *)((longlong)pvVar5 + 0x30);");
+            }
+            trace.statement("*(void **)(puVar8 + 0x40) = pvVar5;");
+            trace.statement("pvVar5 = (void *)*param_1;");
+            trace.statement("lVar9 = param_1[1];");
+            trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180222f92;");
+            trace.statement("memmove(_Dst,pvVar5,lVar9 - (longlong)pvVar5);");
+            trace.statement("*(undefined8 *)(puVar8 + 0x28) = 0;");
+            trace.statement("pvVar5 = (void *)*param_1;");
+            if (trace.condition("if (pvVar5 != (void *)0x0)")) {
+                trace.statement("_Memory = pvVar5;");
+                if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar5 >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar5 + -8), 0x1f < (ulonglong)((longlong)pvVar5 + (-8 - (longlong)_Memory))))")) {
+                    trace.statement("_Memory = (void *)0x5;");
+                    trace.statement("pcVar2 = (code *)swi(0x29);");
+                    trace.statement("(*pcVar2)();");
+                    trace.statement("puVar8 = puVar8 + 8;");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180222fec;");
+                trace.statement("free(_Memory);");
+            }
+            trace.statement("*param_1 = (longlong)_Dst;");
+            trace.statement("param_1[1] = (longlong)(param_2 * 0x30 + (longlong)_Dst);");
+            trace.statement("param_1[2] = (longlong)(uVar6 + (longlong)_Dst);");
+            trace.statement("return;");
+        }
+        LAB_180223024: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180222e70;
 }
 
@@ -7678,12 +12309,13 @@ DAT_180425a20)F180223030D",
 78: if ((0xfff < (ulonglong)(((longlong)DAT_180425a20 - (longlong)DAT_180425a10 >> 2) * 4)) &&
 92: return;
 94: LAB_180223215:)F180223030F",
-    R"F180223030U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180223030U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180223215.
-TODO: recover the declaration, type and value for global/data reference DAT_180425a10.
-TODO: recover the declaration, type and value for global/data reference DAT_180425a18.
-TODO: recover the declaration, type and value for global/data reference DAT_180425a20.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180223215.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180425a10.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180425a18.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_180425a20.
 TODO: resolve the indirect call in body 47: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 48: lVar3 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 82: pcVar1 = (code *)swi(0x29);.
@@ -7692,6 +12324,106 @@ TODO: resolve the indirect call in body 83: (*pcVar1)();.)F180223030U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180223030() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180223030", "FUN_180223030");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180223215.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180425a10.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180425a18.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180425a20.
+    // TODO: resolve the indirect call in body 47: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 48: lVar3 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 82: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 83: (*pcVar1)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_180425a10", static_cast<const void*>(&image::DAT_180425a10));
+    trace.data_ref("DAT_180425a18", static_cast<const void*>(&image::DAT_180425a18));
+    trace.data_ref("DAT_180425a20", static_cast<const void*>(&image::DAT_180425a20));
+    // body sha256: bdced06d9eaad3dbdadfc313bb14d26baba91d8eb8a37da85d1842c6771e3e96
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180223030(undefined8 param_1,ulonglong param_2)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("ulonglong uVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("void *_Memory;");
+            trace.statement("undefined4 *puVar5;");
+            trace.statement("void *_Dst;");
+            trace.statement("undefined1 *puVar6;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("longlong lVar8;");
+            trace.statement("undefined8 uStack_80;");
+            trace.statement("undefined1 auStack_78 [8];");
+            trace.statement("undefined1 auStack_70 [72];");
+            trace.statement("puVar7 = auStack_78;");
+            trace.statement("puVar6 = auStack_78;");
+            if (trace.condition("if (0x924924924924924 < param_2)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = ((longlong)DAT_180425a20 - (longlong)DAT_180425a10 >> 2) * 0x6db6db6db6db6db7;");
+            trace.statement("uVar2 = 0x924924924924924 - (uVar4 >> 1);");
+            if (trace.condition("if ((uVar4 < uVar2 || uVar4 - uVar2 == 0) && ((uVar4 = uVar4 + (uVar4 >> 1), uVar2 = param_2, uVar4 < param_2 || (uVar2 = uVar4, uVar4 < 0x924924924924925))))")) {
+                trace.statement("lVar8 = (longlong)DAT_180425a18 - (longlong)DAT_180425a10;");
+                trace.statement("uVar4 = uVar2 * 0x1c;");
+                trace.statement("_Dst = (void *)0x0;");
+                if (trace.condition("if (uVar4 != 0)")) {
+                    if (trace.condition("if (uVar4 < 0x1000)")) {
+                        trace.statement("_Dst = (void *)FUN_1802d8350(uVar4);");
+                        trace.statement("puVar7 = auStack_78;");
+                    } else {
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_180223215; lVar3 = FUN_1802d8350(); if (lVar3 == 0)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("lVar3 = (*pcVar1)(5);");
+                        trace.statement("puVar6 = auStack_70;");
+                    }
+                    trace.statement("_Dst = (void *)(lVar3 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("*(longlong *)((longlong)_Dst - 8) = lVar3;");
+                    trace.statement("puVar7 = puVar6;");
+                    }
+                }
+                trace.statement("lVar8 = lVar8 >> 2;");
+                trace.statement("puVar5 = (undefined4 *)(lVar8 * 4 + (longlong)_Dst);");
+                trace.statement("*(void ***)(puVar7 + 0x20) = &DAT_180425a10;");
+                trace.statement("*(void **)(puVar7 + 0x28) = _Dst;");
+                trace.statement("*(ulonglong *)(puVar7 + 0x30) = uVar2;");
+                trace.statement("*(undefined4 **)(puVar7 + 0x38) = puVar5;");
+                trace.statement("*(undefined4 **)(puVar7 + 0x40) = puVar5;");
+                for (auto loop = trace.loop("for (lVar8 = param_2 + lVar8 * -0x6db6db6db6db6db7; lVar8 != 0; lVar8 = lVar8 + -1)"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar5 + 4) = 0;");
+                    trace.statement("puVar5[6] = 0;");
+                    trace.statement("puVar5[3] = 0x7fc00000;");
+                    trace.statement("puVar5[2] = 0x7fc00000;");
+                    trace.statement("puVar5[1] = 0x7fc00000;");
+                    trace.statement("*puVar5 = 0x7fc00000;");
+                    trace.statement("puVar5 = puVar5 + 7;");
+                }
+                trace.statement("*(undefined4 **)(puVar7 + 0x40) = puVar5;");
+                trace.statement("*(undefined8 *)(puVar7 + -8) = 0x18022317d;");
+                trace.statement("memmove(_Dst,DAT_180425a10,(longlong)DAT_180425a18 - (longlong)DAT_180425a10);");
+                trace.statement("*(undefined8 *)(puVar7 + 0x28) = 0;");
+                if (trace.condition("if (DAT_180425a10 != (void *)0x0)")) {
+                    trace.statement("_Memory = DAT_180425a10;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_180425a20 - (longlong)DAT_180425a10 >> 2) * 4)) && (_Memory = *(void **)((longlong)DAT_180425a10 + -8), 0x1f < (ulonglong)((longlong)DAT_180425a10 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar1)();");
+                        trace.statement("puVar7 = puVar7 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar7 + -8) = 0x1802231d6;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("DAT_180425a10 = _Dst;");
+                trace.statement("DAT_180425a18 = (void *)(param_2 * 0x1c + (longlong)_Dst);");
+                trace.statement("DAT_180425a20 = (void *)(uVar4 + (longlong)_Dst);");
+                trace.statement("return;");
+            }
+            LAB_180223215: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x180223030;
 }
 
@@ -7843,10 +12575,11 @@ LAB_180223414)F180223220D",
 95: if (pvVar7 != (void *)0x0) {
 97: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar7 >> 3) * 8)) &&
 111: return;)F180223220F",
-    R"F180223220U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180223220U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802232f8.
-TODO: recover the declaration, type and value for global/data reference LAB_180223414.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802232f8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180223414.
 TODO: resolve the indirect call in body 64: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 65: lVar4 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 101: pcVar2 = (code *)swi(0x29);.
@@ -7855,6 +12588,120 @@ TODO: resolve the indirect call in body 102: (*pcVar2)();.)F180223220U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180223220() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180223220", "FUN_180223220");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802232f8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180223414.
+    // TODO: resolve the indirect call in body 64: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 65: lVar4 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 101: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 102: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: b518986926e94f8e9165a36ef4173786ce2722bf937d279b13900cfd2324f321
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180223220(longlong *param_1,ulonglong param_2)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("void *_Memory;");
+            trace.statement("void *pvVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("void *_Dst;");
+            trace.statement("longlong lVar10;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar8 = auStack_88;");
+            trace.statement("puVar9 = auStack_88;");
+            if (trace.condition("if (0x1642c8590b21642 < param_2)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("lVar10 = param_1[1];");
+            trace.statement("lVar1 = *param_1;");
+            trace.statement("uVar5 = (param_1[2] - lVar1 >> 3) * -0x2c8590b21642c859;");
+            trace.statement("uVar3 = 0x1642c8590b21642 - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar3 || uVar5 - uVar3 == 0)")) {
+                trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+                trace.statement("uVar3 = param_2;");
+                if (trace.condition("if ((param_2 <= uVar5) && (uVar3 = uVar5, 0x1642c8590b21642 < uVar5))")) {
+                    LAB_180223414: ;
+                    trace.statement("FUN_180012fe0();");
+                }
+                trace.statement("uVar5 = uVar3 * 0xb8;");
+                if (trace.condition("if (uVar5 == 0)")) {
+                    trace.statement("_Dst = (void *)0x0;");
+                    trace.statement("puVar9 = auStack_88;");
+                    trace.statement("goto LAB_1802232f8;");
+                }
+                if (trace.condition("if (uVar5 < 0x1000)")) {
+                    trace.statement("_Dst = (void *)FUN_1802d8350(uVar5);");
+                    trace.statement("goto LAB_1802232f8;");
+                }
+                trace.statement("uVar6 = uVar5 + 0x27;");
+                if (trace.condition("if (uVar6 <= uVar5) goto LAB_180223414; } else")) {
+                    trace.statement("uVar3 = 0x1642c8590b21642;");
+                    trace.statement("uVar6 = 0xffffffffffffff97;");
+                    trace.statement("uVar5 = 0xffffffffffffff70;");
+                }
+                trace.statement("lVar4 = FUN_1802d8350(uVar6);");
+                if (trace.condition("if (lVar4 == 0)")) {
+                    trace.statement("pcVar2 = (code *)swi(0x29);");
+                    trace.statement("lVar4 = (*pcVar2)(5);");
+                    trace.statement("puVar8 = auStack_80;");
+                }
+                trace.statement("_Dst = (void *)(lVar4 + 0x27U & 0xffffffffffffffe0);");
+                trace.statement("*(longlong *)((longlong)_Dst - 8) = lVar4;");
+                trace.statement("puVar9 = puVar8;");
+                LAB_1802232f8: ;
+                trace.statement("lVar10 = lVar10 - lVar1 >> 3;");
+                trace.statement("pvVar7 = (void *)(lVar10 * 8 + (longlong)_Dst);");
+                trace.statement("*(longlong **)(puVar9 + 0x20) = param_1;");
+                trace.statement("*(void **)(puVar9 + 0x28) = _Dst;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x30) = uVar3;");
+                trace.statement("*(void **)(puVar9 + 0x38) = pvVar7;");
+                trace.statement("*(void **)(puVar9 + 0x40) = pvVar7;");
+                for (auto loop = trace.loop("for (lVar10 = param_2 + lVar10 * 0x2c8590b21642c859; lVar10 != 0; lVar10 = lVar10 + -1)"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180223350;");
+                    trace.statement("memset(pvVar7,0,0xb8);");
+                    trace.statement("*(undefined4 *)((longlong)pvVar7 + 0x14) = 0x7fc00000;");
+                    trace.statement("*(undefined4 *)((longlong)pvVar7 + 0x10) = 0x7fc00000;");
+                    trace.statement("*(undefined4 *)((longlong)pvVar7 + 0xc) = 0x7fc00000;");
+                    trace.statement("*(undefined4 *)((longlong)pvVar7 + 8) = 0x7fc00000;");
+                    trace.statement("pvVar7 = (void *)((longlong)pvVar7 + 0xb8);");
+                }
+                trace.statement("*(void **)(puVar9 + 0x40) = pvVar7;");
+                trace.statement("pvVar7 = (void *)*param_1;");
+                trace.statement("lVar10 = param_1[1];");
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180223384;");
+                trace.statement("memmove(_Dst,pvVar7,lVar10 - (longlong)pvVar7);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x28) = 0;");
+                trace.statement("pvVar7 = (void *)*param_1;");
+                if (trace.condition("if (pvVar7 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar7;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar7 >> 3) * 8)) && (_Memory = *(void **)((longlong)pvVar7 + -8), 0x1f < (ulonglong)((longlong)pvVar7 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802233dd;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = (longlong)_Dst;");
+                trace.statement("param_1[1] = (longlong)(param_2 * 0xb8 + (longlong)_Dst);");
+                trace.statement("param_1[2] = uVar5 + (longlong)_Dst;");
+                trace.statement("return;");
+            }
+        }
     return kFunction_0x180223220;
 }
 
@@ -7990,12 +12837,13 @@ DAT_1803eb818)F180223420D",
 78: if ((0xfff < (ulonglong)(((longlong)DAT_1803eb818 - (longlong)DAT_1803eb808 >> 2) * 4)) &&
 92: return;
 94: LAB_180223604:)F180223420F",
-    R"F180223420U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180223420U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180223604.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb808.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb810.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb818.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180223604.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb808.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb810.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb818.
 TODO: resolve the indirect call in body 48: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 49: lVar2 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 82: pcVar1 = (code *)swi(0x29);.
@@ -8004,6 +12852,105 @@ TODO: resolve the indirect call in body 83: (*pcVar1)();.)F180223420U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180223420() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180223420", "FUN_180223420");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180223604.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb808.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb810.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb818.
+    // TODO: resolve the indirect call in body 48: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 49: lVar2 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 82: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 83: (*pcVar1)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803eb808", static_cast<const void*>(&image::DAT_1803eb808));
+    trace.data_ref("DAT_1803eb810", static_cast<const void*>(&image::DAT_1803eb810));
+    trace.data_ref("DAT_1803eb818", static_cast<const void*>(&image::DAT_1803eb818));
+    // body sha256: 0863db927209cde62b8cb9b48b07eaf4a5dc18ed48f645837131e3e6064777fa
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180223420(undefined8 param_1,ulonglong param_2)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("void *pvVar5;");
+            trace.statement("undefined1 *puVar6;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("void *_Dst;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("undefined8 uStack_80;");
+            trace.statement("undefined1 auStack_78 [8];");
+            trace.statement("undefined1 auStack_70 [72];");
+            trace.statement("puVar6 = auStack_78;");
+            trace.statement("puVar7 = auStack_78;");
+            if (trace.condition("if (0x444444444444444 < param_2)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar3 = ((longlong)DAT_1803eb818 - (longlong)DAT_1803eb808 >> 2) * -0x1111111111111111;");
+            trace.statement("uVar4 = uVar3 >> 1;");
+            if (trace.condition("if ((uVar3 < 0x444444444444444 - uVar4 || uVar3 - (0x444444444444444 - uVar4) == 0) && ((uVar3 = uVar3 + uVar4, uVar8 = param_2, uVar3 < param_2 || (uVar8 = uVar3, uVar3 < 0x444444444444445))))")) {
+                trace.statement("lVar9 = (longlong)DAT_1803eb810 - (longlong)DAT_1803eb808;");
+                trace.statement("uVar3 = uVar8 * 0x3c;");
+                if (trace.condition("if (uVar3 == 0)")) {
+                    trace.statement("_Dst = (void *)0x0;");
+                    trace.statement("puVar7 = auStack_78;");
+                } else {
+                trace.statement("_Dst = (void *)FUN_1802d8350(uVar3);");
+                }
+                trace.statement("else {");
+                if (trace.condition("if (uVar3 + 0x27 <= uVar3) goto LAB_180223604; lVar2 = FUN_1802d8350(); if (lVar2 == 0)")) {
+                    trace.statement("pcVar1 = (code *)swi(0x29);");
+                    trace.statement("lVar2 = (*pcVar1)(5);");
+                    trace.statement("puVar6 = auStack_70;");
+                }
+                trace.statement("_Dst = (void *)(lVar2 + 0x27U & 0xffffffffffffffe0);");
+                trace.statement("*(longlong *)((longlong)_Dst - 8) = lVar2;");
+                trace.statement("puVar7 = puVar6;");
+            }
+            trace.statement("lVar9 = lVar9 >> 2;");
+            trace.statement("pvVar5 = (void *)(lVar9 * 4 + (longlong)_Dst);");
+            trace.statement("*(void ***)(puVar7 + 0x20) = &DAT_1803eb808;");
+            trace.statement("*(void **)(puVar7 + 0x28) = _Dst;");
+            trace.statement("*(ulonglong *)(puVar7 + 0x30) = uVar8;");
+            trace.statement("*(void **)(puVar7 + 0x38) = pvVar5;");
+            trace.statement("*(void **)(puVar7 + 0x40) = pvVar5;");
+            trace.statement("lVar9 = param_2 + lVar9 * 0x1111111111111111;");
+            if (trace.condition("if (lVar9 != 0)")) {
+                trace.statement("*(undefined8 *)(puVar7 + -8) = 0x180223537;");
+                trace.statement("memset(pvVar5,(uint)uVar4 & 0xffffff00,lVar9 * 0x3c);");
+                do {
+                    trace.statement("pvVar5 = (void *)((longlong)pvVar5 + 0x3c);");
+                    trace.statement("lVar9 = lVar9 + -1;");
+                } while (trace.loop_condition("while (lVar9 != 0);"));
+            }
+            trace.statement("*(void **)(puVar7 + 0x40) = pvVar5;");
+            trace.statement("*(undefined8 *)(puVar7 + -8) = 0x180223568;");
+            trace.statement("memmove(_Dst,DAT_1803eb808,(longlong)DAT_1803eb810 - (longlong)DAT_1803eb808);");
+            trace.statement("*(undefined8 *)(puVar7 + 0x28) = 0;");
+            if (trace.condition("if (DAT_1803eb808 != (void *)0x0)")) {
+                trace.statement("pvVar5 = DAT_1803eb808;");
+                if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_1803eb818 - (longlong)DAT_1803eb808 >> 2) * 4)) && (pvVar5 = *(void **)((longlong)DAT_1803eb808 + -8), 0x1f < (ulonglong)((longlong)DAT_1803eb808 + (-8 - (longlong)pvVar5))))")) {
+                    trace.statement("pvVar5 = (void *)0x5;");
+                    trace.statement("pcVar1 = (code *)swi(0x29);");
+                    trace.statement("(*pcVar1)();");
+                    trace.statement("puVar7 = puVar7 + 8;");
+                }
+                trace.statement("*(undefined8 *)(puVar7 + -8) = 0x1802235c5;");
+                trace.statement("free(pvVar5);");
+            }
+            trace.statement("DAT_1803eb808 = _Dst;");
+            trace.statement("DAT_1803eb810 = (void *)(param_2 * 0x3c + (longlong)_Dst);");
+            trace.statement("DAT_1803eb818 = (void *)(uVar3 + (longlong)_Dst);");
+            trace.statement("return;");
+        }
+        LAB_180223604: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180223420;
 }
 
@@ -8154,12 +13101,13 @@ DAT_1803e9a90)F180223610D",
 90: if ((0xfff < (ulonglong)(((longlong)DAT_1803e9a90 - (longlong)DAT_1803e9a80 >> 2) * 4)) &&
 104: return puVar1;
 107: LAB_180223842:)F180223610F",
-    R"F180223610U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180223610U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180223842.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9a80.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9a88.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9a90.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180223842.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9a80.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9a88.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9a90.
 TODO: resolve the indirect call in body 55: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 56: lVar6 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 94: pcVar2 = (code *)swi(0x29);.
@@ -8168,6 +13116,119 @@ TODO: resolve the indirect call in body 95: (*pcVar2)();.)F180223610U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180223610() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180223610", "FUN_180223610");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180223842.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9a80.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9a88.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9a90.
+    // TODO: resolve the indirect call in body 55: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 56: lVar6 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 94: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 95: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803e9a80", static_cast<const void*>(&image::DAT_1803e9a80));
+    trace.data_ref("DAT_1803e9a88", static_cast<const void*>(&image::DAT_1803e9a88));
+    trace.data_ref("DAT_1803e9a90", static_cast<const void*>(&image::DAT_1803e9a90));
+    // body sha256: f7cb29f32ec8574230f5a50182a6bd3a255ef38211bc111932e668369ba83dcc
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180223610(undefined8 param_1,void *param_2,undefined8 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("void *pvVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("void *_Dst;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [80];");
+            trace.statement("pvVar5 = DAT_1803e9a80;");
+            trace.statement("puVar7 = auStack_98;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("lVar6 = ((longlong)DAT_1803e9a88 - (longlong)DAT_1803e9a80 >> 2) * -0x5555555555555555;");
+            if (trace.condition("if (lVar6 == 0x1555555555555555)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = ((longlong)DAT_1803e9a90 - (longlong)DAT_1803e9a80 >> 2) * -0x5555555555555555;");
+            trace.statement("uVar3 = 0x1555555555555555 - (uVar4 >> 1);");
+            if (trace.condition("if (uVar4 < uVar3 || uVar4 - uVar3 == 0)")) {
+                trace.statement("uVar3 = lVar6 + 1;");
+                trace.statement("uVar4 = (uVar4 >> 1) + uVar4;");
+                trace.statement("uVar9 = uVar3;");
+                if (trace.condition("if (uVar3 <= uVar4)")) {
+                    trace.statement("uVar9 = uVar4;");
+                }
+                if (trace.condition("if (uVar9 < 0x1555555555555556)")) {
+                    trace.statement("uVar4 = uVar9 * 0xc;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("_Dst = (void *)0x0;");
+                        trace.statement("puVar8 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst = (void *)FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_180223842; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar2)(5);");
+                        trace.statement("puVar7 = auStack_90;");
+                    }
+                    trace.statement("_Dst = (void *)(lVar6 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("*(longlong *)((longlong)_Dst - 8) = lVar6;");
+                    trace.statement("puVar8 = puVar7;");
+                }
+                trace.statement("puVar1 = (undefined8 *)((longlong)_Dst + (((longlong)param_2 - (longlong)pvVar5) / 0xc) * 0xc)");
+                trace.statement(";");
+                trace.statement("pvVar5 = (void *)((longlong)puVar1 + 0xc);");
+                trace.statement("*(void ***)(puVar8 + 0x20) = &DAT_1803e9a80;");
+                trace.statement("*(void **)(puVar8 + 0x28) = _Dst;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar9;");
+                trace.statement("*(void **)(puVar8 + 0x38) = pvVar5;");
+                trace.statement("*(void **)(puVar8 + 0x40) = pvVar5;");
+                trace.statement("*puVar1 = *param_3;");
+                trace.statement("*(undefined4 *)(puVar1 + 1) = *(undefined4 *)(param_3 + 1);");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = puVar1;");
+                if (trace.condition("if (param_2 == DAT_1803e9a88)")) {
+                    trace.statement("_Size = (longlong)DAT_1803e9a88 - (longlong)DAT_1803e9a80;");
+                    trace.statement("pvVar5 = _Dst;");
+                    trace.statement("param_2 = DAT_1803e9a80;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18022377e;");
+                trace.statement("memmove(_Dst,DAT_1803e9a80,(longlong)param_2 - (longlong)DAT_1803e9a80);");
+                trace.statement("*(void **)(puVar8 + 0x38) = _Dst;");
+                trace.statement("_Size = (longlong)DAT_1803e9a88 - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180223798;");
+                trace.statement("memmove(pvVar5,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar8 + 0x28) = 0;");
+                if (trace.condition("if (DAT_1803e9a80 != (void *)0x0)")) {
+                    trace.statement("pvVar5 = DAT_1803e9a80;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_1803e9a90 - (longlong)DAT_1803e9a80 >> 2) * 4)) && (pvVar5 = *(void **)((longlong)DAT_1803e9a80 + -8), 0x1f < (ulonglong)((longlong)DAT_1803e9a80 + (-8 - (longlong)pvVar5))))")) {
+                        trace.statement("pvVar5 = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar8 = puVar8 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180223807;");
+                    trace.statement("free(pvVar5);");
+                }
+                trace.statement("DAT_1803e9a80 = _Dst;");
+                trace.statement("DAT_1803e9a88 = (void *)((longlong)_Dst + uVar3 * 0xc);");
+                trace.statement("DAT_1803e9a90 = (void *)(uVar4 + (longlong)_Dst);");
+                trace.statement("return puVar1;");
+            }
+        }
+        LAB_180223842: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180223610;
 }
 
@@ -8302,12 +13363,13 @@ DAT_1803eb370)F180223850D",
 78: if ((0xfff < ((longlong)DAT_1803eb370 - (longlong)DAT_1803eb360 & 0xffffffffffffffe0U)) &&
 91: return;
 93: LAB_180223a02:)F180223850F",
-    R"F180223850U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180223850U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180223a02.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb360.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb368.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb370.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180223a02.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb360.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb368.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb370.
 TODO: resolve the indirect call in body 48: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 49: lVar2 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 81: pcVar1 = (code *)swi(0x29);.
@@ -8316,6 +13378,104 @@ TODO: resolve the indirect call in body 82: pvVar5 = (void *)(*pcVar1)(5);.)F180
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180223850() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180223850", "FUN_180223850");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180223a02.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb360.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb368.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb370.
+    // TODO: resolve the indirect call in body 48: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 49: lVar2 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 81: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 82: pvVar5 = (void *)(*pcVar1)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803eb360", static_cast<const void*>(&image::DAT_1803eb360));
+    trace.data_ref("DAT_1803eb368", static_cast<const void*>(&image::DAT_1803eb368));
+    trace.data_ref("DAT_1803eb370", static_cast<const void*>(&image::DAT_1803eb370));
+    // body sha256: 80d1c9d1706db47614990a71a07c1b698319826f083eae93a5b6fc6426b1cbb6
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180223850(undefined8 param_1,ulonglong param_2)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("void *pvVar5;");
+            trace.statement("undefined1 *puVar6;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("void *_Dst;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [80];");
+            trace.statement("puVar6 = auStack_88;");
+            trace.statement("puVar7 = auStack_88;");
+            if (trace.condition("if (0x7ffffffffffffff < param_2)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar3 = (longlong)DAT_1803eb370 - (longlong)DAT_1803eb360 >> 5;");
+            trace.statement("uVar4 = uVar3 >> 1;");
+            if (trace.condition("if ((uVar3 <= 0x7ffffffffffffff - uVar4) && ((uVar3 = uVar3 + uVar4, uVar8 = param_2, uVar3 < param_2 || (uVar8 = uVar3, uVar3 < 0x800000000000000))))")) {
+                trace.statement("lVar9 = (longlong)DAT_1803eb368 - (longlong)DAT_1803eb360;");
+                trace.statement("uVar3 = uVar8 * 0x20;");
+                if (trace.condition("if (uVar3 == 0)")) {
+                    trace.statement("_Dst = (void *)0x0;");
+                    trace.statement("puVar7 = auStack_88;");
+                } else {
+                trace.statement("_Dst = (void *)FUN_1802d8350(uVar3);");
+                }
+                trace.statement("else {");
+                if (trace.condition("if (uVar3 + 0x27 <= uVar3) goto LAB_180223a02; lVar2 = FUN_1802d8350(); if (lVar2 == 0)")) {
+                    trace.statement("pcVar1 = (code *)swi(0x29);");
+                    trace.statement("lVar2 = (*pcVar1)(5);");
+                    trace.statement("puVar6 = auStack_80;");
+                }
+                trace.statement("_Dst = (void *)(lVar2 + 0x27U & 0xffffffffffffffe0);");
+                trace.statement("*(longlong *)((longlong)_Dst - 8) = lVar2;");
+                trace.statement("puVar7 = puVar6;");
+            }
+            trace.statement("lVar9 = lVar9 >> 5;");
+            trace.statement("pvVar5 = (void *)(lVar9 * 0x20 + (longlong)_Dst);");
+            trace.statement("*(void ***)(puVar7 + 0x20) = &DAT_1803eb360;");
+            trace.statement("*(void **)(puVar7 + 0x28) = _Dst;");
+            trace.statement("*(ulonglong *)(puVar7 + 0x30) = uVar8;");
+            trace.statement("*(void **)(puVar7 + 0x38) = pvVar5;");
+            trace.statement("*(void **)(puVar7 + 0x40) = pvVar5;");
+            trace.statement("lVar9 = param_2 - lVar9;");
+            if (trace.condition("if (lVar9 != 0)")) {
+                trace.statement("*(undefined8 *)(puVar7 + -8) = 0x180223955;");
+                trace.statement("memset(pvVar5,(uint)uVar4 & 0xffffff00,lVar9 * 0x20);");
+                do {
+                    trace.statement("pvVar5 = (void *)((longlong)pvVar5 + 0x20);");
+                    trace.statement("lVar9 = lVar9 + -1;");
+                } while (trace.loop_condition("while (lVar9 != 0);"));
+            }
+            trace.statement("*(void **)(puVar7 + 0x40) = pvVar5;");
+            trace.statement("*(undefined8 *)(puVar7 + -8) = 0x18022397d;");
+            trace.statement("memmove(_Dst,DAT_1803eb360,(longlong)DAT_1803eb368 - (longlong)DAT_1803eb360);");
+            trace.statement("*(undefined8 *)(puVar7 + 0x28) = 0;");
+            if (trace.condition("if (DAT_1803eb360 != (void *)0x0)")) {
+                trace.statement("pvVar5 = DAT_1803eb360;");
+                if (trace.condition("if ((0xfff < ((longlong)DAT_1803eb370 - (longlong)DAT_1803eb360 & 0xffffffffffffffe0U)) && (pvVar5 = *(void **)((longlong)DAT_1803eb360 + -8), 0x1f < (ulonglong)((longlong)DAT_1803eb360 + (-8 - (longlong)pvVar5))))")) {
+                    trace.statement("pcVar1 = (code *)swi(0x29);");
+                    trace.statement("pvVar5 = (void *)(*pcVar1)(5);");
+                    trace.statement("puVar7 = puVar7 + 8;");
+                }
+                trace.statement("*(undefined8 *)(puVar7 + -8) = 0x1802239cf;");
+                trace.statement("free(pvVar5);");
+            }
+            trace.statement("DAT_1803eb360 = _Dst;");
+            trace.statement("DAT_1803eb368 = (void *)(param_2 * 0x20 + (longlong)_Dst);");
+            trace.statement("DAT_1803eb370 = (void *)(uVar3 + (longlong)_Dst);");
+            trace.statement("return;");
+        }
+        LAB_180223a02: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180223850;
 }
 
@@ -8493,9 +13653,10 @@ FUN_1802d8350)F180223a10C",
 116: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 4) << 4)) &&
 130: return lVar6 * 0x50 + uVar11;
 133: LAB_180223ca1:)F180223a10F",
-    R"F180223a10U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180223a10U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180223ca1.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180223ca1.
 TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 60: lVar6 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 120: pcVar3 = (code *)swi(0x29);.
@@ -8504,6 +13665,142 @@ TODO: resolve the indirect call in body 121: (*pcVar3)();.)F180223a10U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180223a10() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180223a10", "FUN_180223a10");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180223ca1.
+    // TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 60: lVar6 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 120: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 121: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232000", reinterpret_cast<const void*>(&image::FUN_180232000));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: c399b8079a993b893dd08e8704aacb901d86a7f472fbdf54ecb282d049665be5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180223a10(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("undefined4 *puVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined4 *puVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [32];");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("puVar10 = auStack_98;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("uVar8 = *param_1;");
+            trace.statement("lVar6 = ((longlong)(param_1[1] - uVar8) >> 4) * -0x3333333333333333;");
+            if (trace.condition("if (lVar6 == 0x333333333333333)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = ((longlong)(param_1[2] - uVar8) >> 4) * -0x3333333333333333;");
+            trace.statement("uVar4 = 0x333333333333333 - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar4 || uVar5 - uVar4 == 0)")) {
+                trace.statement("uVar4 = lVar6 + 1;");
+                trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+                trace.statement("uVar12 = uVar4;");
+                if (trace.condition("if (uVar4 <= uVar5)")) {
+                    trace.statement("uVar12 = uVar5;");
+                }
+                if (trace.condition("if (uVar12 < 0x333333333333334)")) {
+                    trace.statement("uVar5 = uVar12 * 0x50;");
+                    if (trace.condition("if (uVar5 == 0)")) {
+                        trace.statement("uVar11 = 0;");
+                        trace.statement("puVar10 = auStack_98;");
+                    } else {
+                    trace.statement("uVar11 = FUN_1802d8350(uVar5);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_180223ca1; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar3)(5);");
+                        trace.statement("puVar9 = auStack_90;");
+                    }
+                    trace.statement("uVar11 = lVar6 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar11 - 8) = lVar6;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("lVar6 = (longlong)(param_2 - uVar8) / 0x50;");
+                trace.statement("puVar7 = (undefined4 *)(lVar6 * 0x50 + uVar11);");
+                trace.statement("puVar1 = puVar7 + 0x14;");
+                trace.statement("*(undefined4 **)(puVar10 + 0x20) = puVar1;");
+                trace.statement("*(ulonglong **)(puVar10 + 0x30) = param_1;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar11;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar12;");
+                trace.statement("*(undefined4 **)(puVar10 + 0x48) = puVar1;");
+                trace.statement("*(undefined4 **)(puVar10 + 0x50) = puVar1;");
+                trace.statement("*(undefined4 **)(puVar10 + 0x58) = puVar7;");
+                trace.statement("puVar1 = *(undefined4 **)(puVar10 + 0x28);");
+                trace.statement("*puVar7 = *puVar1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180223b62;");
+                trace.statement("FUN_18016d4c0(puVar7 + 2,puVar1 + 2);");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180223b70;");
+                trace.statement("FUN_18016d4c0(puVar7 + 10,puVar1 + 10);");
+                trace.statement("puVar7[0x12] = puVar1[0x12];");
+                trace.statement("*(undefined1 *)(puVar7 + 0x13) = *(undefined1 *)(puVar1 + 0x13);");
+                trace.statement("*(undefined4 **)(puVar10 + 0x48) = puVar7;");
+                trace.statement("uVar8 = param_1[1];");
+                if (trace.condition("if (param_2 == uVar8)")) {
+                    trace.statement("param_2 = *param_1;");
+                    trace.statement("uVar12 = uVar11;");
+                } else {
+                trace.statement("uVar8 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180223ba4;");
+                trace.statement("FUN_180232000(uVar8,param_2,uVar11,param_1);");
+                trace.statement("*(ulonglong *)(puVar10 + 0x48) = uVar11;");
+                trace.statement("uVar8 = param_1[1];");
+                trace.statement("uVar12 = *(ulonglong *)(puVar10 + 0x20);");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180223bbd;");
+                trace.statement("FUN_180232000(param_2,uVar8,uVar12,param_1);");
+                trace.statement("*(undefined8 *)(puVar10 + 0x38) = 0;");
+                trace.statement("uVar8 = *param_1;");
+                if (trace.condition("if (uVar8 != 0)")) {
+                    trace.statement("uVar12 = param_1[1];");
+                    trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    while (trace.loop_condition("while (uVar8 != uVar12)")) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180223be9;");
+                        trace.statement("FUN_18020e450(uVar8 + 0x28);");
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180223bf3;");
+                        trace.statement("FUN_18020e450(uVar8 + 8);");
+                        trace.statement("uVar8 = uVar8 + 0x50;");
+                        trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    }
+                    trace.statement("pvVar2 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar2;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar3)();");
+                        trace.statement("puVar10 = puVar10 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180223c57;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar11;");
+                trace.statement("param_1[1] = uVar4 * 0x50 + uVar11;");
+                trace.statement("param_1[2] = uVar5 + uVar11;");
+                trace.statement("return lVar6 * 0x50 + uVar11;");
+            }
+        }
+        LAB_180223ca1: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180223a10;
 }
 
@@ -8693,12 +13990,13 @@ DAT_1803e9e00)F180223cb0D",
 127: if ((void *)0x1f < pvVar11) {
 140: return puVar1;
 143: LAB_180223f56:)F180223cb0F",
-    R"F180223cb0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180223cb0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180223f56.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9df0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9df8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9e00.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180223f56.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9df0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9df8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9e00.
 TODO: resolve the indirect call in body 60: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 61: lVar9 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 128: pcVar2 = (code *)swi(0x29);.
@@ -8707,6 +14005,161 @@ TODO: resolve the indirect call in body 129: (*pcVar2)(5);.)F180223cb0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180223cb0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180223cb0", "FUN_180223cb0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180223f56.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9df0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9df8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9e00.
+    // TODO: resolve the indirect call in body 60: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 61: lVar9 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 128: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 129: (*pcVar2)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_1802320f0", reinterpret_cast<const void*>(&image::FUN_1802320f0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803e9df0", static_cast<const void*>(&image::DAT_1803e9df0));
+    trace.data_ref("DAT_1803e9df8", static_cast<const void*>(&image::DAT_1803e9df8));
+    trace.data_ref("DAT_1803e9e00", static_cast<const void*>(&image::DAT_1803e9e00));
+    // body sha256: 0ceca32a4e0294f285dd33a7edd631ba00430832d938d04d85f7f3608f40cb45
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180223cb0(undefined8 param_1,void *param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("undefined4 uVar3;");
+            trace.statement("undefined4 uVar4;");
+            trace.statement("undefined4 uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("void *pvVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("void *pvVar11;");
+            trace.statement("undefined1 *puVar12;");
+            trace.statement("undefined1 *puVar13;");
+            trace.statement("longlong lVar14;");
+            trace.statement("undefined8 *puVar15;");
+            trace.statement("undefined8 *puVar16;");
+            trace.statement("undefined8 *puVar17;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar13 = auStack_88;");
+            trace.statement("puVar12 = auStack_88;");
+            trace.statement("lVar9 = ((longlong)DAT_1803e9df8 - (longlong)DAT_1803e9df0 >> 3) * -0x3333333333333333;");
+            if (trace.condition("if (lVar9 == 0x666666666666666)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar7 = ((longlong)DAT_1803e9e00 - (longlong)DAT_1803e9df0 >> 3) * -0x3333333333333333;");
+            trace.statement("uVar6 = 0x666666666666666 - (uVar7 >> 1);");
+            if (trace.condition("if (uVar7 < uVar6 || uVar7 - uVar6 == 0)")) {
+                trace.statement("lVar14 = (longlong)param_2 - (longlong)DAT_1803e9df0;");
+                trace.statement("uVar6 = lVar9 + 1;");
+                trace.statement("uVar7 = uVar7 + (uVar7 >> 1);");
+                trace.statement("uVar10 = uVar6;");
+                if (trace.condition("if (uVar6 <= uVar7)")) {
+                    trace.statement("uVar10 = uVar7;");
+                }
+                if (trace.condition("if (uVar10 < 0x666666666666667)")) {
+                    trace.statement("uVar7 = uVar10 * 0x28;");
+                    trace.statement("puVar15 = (undefined8 *)0x0;");
+                    if (trace.condition("if (uVar7 != 0)")) {
+                        if (trace.condition("if (uVar7 < 0x1000)")) {
+                            trace.statement("puVar15 = (undefined8 *)FUN_1802d8350(uVar7);");
+                            trace.statement("puVar13 = auStack_88;");
+                        } else {
+                        if (trace.condition("if (uVar7 + 0x27 <= uVar7) goto LAB_180223f56; lVar9 = FUN_1802d8350(); if (lVar9 == 0)")) {
+                            trace.statement("pcVar2 = (code *)swi(0x29);");
+                            trace.statement("lVar9 = (*pcVar2)(5);");
+                            trace.statement("puVar12 = auStack_80;");
+                        }
+                        trace.statement("puVar15 = (undefined8 *)(lVar9 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("puVar15[-1] = lVar9;");
+                        trace.statement("puVar13 = puVar12;");
+                        }
+                    }
+                    trace.statement("puVar1 = puVar15 + (lVar14 / 0x28) * 5;");
+                    trace.statement("puVar16 = puVar1 + 5;");
+                    trace.statement("*(undefined8 ***)(puVar13 + 0x28) = &DAT_1803e9df0;");
+                    trace.statement("*(undefined8 **)(puVar13 + 0x30) = puVar15;");
+                    trace.statement("*(ulonglong *)(puVar13 + 0x38) = uVar10;");
+                    trace.statement("*(undefined8 **)(puVar13 + 0x40) = puVar16;");
+                    trace.statement("*(undefined8 **)(puVar13 + 0x48) = puVar16;");
+                    trace.statement("*(undefined8 **)(puVar13 + 0x20) = puVar1;");
+                    trace.statement("*puVar1 = 0;");
+                    trace.statement("puVar1[1] = 0;");
+                    trace.statement("puVar1[2] = 0;");
+                    trace.statement("puVar1[3] = 0;");
+                    trace.statement("uVar3 = param_3[1];");
+                    trace.statement("uVar4 = param_3[2];");
+                    trace.statement("uVar5 = param_3[3];");
+                    trace.statement("*(undefined4 *)puVar1 = *param_3;");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 4) = uVar3;");
+                    trace.statement("*(undefined4 *)(puVar1 + 1) = uVar4;");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0xc) = uVar5;");
+                    trace.statement("uVar3 = param_3[5];");
+                    trace.statement("uVar4 = param_3[6];");
+                    trace.statement("uVar5 = param_3[7];");
+                    trace.statement("*(undefined4 *)(puVar1 + 2) = param_3[4];");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0x14) = uVar3;");
+                    trace.statement("*(undefined4 *)(puVar1 + 3) = uVar4;");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0x1c) = uVar5;");
+                    trace.statement("*(undefined8 *)(param_3 + 4) = 0;");
+                    trace.statement("*(undefined8 *)(param_3 + 6) = 0xf;");
+                    trace.statement("*(undefined1 *)param_3 = 0;");
+                    trace.statement("*(undefined4 *)(puVar1 + 4) = param_3[8];");
+                    trace.statement("*(undefined1 *)((longlong)puVar1 + 0x24) = *(undefined1 *)(param_3 + 9);");
+                    trace.statement("*(undefined8 **)(puVar13 + 0x40) = puVar1;");
+                    trace.statement("pvVar8 = DAT_1803e9df0;");
+                    trace.statement("puVar17 = puVar15;");
+                    if (trace.condition("if (param_2 != DAT_1803e9df8)")) {
+                        trace.statement("*(undefined8 *)(puVar13 + -8) = 0x180223e62;");
+                        trace.statement("FUN_1802320f0(DAT_1803e9df0,param_2,puVar15);");
+                        trace.statement("*(undefined8 **)(puVar13 + 0x40) = puVar15;");
+                        trace.statement("pvVar8 = param_2;");
+                        trace.statement("puVar17 = puVar16;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar13 + -8) = 0x180223e79;");
+                    trace.statement("FUN_1802320f0(pvVar8,DAT_1803e9df8,puVar17);");
+                    trace.statement("pvVar8 = DAT_1803e9df8;");
+                    trace.statement("*(undefined8 *)(puVar13 + 0x30) = 0;");
+                    if (trace.condition("if (DAT_1803e9df0 != (void *)0x0)")) {
+                        trace.statement("*(undefined8 **)(puVar13 + 0x20) = DAT_1803e9df0;");
+                        trace.statement("pvVar11 = DAT_1803e9df0;");
+                        while (trace.loop_condition("while (pvVar11 != pvVar8)")) {
+                            trace.statement("*(undefined8 *)(puVar13 + -8) = 0x180223ea8;");
+                            trace.statement("FUN_18020e450(pvVar11);");
+                            trace.statement("pvVar11 = (void *)((longlong)pvVar11 + 0x28);");
+                            trace.statement("*(void **)(puVar13 + 0x20) = pvVar11;");
+                        }
+                        trace.statement("pvVar8 = DAT_1803e9df0;");
+                        if (trace.condition("if (0xfff < (ulonglong)(((longlong)DAT_1803e9e00 - (longlong)DAT_1803e9df0 >> 3) * 8))")) {
+                            trace.statement("pvVar8 = *(void **)((longlong)DAT_1803e9df0 + -8);");
+                            trace.statement("pvVar11 = (void *)((longlong)DAT_1803e9df0 + (-8 - (longlong)pvVar8));");
+                            if (trace.condition("if ((void *)0x1f < pvVar11)")) {
+                                trace.statement("pcVar2 = (code *)swi(0x29);");
+                                trace.statement("(*pcVar2)(5);");
+                                trace.statement("puVar13 = puVar13 + 8;");
+                                trace.statement("pvVar8 = pvVar11;");
+                            }
+                        }
+                        trace.statement("*(undefined8 *)(puVar13 + -8) = 0x180223f14;");
+                        trace.statement("free(pvVar8);");
+                    }
+                    trace.statement("DAT_1803e9df0 = puVar15;");
+                    trace.statement("DAT_1803e9df8 = puVar15 + uVar6 * 5;");
+                    trace.statement("DAT_1803e9e00 = puVar15 + uVar10 * 5;");
+                    trace.statement("return puVar1;");
+                }
+            }
+            LAB_180223f56: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x180223cb0;
 }
 
@@ -8858,9 +14311,10 @@ FUN_1802d8350)F180223f60C",
 94: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar4 >> 1) * 2)) &&
 108: return puVar2;
 111: LAB_18022411c:)F180223f60F",
-    R"F180223f60U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180223f60U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18022411c.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022411c.
 TODO: resolve the indirect call in body 59: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 60: lVar7 = (*pcVar5)(5);.
 TODO: resolve the indirect call in body 98: pcVar5 = (code *)swi(0x29);.
@@ -8869,6 +14323,117 @@ TODO: resolve the indirect call in body 99: (*pcVar5)();.)F180223f60U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180223f60() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180223f60", "FUN_180223f60");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022411c.
+    // TODO: resolve the indirect call in body 59: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 60: lVar7 = (*pcVar5)(5);.
+    // TODO: resolve the indirect call in body 98: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 99: (*pcVar5)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 22b983e9d516e6019d59ad6d44c4d5b8c155ab171b22aab1c872c3ac949fb768
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined2 * FUN_180223f60(longlong *param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("undefined2 *puVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("void *pvVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("undefined2 *_Dst;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar7;");
+            trace.statement("undefined2 *_Dst_00;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("size_t _Size;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined8 local_68;");
+            trace.statement("puVar8 = auStack_88;");
+            trace.statement("puVar9 = auStack_88;");
+            trace.statement("local_68 = param_3;");
+            trace.statement("lVar3 = *param_1;");
+            trace.statement("lVar7 = param_1[1] - lVar3 >> 1;");
+            if (trace.condition("if (lVar7 == 0x7fffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar6 = param_1[2] - lVar3 >> 1;");
+            if (trace.condition("if (uVar6 <= 0x7fffffffffffffff - (uVar6 >> 1))")) {
+                trace.statement("uVar1 = lVar7 + 1;");
+                trace.statement("uVar6 = uVar6 + (uVar6 >> 1);");
+                trace.statement("uVar10 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar6)")) {
+                    trace.statement("uVar10 = uVar6;");
+                }
+                if (trace.condition("if (uVar10 < 0x8000000000000000)")) {
+                    trace.statement("uVar6 = uVar10 * 2;");
+                    if (trace.condition("if (uVar6 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined2 *)0x0;");
+                        trace.statement("puVar9 = auStack_88;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined2 *)FUN_1802d8350(uVar6);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar6 + 0x27 <= uVar6) goto LAB_18022411c; lVar7 = FUN_1802d8350(); if (lVar7 == 0)")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("lVar7 = (*pcVar5)(5);");
+                        trace.statement("puVar8 = auStack_80;");
+                    }
+                    trace.statement("_Dst_00 = (undefined2 *)(lVar7 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("*(longlong *)(_Dst_00 + -4) = lVar7;");
+                    trace.statement("puVar9 = puVar8;");
+                }
+                trace.statement("puVar2 = _Dst_00 + ((longlong)param_2 - lVar3 >> 1);");
+                trace.statement("_Dst = puVar2 + 1;");
+                trace.statement("*(longlong **)(puVar9 + 0x28) = param_1;");
+                trace.statement("*(undefined2 **)(puVar9 + 0x30) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x38) = uVar10;");
+                trace.statement("*(undefined2 **)(puVar9 + 0x40) = _Dst;");
+                trace.statement("*(undefined2 **)(puVar9 + 0x48) = _Dst;");
+                trace.statement("*puVar2 = **(undefined2 **)(puVar9 + 0x20);");
+                trace.statement("*(undefined2 **)(puVar9 + 0x40) = puVar2;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                    trace.statement("_Size = param_1[1] - (longlong)pvVar4;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = pvVar4;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180224080;");
+                trace.statement("memmove(_Dst_00,pvVar4,(longlong)param_2 - (longlong)pvVar4);");
+                trace.statement("*(undefined2 **)(puVar9 + 0x40) = _Dst_00;");
+                trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180224097;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x30) = 0;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (pvVar4 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar4;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar4 >> 1) * 2)) && (_Memory = *(void **)((longlong)pvVar4 + -8), 0x1f < (ulonglong)((longlong)pvVar4 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar5)();");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802240e8;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = (longlong)_Dst_00;");
+                trace.statement("param_1[1] = (longlong)(_Dst_00 + uVar1);");
+                trace.statement("param_1[2] = (longlong)(_Dst_00 + uVar10);");
+                trace.statement("return puVar2;");
+            }
+        }
+        LAB_18022411c: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180223f60;
 }
 
@@ -9060,9 +14625,10 @@ FUN_1802d8350)F180224130C",
 132: if ((0xfff < (param_1[2] - (longlong)pvVar4 & 0xffffffffffffffe0U)) &&
 145: return puVar16 + lVar10 * 4;
 148: LAB_180224351:)F180224130F",
-    R"F180224130U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180224130U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180224351.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180224351.
 TODO: resolve the indirect call in body 63: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 64: lVar10 = (*pcVar5)(5);.
 TODO: resolve the indirect call in body 135: pcVar5 = (code *)swi(0x29);.
@@ -9071,6 +14637,157 @@ TODO: resolve the indirect call in body 136: _Memory = (void *)(*pcVar5)(5);.)F1
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180224130() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180224130", "FUN_180224130");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180224351.
+    // TODO: resolve the indirect call in body 63: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 64: lVar10 = (*pcVar5)(5);.
+    // TODO: resolve the indirect call in body 135: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 136: _Memory = (void *)(*pcVar5)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18021e290", reinterpret_cast<const void*>(&image::FUN_18021e290));
+    trace.call_target("FUN_1802321a0", reinterpret_cast<const void*>(&image::FUN_1802321a0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 2213012357564aaaf86fefddec340ac9c12e949bdaa268cd03ec178338b29dcf
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180224130(longlong *param_1,longlong param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("undefined4 *puVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("void *pvVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("undefined4 uVar6;");
+            trace.statement("undefined4 uVar7;");
+            trace.statement("undefined4 uVar8;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("longlong lVar10;");
+            trace.statement("undefined8 *puVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("longlong lVar13;");
+            trace.statement("undefined1 *puVar14;");
+            trace.statement("undefined1 *puVar15;");
+            trace.statement("undefined8 *puVar16;");
+            trace.statement("undefined8 *puVar17;");
+            trace.statement("undefined8 uVar18;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [24];");
+            trace.statement("undefined8 local_78;");
+            trace.statement("puVar15 = auStack_98;");
+            trace.statement("puVar14 = auStack_98;");
+            trace.statement("local_78 = param_3;");
+            trace.statement("lVar13 = *param_1;");
+            trace.statement("lVar10 = param_1[1] - lVar13 >> 5;");
+            if (trace.condition("if (lVar10 == 0x7ffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar9 = param_1[2] - lVar13 >> 5;");
+            if (trace.condition("if (uVar9 <= 0x7ffffffffffffff - (uVar9 >> 1))")) {
+                trace.statement("uVar1 = lVar10 + 1;");
+                trace.statement("uVar9 = uVar9 + (uVar9 >> 1);");
+                trace.statement("uVar12 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar9)")) {
+                    trace.statement("uVar12 = uVar9;");
+                }
+                if (trace.condition("if (uVar12 < 0x800000000000000)")) {
+                    trace.statement("uVar9 = uVar12 * 0x20;");
+                    trace.statement("puVar16 = (undefined8 *)0x0;");
+                    if (trace.condition("if (uVar9 != 0)")) {
+                        if (trace.condition("if (uVar9 < 0x1000)")) {
+                            trace.statement("puVar16 = (undefined8 *)FUN_1802d8350(uVar9);");
+                            trace.statement("puVar15 = auStack_98;");
+                        } else {
+                        if (trace.condition("if (uVar9 + 0x27 <= uVar9) goto LAB_180224351; lVar10 = FUN_1802d8350(); if (lVar10 == 0)")) {
+                            trace.statement("pcVar5 = (code *)swi(0x29);");
+                            trace.statement("lVar10 = (*pcVar5)(5);");
+                            trace.statement("puVar14 = auStack_90;");
+                        }
+                        trace.statement("puVar16 = (undefined8 *)(lVar10 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("puVar16[-1] = lVar10;");
+                        trace.statement("puVar15 = puVar14;");
+                        }
+                    }
+                    trace.statement("uVar18 = 0;");
+                    trace.statement("lVar10 = param_2 - lVar13 >> 5;");
+                    trace.statement("puVar11 = puVar16 + lVar10 * 4;");
+                    trace.statement("puVar17 = puVar11 + 4;");
+                    trace.statement("*(longlong **)(puVar15 + 0x28) = param_1;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x30) = puVar16;");
+                    trace.statement("*(ulonglong *)(puVar15 + 0x38) = uVar12;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar17;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x48) = puVar17;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x50) = puVar11;");
+                    trace.statement("*puVar11 = 0;");
+                    trace.statement("puVar11[1] = 0;");
+                    trace.statement("puVar11[2] = 0;");
+                    trace.statement("puVar11[3] = 0;");
+                    trace.statement("puVar2 = *(undefined4 **)(puVar15 + 0x20);");
+                    trace.statement("uVar6 = puVar2[1];");
+                    trace.statement("uVar7 = puVar2[2];");
+                    trace.statement("uVar8 = puVar2[3];");
+                    trace.statement("*(undefined4 *)puVar11 = *puVar2;");
+                    trace.statement("*(undefined4 *)((longlong)puVar11 + 4) = uVar6;");
+                    trace.statement("*(undefined4 *)(puVar11 + 1) = uVar7;");
+                    trace.statement("*(undefined4 *)((longlong)puVar11 + 0xc) = uVar8;");
+                    trace.statement("uVar6 = puVar2[5];");
+                    trace.statement("uVar7 = puVar2[6];");
+                    trace.statement("uVar8 = puVar2[7];");
+                    trace.statement("*(undefined4 *)(puVar11 + 2) = puVar2[4];");
+                    trace.statement("*(undefined4 *)((longlong)puVar11 + 0x14) = uVar6;");
+                    trace.statement("*(undefined4 *)(puVar11 + 3) = uVar7;");
+                    trace.statement("*(undefined4 *)((longlong)puVar11 + 0x1c) = uVar8;");
+                    trace.statement("*(undefined8 *)(puVar2 + 4) = 0;");
+                    trace.statement("*(undefined8 *)(puVar2 + 6) = 7;");
+                    trace.statement("*(undefined2 *)puVar2 = 0;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar11;");
+                    trace.statement("lVar13 = param_1[1];");
+                    if (trace.condition("if (param_2 == lVar13)")) {
+                        trace.statement("param_2 = *param_1;");
+                        trace.statement("puVar17 = puVar16;");
+                    } else {
+                    trace.statement("lVar13 = *param_1;");
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180224290;");
+                    trace.statement("FUN_1802321a0(lVar13,param_2,puVar16,param_1);");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar16;");
+                    trace.statement("lVar13 = param_1[1];");
+                    }
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1802242a7;");
+                    trace.statement("FUN_1802321a0(param_2,lVar13,puVar17,param_1);");
+                    trace.statement("*(undefined8 *)(puVar15 + 0x30) = uVar18;");
+                    trace.statement("lVar13 = *param_1;");
+                    if (trace.condition("if (lVar13 != 0)")) {
+                        trace.statement("lVar3 = param_1[1];");
+                        trace.statement("*(longlong *)(puVar15 + 0x20) = lVar13;");
+                        while (trace.loop_condition("while (lVar13 != lVar3)")) {
+                            trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1802242ca;");
+                            trace.statement("FUN_18021e290(lVar13);");
+                            trace.statement("lVar13 = lVar13 + 0x20;");
+                            trace.statement("*(longlong *)(puVar15 + 0x20) = lVar13;");
+                        }
+                        trace.statement("pvVar4 = (void *)*param_1;");
+                        trace.statement("_Memory = pvVar4;");
+                        if (trace.condition("if ((0xfff < (param_1[2] - (longlong)pvVar4 & 0xffffffffffffffe0U)) && (_Memory = *(void **)((longlong)pvVar4 + -8), 0x1f < (ulonglong)((longlong)pvVar4 + (-8 - (longlong)_Memory))))")) {
+                            trace.statement("pcVar5 = (code *)swi(0x29);");
+                            trace.statement("_Memory = (void *)(*pcVar5)(5);");
+                            trace.statement("puVar15 = puVar15 + 8;");
+                        }
+                        trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180224315;");
+                        trace.statement("free(_Memory);");
+                    }
+                    trace.statement("*param_1 = (longlong)puVar16;");
+                    trace.statement("param_1[1] = (longlong)(puVar16 + uVar1 * 4);");
+                    trace.statement("param_1[2] = (longlong)(puVar16 + uVar12 * 4);");
+                    trace.statement("return puVar16 + lVar10 * 4;");
+                }
+            }
+            LAB_180224351: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x180224130;
 }
 
@@ -9239,9 +14956,10 @@ FUN_1802d8350)F180224360C",
 108: if ((0xfff < (param_1[2] - (longlong)pvVar2 & 0xffffffffffffffe0)) &&
 121: return lVar12 * 0x20 + uVar10;
 124: LAB_180224562:)F180224360F",
-    R"F180224360U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180224360U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180224562.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180224562.
 TODO: resolve the indirect call in body 60: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 61: lVar5 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 111: pcVar3 = (code *)swi(0x29);.
@@ -9250,6 +14968,133 @@ TODO: resolve the indirect call in body 112: _Memory = (void *)(*pcVar3)(5);.)F1
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180224360() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180224360", "FUN_180224360");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180224562.
+    // TODO: resolve the indirect call in body 60: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 61: lVar5 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 111: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 112: _Memory = (void *)(*pcVar3)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e540", reinterpret_cast<const void*>(&image::FUN_18020e540));
+    trace.call_target("FUN_18021e290", reinterpret_cast<const void*>(&image::FUN_18021e290));
+    trace.call_target("FUN_1802321a0", reinterpret_cast<const void*>(&image::FUN_1802321a0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: d769f6a601f03c8f5a243a420f1d8b4fa1e9f4b2d3f0702ec91c496d1177594b
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180224360(ulonglong *param_1,longlong param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("longlong lVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [24];");
+            trace.statement("longlong local_78;");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("local_78 = param_2;");
+            trace.statement("uVar7 = *param_1;");
+            trace.statement("lVar5 = (longlong)(param_1[1] - uVar7) >> 5;");
+            if (trace.condition("if (lVar5 == 0x7ffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = (longlong)(param_1[2] - uVar7) >> 5;");
+            if (trace.condition("if (uVar4 <= 0x7ffffffffffffff - (uVar4 >> 1))")) {
+                trace.statement("uVar1 = lVar5 + 1;");
+                trace.statement("uVar4 = uVar4 + (uVar4 >> 1);");
+                trace.statement("uVar6 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar4)")) {
+                    trace.statement("uVar6 = uVar4;");
+                }
+                if (trace.condition("if (uVar6 < 0x800000000000000)")) {
+                    trace.statement("uVar4 = uVar6 * 0x20;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("uVar10 = 0;");
+                        trace.statement("puVar9 = auStack_98;");
+                    } else {
+                    trace.statement("uVar10 = FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_180224562; lVar5 = FUN_1802d8350(); if (lVar5 == 0)")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("lVar5 = (*pcVar3)(5);");
+                        trace.statement("puVar8 = auStack_90;");
+                    }
+                    trace.statement("uVar10 = lVar5 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar10 - 8) = lVar5;");
+                    trace.statement("puVar9 = puVar8;");
+                }
+                trace.statement("lVar12 = (longlong)(param_2 - uVar7) >> 5;");
+                trace.statement("lVar5 = lVar12 * 0x20 + uVar10;");
+                trace.statement("uVar7 = lVar5 + 0x20;");
+                trace.statement("*(ulonglong **)(puVar9 + 0x30) = param_1;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x38) = uVar10;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x40) = uVar6;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x48) = uVar7;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x50) = uVar7;");
+                trace.statement("*(longlong *)(puVar9 + 0x58) = lVar5;");
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180224470;");
+                trace.statement("FUN_18020e540(lVar5,*(undefined8 *)(puVar9 + 0x28));");
+                trace.statement("*(longlong *)(puVar9 + 0x48) = lVar5;");
+                trace.statement("uVar6 = param_1[1];");
+                trace.statement("uVar11 = *(ulonglong *)(puVar9 + 0x20);");
+                if (trace.condition("if (uVar11 == uVar6)")) {
+                    trace.statement("uVar11 = *param_1;");
+                    trace.statement("uVar7 = uVar10;");
+                } else {
+                trace.statement("uVar6 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x18022449d;");
+                trace.statement("FUN_1802321a0(uVar6,uVar11,uVar10,param_1);");
+                trace.statement("*(ulonglong *)(puVar9 + 0x48) = uVar10;");
+                trace.statement("uVar6 = param_1[1];");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802244b4;");
+                trace.statement("FUN_1802321a0(uVar11,uVar6,uVar7,param_1);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x38) = 0;");
+                trace.statement("uVar7 = *param_1;");
+                if (trace.condition("if (uVar7 != 0)")) {
+                    trace.statement("uVar6 = param_1[1];");
+                    trace.statement("*(ulonglong *)(puVar9 + 0x20) = uVar7;");
+                    while (trace.loop_condition("while (uVar7 != uVar6)")) {
+                        trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802244db;");
+                        trace.statement("FUN_18021e290(uVar7);");
+                        trace.statement("uVar7 = uVar7 + 0x20;");
+                        trace.statement("*(ulonglong *)(puVar9 + 0x20) = uVar7;");
+                    }
+                    trace.statement("pvVar2 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar2;");
+                    if (trace.condition("if ((0xfff < (param_1[2] - (longlong)pvVar2 & 0xffffffffffffffe0)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("_Memory = (void *)(*pcVar3)(5);");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180224526;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar10;");
+                trace.statement("param_1[1] = uVar1 * 0x20 + uVar10;");
+                trace.statement("param_1[2] = uVar4 + uVar10;");
+                trace.statement("return lVar12 * 0x20 + uVar10;");
+            }
+        }
+        LAB_180224562: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180224360;
 }
 
@@ -9438,12 +15283,13 @@ DAT_1803edc30)F180224570D",
 126: if ((void *)0x1f < pvVar11) {
 139: return puVar1;
 142: LAB_18022480e:)F180224570F",
-    R"F180224570U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180224570U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18022480e.
-TODO: recover the declaration, type and value for global/data reference DAT_1803edc20.
-TODO: recover the declaration, type and value for global/data reference DAT_1803edc28.
-TODO: recover the declaration, type and value for global/data reference DAT_1803edc30.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022480e.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803edc20.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803edc28.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803edc30.
 TODO: resolve the indirect call in body 60: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 61: lVar9 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 127: pcVar2 = (code *)swi(0x29);.
@@ -9452,6 +15298,160 @@ TODO: resolve the indirect call in body 128: (*pcVar2)(5);.)F180224570U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180224570() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180224570", "FUN_180224570");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022480e.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803edc20.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803edc28.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803edc30.
+    // TODO: resolve the indirect call in body 60: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 61: lVar9 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 127: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 128: (*pcVar2)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232240", reinterpret_cast<const void*>(&image::FUN_180232240));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803edc20", static_cast<const void*>(&image::DAT_1803edc20));
+    trace.data_ref("DAT_1803edc28", static_cast<const void*>(&image::DAT_1803edc28));
+    trace.data_ref("DAT_1803edc30", static_cast<const void*>(&image::DAT_1803edc30));
+    // body sha256: 4882ec725a0197197f779a3e5cdc638b31bf7f2a8fb58536fd95971cbc14f7ef
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_180224570(undefined8 param_1,void *param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined4 *puVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("undefined4 uVar3;");
+            trace.statement("undefined4 uVar4;");
+            trace.statement("undefined4 uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("void *pvVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("void *pvVar11;");
+            trace.statement("undefined1 *puVar12;");
+            trace.statement("undefined1 *puVar13;");
+            trace.statement("longlong lVar14;");
+            trace.statement("undefined4 *puVar15;");
+            trace.statement("undefined4 *puVar16;");
+            trace.statement("undefined4 *puVar17;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar13 = auStack_88;");
+            trace.statement("puVar12 = auStack_88;");
+            trace.statement("lVar9 = ((longlong)DAT_1803edc28 - (longlong)DAT_1803edc20 >> 3) * -0x3333333333333333;");
+            if (trace.condition("if (lVar9 == 0x666666666666666)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar7 = ((longlong)DAT_1803edc30 - (longlong)DAT_1803edc20 >> 3) * -0x3333333333333333;");
+            trace.statement("uVar6 = 0x666666666666666 - (uVar7 >> 1);");
+            if (trace.condition("if (uVar7 < uVar6 || uVar7 - uVar6 == 0)")) {
+                trace.statement("lVar14 = (longlong)param_2 - (longlong)DAT_1803edc20;");
+                trace.statement("uVar6 = lVar9 + 1;");
+                trace.statement("uVar7 = uVar7 + (uVar7 >> 1);");
+                trace.statement("uVar10 = uVar6;");
+                if (trace.condition("if (uVar6 <= uVar7)")) {
+                    trace.statement("uVar10 = uVar7;");
+                }
+                if (trace.condition("if (uVar10 < 0x666666666666667)")) {
+                    trace.statement("uVar7 = uVar10 * 0x28;");
+                    trace.statement("puVar15 = (undefined4 *)0x0;");
+                    if (trace.condition("if (uVar7 != 0)")) {
+                        if (trace.condition("if (uVar7 < 0x1000)")) {
+                            trace.statement("puVar15 = (undefined4 *)FUN_1802d8350(uVar7);");
+                            trace.statement("puVar13 = auStack_88;");
+                        } else {
+                        if (trace.condition("if (uVar7 + 0x27 <= uVar7) goto LAB_18022480e; lVar9 = FUN_1802d8350(); if (lVar9 == 0)")) {
+                            trace.statement("pcVar2 = (code *)swi(0x29);");
+                            trace.statement("lVar9 = (*pcVar2)(5);");
+                            trace.statement("puVar12 = auStack_80;");
+                        }
+                        trace.statement("puVar15 = (undefined4 *)(lVar9 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("*(longlong *)(puVar15 + -2) = lVar9;");
+                        trace.statement("puVar13 = puVar12;");
+                        }
+                    }
+                    trace.statement("puVar1 = puVar15 + (lVar14 / 0x28) * 10;");
+                    trace.statement("puVar16 = puVar1 + 10;");
+                    trace.statement("*(undefined4 ***)(puVar13 + 0x28) = &DAT_1803edc20;");
+                    trace.statement("*(undefined4 **)(puVar13 + 0x30) = puVar15;");
+                    trace.statement("*(ulonglong *)(puVar13 + 0x38) = uVar10;");
+                    trace.statement("*(undefined4 **)(puVar13 + 0x40) = puVar16;");
+                    trace.statement("*(undefined4 **)(puVar13 + 0x48) = puVar16;");
+                    trace.statement("*(undefined4 **)(puVar13 + 0x20) = puVar1;");
+                    trace.statement("*puVar1 = *param_3;");
+                    trace.statement("*(undefined8 *)(puVar1 + 2) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 4) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 6) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 8) = 0;");
+                    trace.statement("uVar3 = param_3[3];");
+                    trace.statement("uVar4 = param_3[4];");
+                    trace.statement("uVar5 = param_3[5];");
+                    trace.statement("puVar1[2] = param_3[2];");
+                    trace.statement("puVar1[3] = uVar3;");
+                    trace.statement("puVar1[4] = uVar4;");
+                    trace.statement("puVar1[5] = uVar5;");
+                    trace.statement("uVar3 = param_3[7];");
+                    trace.statement("uVar4 = param_3[8];");
+                    trace.statement("uVar5 = param_3[9];");
+                    trace.statement("puVar1[6] = param_3[6];");
+                    trace.statement("puVar1[7] = uVar3;");
+                    trace.statement("puVar1[8] = uVar4;");
+                    trace.statement("puVar1[9] = uVar5;");
+                    trace.statement("*(undefined8 *)(param_3 + 6) = 0;");
+                    trace.statement("*(undefined8 *)(param_3 + 8) = 0xf;");
+                    trace.statement("*(undefined1 *)(param_3 + 2) = 0;");
+                    trace.statement("*(undefined4 **)(puVar13 + 0x40) = puVar1;");
+                    trace.statement("pvVar8 = DAT_1803edc20;");
+                    trace.statement("puVar17 = puVar15;");
+                    if (trace.condition("if (param_2 != DAT_1803edc28)")) {
+                        trace.statement("*(undefined8 *)(puVar13 + -8) = 0x18022471a;");
+                        trace.statement("FUN_180232240(DAT_1803edc20,param_2,puVar15);");
+                        trace.statement("*(undefined4 **)(puVar13 + 0x40) = puVar15;");
+                        trace.statement("pvVar8 = param_2;");
+                        trace.statement("puVar17 = puVar16;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar13 + -8) = 0x180224731;");
+                    trace.statement("FUN_180232240(pvVar8,DAT_1803edc28,puVar17);");
+                    trace.statement("pvVar8 = DAT_1803edc28;");
+                    trace.statement("*(undefined8 *)(puVar13 + 0x30) = 0;");
+                    if (trace.condition("if (DAT_1803edc20 != (void *)0x0)")) {
+                        trace.statement("*(undefined4 **)(puVar13 + 0x20) = DAT_1803edc20;");
+                        trace.statement("pvVar11 = DAT_1803edc20;");
+                        while (trace.loop_condition("while (pvVar11 != pvVar8)")) {
+                            trace.statement("*(undefined8 *)(puVar13 + -8) = 0x180224760;");
+                            trace.statement("FUN_18020e450((longlong)pvVar11 + 8);");
+                            trace.statement("pvVar11 = (void *)((longlong)pvVar11 + 0x28);");
+                            trace.statement("*(void **)(puVar13 + 0x20) = pvVar11;");
+                        }
+                        trace.statement("pvVar8 = DAT_1803edc20;");
+                        if (trace.condition("if (0xfff < (ulonglong)(((longlong)DAT_1803edc30 - (longlong)DAT_1803edc20 >> 3) * 8))")) {
+                            trace.statement("pvVar8 = *(void **)((longlong)DAT_1803edc20 + -8);");
+                            trace.statement("pvVar11 = (void *)((longlong)DAT_1803edc20 + (-8 - (longlong)pvVar8));");
+                            if (trace.condition("if ((void *)0x1f < pvVar11)")) {
+                                trace.statement("pcVar2 = (code *)swi(0x29);");
+                                trace.statement("(*pcVar2)(5);");
+                                trace.statement("puVar13 = puVar13 + 8;");
+                                trace.statement("pvVar8 = pvVar11;");
+                            }
+                        }
+                        trace.statement("*(undefined8 *)(puVar13 + -8) = 0x1802247cc;");
+                        trace.statement("free(pvVar8);");
+                    }
+                    trace.statement("DAT_1803edc20 = puVar15;");
+                    trace.statement("DAT_1803edc28 = puVar15 + uVar6 * 10;");
+                    trace.statement("DAT_1803edc30 = puVar15 + uVar10 * 10;");
+                    trace.statement("return puVar1;");
+                }
+            }
+            LAB_18022480e: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x180224570;
 }
 
@@ -9610,9 +15610,10 @@ FUN_1802d8350)F180224820C",
 101: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar4 >> 3) * 8)) &&
 115: return puVar1;
 118: LAB_180224a3b:)F180224820F",
-    R"F180224820U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180224820U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180224a3b.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180224a3b.
 TODO: resolve the indirect call in body 62: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 63: lVar9 = (*pcVar5)(5);.
 TODO: resolve the indirect call in body 105: pcVar5 = (code *)swi(0x29);.
@@ -9621,6 +15622,124 @@ TODO: resolve the indirect call in body 106: (*pcVar5)();.)F180224820U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180224820() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180224820", "FUN_180224820");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180224a3b.
+    // TODO: resolve the indirect call in body 62: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 63: lVar9 = (*pcVar5)(5);.
+    // TODO: resolve the indirect call in body 105: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 106: (*pcVar5)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 752635970a95fa80d1a5c21d33ab7112d1f009f048540b4554086f2500aa6ed1
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180224820(longlong *param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("undefined8 *puVar3;");
+            trace.statement("void *pvVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("undefined8 uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar9;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("undefined1 *puVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined8 local_68;");
+            trace.statement("puVar10 = auStack_88;");
+            trace.statement("puVar11 = auStack_88;");
+            trace.statement("local_68 = param_3;");
+            trace.statement("lVar2 = *param_1;");
+            trace.statement("lVar9 = (param_1[1] - lVar2 >> 3) * -0x5555555555555555;");
+            if (trace.condition("if (lVar9 == 0xaaaaaaaaaaaaaaa)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar8 = (param_1[2] - lVar2 >> 3) * -0x5555555555555555;");
+            trace.statement("uVar7 = 0xaaaaaaaaaaaaaaa - (uVar8 >> 1);");
+            if (trace.condition("if (uVar8 < uVar7 || uVar8 - uVar7 == 0)")) {
+                trace.statement("uVar7 = lVar9 + 1;");
+                trace.statement("uVar8 = uVar8 + (uVar8 >> 1);");
+                trace.statement("uVar12 = uVar7;");
+                if (trace.condition("if (uVar7 <= uVar8)")) {
+                    trace.statement("uVar12 = uVar8;");
+                }
+                if (trace.condition("if (uVar12 < 0xaaaaaaaaaaaaaab)")) {
+                    trace.statement("uVar8 = uVar12 * 0x18;");
+                    if (trace.condition("if (uVar8 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar11 = auStack_88;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar8);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar8 + 0x27 <= uVar8) goto LAB_180224a3b; lVar9 = FUN_1802d8350(); if (lVar9 == 0)")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("lVar9 = (*pcVar5)(5);");
+                        trace.statement("puVar10 = auStack_80;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar9 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar9;");
+                    trace.statement("puVar11 = puVar10;");
+                }
+                trace.statement("puVar1 = _Dst_00 + (((longlong)param_2 - lVar2) / 0x18) * 3;");
+                trace.statement("_Dst = puVar1 + 3;");
+                trace.statement("*(longlong **)(puVar11 + 0x28) = param_1;");
+                trace.statement("*(undefined8 **)(puVar11 + 0x30) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar11 + 0x38) = uVar12;");
+                trace.statement("*(undefined8 **)(puVar11 + 0x40) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar11 + 0x48) = _Dst;");
+                trace.statement("puVar3 = *(undefined8 **)(puVar11 + 0x20);");
+                trace.statement("uVar6 = puVar3[1];");
+                trace.statement("*puVar1 = *puVar3;");
+                trace.statement("puVar1[1] = uVar6;");
+                trace.statement("puVar1[2] = puVar3[2];");
+                trace.statement("*(undefined8 **)(puVar11 + 0x40) = puVar1;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                    trace.statement("_Size = param_1[1] - (longlong)pvVar4;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = pvVar4;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180224984;");
+                trace.statement("memmove(_Dst_00,pvVar4,(longlong)param_2 - (longlong)pvVar4);");
+                trace.statement("*(undefined8 **)(puVar11 + 0x40) = _Dst_00;");
+                trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18022499b;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar11 + 0x30) = 0;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (pvVar4 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar4;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar4 >> 3) * 8)) && (_Memory = *(void **)((longlong)pvVar4 + -8), 0x1f < (ulonglong)((longlong)pvVar4 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar5)();");
+                        trace.statement("puVar11 = puVar11 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180224a03;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = (longlong)_Dst_00;");
+                trace.statement("param_1[1] = (longlong)(_Dst_00 + uVar7 * 3);");
+                trace.statement("param_1[2] = (longlong)(_Dst_00 + uVar12 * 3);");
+                trace.statement("return puVar1;");
+            }
+        }
+        LAB_180224a3b: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180224820;
 }
 
@@ -9825,12 +15944,13 @@ DAT_1803e9ee8)F180224a50D",
 142: if ((void *)0x1f < pvVar12) {
 155: return puVar1;
 158: LAB_180224d31:)F180224a50F",
-    R"F180224a50U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180224a50U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180224d31.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9ed8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9ee0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9ee8.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180224d31.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9ed8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9ee0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9ee8.
 TODO: resolve the indirect call in body 61: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 62: lVar10 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 143: pcVar2 = (code *)swi(0x29);.
@@ -9839,6 +15959,176 @@ TODO: resolve the indirect call in body 144: (*pcVar2)(5);.)F180224a50U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180224a50() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180224a50", "FUN_180224a50");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180224d31.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9ed8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9ee0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9ee8.
+    // TODO: resolve the indirect call in body 61: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 62: lVar10 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 143: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 144: (*pcVar2)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_1802322f0", reinterpret_cast<const void*>(&image::FUN_1802322f0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803e9ed8", static_cast<const void*>(&image::DAT_1803e9ed8));
+    trace.data_ref("DAT_1803e9ee0", static_cast<const void*>(&image::DAT_1803e9ee0));
+    trace.data_ref("DAT_1803e9ee8", static_cast<const void*>(&image::DAT_1803e9ee8));
+    // body sha256: a8a9d64819df4ccd688dffd0c57b3a0cbba953d91bc673aa4a89a648a15d8598
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_180224a50(undefined8 param_1,void *param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined4 *puVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("undefined4 uVar3;");
+            trace.statement("undefined4 uVar4;");
+            trace.statement("undefined4 uVar5;");
+            trace.statement("undefined8 uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("void *pvVar9;");
+            trace.statement("longlong lVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("void *pvVar12;");
+            trace.statement("undefined1 *puVar13;");
+            trace.statement("undefined1 *puVar14;");
+            trace.statement("longlong lVar15;");
+            trace.statement("undefined4 *puVar16;");
+            trace.statement("undefined4 *puVar17;");
+            trace.statement("undefined4 *puVar18;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [88];");
+            trace.statement("puVar14 = auStack_98;");
+            trace.statement("puVar13 = auStack_98;");
+            trace.statement("lVar10 = ((longlong)DAT_1803e9ee0 - (longlong)DAT_1803e9ed8 >> 3) * -0x71c71c71c71c71c7;");
+            if (trace.condition("if (lVar10 == 0x38e38e38e38e38e)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar8 = ((longlong)DAT_1803e9ee8 - (longlong)DAT_1803e9ed8 >> 3) * -0x71c71c71c71c71c7;");
+            trace.statement("uVar7 = 0x38e38e38e38e38e - (uVar8 >> 1);");
+            if (trace.condition("if (uVar8 < uVar7 || uVar8 - uVar7 == 0)")) {
+                trace.statement("lVar15 = (longlong)param_2 - (longlong)DAT_1803e9ed8;");
+                trace.statement("uVar7 = lVar10 + 1;");
+                trace.statement("uVar8 = (uVar8 >> 1) + uVar8;");
+                trace.statement("uVar11 = uVar7;");
+                if (trace.condition("if (uVar7 <= uVar8)")) {
+                    trace.statement("uVar11 = uVar8;");
+                }
+                if (trace.condition("if (uVar11 < 0x38e38e38e38e38f)")) {
+                    trace.statement("uVar8 = uVar11 * 0x48;");
+                    trace.statement("puVar16 = (undefined4 *)0x0;");
+                    if (trace.condition("if (uVar8 != 0)")) {
+                        if (trace.condition("if (uVar8 < 0x1000)")) {
+                            trace.statement("puVar16 = (undefined4 *)FUN_1802d8350(uVar8);");
+                            trace.statement("puVar14 = auStack_98;");
+                        } else {
+                        if (trace.condition("if (uVar8 + 0x27 <= uVar8) goto LAB_180224d31; lVar10 = FUN_1802d8350(); if (lVar10 == 0)")) {
+                            trace.statement("pcVar2 = (code *)swi(0x29);");
+                            trace.statement("lVar10 = (*pcVar2)(5);");
+                            trace.statement("puVar13 = auStack_90;");
+                        }
+                        trace.statement("puVar16 = (undefined4 *)(lVar10 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("*(longlong *)(puVar16 + -2) = lVar10;");
+                        trace.statement("puVar14 = puVar13;");
+                        }
+                    }
+                    trace.statement("puVar1 = puVar16 + (lVar15 / 0x48) * 0x12;");
+                    trace.statement("puVar17 = puVar1 + 0x12;");
+                    trace.statement("*(undefined4 ***)(puVar14 + 0x28) = &DAT_1803e9ed8;");
+                    trace.statement("*(undefined4 **)(puVar14 + 0x30) = puVar16;");
+                    trace.statement("*(ulonglong *)(puVar14 + 0x38) = uVar11;");
+                    trace.statement("*(undefined4 **)(puVar14 + 0x40) = puVar17;");
+                    trace.statement("*(undefined4 **)(puVar14 + 0x48) = puVar17;");
+                    trace.statement("*(undefined4 **)(puVar14 + 0x50) = puVar1;");
+                    trace.statement("*puVar1 = *param_3;");
+                    trace.statement("*(undefined8 *)(puVar1 + 2) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 4) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 6) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 8) = 0;");
+                    trace.statement("uVar6 = *(undefined8 *)(param_3 + 4);");
+                    trace.statement("*(undefined8 *)(puVar1 + 2) = *(undefined8 *)(param_3 + 2);");
+                    trace.statement("*(undefined8 *)(puVar1 + 4) = uVar6;");
+                    trace.statement("uVar6 = *(undefined8 *)(param_3 + 8);");
+                    trace.statement("*(undefined8 *)(puVar1 + 6) = *(undefined8 *)(param_3 + 6);");
+                    trace.statement("*(undefined8 *)(puVar1 + 8) = uVar6;");
+                    trace.statement("*(undefined8 *)(param_3 + 6) = 0;");
+                    trace.statement("*(undefined8 *)(param_3 + 8) = 0xf;");
+                    trace.statement("*(undefined1 *)(param_3 + 2) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 10) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 0xc) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 0xe) = 0;");
+                    trace.statement("*(undefined8 *)(puVar1 + 0x10) = 0;");
+                    trace.statement("uVar3 = param_3[0xb];");
+                    trace.statement("uVar4 = param_3[0xc];");
+                    trace.statement("uVar5 = param_3[0xd];");
+                    trace.statement("puVar1[10] = param_3[10];");
+                    trace.statement("puVar1[0xb] = uVar3;");
+                    trace.statement("puVar1[0xc] = uVar4;");
+                    trace.statement("puVar1[0xd] = uVar5;");
+                    trace.statement("uVar3 = param_3[0xf];");
+                    trace.statement("uVar4 = param_3[0x10];");
+                    trace.statement("uVar5 = param_3[0x11];");
+                    trace.statement("puVar1[0xe] = param_3[0xe];");
+                    trace.statement("puVar1[0xf] = uVar3;");
+                    trace.statement("puVar1[0x10] = uVar4;");
+                    trace.statement("puVar1[0x11] = uVar5;");
+                    trace.statement("*(undefined8 *)(param_3 + 0xe) = 0;");
+                    trace.statement("*(undefined8 *)(param_3 + 0x10) = 0xf;");
+                    trace.statement("*(undefined1 *)(param_3 + 10) = 0;");
+                    trace.statement("*(undefined4 **)(puVar14 + 0x40) = puVar1;");
+                    trace.statement("pvVar9 = DAT_1803e9ed8;");
+                    trace.statement("puVar18 = puVar16;");
+                    if (trace.condition("if (param_2 != DAT_1803e9ee0)")) {
+                        trace.statement("*(undefined8 *)(puVar14 + -8) = 0x180224c31;");
+                        trace.statement("FUN_1802322f0(DAT_1803e9ed8,param_2,puVar16);");
+                        trace.statement("*(undefined4 **)(puVar14 + 0x40) = puVar16;");
+                        trace.statement("pvVar9 = param_2;");
+                        trace.statement("puVar18 = puVar17;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar14 + -8) = 0x180224c48;");
+                    trace.statement("FUN_1802322f0(pvVar9,DAT_1803e9ee0,puVar18);");
+                    trace.statement("pvVar9 = DAT_1803e9ee0;");
+                    trace.statement("*(undefined8 *)(puVar14 + 0x30) = 0;");
+                    if (trace.condition("if (DAT_1803e9ed8 != (void *)0x0)")) {
+                        trace.statement("*(undefined4 **)(puVar14 + 0x20) = DAT_1803e9ed8;");
+                        trace.statement("pvVar12 = DAT_1803e9ed8;");
+                        while (trace.loop_condition("while (pvVar12 != pvVar9)")) {
+                            trace.statement("*(undefined8 *)(puVar14 + -8) = 0x180224c79;");
+                            trace.statement("FUN_18020e450((longlong)pvVar12 + 0x28);");
+                            trace.statement("*(undefined8 *)(puVar14 + -8) = 0x180224c83;");
+                            trace.statement("FUN_18020e450((longlong)pvVar12 + 8);");
+                            trace.statement("pvVar12 = (void *)((longlong)pvVar12 + 0x48);");
+                            trace.statement("*(void **)(puVar14 + 0x20) = pvVar12;");
+                        }
+                        trace.statement("pvVar9 = DAT_1803e9ed8;");
+                        if (trace.condition("if (0xfff < (ulonglong)(((longlong)DAT_1803e9ee8 - (longlong)DAT_1803e9ed8 >> 3) * 8))")) {
+                            trace.statement("pvVar9 = *(void **)((longlong)DAT_1803e9ed8 + -8);");
+                            trace.statement("pvVar12 = (void *)((longlong)DAT_1803e9ed8 + (-8 - (longlong)pvVar9));");
+                            if (trace.condition("if ((void *)0x1f < pvVar12)")) {
+                                trace.statement("pcVar2 = (code *)swi(0x29);");
+                                trace.statement("(*pcVar2)(5);");
+                                trace.statement("puVar14 = puVar14 + 8;");
+                                trace.statement("pvVar9 = pvVar12;");
+                            }
+                        }
+                        trace.statement("*(undefined8 *)(puVar14 + -8) = 0x180224cef;");
+                        trace.statement("free(pvVar9);");
+                    }
+                    trace.statement("DAT_1803e9ed8 = puVar16;");
+                    trace.statement("DAT_1803e9ee0 = puVar16 + uVar7 * 0x12;");
+                    trace.statement("DAT_1803e9ee8 = puVar16 + uVar11 * 0x12;");
+                    trace.statement("return puVar1;");
+                }
+            }
+            LAB_180224d31: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x180224a50;
 }
 
@@ -10015,9 +16305,10 @@ FUN_1802d8350)F180224d40C",
 115: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 4) << 4)) &&
 129: return lVar6 * 0x50 + uVar11;
 132: LAB_180224fd1:)F180224d40F",
-    R"F180224d40U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180224d40U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180224fd1.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180224fd1.
 TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 60: lVar6 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 119: pcVar3 = (code *)swi(0x29);.
@@ -10026,6 +16317,141 @@ TODO: resolve the indirect call in body 120: (*pcVar3)();.)F180224d40U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180224d40() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180224d40", "FUN_180224d40");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180224fd1.
+    // TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 60: lVar6 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 119: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 120: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_1802323d0", reinterpret_cast<const void*>(&image::FUN_1802323d0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 84bce982586d0ed0c4ca42102774ed293f7c7b6375f9571a2e37fee76cc4537d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180224d40(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined8 *puVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [32];");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("puVar10 = auStack_98;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("uVar8 = *param_1;");
+            trace.statement("lVar6 = ((longlong)(param_1[1] - uVar8) >> 4) * -0x3333333333333333;");
+            if (trace.condition("if (lVar6 == 0x333333333333333)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = ((longlong)(param_1[2] - uVar8) >> 4) * -0x3333333333333333;");
+            trace.statement("uVar4 = 0x333333333333333 - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar4 || uVar5 - uVar4 == 0)")) {
+                trace.statement("uVar4 = lVar6 + 1;");
+                trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+                trace.statement("uVar12 = uVar4;");
+                if (trace.condition("if (uVar4 <= uVar5)")) {
+                    trace.statement("uVar12 = uVar5;");
+                }
+                if (trace.condition("if (uVar12 < 0x333333333333334)")) {
+                    trace.statement("uVar5 = uVar12 * 0x50;");
+                    if (trace.condition("if (uVar5 == 0)")) {
+                        trace.statement("uVar11 = 0;");
+                        trace.statement("puVar10 = auStack_98;");
+                    } else {
+                    trace.statement("uVar11 = FUN_1802d8350(uVar5);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_180224fd1; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar3)(5);");
+                        trace.statement("puVar9 = auStack_90;");
+                    }
+                    trace.statement("uVar11 = lVar6 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar11 - 8) = lVar6;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("lVar6 = (longlong)(param_2 - uVar8) / 0x50;");
+                trace.statement("puVar7 = (undefined8 *)(lVar6 * 0x50 + uVar11);");
+                trace.statement("puVar1 = puVar7 + 10;");
+                trace.statement("*(undefined8 **)(puVar10 + 0x20) = puVar1;");
+                trace.statement("*(ulonglong **)(puVar10 + 0x30) = param_1;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar11;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar12;");
+                trace.statement("*(undefined8 **)(puVar10 + 0x48) = puVar1;");
+                trace.statement("*(undefined8 **)(puVar10 + 0x50) = puVar1;");
+                trace.statement("*(undefined8 **)(puVar10 + 0x58) = puVar7;");
+                trace.statement("puVar1 = *(undefined8 **)(puVar10 + 0x28);");
+                trace.statement("*puVar7 = *puVar1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180224e93;");
+                trace.statement("FUN_18016d4c0(puVar7 + 1,puVar1 + 1);");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180224ea1;");
+                trace.statement("FUN_18016d4c0(puVar7 + 5,puVar1 + 5);");
+                trace.statement("*(undefined1 *)(puVar7 + 9) = *(undefined1 *)(puVar1 + 9);");
+                trace.statement("*(undefined8 **)(puVar10 + 0x48) = puVar7;");
+                trace.statement("uVar8 = param_1[1];");
+                if (trace.condition("if (param_2 == uVar8)")) {
+                    trace.statement("param_2 = *param_1;");
+                    trace.statement("uVar12 = uVar11;");
+                } else {
+                trace.statement("uVar8 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180224ece;");
+                trace.statement("FUN_1802323d0(uVar8,param_2,uVar11,param_1);");
+                trace.statement("*(ulonglong *)(puVar10 + 0x48) = uVar11;");
+                trace.statement("uVar8 = param_1[1];");
+                trace.statement("uVar12 = *(ulonglong *)(puVar10 + 0x20);");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180224ee7;");
+                trace.statement("FUN_1802323d0(param_2,uVar8,uVar12,param_1);");
+                trace.statement("*(undefined8 *)(puVar10 + 0x38) = 0;");
+                trace.statement("uVar8 = *param_1;");
+                if (trace.condition("if (uVar8 != 0)")) {
+                    trace.statement("uVar12 = param_1[1];");
+                    trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    while (trace.loop_condition("while (uVar8 != uVar12)")) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180224f19;");
+                        trace.statement("FUN_18020e450(uVar8 + 0x28);");
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180224f23;");
+                        trace.statement("FUN_18020e450(uVar8 + 8);");
+                        trace.statement("uVar8 = uVar8 + 0x50;");
+                        trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    }
+                    trace.statement("pvVar2 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar2;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar3)();");
+                        trace.statement("puVar10 = puVar10 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180224f87;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar11;");
+                trace.statement("param_1[1] = uVar4 * 0x50 + uVar11;");
+                trace.statement("param_1[2] = uVar5 + uVar11;");
+                trace.statement("return lVar6 * 0x50 + uVar11;");
+            }
+        }
+        LAB_180224fd1: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180224d40;
 }
 
@@ -10202,9 +16628,10 @@ FUN_1802d8350)F180224fe0C",
 115: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 3) * 8)) &&
 129: return uVar10 + lVar12 * 0x48;
 132: LAB_180225261:)F180224fe0F",
-    R"F180224fe0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180224fe0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180225261.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180225261.
 TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 60: lVar6 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 119: pcVar3 = (code *)swi(0x29);.
@@ -10213,6 +16640,141 @@ TODO: resolve the indirect call in body 120: (*pcVar3)();.)F180224fe0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180224fe0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180224fe0", "FUN_180224fe0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180225261.
+    // TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 60: lVar6 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 119: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 120: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_1802324b0", reinterpret_cast<const void*>(&image::FUN_1802324b0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: b5901294a11ca165ae4c44f6c042a3990fe3399472a0c5b1014f6669b62c2fd7
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180224fe0(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [32];");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("uVar7 = *param_1;");
+            trace.statement("lVar6 = ((longlong)(param_1[1] - uVar7) >> 3) * -0x71c71c71c71c71c7;");
+            if (trace.condition("if (lVar6 == 0x38e38e38e38e38e)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = ((longlong)(param_1[2] - uVar7) >> 3) * -0x71c71c71c71c71c7;");
+            trace.statement("uVar4 = 0x38e38e38e38e38e - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar4 || uVar5 - uVar4 == 0)")) {
+                trace.statement("uVar4 = lVar6 + 1;");
+                trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+                trace.statement("uVar11 = uVar4;");
+                if (trace.condition("if (uVar4 <= uVar5)")) {
+                    trace.statement("uVar11 = uVar5;");
+                }
+                if (trace.condition("if (uVar11 < 0x38e38e38e38e38f)")) {
+                    trace.statement("uVar5 = uVar11 * 0x48;");
+                    if (trace.condition("if (uVar5 == 0)")) {
+                        trace.statement("uVar10 = 0;");
+                        trace.statement("puVar9 = auStack_98;");
+                    } else {
+                    trace.statement("uVar10 = FUN_1802d8350(uVar5);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_180225261; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar3)(5);");
+                        trace.statement("puVar8 = auStack_90;");
+                    }
+                    trace.statement("uVar10 = lVar6 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar10 - 8) = lVar6;");
+                    trace.statement("puVar9 = puVar8;");
+                }
+                trace.statement("lVar6 = (longlong)(param_2 - uVar7) / 0x12 + ((longlong)(param_2 - uVar7) >> 0x3f);");
+                trace.statement("lVar12 = (lVar6 >> 2) - (lVar6 >> 0x3f);");
+                trace.statement("lVar1 = uVar10 + lVar12 * 0x48;");
+                trace.statement("lVar6 = lVar1 + 0x48;");
+                trace.statement("*(longlong *)(puVar9 + 0x20) = lVar6;");
+                trace.statement("*(ulonglong **)(puVar9 + 0x30) = param_1;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x38) = uVar10;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x40) = uVar11;");
+                trace.statement("*(longlong *)(puVar9 + 0x48) = lVar6;");
+                trace.statement("*(longlong *)(puVar9 + 0x50) = lVar6;");
+                trace.statement("*(longlong *)(puVar9 + 0x58) = lVar1;");
+                trace.statement("lVar6 = *(longlong *)(puVar9 + 0x28);");
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x18022512c;");
+                trace.statement("FUN_18016d4c0(lVar1,lVar6);");
+                trace.statement("*(undefined8 *)(lVar1 + 0x20) = *(undefined8 *)(lVar6 + 0x20);");
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180225142;");
+                trace.statement("FUN_18016d4c0(lVar1 + 0x28,lVar6 + 0x28);");
+                trace.statement("*(longlong *)(puVar9 + 0x48) = lVar1;");
+                trace.statement("uVar7 = param_1[1];");
+                if (trace.condition("if (param_2 == uVar7)")) {
+                    trace.statement("param_2 = *param_1;");
+                    trace.statement("uVar11 = uVar10;");
+                } else {
+                trace.statement("uVar7 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180225167;");
+                trace.statement("FUN_1802324b0(uVar7,param_2,uVar10,param_1);");
+                trace.statement("*(ulonglong *)(puVar9 + 0x48) = uVar10;");
+                trace.statement("uVar7 = param_1[1];");
+                trace.statement("uVar11 = *(ulonglong *)(puVar9 + 0x20);");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180225180;");
+                trace.statement("FUN_1802324b0(param_2,uVar7,uVar11,param_1);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x38) = 0;");
+                trace.statement("uVar7 = *param_1;");
+                if (trace.condition("if (uVar7 != 0)")) {
+                    trace.statement("uVar11 = param_1[1];");
+                    trace.statement("*(ulonglong *)(puVar9 + 0x20) = uVar7;");
+                    while (trace.loop_condition("while (uVar7 != uVar11)")) {
+                        trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802251ac;");
+                        trace.statement("FUN_18020e450(uVar7 + 0x28);");
+                        trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802251b5;");
+                        trace.statement("FUN_18020e450(uVar7);");
+                        trace.statement("uVar7 = uVar7 + 0x48;");
+                        trace.statement("*(ulonglong *)(puVar9 + 0x20) = uVar7;");
+                    }
+                    trace.statement("pvVar2 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar2;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 3) * 8)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar3)();");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x18022521d;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar10;");
+                trace.statement("param_1[1] = uVar10 + uVar4 * 0x48;");
+                trace.statement("param_1[2] = uVar5 + uVar10;");
+                trace.statement("return uVar10 + lVar12 * 0x48;");
+            }
+        }
+        LAB_180225261: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180224fe0;
 }
 
@@ -10384,12 +16946,13 @@ DAT_1803e9e58)F180225270D",
 108: if ((void *)0x1f < pvVar8) {
 121: return lVar11;
 124: LAB_1802254f0:)F180225270F",
-    R"F180225270U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180225270U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802254f0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9e48.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9e50.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9e58.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802254f0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9e48.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9e50.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9e58.
 TODO: resolve the indirect call in body 58: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 59: lVar6 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 109: pcVar2 = (code *)swi(0x29);.
@@ -10398,6 +16961,142 @@ TODO: resolve the indirect call in body 110: (*pcVar2)(5);.)F180225270U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180225270() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180225270", "FUN_180225270");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802254f0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9e48.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9e50.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9e58.
+    // TODO: resolve the indirect call in body 58: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 59: lVar6 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 109: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 110: (*pcVar2)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232590", reinterpret_cast<const void*>(&image::FUN_180232590));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803e9e48", static_cast<const void*>(&image::DAT_1803e9e48));
+    trace.data_ref("DAT_1803e9e50", static_cast<const void*>(&image::DAT_1803e9e50));
+    trace.data_ref("DAT_1803e9e58", static_cast<const void*>(&image::DAT_1803e9e58));
+    // body sha256: 68d8e0b77eb60b6983511d02ad4dfc8600b0c2dfed67ca177b955cb27b272c2a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180225270(undefined8 param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("void *pvVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("void *pvVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("longlong lVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [24];");
+            trace.statement("undefined8 local_78;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("puVar10 = auStack_98;");
+            trace.statement("local_78 = param_3;");
+            trace.statement("lVar6 = ((longlong)DAT_1803e9e50 - (longlong)DAT_1803e9e48 >> 3) * 0x6db6db6db6db6db7;");
+            if (trace.condition("if (lVar6 == 0x492492492492492)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = (DAT_1803e9e58 - (longlong)DAT_1803e9e48 >> 3) * 0x6db6db6db6db6db7;");
+            trace.statement("uVar3 = 0x492492492492492 - (uVar4 >> 1);");
+            if (trace.condition("if (uVar4 < uVar3 || uVar4 - uVar3 == 0)")) {
+                trace.statement("lVar11 = (longlong)param_2 - (longlong)DAT_1803e9e48;");
+                trace.statement("uVar3 = lVar6 + 1;");
+                trace.statement("uVar4 = uVar4 + (uVar4 >> 1);");
+                trace.statement("uVar7 = uVar3;");
+                if (trace.condition("if (uVar3 <= uVar4)")) {
+                    trace.statement("uVar7 = uVar4;");
+                }
+                if (trace.condition("if (uVar7 < 0x492492492492493)")) {
+                    trace.statement("uVar4 = uVar7 * 0x38;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("uVar12 = 0;");
+                        trace.statement("puVar10 = auStack_98;");
+                    } else {
+                    trace.statement("uVar12 = FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_1802254f0; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar2)(5);");
+                        trace.statement("puVar9 = auStack_90;");
+                    }
+                    trace.statement("uVar12 = lVar6 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar12 - 8) = lVar6;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("lVar11 = (lVar11 / 0x38) * 0x38 + uVar12;");
+                trace.statement("uVar1 = lVar11 + 0x38;");
+                trace.statement("*(void ***)(puVar10 + 0x28) = &DAT_1803e9e48;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x30) = uVar12;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar7;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar1;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x48) = uVar1;");
+                trace.statement("*(longlong *)(puVar10 + 0x50) = lVar11;");
+                trace.statement("lVar6 = *(longlong *)(puVar10 + 0x20);");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802253b2;");
+                trace.statement("FUN_18016d4c0(lVar11,lVar6);");
+                trace.statement("*(undefined4 *)(lVar11 + 0x20) = *(undefined4 *)(lVar6 + 0x20);");
+                trace.statement("*(undefined4 *)(lVar11 + 0x24) = *(undefined4 *)(lVar6 + 0x24);");
+                trace.statement("*(undefined8 *)(lVar11 + 0x28) = *(undefined8 *)(lVar6 + 0x28);");
+                trace.statement("*(undefined8 *)(lVar11 + 0x30) = *(undefined8 *)(lVar6 + 0x30);");
+                trace.statement("*(longlong *)(puVar10 + 0x40) = lVar11;");
+                trace.statement("pvVar5 = DAT_1803e9e48;");
+                trace.statement("uVar7 = uVar12;");
+                if (trace.condition("if (param_2 != DAT_1803e9e50)")) {
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225403;");
+                    trace.statement("FUN_180232590(DAT_1803e9e48,param_2,uVar12,&DAT_1803e9e48);");
+                    trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar12;");
+                    trace.statement("pvVar5 = param_2;");
+                    trace.statement("uVar7 = uVar1;");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18022541d;");
+                trace.statement("FUN_180232590(pvVar5,DAT_1803e9e50,uVar7,&DAT_1803e9e48);");
+                trace.statement("pvVar5 = DAT_1803e9e50;");
+                trace.statement("*(undefined8 *)(puVar10 + 0x30) = 0;");
+                if (trace.condition("if (DAT_1803e9e48 != (void *)0x0)")) {
+                    trace.statement("*(void **)(puVar10 + 0x20) = DAT_1803e9e48;");
+                    trace.statement("pvVar8 = DAT_1803e9e48;");
+                    while (trace.loop_condition("while (pvVar8 != pvVar5)")) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18022544b;");
+                        trace.statement("FUN_18020e450(pvVar8);");
+                        trace.statement("pvVar8 = (void *)((longlong)pvVar8 + 0x38);");
+                        trace.statement("*(void **)(puVar10 + 0x20) = pvVar8;");
+                    }
+                    trace.statement("pvVar5 = DAT_1803e9e48;");
+                    if (trace.condition("if (0xfff < (ulonglong)((DAT_1803e9e58 - (longlong)DAT_1803e9e48 >> 3) * 8))")) {
+                        trace.statement("pvVar5 = *(void **)((longlong)DAT_1803e9e48 + -8);");
+                        trace.statement("pvVar8 = (void *)((longlong)DAT_1803e9e48 + (-8 - (longlong)pvVar5));");
+                        if (trace.condition("if ((void *)0x1f < pvVar8)")) {
+                            trace.statement("pcVar2 = (code *)swi(0x29);");
+                            trace.statement("(*pcVar2)(5);");
+                            trace.statement("puVar10 = puVar10 + 8;");
+                            trace.statement("pvVar5 = pvVar8;");
+                        }
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802254af;");
+                    trace.statement("free(pvVar5);");
+                }
+                trace.statement("DAT_1803e9e48 = (void *)uVar12;");
+                trace.statement("DAT_1803e9e50 = (void *)(uVar3 * 0x38 + uVar12);");
+                trace.statement("DAT_1803e9e58 = uVar4 + uVar12;");
+                trace.statement("return lVar11;");
+            }
+        }
+        LAB_1802254f0: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180225270;
 }
 
@@ -10551,12 +17250,13 @@ DAT_1803ea2a0)F180225500D",
 93: if ((0xfff < (ulonglong)(((longlong)DAT_1803ea2a0 - (longlong)DAT_1803ea290 >> 3) * 8)) &&
 107: return puVar1;
 110: LAB_180225735:)F180225500F",
-    R"F180225500U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180225500U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180225735.
-TODO: recover the declaration, type and value for global/data reference DAT_1803ea290.
-TODO: recover the declaration, type and value for global/data reference DAT_1803ea298.
-TODO: recover the declaration, type and value for global/data reference DAT_1803ea2a0.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180225735.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803ea290.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803ea298.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803ea2a0.
 TODO: resolve the indirect call in body 57: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 58: lVar7 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 97: pcVar2 = (code *)swi(0x29);.
@@ -10565,6 +17265,122 @@ TODO: resolve the indirect call in body 98: (*pcVar2)();.)F180225500U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180225500() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180225500", "FUN_180225500");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180225735.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803ea290.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803ea298.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803ea2a0.
+    // TODO: resolve the indirect call in body 57: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 58: lVar7 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 97: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 98: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803ea290", static_cast<const void*>(&image::DAT_1803ea290));
+    trace.data_ref("DAT_1803ea298", static_cast<const void*>(&image::DAT_1803ea298));
+    trace.data_ref("DAT_1803ea2a0", static_cast<const void*>(&image::DAT_1803ea2a0));
+    // body sha256: c4e816fb2c03f3c7936eef3853be8452a71259be5d5877ca3033d255d530c781
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180225500(undefined8 param_1,void *param_2,undefined8 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("void *pvVar6;");
+            trace.statement("longlong lVar7;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [80];");
+            trace.statement("pvVar6 = DAT_1803ea290;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("lVar7 = ((longlong)DAT_1803ea298 - (longlong)DAT_1803ea290 >> 3) * -0x5555555555555555;");
+            if (trace.condition("if (lVar7 == 0xaaaaaaaaaaaaaaa)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = ((longlong)DAT_1803ea2a0 - (longlong)DAT_1803ea290 >> 3) * -0x5555555555555555;");
+            trace.statement("uVar4 = 0xaaaaaaaaaaaaaaa - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar4 || uVar5 - uVar4 == 0)")) {
+                trace.statement("uVar4 = lVar7 + 1;");
+                trace.statement("uVar5 = (uVar5 >> 1) + uVar5;");
+                trace.statement("uVar10 = uVar4;");
+                if (trace.condition("if (uVar4 <= uVar5)")) {
+                    trace.statement("uVar10 = uVar5;");
+                }
+                if (trace.condition("if (uVar10 < 0xaaaaaaaaaaaaaab)")) {
+                    trace.statement("uVar5 = uVar10 * 0x18;");
+                    if (trace.condition("if (uVar5 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar9 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar5);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_180225735; lVar7 = FUN_1802d8350(); if (lVar7 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar7 = (*pcVar2)(5);");
+                        trace.statement("puVar8 = auStack_90;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar7 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar7;");
+                    trace.statement("puVar9 = puVar8;");
+                }
+                trace.statement("puVar1 = _Dst_00 + (((longlong)param_2 - (longlong)pvVar6) / 0x18) * 3;");
+                trace.statement("_Dst = puVar1 + 3;");
+                trace.statement("*(undefined8 ***)(puVar9 + 0x20) = &DAT_1803ea290;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x28) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x30) = uVar10;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = _Dst;");
+                trace.statement("uVar3 = param_3[1];");
+                trace.statement("*puVar1 = *param_3;");
+                trace.statement("puVar1[1] = uVar3;");
+                trace.statement("puVar1[2] = param_3[2];");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = puVar1;");
+                if (trace.condition("if (param_2 == DAT_1803ea298)")) {
+                    trace.statement("_Size = (longlong)DAT_1803ea298 - (longlong)DAT_1803ea290;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = DAT_1803ea290;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180225671;");
+                trace.statement("memmove(_Dst_00,DAT_1803ea290,(longlong)param_2 - (longlong)DAT_1803ea290);");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = _Dst_00;");
+                trace.statement("_Size = (longlong)DAT_1803ea298 - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x18022568b;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x28) = 0;");
+                if (trace.condition("if (DAT_1803ea290 != (void *)0x0)")) {
+                    trace.statement("pvVar6 = DAT_1803ea290;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_1803ea2a0 - (longlong)DAT_1803ea290 >> 3) * 8)) && (pvVar6 = *(void **)((longlong)DAT_1803ea290 + -8), 0x1f < (ulonglong)((longlong)DAT_1803ea290 + (-8 - (longlong)pvVar6))))")) {
+                        trace.statement("pvVar6 = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802256fa;");
+                    trace.statement("free(pvVar6);");
+                }
+                trace.statement("DAT_1803ea290 = _Dst_00;");
+                trace.statement("DAT_1803ea298 = _Dst_00 + uVar4 * 3;");
+                trace.statement("DAT_1803ea2a0 = _Dst_00 + uVar10 * 3;");
+                trace.statement("return puVar1;");
+            }
+        }
+        LAB_180225735: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180225500;
 }
 
@@ -10723,12 +17539,13 @@ DAT_1803e9c00)F180225740D",
 98: if ((0xfff < (ulonglong)(((longlong)DAT_1803e9c00 - (longlong)DAT_1803e9bf0 >> 4) << 4)) &&
 112: return puVar10;
 115: LAB_18022597b:)F180225740F",
-    R"F180225740U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180225740U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18022597b.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9bf0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9bf8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9c00.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022597b.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9bf0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9bf8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9c00.
 TODO: resolve the indirect call in body 57: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 58: lVar6 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 102: pcVar1 = (code *)swi(0x29);.
@@ -10737,6 +17554,127 @@ TODO: resolve the indirect call in body 103: (*pcVar1)();.)F180225740U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180225740() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180225740", "FUN_180225740");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022597b.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9bf0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9bf8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9c00.
+    // TODO: resolve the indirect call in body 57: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 58: lVar6 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 102: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 103: (*pcVar1)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803e9bf0", static_cast<const void*>(&image::DAT_1803e9bf0));
+    trace.data_ref("DAT_1803e9bf8", static_cast<const void*>(&image::DAT_1803e9bf8));
+    trace.data_ref("DAT_1803e9c00", static_cast<const void*>(&image::DAT_1803e9c00));
+    // body sha256: b8acccfbaead11084855069eac1f0cd98814d48cf52e23b5544058f159df62a3
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180225740(undefined8 param_1,void *param_2,undefined8 *param_3)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("undefined8 uVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("void *pvVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 *puVar10;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [80];");
+            trace.statement("pvVar5 = DAT_1803e9bf0;");
+            trace.statement("puVar7 = auStack_98;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("lVar6 = ((longlong)DAT_1803e9bf8 - (longlong)DAT_1803e9bf0 >> 4) * -0x5555555555555555;");
+            if (trace.condition("if (lVar6 == 0x555555555555555)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = ((longlong)DAT_1803e9c00 - (longlong)DAT_1803e9bf0 >> 4) * -0x5555555555555555;");
+            trace.statement("uVar3 = 0x555555555555555 - (uVar4 >> 1);");
+            if (trace.condition("if (uVar4 < uVar3 || uVar4 - uVar3 == 0)")) {
+                trace.statement("uVar3 = lVar6 + 1;");
+                trace.statement("uVar4 = (uVar4 >> 1) + uVar4;");
+                trace.statement("uVar9 = uVar3;");
+                if (trace.condition("if (uVar3 <= uVar4)")) {
+                    trace.statement("uVar9 = uVar4;");
+                }
+                if (trace.condition("if (uVar9 < 0x555555555555556)")) {
+                    trace.statement("uVar4 = uVar9 * 0x30;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar8 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_18022597b; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar1)(5);");
+                        trace.statement("puVar7 = auStack_90;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar6 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar6;");
+                    trace.statement("puVar8 = puVar7;");
+                }
+                trace.statement("puVar10 = _Dst_00 + (((longlong)param_2 - (longlong)pvVar5) / 0x30) * 6;");
+                trace.statement("_Dst = puVar10 + 6;");
+                trace.statement("*(undefined8 ***)(puVar8 + 0x20) = &DAT_1803e9bf0;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x28) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar9;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x40) = _Dst;");
+                trace.statement("uVar2 = param_3[1];");
+                trace.statement("*puVar10 = *param_3;");
+                trace.statement("puVar10[1] = uVar2;");
+                trace.statement("uVar2 = param_3[3];");
+                trace.statement("puVar10[2] = param_3[2];");
+                trace.statement("puVar10[3] = uVar2;");
+                trace.statement("uVar2 = param_3[5];");
+                trace.statement("puVar10[4] = param_3[4];");
+                trace.statement("puVar10[5] = uVar2;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = puVar10;");
+                if (trace.condition("if (param_2 == DAT_1803e9bf8)")) {
+                    trace.statement("_Size = (longlong)DAT_1803e9bf8 - (longlong)DAT_1803e9bf0;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = DAT_1803e9bf0;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x1802258b8;");
+                trace.statement("memmove(_Dst_00,DAT_1803e9bf0,(longlong)param_2 - (longlong)DAT_1803e9bf0);");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst_00;");
+                trace.statement("_Size = (longlong)DAT_1803e9bf8 - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x1802258d2;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar8 + 0x28) = 0;");
+                if (trace.condition("if (DAT_1803e9bf0 != (void *)0x0)")) {
+                    trace.statement("pvVar5 = DAT_1803e9bf0;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_1803e9c00 - (longlong)DAT_1803e9bf0 >> 4) << 4)) && (pvVar5 = *(void **)((longlong)DAT_1803e9bf0 + -8), 0x1f < (ulonglong)((longlong)DAT_1803e9bf0 + (-8 - (longlong)pvVar5))))")) {
+                        trace.statement("pvVar5 = (void *)0x5;");
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar1)();");
+                        trace.statement("puVar8 = puVar8 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18022593d;");
+                    trace.statement("free(pvVar5);");
+                }
+                trace.statement("DAT_1803e9bf0 = _Dst_00;");
+                trace.statement("DAT_1803e9bf8 = _Dst_00 + uVar3 * 6;");
+                trace.statement("DAT_1803e9c00 = _Dst_00 + uVar9 * 6;");
+                trace.statement("return puVar10;");
+            }
+        }
+        LAB_18022597b: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180225740;
 }
 
@@ -10902,12 +17840,13 @@ DAT_1803eb388)F180225990D",
 102: if ((void *)0x1f < pvVar8) {
 115: return lVar6;
 118: LAB_180225bed:)F180225990F",
-    R"F180225990U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180225990U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180225bed.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb378.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb380.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb388.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180225bed.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb378.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb380.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb388.
 TODO: resolve the indirect call in body 58: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 59: lVar6 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 103: pcVar2 = (code *)swi(0x29);.
@@ -10916,6 +17855,136 @@ TODO: resolve the indirect call in body 104: (*pcVar2)(5);.)F180225990U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180225990() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180225990", "FUN_180225990");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180225bed.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb378.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb380.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb388.
+    // TODO: resolve the indirect call in body 58: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 59: lVar6 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 103: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 104: (*pcVar2)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232650", reinterpret_cast<const void*>(&image::FUN_180232650));
+    trace.call_target("FUN_1802326f0", reinterpret_cast<const void*>(&image::FUN_1802326f0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803eb378", static_cast<const void*>(&image::DAT_1803eb378));
+    trace.data_ref("DAT_1803eb380", static_cast<const void*>(&image::DAT_1803eb380));
+    trace.data_ref("DAT_1803eb388", static_cast<const void*>(&image::DAT_1803eb388));
+    // body sha256: 9ab1e6e02c9614a401925e48bde15c72b4abac1013a85904419559654dd4e0f4
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180225990(undefined8 param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("void *pvVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("void *pvVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("longlong lVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined8 local_68;");
+            trace.statement("puVar9 = auStack_88;");
+            trace.statement("puVar10 = auStack_88;");
+            trace.statement("local_68 = param_3;");
+            trace.statement("lVar6 = ((longlong)DAT_1803eb380 - (longlong)DAT_1803eb378 >> 4) * 0x6db6db6db6db6db7;");
+            if (trace.condition("if (lVar6 == 0x249249249249249)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = (DAT_1803eb388 - (longlong)DAT_1803eb378 >> 4) * 0x6db6db6db6db6db7;");
+            trace.statement("uVar3 = 0x249249249249249 - (uVar4 >> 1);");
+            if (trace.condition("if (uVar4 < uVar3 || uVar4 - uVar3 == 0)")) {
+                trace.statement("lVar11 = (longlong)param_2 - (longlong)DAT_1803eb378;");
+                trace.statement("uVar3 = lVar6 + 1;");
+                trace.statement("uVar4 = uVar4 + (uVar4 >> 1);");
+                trace.statement("uVar7 = uVar3;");
+                if (trace.condition("if (uVar3 <= uVar4)")) {
+                    trace.statement("uVar7 = uVar4;");
+                }
+                if (trace.condition("if (uVar7 < 0x24924924924924a)")) {
+                    trace.statement("uVar4 = uVar7 * 0x70;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("uVar12 = 0;");
+                        trace.statement("puVar10 = auStack_88;");
+                    } else {
+                    trace.statement("uVar12 = FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_180225bed; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar2)(5);");
+                        trace.statement("puVar9 = auStack_80;");
+                    }
+                    trace.statement("uVar12 = lVar6 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar12 - 8) = lVar6;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("lVar6 = (lVar11 / 0x70) * 0x70 + uVar12;");
+                trace.statement("uVar1 = lVar6 + 0x70;");
+                trace.statement("*(void ***)(puVar10 + 0x28) = &DAT_1803eb378;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x30) = uVar12;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar7;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar1;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x48) = uVar1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225aca;");
+                trace.statement("FUN_180232650(-(lVar11 >> 0x3f),lVar6,*(undefined8 *)(puVar10 + 0x20));");
+                trace.statement("*(longlong *)(puVar10 + 0x40) = lVar6;");
+                trace.statement("pvVar5 = DAT_1803eb378;");
+                trace.statement("uVar7 = uVar12;");
+                if (trace.condition("if (param_2 != DAT_1803eb380)")) {
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225afc;");
+                    trace.statement("FUN_1802326f0(DAT_1803eb378,param_2,uVar12,&DAT_1803eb378);");
+                    trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar12;");
+                    trace.statement("pvVar5 = param_2;");
+                    trace.statement("uVar7 = uVar1;");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225b16;");
+                trace.statement("FUN_1802326f0(pvVar5,DAT_1803eb380,uVar7,&DAT_1803eb378);");
+                trace.statement("pvVar5 = DAT_1803eb380;");
+                trace.statement("*(undefined8 *)(puVar10 + 0x30) = 0;");
+                if (trace.condition("if (DAT_1803eb378 != (void *)0x0)")) {
+                    trace.statement("*(void **)(puVar10 + 0x20) = DAT_1803eb378;");
+                    trace.statement("pvVar8 = DAT_1803eb378;");
+                    while (trace.loop_condition("while (pvVar8 != pvVar5)")) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225b48;");
+                        trace.statement("FUN_18020e450(pvVar8);");
+                        trace.statement("pvVar8 = (void *)((longlong)pvVar8 + 0x70);");
+                        trace.statement("*(void **)(puVar10 + 0x20) = pvVar8;");
+                    }
+                    trace.statement("pvVar5 = DAT_1803eb378;");
+                    if (trace.condition("if (0xfff < (ulonglong)((DAT_1803eb388 - (longlong)DAT_1803eb378 >> 4) * 0x10))")) {
+                        trace.statement("pvVar5 = *(void **)((longlong)DAT_1803eb378 + -8);");
+                        trace.statement("pvVar8 = (void *)((longlong)DAT_1803eb378 + (-8 - (longlong)pvVar5));");
+                        if (trace.condition("if ((void *)0x1f < pvVar8)")) {
+                            trace.statement("pcVar2 = (code *)swi(0x29);");
+                            trace.statement("(*pcVar2)(5);");
+                            trace.statement("puVar10 = puVar10 + 8;");
+                            trace.statement("pvVar5 = pvVar8;");
+                        }
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225bac;");
+                    trace.statement("free(pvVar5);");
+                }
+                trace.statement("DAT_1803eb378 = (void *)uVar12;");
+                trace.statement("DAT_1803eb380 = (void *)(uVar3 * 0x70 + uVar12);");
+                trace.statement("DAT_1803eb388 = uVar4 + uVar12;");
+                trace.statement("return lVar6;");
+            }
+        }
+        LAB_180225bed: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180225990;
 }
 
@@ -11075,9 +18144,10 @@ FUN_1802d8350)F180225c00C",
 103: if ((0xfff < (param_1[2] - (longlong)pvVar4 & 0xffffffffffffffe0U)) &&
 116: return puVar1;
 119: LAB_180225dc7:)F180225c00F",
-    R"F180225c00U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180225c00U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180225dc7.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180225dc7.
 TODO: resolve the indirect call in body 61: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 62: lVar10 = (*pcVar5)(5);.
 TODO: resolve the indirect call in body 106: pcVar5 = (code *)swi(0x29);.
@@ -11086,6 +18156,125 @@ TODO: resolve the indirect call in body 107: _Memory = (void *)(*pcVar5)(5);.)F1
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180225c00() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180225c00", "FUN_180225c00");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180225dc7.
+    // TODO: resolve the indirect call in body 61: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 62: lVar10 = (*pcVar5)(5);.
+    // TODO: resolve the indirect call in body 106: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 107: _Memory = (void *)(*pcVar5)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 2d9e4d1a24d936cb5b941c2c62c2cd3582b01163189700dce15314aca7cc125e
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180225c00(longlong *param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("undefined8 *puVar3;");
+            trace.statement("void *pvVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("undefined8 uVar6;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("longlong lVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("size_t _Size;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined8 local_68;");
+            trace.statement("puVar8 = auStack_88;");
+            trace.statement("puVar9 = auStack_88;");
+            trace.statement("local_68 = param_3;");
+            trace.statement("lVar2 = *param_1;");
+            trace.statement("lVar10 = param_1[1] - lVar2 >> 5;");
+            if (trace.condition("if (lVar10 == 0x7ffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar7 = param_1[2] - lVar2 >> 5;");
+            if (trace.condition("if (uVar7 <= 0x7ffffffffffffff - (uVar7 >> 1))")) {
+                trace.statement("uVar11 = lVar10 + 1;");
+                trace.statement("uVar7 = uVar7 + (uVar7 >> 1);");
+                trace.statement("uVar12 = uVar11;");
+                if (trace.condition("if (uVar11 <= uVar7)")) {
+                    trace.statement("uVar12 = uVar7;");
+                }
+                if (trace.condition("if (uVar12 < 0x800000000000000)")) {
+                    trace.statement("uVar7 = uVar12 * 0x20;");
+                    if (trace.condition("if (uVar7 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar9 = auStack_88;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar7);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar7 + 0x27 <= uVar7) goto LAB_180225dc7; lVar10 = FUN_1802d8350(); if (lVar10 == 0)")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("lVar10 = (*pcVar5)(5);");
+                        trace.statement("puVar8 = auStack_80;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar10 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar10;");
+                    trace.statement("puVar9 = puVar8;");
+                }
+                trace.statement("puVar1 = (undefined8 *)(((longlong)param_2 - lVar2 & 0xffffffffffffffe0U) + (longlong)_Dst_00)");
+                trace.statement(";");
+                trace.statement("_Dst = puVar1 + 4;");
+                trace.statement("*(longlong **)(puVar9 + 0x28) = param_1;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x30) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x38) = uVar12;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x48) = _Dst;");
+                trace.statement("puVar3 = *(undefined8 **)(puVar9 + 0x20);");
+                trace.statement("uVar6 = puVar3[1];");
+                trace.statement("*puVar1 = *puVar3;");
+                trace.statement("puVar1[1] = uVar6;");
+                trace.statement("uVar6 = puVar3[3];");
+                trace.statement("puVar1[2] = puVar3[2];");
+                trace.statement("puVar1[3] = uVar6;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = puVar1;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                    trace.statement("_Size = param_1[1] - (longlong)pvVar4;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = pvVar4;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180225d2e;");
+                trace.statement("memmove(_Dst_00,pvVar4,(longlong)param_2 - (longlong)pvVar4);");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = _Dst_00;");
+                trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180225d45;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x30) = 0;");
+                trace.statement("pvVar4 = (void *)*param_1;");
+                if (trace.condition("if (pvVar4 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar4;");
+                    if (trace.condition("if ((0xfff < (param_1[2] - (longlong)pvVar4 & 0xffffffffffffffe0U)) && (_Memory = *(void **)((longlong)pvVar4 + -8), 0x1f < (ulonglong)((longlong)pvVar4 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("_Memory = (void *)(*pcVar5)(5);");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180225d90;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = (longlong)_Dst_00;");
+                trace.statement("param_1[1] = (longlong)(_Dst_00 + uVar11 * 4);");
+                trace.statement("param_1[2] = (longlong)(_Dst_00 + uVar12 * 4);");
+                trace.statement("return puVar1;");
+            }
+        }
+        LAB_180225dc7: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180225c00;
 }
 
@@ -11257,9 +18446,10 @@ FUN_1802d8350)F180225dd0C",
 110: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 3) * 8)) &&
 124: return uVar11 + lVar4 * 0x28;
 127: LAB_180226034:)F180225dd0F",
-    R"F180225dd0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180225dd0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180226034.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180226034.
 TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 60: lVar7 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 114: pcVar3 = (code *)swi(0x29);.
@@ -11268,6 +18458,136 @@ TODO: resolve the indirect call in body 115: (*pcVar3)();.)F180225dd0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180225dd0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180225dd0", "FUN_180225dd0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180226034.
+    // TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 60: lVar7 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 114: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 115: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232800", reinterpret_cast<const void*>(&image::FUN_180232800));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 5e7d6bdadc0470b3b4175dd5c7345093f0b4b1d3d1cd6233aba538d5084c45fa
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180225dd0(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [32];");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("puVar10 = auStack_98;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("uVar8 = *param_1;");
+            trace.statement("lVar7 = ((longlong)(param_1[1] - uVar8) >> 3) * -0x3333333333333333;");
+            if (trace.condition("if (lVar7 == 0x666666666666666)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar6 = ((longlong)(param_1[2] - uVar8) >> 3) * -0x3333333333333333;");
+            trace.statement("uVar5 = 0x666666666666666 - (uVar6 >> 1);");
+            if (trace.condition("if (uVar6 < uVar5 || uVar6 - uVar5 == 0)")) {
+                trace.statement("uVar5 = lVar7 + 1;");
+                trace.statement("uVar6 = uVar6 + (uVar6 >> 1);");
+                trace.statement("uVar12 = uVar5;");
+                if (trace.condition("if (uVar5 <= uVar6)")) {
+                    trace.statement("uVar12 = uVar6;");
+                }
+                if (trace.condition("if (uVar12 < 0x666666666666667)")) {
+                    trace.statement("uVar6 = uVar12 * 0x28;");
+                    if (trace.condition("if (uVar6 == 0)")) {
+                        trace.statement("uVar11 = 0;");
+                        trace.statement("puVar10 = auStack_98;");
+                    } else {
+                    trace.statement("uVar11 = FUN_1802d8350(uVar6);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar6 + 0x27 <= uVar6) goto LAB_180226034; lVar7 = FUN_1802d8350(); if (lVar7 == 0)")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("lVar7 = (*pcVar3)(5);");
+                        trace.statement("puVar9 = auStack_90;");
+                    }
+                    trace.statement("uVar11 = lVar7 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar11 - 8) = lVar7;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("lVar4 = (longlong)(param_2 - uVar8) / 0x28;");
+                trace.statement("lVar1 = uVar11 + lVar4 * 0x28;");
+                trace.statement("lVar7 = lVar1 + 0x28;");
+                trace.statement("*(longlong *)(puVar10 + 0x20) = lVar7;");
+                trace.statement("*(ulonglong **)(puVar10 + 0x30) = param_1;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar11;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar12;");
+                trace.statement("*(longlong *)(puVar10 + 0x48) = lVar7;");
+                trace.statement("*(longlong *)(puVar10 + 0x50) = lVar7;");
+                trace.statement("*(longlong *)(puVar10 + 0x58) = lVar1;");
+                trace.statement("lVar7 = *(longlong *)(puVar10 + 0x28);");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225f15;");
+                trace.statement("FUN_18016d4c0(lVar1,lVar7);");
+                trace.statement("*(undefined4 *)(lVar1 + 0x20) = *(undefined4 *)(lVar7 + 0x20);");
+                trace.statement("*(longlong *)(puVar10 + 0x48) = lVar1;");
+                trace.statement("uVar8 = param_1[1];");
+                if (trace.condition("if (param_2 == uVar8)")) {
+                    trace.statement("param_2 = *param_1;");
+                    trace.statement("uVar12 = uVar11;");
+                } else {
+                trace.statement("uVar8 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225f41;");
+                trace.statement("FUN_180232800(uVar8,param_2,uVar11,param_1);");
+                trace.statement("*(ulonglong *)(puVar10 + 0x48) = uVar11;");
+                trace.statement("uVar8 = param_1[1];");
+                trace.statement("uVar12 = *(ulonglong *)(puVar10 + 0x20);");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225f5a;");
+                trace.statement("FUN_180232800(param_2,uVar8,uVar12,param_1);");
+                trace.statement("*(undefined8 *)(puVar10 + 0x38) = 0;");
+                trace.statement("uVar8 = *param_1;");
+                if (trace.condition("if (uVar8 != 0)")) {
+                    trace.statement("uVar12 = param_1[1];");
+                    trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    while (trace.loop_condition("while (uVar8 != uVar12)")) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225f88;");
+                        trace.statement("FUN_18020e450(uVar8);");
+                        trace.statement("uVar8 = uVar8 + 0x28;");
+                        trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    }
+                    trace.statement("pvVar2 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar2;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 3) * 8)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar3)();");
+                        trace.statement("puVar10 = puVar10 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180225ff0;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar11;");
+                trace.statement("param_1[1] = uVar11 + uVar5 * 0x28;");
+                trace.statement("param_1[2] = uVar6 + uVar11;");
+                trace.statement("return uVar11 + lVar4 * 0x28;");
+            }
+        }
+        LAB_180226034: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180225dd0;
 }
 
@@ -11306,12 +18626,29 @@ longlong FUN_180226040(longlong param_1,longlong param_2,longlong param_3)
     R"F180226040T()F180226040T",
     R"F180226040F(10: for (; param_2 != 0; param_2 = param_2 + -1) {
 15: return param_3;)F180226040F",
-    R"F180226040U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180226040U",
+    R"F180226040U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180226040U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180226040() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180226040", "FUN_180226040");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18023cb00", reinterpret_cast<const void*>(&image::FUN_18023cb00));
+    // body sha256: dc3595037f450007bfe2c4efd542a959b5f734a50e15d00e4a95a0308d73a140
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180226040(longlong param_1,longlong param_2,longlong param_3)");
+        {
+            for (auto loop = trace.loop("for (; param_2 != 0; param_2 = param_2 + -1)"); loop.next(); ) {
+                trace.statement("FUN_18023cb00(param_3,param_1);");
+                trace.statement("param_3 = param_3 + 0x50;");
+                trace.statement("param_1 = param_1 + 0x50;");
+            }
+            trace.statement("return param_3;");
+        }
     return kFunction_0x180226040;
 }
 
@@ -11480,9 +18817,10 @@ FUN_1802d8350)F1802260c0C",
 107: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar1) >> 4) << 4)) &&
 121: return lVar3 * 0x50 + uVar11;
 124: LAB_18022630e:)F1802260c0F",
-    R"F1802260c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802260c0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18022630e.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022630e.
 TODO: resolve the indirect call in body 59: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 60: lVar6 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 111: pcVar2 = (code *)swi(0x29);.
@@ -11491,6 +18829,133 @@ TODO: resolve the indirect call in body 112: (*pcVar2)();.)F1802260c0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802260c0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802260c0", "FUN_1802260c0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022630e.
+    // TODO: resolve the indirect call in body 59: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 60: lVar6 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 111: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 112: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_1802328a0", reinterpret_cast<const void*>(&image::FUN_1802328a0));
+    trace.call_target("FUN_18023cb00", reinterpret_cast<const void*>(&image::FUN_18023cb00));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 13616326506f626bb6b02e3794ac6022f7b8655fc3c66466a90eaf53a9fed514
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_1802260c0(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("void *pvVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar6;");
+            trace.statement("longlong lVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [32];");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("puVar10 = auStack_98;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("uVar8 = *param_1;");
+            trace.statement("lVar6 = ((longlong)(param_1[1] - uVar8) >> 4) * -0x3333333333333333;");
+            if (trace.condition("if (lVar6 == 0x333333333333333)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = ((longlong)(param_1[2] - uVar8) >> 4) * -0x3333333333333333;");
+            trace.statement("uVar4 = 0x333333333333333 - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar4 || uVar5 - uVar4 == 0)")) {
+                trace.statement("uVar4 = lVar6 + 1;");
+                trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+                trace.statement("uVar12 = uVar4;");
+                if (trace.condition("if (uVar4 <= uVar5)")) {
+                    trace.statement("uVar12 = uVar5;");
+                }
+                if (trace.condition("if (uVar12 < 0x333333333333334)")) {
+                    trace.statement("uVar5 = uVar12 * 0x50;");
+                    if (trace.condition("if (uVar5 == 0)")) {
+                        trace.statement("uVar11 = 0;");
+                        trace.statement("puVar10 = auStack_98;");
+                    } else {
+                    trace.statement("uVar11 = FUN_1802d8350(uVar5);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_18022630e; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar2)(5);");
+                        trace.statement("puVar9 = auStack_90;");
+                    }
+                    trace.statement("uVar11 = lVar6 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar11 - 8) = lVar6;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("lVar3 = (longlong)(param_2 - uVar8) / 0x50;");
+                trace.statement("lVar7 = lVar3 * 0x50 + uVar11;");
+                trace.statement("lVar6 = lVar7 + 0x50;");
+                trace.statement("*(longlong *)(puVar10 + 0x20) = lVar6;");
+                trace.statement("*(ulonglong **)(puVar10 + 0x30) = param_1;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar11;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar12;");
+                trace.statement("*(longlong *)(puVar10 + 0x48) = lVar6;");
+                trace.statement("*(longlong *)(puVar10 + 0x50) = lVar6;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802261fc;");
+                trace.statement("FUN_18023cb00(lVar7,*(undefined8 *)(puVar10 + 0x28));");
+                trace.statement("*(longlong *)(puVar10 + 0x48) = lVar7;");
+                trace.statement("uVar8 = param_1[1];");
+                if (trace.condition("if (param_2 == uVar8)")) {
+                    trace.statement("param_2 = *param_1;");
+                    trace.statement("uVar12 = uVar11;");
+                } else {
+                trace.statement("uVar8 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226220;");
+                trace.statement("FUN_1802328a0(uVar8,param_2,uVar11,param_1);");
+                trace.statement("*(ulonglong *)(puVar10 + 0x48) = uVar11;");
+                trace.statement("uVar8 = param_1[1];");
+                trace.statement("uVar12 = *(ulonglong *)(puVar10 + 0x20);");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226239;");
+                trace.statement("FUN_1802328a0(param_2,uVar8,uVar12,param_1);");
+                trace.statement("*(undefined8 *)(puVar10 + 0x38) = 0;");
+                trace.statement("uVar8 = *param_1;");
+                if (trace.condition("if (uVar8 != 0)")) {
+                    trace.statement("uVar12 = param_1[1];");
+                    trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    while (trace.loop_condition("while (uVar8 != uVar12)")) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226260;");
+                        trace.statement("FUN_18020e450(uVar8);");
+                        trace.statement("uVar8 = uVar8 + 0x50;");
+                        trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    }
+                    trace.statement("pvVar1 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar1;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar1) >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar1 + -8), 0x1f < (ulonglong)((longlong)pvVar1 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar10 = puVar10 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802262c4;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar11;");
+                trace.statement("param_1[1] = uVar4 * 0x50 + uVar11;");
+                trace.statement("param_1[2] = uVar5 + uVar11;");
+                trace.statement("return lVar3 * 0x50 + uVar11;");
+            }
+        }
+        LAB_18022630e: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x1802260c0;
 }
 
@@ -11535,12 +19000,33 @@ void FUN_180226320(undefined8 param_1,undefined8 param_2,longlong *param_3)
     R"F180226320T()F180226320T",
     R"F180226320F(14: while (cVar1 == '\0') {
 21: return;)F180226320F",
-    R"F180226320U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180226320U",
+    R"F180226320U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180226320U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180226320() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180226320", "FUN_180226320");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 2929982d92a2a3cd306d78837f79c00d6d5ddb6795f56587bfb34a2b81eeb703
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180226320(undefined8 param_1,undefined8 param_2,longlong *param_3)");
+        {
+            trace.statement("char cVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("cVar1 = *(char *)((longlong)param_3 + 0x19);");
+            while (trace.loop_condition("while (cVar1 == '\\0')")) {
+                trace.statement("FUN_180226320(param_1,param_2,param_3[2]);");
+                trace.statement("plVar2 = (longlong *)*param_3;");
+                trace.statement("free(param_3);");
+                trace.statement("param_3 = plVar2;");
+                trace.statement("cVar1 = *(char *)((longlong)plVar2 + 0x19);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x180226320;
 }
 
@@ -11714,9 +19200,10 @@ FUN_1802d8350)F180226370C",
 112: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 4) << 4)) &&
 126: return lVar6 * 0x30 + uVar11;
 129: LAB_1802265d7:)F180226370F",
-    R"F180226370U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180226370U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802265d7.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802265d7.
 TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 60: lVar6 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 116: pcVar3 = (code *)swi(0x29);.
@@ -11725,6 +19212,138 @@ TODO: resolve the indirect call in body 117: (*pcVar3)();.)F180226370U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180226370() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180226370", "FUN_180226370");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802265d7.
+    // TODO: resolve the indirect call in body 59: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 60: lVar6 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 116: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 117: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232980", reinterpret_cast<const void*>(&image::FUN_180232980));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: d36c161f9245c30c23e7a84931f10cb924b2c1064bf7bf5d3f8ee5962f759eba
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180226370(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("undefined4 *puVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined4 *puVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [32];");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("puVar10 = auStack_98;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("uVar8 = *param_1;");
+            trace.statement("lVar6 = ((longlong)(param_1[1] - uVar8) >> 4) * -0x5555555555555555;");
+            if (trace.condition("if (lVar6 == 0x555555555555555)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = ((longlong)(param_1[2] - uVar8) >> 4) * -0x5555555555555555;");
+            trace.statement("uVar4 = 0x555555555555555 - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar4 || uVar5 - uVar4 == 0)")) {
+                trace.statement("uVar4 = lVar6 + 1;");
+                trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+                trace.statement("uVar12 = uVar4;");
+                if (trace.condition("if (uVar4 <= uVar5)")) {
+                    trace.statement("uVar12 = uVar5;");
+                }
+                if (trace.condition("if (uVar12 < 0x555555555555556)")) {
+                    trace.statement("uVar5 = uVar12 * 0x30;");
+                    if (trace.condition("if (uVar5 == 0)")) {
+                        trace.statement("uVar11 = 0;");
+                        trace.statement("puVar10 = auStack_98;");
+                    } else {
+                    trace.statement("uVar11 = FUN_1802d8350(uVar5);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_1802265d7; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar3)(5);");
+                        trace.statement("puVar9 = auStack_90;");
+                    }
+                    trace.statement("uVar11 = lVar6 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar11 - 8) = lVar6;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("lVar6 = (longlong)(param_2 - uVar8) / 6 + ((longlong)(param_2 - uVar8) >> 0x3f);");
+                trace.statement("lVar6 = (lVar6 >> 3) - (lVar6 >> 0x3f);");
+                trace.statement("puVar7 = (undefined4 *)(lVar6 * 0x30 + uVar11);");
+                trace.statement("puVar1 = puVar7 + 0xc;");
+                trace.statement("*(undefined4 **)(puVar10 + 0x20) = puVar1;");
+                trace.statement("*(ulonglong **)(puVar10 + 0x30) = param_1;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar11;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar12;");
+                trace.statement("*(undefined4 **)(puVar10 + 0x48) = puVar1;");
+                trace.statement("*(undefined4 **)(puVar10 + 0x50) = puVar1;");
+                trace.statement("*(undefined4 **)(puVar10 + 0x58) = puVar7;");
+                trace.statement("puVar1 = *(undefined4 **)(puVar10 + 0x28);");
+                trace.statement("*puVar7 = *puVar1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802264bb;");
+                trace.statement("FUN_18016d4c0(puVar7 + 2,puVar1 + 2);");
+                trace.statement("puVar7[10] = puVar1[10];");
+                trace.statement("*(undefined4 **)(puVar10 + 0x48) = puVar7;");
+                trace.statement("uVar8 = param_1[1];");
+                if (trace.condition("if (param_2 == uVar8)")) {
+                    trace.statement("param_2 = *param_1;");
+                    trace.statement("uVar12 = uVar11;");
+                } else {
+                trace.statement("uVar8 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802264e7;");
+                trace.statement("FUN_180232980(uVar8,param_2,uVar11,param_1);");
+                trace.statement("*(ulonglong *)(puVar10 + 0x48) = uVar11;");
+                trace.statement("uVar8 = param_1[1];");
+                trace.statement("uVar12 = *(ulonglong *)(puVar10 + 0x20);");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226500;");
+                trace.statement("FUN_180232980(param_2,uVar8,uVar12,param_1);");
+                trace.statement("*(undefined8 *)(puVar10 + 0x38) = 0;");
+                trace.statement("uVar8 = *param_1;");
+                if (trace.condition("if (uVar8 != 0)")) {
+                    trace.statement("uVar12 = param_1[1];");
+                    trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    while (trace.loop_condition("while (uVar8 != uVar12)")) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226529;");
+                        trace.statement("FUN_18020e450(uVar8 + 8);");
+                        trace.statement("uVar8 = uVar8 + 0x30;");
+                        trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                    }
+                    trace.statement("pvVar2 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar2;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar3)();");
+                        trace.statement("puVar10 = puVar10 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18022658d;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar11;");
+                trace.statement("param_1[1] = uVar4 * 0x30 + uVar11;");
+                trace.statement("param_1[2] = uVar5 + uVar11;");
+                trace.statement("return lVar6 * 0x30 + uVar11;");
+            }
+        }
+        LAB_1802265d7: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180226370;
 }
 
@@ -11763,12 +19382,29 @@ longlong FUN_1802265e0(longlong param_1,longlong param_2,longlong param_3)
     R"F1802265e0T()F1802265e0T",
     R"F1802265e0F(10: for (; param_2 != 0; param_2 = param_2 + -1) {
 15: return param_3;)F1802265e0F",
-    R"F1802265e0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F1802265e0U",
+    R"F1802265e0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F1802265e0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802265e0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802265e0", "FUN_1802265e0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_1800fa910", reinterpret_cast<const void*>(&image::FUN_1800fa910));
+    // body sha256: 15a6af44f51c074c80de169ede24cf01a0952866f548aa3069de1df1b8bc2cb7
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_1802265e0(longlong param_1,longlong param_2,longlong param_3)");
+        {
+            for (auto loop = trace.loop("for (; param_2 != 0; param_2 = param_2 + -1)"); loop.next(); ) {
+                trace.statement("FUN_1800fa910(param_3,param_1);");
+                trace.statement("param_3 = param_3 + 0x70;");
+                trace.statement("param_1 = param_1 + 0x70;");
+            }
+            trace.statement("return param_3;");
+        }
     return kFunction_0x1802265e0;
 }
 
@@ -11967,15 +19603,170 @@ FUN_1802d8350)F180226660C",
 132: do {
 150: return uVar7 + lVar2 * 0x70;
 153: LAB_1802268b7:)F180226660F",
-    R"F180226660U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180226660U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802268b7.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802268b7.
 TODO: resolve the indirect call in body 71: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 72: lVar9 = (*pcVar1)(5);.)F180226660U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180226660() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180226660", "FUN_180226660");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802268b7.
+    // TODO: resolve the indirect call in body 71: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 72: lVar9 = (*pcVar1)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_1800fa860", reinterpret_cast<const void*>(&image::FUN_1800fa860));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_180237fc0", reinterpret_cast<const void*>(&image::FUN_180237fc0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 9203336ccd745cad8d5a11f357917fc7fdbd12eb3e58a2798ba947475df660f6
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180226660(longlong *param_1,longlong param_2,undefined8 param_3)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("longlong *plVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("undefined1 *puVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("undefined1 auStack_d8 [8];");
+            trace.statement("undefined1 auStack_d0 [24];");
+            trace.statement("ulonglong local_b8;");
+            trace.statement("ulonglong local_b0;");
+            trace.statement("ulonglong uStack_a8;");
+            trace.statement("longlong *local_a0;");
+            trace.statement("ulonglong local_98;");
+            trace.statement("ulonglong uStack_90;");
+            trace.statement("longlong *local_88;");
+            trace.statement("ulonglong local_80;");
+            trace.statement("ulonglong uStack_78;");
+            trace.statement("longlong *local_70;");
+            trace.statement("ulonglong local_68;");
+            trace.statement("longlong *local_60;");
+            trace.statement("ulonglong local_58;");
+            trace.statement("ulonglong local_50;");
+            trace.statement("ulonglong local_48;");
+            trace.statement("longlong local_40;");
+            trace.statement("puVar10 = auStack_d8;");
+            trace.statement("puVar11 = auStack_d8;");
+            trace.statement("lVar12 = *param_1;");
+            trace.statement("lVar9 = (param_1[1] - lVar12 >> 4) * 0x6db6db6db6db6db7;");
+            if (trace.condition("if (lVar9 == 0x249249249249249)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar7 = (param_1[2] - lVar12 >> 4) * 0x6db6db6db6db6db7;");
+            trace.statement("uVar6 = 0x249249249249249 - (uVar7 >> 1);");
+            if (trace.condition("if (uVar7 < uVar6 || uVar7 - uVar6 == 0)")) {
+                trace.statement("local_68 = lVar9 + 1;");
+                trace.statement("uVar7 = uVar7 + (uVar7 >> 1);");
+                trace.statement("uVar6 = local_68;");
+                if (trace.condition("if (local_68 <= uVar7)")) {
+                    trace.statement("uVar6 = uVar7;");
+                }
+                if (trace.condition("if (uVar6 < 0x24924924924924a)")) {
+                    trace.statement("uVar7 = uVar6 * 0x70;");
+                    if (trace.condition("if (uVar7 == 0)")) {
+                        trace.statement("uVar7 = 0;");
+                        trace.statement("puVar11 = auStack_d8;");
+                    } else {
+                    trace.statement("uVar7 = FUN_1802d8350();");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar7 + 0x27 <= uVar7) goto LAB_1802268b7; lVar9 = FUN_1802d8350(uVar7 + 0x27); if (lVar9 == 0)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("lVar9 = (*pcVar1)(5);");
+                        trace.statement("puVar10 = auStack_d0;");
+                    }
+                    trace.statement("uVar7 = lVar9 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar7 - 8) = lVar9;");
+                    trace.statement("puVar11 = puVar10;");
+                }
+                trace.statement("lVar2 = (param_2 - lVar12) / 0x70;");
+                trace.statement("uVar8 = lVar2 * 0x70 + uVar7;");
+                trace.statement("local_48 = uVar8 + 0x70;");
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18022678f;");
+                trace.statement("local_60 = param_1;");
+                trace.statement("local_58 = uVar7;");
+                trace.statement("local_50 = uVar6;");
+                trace.statement("local_40 = local_48;");
+                trace.statement("FUN_1800fa860(uVar8,param_3);");
+                trace.statement("lVar12 = param_1[1];");
+                trace.statement("lVar9 = *param_1;");
+                trace.statement("local_48 = uVar8;");
+                trace.statement("local_b8 = uVar7;");
+                trace.statement("uVar8 = uVar7;");
+                trace.statement("plVar5 = param_1;");
+                if (trace.condition("if (param_2 == lVar12)")) {
+                    trace.statement("uVar3 = uVar7;");
+                    trace.statement("local_b0 = uVar7;");
+                    trace.statement("uStack_a8 = uVar7;");
+                    trace.statement("local_a0 = param_1;");
+                    trace.statement("uVar4 = local_80;");
+                    if (trace.condition("if (lVar9 != lVar12)")) {
+                        do {
+                            trace.statement("*(undefined8 *)(puVar11 + -8) = 0x1802267ca;");
+                            trace.statement("uStack_a8 = uVar8;");
+                            trace.statement("FUN_1800fa860(uVar8);");
+                            trace.statement("uVar8 = uVar8 + 0x70;");
+                            trace.statement("lVar9 = lVar9 + 0x70;");
+                            trace.statement("uVar3 = uVar8;");
+                            trace.statement("uStack_a8 = uVar8;");
+                            trace.statement("uVar4 = local_80;");
+                        } while (trace.loop_condition("while (lVar9 != lVar12);"));
+                    }
+                } else {
+                for (auto loop = trace.loop("for (; local_88 = plVar5, local_98 = uVar8, uStack_90 = local_b8, lVar9 != param_2; lVar9 = lVar9 + 0x70)"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180226809;");
+                    trace.statement("FUN_1800fa860(local_b8);");
+                    trace.statement("local_b8 = local_b8 + 0x70;");
+                    trace.statement("uVar8 = local_98;");
+                    trace.statement("plVar5 = local_88;");
+                }
+                trace.statement("uVar8 = lVar2 * 0x70 + 0x70 + uVar7;");
+                trace.statement("lVar12 = param_1[1];");
+                trace.statement("uVar3 = local_b0;");
+                trace.statement("local_98 = local_b8;");
+                trace.statement("local_80 = uVar8;");
+                trace.statement("uVar4 = uVar8;");
+                trace.statement("uStack_78 = uVar8;");
+                trace.statement("local_70 = param_1;");
+                trace.statement("local_48 = uVar7;");
+                if (trace.condition("if (param_2 != lVar12)")) {
+                    do {
+                        trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18022685f;");
+                        trace.statement("uStack_78 = uVar8;");
+                        trace.statement("FUN_1800fa860(uVar8,param_2);");
+                        trace.statement("uVar8 = uVar8 + 0x70;");
+                        trace.statement("param_2 = param_2 + 0x70;");
+                        trace.statement("uVar3 = local_b0;");
+                        trace.statement("uVar4 = uVar8;");
+                        trace.statement("uStack_78 = uVar8;");
+                    } while (trace.loop_condition("while (param_2 != lVar12);"));
+                }
+                }
+                trace.statement("local_80 = uVar4;");
+                trace.statement("local_b0 = uVar3;");
+                trace.statement("local_58 = 0;");
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180226892;");
+                trace.statement("local_b8 = uVar8;");
+                trace.statement("FUN_180237fc0(param_1,uVar7,local_68,uVar6);");
+                trace.statement("return uVar7 + lVar2 * 0x70;");
+            }
+        }
+        LAB_1802268b7: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180226660;
 }
 
@@ -12183,9 +19974,10 @@ FUN_1802d8350)F1802268c0C",
 147: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar3 >> 3) * 8)) &&
 161: return puVar16 + lVar11 * 9;
 164: LAB_180226b77:)F1802268c0F",
-    R"F1802268c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802268c0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180226b77.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180226b77.
 TODO: resolve the indirect call in body 62: pcVar4 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 63: lVar11 = (*pcVar4)(5);.
 TODO: resolve the indirect call in body 151: pcVar4 = (code *)swi(0x29);.
@@ -12194,6 +19986,173 @@ TODO: resolve the indirect call in body 152: (*pcVar4)();.)F1802268c0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802268c0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802268c0", "FUN_1802268c0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180226b77.
+    // TODO: resolve the indirect call in body 62: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 63: lVar11 = (*pcVar4)(5);.
+    // TODO: resolve the indirect call in body 151: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 152: (*pcVar4)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232a30", reinterpret_cast<const void*>(&image::FUN_180232a30));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: e1411762eaa7ceea01a203ad60e6a034aa966e80ee43054940494b076b5028d6
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802268c0(longlong *param_1,longlong param_2,undefined8 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("void *pvVar3;");
+            trace.statement("code *pcVar4;");
+            trace.statement("undefined4 uVar5;");
+            trace.statement("undefined4 uVar6;");
+            trace.statement("undefined4 uVar7;");
+            trace.statement("undefined8 uVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("ulonglong uVar13;");
+            trace.statement("undefined1 *puVar14;");
+            trace.statement("undefined1 *puVar15;");
+            trace.statement("undefined8 *puVar16;");
+            trace.statement("undefined8 *puVar17;");
+            trace.statement("undefined8 uVar18;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [88];");
+            trace.statement("puVar15 = auStack_98;");
+            trace.statement("puVar14 = auStack_98;");
+            trace.statement("lVar12 = *param_1;");
+            trace.statement("lVar11 = (param_1[1] - lVar12 >> 3) * -0x71c71c71c71c71c7;");
+            if (trace.condition("if (lVar11 == 0x38e38e38e38e38e)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar10 = (param_1[2] - lVar12 >> 3) * -0x71c71c71c71c71c7;");
+            trace.statement("uVar9 = 0x38e38e38e38e38e - (uVar10 >> 1);");
+            if (trace.condition("if (uVar10 < uVar9 || uVar10 - uVar9 == 0)")) {
+                trace.statement("uVar9 = lVar11 + 1;");
+                trace.statement("uVar10 = (uVar10 >> 1) + uVar10;");
+                trace.statement("uVar13 = uVar9;");
+                if (trace.condition("if (uVar9 <= uVar10)")) {
+                    trace.statement("uVar13 = uVar10;");
+                }
+                if (trace.condition("if (uVar13 < 0x38e38e38e38e38f)")) {
+                    trace.statement("uVar10 = uVar13 * 0x48;");
+                    trace.statement("puVar16 = (undefined8 *)0x0;");
+                    if (trace.condition("if (uVar10 != 0)")) {
+                        if (trace.condition("if (uVar10 < 0x1000)")) {
+                            trace.statement("puVar16 = (undefined8 *)FUN_1802d8350(uVar10);");
+                            trace.statement("puVar15 = auStack_98;");
+                        } else {
+                        if (trace.condition("if (uVar10 + 0x27 <= uVar10) goto LAB_180226b77; lVar11 = FUN_1802d8350(); if (lVar11 == 0)")) {
+                            trace.statement("pcVar4 = (code *)swi(0x29);");
+                            trace.statement("lVar11 = (*pcVar4)(5);");
+                            trace.statement("puVar14 = auStack_90;");
+                        }
+                        trace.statement("puVar16 = (undefined8 *)(lVar11 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("puVar16[-1] = lVar11;");
+                        trace.statement("puVar15 = puVar14;");
+                        }
+                    }
+                    trace.statement("uVar18 = 0;");
+                    trace.statement("lVar12 = (param_2 - lVar12) / 0x12 + (param_2 - lVar12 >> 0x3f);");
+                    trace.statement("lVar11 = (lVar12 >> 2) - (lVar12 >> 0x3f);");
+                    trace.statement("puVar1 = puVar16 + lVar11 * 9;");
+                    trace.statement("puVar17 = puVar1 + 9;");
+                    trace.statement("*(longlong **)(puVar15 + 0x28) = param_1;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x30) = puVar16;");
+                    trace.statement("*(ulonglong *)(puVar15 + 0x38) = uVar13;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar17;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x48) = puVar17;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x50) = puVar1;");
+                    trace.statement("*puVar1 = 0;");
+                    trace.statement("puVar1[1] = 0;");
+                    trace.statement("puVar1[2] = 0;");
+                    trace.statement("puVar1[3] = 0;");
+                    trace.statement("uVar8 = param_3[1];");
+                    trace.statement("*puVar1 = *param_3;");
+                    trace.statement("puVar1[1] = uVar8;");
+                    trace.statement("uVar8 = param_3[3];");
+                    trace.statement("puVar1[2] = param_3[2];");
+                    trace.statement("puVar1[3] = uVar8;");
+                    trace.statement("param_3[2] = 0;");
+                    trace.statement("param_3[3] = 0xf;");
+                    trace.statement("*(undefined1 *)param_3 = 0;");
+                    trace.statement("*(undefined4 *)(puVar1 + 4) = *(undefined4 *)(param_3 + 4);");
+                    trace.statement("puVar1[5] = 0;");
+                    trace.statement("puVar1[6] = 0;");
+                    trace.statement("puVar1[7] = 0;");
+                    trace.statement("puVar1[8] = 0;");
+                    trace.statement("uVar5 = *(undefined4 *)((longlong)param_3 + 0x2c);");
+                    trace.statement("uVar6 = *(undefined4 *)(param_3 + 6);");
+                    trace.statement("uVar7 = *(undefined4 *)((longlong)param_3 + 0x34);");
+                    trace.statement("*(undefined4 *)(puVar1 + 5) = *(undefined4 *)(param_3 + 5);");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0x2c) = uVar5;");
+                    trace.statement("*(undefined4 *)(puVar1 + 6) = uVar6;");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0x34) = uVar7;");
+                    trace.statement("uVar5 = *(undefined4 *)((longlong)param_3 + 0x3c);");
+                    trace.statement("uVar6 = *(undefined4 *)(param_3 + 8);");
+                    trace.statement("uVar7 = *(undefined4 *)((longlong)param_3 + 0x44);");
+                    trace.statement("*(undefined4 *)(puVar1 + 7) = *(undefined4 *)(param_3 + 7);");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0x3c) = uVar5;");
+                    trace.statement("*(undefined4 *)(puVar1 + 8) = uVar6;");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0x44) = uVar7;");
+                    trace.statement("param_3[7] = 0;");
+                    trace.statement("param_3[8] = 0xf;");
+                    trace.statement("*(undefined1 *)(param_3 + 5) = 0;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar1;");
+                    trace.statement("lVar12 = param_1[1];");
+                    if (trace.condition("if (param_2 == lVar12)")) {
+                        trace.statement("param_2 = *param_1;");
+                        trace.statement("puVar17 = puVar16;");
+                    } else {
+                    trace.statement("lVar12 = *param_1;");
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180226a85;");
+                    trace.statement("FUN_180232a30(lVar12,param_2,puVar16,param_1);");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar16;");
+                    trace.statement("lVar12 = param_1[1];");
+                    }
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180226a9c;");
+                    trace.statement("FUN_180232a30(param_2,lVar12,puVar17,param_1);");
+                    trace.statement("*(undefined8 *)(puVar15 + 0x30) = uVar18;");
+                    trace.statement("lVar12 = *param_1;");
+                    if (trace.condition("if (lVar12 != 0)")) {
+                        trace.statement("lVar2 = param_1[1];");
+                        trace.statement("*(longlong *)(puVar15 + 0x20) = lVar12;");
+                        while (trace.loop_condition("while (lVar12 != lVar2)")) {
+                            trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180226ac9;");
+                            trace.statement("FUN_18020e450(lVar12 + 0x28);");
+                            trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180226ad2;");
+                            trace.statement("FUN_18020e450(lVar12);");
+                            trace.statement("lVar12 = lVar12 + 0x48;");
+                            trace.statement("*(longlong *)(puVar15 + 0x20) = lVar12;");
+                        }
+                        trace.statement("pvVar3 = (void *)*param_1;");
+                        trace.statement("_Memory = pvVar3;");
+                        if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar3 >> 3) * 8)) && (_Memory = *(void **)((longlong)pvVar3 + -8), 0x1f < (ulonglong)((longlong)pvVar3 + (-8 - (longlong)_Memory))))")) {
+                            trace.statement("_Memory = (void *)0x5;");
+                            trace.statement("pcVar4 = (code *)swi(0x29);");
+                            trace.statement("(*pcVar4)();");
+                            trace.statement("puVar15 = puVar15 + 8;");
+                        }
+                        trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180226b3a;");
+                        trace.statement("free(_Memory);");
+                    }
+                    trace.statement("*param_1 = (longlong)puVar16;");
+                    trace.statement("param_1[1] = (longlong)(puVar16 + uVar9 * 9);");
+                    trace.statement("param_1[2] = (longlong)(puVar16 + uVar13 * 9);");
+                    trace.statement("return puVar16 + lVar11 * 9;");
+                }
+            }
+            LAB_180226b77: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x1802268c0;
 }
 
@@ -12383,12 +20342,13 @@ DAT_1803eb438)F180226b80D",
 127: if ((void *)0x1f < pvVar10) {
 140: return puVar17;
 143: LAB_180226e28:)F180226b80F",
-    R"F180226b80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180226b80U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180226e28.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb428.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb430.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb438.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180226e28.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb428.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb430.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb438.
 TODO: resolve the indirect call in body 60: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 61: lVar8 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 128: pcVar1 = (code *)swi(0x29);.
@@ -12397,6 +20357,161 @@ TODO: resolve the indirect call in body 129: (*pcVar1)(5);.)F180226b80U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180226b80() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180226b80", "FUN_180226b80");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180226e28.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb428.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb430.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb438.
+    // TODO: resolve the indirect call in body 60: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 61: lVar8 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 128: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 129: (*pcVar1)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232980", reinterpret_cast<const void*>(&image::FUN_180232980));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803eb428", static_cast<const void*>(&image::DAT_1803eb428));
+    trace.data_ref("DAT_1803eb430", static_cast<const void*>(&image::DAT_1803eb430));
+    trace.data_ref("DAT_1803eb438", static_cast<const void*>(&image::DAT_1803eb438));
+    // body sha256: fd7537fabd1a9b679766d458e55b6ad71b1c3f62d65c728b001c1359a819e7d8
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_180226b80(undefined8 param_1,void *param_2,undefined4 *param_3)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("undefined4 uVar2;");
+            trace.statement("undefined4 uVar3;");
+            trace.statement("undefined4 uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("void *pvVar7;");
+            trace.statement("longlong lVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("void *pvVar10;");
+            trace.statement("undefined1 *puVar11;");
+            trace.statement("undefined1 *puVar12;");
+            trace.statement("undefined4 *puVar13;");
+            trace.statement("undefined4 *puVar14;");
+            trace.statement("undefined4 *puVar15;");
+            trace.statement("longlong lVar16;");
+            trace.statement("undefined4 *puVar17;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar12 = auStack_88;");
+            trace.statement("puVar11 = auStack_88;");
+            trace.statement("lVar8 = ((longlong)DAT_1803eb430 - (longlong)DAT_1803eb428 >> 4) * -0x5555555555555555;");
+            if (trace.condition("if (lVar8 == 0x555555555555555)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar6 = ((longlong)DAT_1803eb438 - (longlong)DAT_1803eb428 >> 4) * -0x5555555555555555;");
+            trace.statement("uVar5 = 0x555555555555555 - (uVar6 >> 1);");
+            if (trace.condition("if (uVar6 < uVar5 || uVar6 - uVar5 == 0)")) {
+                trace.statement("lVar16 = (longlong)param_2 - (longlong)DAT_1803eb428;");
+                trace.statement("uVar5 = lVar8 + 1;");
+                trace.statement("uVar6 = uVar6 + (uVar6 >> 1);");
+                trace.statement("uVar9 = uVar5;");
+                if (trace.condition("if (uVar5 <= uVar6)")) {
+                    trace.statement("uVar9 = uVar6;");
+                }
+                if (trace.condition("if (uVar9 < 0x555555555555556)")) {
+                    trace.statement("uVar6 = uVar9 * 0x30;");
+                    trace.statement("puVar13 = (undefined4 *)0x0;");
+                    if (trace.condition("if (uVar6 != 0)")) {
+                        if (trace.condition("if (uVar6 < 0x1000)")) {
+                            trace.statement("puVar13 = (undefined4 *)FUN_1802d8350(uVar6);");
+                            trace.statement("puVar12 = auStack_88;");
+                        } else {
+                        if (trace.condition("if (uVar6 + 0x27 <= uVar6) goto LAB_180226e28; lVar8 = FUN_1802d8350(); if (lVar8 == 0)")) {
+                            trace.statement("pcVar1 = (code *)swi(0x29);");
+                            trace.statement("lVar8 = (*pcVar1)(5);");
+                            trace.statement("puVar11 = auStack_80;");
+                        }
+                        trace.statement("puVar13 = (undefined4 *)(lVar8 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("*(longlong *)(puVar13 + -2) = lVar8;");
+                        trace.statement("puVar12 = puVar11;");
+                        }
+                    }
+                    trace.statement("puVar17 = puVar13 + (lVar16 / 0x30) * 0xc;");
+                    trace.statement("puVar14 = puVar17 + 0xc;");
+                    trace.statement("*(undefined4 ***)(puVar12 + 0x28) = &DAT_1803eb428;");
+                    trace.statement("*(undefined4 **)(puVar12 + 0x30) = puVar13;");
+                    trace.statement("*(ulonglong *)(puVar12 + 0x38) = uVar9;");
+                    trace.statement("*(undefined4 **)(puVar12 + 0x40) = puVar14;");
+                    trace.statement("*(undefined4 **)(puVar12 + 0x48) = puVar14;");
+                    trace.statement("*(undefined4 **)(puVar12 + 0x20) = puVar17;");
+                    trace.statement("*puVar17 = *param_3;");
+                    trace.statement("*(undefined8 *)(puVar17 + 2) = 0;");
+                    trace.statement("*(undefined8 *)(puVar17 + 4) = 0;");
+                    trace.statement("*(undefined8 *)(puVar17 + 6) = 0;");
+                    trace.statement("*(undefined8 *)(puVar17 + 8) = 0;");
+                    trace.statement("uVar2 = param_3[3];");
+                    trace.statement("uVar3 = param_3[4];");
+                    trace.statement("uVar4 = param_3[5];");
+                    trace.statement("puVar17[2] = param_3[2];");
+                    trace.statement("puVar17[3] = uVar2;");
+                    trace.statement("puVar17[4] = uVar3;");
+                    trace.statement("puVar17[5] = uVar4;");
+                    trace.statement("uVar2 = param_3[7];");
+                    trace.statement("uVar3 = param_3[8];");
+                    trace.statement("uVar4 = param_3[9];");
+                    trace.statement("puVar17[6] = param_3[6];");
+                    trace.statement("puVar17[7] = uVar2;");
+                    trace.statement("puVar17[8] = uVar3;");
+                    trace.statement("puVar17[9] = uVar4;");
+                    trace.statement("*(undefined8 *)(param_3 + 6) = 0;");
+                    trace.statement("*(undefined8 *)(param_3 + 8) = 0xf;");
+                    trace.statement("*(undefined1 *)(param_3 + 2) = 0;");
+                    trace.statement("puVar17[10] = param_3[10];");
+                    trace.statement("*(undefined4 **)(puVar12 + 0x40) = puVar17;");
+                    trace.statement("pvVar7 = DAT_1803eb428;");
+                    trace.statement("puVar15 = puVar13;");
+                    if (trace.condition("if (param_2 != DAT_1803eb430)")) {
+                        trace.statement("*(undefined8 *)(puVar12 + -8) = 0x180226d35;");
+                        trace.statement("FUN_180232980(DAT_1803eb428,param_2,puVar13);");
+                        trace.statement("*(undefined4 **)(puVar12 + 0x40) = puVar13;");
+                        trace.statement("pvVar7 = param_2;");
+                        trace.statement("puVar15 = puVar14;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar12 + -8) = 0x180226d4c;");
+                    trace.statement("FUN_180232980(pvVar7,DAT_1803eb430,puVar15);");
+                    trace.statement("pvVar7 = DAT_1803eb430;");
+                    trace.statement("*(undefined8 *)(puVar12 + 0x30) = 0;");
+                    if (trace.condition("if (DAT_1803eb428 != (void *)0x0)")) {
+                        trace.statement("*(undefined4 **)(puVar12 + 0x20) = DAT_1803eb428;");
+                        trace.statement("pvVar10 = DAT_1803eb428;");
+                        while (trace.loop_condition("while (pvVar10 != pvVar7)")) {
+                            trace.statement("*(undefined8 *)(puVar12 + -8) = 0x180226d7b;");
+                            trace.statement("FUN_18020e450((longlong)pvVar10 + 8);");
+                            trace.statement("pvVar10 = (void *)((longlong)pvVar10 + 0x30);");
+                            trace.statement("*(void **)(puVar12 + 0x20) = pvVar10;");
+                        }
+                        trace.statement("pvVar7 = DAT_1803eb428;");
+                        if (trace.condition("if (0xfff < (ulonglong)(((longlong)DAT_1803eb438 - (longlong)DAT_1803eb428 >> 4) << 4))")) {
+                            trace.statement("pvVar7 = *(void **)((longlong)DAT_1803eb428 + -8);");
+                            trace.statement("pvVar10 = (void *)((longlong)DAT_1803eb428 + (-8 - (longlong)pvVar7));");
+                            if (trace.condition("if ((void *)0x1f < pvVar10)")) {
+                                trace.statement("pcVar1 = (code *)swi(0x29);");
+                                trace.statement("(*pcVar1)(5);");
+                                trace.statement("puVar12 = puVar12 + 8;");
+                                trace.statement("pvVar7 = pvVar10;");
+                            }
+                        }
+                        trace.statement("*(undefined8 *)(puVar12 + -8) = 0x180226de3;");
+                        trace.statement("free(pvVar7);");
+                    }
+                    trace.statement("DAT_1803eb428 = puVar13;");
+                    trace.statement("DAT_1803eb430 = puVar13 + uVar5 * 0xc;");
+                    trace.statement("DAT_1803eb438 = puVar13 + uVar9 * 0xc;");
+                    trace.statement("return puVar17;");
+                }
+            }
+            LAB_180226e28: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x180226b80;
 }
 
@@ -12587,10 +20702,11 @@ LAB_1802270a6)F180226e30D",
 126: if (pvVar2 != (void *)0x0) {
 128: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 3) * lVar13 * 0x1868)) &&
 142: return lVar4 + uVar5;)F180226e30F",
-    R"F180226e30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180226e30U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180226f24.
-TODO: recover the declaration, type and value for global/data reference LAB_1802270a6.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180226f24.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802270a6.
 TODO: resolve the indirect call in body 70: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 71: lVar4 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 132: pcVar3 = (code *)swi(0x29);.
@@ -12599,6 +20715,151 @@ TODO: resolve the indirect call in body 133: (*pcVar3)();.)F180226e30U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180226e30() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180226e30", "FUN_180226e30");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180226f24.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802270a6.
+    // TODO: resolve the indirect call in body 70: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 71: lVar4 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 132: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 133: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_1800c4c90", reinterpret_cast<const void*>(&image::FUN_1800c4c90));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: fae07f8ef46f7b03de3ff7e9f0b8f8fa8f3d01a0692d4d86e418ec0bd975dbde
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180226e30(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("longlong lVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("void *_Memory;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("longlong lVar13;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar9 = auStack_88;");
+            trace.statement("puVar10 = auStack_88;");
+            trace.statement("uVar12 = *param_1;");
+            trace.statement("lVar4 = ((longlong)(param_1[1] - uVar12) >> 3) * -0x14fa6d7aeb597c3b;");
+            trace.statement("uVar11 = 0xa7d36bd75acbe;");
+            if (trace.condition("if (lVar4 == 0xa7d36bd75acbe)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar1 = lVar4 + 1;");
+            trace.statement("uVar6 = ((longlong)(param_1[2] - uVar12) >> 3) * -0x14fa6d7aeb597c3b;");
+            trace.statement("uVar5 = 0xa7d36bd75acbe - (uVar6 >> 1);");
+            if (trace.condition("if (uVar6 < uVar5 || uVar6 - uVar5 == 0)")) {
+                trace.statement("uVar6 = uVar6 + (uVar6 >> 1);");
+                trace.statement("uVar11 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar6)")) {
+                    trace.statement("uVar11 = uVar6;");
+                }
+                if (trace.condition("if (0xa7d36bd75acbe < uVar11)")) {
+                    LAB_1802270a6: ;
+                    trace.statement("FUN_180012fe0();");
+                }
+                trace.statement("uVar6 = uVar11 * 0x1868;");
+                if (trace.condition("if (uVar6 == 0)")) {
+                    trace.statement("uVar5 = 0;");
+                    trace.statement("puVar10 = auStack_88;");
+                    trace.statement("goto LAB_180226f24;");
+                }
+                if (trace.condition("if (uVar6 < 0x1000)")) {
+                    trace.statement("uVar5 = FUN_1802d8350(uVar6);");
+                    trace.statement("goto LAB_180226f24;");
+                }
+                trace.statement("uVar5 = uVar6 + 0x27;");
+                if (trace.condition("if (uVar5 <= uVar6) goto LAB_1802270a6; } else")) {
+                    trace.statement("uVar5 = 0xfffffffffffffd57;");
+                    trace.statement("uVar6 = 0xfffffffffffffd30;");
+                }
+                trace.statement("lVar4 = FUN_1802d8350(uVar5);");
+                if (trace.condition("if (lVar4 == 0)")) {
+                    trace.statement("pcVar3 = (code *)swi(0x29);");
+                    trace.statement("lVar4 = (*pcVar3)(5);");
+                    trace.statement("puVar9 = auStack_80;");
+                }
+                trace.statement("uVar5 = lVar4 + 0x27U & 0xffffffffffffffe0;");
+                trace.statement("*(longlong *)(uVar5 - 8) = lVar4;");
+                trace.statement("puVar10 = puVar9;");
+                LAB_180226f24: ;
+                trace.statement("lVar13 = -0x14fa6d7aeb597c3b;");
+                trace.statement("lVar4 = (param_2 - uVar12) +");
+                trace.statement("SUB168(SEXT816(-0x582c9428a5341e27) * SEXT816((longlong)(param_2 - uVar12)),8);");
+                trace.statement("lVar4 = (lVar4 >> 0xc) - (lVar4 >> 0x3f);");
+                trace.statement("lVar7 = lVar4 * 0x1868 + uVar5;");
+                trace.statement("*(ulonglong **)(puVar10 + 0x20) = param_1;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x28) = uVar5;");
+                trace.statement("*(ulonglong *)(puVar10 + 0x30) = uVar11;");
+                trace.statement("*(longlong *)(puVar10 + 0x38) = lVar7 + 0x1868;");
+                trace.statement("*(longlong *)(puVar10 + 0x40) = lVar7 + 0x1868;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226f7b;");
+                trace.statement("FUN_1800c4c90(lVar7,param_3);");
+                trace.statement("*(longlong *)(puVar10 + 0x38) = lVar7;");
+                trace.statement("uVar12 = param_1[1];");
+                trace.statement("uVar11 = *param_1;");
+                trace.statement("uVar8 = uVar5;");
+                if (trace.condition("if (param_2 == uVar12)")) {
+                    if (trace.condition("if (uVar11 != uVar12)")) {
+                        do {
+                            trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226f99;");
+                            trace.statement("FUN_1800c4c90(uVar8);");
+                            trace.statement("uVar8 = uVar8 + 0x1868;");
+                            trace.statement("uVar11 = uVar11 + 0x1868;");
+                        } while (trace.loop_condition("while (uVar11 != uVar12);"));
+                    }
+                    trace.statement("lVar4 = lVar4 * 0x1868;");
+                } else {
+                for (auto loop = trace.loop("for (; uVar11 != param_2; uVar11 = uVar11 + 0x1868)"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226fc5;");
+                    trace.statement("FUN_1800c4c90(uVar8);");
+                    trace.statement("uVar8 = uVar8 + 0x1868;");
+                }
+                trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar5;");
+                trace.statement("lVar4 = lVar4 * 0x1868;");
+                trace.statement("uVar12 = param_1[1];");
+                trace.statement("lVar7 = lVar4 + 0x1868 + uVar5;");
+                if (trace.condition("if (param_2 != uVar12)")) {
+                    do {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180226fff;");
+                        trace.statement("FUN_1800c4c90(lVar7,param_2);");
+                        trace.statement("lVar7 = lVar7 + 0x1868;");
+                        trace.statement("param_2 = param_2 + 0x1868;");
+                    } while (trace.loop_condition("while (param_2 != uVar12);"));
+                }
+                }
+                trace.statement("*(undefined8 *)(puVar10 + 0x28) = 0;");
+                trace.statement("pvVar2 = (void *)*param_1;");
+                if (trace.condition("if (pvVar2 != (void *)0x0)")) {
+                    trace.statement("_Memory = pvVar2;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar2) >> 3) * lVar13 * 0x1868)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar3 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar3)();");
+                        trace.statement("puVar10 = puVar10 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18022706b;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar5;");
+                trace.statement("param_1[1] = uVar1 * 0x1868 + uVar5;");
+                trace.statement("param_1[2] = uVar6 + uVar5;");
+                trace.statement("return lVar4 + uVar5;");
+            }
+        }
     return kFunction_0x180226e30;
 }
 
@@ -12763,12 +21024,13 @@ DAT_1803e9e18)F1802270b0D",
 104: if ((0xfff < (ulonglong)(((longlong)DAT_1803e9e18 - (longlong)DAT_1803e9e08 >> 4) << 4)) &&
 118: return puVar10;
 121: LAB_1802272ff:)F1802270b0F",
-    R"F1802270b0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802270b0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802272ff.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9e08.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9e10.
-TODO: recover the declaration, type and value for global/data reference DAT_1803e9e18.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802272ff.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9e08.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9e10.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803e9e18.
 TODO: resolve the indirect call in body 57: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 58: lVar6 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 108: pcVar1 = (code *)swi(0x29);.
@@ -12777,6 +21039,133 @@ TODO: resolve the indirect call in body 109: (*pcVar1)();.)F1802270b0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802270b0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802270b0", "FUN_1802270b0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802272ff.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9e08.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9e10.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803e9e18.
+    // TODO: resolve the indirect call in body 57: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 58: lVar6 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 108: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 109: (*pcVar1)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803e9e08", static_cast<const void*>(&image::DAT_1803e9e08));
+    trace.data_ref("DAT_1803e9e10", static_cast<const void*>(&image::DAT_1803e9e10));
+    trace.data_ref("DAT_1803e9e18", static_cast<const void*>(&image::DAT_1803e9e18));
+    // body sha256: ce8fd78d85e405517ea0118594a091281e53d80b442c66433c6d306015685307
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802270b0(undefined8 param_1,void *param_2,undefined8 *param_3)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("undefined8 uVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("void *pvVar5;");
+            trace.statement("longlong lVar6;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 *puVar10;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [80];");
+            trace.statement("pvVar5 = DAT_1803e9e08;");
+            trace.statement("puVar7 = auStack_98;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("lVar6 = ((longlong)DAT_1803e9e10 - (longlong)DAT_1803e9e08 >> 4) * -0x3333333333333333;");
+            if (trace.condition("if (lVar6 == 0x333333333333333)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = ((longlong)DAT_1803e9e18 - (longlong)DAT_1803e9e08 >> 4) * -0x3333333333333333;");
+            trace.statement("uVar3 = 0x333333333333333 - (uVar4 >> 1);");
+            if (trace.condition("if (uVar4 < uVar3 || uVar4 - uVar3 == 0)")) {
+                trace.statement("uVar3 = lVar6 + 1;");
+                trace.statement("uVar4 = (uVar4 >> 1) + uVar4;");
+                trace.statement("uVar9 = uVar3;");
+                if (trace.condition("if (uVar3 <= uVar4)")) {
+                    trace.statement("uVar9 = uVar4;");
+                }
+                if (trace.condition("if (uVar9 < 0x333333333333334)")) {
+                    trace.statement("uVar4 = uVar9 * 0x50;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar8 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_1802272ff; lVar6 = FUN_1802d8350(); if (lVar6 == 0)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("lVar6 = (*pcVar1)(5);");
+                        trace.statement("puVar7 = auStack_90;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar6 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar6;");
+                    trace.statement("puVar8 = puVar7;");
+                }
+                trace.statement("puVar10 = _Dst_00 + (((longlong)param_2 - (longlong)pvVar5) / 0x50) * 10;");
+                trace.statement("_Dst = puVar10 + 10;");
+                trace.statement("*(undefined8 ***)(puVar8 + 0x20) = &DAT_1803e9e08;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x28) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar9;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x40) = _Dst;");
+                trace.statement("uVar2 = param_3[1];");
+                trace.statement("*puVar10 = *param_3;");
+                trace.statement("puVar10[1] = uVar2;");
+                trace.statement("uVar2 = param_3[3];");
+                trace.statement("puVar10[2] = param_3[2];");
+                trace.statement("puVar10[3] = uVar2;");
+                trace.statement("uVar2 = param_3[5];");
+                trace.statement("puVar10[4] = param_3[4];");
+                trace.statement("puVar10[5] = uVar2;");
+                trace.statement("uVar2 = param_3[7];");
+                trace.statement("puVar10[6] = param_3[6];");
+                trace.statement("puVar10[7] = uVar2;");
+                trace.statement("uVar2 = param_3[9];");
+                trace.statement("puVar10[8] = param_3[8];");
+                trace.statement("puVar10[9] = uVar2;");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = puVar10;");
+                if (trace.condition("if (param_2 == DAT_1803e9e10)")) {
+                    trace.statement("_Size = (longlong)DAT_1803e9e10 - (longlong)DAT_1803e9e08;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = DAT_1803e9e08;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18022723c;");
+                trace.statement("memmove(_Dst_00,DAT_1803e9e08,(longlong)param_2 - (longlong)DAT_1803e9e08);");
+                trace.statement("*(undefined8 **)(puVar8 + 0x38) = _Dst_00;");
+                trace.statement("_Size = (longlong)DAT_1803e9e10 - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180227256;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar8 + 0x28) = 0;");
+                if (trace.condition("if (DAT_1803e9e08 != (void *)0x0)")) {
+                    trace.statement("pvVar5 = DAT_1803e9e08;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_1803e9e18 - (longlong)DAT_1803e9e08 >> 4) << 4)) && (pvVar5 = *(void **)((longlong)DAT_1803e9e08 + -8), 0x1f < (ulonglong)((longlong)DAT_1803e9e08 + (-8 - (longlong)pvVar5))))")) {
+                        trace.statement("pvVar5 = (void *)0x5;");
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar1)();");
+                        trace.statement("puVar8 = puVar8 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x1802272c1;");
+                    trace.statement("free(pvVar5);");
+                }
+                trace.statement("DAT_1803e9e08 = _Dst_00;");
+                trace.statement("DAT_1803e9e10 = _Dst_00 + uVar3 * 10;");
+                trace.statement("DAT_1803e9e18 = _Dst_00 + uVar9 * 10;");
+                trace.statement("return puVar10;");
+            }
+        }
+        LAB_1802272ff: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x1802270b0;
 }
 
@@ -12934,9 +21323,10 @@ FUN_1802d8350)F180227310C",
 100: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar8 >> 2) * 4)) &&
 114: return puVar1;
 117: LAB_180227527:)F180227310F",
-    R"F180227310U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180227310U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180227527.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180227527.
 TODO: resolve the indirect call in body 61: pcVar4 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 62: lVar10 = (*pcVar4)(5);.
 TODO: resolve the indirect call in body 104: pcVar4 = (code *)swi(0x29);.
@@ -12945,6 +21335,123 @@ TODO: resolve the indirect call in body 105: (*pcVar4)();.)F180227310U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180227310() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180227310", "FUN_180227310");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180227527.
+    // TODO: resolve the indirect call in body 61: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 62: lVar10 = (*pcVar4)(5);.
+    // TODO: resolve the indirect call in body 104: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 105: (*pcVar4)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 45b178ecec2a032caf86947a6ce476e5931f1078a4992d0d97b3d8fe5f0f0c0f
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180227310(longlong *param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("undefined8 *puVar3;");
+            trace.statement("code *pcVar4;");
+            trace.statement("undefined8 uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("void *pvVar8;");
+            trace.statement("void *pvVar9;");
+            trace.statement("longlong lVar10;");
+            trace.statement("void *_Dst;");
+            trace.statement("undefined1 *puVar11;");
+            trace.statement("undefined1 *puVar12;");
+            trace.statement("ulonglong uVar13;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined8 local_68;");
+            trace.statement("puVar11 = auStack_88;");
+            trace.statement("puVar12 = auStack_88;");
+            trace.statement("local_68 = param_3;");
+            trace.statement("lVar2 = *param_1;");
+            trace.statement("lVar10 = (param_1[1] - lVar2 >> 2) * -0x3333333333333333;");
+            if (trace.condition("if (lVar10 == 0xccccccccccccccc)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar7 = (param_1[2] - lVar2 >> 2) * -0x3333333333333333;");
+            trace.statement("uVar6 = 0xccccccccccccccc - (uVar7 >> 1);");
+            if (trace.condition("if (uVar7 < uVar6 || uVar7 - uVar6 == 0)")) {
+                trace.statement("uVar6 = lVar10 + 1;");
+                trace.statement("uVar7 = uVar7 + (uVar7 >> 1);");
+                trace.statement("uVar13 = uVar6;");
+                if (trace.condition("if (uVar6 <= uVar7)")) {
+                    trace.statement("uVar13 = uVar7;");
+                }
+                if (trace.condition("if (uVar13 < 0xccccccccccccccd)")) {
+                    trace.statement("uVar7 = uVar13 * 0x14;");
+                    if (trace.condition("if (uVar7 == 0)")) {
+                        trace.statement("_Dst = (void *)0x0;");
+                        trace.statement("puVar12 = auStack_88;");
+                    } else {
+                    trace.statement("_Dst = (void *)FUN_1802d8350(uVar7);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar7 + 0x27 <= uVar7) goto LAB_180227527; lVar10 = FUN_1802d8350(); if (lVar10 == 0)")) {
+                        trace.statement("pcVar4 = (code *)swi(0x29);");
+                        trace.statement("lVar10 = (*pcVar4)(5);");
+                        trace.statement("puVar11 = auStack_80;");
+                    }
+                    trace.statement("_Dst = (void *)(lVar10 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("*(longlong *)((longlong)_Dst - 8) = lVar10;");
+                    trace.statement("puVar12 = puVar11;");
+                }
+                trace.statement("puVar1 = (undefined8 *)((longlong)_Dst + (((longlong)param_2 - lVar2) / 0x14) * 0x14);");
+                trace.statement("pvVar8 = (void *)((longlong)puVar1 + 0x14);");
+                trace.statement("*(longlong **)(puVar12 + 0x28) = param_1;");
+                trace.statement("*(void **)(puVar12 + 0x30) = _Dst;");
+                trace.statement("*(ulonglong *)(puVar12 + 0x38) = uVar13;");
+                trace.statement("*(void **)(puVar12 + 0x40) = pvVar8;");
+                trace.statement("*(void **)(puVar12 + 0x48) = pvVar8;");
+                trace.statement("puVar3 = *(undefined8 **)(puVar12 + 0x20);");
+                trace.statement("uVar5 = puVar3[1];");
+                trace.statement("*puVar1 = *puVar3;");
+                trace.statement("puVar1[1] = uVar5;");
+                trace.statement("*(undefined4 *)(puVar1 + 2) = *(undefined4 *)(puVar3 + 2);");
+                trace.statement("*(undefined8 **)(puVar12 + 0x40) = puVar1;");
+                trace.statement("pvVar9 = (void *)*param_1;");
+                if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                    trace.statement("_Size = param_1[1] - (longlong)pvVar9;");
+                    trace.statement("pvVar8 = _Dst;");
+                    trace.statement("param_2 = pvVar9;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar12 + -8) = 0x180227470;");
+                trace.statement("memmove(_Dst,pvVar9,(longlong)param_2 - (longlong)pvVar9);");
+                trace.statement("*(void **)(puVar12 + 0x40) = _Dst;");
+                trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar12 + -8) = 0x180227487;");
+                trace.statement("memmove(pvVar8,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar12 + 0x30) = 0;");
+                trace.statement("pvVar8 = (void *)*param_1;");
+                if (trace.condition("if (pvVar8 != (void *)0x0)")) {
+                    trace.statement("pvVar9 = pvVar8;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar8 >> 2) * 4)) && (pvVar9 = *(void **)((longlong)pvVar8 + -8), 0x1f < (ulonglong)((longlong)pvVar8 + (-8 - (longlong)pvVar9))))")) {
+                        trace.statement("pvVar9 = (void *)0x5;");
+                        trace.statement("pcVar4 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar4)();");
+                        trace.statement("puVar12 = puVar12 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar12 + -8) = 0x1802274ef;");
+                    trace.statement("free(pvVar9);");
+                }
+                trace.statement("*param_1 = (longlong)_Dst;");
+                trace.statement("param_1[1] = (longlong)((longlong)_Dst + uVar6 * 0x14);");
+                trace.statement("param_1[2] = (longlong)(uVar7 + (longlong)_Dst);");
+                trace.statement("return puVar1;");
+            }
+        }
+        LAB_180227527: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180227310;
 }
 
@@ -12990,12 +21497,35 @@ void FUN_180227530(undefined8 param_1,undefined8 param_2,longlong *param_3)
     R"F180227530T()F180227530T",
     R"F180227530F(14: while (cVar1 == '\0') {
 22: return;)F180227530F",
-    R"F180227530U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180227530U",
+    R"F180227530U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180227530U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180227530() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180227530", "FUN_180227530");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    // body sha256: 85ce97a4cb3538c827794845e505a746a2c489d709df1d3c47d1b05937a37c58
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180227530(undefined8 param_1,undefined8 param_2,longlong *param_3)");
+        {
+            trace.statement("char cVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("cVar1 = *(char *)((longlong)param_3 + 0x19);");
+            while (trace.loop_condition("while (cVar1 == '\\0')")) {
+                trace.statement("FUN_180227530(param_1,param_2,param_3[2]);");
+                trace.statement("plVar2 = (longlong *)*param_3;");
+                trace.statement("FUN_18020e450();");
+                trace.statement("free(param_3);");
+                trace.statement("param_3 = plVar2;");
+                trace.statement("cVar1 = *(char *)((longlong)plVar2 + 0x19);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x180227530;
 }
 
@@ -13204,9 +21734,10 @@ FUN_1802d8350)F1802275a0C",
 148: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 4) << 4)) &&
 162: return puVar16 + lVar11 * 10;
 165: LAB_180227869:)F1802275a0F",
-    R"F1802275a0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802275a0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180227869.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180227869.
 TODO: resolve the indirect call in body 62: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 63: lVar11 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 152: pcVar3 = (code *)swi(0x29);.
@@ -13215,6 +21746,174 @@ TODO: resolve the indirect call in body 153: (*pcVar3)();.)F1802275a0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802275a0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802275a0", "FUN_1802275a0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180227869.
+    // TODO: resolve the indirect call in body 62: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 63: lVar11 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 152: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 153: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232b00", reinterpret_cast<const void*>(&image::FUN_180232b00));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 9127d13adbd2c3997c49bcf0a9e02a2dd00ced1b177957754541d7d8067576b1
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802275a0(longlong *param_1,longlong param_2,undefined8 *param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("undefined4 uVar4;");
+            trace.statement("undefined4 uVar5;");
+            trace.statement("undefined4 uVar6;");
+            trace.statement("undefined8 uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("undefined8 *puVar10;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("longlong lVar13;");
+            trace.statement("undefined1 *puVar14;");
+            trace.statement("undefined1 *puVar15;");
+            trace.statement("undefined8 *puVar16;");
+            trace.statement("undefined8 *puVar17;");
+            trace.statement("undefined8 uVar18;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [88];");
+            trace.statement("puVar15 = auStack_98;");
+            trace.statement("puVar14 = auStack_98;");
+            trace.statement("lVar13 = *param_1;");
+            trace.statement("lVar11 = (param_1[1] - lVar13 >> 4) * -0x3333333333333333;");
+            if (trace.condition("if (lVar11 == 0x333333333333333)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar9 = (param_1[2] - lVar13 >> 4) * -0x3333333333333333;");
+            trace.statement("uVar8 = 0x333333333333333 - (uVar9 >> 1);");
+            if (trace.condition("if (uVar9 < uVar8 || uVar9 - uVar8 == 0)")) {
+                trace.statement("uVar8 = lVar11 + 1;");
+                trace.statement("uVar9 = (uVar9 >> 1) + uVar9;");
+                trace.statement("uVar12 = uVar8;");
+                if (trace.condition("if (uVar8 <= uVar9)")) {
+                    trace.statement("uVar12 = uVar9;");
+                }
+                if (trace.condition("if (uVar12 < 0x333333333333334)")) {
+                    trace.statement("uVar9 = uVar12 * 0x50;");
+                    trace.statement("puVar16 = (undefined8 *)0x0;");
+                    if (trace.condition("if (uVar9 != 0)")) {
+                        if (trace.condition("if (uVar9 < 0x1000)")) {
+                            trace.statement("puVar16 = (undefined8 *)FUN_1802d8350(uVar9);");
+                            trace.statement("puVar15 = auStack_98;");
+                        } else {
+                        if (trace.condition("if (uVar9 + 0x27 <= uVar9) goto LAB_180227869; lVar11 = FUN_1802d8350(); if (lVar11 == 0)")) {
+                            trace.statement("pcVar3 = (code *)swi(0x29);");
+                            trace.statement("lVar11 = (*pcVar3)(5);");
+                            trace.statement("puVar14 = auStack_90;");
+                        }
+                        trace.statement("puVar16 = (undefined8 *)(lVar11 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("puVar16[-1] = lVar11;");
+                        trace.statement("puVar15 = puVar14;");
+                        }
+                    }
+                    trace.statement("uVar18 = 0;");
+                    trace.statement("lVar11 = (param_2 - lVar13) / 0x50;");
+                    trace.statement("puVar10 = puVar16 + lVar11 * 10;");
+                    trace.statement("puVar17 = puVar10 + 10;");
+                    trace.statement("*(longlong **)(puVar15 + 0x28) = param_1;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x30) = puVar16;");
+                    trace.statement("*(ulonglong *)(puVar15 + 0x38) = uVar12;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar17;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x48) = puVar17;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x50) = puVar10;");
+                    trace.statement("*puVar10 = 0;");
+                    trace.statement("puVar10[1] = 0;");
+                    trace.statement("puVar10[2] = 0;");
+                    trace.statement("puVar10[3] = 0;");
+                    trace.statement("uVar7 = param_3[1];");
+                    trace.statement("*puVar10 = *param_3;");
+                    trace.statement("puVar10[1] = uVar7;");
+                    trace.statement("uVar7 = param_3[3];");
+                    trace.statement("puVar10[2] = param_3[2];");
+                    trace.statement("puVar10[3] = uVar7;");
+                    trace.statement("param_3[2] = 0;");
+                    trace.statement("param_3[3] = 0xf;");
+                    trace.statement("*(undefined1 *)param_3 = 0;");
+                    trace.statement("puVar10[4] = 0;");
+                    trace.statement("puVar10[5] = 0;");
+                    trace.statement("puVar10[6] = 0;");
+                    trace.statement("puVar10[7] = 0;");
+                    trace.statement("uVar4 = *(undefined4 *)((longlong)param_3 + 0x24);");
+                    trace.statement("uVar5 = *(undefined4 *)(param_3 + 5);");
+                    trace.statement("uVar6 = *(undefined4 *)((longlong)param_3 + 0x2c);");
+                    trace.statement("*(undefined4 *)(puVar10 + 4) = *(undefined4 *)(param_3 + 4);");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x24) = uVar4;");
+                    trace.statement("*(undefined4 *)(puVar10 + 5) = uVar5;");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x2c) = uVar6;");
+                    trace.statement("uVar4 = *(undefined4 *)((longlong)param_3 + 0x34);");
+                    trace.statement("uVar5 = *(undefined4 *)(param_3 + 7);");
+                    trace.statement("uVar6 = *(undefined4 *)((longlong)param_3 + 0x3c);");
+                    trace.statement("*(undefined4 *)(puVar10 + 6) = *(undefined4 *)(param_3 + 6);");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x34) = uVar4;");
+                    trace.statement("*(undefined4 *)(puVar10 + 7) = uVar5;");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x3c) = uVar6;");
+                    trace.statement("param_3[6] = 0;");
+                    trace.statement("param_3[7] = 0xf;");
+                    trace.statement("*(undefined1 *)(param_3 + 4) = 0;");
+                    trace.statement("puVar10[8] = param_3[8];");
+                    trace.statement("*(undefined4 *)(puVar10 + 9) = *(undefined4 *)(param_3 + 9);");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x4c) = *(undefined4 *)((longlong)param_3 + 0x4c);");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar10;");
+                    trace.statement("lVar13 = param_1[1];");
+                    if (trace.condition("if (param_2 == lVar13)")) {
+                        trace.statement("param_2 = *param_1;");
+                        trace.statement("puVar17 = puVar16;");
+                    } else {
+                    trace.statement("lVar13 = *param_1;");
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180227773;");
+                    trace.statement("FUN_180232b00(lVar13,param_2,puVar16,param_1);");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar16;");
+                    trace.statement("lVar13 = param_1[1];");
+                    }
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x18022778a;");
+                    trace.statement("FUN_180232b00(param_2,lVar13,puVar17,param_1);");
+                    trace.statement("*(undefined8 *)(puVar15 + 0x30) = uVar18;");
+                    trace.statement("lVar13 = *param_1;");
+                    if (trace.condition("if (lVar13 != 0)")) {
+                        trace.statement("lVar1 = param_1[1];");
+                        trace.statement("*(longlong *)(puVar15 + 0x20) = lVar13;");
+                        while (trace.loop_condition("while (lVar13 != lVar1)")) {
+                            trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1802277b9;");
+                            trace.statement("FUN_18020e450(lVar13 + 0x20);");
+                            trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1802277c2;");
+                            trace.statement("FUN_18020e450(lVar13);");
+                            trace.statement("lVar13 = lVar13 + 0x50;");
+                            trace.statement("*(longlong *)(puVar15 + 0x20) = lVar13;");
+                        }
+                        trace.statement("pvVar2 = (void *)*param_1;");
+                        trace.statement("_Memory = pvVar2;");
+                        if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                            trace.statement("_Memory = (void *)0x5;");
+                            trace.statement("pcVar3 = (code *)swi(0x29);");
+                            trace.statement("(*pcVar3)();");
+                            trace.statement("puVar15 = puVar15 + 8;");
+                        }
+                        trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180227826;");
+                        trace.statement("free(_Memory);");
+                    }
+                    trace.statement("*param_1 = (longlong)puVar16;");
+                    trace.statement("param_1[1] = (longlong)(puVar16 + uVar8 * 10);");
+                    trace.statement("param_1[2] = (longlong)(puVar16 + uVar12 * 10);");
+                    trace.statement("return puVar16 + lVar11 * 10;");
+                }
+            }
+            LAB_180227869: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x1802275a0;
 }
 
@@ -13306,12 +22005,81 @@ void FUN_180227870(undefined8 param_1,undefined4 *param_2,undefined4 *param_3)
     R"F180227870D()F180227870D",
     R"F180227870T()F180227870T",
     R"F180227870F(69: return;)F180227870F",
-    R"F180227870U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180227870U",
+    R"F180227870U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180227870U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180227870() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180227870", "FUN_180227870");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 115a7ec5676512724afaca48d71e464c645b10fdef359b2d07202637c553ec06
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180227870(undefined8 param_1,undefined4 *param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined8 uVar1;");
+            trace.statement("*param_2 = *param_3;");
+            trace.statement("param_2[1] = param_3[1];");
+            trace.statement("*(undefined8 *)(param_2 + 2) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 4) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 6) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 8) = 0;");
+            trace.statement("uVar1 = *(undefined8 *)(param_3 + 4);");
+            trace.statement("*(undefined8 *)(param_2 + 2) = *(undefined8 *)(param_3 + 2);");
+            trace.statement("*(undefined8 *)(param_2 + 4) = uVar1;");
+            trace.statement("uVar1 = *(undefined8 *)(param_3 + 8);");
+            trace.statement("*(undefined8 *)(param_2 + 6) = *(undefined8 *)(param_3 + 6);");
+            trace.statement("*(undefined8 *)(param_2 + 8) = uVar1;");
+            trace.statement("*(undefined8 *)(param_3 + 8) = 0xf;");
+            trace.statement("*(undefined1 *)(param_3 + 2) = 0;");
+            trace.statement("*(undefined8 *)(param_3 + 6) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 10) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0xc) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0xe) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0x10) = 0;");
+            trace.statement("uVar1 = *(undefined8 *)(param_3 + 0xc);");
+            trace.statement("*(undefined8 *)(param_2 + 10) = *(undefined8 *)(param_3 + 10);");
+            trace.statement("*(undefined8 *)(param_2 + 0xc) = uVar1;");
+            trace.statement("uVar1 = *(undefined8 *)(param_3 + 0x10);");
+            trace.statement("*(undefined8 *)(param_2 + 0xe) = *(undefined8 *)(param_3 + 0xe);");
+            trace.statement("*(undefined8 *)(param_2 + 0x10) = uVar1;");
+            trace.statement("*(undefined8 *)(param_3 + 0x10) = 0xf;");
+            trace.statement("*(undefined1 *)(param_3 + 10) = 0;");
+            trace.statement("*(undefined8 *)(param_3 + 0xe) = 0;");
+            trace.statement("param_2[0x12] = param_3[0x12];");
+            trace.statement("*(undefined8 *)(param_2 + 0x14) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0x16) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0x18) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0x1a) = 0;");
+            trace.statement("uVar1 = *(undefined8 *)(param_3 + 0x16);");
+            trace.statement("*(undefined8 *)(param_2 + 0x14) = *(undefined8 *)(param_3 + 0x14);");
+            trace.statement("*(undefined8 *)(param_2 + 0x16) = uVar1;");
+            trace.statement("uVar1 = *(undefined8 *)(param_3 + 0x1a);");
+            trace.statement("*(undefined8 *)(param_2 + 0x18) = *(undefined8 *)(param_3 + 0x18);");
+            trace.statement("*(undefined8 *)(param_2 + 0x1a) = uVar1;");
+            trace.statement("*(undefined8 *)(param_3 + 0x1a) = 0xf;");
+            trace.statement("*(undefined1 *)(param_3 + 0x14) = 0;");
+            trace.statement("*(undefined8 *)(param_3 + 0x18) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0x1c) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0x1e) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0x20) = 0;");
+            trace.statement("*(undefined8 *)(param_2 + 0x22) = 0;");
+            trace.statement("uVar1 = *(undefined8 *)(param_3 + 0x1e);");
+            trace.statement("*(undefined8 *)(param_2 + 0x1c) = *(undefined8 *)(param_3 + 0x1c);");
+            trace.statement("*(undefined8 *)(param_2 + 0x1e) = uVar1;");
+            trace.statement("uVar1 = *(undefined8 *)(param_3 + 0x22);");
+            trace.statement("*(undefined8 *)(param_2 + 0x20) = *(undefined8 *)(param_3 + 0x20);");
+            trace.statement("*(undefined8 *)(param_2 + 0x22) = uVar1;");
+            trace.statement("*(undefined1 *)(param_3 + 0x1c) = 0;");
+            trace.statement("*(undefined8 *)(param_3 + 0x20) = 0;");
+            trace.statement("*(undefined8 *)(param_3 + 0x22) = 0xf;");
+            trace.statement("param_2[0x24] = param_3[0x24];");
+            trace.statement("*(undefined1 *)(param_2 + 0x25) = *(undefined1 *)(param_3 + 0x25);");
+            trace.statement("return;");
+        }
     return kFunction_0x180227870;
 }
 
@@ -13512,13 +22280,14 @@ DAT_1803eb3d8)F180227990D",
 137: if (0xfff < (DAT_1803eb3d8 - (longlong)DAT_1803eb3c8 & 0xffffffffffffffc0U)) {
 140: if ((void *)0x1f < pvVar9) {
 153: return puVar18;)F180227990F",
-    R"F180227990U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180227990U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180227a78.
-TODO: recover the declaration, type and value for global/data reference LAB_180227c0f.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3c8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3d0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3d8.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180227a78.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180227c0f.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3c8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3d0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3d8.
 TODO: resolve the indirect call in body 71: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 72: lVar15 = (*pcVar1)(5);.
 TODO: resolve the indirect call in body 141: pcVar1 = (code *)swi(0x29);.
@@ -13527,6 +22296,169 @@ TODO: resolve the indirect call in body 142: (*pcVar1)(5);.)F180227990U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180227990() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180227990", "FUN_180227990");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180227a78.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180227c0f.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3c8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3d0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3d8.
+    // TODO: resolve the indirect call in body 71: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 72: lVar15 = (*pcVar1)(5);.
+    // TODO: resolve the indirect call in body 141: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 142: (*pcVar1)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232bf0", reinterpret_cast<const void*>(&image::FUN_180232bf0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803eb3c8", static_cast<const void*>(&image::DAT_1803eb3c8));
+    trace.data_ref("DAT_1803eb3d0", static_cast<const void*>(&image::DAT_1803eb3d0));
+    trace.data_ref("DAT_1803eb3d8", static_cast<const void*>(&image::DAT_1803eb3d8));
+    // body sha256: 55522b18c3b6764afea786b7b81fa2215e160f6e47ef0ef7ef61c242945d43f4
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180227990(undefined8 param_1,void *param_2,undefined4 *param_3)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("undefined4 uVar2;");
+            trace.statement("undefined4 uVar3;");
+            trace.statement("undefined4 uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("void *pvVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("void *pvVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("undefined1 *puVar11;");
+            trace.statement("undefined8 *puVar12;");
+            trace.statement("undefined8 *puVar13;");
+            trace.statement("undefined8 *puVar14;");
+            trace.statement("longlong lVar15;");
+            trace.statement("ulonglong uVar16;");
+            trace.statement("ulonglong uVar17;");
+            trace.statement("undefined8 *puVar18;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar11 = auStack_88;");
+            trace.statement("puVar10 = auStack_88;");
+            trace.statement("lVar15 = (longlong)DAT_1803eb3d0 - (longlong)DAT_1803eb3c8 >> 6;");
+            trace.statement("uVar8 = 0x3ffffffffffffff;");
+            if (trace.condition("if (lVar15 == 0x3ffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar17 = (longlong)param_2 - (longlong)DAT_1803eb3c8;");
+            trace.statement("uVar16 = lVar15 + 1;");
+            trace.statement("uVar5 = DAT_1803eb3d8 - (longlong)DAT_1803eb3c8 >> 6;");
+            trace.statement("puVar12 = (undefined8 *)0x0;");
+            if (trace.condition("if (0x3ffffffffffffff - (uVar5 >> 1) < uVar5)")) {
+                trace.statement("uVar5 = 0xffffffffffffffc0;");
+                trace.statement("uVar6 = 0xffffffffffffffe7;");
+            } else {
+            trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+            trace.statement("uVar8 = uVar16;");
+            if (trace.condition("if (uVar16 <= uVar5)")) {
+                trace.statement("uVar8 = uVar5;");
+            }
+            if (trace.condition("if (0x3ffffffffffffff < uVar8)")) {
+                LAB_180227c0f: ;
+                trace.statement("FUN_180012fe0();");
+            }
+            trace.statement("uVar5 = uVar8 * 0x40;");
+            if (trace.condition("if (uVar5 == 0) goto LAB_180227a78; if (uVar5 < 0x1000)")) {
+                trace.statement("puVar12 = (undefined8 *)FUN_1802d8350(uVar5);");
+                trace.statement("puVar11 = auStack_88;");
+                trace.statement("goto LAB_180227a78;");
+            }
+            trace.statement("uVar6 = uVar5 + 0x27;");
+            if (trace.condition("if (uVar6 <= uVar5) goto LAB_180227c0f; } lVar15 = FUN_1802d8350(uVar6); if (lVar15 == 0)")) {
+                trace.statement("pcVar1 = (code *)swi(0x29);");
+                trace.statement("lVar15 = (*pcVar1)(5);");
+                trace.statement("puVar10 = auStack_80;");
+            }
+            trace.statement("puVar12 = (undefined8 *)(lVar15 + 0x27U & 0xffffffffffffffe0);");
+            trace.statement("puVar12[-1] = lVar15;");
+            trace.statement("puVar11 = puVar10;");
+            LAB_180227a78: ;
+            trace.statement("puVar18 = (undefined8 *)((uVar17 & 0xffffffffffffffc0) + (longlong)puVar12);");
+            trace.statement("puVar13 = puVar18 + 8;");
+            trace.statement("*(undefined8 ***)(puVar11 + 0x28) = &DAT_1803eb3c8;");
+            trace.statement("*(undefined8 **)(puVar11 + 0x30) = puVar12;");
+            trace.statement("*(ulonglong *)(puVar11 + 0x38) = uVar8;");
+            trace.statement("*(undefined8 **)(puVar11 + 0x40) = puVar13;");
+            trace.statement("*(undefined8 **)(puVar11 + 0x48) = puVar13;");
+            trace.statement("*(undefined8 **)(puVar11 + 0x20) = puVar18;");
+            trace.statement("*puVar18 = 0;");
+            trace.statement("puVar18[1] = 0;");
+            trace.statement("puVar18[2] = 0;");
+            trace.statement("puVar18[3] = 0;");
+            trace.statement("uVar2 = param_3[1];");
+            trace.statement("uVar3 = param_3[2];");
+            trace.statement("uVar4 = param_3[3];");
+            trace.statement("*(undefined4 *)puVar18 = *param_3;");
+            trace.statement("*(undefined4 *)((longlong)puVar18 + 4) = uVar2;");
+            trace.statement("*(undefined4 *)(puVar18 + 1) = uVar3;");
+            trace.statement("*(undefined4 *)((longlong)puVar18 + 0xc) = uVar4;");
+            trace.statement("uVar2 = param_3[5];");
+            trace.statement("uVar3 = param_3[6];");
+            trace.statement("uVar4 = param_3[7];");
+            trace.statement("*(undefined4 *)(puVar18 + 2) = param_3[4];");
+            trace.statement("*(undefined4 *)((longlong)puVar18 + 0x14) = uVar2;");
+            trace.statement("*(undefined4 *)(puVar18 + 3) = uVar3;");
+            trace.statement("*(undefined4 *)((longlong)puVar18 + 0x1c) = uVar4;");
+            trace.statement("*(undefined8 *)(param_3 + 4) = 0;");
+            trace.statement("*(undefined8 *)(param_3 + 6) = 0xf;");
+            trace.statement("*(undefined1 *)param_3 = 0;");
+            trace.statement("puVar18[4] = *(undefined8 *)(param_3 + 8);");
+            trace.statement("puVar18[5] = *(undefined8 *)(param_3 + 10);");
+            trace.statement("*(undefined4 *)(puVar18 + 6) = param_3[0xc];");
+            trace.statement("*(undefined4 *)((longlong)puVar18 + 0x34) = param_3[0xd];");
+            trace.statement("*(undefined1 *)(puVar18 + 7) = *(undefined1 *)(param_3 + 0xe);");
+            trace.statement("*(undefined8 **)(puVar11 + 0x40) = puVar18;");
+            trace.statement("pvVar7 = DAT_1803eb3c8;");
+            trace.statement("puVar14 = puVar12;");
+            if (trace.condition("if (param_2 != DAT_1803eb3d0)")) {
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180227b3b;");
+                trace.statement("FUN_180232bf0(DAT_1803eb3c8,param_2,puVar12);");
+                trace.statement("*(undefined8 **)(puVar11 + 0x40) = puVar12;");
+                trace.statement("pvVar7 = param_2;");
+                trace.statement("puVar14 = puVar13;");
+            }
+            trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180227b52;");
+            trace.statement("FUN_180232bf0(pvVar7,DAT_1803eb3d0,puVar14);");
+            trace.statement("pvVar7 = DAT_1803eb3d0;");
+            trace.statement("*(undefined8 *)(puVar11 + 0x30) = 0;");
+            if (trace.condition("if (DAT_1803eb3c8 != (void *)0x0)")) {
+                trace.statement("*(undefined8 **)(puVar11 + 0x20) = DAT_1803eb3c8;");
+                trace.statement("pvVar9 = DAT_1803eb3c8;");
+                while (trace.loop_condition("while (pvVar9 != pvVar7)")) {
+                    trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180227b7c;");
+                    trace.statement("FUN_18020e450(pvVar9);");
+                    trace.statement("pvVar9 = (void *)((longlong)pvVar9 + 0x40);");
+                    trace.statement("*(void **)(puVar11 + 0x20) = pvVar9;");
+                }
+                trace.statement("pvVar7 = DAT_1803eb3c8;");
+                if (trace.condition("if (0xfff < (DAT_1803eb3d8 - (longlong)DAT_1803eb3c8 & 0xffffffffffffffc0U))")) {
+                    trace.statement("pvVar7 = *(void **)((longlong)DAT_1803eb3c8 + -8);");
+                    trace.statement("pvVar9 = (void *)((longlong)DAT_1803eb3c8 + (-8 - (longlong)pvVar7));");
+                    if (trace.condition("if ((void *)0x1f < pvVar9)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar1)(5);");
+                        trace.statement("puVar11 = puVar11 + 8;");
+                        trace.statement("pvVar7 = pvVar9;");
+                    }
+                }
+                trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180227bce;");
+                trace.statement("free(pvVar7);");
+            }
+            trace.statement("DAT_1803eb3c8 = puVar12;");
+            trace.statement("DAT_1803eb3d0 = puVar12 + uVar16 * 8;");
+            trace.statement("DAT_1803eb3d8 = uVar5 + (longlong)puVar12;");
+            trace.statement("return puVar18;");
+            }
+        }
     return kFunction_0x180227990;
 }
 
@@ -13572,12 +22504,35 @@ void FUN_180227c20(undefined8 param_1,undefined8 param_2,longlong *param_3)
     R"F180227c20T()F180227c20T",
     R"F180227c20F(14: while (cVar1 == '\0') {
 22: return;)F180227c20F",
-    R"F180227c20U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180227c20U",
+    R"F180227c20U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180227c20U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180227c20() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180227c20", "FUN_180227c20");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    // body sha256: 9093792f3486233dc2842ea514d417c2f3bd252aca84796ce4c4318370c51734
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180227c20(undefined8 param_1,undefined8 param_2,longlong *param_3)");
+        {
+            trace.statement("char cVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("cVar1 = *(char *)((longlong)param_3 + 0x19);");
+            while (trace.loop_condition("while (cVar1 == '\\0')")) {
+                trace.statement("FUN_180227c20(param_1,param_2,param_3[2]);");
+                trace.statement("plVar2 = (longlong *)*param_3;");
+                trace.statement("FUN_18020e450(param_3 + 4);");
+                trace.statement("free(param_3);");
+                trace.statement("param_3 = plVar2;");
+                trace.statement("cVar1 = *(char *)((longlong)plVar2 + 0x19);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x180227c20;
 }
 
@@ -13624,12 +22579,36 @@ void FUN_180227c80(undefined8 param_1,undefined8 param_2,longlong *param_3)
     R"F180227c80T()F180227c80T",
     R"F180227c80F(14: while (cVar1 == '\0') {
 23: return;)F180227c80F",
-    R"F180227c80U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180227c80U",
+    R"F180227c80U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180227c80U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180227c80() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180227c80", "FUN_180227c80");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    // body sha256: 51c0e4f31abda913b74af29c4be3695f70a09a5e93c57d4a03856acf45f70939
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("void FUN_180227c80(undefined8 param_1,undefined8 param_2,longlong *param_3)");
+        {
+            trace.statement("char cVar1;");
+            trace.statement("longlong *plVar2;");
+            trace.statement("cVar1 = *(char *)((longlong)param_3 + 0x19);");
+            while (trace.loop_condition("while (cVar1 == '\\0')")) {
+                trace.statement("FUN_180227c80(param_1,param_2,param_3[2]);");
+                trace.statement("plVar2 = (longlong *)*param_3;");
+                trace.statement("FUN_18020e450(param_3 + 8);");
+                trace.statement("FUN_18020e450(param_3 + 4);");
+                trace.statement("free(param_3);");
+                trace.statement("param_3 = plVar2;");
+                trace.statement("cVar1 = *(char *)((longlong)plVar2 + 0x19);");
+            }
+            trace.statement("return;");
+        }
     return kFunction_0x180227c80;
 }
 
@@ -13783,12 +22762,13 @@ DAT_1803eb3f0)F180227cf0D",
 93: if ((0xfff < (ulonglong)(((longlong)DAT_1803eb3f0 - (longlong)DAT_1803eb3e0 >> 3) * 8)) &&
 107: return puVar1;
 110: LAB_180227f25:)F180227cf0F",
-    R"F180227cf0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180227cf0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180227f25.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3e0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3e8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3f0.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180227f25.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3e0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3e8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3f0.
 TODO: resolve the indirect call in body 57: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 58: lVar7 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 97: pcVar2 = (code *)swi(0x29);.
@@ -13797,6 +22777,122 @@ TODO: resolve the indirect call in body 98: (*pcVar2)();.)F180227cf0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180227cf0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180227cf0", "FUN_180227cf0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180227f25.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3e0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3e8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3f0.
+    // TODO: resolve the indirect call in body 57: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 58: lVar7 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 97: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 98: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803eb3e0", static_cast<const void*>(&image::DAT_1803eb3e0));
+    trace.data_ref("DAT_1803eb3e8", static_cast<const void*>(&image::DAT_1803eb3e8));
+    trace.data_ref("DAT_1803eb3f0", static_cast<const void*>(&image::DAT_1803eb3f0));
+    // body sha256: 01b5c75d8cfaed7d49acf8bceeccdece3f778842506b0e180e20a1b94a8e1b3a
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180227cf0(undefined8 param_1,void *param_2,undefined8 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("undefined8 *_Dst;");
+            trace.statement("void *pvVar6;");
+            trace.statement("longlong lVar7;");
+            trace.statement("undefined8 *_Dst_00;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [80];");
+            trace.statement("pvVar6 = DAT_1803eb3e0;");
+            trace.statement("puVar8 = auStack_98;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("lVar7 = ((longlong)DAT_1803eb3e8 - (longlong)DAT_1803eb3e0 >> 3) * -0x5555555555555555;");
+            if (trace.condition("if (lVar7 == 0xaaaaaaaaaaaaaaa)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar5 = ((longlong)DAT_1803eb3f0 - (longlong)DAT_1803eb3e0 >> 3) * -0x5555555555555555;");
+            trace.statement("uVar4 = 0xaaaaaaaaaaaaaaa - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar4 || uVar5 - uVar4 == 0)")) {
+                trace.statement("uVar4 = lVar7 + 1;");
+                trace.statement("uVar5 = (uVar5 >> 1) + uVar5;");
+                trace.statement("uVar10 = uVar4;");
+                if (trace.condition("if (uVar4 <= uVar5)")) {
+                    trace.statement("uVar10 = uVar5;");
+                }
+                if (trace.condition("if (uVar10 < 0xaaaaaaaaaaaaaab)")) {
+                    trace.statement("uVar5 = uVar10 * 0x18;");
+                    if (trace.condition("if (uVar5 == 0)")) {
+                        trace.statement("_Dst_00 = (undefined8 *)0x0;");
+                        trace.statement("puVar9 = auStack_98;");
+                    } else {
+                    trace.statement("_Dst_00 = (undefined8 *)FUN_1802d8350(uVar5);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar5 + 0x27 <= uVar5) goto LAB_180227f25; lVar7 = FUN_1802d8350(); if (lVar7 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar7 = (*pcVar2)(5);");
+                        trace.statement("puVar8 = auStack_90;");
+                    }
+                    trace.statement("_Dst_00 = (undefined8 *)(lVar7 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("_Dst_00[-1] = lVar7;");
+                    trace.statement("puVar9 = puVar8;");
+                }
+                trace.statement("puVar1 = _Dst_00 + (((longlong)param_2 - (longlong)pvVar6) / 0x18) * 3;");
+                trace.statement("_Dst = puVar1 + 3;");
+                trace.statement("*(undefined8 ***)(puVar9 + 0x20) = &DAT_1803eb3e0;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x28) = _Dst_00;");
+                trace.statement("*(ulonglong *)(puVar9 + 0x30) = uVar10;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = _Dst;");
+                trace.statement("*(undefined8 **)(puVar9 + 0x40) = _Dst;");
+                trace.statement("uVar3 = param_3[1];");
+                trace.statement("*puVar1 = *param_3;");
+                trace.statement("puVar1[1] = uVar3;");
+                trace.statement("puVar1[2] = param_3[2];");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = puVar1;");
+                if (trace.condition("if (param_2 == DAT_1803eb3e8)")) {
+                    trace.statement("_Size = (longlong)DAT_1803eb3e8 - (longlong)DAT_1803eb3e0;");
+                    trace.statement("_Dst = _Dst_00;");
+                    trace.statement("param_2 = DAT_1803eb3e0;");
+                } else {
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180227e61;");
+                trace.statement("memmove(_Dst_00,DAT_1803eb3e0,(longlong)param_2 - (longlong)DAT_1803eb3e0);");
+                trace.statement("*(undefined8 **)(puVar9 + 0x38) = _Dst_00;");
+                trace.statement("_Size = (longlong)DAT_1803eb3e8 - (longlong)param_2;");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180227e7b;");
+                trace.statement("memmove(_Dst,param_2,_Size);");
+                trace.statement("*(undefined8 *)(puVar9 + 0x28) = 0;");
+                if (trace.condition("if (DAT_1803eb3e0 != (void *)0x0)")) {
+                    trace.statement("pvVar6 = DAT_1803eb3e0;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)DAT_1803eb3f0 - (longlong)DAT_1803eb3e0 >> 3) * 8)) && (pvVar6 = *(void **)((longlong)DAT_1803eb3e0 + -8), 0x1f < (ulonglong)((longlong)DAT_1803eb3e0 + (-8 - (longlong)pvVar6))))")) {
+                        trace.statement("pvVar6 = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180227eea;");
+                    trace.statement("free(pvVar6);");
+                }
+                trace.statement("DAT_1803eb3e0 = _Dst_00;");
+                trace.statement("DAT_1803eb3e8 = _Dst_00 + uVar4 * 3;");
+                trace.statement("DAT_1803eb3f0 = _Dst_00 + uVar10 * 3;");
+                trace.statement("return puVar1;");
+            }
+        }
+        LAB_180227f25: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180227cf0;
 }
 
@@ -14001,13 +23097,14 @@ DAT_1803eb3c0)F180227f30D",
 141: if (0xfff < (DAT_1803eb3c0 - (longlong)DAT_1803eb3b0 & 0xffffffffffffffc0U)) {
 144: if ((void *)0x1f < pvVar13) {
 157: return puVar1;)F180227f30F",
-    R"F180227f30U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180227f30U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18022801b.
-TODO: recover the declaration, type and value for global/data reference LAB_1802281c6.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3b0.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3b8.
-TODO: recover the declaration, type and value for global/data reference DAT_1803eb3c0.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022801b.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802281c6.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3b0.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3b8.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803eb3c0.
 TODO: resolve the indirect call in body 73: pcVar5 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 74: lVar16 = (*pcVar5)(5);.
 TODO: resolve the indirect call in body 145: pcVar5 = (code *)swi(0x29);.
@@ -14016,6 +23113,173 @@ TODO: resolve the indirect call in body 146: (*pcVar5)(5);.)F180227f30U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180227f30() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180227f30", "FUN_180227f30");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022801b.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802281c6.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3b0.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3b8.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803eb3c0.
+    // TODO: resolve the indirect call in body 73: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 74: lVar16 = (*pcVar5)(5);.
+    // TODO: resolve the indirect call in body 145: pcVar5 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 146: (*pcVar5)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18003abb0", reinterpret_cast<const void*>(&image::FUN_18003abb0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_180232cb0", reinterpret_cast<const void*>(&image::FUN_180232cb0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803eb3b0", static_cast<const void*>(&image::DAT_1803eb3b0));
+    trace.data_ref("DAT_1803eb3b8", static_cast<const void*>(&image::DAT_1803eb3b8));
+    trace.data_ref("DAT_1803eb3c0", static_cast<const void*>(&image::DAT_1803eb3c0));
+    // body sha256: 48a0636f885a90eab77697487034a78827671c4ab83edb92603d86f2e6eadea8
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180227f30(undefined8 param_1,void *param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("undefined8 uVar2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("undefined8 uVar4;");
+            trace.statement("code *pcVar5;");
+            trace.statement("undefined4 uVar6;");
+            trace.statement("undefined4 uVar7;");
+            trace.statement("undefined4 uVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("void *pvVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("void *pvVar13;");
+            trace.statement("undefined1 *puVar14;");
+            trace.statement("undefined1 *puVar15;");
+            trace.statement("longlong lVar16;");
+            trace.statement("ulonglong uVar17;");
+            trace.statement("undefined8 *puVar18;");
+            trace.statement("undefined8 *puVar19;");
+            trace.statement("ulonglong uVar20;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar14 = auStack_88;");
+            trace.statement("lVar16 = (longlong)DAT_1803eb3b8 - (longlong)DAT_1803eb3b0 >> 6;");
+            trace.statement("uVar12 = 0x3ffffffffffffff;");
+            if (trace.condition("if (lVar16 == 0x3ffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar20 = (longlong)param_2 - (longlong)DAT_1803eb3b0;");
+            trace.statement("uVar17 = lVar16 + 1;");
+            trace.statement("uVar9 = DAT_1803eb3c0 - (longlong)DAT_1803eb3b0 >> 6;");
+            trace.statement("puVar18 = (undefined8 *)0x0;");
+            if (trace.condition("if (0x3ffffffffffffff - (uVar9 >> 1) < uVar9)")) {
+                trace.statement("uVar9 = 0xffffffffffffffc0;");
+                trace.statement("uVar10 = 0xffffffffffffffe7;");
+            } else {
+            trace.statement("uVar9 = uVar9 + (uVar9 >> 1);");
+            trace.statement("uVar12 = uVar17;");
+            if (trace.condition("if (uVar17 <= uVar9)")) {
+                trace.statement("uVar12 = uVar9;");
+            }
+            if (trace.condition("if (0x3ffffffffffffff < uVar12)")) {
+                LAB_1802281c6: ;
+                trace.statement("FUN_180012fe0();");
+            }
+            trace.statement("uVar9 = uVar12 * 0x40;");
+            trace.statement("puVar15 = auStack_88;");
+            if (trace.condition("if (uVar9 == 0) goto LAB_18022801b; if (uVar9 < 0x1000)")) {
+                trace.statement("puVar18 = (undefined8 *)FUN_1802d8350(uVar9);");
+                trace.statement("puVar15 = auStack_88;");
+                trace.statement("goto LAB_18022801b;");
+            }
+            trace.statement("uVar10 = uVar9 + 0x27;");
+            if (trace.condition("if (uVar10 <= uVar9) goto LAB_1802281c6; } lVar16 = FUN_1802d8350(uVar10); if (lVar16 == 0)")) {
+                trace.statement("pcVar5 = (code *)swi(0x29);");
+                trace.statement("lVar16 = (*pcVar5)(5);");
+                trace.statement("puVar14 = auStack_80;");
+            }
+            trace.statement("puVar18 = (undefined8 *)(lVar16 + 0x27U & 0xffffffffffffffe0);");
+            trace.statement("puVar18[-1] = lVar16;");
+            trace.statement("puVar15 = puVar14;");
+            LAB_18022801b: ;
+            trace.statement("puVar1 = (undefined8 *)((uVar20 & 0xffffffffffffffc0) + (longlong)puVar18);");
+            trace.statement("*(undefined8 ***)(puVar15 + 0x20) = &DAT_1803eb3b0;");
+            trace.statement("*(undefined8 **)(puVar15 + 0x28) = puVar18;");
+            trace.statement("*(ulonglong *)(puVar15 + 0x30) = uVar12;");
+            trace.statement("*(undefined8 **)(puVar15 + 0x38) = puVar1 + 8;");
+            trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar1 + 8;");
+            trace.statement("*(undefined8 **)(puVar15 + 0x48) = puVar1;");
+            trace.statement("*puVar1 = 0;");
+            trace.statement("puVar1[1] = 0;");
+            trace.statement("puVar1[2] = 0;");
+            trace.statement("puVar1[3] = 0;");
+            trace.statement("uVar6 = param_3[1];");
+            trace.statement("uVar7 = param_3[2];");
+            trace.statement("uVar8 = param_3[3];");
+            trace.statement("*(undefined4 *)puVar1 = *param_3;");
+            trace.statement("*(undefined4 *)((longlong)puVar1 + 4) = uVar6;");
+            trace.statement("*(undefined4 *)(puVar1 + 1) = uVar7;");
+            trace.statement("*(undefined4 *)((longlong)puVar1 + 0xc) = uVar8;");
+            trace.statement("uVar6 = param_3[5];");
+            trace.statement("uVar7 = param_3[6];");
+            trace.statement("uVar8 = param_3[7];");
+            trace.statement("*(undefined4 *)(puVar1 + 2) = param_3[4];");
+            trace.statement("*(undefined4 *)((longlong)puVar1 + 0x14) = uVar6;");
+            trace.statement("*(undefined4 *)(puVar1 + 3) = uVar7;");
+            trace.statement("*(undefined4 *)((longlong)puVar1 + 0x1c) = uVar8;");
+            trace.statement("*(undefined8 *)(param_3 + 4) = 0;");
+            trace.statement("*(undefined8 *)(param_3 + 6) = 0xf;");
+            trace.statement("*(undefined1 *)param_3 = 0;");
+            trace.statement("*(undefined4 *)(puVar1 + 4) = param_3[8];");
+            trace.statement("*(undefined4 *)((longlong)puVar1 + 0x24) = param_3[9];");
+            trace.statement("uVar2 = *(undefined8 *)(param_3 + 0xe);");
+            trace.statement("*(undefined8 *)(param_3 + 0xe) = 0;");
+            trace.statement("uVar3 = *(undefined8 *)(param_3 + 0xc);");
+            trace.statement("*(undefined8 *)(param_3 + 0xc) = 0;");
+            trace.statement("uVar4 = *(undefined8 *)(param_3 + 10);");
+            trace.statement("*(undefined8 *)(param_3 + 10) = 0;");
+            trace.statement("puVar1[5] = uVar4;");
+            trace.statement("puVar1[6] = uVar3;");
+            trace.statement("puVar1[7] = uVar2;");
+            trace.statement("*(undefined8 **)(puVar15 + 0x38) = puVar1;");
+            trace.statement("puVar19 = puVar18;");
+            trace.statement("pvVar11 = DAT_1803eb3b0;");
+            if (trace.condition("if (param_2 != DAT_1803eb3b8)")) {
+                trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1802280ef;");
+                trace.statement("FUN_180232cb0(DAT_1803eb3b0,param_2,puVar18,&DAT_1803eb3b0);");
+                trace.statement("*(undefined8 **)(puVar15 + 0x38) = puVar18;");
+                trace.statement("puVar19 = puVar1 + 8;");
+                trace.statement("pvVar11 = param_2;");
+            }
+            trace.statement("*(undefined8 *)(puVar15 + -8) = 0x18022810a;");
+            trace.statement("FUN_180232cb0(pvVar11,DAT_1803eb3b8,puVar19,&DAT_1803eb3b0);");
+            trace.statement("pvVar13 = DAT_1803eb3b8;");
+            trace.statement("*(undefined8 *)(puVar15 + 0x28) = 0;");
+            trace.statement("pvVar11 = DAT_1803eb3b0;");
+            if (trace.condition("if (DAT_1803eb3b0 != (void *)0x0)")) {
+                for (auto loop = trace.loop("for (; pvVar11 != pvVar13; pvVar11 = (void *)((longlong)pvVar11 + 0x40))"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180228138;");
+                    trace.statement("FUN_18003abb0(pvVar11);");
+                }
+                trace.statement("pvVar11 = DAT_1803eb3b0;");
+                if (trace.condition("if (0xfff < (DAT_1803eb3c0 - (longlong)DAT_1803eb3b0 & 0xffffffffffffffc0U))")) {
+                    trace.statement("pvVar11 = *(void **)((longlong)DAT_1803eb3b0 + -8);");
+                    trace.statement("pvVar13 = (void *)((longlong)DAT_1803eb3b0 + (-8 - (longlong)pvVar11));");
+                    if (trace.condition("if ((void *)0x1f < pvVar13)")) {
+                        trace.statement("pcVar5 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar5)(5);");
+                        trace.statement("puVar15 = puVar15 + 8;");
+                        trace.statement("pvVar11 = pvVar13;");
+                    }
+                }
+                trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180228185;");
+                trace.statement("free(pvVar11);");
+            }
+            trace.statement("DAT_1803eb3b0 = puVar18;");
+            trace.statement("DAT_1803eb3b8 = puVar18 + uVar17 * 8;");
+            trace.statement("DAT_1803eb3c0 = uVar9 + (longlong)puVar18;");
+            trace.statement("return puVar1;");
+            }
+        }
     return kFunction_0x180227f30;
 }
 
@@ -14155,17 +23419,120 @@ UNK_180228333)F1802281d0D",
 87: if (uVar7 < 0x1000) {
 90: goto LAB_180228289;
 93: if (uVar5 <= uVar7) {)F1802281d0F",
-    R"F1802281d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802281d0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180228241.
-TODO: recover the declaration, type and value for global/data reference LAB_180228289.
-TODO: recover the declaration, type and value for global/data reference UNK_180228333.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180228241.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180228289.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference UNK_180228333.
 TODO: resolve the indirect call in body 75: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 76: (*pcVar3)();.)F1802281d0U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802281d0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802281d0", "FUN_1802281d0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180228241.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180228289.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for UNK_180228333.
+    // TODO: resolve the indirect call in body 75: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 76: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18022c3f0", reinterpret_cast<const void*>(&image::FUN_18022c3f0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("UNK_180228333", static_cast<const void*>(&image::UNK_180228333));
+    // body sha256: b1909015776c032554c5ecb8b32defa2bc62a2fdb3c7e160dc9ed96560d39620
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined1 * FUN_1802281d0(longlong *param_1,void *param_2,undefined1 *param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("void *_Src;");
+            trace.statement("code *pcVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("undefined1 *_Dst;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("undefined1 *_Dst_00;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("size_t _Size;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [80];");
+            trace.statement("puVar8 = auStack_88;");
+            trace.statement("lVar2 = *param_1;");
+            trace.statement("uVar7 = 0x7fffffffffffffff;");
+            if (trace.condition("if (param_1[1] - lVar2 == 0x7fffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar1 = (param_1[1] - lVar2) + 1;");
+            trace.statement("uVar5 = param_1[2] - lVar2;");
+            trace.statement("uVar6 = uVar5 >> 1;");
+            if (trace.condition("if (uVar5 <= 0x7fffffffffffffff - uVar6) goto LAB_180228241; uVar5 = 0x8000000000000026; puVar8 = auStack_88; do")) {
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180228235;");
+                trace.statement("lVar4 = FUN_1802d8350(uVar5);");
+                if (trace.condition("if (lVar4 != 0)")) {
+                    trace.statement("_Dst = (undefined1 *)(lVar4 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("*(longlong *)(_Dst + -8) = lVar4;");
+                    LAB_180228289: ;
+                    trace.statement("puVar9 = _Dst + ((longlong)param_2 - lVar2);");
+                    trace.statement("_Dst_00 = puVar9 + 1;");
+                    trace.statement("*(longlong **)(puVar8 + 0x20) = param_1;");
+                    trace.statement("*(undefined1 **)(puVar8 + 0x28) = _Dst;");
+                    trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar7;");
+                    trace.statement("*(undefined1 **)(puVar8 + 0x38) = _Dst_00;");
+                    trace.statement("*(undefined1 **)(puVar8 + 0x40) = _Dst_00;");
+                    trace.statement("*puVar9 = *param_3;");
+                    trace.statement("*(undefined1 **)(puVar8 + 0x38) = puVar9;");
+                    trace.statement("_Src = (void *)*param_1;");
+                    if (trace.condition("if (param_2 == (void *)param_1[1])")) {
+                        trace.statement("_Size = param_1[1] - (longlong)_Src;");
+                        trace.statement("_Dst_00 = _Dst;");
+                        trace.statement("param_2 = _Src;");
+                    } else {
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x1802282db;");
+                    trace.statement("memmove(_Dst,_Src,(longlong)param_2 - (longlong)_Src);");
+                    trace.statement("*(undefined1 **)(puVar8 + 0x38) = _Dst;");
+                    trace.statement("_Size = param_1[1] - (longlong)param_2;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x1802282f2;");
+                    trace.statement("memmove(_Dst_00,param_2,_Size);");
+                    trace.statement("*(undefined8 *)(puVar8 + 0x28) = 0;");
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x18022830c;");
+                    trace.statement("FUN_18022c3f0(param_1,_Dst,uVar1,uVar7);");
+                    trace.statement("return puVar9;");
+                }
+                trace.statement("uVar5 = 5;");
+                trace.statement("pcVar3 = (code *)swi(0x29);");
+                trace.statement("(*pcVar3)();");
+                trace.statement("puVar8 = puVar8 + 8;");
+                LAB_180228241: ;
+                trace.statement("uVar7 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar5 + uVar6)")) {
+                    trace.statement("uVar7 = uVar5 + uVar6;");
+                }
+                if (trace.condition("if (uVar7 == 0)")) {
+                    trace.statement("_Dst = (undefined1 *)0x0;");
+                    trace.statement("goto LAB_180228289;");
+                }
+                if (trace.condition("if (uVar7 < 0x1000)")) {
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180228286;");
+                    trace.statement("_Dst = (undefined1 *)FUN_1802d8350(uVar7);");
+                    trace.statement("goto LAB_180228289;");
+                }
+                trace.statement("uVar5 = uVar7 + 0x27;");
+                if (trace.condition("if (uVar5 <= uVar7)")) {
+                    trace.statement("*(undefined **)(puVar8 + -8) = &UNK_180228333;");
+                    trace.statement("FUN_180012fe0();");
+                }
+            }
+        }
+        trace.statement("} while( true );");
     return kFunction_0x1802281d0;
 }
 
@@ -14359,9 +23726,10 @@ FUN_1802d8350)F180228340C",
 133: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 4) << 4)) &&
 147: return puVar15 + lVar10 * 6;
 150: LAB_1802285c2:)F180228340F",
-    R"F180228340U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180228340U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802285c2.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802285c2.
 TODO: resolve the indirect call in body 61: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 62: lVar10 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 137: pcVar3 = (code *)swi(0x29);.
@@ -14370,6 +23738,159 @@ TODO: resolve the indirect call in body 138: (*pcVar3)();.)F180228340U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180228340() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180228340", "FUN_180228340");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802285c2.
+    // TODO: resolve the indirect call in body 61: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 62: lVar10 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 137: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 138: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232d80", reinterpret_cast<const void*>(&image::FUN_180232d80));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: c2ef9d76c35411c6b57e2d0e2928e96a2c59f96629f91c17bd3b4f304df2bc48
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_180228340(longlong *param_1,longlong param_2,undefined4 *param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("undefined4 uVar4;");
+            trace.statement("undefined4 uVar5;");
+            trace.statement("undefined4 uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined8 *puVar9;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar10;");
+            trace.statement("longlong lVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("undefined1 *puVar13;");
+            trace.statement("undefined1 *puVar14;");
+            trace.statement("undefined8 *puVar15;");
+            trace.statement("undefined8 *puVar16;");
+            trace.statement("undefined8 uVar17;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar14 = auStack_88;");
+            trace.statement("puVar13 = auStack_88;");
+            trace.statement("lVar11 = *param_1;");
+            trace.statement("lVar10 = (param_1[1] - lVar11 >> 4) * -0x5555555555555555;");
+            if (trace.condition("if (lVar10 == 0x555555555555555)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar8 = (param_1[2] - lVar11 >> 4) * -0x5555555555555555;");
+            trace.statement("uVar7 = 0x555555555555555 - (uVar8 >> 1);");
+            if (trace.condition("if (uVar8 < uVar7 || uVar8 - uVar7 == 0)")) {
+                trace.statement("uVar7 = lVar10 + 1;");
+                trace.statement("uVar8 = uVar8 + (uVar8 >> 1);");
+                trace.statement("uVar12 = uVar7;");
+                if (trace.condition("if (uVar7 <= uVar8)")) {
+                    trace.statement("uVar12 = uVar8;");
+                }
+                if (trace.condition("if (uVar12 < 0x555555555555556)")) {
+                    trace.statement("uVar8 = uVar12 * 0x30;");
+                    trace.statement("puVar15 = (undefined8 *)0x0;");
+                    if (trace.condition("if (uVar8 != 0)")) {
+                        if (trace.condition("if (uVar8 < 0x1000)")) {
+                            trace.statement("puVar15 = (undefined8 *)FUN_1802d8350(uVar8);");
+                            trace.statement("puVar14 = auStack_88;");
+                        } else {
+                        if (trace.condition("if (uVar8 + 0x27 <= uVar8) goto LAB_1802285c2; lVar10 = FUN_1802d8350(); if (lVar10 == 0)")) {
+                            trace.statement("pcVar3 = (code *)swi(0x29);");
+                            trace.statement("lVar10 = (*pcVar3)(5);");
+                            trace.statement("puVar13 = auStack_80;");
+                        }
+                        trace.statement("puVar15 = (undefined8 *)(lVar10 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("puVar15[-1] = lVar10;");
+                        trace.statement("puVar14 = puVar13;");
+                        }
+                    }
+                    trace.statement("uVar17 = 0;");
+                    trace.statement("lVar11 = (param_2 - lVar11) / 6 + (param_2 - lVar11 >> 0x3f);");
+                    trace.statement("lVar10 = (lVar11 >> 3) - (lVar11 >> 0x3f);");
+                    trace.statement("puVar9 = puVar15 + lVar10 * 6;");
+                    trace.statement("puVar16 = puVar9 + 6;");
+                    trace.statement("*(longlong **)(puVar14 + 0x28) = param_1;");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x30) = puVar15;");
+                    trace.statement("*(ulonglong *)(puVar14 + 0x38) = uVar12;");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x40) = puVar16;");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x48) = puVar16;");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x20) = puVar9;");
+                    trace.statement("*puVar9 = 0;");
+                    trace.statement("puVar9[1] = 0;");
+                    trace.statement("puVar9[2] = 0;");
+                    trace.statement("puVar9[3] = 0;");
+                    trace.statement("uVar4 = param_3[1];");
+                    trace.statement("uVar5 = param_3[2];");
+                    trace.statement("uVar6 = param_3[3];");
+                    trace.statement("*(undefined4 *)puVar9 = *param_3;");
+                    trace.statement("*(undefined4 *)((longlong)puVar9 + 4) = uVar4;");
+                    trace.statement("*(undefined4 *)(puVar9 + 1) = uVar5;");
+                    trace.statement("*(undefined4 *)((longlong)puVar9 + 0xc) = uVar6;");
+                    trace.statement("uVar4 = param_3[5];");
+                    trace.statement("uVar5 = param_3[6];");
+                    trace.statement("uVar6 = param_3[7];");
+                    trace.statement("*(undefined4 *)(puVar9 + 2) = param_3[4];");
+                    trace.statement("*(undefined4 *)((longlong)puVar9 + 0x14) = uVar4;");
+                    trace.statement("*(undefined4 *)(puVar9 + 3) = uVar5;");
+                    trace.statement("*(undefined4 *)((longlong)puVar9 + 0x1c) = uVar6;");
+                    trace.statement("*(undefined8 *)(param_3 + 4) = 0;");
+                    trace.statement("*(undefined8 *)(param_3 + 6) = 0xf;");
+                    trace.statement("*(undefined1 *)param_3 = 0;");
+                    trace.statement("*(undefined4 *)(puVar9 + 4) = param_3[8];");
+                    trace.statement("*(undefined4 *)((longlong)puVar9 + 0x24) = param_3[9];");
+                    trace.statement("*(undefined1 *)(puVar9 + 5) = *(undefined1 *)(param_3 + 10);");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x40) = puVar9;");
+                    trace.statement("lVar11 = param_1[1];");
+                    if (trace.condition("if (param_2 == lVar11)")) {
+                        trace.statement("param_2 = *param_1;");
+                        trace.statement("puVar16 = puVar15;");
+                    } else {
+                    trace.statement("lVar11 = *param_1;");
+                    trace.statement("*(undefined8 *)(puVar14 + -8) = 0x1802284e1;");
+                    trace.statement("FUN_180232d80(lVar11,param_2,puVar15,param_1);");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x40) = puVar15;");
+                    trace.statement("lVar11 = param_1[1];");
+                    }
+                    trace.statement("*(undefined8 *)(puVar14 + -8) = 0x1802284f8;");
+                    trace.statement("FUN_180232d80(param_2,lVar11,puVar16,param_1);");
+                    trace.statement("*(undefined8 *)(puVar14 + 0x30) = uVar17;");
+                    trace.statement("lVar11 = *param_1;");
+                    if (trace.condition("if (lVar11 != 0)")) {
+                        trace.statement("lVar1 = param_1[1];");
+                        trace.statement("*(longlong *)(puVar14 + 0x20) = lVar11;");
+                        while (trace.loop_condition("while (lVar11 != lVar1)")) {
+                            trace.statement("*(undefined8 *)(puVar14 + -8) = 0x18022851b;");
+                            trace.statement("FUN_18020e450(lVar11);");
+                            trace.statement("lVar11 = lVar11 + 0x30;");
+                            trace.statement("*(longlong *)(puVar14 + 0x20) = lVar11;");
+                        }
+                        trace.statement("pvVar2 = (void *)*param_1;");
+                        trace.statement("_Memory = pvVar2;");
+                        if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                            trace.statement("_Memory = (void *)0x5;");
+                            trace.statement("pcVar3 = (code *)swi(0x29);");
+                            trace.statement("(*pcVar3)();");
+                            trace.statement("puVar14 = puVar14 + 8;");
+                        }
+                        trace.statement("*(undefined8 *)(puVar14 + -8) = 0x18022857f;");
+                        trace.statement("free(_Memory);");
+                    }
+                    trace.statement("*param_1 = (longlong)puVar15;");
+                    trace.statement("param_1[1] = (longlong)(puVar15 + uVar7 * 6);");
+                    trace.statement("param_1[2] = (longlong)(puVar15 + uVar12 * 6);");
+                    trace.statement("return puVar15 + lVar10 * 6;");
+                }
+            }
+            LAB_1802285c2: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x180228340;
 }
 
@@ -14560,9 +24081,10 @@ FUN_1802d8350)F1802285d0C",
 130: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar3 >> 3) * 8)) &&
 144: return puVar15 + lVar10 * 5;
 147: LAB_180228842:)F1802285d0F",
-    R"F1802285d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802285d0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180228842.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180228842.
 TODO: resolve the indirect call in body 61: pcVar4 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 62: lVar10 = (*pcVar4)(5);.
 TODO: resolve the indirect call in body 134: pcVar4 = (code *)swi(0x29);.
@@ -14571,6 +24093,156 @@ TODO: resolve the indirect call in body 135: (*pcVar4)();.)F1802285d0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802285d0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802285d0", "FUN_1802285d0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180228842.
+    // TODO: resolve the indirect call in body 61: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 62: lVar10 = (*pcVar4)(5);.
+    // TODO: resolve the indirect call in body 134: pcVar4 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 135: (*pcVar4)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180232800", reinterpret_cast<const void*>(&image::FUN_180232800));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 9ef5d49e30af87abe9ebefab7811c9b2e65519a7fa6136cffd52e6e41bc6f3bc
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802285d0(longlong *param_1,longlong param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined8 *puVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("void *pvVar3;");
+            trace.statement("code *pcVar4;");
+            trace.statement("undefined4 uVar5;");
+            trace.statement("undefined4 uVar6;");
+            trace.statement("undefined4 uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("undefined1 *puVar13;");
+            trace.statement("undefined1 *puVar14;");
+            trace.statement("undefined8 *puVar15;");
+            trace.statement("undefined8 *puVar16;");
+            trace.statement("undefined8 uVar17;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [72];");
+            trace.statement("puVar14 = auStack_88;");
+            trace.statement("puVar13 = auStack_88;");
+            trace.statement("lVar12 = *param_1;");
+            trace.statement("lVar10 = (param_1[1] - lVar12 >> 3) * -0x3333333333333333;");
+            if (trace.condition("if (lVar10 == 0x666666666666666)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar9 = (param_1[2] - lVar12 >> 3) * -0x3333333333333333;");
+            trace.statement("uVar8 = 0x666666666666666 - (uVar9 >> 1);");
+            if (trace.condition("if (uVar9 < uVar8 || uVar9 - uVar8 == 0)")) {
+                trace.statement("uVar8 = lVar10 + 1;");
+                trace.statement("uVar9 = uVar9 + (uVar9 >> 1);");
+                trace.statement("uVar11 = uVar8;");
+                if (trace.condition("if (uVar8 <= uVar9)")) {
+                    trace.statement("uVar11 = uVar9;");
+                }
+                if (trace.condition("if (uVar11 < 0x666666666666667)")) {
+                    trace.statement("uVar9 = uVar11 * 0x28;");
+                    trace.statement("puVar15 = (undefined8 *)0x0;");
+                    if (trace.condition("if (uVar9 != 0)")) {
+                        if (trace.condition("if (uVar9 < 0x1000)")) {
+                            trace.statement("puVar15 = (undefined8 *)FUN_1802d8350(uVar9);");
+                            trace.statement("puVar14 = auStack_88;");
+                        } else {
+                        if (trace.condition("if (uVar9 + 0x27 <= uVar9) goto LAB_180228842; lVar10 = FUN_1802d8350(); if (lVar10 == 0)")) {
+                            trace.statement("pcVar4 = (code *)swi(0x29);");
+                            trace.statement("lVar10 = (*pcVar4)(5);");
+                            trace.statement("puVar13 = auStack_80;");
+                        }
+                        trace.statement("puVar15 = (undefined8 *)(lVar10 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("puVar15[-1] = lVar10;");
+                        trace.statement("puVar14 = puVar13;");
+                        }
+                    }
+                    trace.statement("uVar17 = 0;");
+                    trace.statement("lVar10 = (param_2 - lVar12) / 0x28;");
+                    trace.statement("puVar1 = puVar15 + lVar10 * 5;");
+                    trace.statement("puVar16 = puVar1 + 5;");
+                    trace.statement("*(longlong **)(puVar14 + 0x28) = param_1;");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x30) = puVar15;");
+                    trace.statement("*(ulonglong *)(puVar14 + 0x38) = uVar11;");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x40) = puVar16;");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x48) = puVar16;");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x20) = puVar1;");
+                    trace.statement("*puVar1 = 0;");
+                    trace.statement("puVar1[1] = 0;");
+                    trace.statement("puVar1[2] = 0;");
+                    trace.statement("puVar1[3] = 0;");
+                    trace.statement("uVar5 = param_3[1];");
+                    trace.statement("uVar6 = param_3[2];");
+                    trace.statement("uVar7 = param_3[3];");
+                    trace.statement("*(undefined4 *)puVar1 = *param_3;");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 4) = uVar5;");
+                    trace.statement("*(undefined4 *)(puVar1 + 1) = uVar6;");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0xc) = uVar7;");
+                    trace.statement("uVar5 = param_3[5];");
+                    trace.statement("uVar6 = param_3[6];");
+                    trace.statement("uVar7 = param_3[7];");
+                    trace.statement("*(undefined4 *)(puVar1 + 2) = param_3[4];");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0x14) = uVar5;");
+                    trace.statement("*(undefined4 *)(puVar1 + 3) = uVar6;");
+                    trace.statement("*(undefined4 *)((longlong)puVar1 + 0x1c) = uVar7;");
+                    trace.statement("*(undefined8 *)(param_3 + 4) = 0;");
+                    trace.statement("*(undefined8 *)(param_3 + 6) = 0xf;");
+                    trace.statement("*(undefined1 *)param_3 = 0;");
+                    trace.statement("*(undefined4 *)(puVar1 + 4) = param_3[8];");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x40) = puVar1;");
+                    trace.statement("lVar12 = param_1[1];");
+                    if (trace.condition("if (param_2 == lVar12)")) {
+                        trace.statement("param_2 = *param_1;");
+                        trace.statement("puVar16 = puVar15;");
+                    } else {
+                    trace.statement("lVar12 = *param_1;");
+                    trace.statement("*(undefined8 *)(puVar14 + -8) = 0x180228763;");
+                    trace.statement("FUN_180232800(lVar12,param_2,puVar15,param_1);");
+                    trace.statement("*(undefined8 **)(puVar14 + 0x40) = puVar15;");
+                    trace.statement("lVar12 = param_1[1];");
+                    }
+                    trace.statement("*(undefined8 *)(puVar14 + -8) = 0x18022877a;");
+                    trace.statement("FUN_180232800(param_2,lVar12,puVar16,param_1);");
+                    trace.statement("*(undefined8 *)(puVar14 + 0x30) = uVar17;");
+                    trace.statement("lVar12 = *param_1;");
+                    if (trace.condition("if (lVar12 != 0)")) {
+                        trace.statement("lVar2 = param_1[1];");
+                        trace.statement("*(longlong *)(puVar14 + 0x20) = lVar12;");
+                        while (trace.loop_condition("while (lVar12 != lVar2)")) {
+                            trace.statement("*(undefined8 *)(puVar14 + -8) = 0x18022879d;");
+                            trace.statement("FUN_18020e450(lVar12);");
+                            trace.statement("lVar12 = lVar12 + 0x28;");
+                            trace.statement("*(longlong *)(puVar14 + 0x20) = lVar12;");
+                        }
+                        trace.statement("pvVar3 = (void *)*param_1;");
+                        trace.statement("_Memory = pvVar3;");
+                        if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar3 >> 3) * 8)) && (_Memory = *(void **)((longlong)pvVar3 + -8), 0x1f < (ulonglong)((longlong)pvVar3 + (-8 - (longlong)_Memory))))")) {
+                            trace.statement("_Memory = (void *)0x5;");
+                            trace.statement("pcVar4 = (code *)swi(0x29);");
+                            trace.statement("(*pcVar4)();");
+                            trace.statement("puVar14 = puVar14 + 8;");
+                        }
+                        trace.statement("*(undefined8 *)(puVar14 + -8) = 0x180228805;");
+                        trace.statement("free(_Memory);");
+                    }
+                    trace.statement("*param_1 = (longlong)puVar15;");
+                    trace.statement("param_1[1] = (longlong)(puVar15 + uVar8 * 5);");
+                    trace.statement("param_1[2] = (longlong)(puVar15 + uVar11 * 5);");
+                    trace.statement("return puVar15 + lVar10 * 5;");
+                }
+            }
+            LAB_180228842: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x1802285d0;
 }
 
@@ -14784,13 +24456,14 @@ DAT_1803fcc60)F180228850D",
 145: if (DAT_1803fcc50 != (void *)0x0) {
 149: if ((0xfff < (ulonglong)((DAT_1803fcc60 - (longlong)DAT_1803fcc50 >> 3) * 8)) &&
 163: return uVar10;)F180228850F",
-    R"F180228850U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180228850U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180228951.
-TODO: recover the declaration, type and value for global/data reference LAB_180228ba9.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcc50.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcc58.
-TODO: recover the declaration, type and value for global/data reference DAT_1803fcc60.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180228951.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180228ba9.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcc50.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcc58.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference DAT_1803fcc60.
 TODO: resolve the indirect call in body 83: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 84: lVar3 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 153: pcVar2 = (code *)swi(0x29);.
@@ -14799,6 +24472,177 @@ TODO: resolve the indirect call in body 154: (*pcVar2)();.)F180228850U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180228850() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180228850", "FUN_180228850");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180228951.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180228ba9.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcc50.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcc58.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803fcc60.
+    // TODO: resolve the indirect call in body 83: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 84: lVar3 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 153: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 154: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_180218ad0", reinterpret_cast<const void*>(&image::FUN_180218ad0));
+    trace.call_target("FUN_18023a210", reinterpret_cast<const void*>(&image::FUN_18023a210));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    trace.data_ref("DAT_1803fcc50", static_cast<const void*>(&image::DAT_1803fcc50));
+    trace.data_ref("DAT_1803fcc58", static_cast<const void*>(&image::DAT_1803fcc58));
+    trace.data_ref("DAT_1803fcc60", static_cast<const void*>(&image::DAT_1803fcc60));
+    // body sha256: e76d93326cbdbe467568eba3aea825915b567756728d8a08d425d440296b32e5
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("ulonglong FUN_180228850(undefined8 param_1,void *param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("longlong lVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("void *pvVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("longlong lVar11;");
+            trace.statement("void *pvVar12;");
+            trace.statement("undefined8 uStack_e0;");
+            trace.statement("undefined1 auStack_d8 [8];");
+            trace.statement("undefined1 auStack_d0 [24];");
+            trace.statement("ulonglong local_b8;");
+            trace.statement("ulonglong local_b0;");
+            trace.statement("ulonglong uStack_a8;");
+            trace.statement("undefined8 *local_a0;");
+            trace.statement("ulonglong local_98;");
+            trace.statement("ulonglong uStack_90;");
+            trace.statement("undefined8 *local_88;");
+            trace.statement("longlong local_80;");
+            trace.statement("longlong lStack_78;");
+            trace.statement("undefined8 *local_70;");
+            trace.statement("undefined8 *local_68;");
+            trace.statement("ulonglong local_60;");
+            trace.statement("ulonglong local_58;");
+            trace.statement("ulonglong local_50;");
+            trace.statement("longlong local_48;");
+            trace.statement("puVar8 = auStack_d8;");
+            trace.statement("puVar9 = auStack_d8;");
+            trace.statement("lVar3 = ((longlong)DAT_1803fcc58 - (longlong)DAT_1803fcc50 >> 3) * -0x79435e50d79435e5;");
+            trace.statement("uVar10 = 0x1af286bca1af286;");
+            if (trace.condition("if (lVar3 == 0x1af286bca1af286)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("lVar11 = (longlong)param_2 - (longlong)DAT_1803fcc50;");
+            trace.statement("uVar1 = lVar3 + 1;");
+            trace.statement("uVar5 = (DAT_1803fcc60 - (longlong)DAT_1803fcc50 >> 3) * -0x79435e50d79435e5;");
+            trace.statement("uVar4 = 0x1af286bca1af286 - (uVar5 >> 1);");
+            if (trace.condition("if (uVar5 < uVar4 || uVar5 - uVar4 == 0)")) {
+                trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+                trace.statement("uVar10 = uVar1;");
+                if (trace.condition("if (uVar1 <= uVar5)")) {
+                    trace.statement("uVar10 = uVar5;");
+                }
+                if (trace.condition("if (0x1af286bca1af286 < uVar10)")) {
+                    LAB_180228ba9: ;
+                    trace.statement("FUN_180012fe0();");
+                }
+                trace.statement("uVar5 = uVar10 * 0x98;");
+                if (trace.condition("if (uVar5 == 0)")) {
+                    trace.statement("uVar4 = 0;");
+                    trace.statement("puVar9 = auStack_d8;");
+                    trace.statement("goto LAB_180228951;");
+                }
+                if (trace.condition("if (uVar5 < 0x1000)")) {
+                    trace.statement("uVar4 = FUN_1802d8350(uVar5);");
+                    trace.statement("goto LAB_180228951;");
+                }
+                trace.statement("uVar4 = uVar5 + 0x27;");
+                if (trace.condition("if (uVar4 <= uVar5) goto LAB_180228ba9; } else")) {
+                    trace.statement("uVar4 = 0xffffffffffffffb7;");
+                    trace.statement("uVar5 = 0xffffffffffffff90;");
+                }
+                trace.statement("lVar3 = FUN_1802d8350(uVar4);");
+                if (trace.condition("if (lVar3 == 0)")) {
+                    trace.statement("pcVar2 = (code *)swi(0x29);");
+                    trace.statement("lVar3 = (*pcVar2)(5);");
+                    trace.statement("puVar8 = auStack_d0;");
+                }
+                trace.statement("uVar4 = lVar3 + 0x27U & 0xffffffffffffffe0;");
+                trace.statement("*(longlong *)(uVar4 - 8) = lVar3;");
+                trace.statement("puVar9 = puVar8;");
+                LAB_180228951: ;
+                trace.statement("local_b8 = (lVar11 / 0x98) * 0x98 + uVar4;");
+                trace.statement("lVar3 = local_b8 + 0x98;");
+                trace.statement("local_68 = &DAT_1803fcc50;");
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802289a7;");
+                trace.statement("local_60 = uVar4;");
+                trace.statement("local_58 = uVar10;");
+                trace.statement("local_50 = lVar3;");
+                trace.statement("local_48 = lVar3;");
+                trace.statement("FUN_18023a210(local_b8,param_3);");
+                trace.statement("uVar10 = local_b8;");
+                trace.statement("pvVar6 = DAT_1803fcc58;");
+                trace.statement("local_50 = local_b8;");
+                if (trace.condition("if (param_2 == DAT_1803fcc58)")) {
+                    trace.statement("local_a0 = &DAT_1803fcc50;");
+                    trace.statement("uVar7 = uVar4;");
+                    trace.statement("local_b0 = uVar4;");
+                    for (auto loop = trace.loop("for (pvVar12 = DAT_1803fcc50; uStack_a8 = uVar7, pvVar12 != pvVar6; pvVar12 = (void *)((longlong)pvVar12 + 0x98))"); loop.next(); ) {
+                        trace.statement("*(undefined8 *)(puVar9 + -8) = 0x1802289fb;");
+                        trace.statement("FUN_18023a210(uVar7,pvVar12);");
+                        trace.statement("uVar7 = uVar7 + 0x98;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180228a21;");
+                    trace.statement("local_b0 = uVar7;");
+                    trace.statement("FUN_180218ad0(uVar7,uVar7);");
+                } else {
+                trace.statement("local_88 = &DAT_1803fcc50;");
+                trace.statement("uVar10 = uVar4;");
+                trace.statement("local_98 = uVar4;");
+                for (auto loop = trace.loop("for (pvVar6 = DAT_1803fcc50; uStack_90 = uVar10, pvVar6 != param_2; pvVar6 = (void *)((longlong)pvVar6 + 0x98))"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180228a5b;");
+                    trace.statement("FUN_18023a210(uVar10,pvVar6);");
+                    trace.statement("uVar10 = uVar10 + 0x98;");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180228a81;");
+                trace.statement("local_98 = uVar10;");
+                trace.statement("FUN_180218ad0(uVar10,uVar10);");
+                trace.statement("pvVar6 = DAT_1803fcc58;");
+                trace.statement("local_70 = &DAT_1803fcc50;");
+                trace.statement("local_80 = lVar3;");
+                trace.statement("local_50 = uVar4;");
+                for (auto loop = trace.loop("for (; lStack_78 = lVar3, param_2 != pvVar6; param_2 = (void *)((longlong)param_2 + 0x98))"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180228abc;");
+                    trace.statement("FUN_18023a210(lVar3,param_2);");
+                    trace.statement("lVar3 = lVar3 + 0x98;");
+                }
+                trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180228ae2;");
+                trace.statement("local_80 = lVar3;");
+                trace.statement("FUN_180218ad0(lVar3,lVar3);");
+                trace.statement("uVar10 = local_b8;");
+                }
+                trace.statement("local_60 = 0;");
+                if (trace.condition("if (DAT_1803fcc50 != (void *)0x0)")) {
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180228b06;");
+                    trace.statement("FUN_180218ad0(DAT_1803fcc50,DAT_1803fcc58);");
+                    trace.statement("pvVar6 = DAT_1803fcc50;");
+                    if (trace.condition("if ((0xfff < (ulonglong)((DAT_1803fcc60 - (longlong)DAT_1803fcc50 >> 3) * 8)) && (pvVar6 = *(void **)((longlong)DAT_1803fcc50 + -8), 0x1f < (ulonglong)((longlong)DAT_1803fcc50 + (-8 - (longlong)pvVar6))))")) {
+                        trace.statement("pvVar6 = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar9 = puVar9 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar9 + -8) = 0x180228b62;");
+                    trace.statement("free(pvVar6);");
+                }
+                trace.statement("DAT_1803fcc50 = (void *)uVar4;");
+                trace.statement("DAT_1803fcc58 = (void *)(uVar1 * 0x98 + uVar4);");
+                trace.statement("DAT_1803fcc60 = uVar5 + uVar4;");
+                trace.statement("return uVar10;");
+            }
+        }
     return kFunction_0x180228850;
 }
 
@@ -14957,9 +24801,10 @@ FUN_1802d8350)F180228bb0C",
 98: if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar1) >> 4) << 4)) &&
 112: return lVar5;
 115: LAB_180228dd0:)F180228bb0F",
-    R"F180228bb0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180228bb0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180228dd0.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180228dd0.
 TODO: resolve the indirect call in body 58: pcVar2 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 59: lVar5 = (*pcVar2)(5);.
 TODO: resolve the indirect call in body 102: pcVar2 = (code *)swi(0x29);.
@@ -14968,6 +24813,124 @@ TODO: resolve the indirect call in body 103: (*pcVar2)();.)F180228bb0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180228bb0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180228bb0", "FUN_180228bb0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180228dd0.
+    // TODO: resolve the indirect call in body 58: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 59: lVar5 = (*pcVar2)(5);.
+    // TODO: resolve the indirect call in body 102: pcVar2 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 103: (*pcVar2)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18022a300", reinterpret_cast<const void*>(&image::FUN_18022a300));
+    trace.call_target("FUN_180232e30", reinterpret_cast<const void*>(&image::FUN_180232e30));
+    trace.call_target("FUN_180232ed0", reinterpret_cast<const void*>(&image::FUN_180232ed0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 9e4df7c3d483e6c9f0befbd311bc4c036d330f74ab886a43180a5aa6c449ca3c
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180228bb0(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("void *pvVar1;");
+            trace.statement("code *pcVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("undefined1 *puVar7;");
+            trace.statement("undefined1 *puVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("ulonglong uVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined8 local_68;");
+            trace.statement("puVar7 = auStack_88;");
+            trace.statement("puVar8 = auStack_88;");
+            trace.statement("local_68 = param_3;");
+            trace.statement("uVar6 = *param_1;");
+            trace.statement("lVar5 = ((longlong)(param_1[1] - uVar6) >> 4) * -0x71c71c71c71c71c7;");
+            if (trace.condition("if (lVar5 == 0x1c71c71c71c71c7)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar4 = ((longlong)(param_1[2] - uVar6) >> 4) * -0x71c71c71c71c71c7;");
+            trace.statement("uVar3 = 0x1c71c71c71c71c7 - (uVar4 >> 1);");
+            if (trace.condition("if (uVar4 < uVar3 || uVar4 - uVar3 == 0)")) {
+                trace.statement("uVar3 = lVar5 + 1;");
+                trace.statement("uVar4 = uVar4 + (uVar4 >> 1);");
+                trace.statement("uVar11 = uVar3;");
+                if (trace.condition("if (uVar3 <= uVar4)")) {
+                    trace.statement("uVar11 = uVar4;");
+                }
+                if (trace.condition("if (uVar11 < 0x1c71c71c71c71c8)")) {
+                    trace.statement("uVar4 = uVar11 * 0x90;");
+                    if (trace.condition("if (uVar4 == 0)")) {
+                        trace.statement("uVar9 = 0;");
+                        trace.statement("puVar8 = auStack_88;");
+                    } else {
+                    trace.statement("uVar9 = FUN_1802d8350(uVar4);");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar4 + 0x27 <= uVar4) goto LAB_180228dd0; lVar5 = FUN_1802d8350(); if (lVar5 == 0)")) {
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("lVar5 = (*pcVar2)(5);");
+                        trace.statement("puVar7 = auStack_80;");
+                    }
+                    trace.statement("uVar9 = lVar5 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar9 - 8) = lVar5;");
+                    trace.statement("puVar8 = puVar7;");
+                }
+                trace.statement("lVar5 = ((longlong)(param_2 - uVar6) / 0x90) * 0x90 + uVar9;");
+                trace.statement("uVar10 = lVar5 + 0x90;");
+                trace.statement("*(ulonglong **)(puVar8 + 0x28) = param_1;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x30) = uVar9;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x38) = uVar11;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x40) = uVar10;");
+                trace.statement("*(ulonglong *)(puVar8 + 0x48) = uVar10;");
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180228ce7;");
+                trace.statement("FUN_180232e30(-((longlong)(param_2 - uVar6) >> 0x3f),lVar5,*(undefined8 *)(puVar8 + 0x20));");
+                trace.statement("*(longlong *)(puVar8 + 0x40) = lVar5;");
+                trace.statement("uVar6 = param_1[1];");
+                if (trace.condition("if (param_2 == uVar6)")) {
+                    trace.statement("param_2 = *param_1;");
+                    trace.statement("uVar10 = uVar9;");
+                } else {
+                trace.statement("uVar6 = *param_1;");
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180228d0e;");
+                trace.statement("FUN_180232ed0(uVar6,param_2,uVar9,param_1);");
+                trace.statement("*(ulonglong *)(puVar8 + 0x40) = uVar9;");
+                trace.statement("uVar6 = param_1[1];");
+                }
+                trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180228d25;");
+                trace.statement("FUN_180232ed0(param_2,uVar6,uVar10,param_1);");
+                trace.statement("*(undefined8 *)(puVar8 + 0x30) = 0;");
+                trace.statement("uVar6 = *param_1;");
+                if (trace.condition("if (uVar6 != 0)")) {
+                    trace.statement("uVar11 = param_1[1];");
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180228d3f;");
+                    trace.statement("FUN_18022a300(uVar6,uVar11);");
+                    trace.statement("pvVar1 = (void *)*param_1;");
+                    trace.statement("_Memory = pvVar1;");
+                    if (trace.condition("if ((0xfff < (ulonglong)(((longlong)(param_1[2] - (longlong)pvVar1) >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar1 + -8), 0x1f < (ulonglong)((longlong)pvVar1 + (-8 - (longlong)_Memory))))")) {
+                        trace.statement("_Memory = (void *)0x5;");
+                        trace.statement("pcVar2 = (code *)swi(0x29);");
+                        trace.statement("(*pcVar2)();");
+                        trace.statement("puVar8 = puVar8 + 8;");
+                    }
+                    trace.statement("*(undefined8 *)(puVar8 + -8) = 0x180228d95;");
+                    trace.statement("free(_Memory);");
+                }
+                trace.statement("*param_1 = uVar9;");
+                trace.statement("param_1[1] = uVar3 * 0x90 + uVar9;");
+                trace.statement("param_1[2] = uVar4 + uVar9;");
+                trace.statement("return lVar5;");
+            }
+        }
+        LAB_180228dd0: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180228bb0;
 }
 
@@ -15154,10 +25117,11 @@ LAB_18022900f)F180228de0D",
 115: while (uVar8 != uVar11) {
 125: if ((0xfff < (param_1[2] - (longlong)pvVar2 & 0xffffffffffffffc0)) &&
 138: return lVar12 * 0x40 + uVar6;)F180228de0F",
-    R"F180228de0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180228de0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180228eba.
-TODO: recover the declaration, type and value for global/data reference LAB_18022900f.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180228eba.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022900f.
 TODO: resolve the indirect call in body 70: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 71: lVar4 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 128: pcVar3 = (code *)swi(0x29);.
@@ -15166,6 +25130,149 @@ TODO: resolve the indirect call in body 129: _Memory = (void *)(*pcVar3)(5);.)F1
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180228de0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180228de0", "FUN_180228de0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180228eba.
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022900f.
+    // TODO: resolve the indirect call in body 70: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 71: lVar4 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 128: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 129: _Memory = (void *)(*pcVar3)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020d5c0", reinterpret_cast<const void*>(&image::FUN_18020d5c0));
+    trace.call_target("FUN_18020d910", reinterpret_cast<const void*>(&image::FUN_18020d910));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180233060", reinterpret_cast<const void*>(&image::FUN_180233060));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 80fed5177a47a9f9f2147457a2b6596f5e912761e248b8a08babc6af0663f515
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180228de0(ulonglong *param_1,ulonglong param_2,undefined8 param_3)");
+        {
+            trace.statement("ulonglong uVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("longlong lVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [32];");
+            trace.statement("undefined8 local_70;");
+            trace.statement("puVar9 = auStack_98;");
+            trace.statement("puVar10 = auStack_98;");
+            trace.statement("local_70 = param_3;");
+            trace.statement("uVar8 = *param_1;");
+            trace.statement("lVar4 = (longlong)(param_1[1] - uVar8) >> 6;");
+            trace.statement("uVar11 = 0x3ffffffffffffff;");
+            if (trace.condition("if (lVar4 == 0x3ffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar1 = lVar4 + 1;");
+            trace.statement("uVar5 = (longlong)(param_1[2] - uVar8) >> 6;");
+            if (trace.condition("if (0x3ffffffffffffff - (uVar5 >> 1) < uVar5)")) {
+                trace.statement("uVar6 = 0xffffffffffffffe7;");
+                trace.statement("uVar5 = 0xffffffffffffffc0;");
+            } else {
+            trace.statement("uVar5 = uVar5 + (uVar5 >> 1);");
+            trace.statement("uVar11 = uVar1;");
+            if (trace.condition("if (uVar1 <= uVar5)")) {
+                trace.statement("uVar11 = uVar5;");
+            }
+            if (trace.condition("if (0x3ffffffffffffff < uVar11)")) {
+                LAB_18022900f: ;
+                trace.statement("FUN_180012fe0();");
+            }
+            trace.statement("uVar5 = uVar11 * 0x40;");
+            if (trace.condition("if (uVar5 == 0)")) {
+                trace.statement("uVar6 = 0;");
+                trace.statement("puVar10 = auStack_98;");
+                trace.statement("goto LAB_180228eba;");
+            }
+            if (trace.condition("if (uVar5 < 0x1000)")) {
+                trace.statement("uVar6 = FUN_1802d8350(uVar5);");
+                trace.statement("goto LAB_180228eba;");
+            }
+            trace.statement("uVar6 = uVar5 + 0x27;");
+            if (trace.condition("if (uVar6 <= uVar5) goto LAB_18022900f; } lVar4 = FUN_1802d8350(uVar6); if (lVar4 == 0)")) {
+                trace.statement("pcVar3 = (code *)swi(0x29);");
+                trace.statement("lVar4 = (*pcVar3)(5);");
+                trace.statement("puVar9 = auStack_90;");
+            }
+            trace.statement("uVar6 = lVar4 + 0x27U & 0xffffffffffffffe0;");
+            trace.statement("*(longlong *)(uVar6 - 8) = lVar4;");
+            trace.statement("puVar10 = puVar9;");
+            LAB_180228eba: ;
+            trace.statement("lVar12 = (longlong)(param_2 - uVar8) >> 6;");
+            trace.statement("lVar7 = lVar12 * 0x40 + uVar6;");
+            trace.statement("lVar4 = lVar7 + 0x40;");
+            trace.statement("*(longlong *)(puVar10 + 0x20) = lVar4;");
+            trace.statement("*(ulonglong **)(puVar10 + 0x30) = param_1;");
+            trace.statement("*(ulonglong *)(puVar10 + 0x38) = uVar6;");
+            trace.statement("*(ulonglong *)(puVar10 + 0x40) = uVar11;");
+            trace.statement("*(longlong *)(puVar10 + 0x48) = lVar4;");
+            trace.statement("*(longlong *)(puVar10 + 0x50) = lVar4;");
+            trace.statement("*(longlong *)(puVar10 + 0x58) = lVar7;");
+            trace.statement("lVar4 = *(longlong *)(puVar10 + 0x28);");
+            trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180228f05;");
+            trace.statement("FUN_18016d4c0(lVar7,lVar4);");
+            trace.statement("*(undefined4 *)(lVar7 + 0x20) = *(undefined4 *)(lVar4 + 0x20);");
+            trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180228f19;");
+            trace.statement("FUN_18020d910(lVar7 + 0x28,lVar4 + 0x28);");
+            trace.statement("*(longlong *)(puVar10 + 0x48) = lVar7;");
+            trace.statement("uVar8 = param_1[1];");
+            if (trace.condition("if (param_2 == uVar8)")) {
+                trace.statement("param_2 = *param_1;");
+                trace.statement("uVar11 = uVar6;");
+            } else {
+            trace.statement("uVar8 = *param_1;");
+            trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180228f3e;");
+            trace.statement("FUN_180233060(uVar8,param_2,uVar6,param_1);");
+            trace.statement("*(ulonglong *)(puVar10 + 0x48) = uVar6;");
+            trace.statement("uVar8 = param_1[1];");
+            trace.statement("uVar11 = *(ulonglong *)(puVar10 + 0x20);");
+            }
+            trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180228f57;");
+            trace.statement("FUN_180233060(param_2,uVar8,uVar11,param_1);");
+            trace.statement("*(undefined8 *)(puVar10 + 0x38) = 0;");
+            trace.statement("uVar8 = *param_1;");
+            if (trace.condition("if (uVar8 != 0)")) {
+                trace.statement("uVar11 = param_1[1];");
+                trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                while (trace.loop_condition("while (uVar8 != uVar11)")) {
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180228f7f;");
+                    trace.statement("FUN_18020d5c0(uVar8 + 0x28);");
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180228f88;");
+                    trace.statement("FUN_18020e450(uVar8);");
+                    trace.statement("uVar8 = uVar8 + 0x40;");
+                    trace.statement("*(ulonglong *)(puVar10 + 0x20) = uVar8;");
+                }
+                trace.statement("pvVar2 = (void *)*param_1;");
+                trace.statement("_Memory = pvVar2;");
+                if (trace.condition("if ((0xfff < (param_1[2] - (longlong)pvVar2 & 0xffffffffffffffc0)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                    trace.statement("pcVar3 = (code *)swi(0x29);");
+                    trace.statement("_Memory = (void *)(*pcVar3)(5);");
+                    trace.statement("puVar10 = puVar10 + 8;");
+                }
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x180228fd3;");
+                trace.statement("free(_Memory);");
+            }
+            trace.statement("*param_1 = uVar6;");
+            trace.statement("param_1[1] = uVar1 * 0x40 + uVar6;");
+            trace.statement("param_1[2] = uVar5 + uVar6;");
+            trace.statement("return lVar12 * 0x40 + uVar6;");
+            }
+        }
     return kFunction_0x180228de0;
 }
 
@@ -15225,12 +25332,47 @@ undefined4 * FUN_180229020(undefined4 *param_1,undefined4 *param_2,undefined4 *p
     R"F180229020F(15: if (param_1 != param_2) {
 17: do {
 35: return param_3;)F180229020F",
-    R"F180229020U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180229020U",
+    R"F180229020U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180229020U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180229020() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180229020", "FUN_180229020");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // body sha256: 85b855d2dcf9899985491969be896b35116416ad148133b81aa0227e26b32d3d
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_180229020(undefined4 *param_1,undefined4 *param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined8 uVar1;");
+            trace.statement("undefined8 uVar2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("undefined8 *puVar4;");
+            if (trace.condition("if (param_1 != param_2)")) {
+                trace.statement("puVar4 = (undefined8 *)(param_1 + 2);");
+                do {
+                    trace.statement("*param_3 = *param_1;");
+                    trace.statement("*(undefined1 *)(param_3 + 1) = *(undefined1 *)(param_1 + 1);");
+                    trace.statement("*(undefined1 *)((longlong)param_3 + 5) = *(undefined1 *)((longlong)param_1 + 5);");
+                    trace.statement("uVar1 = puVar4[2];");
+                    trace.statement("puVar4[2] = 0;");
+                    trace.statement("uVar2 = puVar4[1];");
+                    trace.statement("puVar4[1] = 0;");
+                    trace.statement("uVar3 = *puVar4;");
+                    trace.statement("*puVar4 = 0;");
+                    trace.statement("*(undefined8 *)(param_3 + 2) = uVar3;");
+                    trace.statement("*(undefined8 *)(param_3 + 4) = uVar2;");
+                    trace.statement("*(undefined8 *)(param_3 + 6) = uVar1;");
+                    trace.statement("param_3 = param_3 + 8;");
+                    trace.statement("param_1 = param_1 + 8;");
+                    trace.statement("puVar4 = puVar4 + 4;");
+                } while (trace.loop_condition("while (param_1 != param_2);"));
+            }
+            trace.statement("return param_3;");
+        }
     return kFunction_0x180229020;
 }
 
@@ -15413,9 +25555,10 @@ FUN_1802d8350)F1802290d0C",
 122: if ((0xfff < (param_1[2] - (longlong)pvVar5 & 0xffffffffffffffe0U)) &&
 135: return puVar12 + lVar15 * 8;
 138: LAB_180229310:)F1802290d0F",
-    R"F1802290d0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802290d0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_180229310.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_180229310.
 TODO: resolve the indirect call in body 63: pcVar6 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 64: lVar15 = (*pcVar6)(5);.
 TODO: resolve the indirect call in body 125: pcVar6 = (code *)swi(0x29);.
@@ -15424,6 +25567,146 @@ TODO: resolve the indirect call in body 126: _Memory = (void *)(*pcVar6)(5);.)F1
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802290d0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802290d0", "FUN_1802290d0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_180229310.
+    // TODO: resolve the indirect call in body 63: pcVar6 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 64: lVar15 = (*pcVar6)(5);.
+    // TODO: resolve the indirect call in body 125: pcVar6 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 126: _Memory = (void *)(*pcVar6)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020c270", reinterpret_cast<const void*>(&image::FUN_18020c270));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_180229020", reinterpret_cast<const void*>(&image::FUN_180229020));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 59450423fd8b382d99f2ed46750b7d11349b421b3e63d25c7963139303623e25
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined4 * FUN_1802290d0(longlong *param_1,longlong param_2,undefined4 *param_3)");
+        {
+            trace.statement("undefined8 uVar1;");
+            trace.statement("undefined8 uVar2;");
+            trace.statement("undefined8 uVar3;");
+            trace.statement("longlong lVar4;");
+            trace.statement("void *pvVar5;");
+            trace.statement("code *pcVar6;");
+            trace.statement("void *_Memory;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("longlong lVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("undefined1 *puVar11;");
+            trace.statement("undefined4 *puVar12;");
+            trace.statement("undefined4 *puVar13;");
+            trace.statement("undefined4 *puVar14;");
+            trace.statement("longlong lVar15;");
+            trace.statement("ulonglong uVar16;");
+            trace.statement("undefined8 uStack_90;");
+            trace.statement("undefined1 auStack_88 [8];");
+            trace.statement("undefined1 auStack_80 [24];");
+            trace.statement("undefined4 *local_68;");
+            trace.statement("puVar10 = auStack_88;");
+            trace.statement("puVar11 = auStack_88;");
+            trace.statement("lVar9 = *param_1;");
+            trace.statement("lVar15 = param_1[1] - lVar9 >> 5;");
+            trace.statement("local_68 = param_3;");
+            if (trace.condition("if (lVar15 == 0x7ffffffffffffff)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar7 = param_1[2] - lVar9 >> 5;");
+            if (trace.condition("if (uVar7 <= 0x7ffffffffffffff - (uVar7 >> 1))")) {
+                trace.statement("uVar16 = lVar15 + 1;");
+                trace.statement("uVar7 = uVar7 + (uVar7 >> 1);");
+                trace.statement("uVar8 = uVar16;");
+                if (trace.condition("if (uVar16 <= uVar7)")) {
+                    trace.statement("uVar8 = uVar7;");
+                }
+                if (trace.condition("if (uVar8 < 0x800000000000000)")) {
+                    trace.statement("uVar7 = uVar8 * 0x20;");
+                    if (trace.condition("if (uVar7 == 0)")) {
+                        trace.statement("puVar12 = (undefined4 *)0x0;");
+                        trace.statement("puVar11 = auStack_88;");
+                    } else {
+                    if (trace.condition("if (uVar7 < 0x1000)")) {
+                        trace.statement("puVar12 = (undefined4 *)FUN_1802d8350(uVar7);");
+                    } else {
+                    if (trace.condition("if (uVar7 + 0x27 <= uVar7) goto LAB_180229310; lVar15 = FUN_1802d8350(); if (lVar15 == 0)")) {
+                        trace.statement("pcVar6 = (code *)swi(0x29);");
+                        trace.statement("lVar15 = (*pcVar6)(5);");
+                        trace.statement("puVar10 = auStack_80;");
+                    }
+                    trace.statement("puVar12 = (undefined4 *)(lVar15 + 0x27U & 0xffffffffffffffe0);");
+                    trace.statement("*(longlong *)(puVar12 + -2) = lVar15;");
+                    trace.statement("puVar11 = puVar10;");
+                    }
+                    trace.statement("param_3 = *(undefined4 **)(puVar11 + 0x20);");
+                    }
+                    trace.statement("lVar15 = param_2 - lVar9 >> 5;");
+                    trace.statement("puVar13 = puVar12 + lVar15 * 8;");
+                    trace.statement("puVar14 = puVar13 + 8;");
+                    trace.statement("*(longlong **)(puVar11 + 0x28) = param_1;");
+                    trace.statement("*(undefined4 **)(puVar11 + 0x30) = puVar12;");
+                    trace.statement("*(ulonglong *)(puVar11 + 0x38) = uVar8;");
+                    trace.statement("*(undefined4 **)(puVar11 + 0x40) = puVar14;");
+                    trace.statement("*(undefined4 **)(puVar11 + 0x48) = puVar14;");
+                    trace.statement("*(undefined4 **)(puVar11 + 0x20) = puVar13;");
+                    trace.statement("*puVar13 = *param_3;");
+                    trace.statement("*(undefined1 *)(puVar13 + 1) = *(undefined1 *)(param_3 + 1);");
+                    trace.statement("*(undefined1 *)((longlong)puVar13 + 5) = *(undefined1 *)((longlong)param_3 + 5);");
+                    trace.statement("uVar1 = *(undefined8 *)(param_3 + 6);");
+                    trace.statement("*(undefined8 *)(param_3 + 6) = 0;");
+                    trace.statement("uVar2 = *(undefined8 *)(param_3 + 4);");
+                    trace.statement("*(undefined8 *)(param_3 + 4) = 0;");
+                    trace.statement("uVar3 = *(undefined8 *)(param_3 + 2);");
+                    trace.statement("*(undefined8 *)(param_3 + 2) = 0;");
+                    trace.statement("*(undefined8 *)(puVar13 + 2) = uVar3;");
+                    trace.statement("*(undefined8 *)(puVar13 + 4) = uVar2;");
+                    trace.statement("*(undefined8 *)(puVar13 + 6) = uVar1;");
+                    trace.statement("*(undefined4 **)(puVar11 + 0x40) = puVar13;");
+                    trace.statement("lVar9 = param_1[1];");
+                    if (trace.condition("if (param_2 == lVar9)")) {
+                        trace.statement("param_2 = *param_1;");
+                        trace.statement("puVar14 = puVar12;");
+                    } else {
+                    trace.statement("lVar9 = *param_1;");
+                    trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180229247;");
+                    trace.statement("FUN_180229020(lVar9,param_2,puVar12,param_1);");
+                    trace.statement("*(undefined4 **)(puVar11 + 0x40) = puVar12;");
+                    trace.statement("lVar9 = param_1[1];");
+                    }
+                    trace.statement("*(undefined8 *)(puVar11 + -8) = 0x18022925e;");
+                    trace.statement("FUN_180229020(param_2,lVar9,puVar14,param_1);");
+                    trace.statement("*(undefined8 *)(puVar11 + 0x30) = 0;");
+                    trace.statement("lVar9 = *param_1;");
+                    if (trace.condition("if (lVar9 != 0)")) {
+                        trace.statement("lVar4 = param_1[1];");
+                        trace.statement("*(longlong *)(puVar11 + 0x20) = lVar9;");
+                        while (trace.loop_condition("while (lVar9 != lVar4)")) {
+                            trace.statement("*(undefined8 *)(puVar11 + -8) = 0x180229289;");
+                            trace.statement("FUN_18020c270(lVar9 + 8);");
+                            trace.statement("lVar9 = lVar9 + 0x20;");
+                            trace.statement("*(longlong *)(puVar11 + 0x20) = lVar9;");
+                        }
+                        trace.statement("pvVar5 = (void *)*param_1;");
+                        trace.statement("_Memory = pvVar5;");
+                        if (trace.condition("if ((0xfff < (param_1[2] - (longlong)pvVar5 & 0xffffffffffffffe0U)) && (_Memory = *(void **)((longlong)pvVar5 + -8), 0x1f < (ulonglong)((longlong)pvVar5 + (-8 - (longlong)_Memory))))")) {
+                            trace.statement("pcVar6 = (code *)swi(0x29);");
+                            trace.statement("_Memory = (void *)(*pcVar6)(5);");
+                            trace.statement("puVar11 = puVar11 + 8;");
+                        }
+                        trace.statement("*(undefined8 *)(puVar11 + -8) = 0x1802292d4;");
+                        trace.statement("free(_Memory);");
+                    }
+                    trace.statement("*param_1 = (longlong)puVar12;");
+                    trace.statement("param_1[1] = (longlong)(puVar12 + uVar16 * 8);");
+                    trace.statement("param_1[2] = (longlong)(puVar12 + uVar8 * 8);");
+                    trace.statement("return puVar12 + lVar15 * 8;");
+                }
+            }
+            LAB_180229310: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x1802290d0;
 }
 
@@ -15465,12 +25748,32 @@ longlong FUN_180229320(longlong param_1,longlong param_2,longlong param_3)
     R"F180229320T()F180229320T",
     R"F180229320F(10: for (; param_2 != 0; param_2 = param_2 + -1) {
 18: return param_3;)F180229320F",
-    R"F180229320U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
-TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.)F180229320U",
+    R"F180229320U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
+TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.)F180229320U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180229320() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180229320", "FUN_180229320");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_18016d4c0", reinterpret_cast<const void*>(&image::FUN_18016d4c0));
+    // body sha256: c348f2520d9b74e39b6bf3f89819cd98b0c4029d5891c4c0bd65033d6cff7dbe
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180229320(longlong param_1,longlong param_2,longlong param_3)");
+        {
+            for (auto loop = trace.loop("for (; param_2 != 0; param_2 = param_2 + -1)"); loop.next(); ) {
+                trace.statement("FUN_18016d4c0(param_3,param_1);");
+                trace.statement("FUN_18016d4c0(param_3 + 0x20,param_1 + 0x20);");
+                trace.statement("*(undefined8 *)(param_3 + 0x40) = *(undefined8 *)(param_1 + 0x40);");
+                trace.statement("*(undefined1 *)(param_3 + 0x48) = *(undefined1 *)(param_1 + 0x48);");
+                trace.statement("param_3 = param_3 + 0x50;");
+                trace.statement("param_1 = param_1 + 0x50;");
+            }
+            trace.statement("return param_3;");
+        }
     return kFunction_0x180229320;
 }
 
@@ -15678,9 +25981,10 @@ FUN_1802d8350)F1802293c0C",
 147: if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 4) << 4)) &&
 161: return puVar16 + lVar11 * 10;
 164: LAB_18022967c:)F1802293c0F",
-    R"F1802293c0U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F1802293c0U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_18022967c.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_18022967c.
 TODO: resolve the indirect call in body 62: pcVar3 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 63: lVar11 = (*pcVar3)(5);.
 TODO: resolve the indirect call in body 151: pcVar3 = (code *)swi(0x29);.
@@ -15689,6 +25993,173 @@ TODO: resolve the indirect call in body 152: (*pcVar3)();.)F1802293c0U",
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802293c0() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x1802293c0", "FUN_1802293c0");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_18022967c.
+    // TODO: resolve the indirect call in body 62: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 63: lVar11 = (*pcVar3)(5);.
+    // TODO: resolve the indirect call in body 151: pcVar3 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 152: (*pcVar3)();.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_18020e450", reinterpret_cast<const void*>(&image::FUN_18020e450));
+    trace.call_target("FUN_180233270", reinterpret_cast<const void*>(&image::FUN_180233270));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 15944abbcff91e04340253391bc8053dfad3053f38cb4a8407b10ddc2c5d237e
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("undefined8 * FUN_1802293c0(longlong *param_1,longlong param_2,undefined8 *param_3)");
+        {
+            trace.statement("longlong lVar1;");
+            trace.statement("void *pvVar2;");
+            trace.statement("code *pcVar3;");
+            trace.statement("undefined4 uVar4;");
+            trace.statement("undefined4 uVar5;");
+            trace.statement("undefined4 uVar6;");
+            trace.statement("undefined8 uVar7;");
+            trace.statement("ulonglong uVar8;");
+            trace.statement("ulonglong uVar9;");
+            trace.statement("undefined8 *puVar10;");
+            trace.statement("void *_Memory;");
+            trace.statement("longlong lVar11;");
+            trace.statement("ulonglong uVar12;");
+            trace.statement("longlong lVar13;");
+            trace.statement("undefined1 *puVar14;");
+            trace.statement("undefined1 *puVar15;");
+            trace.statement("undefined8 *puVar16;");
+            trace.statement("undefined8 *puVar17;");
+            trace.statement("undefined8 uVar18;");
+            trace.statement("undefined8 uStack_a0;");
+            trace.statement("undefined1 auStack_98 [8];");
+            trace.statement("undefined1 auStack_90 [88];");
+            trace.statement("puVar15 = auStack_98;");
+            trace.statement("puVar14 = auStack_98;");
+            trace.statement("lVar13 = *param_1;");
+            trace.statement("lVar11 = (param_1[1] - lVar13 >> 4) * -0x3333333333333333;");
+            if (trace.condition("if (lVar11 == 0x333333333333333)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar9 = (param_1[2] - lVar13 >> 4) * -0x3333333333333333;");
+            trace.statement("uVar8 = 0x333333333333333 - (uVar9 >> 1);");
+            if (trace.condition("if (uVar9 < uVar8 || uVar9 - uVar8 == 0)")) {
+                trace.statement("uVar8 = lVar11 + 1;");
+                trace.statement("uVar9 = (uVar9 >> 1) + uVar9;");
+                trace.statement("uVar12 = uVar8;");
+                if (trace.condition("if (uVar8 <= uVar9)")) {
+                    trace.statement("uVar12 = uVar9;");
+                }
+                if (trace.condition("if (uVar12 < 0x333333333333334)")) {
+                    trace.statement("uVar9 = uVar12 * 0x50;");
+                    trace.statement("puVar16 = (undefined8 *)0x0;");
+                    if (trace.condition("if (uVar9 != 0)")) {
+                        if (trace.condition("if (uVar9 < 0x1000)")) {
+                            trace.statement("puVar16 = (undefined8 *)FUN_1802d8350(uVar9);");
+                            trace.statement("puVar15 = auStack_98;");
+                        } else {
+                        if (trace.condition("if (uVar9 + 0x27 <= uVar9) goto LAB_18022967c; lVar11 = FUN_1802d8350(); if (lVar11 == 0)")) {
+                            trace.statement("pcVar3 = (code *)swi(0x29);");
+                            trace.statement("lVar11 = (*pcVar3)(5);");
+                            trace.statement("puVar14 = auStack_90;");
+                        }
+                        trace.statement("puVar16 = (undefined8 *)(lVar11 + 0x27U & 0xffffffffffffffe0);");
+                        trace.statement("puVar16[-1] = lVar11;");
+                        trace.statement("puVar15 = puVar14;");
+                        }
+                    }
+                    trace.statement("uVar18 = 0;");
+                    trace.statement("lVar11 = (param_2 - lVar13) / 0x50;");
+                    trace.statement("puVar10 = puVar16 + lVar11 * 10;");
+                    trace.statement("puVar17 = puVar10 + 10;");
+                    trace.statement("*(longlong **)(puVar15 + 0x28) = param_1;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x30) = puVar16;");
+                    trace.statement("*(ulonglong *)(puVar15 + 0x38) = uVar12;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar17;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x48) = puVar17;");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x50) = puVar10;");
+                    trace.statement("*puVar10 = 0;");
+                    trace.statement("puVar10[1] = 0;");
+                    trace.statement("puVar10[2] = 0;");
+                    trace.statement("puVar10[3] = 0;");
+                    trace.statement("uVar7 = param_3[1];");
+                    trace.statement("*puVar10 = *param_3;");
+                    trace.statement("puVar10[1] = uVar7;");
+                    trace.statement("uVar7 = param_3[3];");
+                    trace.statement("puVar10[2] = param_3[2];");
+                    trace.statement("puVar10[3] = uVar7;");
+                    trace.statement("param_3[2] = 0;");
+                    trace.statement("param_3[3] = 0xf;");
+                    trace.statement("*(undefined1 *)param_3 = 0;");
+                    trace.statement("puVar10[4] = 0;");
+                    trace.statement("puVar10[5] = 0;");
+                    trace.statement("puVar10[6] = 0;");
+                    trace.statement("puVar10[7] = 0;");
+                    trace.statement("uVar4 = *(undefined4 *)((longlong)param_3 + 0x24);");
+                    trace.statement("uVar5 = *(undefined4 *)(param_3 + 5);");
+                    trace.statement("uVar6 = *(undefined4 *)((longlong)param_3 + 0x2c);");
+                    trace.statement("*(undefined4 *)(puVar10 + 4) = *(undefined4 *)(param_3 + 4);");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x24) = uVar4;");
+                    trace.statement("*(undefined4 *)(puVar10 + 5) = uVar5;");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x2c) = uVar6;");
+                    trace.statement("uVar4 = *(undefined4 *)((longlong)param_3 + 0x34);");
+                    trace.statement("uVar5 = *(undefined4 *)(param_3 + 7);");
+                    trace.statement("uVar6 = *(undefined4 *)((longlong)param_3 + 0x3c);");
+                    trace.statement("*(undefined4 *)(puVar10 + 6) = *(undefined4 *)(param_3 + 6);");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x34) = uVar4;");
+                    trace.statement("*(undefined4 *)(puVar10 + 7) = uVar5;");
+                    trace.statement("*(undefined4 *)((longlong)puVar10 + 0x3c) = uVar6;");
+                    trace.statement("param_3[6] = 0;");
+                    trace.statement("param_3[7] = 0xf;");
+                    trace.statement("*(undefined1 *)(param_3 + 4) = 0;");
+                    trace.statement("puVar10[8] = param_3[8];");
+                    trace.statement("*(undefined1 *)(puVar10 + 9) = *(undefined1 *)(param_3 + 9);");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar10;");
+                    trace.statement("lVar13 = param_1[1];");
+                    if (trace.condition("if (param_2 == lVar13)")) {
+                        trace.statement("param_2 = *param_1;");
+                        trace.statement("puVar17 = puVar16;");
+                    } else {
+                    trace.statement("lVar13 = *param_1;");
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x18022958d;");
+                    trace.statement("FUN_180233270(lVar13,param_2,puVar16,param_1);");
+                    trace.statement("*(undefined8 **)(puVar15 + 0x40) = puVar16;");
+                    trace.statement("lVar13 = param_1[1];");
+                    }
+                    trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1802295a4;");
+                    trace.statement("FUN_180233270(param_2,lVar13,puVar17,param_1);");
+                    trace.statement("*(undefined8 *)(puVar15 + 0x30) = uVar18;");
+                    trace.statement("lVar13 = *param_1;");
+                    if (trace.condition("if (lVar13 != 0)")) {
+                        trace.statement("lVar1 = param_1[1];");
+                        trace.statement("*(longlong *)(puVar15 + 0x20) = lVar13;");
+                        while (trace.loop_condition("while (lVar13 != lVar1)")) {
+                            trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1802295cc;");
+                            trace.statement("FUN_18020e450(lVar13 + 0x20);");
+                            trace.statement("*(undefined8 *)(puVar15 + -8) = 0x1802295d5;");
+                            trace.statement("FUN_18020e450(lVar13);");
+                            trace.statement("lVar13 = lVar13 + 0x50;");
+                            trace.statement("*(longlong *)(puVar15 + 0x20) = lVar13;");
+                        }
+                        trace.statement("pvVar2 = (void *)*param_1;");
+                        trace.statement("_Memory = pvVar2;");
+                        if (trace.condition("if ((0xfff < (ulonglong)((param_1[2] - (longlong)pvVar2 >> 4) << 4)) && (_Memory = *(void **)((longlong)pvVar2 + -8), 0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory))))")) {
+                            trace.statement("_Memory = (void *)0x5;");
+                            trace.statement("pcVar3 = (code *)swi(0x29);");
+                            trace.statement("(*pcVar3)();");
+                            trace.statement("puVar15 = puVar15 + 8;");
+                        }
+                        trace.statement("*(undefined8 *)(puVar15 + -8) = 0x180229639;");
+                        trace.statement("free(_Memory);");
+                    }
+                    trace.statement("*param_1 = (longlong)puVar16;");
+                    trace.statement("param_1[1] = (longlong)(puVar16 + uVar8 * 10);");
+                    trace.statement("param_1[2] = (longlong)(puVar16 + uVar12 * 10);");
+                    trace.statement("return puVar16 + lVar11 * 10;");
+                }
+            }
+            LAB_18022967c: ;
+            trace.statement("FUN_180012fe0();");
+        }
     return kFunction_0x1802293c0;
 }
 
@@ -15878,15 +26349,161 @@ FUN_1802d8350)F180229690C",
 124: do {
 142: return uVar7 + lVar2 * 0x68;
 145: LAB_1802298f3:)F180229690F",
-    R"F180229690U(TODO: semantic reconstruction is incomplete; this is a source-level transcription of the decompiler body.
+    R"F180229690U(TODO: semantic reconstruction is incomplete; this accessor is a compile-checked trace, not the original behaviour.
 TODO: no vendor PDB or live object layout is available; verify recovered types, calling conventions and stack offsets before execution.
-TODO: recover the declaration, type and value for global/data reference LAB_1802298f3.
+TODO: verify the calling convention and argument/return types for each resolved call thunk.
+TODO: recover the declaration, type, value and runtime page/layout for global/data reference LAB_1802298f3.
 TODO: resolve the indirect call in body 71: pcVar1 = (code *)swi(0x29);.
 TODO: resolve the indirect call in body 72: lVar8 = (*pcVar1)(5);.)F180229690U",
 };
 }  // namespace
 
 const sf::reconstructed::FunctionTranslation& Function_0x180229690() noexcept {
+    sf::reconstructed::TranslationTrace trace("0x180229690", "FUN_180229690");
+    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
+    // TODO: recover global/data declaration, type, value and runtime page/layout for LAB_1802298f3.
+    // TODO: resolve the indirect call in body 71: pcVar1 = (code *)swi(0x29);.
+    // TODO: resolve the indirect call in body 72: lVar8 = (*pcVar1)(5);.
+    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
+    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_target("FUN_180012fe0", reinterpret_cast<const void*>(&image::FUN_180012fe0));
+    trace.call_target("FUN_18020cc40", reinterpret_cast<const void*>(&image::FUN_18020cc40));
+    trace.call_target("FUN_180210160", reinterpret_cast<const void*>(&image::FUN_180210160));
+    trace.call_target("FUN_180238ca0", reinterpret_cast<const void*>(&image::FUN_180238ca0));
+    trace.call_target("FUN_1802d8350", reinterpret_cast<const void*>(&image::FUN_1802d8350));
+    // body sha256: 5a51828a31c6bcbfdff692ca672e651420da84e1bc18f74630410be03e183042
+    // Structured control-flow trace derived from the decompiled body:
+        trace.statement("longlong FUN_180229690(longlong *param_1,longlong param_2,undefined8 param_3)");
+        {
+            trace.statement("code *pcVar1;");
+            trace.statement("longlong lVar2;");
+            trace.statement("ulonglong uVar3;");
+            trace.statement("ulonglong uVar4;");
+            trace.statement("longlong *plVar5;");
+            trace.statement("ulonglong uVar6;");
+            trace.statement("ulonglong uVar7;");
+            trace.statement("longlong lVar8;");
+            trace.statement("undefined1 *puVar9;");
+            trace.statement("undefined1 *puVar10;");
+            trace.statement("ulonglong uVar11;");
+            trace.statement("longlong lVar12;");
+            trace.statement("undefined1 auStack_d8 [8];");
+            trace.statement("undefined1 auStack_d0 [24];");
+            trace.statement("ulonglong local_b8;");
+            trace.statement("ulonglong local_b0;");
+            trace.statement("ulonglong uStack_a8;");
+            trace.statement("longlong *local_a0;");
+            trace.statement("ulonglong local_98;");
+            trace.statement("ulonglong uStack_90;");
+            trace.statement("longlong *local_88;");
+            trace.statement("ulonglong local_80;");
+            trace.statement("ulonglong uStack_78;");
+            trace.statement("longlong *local_70;");
+            trace.statement("ulonglong local_68;");
+            trace.statement("longlong *local_60;");
+            trace.statement("ulonglong local_58;");
+            trace.statement("ulonglong local_50;");
+            trace.statement("ulonglong local_48;");
+            trace.statement("longlong local_40;");
+            trace.statement("puVar9 = auStack_d8;");
+            trace.statement("puVar10 = auStack_d8;");
+            trace.statement("lVar12 = *param_1;");
+            trace.statement("lVar8 = (param_1[1] - lVar12 >> 3) * 0x4ec4ec4ec4ec4ec5;");
+            if (trace.condition("if (lVar8 == 0x276276276276276)")) {
+                trace.statement("FUN_18020cc40();");
+            }
+            trace.statement("uVar7 = (param_1[2] - lVar12 >> 3) * 0x4ec4ec4ec4ec4ec5;");
+            trace.statement("uVar6 = 0x276276276276276 - (uVar7 >> 1);");
+            if (trace.condition("if (uVar7 < uVar6 || uVar7 - uVar6 == 0)")) {
+                trace.statement("local_68 = lVar8 + 1;");
+                trace.statement("uVar7 = uVar7 + (uVar7 >> 1);");
+                trace.statement("uVar6 = local_68;");
+                if (trace.condition("if (local_68 <= uVar7)")) {
+                    trace.statement("uVar6 = uVar7;");
+                }
+                if (trace.condition("if (uVar6 < 0x276276276276277)")) {
+                    trace.statement("uVar7 = uVar6 * 0x68;");
+                    if (trace.condition("if (uVar7 == 0)")) {
+                        trace.statement("uVar7 = 0;");
+                        trace.statement("puVar10 = auStack_d8;");
+                    } else {
+                    trace.statement("uVar7 = FUN_1802d8350();");
+                    }
+                    trace.statement("else {");
+                    if (trace.condition("if (uVar7 + 0x27 <= uVar7) goto LAB_1802298f3; lVar8 = FUN_1802d8350(uVar7 + 0x27); if (lVar8 == 0)")) {
+                        trace.statement("pcVar1 = (code *)swi(0x29);");
+                        trace.statement("lVar8 = (*pcVar1)(5);");
+                        trace.statement("puVar9 = auStack_d0;");
+                    }
+                    trace.statement("uVar7 = lVar8 + 0x27U & 0xffffffffffffffe0;");
+                    trace.statement("*(longlong *)(uVar7 - 8) = lVar8;");
+                    trace.statement("puVar10 = puVar9;");
+                }
+                trace.statement("lVar2 = (param_2 - lVar12) / 0x68;");
+                trace.statement("uVar11 = lVar2 * 0x68 + uVar7;");
+                trace.statement("local_48 = uVar11 + 0x68;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802297bb;");
+                trace.statement("local_60 = param_1;");
+                trace.statement("local_58 = uVar7;");
+                trace.statement("local_50 = uVar6;");
+                trace.statement("local_40 = local_48;");
+                trace.statement("FUN_180210160(uVar11,param_3);");
+                trace.statement("lVar12 = param_1[1];");
+                trace.statement("lVar8 = *param_1;");
+                trace.statement("local_48 = uVar11;");
+                trace.statement("local_b8 = uVar7;");
+                trace.statement("uVar11 = uVar7;");
+                trace.statement("plVar5 = param_1;");
+                trace.statement("uVar3 = uVar7;");
+                if (trace.condition("if (param_2 == lVar12)")) {
+                    for (auto loop = trace.loop("for (; local_a0 = plVar5, local_b0 = uVar3, uVar3 = uVar11, uStack_a8 = uVar11, uVar4 = local_80, lVar8 != lVar12; lVar8 = lVar8 + 0x68)"); loop.next(); ) {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802297fb;");
+                        trace.statement("FUN_180210160(uVar11,lVar8);");
+                        trace.statement("uVar11 = uVar11 + 0x68;");
+                        trace.statement("uVar3 = local_b0;");
+                        trace.statement("plVar5 = local_a0;");
+                    }
+                } else {
+                for (auto loop = trace.loop("for (; local_88 = plVar5, local_98 = uVar11, uStack_90 = local_b8, lVar8 != param_2; lVar8 = lVar8 + 0x68)"); loop.next(); ) {
+                    trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18022983d;");
+                    trace.statement("FUN_180210160(local_b8,lVar8);");
+                    trace.statement("local_b8 = local_b8 + 0x68;");
+                    trace.statement("uVar11 = local_98;");
+                    trace.statement("plVar5 = local_88;");
+                }
+                trace.statement("uVar11 = lVar2 * 0x68 + 0x68 + uVar7;");
+                trace.statement("lVar12 = param_1[1];");
+                trace.statement("uVar3 = local_b0;");
+                trace.statement("local_98 = local_b8;");
+                trace.statement("local_80 = uVar11;");
+                trace.statement("uVar4 = uVar11;");
+                trace.statement("uStack_78 = uVar11;");
+                trace.statement("local_70 = param_1;");
+                trace.statement("local_48 = uVar7;");
+                if (trace.condition("if (param_2 != lVar12)")) {
+                    do {
+                        trace.statement("*(undefined8 *)(puVar10 + -8) = 0x18022989b;");
+                        trace.statement("uStack_78 = uVar11;");
+                        trace.statement("FUN_180210160(uVar11,param_2);");
+                        trace.statement("uVar11 = uVar11 + 0x68;");
+                        trace.statement("param_2 = param_2 + 0x68;");
+                        trace.statement("uVar3 = local_b0;");
+                        trace.statement("uVar4 = uVar11;");
+                        trace.statement("uStack_78 = uVar11;");
+                    } while (trace.loop_condition("while (param_2 != lVar12);"));
+                }
+                }
+                trace.statement("local_80 = uVar4;");
+                trace.statement("local_b0 = uVar3;");
+                trace.statement("local_58 = 0;");
+                trace.statement("*(undefined8 *)(puVar10 + -8) = 0x1802298ce;");
+                trace.statement("local_b8 = uVar11;");
+                trace.statement("FUN_180238ca0(param_1,uVar7,local_68,uVar6);");
+                trace.statement("return uVar7 + lVar2 * 0x68;");
+            }
+        }
+        LAB_1802298f3: ;
+        trace.statement("FUN_180012fe0();");
     return kFunction_0x180229690;
 }
 

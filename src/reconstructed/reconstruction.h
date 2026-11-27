@@ -3,16 +3,19 @@
 #include <cstddef>
 #include <string_view>
 
-// Machine-checkable translation records for the complete m64.dll function
-// inventory.  The hand-translated subsystems under src/features/ are the
-// executable reconstruction; these records keep every remaining decompiled
-// body readable, hashed and mapped without inventing execution semantics.
+// Machine-checkable compiled translation records for the complete m64.dll
+// function inventory.  The hand-translated subsystems under src/features/ are
+// the executable reconstruction; the generated accessors compile real C++
+// control-flow traces and resolved references without claiming behavioural
+// equivalence.
 //
-// Each record carries the full decompiled body, its control-flow lines, call
-// targets, data references, string literals and explicit TODO markers for
-// facts the decompiler cannot supply (unknown globals, indirect calls, PDB
-// types and runtime layouts).  The generator is re/tools/gen_reconstructed_source.py;
-// the checker is re/tools/check_reconstructed_source.py.
+// Each record carries the full decompiled body as a SHA-256-verified audit
+// payload plus its control-flow lines, call targets, data references, string
+// literals and explicit TODO markers for facts the decompiler cannot supply
+// (unknown globals, runtime pages, indirect calls, calling conventions, PDB
+// types and runtime layouts).  The generator is
+// re/tools/gen_reconstructed_source.py; the checker is
+// re/tools/check_reconstructed_source.py.
 namespace sf::reconstructed {
 
 struct FunctionTranslation {
