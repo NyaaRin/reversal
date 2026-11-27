@@ -34,13 +34,34 @@ public:
         (void)text;
         return true;
     }
+    template <class Fn>
+    bool checked_condition(std::string_view text, Fn&& fn) noexcept {
+        (void)text;
+        return static_cast<bool>(fn());
+    }
     bool loop_condition(std::string_view text) noexcept {
         (void)text;
+        return false;
+    }
+    template <class Fn>
+    bool checked_loop_condition(std::string_view text, Fn&& fn) noexcept {
+        (void)text;
+        (void)static_cast<bool>(fn());
         return false;
     }
     std::size_t switch_key(std::string_view text) noexcept {
         (void)text;
         return 0;
+    }
+    template <class Fn>
+    std::size_t checked_switch(std::string_view text, Fn&& fn) noexcept {
+        (void)text;
+        return static_cast<std::size_t>(fn());
+    }
+    template <class... Args>
+    void call_arguments(std::string_view name, Args&&... args) noexcept {
+        (void)name;
+        ((void)args, ...);
     }
     void case_label(std::string_view text) noexcept { (void)text; }
     void call_target(std::string_view name, const void* address) noexcept {
@@ -55,6 +76,12 @@ public:
 
     Loop loop(std::string_view text) noexcept {
         (void)text;
+        return Loop{};
+    }
+    template <class Fn>
+    Loop checked_loop(std::string_view text, Fn&& fn) noexcept {
+        (void)text;
+        (void)static_cast<bool>(fn());
         return Loop{};
     }
 };

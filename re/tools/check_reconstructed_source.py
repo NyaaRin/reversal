@@ -147,8 +147,11 @@ def main() -> int:
         errors.append("reconstruction.h kFunctionCount does not match inventory")
 
     symbols_text = (OUT / "symbols.h").read_text(encoding="utf-8")
-    declared_calls = set(re.findall(r"void (FUN_[0-9A-Fa-f]+)\(\) noexcept", symbols_text))
-    declared_data = set(re.findall(r"extern std::byte ((?:DAT|PTR|UNK|SUB)_[0-9A-Fa-f]+)\[", symbols_text))
+    declared_calls = set(re.findall(r"void (FUN_[0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)?)\(\) noexcept", symbols_text))
+    declared_data = set(re.findall(
+        r"extern std::byte ((?:DAT|UNK|SUB)_[0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)?|PTR_[A-Za-z0-9_]+)\[",
+        symbols_text,
+    ))
 
     referenced_files: set[Path] = set()
     accessors: set[str] = set()
@@ -158,6 +161,10 @@ def main() -> int:
     control_nodes_total = 0
     literal_lines_total = 0
     statement_lines_total = 0
+    typed_conditions_total = 0
+    unresolved_conditions_total = 0
+    typed_calls_total = 0
+    unresolved_call_args_total = 0
     for address in sorted(inv_by_address, key=lambda value: int(value, 16)):
         expected = inv_by_address[address]
         row = cov_by_address.get(address)
@@ -200,6 +207,22 @@ def main() -> int:
             errors.append(f"{address}: statement lines {statements} != coverage {row['statement_lines']}")
         if controls != int(row["control_flow_nodes"]):
             errors.append(f"{address}: control nodes {controls} != coverage {row['control_flow_nodes']}")
+        typed_conditions = accessor_body.count("trace.checked_condition(") + accessor_body.count("trace.checked_loop_condition(") + accessor_body.count("trace.checked_switch(") + accessor_body.count("trace.checked_loop(")
+        if typed_conditions != int(row["typed_conditions"]):
+            errors.append(f"{address}: typed conditions {typed_conditions} != coverage {row['typed_conditions']}")
+        typed_calls = accessor_body.count("trace.call_arguments(")
+        if typed_calls != int(row["typed_calls"]):
+            errors.append(f"{address}: typed call sites {typed_calls} != coverage {row['typed_calls']}")
+        unresolved_conditions = len(re.findall(r"// TODO: condition expression type not recovered:", accessor_body))
+        if unresolved_conditions != int(row["unresolved_conditions"]):
+            errors.append(f"{address}: unresolved conditions {unresolved_conditions} != coverage {row['unresolved_conditions']}")
+        unresolved_calls = len(re.findall(r"// TODO: call arguments not type-recovered for ", accessor_body))
+        if unresolved_calls != int(row["unresolved_call_args"]):
+            errors.append(f"{address}: unresolved call args {unresolved_calls} != coverage {row['unresolved_call_args']}")
+        typed_conditions_total += typed_conditions
+        unresolved_conditions_total += unresolved_conditions
+        typed_calls_total += typed_calls
+        unresolved_call_args_total += unresolved_calls
         expected_refs = int(row["strings_count"])
         if literals != expected_refs:
             errors.append(f"{address}: executable string literals {literals} != {expected_refs}")
@@ -302,6 +325,7 @@ def main() -> int:
     print(f"inventory_unique={len(inv_by_address)} coverage_unique={len(cov_by_address)}")
     print(f"generated_chunks={len(generated_files)} accessors={len(accessors)} source_bytes={sum(path.stat().st_size for path in generated_files)}")
     print(f"executable_accessor_lines={executable_lines_total} statement_lines={statement_lines_total} control_nodes={control_nodes_total} literal_refs={literal_lines_total} symbols_calls={len(declared_calls)} symbols_data={len(declared_data)}")
+    print(f"typed_conditions={typed_conditions_total} unresolved_conditions={unresolved_conditions_total} typed_calls={typed_calls_total} unresolved_call_args={unresolved_call_args_total}")
     if errors:
         print("FAIL", file=sys.stderr)
         for error in errors[:80]:

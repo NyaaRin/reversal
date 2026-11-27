@@ -48,14 +48,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e75a1() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e75a1", "FUN_1802e75a1");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 1000);
     // body sha256: 159db0ea5a4151d980fc8f7be9ed03c9c4c34e70ec66690344bb760cbe45c27f
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e75a1(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 8) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 1000);");
             }
@@ -106,14 +110,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e75ca() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e75ca", "FUN_1802e75ca");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x1e8);
     // body sha256: 736596c37654c5b41bd36be5a7d7bc740d769aa9e95f993ad3232e8f363c3952
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e75ca(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x10) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x10) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffef;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1e8);");
             }
@@ -164,14 +172,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e75f3() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e75f3", "FUN_1802e75f3");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x1e8);
     // body sha256: 241c5fb6de4b5e91f40e1b3103b6688f6474642d8da6ef622faa13cf78252f8e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e75f3(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x20) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x20) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffdf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1e8);");
             }
@@ -222,14 +234,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e761c() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e761c", "FUN_1802e761c");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x408);
     // body sha256: 35d9539550b3a843c729230eab6ef525541fb00b9937af906659e07e1ee8cec1
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e761c(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x40) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x40) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffbf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x408);");
             }
@@ -280,14 +296,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7645() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7645", "FUN_1802e7645");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x208);
     // body sha256: 874a51966f9f4485576af5e1173da38323adfb575b196dfc8d8c693a07f3f802
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7645(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x80) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x80) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffff7f;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x208);");
             }
@@ -338,14 +358,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7673() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7673", "FUN_1802e7673");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x208);
     // body sha256: d0dd1da298c46711bee71fc4ca9c692a646f9a62d5d9ddea66c855e2a6153b31
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7673(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x100) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x100) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffeff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x208);");
             }
@@ -396,14 +420,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e76a1() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e76a1", "FUN_1802e76a1");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x428);
     // body sha256: 157905d89dffeb6d668c16225c93dec3fd10fdd16b0c1d34d6e6f574f5bf5fc2
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e76a1(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x200) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x200) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffdff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x428);");
             }
@@ -454,14 +482,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e76cf() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e76cf", "FUN_1802e76cf");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x228);
     // body sha256: ba971413bbb6d05cf7267ae926a60dc54808f403ad016db9f7e23292bfef69c3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e76cf(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x400) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x400) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x400) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffbff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x228);");
             }
@@ -512,14 +544,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e76fd() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e76fd", "FUN_1802e76fd");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x228);
     // body sha256: ffbadaaafcedb1b8f206a9dc9f1ce51b59d4b8137bed12754e96c93af6c2d287
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e76fd(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x800) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x800) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x800) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffff7ff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x228);");
             }
@@ -570,14 +606,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e772b() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e772b", "FUN_1802e772b");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x448);
     // body sha256: c0da660237a9329a49c53d7bb774ba27b438a0d84948bb4c41ec46020da60989
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e772b(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x1000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x1000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x1000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffefff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x448);");
             }
@@ -628,14 +668,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7759() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7759", "FUN_1802e7759");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x248);
     // body sha256: ec7b99f9bfbf09585c353000f4fc90311886abb77d0944c258a494e945e6f65d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7759(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x2000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x2000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x2000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffdfff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x248);");
             }
@@ -686,14 +730,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7787() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7787", "FUN_1802e7787");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x248);
     // body sha256: 4020e562f9f7c4e8e4e1c644925ee5143b58e1716739297d0f93ae74b209b8c1
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7787(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x4000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x4000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x4000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffbfff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x248);");
             }
@@ -744,14 +792,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e77b5() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e77b5", "FUN_1802e77b5");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x468);
     // body sha256: 9f789c12e5692f5bfceeb57edd75545eac38fad3f7db23dba1b38cd112d679ed
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e77b5(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x8000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x8000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x8000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffff7fff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x468);");
             }
@@ -802,14 +854,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e77e3() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e77e3", "FUN_1802e77e3");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x48);
     // body sha256: f840eb7ec62d88e1bdc79d2c793fd79fff68fec20fc052fe4c29d490d7aff697
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e77e3(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x10000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x10000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x10000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffeffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x48);");
             }
@@ -860,14 +916,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e780e() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e780e", "FUN_1802e780e");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x48);
     // body sha256: d7f45a76ac8906da6f1cec343ef9b588c60d7db21ca2e68c4f010b9bdd6d1b94
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e780e(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x20000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x20000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x20000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffdffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x48);");
             }
@@ -918,14 +978,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7839() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7839", "FUN_1802e7839");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x488);
     // body sha256: 9071692d259bcd96042c8e8cd5ee10a5e867b751fd58053f86ebd1afd4bb758c
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7839(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x488);");
             }
@@ -976,14 +1040,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7862() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7862", "FUN_1802e7862");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x68);
     // body sha256: b451bd52dd95f757202e000ebbc057c16788a774b477e6126533271f8bf4becc
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7862(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x68);");
             }
@@ -1034,14 +1102,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7888() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7888", "FUN_1802e7888");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x68);
     // body sha256: c90f014fa85ed668fcd3394e0e758e634b5f21c37a084ea8a3cb3bfd322f99f5
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7888(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x68);");
             }
@@ -1092,14 +1164,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e78d4() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e78d4", "FUN_1802e78d4");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x80);
     // body sha256: 32437e1f20769727e775314cbcad1c35afecf865cd88c039cd856aeb41133239
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e78d4(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x80);");
             }
@@ -1150,14 +1226,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7915() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7915", "FUN_1802e7915");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x280);
     // body sha256: 93e50ddbb6d741a3bbd51a49001a6a4b6ab8aa6c01a5827bf2d7f8738a500b4a
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7915(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 8) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x280);");
             }
@@ -1208,14 +1288,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7962() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7962", "FUN_1802e7962");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x220);
     // body sha256: c8fd5c698dff61ef89c542bb611204081ed120a0e32c9d683e5e46644b3847d3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7962(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x10) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x10) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffef;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x220);");
             }
@@ -1266,14 +1350,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e798b() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e798b", "FUN_1802e798b");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x240);
     // body sha256: 01a3129e8be185cbce128558508c92f2bbb335801a02373bc5fbb4deddcf2a80
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e798b(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x20) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x20) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffdf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x240);");
             }
@@ -1324,14 +1412,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e79b4() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e79b4", "FUN_1802e79b4");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x260);
     // body sha256: 2e7b60daa25777d3c8e34b6dd7cef04984b1643ea289a1eeb66cd80954137993
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e79b4(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x40) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x40) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffffbf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x260);");
             }
@@ -1382,14 +1474,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e79dd() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e79dd", "FUN_1802e79dd");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xc0);
     // body sha256: 71cb674c0ff2380726584ebed950b865f337baf659b69fc8f886e236cc10f519
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e79dd(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x80) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x80) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffff7f;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xc0);");
             }
@@ -1440,14 +1536,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7a0b() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7a0b", "FUN_1802e7a0b");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x140);
     // body sha256: b8c8e5bf83dd494c735e5c575652862ca82cf90056f59539a533e9b99a2b1a95
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7a0b(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x100) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x100) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffeff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x140);");
             }
@@ -1498,14 +1598,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7a39() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7a39", "FUN_1802e7a39");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x120);
     // body sha256: d88207f6032190e3d7c08432162970d955229168194c82a082c5cfef8b328162
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7a39(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x200) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x200) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffdff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x120);");
             }
@@ -1556,14 +1660,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7a67() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7a67", "FUN_1802e7a67");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x100);
     // body sha256: a99701c2c8f065b134b30f053b9cfd9563fafb3f95f374cf5df9499c138907ec
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7a67(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x400) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x400) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x400) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffbff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x100);");
             }
@@ -1614,14 +1722,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7a95() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7a95", "FUN_1802e7a95");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xe0);
     // body sha256: 7b3bf5b31e77d3a4ff61a10f7376f6a6e7f83efcb0a7e994db0a7739c34a3f99
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7a95(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x800) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x800) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x800) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffff7ff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xe0);");
             }
@@ -1672,14 +1784,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7ac3() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7ac3", "FUN_1802e7ac3");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x160);
     // body sha256: f0ae5e4c09835b113a96e586c2c0995ea49fba33764cbdb6287af60312f171a2
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7ac3(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x1000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x1000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x1000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffefff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x160);");
             }
@@ -1730,14 +1846,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7af1() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7af1", "FUN_1802e7af1");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x1e0);
     // body sha256: ea19b95999079b2704fdd5c0adebd60e22333c1e9004ecb7a3048e90d87d06c5
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7af1(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x2000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x2000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x2000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffdfff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1e0);");
             }
@@ -1788,14 +1908,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7b1f() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7b1f", "FUN_1802e7b1f");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x1c0);
     // body sha256: 5de2ca4b9680c686eb5a98acbc41f6dae67df25c4488cc05ef047791d6d0a7d6
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7b1f(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x4000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x4000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x4000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffffbfff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1c0);");
             }
@@ -1846,14 +1970,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7b4d() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7b4d", "FUN_1802e7b4d");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x1a0);
     // body sha256: 6ee320598a83a4140ac8d1c05b0fe965b0d3fadcb4c09ad8f3878ffdfc3303d7
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7b4d(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x8000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x8000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x8000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xffff7fff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x1a0);");
             }
@@ -1904,14 +2032,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7b7b() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7b7b", "FUN_1802e7b7b");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x180);
     // body sha256: 637495513d6e41a73c02f6760e50ba4ea95355995eda82904b07400d9d78c8fc
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7b7b(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x10000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x10000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x10000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffeffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x180);");
             }
@@ -1962,14 +2094,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7ba9() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7ba9", "FUN_1802e7ba9");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x200);
     // body sha256: d06dec22ce2b228f76ae47daf91ef6102281f7c65d9bb35f122686b2107d7e4b
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7ba9(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x20000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x20000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x20000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffdffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x200);");
             }
@@ -2020,14 +2156,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7bd7() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7bd7", "FUN_1802e7bd7");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x2a0);
     // body sha256: 43f4a3059d1b0ea9e5be45c6cad74e0106278576c2b09688704282934ddbc8fc
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7bd7(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 0x40000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 0x40000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 0x40000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffbffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x2a0);");
             }
@@ -2078,14 +2218,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7c3c() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7c3c", "FUN_1802e7c3c");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("thunk_FUN_18020d0b0", *(undefined8 *)(param_2 + 0x40));
     // body sha256: c1721817f7034d221b1ce4c7b0d44c2fa0579dad7516b0ce9664b4d1c9e977b1
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e7c3c(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("thunk_FUN_18020d0b0(*(undefined8 *)(param_2 + 0x40));");
             }
@@ -2134,6 +2278,9 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7c94() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7c94", "FUN_1802e7c94");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2187,9 +2334,13 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7cc1() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7cc1", "FUN_1802e7cc1");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("_eh_vector_destructor_iterator_", (void *)(param_2 + 0x12c0), 0x40, 0x81, &image::FUN_180020a30);
     trace.call_target("FUN_180020a30", reinterpret_cast<const void*>(&image::FUN_180020a30));
     // body sha256: de184ae267a76a6503aaf426d39248a3ed26d57740a12883ef886034ee7cca1c
     // Structured control-flow trace derived from the decompiled body:
@@ -2239,6 +2390,9 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7cee() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7cee", "FUN_1802e7cee");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2289,6 +2443,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7d14() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7d14", "FUN_1802e7d14");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2338,6 +2493,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7d62() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7d62", "FUN_1802e7d62");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2387,6 +2543,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7de0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7de0", "FUN_1802e7de0");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2436,6 +2593,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7e30() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7e30", "FUN_1802e7e30");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2485,6 +2643,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7eac() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7eac", "FUN_1802e7eac");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2536,6 +2695,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7ed0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7ed0", "FUN_1802e7ed0");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18042625c.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
@@ -2589,9 +2749,11 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7f40() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7f40", "FUN_1802e7f40");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: call arguments not type-recovered for FUN_180014410: "[NVR] Render2D cache update crashed\n"
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.string_literal("[NVR] Render2D cache update crashed\\n");
     // body sha256: c49c8c2d502064c7a308eaecdfe088ae30d57710c07a51e09d89640545dc70a9
@@ -2641,6 +2803,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7fac() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7fac", "FUN_1802e7fac");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2690,6 +2853,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7fd0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7fd0", "FUN_1802e7fd0");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2739,6 +2903,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e7fee() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e7fee", "FUN_1802e7fee");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2788,6 +2953,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8010() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8010", "FUN_1802e8010");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2837,6 +3003,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e802e() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e802e", "FUN_1802e802e");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2886,6 +3053,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e804c() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e804c", "FUN_1802e804c");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2935,6 +3103,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e806a() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e806a", "FUN_1802e806a");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -2984,6 +3153,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8090() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8090", "FUN_1802e8090");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -3039,10 +3209,13 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e80ec() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e80ec", "FUN_1802e80ec");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_1803ff0c0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    // TODO: condition expression type not recovered: if (DAT_1803ff0c0 < 6)
+    // TODO: call arguments not type-recovered for FUN_180014410: "[AntiSS] in-place capture exception #%d\n"
     trace.call_target("FUN_180014410", reinterpret_cast<const void*>(&image::FUN_180014410));
     trace.data_ref("DAT_1803ff0c0", static_cast<const void*>(&image::DAT_1803ff0c0));
     trace.string_literal("[AntiSS] in-place capture exception #%d\\n");
@@ -3098,6 +3271,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8130() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8130", "FUN_1802e8130");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18042a8d0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
@@ -3152,6 +3326,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8146() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8146", "FUN_1802e8146");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18042a8d0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
@@ -3206,6 +3381,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e815c() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e815c", "FUN_1802e815c");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_18042a8d0.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
@@ -3261,6 +3437,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e81ac() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e81ac", "FUN_1802e81ac");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -3313,6 +3490,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8203() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8203", "FUN_1802e8203");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -3364,6 +3542,7 @@ TODO: recover the declaration, type, value and runtime page/layout for global/da
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8230() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8230", "FUN_1802e8230");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: recover global/data declaration, type, value and runtime page/layout for DAT_180427600.
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
@@ -3421,14 +3600,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e825e() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e825e", "FUN_1802e825e");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x48);
     // body sha256: a79058f4bf2121320dd460738780528749faaf7398c8fa556ebf59a1d352d981
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e825e(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x48);");
             }
@@ -3479,14 +3662,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8290() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8290", "FUN_1802e8290");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 97c71568d59df84a0aa7e8e5c1aed931726adfa88c2e905ca0c3fe638d41e976
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8290(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x28);");
             }
@@ -3537,14 +3724,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e82b6() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e82b6", "FUN_1802e82b6");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x48));
     // body sha256: 44c96a95fe374c517b578f79a6b48cd84c0074e75bbe17ad26cb27d3bacf7584
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e82b6(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x48));");
             }
@@ -3595,14 +3786,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e82dc() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e82dc", "FUN_1802e82dc");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x48));
     // body sha256: 72a149b54fac5d2d4b7d0b98fa14e94ae975d48c57792fa79fb8d85e094ead9e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e82dc(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x48));");
             }
@@ -3653,14 +3848,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8310() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8310", "FUN_1802e8310");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x48);
     // body sha256: 926fe2fb8d2dd55dd810dff8829e76d5eac14fac73491811355bd12d8864e56e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8310(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x48);");
             }
@@ -3711,14 +3910,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8336() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8336", "FUN_1802e8336");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x68);
     // body sha256: e8cfcf1f792e9f39575ecba5a79fbc4232fce329a34ea395bb241c2e50b68fde
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8336(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x68);");
             }
@@ -3769,14 +3972,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8360() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8360", "FUN_1802e8360");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x68);
     // body sha256: bcd96b6d1fe02798b0be319563d085aaa407bc5be07d6a7c5608c03f8b1545b7
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8360(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x68);");
             }
@@ -3827,14 +4034,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8392() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8392", "FUN_1802e8392");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x48);
     // body sha256: 79678c893c01fddd5142d40559b0457147c82157f2284eb2be7b5f184f0bca5e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8392(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x48);");
             }
@@ -3885,14 +4096,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e83c0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e83c0", "FUN_1802e83c0");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x78));
     // body sha256: 6eb2b68493486d0fd21d05f2175ead4668aa11887c557b6579dce654caadd623
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e83c0(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x78));");
             }
@@ -3943,14 +4158,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e83e6() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e83e6", "FUN_1802e83e6");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x80);
     // body sha256: 197d973b33eb3c4319afca9586cc662c7b5d11a2b142dfc7d90e16dcc5bfd399
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e83e6(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x30) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x80);");
             }
@@ -4001,14 +4220,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e840f() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e840f", "FUN_1802e840f");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x58);
     // body sha256: 44525e3c16900dcbd9a8cb92b252d5e73d5f32e8a2df7b7596b0996bac38ee6e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e840f(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x30) & 4) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x30) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x30) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x30) = *(uint *)(param_2 + 0x30) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x58);");
             }
@@ -4059,14 +4282,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e84b0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e84b0", "FUN_1802e84b0");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x48));
     // body sha256: 2a24a4e2a2a77997746c88dc68744bbe9d1788a2118bffc5d04325031df6a9ad
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e84b0(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x48));");
             }
@@ -4117,14 +4344,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e84e2() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e84e2", "FUN_1802e84e2");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", *(undefined8 *)(param_2 + 0x48));
     // body sha256: 983a09baae3926548e92fec7168045f661411d6e7d0c6a0befbee2db12c3d0fe
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e84e2(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(*(undefined8 *)(param_2 + 0x48));");
             }
@@ -4175,14 +4406,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8508() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8508", "FUN_1802e8508");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xc0);
     // body sha256: 4628615657daa5a41d0084cc9f06431575da9fb621c8f3b4ab9799c11ae57a0e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8508(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 8) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xc0);");
             }
@@ -4233,14 +4468,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8555() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8555", "FUN_1802e8555");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("thunk_FUN_18021e290", param_2 + 0x50);
     // body sha256: 7d4bc23b9104e90a847670407c7e69bcb2a308963507f46759630b1a75d73d3d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8555(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x40) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x40) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x40) = *(uint *)(param_2 + 0x40) & 0xfffffffd;");
                 trace.statement("thunk_FUN_18021e290(param_2 + 0x50);");
             }
@@ -4291,14 +4530,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e85bc() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e85bc", "FUN_1802e85bc");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x98);
     // body sha256: 7690872fc669aef03a89da6aaefde67f286c1c40ab695d4c15230b203662d73a
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e85bc(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 4) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x98);");
             }
@@ -4349,14 +4592,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e85f1() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e85f1", "FUN_1802e85f1");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x70);
     // body sha256: 050731b1ac7e8b85bbe102afc6e2b908d2a7ffc01097bd755515b6bdbea20ba7
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e85f1(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x70);");
             }
@@ -4407,14 +4654,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8617() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8617", "FUN_1802e8617");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x98);
     // body sha256: ddaea6ae27375475220d1c0e40f8c74705192438f81e164889a80abc8568c754
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8617(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x98);");
             }
@@ -4465,14 +4716,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e864c() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e864c", "FUN_1802e864c");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x30);
     // body sha256: b83c023e1860a43b533c1080190636266485625ac0a169e4bbc177c63b3c797c
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e864c(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x80) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x80) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffff7f;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x30);");
             }
@@ -4523,14 +4778,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8677() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8677", "FUN_1802e8677");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xf0);
     // body sha256: e217e315b565fcdd3cbb9a97dcdb99c1d927361031f7ca12f8f56ae9aff96c0f
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8677(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x100) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x100) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffeff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xf0);");
             }
@@ -4581,14 +4840,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e86b1() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e86b1", "FUN_1802e86b1");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x230);
     // body sha256: 4402086200b30a763c2471b418cf7155666ef6a1a9b146cc8db10045548c81b9
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e86b1(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x230);");
             }
@@ -4639,14 +4902,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e86e6() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e86e6", "FUN_1802e86e6");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x210);
     // body sha256: 72efc5a1df8900418934dac201d0900e0e6bb31b02776a601529bcc5938e59d7
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e86e6(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x210);");
             }
@@ -4697,14 +4964,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e870f() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e870f", "FUN_1802e870f");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x130);
     // body sha256: 09576149e66d3c9c6db4613c11965062f597fa1c96081d88339a1ad8a72f1946
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e870f(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x130);");
             }
@@ -4755,14 +5026,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8750() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8750", "FUN_1802e8750");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x90);
     // body sha256: 7c3f6028ccb35f3c741c3040c132c76dd656a29e91a16f6ce66800f982ed5b1e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8750(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x20) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x20) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffffdf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x90);");
             }
@@ -4813,14 +5088,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8779() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8779", "FUN_1802e8779");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x70);
     // body sha256: a0e4465f0f5fd4b3f3796ee8a828d2fd6bc7c2cedc7ed71e87e540fab24ce4d7
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8779(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x10) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x10) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffffef;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x70);");
             }
@@ -4871,14 +5150,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e879f() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e879f", "FUN_1802e879f");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x50);
     // body sha256: c1c48c8eebe02e8af80b4049093b80e6c289b0d6f23705aadfdb22ac4617f636
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e879f(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x50);");
             }
@@ -4929,14 +5212,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e87c5() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e87c5", "FUN_1802e87c5");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x150);
     // body sha256: c005de27d2357f02d376e630405b440bad67208ce6a2d1c079ef42b6725dbabe
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e87c5(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x40) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x40) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xffffffbf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x150);");
             }
@@ -4987,14 +5274,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e87fa() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e87fa", "FUN_1802e87fa");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xd0);
     // body sha256: 135660d4c3e2cc86a7a30012970a0a6794e766bed3d4c3e4ab7923540f54eabd
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e87fa(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x200) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x200) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffdff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xd0);");
             }
@@ -5045,14 +5336,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8828() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8828", "FUN_1802e8828");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xb0);
     // body sha256: c04c9d1d1c03753fe00eb62771fd8b2ed4d892175eea0f1edb7ae90c9318f851
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8828(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x400) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x400) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x400) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffbff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xb0);");
             }
@@ -5103,14 +5398,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8856() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8856", "FUN_1802e8856");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 400);
     // body sha256: 8e08121ba67560549861b421c47e8507665c2e42bc1cd1227c731b2d0f9d8b3d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8856(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 0x800) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 0x800) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 0x800) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffff7ff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 400);");
             }
@@ -5161,14 +5460,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8d30() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8d30", "FUN_1802e8d30");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: ad9e3a32027f6caa0473857085c51e2a057c2d1dbb3ca99ff07404855a619e9e
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8d30(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 4) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 4) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffb;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x28);");
             }
@@ -5219,14 +5522,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8d62() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8d62", "FUN_1802e8d62");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: e82ab319fb01dbf59c6ee0206ceab0319c51e90ea8516dd1fa04595274e712bd
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8d62(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x28);");
             }
@@ -5277,14 +5584,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8e20() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8e20", "FUN_1802e8e20");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x28);
     // body sha256: 4a4c07abbf3b6b9fda949852e0e2a13ffb9ef76d7fdf26cc14b2a82e52848942
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8e20(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x28);");
             }
@@ -5335,14 +5646,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8e46() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8e46", "FUN_1802e8e46");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x80);
     // body sha256: bad60bf163ee86d73c084dd023f0166a23f9265f358e440a445e4c0420ad7653
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8e46(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 2) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 2) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffd;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x80);");
             }
@@ -5393,14 +5708,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8e6f() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8e6f", "FUN_1802e8e6f");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x50);
     // body sha256: 1c0f2bdbbcf8ef746ff99d91c95dfc3bd2879cd92870017581fc095388dcdcc3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8e6f(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x50);");
             }
@@ -5446,6 +5765,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8e95() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8e95", "FUN_1802e8e95");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -5495,6 +5815,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8ed0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8ed0", "FUN_1802e8ed0");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -5549,14 +5870,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8f1a() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8f1a", "FUN_1802e8f1a");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xd8);
     // body sha256: 42b4b42700d8e67b0939a4ee9dc63178c7a0ac57896ed9e0aa7522d87485a48d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8f1a(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x20) & 1) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x20) & 1) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x20) = *(uint *)(param_2 + 0x20) & 0xfffffffe;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xd8);");
             }
@@ -5602,6 +5927,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8f6b() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8f6b", "FUN_1802e8f6b");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -5651,6 +5977,7 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8f89() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8f89", "FUN_1802e8f89");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
@@ -5705,14 +6032,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8fbc() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8fbc", "FUN_1802e8fbc");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x98);
     // body sha256: 1e2dcf6f5c3416d01a9e0ba3d28f0af5e56f4e5b764233cffb379a8d177c1bf3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8fbc(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x48) & 0x80) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x48) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x48) & 0x80) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x48) = *(uint *)(param_2 + 0x48) & 0xffffff7f;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x98);");
             }
@@ -5763,14 +6094,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e8fea() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e8fea", "FUN_1802e8fea");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x98);
     // body sha256: c212ff41a4624dc876ddf2bdec6d6c578dff60d1d1dfd486a30ca5989d17aef3
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e8fea(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x48) & 0x100) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x48) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x48) & 0x100) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x48) = *(uint *)(param_2 + 0x48) & 0xfffffeff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x98);");
             }
@@ -5821,14 +6156,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9024() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9024", "FUN_1802e9024");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x378);
     // body sha256: a4074ff1606205f899a793113b8a347b89c78a9ae518bb4d8209c9e864141498
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9024(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 8) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 8) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 8) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffff7;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x378);");
             }
@@ -5879,14 +6218,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e904d() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e904d", "FUN_1802e904d");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x698);
     // body sha256: f9e2cc47444e4b14452835d85e190c073f587d6c2c3af5045bec0a3b072de52b
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e904d(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x10) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x10) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x10) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffef;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x698);");
             }
@@ -5937,14 +6280,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9076() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9076", "FUN_1802e9076");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x398);
     // body sha256: 6e2280b8f361fbab361c7b507643989be4000b29484abf39e2bf265ce84c67b7
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9076(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x20) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x20) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x20) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffdf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x398);");
             }
@@ -5995,14 +6342,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e909f() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e909f", "FUN_1802e909f");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xb8);
     // body sha256: 7724e687a9f1b2766ef3121437e98383f7957dda4ed70d441f78e45632ab7fc9
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e909f(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x40) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x40) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x40) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffffbf;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xb8);");
             }
@@ -6053,14 +6404,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e90c8() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e90c8", "FUN_1802e90c8");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xb8);
     // body sha256: 2d2129a469245262ba06748e89f59a05d49708ca0e2602c877d864f83cde3467
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e90c8(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x80) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x80) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x80) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffff7f;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xb8);");
             }
@@ -6111,14 +6466,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e90f6() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e90f6", "FUN_1802e90f6");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x3b8);
     // body sha256: 22a8bc23c8b493fba4c39b52b4730f2fbbe241cf6f0b91c1ed9703256ce402ae
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e90f6(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x100) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x100) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x100) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffeff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x3b8);");
             }
@@ -6169,14 +6528,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9124() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9124", "FUN_1802e9124");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xd8);
     // body sha256: dea28673256326ab6975a148925d7406d6c5e5e6981ca944b92a8298fab63f3d
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9124(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x200) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x200) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x200) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffdff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xd8);");
             }
@@ -6227,14 +6590,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9152() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9152", "FUN_1802e9152");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xd8);
     // body sha256: 7a276da9c9f8b64552790fe7ca75b9ccca11f04ec531752dfe96790e06f59933
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9152(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x400) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x400) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x400) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffffbff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xd8);");
             }
@@ -6285,14 +6652,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9180() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9180", "FUN_1802e9180");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x3d8);
     // body sha256: 2eb9d3146f114edacf3dc2b26890f533848e85a4c92f7360da6edd2ac183a491
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9180(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x800) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x800) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x800) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffff7ff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x3d8);");
             }
@@ -6343,14 +6714,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e91ae() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e91ae", "FUN_1802e91ae");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xf8);
     // body sha256: b116fe8e8087d9792bfa885714df8ee86cb87223e7c2d4adc50fc99e2f66ee45
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e91ae(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x1000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x1000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x1000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffefff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xf8);");
             }
@@ -6401,14 +6776,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e91dc() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e91dc", "FUN_1802e91dc");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0xf8);
     // body sha256: d732fbf59cd5a127bc7459b24a1d40cc4139e6d35cc16d9f581851706e5cfc71
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e91dc(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x2000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x2000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x2000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffdfff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0xf8);");
             }
@@ -6459,14 +6838,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e920a() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e920a", "FUN_1802e920a");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x3f8);
     // body sha256: 518cea27cc5f0d62b722f6ef5667ca8f7cd18e0826cade53a933d1674428b469
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e920a(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x4000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x4000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x4000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffffbfff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x3f8);");
             }
@@ -6517,14 +6900,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9238() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9238", "FUN_1802e9238");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x118);
     // body sha256: 21d1a3bd834095927f1e5f68747eba1d66a7e07aae34b30bba166f3436320400
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9238(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x8000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x8000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x8000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffff7fff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x118);");
             }
@@ -6575,14 +6962,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9266() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9266", "FUN_1802e9266");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x118);
     // body sha256: 04bade3d266f7f3ef1d7c26deea32b9e92eae7d277f9a9cc5e63c2453e83c2fd
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9266(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x10000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x10000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x10000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffeffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x118);");
             }
@@ -6633,14 +7024,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9294() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9294", "FUN_1802e9294");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x418);
     // body sha256: 836f3a0f01ce01a764ea0eed54b1c2e3dc6f263b2f2f3654c3700277d1e28f04
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9294(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x20000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x20000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x20000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffdffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x418);");
             }
@@ -6691,14 +7086,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e92c2() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e92c2", "FUN_1802e92c2");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x138);
     // body sha256: b41659d7f90cd7da0910830ea8ae061e80a16778ac39400dfbe8995d062cef8f
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e92c2(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x40000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x40000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x40000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfffbffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x138);");
             }
@@ -6749,14 +7148,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e92f0() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e92f0", "FUN_1802e92f0");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x138);
     // body sha256: aabb6f123db95ed60a82c67c6c1dcd69c117334d3ee6f9ed39e1fbced3fdaf69
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e92f0(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x80000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x80000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x80000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfff7ffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x138);");
             }
@@ -6807,14 +7210,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e931e() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e931e", "FUN_1802e931e");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x438);
     // body sha256: 332a21bdc446eaa8bdc8cd5fe334d7c1e8973a4d0d5744471199099c2ae539d5
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e931e(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x100000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x100000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x100000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffefffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x438);");
             }
@@ -6865,14 +7272,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e934c() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e934c", "FUN_1802e934c");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x158);
     // body sha256: b2fd609b25ca8556bc82a578b2ccebd7d402b658e6512cc1f49787fd910e736f
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e934c(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x200000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x200000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x200000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffdfffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x158);");
             }
@@ -6923,14 +7334,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e937a() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e937a", "FUN_1802e937a");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x158);
     // body sha256: 7f04fb177fab7e8048887d861a12d562b09036b44c39250d4c25ffea43ca25d2
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e937a(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x400000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x400000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x400000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xffbfffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x158);");
             }
@@ -6981,14 +7396,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e93a8() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e93a8", "FUN_1802e93a8");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x458);
     // body sha256: 19482d916f1277cea815218bb2fecc08e9ea5036a1b9b5607b0217c32aab7278
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e93a8(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x800000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x800000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x800000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xff7fffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x458);");
             }
@@ -7039,14 +7458,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e93d6() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e93d6", "FUN_1802e93d6");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x178);
     // body sha256: 662212f4af01ad9890643614d0d05796e5e3285a61664fb6f7488ff8882b9103
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e93d6(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x1000000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x1000000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x1000000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfeffffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x178);");
             }
@@ -7097,14 +7520,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9404() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9404", "FUN_1802e9404");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x178);
     // body sha256: b30d70ab48ed51bfe5fbe8da6a2371b9d4d9d92904f2182064209d2f4193e705
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9404(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x2000000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x2000000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x2000000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfdffffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x178);");
             }
@@ -7155,14 +7582,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9432() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9432", "FUN_1802e9432");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x478);
     // body sha256: 68dfe09542c5b7d298250e8e1affa3e35031c93c1bc9df57e120f10695bd89a2
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9432(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x4000000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x4000000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x4000000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xfbffffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x478);");
             }
@@ -7213,14 +7644,18 @@ TODO: verify the calling convention and argument/return types for each resolved 
 
 const sf::reconstructed::FunctionTranslation& Function_0x1802e9460() noexcept {
     sf::reconstructed::TranslationTrace trace("0x1802e9460", "FUN_1802e9460");
+    // Recovered local/parameter types; values and aggregate layouts remain TODO.
+    [[maybe_unused]] std::uint64_t param_1{};
+    [[maybe_unused]] std::int64_t param_2{};
     // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:
     // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.
     // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.
+    trace.call_arguments("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09", param_2 + 0x198);
     // body sha256: 2ef478858c1eb15dbb72e76e3745d30169a8c6c155cbcaab9c2d08269a77ab36
     // Structured control-flow trace derived from the decompiled body:
         trace.statement("void FUN_1802e9460(undefined8 param_1,longlong param_2)");
         {
-            if (trace.condition("if ((*(uint *)(param_2 + 0x44) & 0x8000000) != 0)")) {
+            if (trace.checked_condition("if ((*(uint *)(param_2 + 0x44) & 0x8000000) != 0)", [&]() -> bool { return static_cast<bool>((*(uint *)(param_2 + 0x44) & 0x8000000) != 0); })) {
                 trace.statement("*(uint *)(param_2 + 0x44) = *(uint *)(param_2 + 0x44) & 0xf7ffffff;");
                 trace.statement("Features_Visual_ESP_Editor_Elements_CircleElement_vfunc09(param_2 + 0x198);");
             }

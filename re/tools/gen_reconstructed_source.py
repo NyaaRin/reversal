@@ -28,7 +28,10 @@ OUT = ROOT / "src" / "reconstructed"
 CHUNKS = OUT / "chunks"
 CHUNK_SIZE = 128
 
-TOKEN_RE = re.compile(r"\b(?:FUN|DAT|PTR|LAB|UNK|SUB)_[0-9A-Fa-f]+\b")
+TOKEN_RE = re.compile(
+    r"\b(?:FUN|DAT|LAB|UNK|SUB)_[0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)?\b"
+    r"|\bPTR_[A-Za-z0-9_]*[0-9A-Fa-f]{4,}\b"
+)
 SIGNATURE_RE = re.compile(r"^//\s*signature:\s*(.*)$", re.MULTILINE)
 STRING_RE = re.compile(r'"((?:[^"\\]|\\.)*)"')
 CONTROL_RE = re.compile(
@@ -37,6 +40,375 @@ CONTROL_RE = re.compile(
 )
 INDIRECT_RE = re.compile(r"\(\s*code\s*\*|\(\s*\*\s*[A-Za-z_][A-Za-z0-9_]*\s*\)\s*\(")
 LABEL_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*):(?!:)(?:\s*(.*))?$")
+DECL_RE = re.compile(
+    r"^\s*([A-Za-z_][A-Za-z0-9_ ]*?\*?)\s+([A-Za-z_][A-Za-z0-9_]*)"
+    r"(?:\s*\[\s*(\d+)\s*\])?\s*;\s*$"
+)
+IDENT_RE = re.compile(r"\b[A-Za-z_][A-Za-z0-9_]*\b")
+CALL_RE = re.compile(r"\b([A-Za-z_][A-Za-z0-9_]*)\s*\(")
+
+TYPE_ALIASES = {
+    "undefined": "std::uint8_t",
+    "undefined1": "std::uint8_t",
+    "undefined2": "std::uint16_t",
+    "undefined4": "std::uint32_t",
+    "undefined8": "std::uint64_t",
+    "byte": "std::uint8_t",
+    "uchar": "std::uint8_t",
+    "ushort": "std::uint16_t",
+    "uint": "std::uint32_t",
+    "ulong": "std::uint32_t",
+    "ulonglong": "std::uint64_t",
+    "longlong": "std::int64_t",
+    "int": "std::int32_t",
+    "long": "std::int64_t",
+    "short": "std::int16_t",
+    "char": "char",
+    "bool": "bool",
+    "float": "float",
+    "double": "double",
+    "size_t": "std::size_t",
+    "ssize_t": "std::ptrdiff_t",
+    "BOOL": "int",
+    "HMODULE": "std::uintptr_t",
+    "HANDLE": "void*",
+    "FARPROC": "void*",
+    "FILE": "void*",
+    "code": "void*",
+    "void": "void",
+    "uint64": "std::uint64_t",
+    "uint32": "std::uint32_t",
+    "uint16": "std::uint16_t",
+    "uint8": "std::uint8_t",
+    "uint64_t": "std::uint64_t",
+    "uint32_t": "std::uint32_t",
+    "uint16_t": "std::uint16_t",
+    "uint8_t": "std::uint8_t",
+    "int64": "std::int64_t",
+    "int32": "std::int32_t",
+    "int16": "std::int16_t",
+    "int8": "std::int8_t",
+    "int64_t": "std::int64_t",
+    "int32_t": "std::int32_t",
+    "int16_t": "std::int16_t",
+    "int8_t": "std::int8_t",
+}
+TYPE_WORDS = set(TYPE_ALIASES) | {
+    "std", "uint8_t", "uint16_t", "uint32_t", "uint64_t",
+    "int8_t", "int16_t", "int32_t", "int64_t", "size_t", "ptrdiff_t",
+    "NULL", "nullptr", "true", "false", "sizeof", "image",
+}
+CALL_KEYWORDS = {
+    "if", "for", "while", "switch", "return", "sizeof", "static_cast",
+    "reinterpret_cast", "const_cast", "dynamic_cast", "alignof", "decltype",
+}
+CPP_RESERVED = {
+    "alignas", "alignof", "and", "and_eq", "asm", "auto", "bitand", "bitor",
+    "bool", "break", "case", "catch", "char", "char16_t", "char32_t", "class",
+    "compl", "const", "constexpr", "const_cast", "continue", "decltype", "default",
+    "delete", "do", "double", "dynamic_cast", "else", "enum", "explicit", "export",
+    "extern", "false", "float", "for", "friend", "goto", "if", "inline", "int",
+    "long", "mutable", "namespace", "new", "noexcept", "not", "not_eq", "nullptr",
+    "operator", "or", "or_eq", "private", "protected", "public", "register",
+    "reinterpret_cast", "return", "short", "signed", "sizeof", "static",
+    "static_assert", "static_cast", "struct", "switch", "template", "this", "throw",
+    "true", "try", "typedef", "typeid", "typename", "union", "unsigned", "using",
+    "virtual", "void", "volatile", "wchar_t", "while", "xor", "xor_eq",
+}
+
+
+def cpp_type(type_text: str) -> str | None:
+    cleaned = re.sub(r"\s+", " ", type_text.strip())
+    if "(" in cleaned or ")" in cleaned:
+        return None
+    stars = cleaned.count("*")
+    base = cleaned.replace("*", "").strip()
+    if base not in TYPE_ALIASES:
+        return None
+    mapped = TYPE_ALIASES[base]
+    if mapped == "void" and stars == 0:
+        return None
+    if stars:
+        mapped = f"{mapped} " + "*" * stars
+    return mapped
+
+
+def recover_declarations(body: str) -> dict[str, tuple[str, int | None]]:
+    declarations: dict[str, tuple[str, int | None]] = {}
+    lines = body.splitlines()
+
+    # Function parameters are part of the recovered signature even when Ghidra
+    # reports the return type as simply `undefined`.
+    for line in lines:
+        if "FUN_" not in line or "(" not in line or ")" not in line:
+            continue
+        start = line.find("(")
+        end = line.rfind(")")
+        if start < 0 or end <= start:
+            continue
+        params = line[start + 1:end].strip()
+        if not params or params == "void":
+            continue
+        for param in params.split(","):
+            match = re.match(r"(.+?)\s+([A-Za-z_][A-Za-z0-9_]*)$", param.strip())
+            if not match:
+                continue
+            mapped = cpp_type(match.group(1))
+            name = match.group(2)
+            if mapped and name not in declarations:
+                declarations[name] = (mapped, None)
+
+    for line in lines:
+        match = DECL_RE.match(line)
+        if not match:
+            continue
+        mapped = cpp_type(match.group(1))
+        name = match.group(2)
+        if mapped and name not in declarations:
+            declarations[name] = (mapped, int(match.group(3)) if match.group(3) else None)
+    return declarations
+
+
+def declaration_lines(declarations: dict[str, tuple[str, int | None]]) -> list[str]:
+    lines: list[str] = []
+    for name, (type_name, count) in declarations.items():
+        if name in ("trace", "image", "record") or name in TYPE_WORDS or name in CPP_RESERVED:
+            continue
+        if count is None:
+            lines.append(f"    [[maybe_unused]] {type_name} {name}{{}};")
+        else:
+            lines.append(f"    [[maybe_unused]] {type_name} {name}[{count}]{{}};")
+    return lines
+
+
+def split_top_level(text: str, separator: str) -> list[str]:
+    parts: list[str] = []
+    start = 0
+    depth = 0
+    quote: str | None = None
+    escaped = False
+    for index, char in enumerate(text):
+        if quote:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == quote:
+                quote = None
+            continue
+        if char in ('"', "'"):
+            quote = char
+        elif char in "([{":
+            depth += 1
+        elif char in ")]}":
+            depth -= 1
+        elif char == separator and depth == 0:
+            parts.append(text[start:index].strip())
+            start = index + 1
+    parts.append(text[start:].strip())
+    return [part for part in parts if part]
+
+
+def replace_data_symbols(expr: str, allow_fun: bool = False) -> str | None:
+    def replace(match: re.Match[str]) -> str:
+        token = match.group(0)
+        if token.startswith("LAB_"):
+            return token
+        if token.startswith("FUN_"):
+            return f"&image::{token}" if allow_fun else token
+        return f"image::{token}"
+
+    return TOKEN_RE.sub(replace, expr)
+
+
+def safe_expression(expr: str, locals: dict[str, tuple[str, int | None]], allow_data: bool) -> str | None:
+    expr = expr.strip()
+    if not expr or expr in TYPE_WORDS or any(char in expr for char in ";{}"):
+        return None
+    # String literals already have their own trace sink; re-emitting them as
+    # raw call arguments would bypass the escaping applied by cpp_string().
+    if '"' in expr:
+        return None
+    # A bare `type name` pair is a declaration, not an expression.
+    if re.match(r"^[A-Za-z_][A-Za-z0-9_ ]*?\*?\s+[A-Za-z_][A-Za-z0-9_]*$", expr):
+        first = expr.split()[0]
+        if first in TYPE_WORDS or first in TYPE_ALIASES:
+            return None
+    if "->" in expr or "." in expr or "/*" in expr or "//" in expr:
+        return None
+    if expr.count("(") != expr.count(")") or expr.count("[") != expr.count("]"):
+        return None
+    if not re.search(r"[A-Za-z0-9_]", expr):
+        return None
+    if re.search(r"\b\d+[A-Za-z]+\b", expr):
+        # Malformed decompiler literals such as `3D` are not C++ numbers.
+        return None
+    if re.search(r"\([^()]*\[[^\]]*\][^()]*\)\s*(?:0x[0-9A-Fa-f]+|\d+|\w+)", expr):
+        # C-style casts to array types are not valid C++ expressions.
+        return None
+
+    identifiers = IDENT_RE.findall(expr)
+    for name in set(identifiers):
+        declaration = locals.get(name)
+        if declaration is None:
+            continue
+        type_name, count = declaration
+        if re.search(rf"\b{re.escape(name)}\s*\[", expr) and count is None and "*" not in type_name:
+            # A recovered scalar local cannot be subscripted unless the
+            # decompiler actually declared a pointer/array.
+            return None
+        if count is None and "*" not in type_name:
+            dereferenced = re.search(rf"(?:^|[\(\[=,+\-/%<>!?:&|])\s*\*\s*{re.escape(name)}\b", expr)
+            if dereferenced:
+                # Unary `*scalar` is not valid C++; `a * b` multiplication is
+                # left alone because its left operand is not an operator.
+                return None
+            if re.search(rf"\b{re.escape(name)}\b\s*(?:==|!=)\s*\([^()]*\*", expr):
+                return None
+            if re.search(
+                rf"\([^()]*\*[^()]*\)\s*(?:0x[0-9A-Fa-f]+|0|nullptr)\s*(?:==|!=)\s*\b{re.escape(name)}\b",
+                expr,
+            ):
+                return None
+        if count is not None:
+            # Arrays may be addressed or indexed, but decompiler scalar shifts
+            # and arithmetic on a whole array are not valid C++.
+            if not re.search(rf"&\s*{re.escape(name)}\b|\b{re.escape(name)}\s*\[", expr):
+                return None
+    for word in identifiers:
+        if word in locals or word in TYPE_WORDS or word in CALL_KEYWORDS:
+            continue
+        if word.startswith(("DAT_", "PTR_", "UNK_", "SUB_")):
+            if allow_data:
+                continue
+        if word.startswith("FUN_") and allow_data and not re.search(rf"\b{re.escape(word)}\s*\(", expr):
+            continue
+        return None
+    if re.search(r"\b(?:__|NAN|INFINITY)", expr):
+        return None
+    data_tokens = [
+        match.group(0)
+        for match in TOKEN_RE.finditer(expr)
+        if match.group(0).startswith(("DAT_", "PTR_", "UNK_", "SUB_"))
+    ]
+    for token in data_tokens:
+        # A bare data token is an array lvalue and is safe only when the whole
+        # expression is that token.  Indexing a byte-array symbol or applying
+        # arithmetic/casts to the array itself produces invalid C++ or changes
+        # the element type, so require an explicit address instead.
+        if expr == token:
+            continue
+        if re.search(rf"\b{re.escape(token)}\s*\[", expr):
+            return None
+        if re.search(rf"&\s*{re.escape(token)}\b\s*\)\s*\[", expr):
+            return None
+        if not re.search(rf"&\s*{re.escape(token)}\b", expr):
+            return None
+    # A nested call is only safe when it is a type cast or sizeof; function
+    # calls remain trace-only unless their own arguments are resolved.
+    for match in CALL_RE.finditer(expr):
+        name = match.group(1)
+        if name in CALL_KEYWORDS or name in TYPE_WORDS or re.match(r"[A-Za-z_][A-Za-z0-9_]*_t$", name):
+            continue
+        if name.startswith("FUN_") and allow_data:
+            return None
+        return None
+    translated = replace_data_symbols(expr, allow_fun=allow_data)
+    return translated
+
+
+def header_key(header: str) -> str:
+    return re.sub(r"\s+", " ", header.strip())
+
+
+def condition_expression(header: str) -> str | None:
+    match = re.match(r"(?:if|while|switch)\s*\((.*)\)\s*$", header.strip(), re.DOTALL)
+    return match.group(1).strip() if match else None
+
+
+def for_condition_expression(header: str) -> str | None:
+    match = re.match(r"for\s*\((.*)\)\s*$", header.strip(), re.DOTALL)
+    if not match:
+        return None
+    parts = split_top_level(match.group(1), ";")
+    return parts[1].strip() if len(parts) >= 2 and parts[1].strip() else None
+
+
+def recover_typed_sites(
+    code_lines: list[tuple[int, str]],
+    declarations: dict[str, tuple[str, int | None]],
+) -> tuple[dict[str, str], list[str], list[tuple[str, list[str]]], list[tuple[str, str]]]:
+    typed_conditions: dict[str, str] = {}
+    unresolved_conditions: list[str] = []
+    typed_calls: list[tuple[str, list[str]]] = []
+    unresolved_calls: list[tuple[str, str]] = []
+
+    for _, line in code_lines:
+        stripped = line.strip()
+        # The decompiler's own function signature is not a call site.
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_ ]*?\*?\s+FUN_[0-9A-Fa-f]+\s*\(", stripped):
+            continue
+        header_match = re.match(r"(if|for|while|switch)\s*\(.*\)\s*\{?\s*$", stripped)
+        if header_match:
+            kind = header_match.group(1)
+            header = re.sub(r"\s*\{$", "", stripped).strip()
+            condition = for_condition_expression(header) if kind == "for" else condition_expression(header)
+            if condition is not None:
+                translated = safe_expression(condition, declarations, allow_data=False)
+                if translated:
+                    typed_conditions[re.sub(r"\s+", " ", header)] = translated
+                else:
+                    unresolved_conditions.append(header)
+
+        # Scan direct call expressions on this line.  Calls nested in another
+        # call are intentionally left unresolved until their own signatures are
+        # recovered; simple casts are not calls.
+        for match in CALL_RE.finditer(line):
+            target = match.group(1)
+            if target in CALL_KEYWORDS or target in TYPE_WORDS or target in declarations:
+                continue
+            open_index = line.find("(", match.start())
+            if open_index < 0:
+                continue
+            depth = 0
+            quote: str | None = None
+            escaped = False
+            close_index = -1
+            for index in range(open_index, len(line)):
+                char = line[index]
+                if quote:
+                    if escaped:
+                        escaped = False
+                    elif char == "\\":
+                        escaped = True
+                    elif char == quote:
+                        quote = None
+                    continue
+                if char in ('"', "'"):
+                    quote = char
+                elif char == "(":
+                    depth += 1
+                elif char == ")":
+                    depth -= 1
+                    if depth == 0:
+                        close_index = index
+                        break
+            if close_index < 0:
+                continue
+            args_text = line[open_index + 1:close_index]
+            args = split_top_level(args_text, ",") if args_text.strip() else []
+            translated_args: list[str] = []
+            for arg in args:
+                translated = safe_expression(arg, declarations, allow_data=True)
+                if translated is None:
+                    break
+                translated_args.append(translated)
+            else:
+                typed_calls.append((target, translated_args))
+                continue
+            unresolved_calls.append((target, args_text))
+
+    return typed_conditions, unresolved_conditions, typed_calls, unresolved_calls
 
 
 def read_rows() -> list[dict[str, str]]:
@@ -125,13 +497,16 @@ class ControlTranslator:
 
     MAX_ACTUAL_DEPTH = 32
 
-    def __init__(self, lines: list[str]):
+    def __init__(self, lines: list[str], typed_conditions: dict[str, str] | None = None):
         self.lines = lines
         self.i = 0
         self.out: list[str] = []
         self.indent = 1
         self.depth = 0
         self.switch_cases: list[int] = []
+        self.typed_conditions = typed_conditions or {}
+        self.typed_conditions_used = 0
+        self.unresolved_conditions_used = 0
         self.labels = set()
         for line in lines:
             match = LABEL_RE.match(line.strip())
@@ -201,7 +576,16 @@ class ControlTranslator:
             brace = find_lbrace(header)
             if brace is not None:
                 header = header[:brace].strip()
-            self.emit(f"}} else if (trace.condition({cpp_string(header)})) {{")
+            expression = self.condition_for_header(header)
+            if expression:
+                self.typed_conditions_used += 1
+                self.emit(
+                    f"}} else if (trace.checked_condition({cpp_string(header)}, [&]() -> bool {{"
+                    f" return static_cast<bool>({expression}); }})) {{"
+                )
+            else:
+                self.unresolved_conditions_used += 1
+                self.emit(f"}} else if (trace.condition({cpp_string(header)})) {{")
             self.parse_block()
             self.finish_else()
             return
@@ -326,12 +710,27 @@ class ControlTranslator:
                 elif char == "}":
                     depth -= 1
 
+    def condition_for_header(self, header: str) -> str | None:
+        return self.typed_conditions.get(header_key(header))
+
+    def emit_condition_if(self, header: str) -> None:
+        expression = self.condition_for_header(header)
+        if expression:
+            self.typed_conditions_used += 1
+            self.emit(
+                f"if (trace.checked_condition({cpp_string(header)}, [&]() -> bool {{"
+                f" return static_cast<bool>({expression}); }})) {{"
+            )
+        else:
+            self.unresolved_conditions_used += 1
+            self.emit(f"if (trace.condition({cpp_string(header)})) {{")
+
     def parse_if(self) -> None:
         if self.depth >= self.MAX_ACTUAL_DEPTH:
             self.flatten_control()
             return
         header = self.collect_header()
-        self.emit(f"if (trace.condition({cpp_string(header)})) {{")
+        self.emit_condition_if(header)
         self.depth += 1
         self.indent += 1
         self.parse_block()
@@ -344,7 +743,16 @@ class ControlTranslator:
             self.flatten_control()
             return
         header = self.collect_header()
-        self.emit(f"for (auto loop = trace.loop({cpp_string(header)}); loop.next(); ) {{")
+        expression = self.condition_for_header(header)
+        if expression:
+            self.typed_conditions_used += 1
+            self.emit(
+                f"for (auto loop = trace.checked_loop({cpp_string(header)}, [&]() -> bool {{"
+                f" return static_cast<bool>({expression}); }}); loop.next(); ) {{"
+            )
+        else:
+            self.unresolved_conditions_used += 1
+            self.emit(f"for (auto loop = trace.loop({cpp_string(header)}); loop.next(); ) {{")
         self.depth += 1
         self.indent += 1
         self.parse_block()
@@ -359,7 +767,16 @@ class ControlTranslator:
             self.flatten_control()
             return
         header = self.collect_header()
-        self.emit(f"while (trace.loop_condition({cpp_string(header)})) {{")
+        expression = self.condition_for_header(header)
+        if expression:
+            self.typed_conditions_used += 1
+            self.emit(
+                f"while (trace.checked_loop_condition({cpp_string(header)}, [&]() -> bool {{"
+                f" return static_cast<bool>({expression}); }})) {{"
+            )
+        else:
+            self.unresolved_conditions_used += 1
+            self.emit(f"while (trace.loop_condition({cpp_string(header)})) {{")
         self.depth += 1
         self.indent += 1
         self.parse_block()
@@ -390,14 +807,32 @@ class ControlTranslator:
             if self.current() is not None and self.current().startswith("while"):
                 condition = self.current().strip()
                 self.i += 1
-        self.emit(f"}} while (trace.loop_condition({cpp_string(condition)}));")
+        expression = self.condition_for_header(condition)
+        if expression:
+            self.typed_conditions_used += 1
+            self.emit(
+                f"}} while (trace.checked_loop_condition({cpp_string(condition)}, [&]() -> bool {{"
+                f" return static_cast<bool>({expression}); }}));"
+            )
+        else:
+            self.unresolved_conditions_used += 1
+            self.emit(f"}} while (trace.loop_condition({cpp_string(condition)}));")
 
     def parse_switch(self) -> None:
         if self.depth >= self.MAX_ACTUAL_DEPTH:
             self.flatten_control()
             return
         header = self.collect_header()
-        self.emit(f"switch (trace.switch_key({cpp_string(header)})) {{")
+        expression = self.condition_for_header(header)
+        if expression:
+            self.typed_conditions_used += 1
+            self.emit(
+                f"switch (trace.checked_switch({cpp_string(header)}, [&]() -> std::size_t {{"
+                f" return static_cast<std::size_t>({expression}); }})) {{"
+            )
+        else:
+            self.unresolved_conditions_used += 1
+            self.emit(f"switch (trace.switch_key({cpp_string(header)})) {{")
         self.depth += 1
         self.indent += 1
         self.switch_cases.append(0)
@@ -519,13 +954,21 @@ def cpp_name(address: str) -> str:
     return "Function_0x" + address[2:].lower()
 
 
+def comment_text(text: str) -> str:
+    return text.replace("*/", "* /").replace("\r", " ").replace("\n", " ").strip()
+
+
 def record_identifier(address: str) -> str:
     return "kFunction_0x" + address[2:].lower()
 
 
-def build_accessor(address: str, row: dict[str, str], facts: dict[str, object], body: str, digest: str) -> tuple[list[str], int, int, int]:
+def build_accessor(address: str, row: dict[str, str], facts: dict[str, object], body: str, digest: str) -> tuple[list[str], int, int, int, int, int, int, int]:
     code = code_for_translation(body)
-    translator = ControlTranslator(code)
+    declarations = recover_declarations(body)
+    typed_conditions, unresolved_conditions, typed_calls, unresolved_calls = recover_typed_sites(
+        list(enumerate(code, 1)), declarations
+    )
+    translator = ControlTranslator(code, typed_conditions)
     translator.parse()
     executable_lines = translator.executable_line_count()
     control_nodes = translator.control_node_count()
@@ -538,8 +981,12 @@ def build_accessor(address: str, row: dict[str, str], facts: dict[str, object], 
     lines: list[str] = [
         f"const sf::reconstructed::FunctionTranslation& {cpp_name(address)}() noexcept {{",
         f'    sf::reconstructed::TranslationTrace trace({json.dumps(address)}, {json.dumps(row["name"])});',
-        "    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:",
+        "    // Recovered local/parameter types; values and aggregate layouts remain TODO.",
     ]
+    lines.extend(declaration_lines(declarations))
+    lines.extend([
+        "    // TODO: unresolved global, indirect call, calling-convention and PDB/layout facts:",
+    ])
     for ref in str(facts["data_refs"]).splitlines():
         if ref:
             lines.append(
@@ -550,6 +997,19 @@ def build_accessor(address: str, row: dict[str, str], facts: dict[str, object], 
             lines.append(f"    // {line}")
     lines.append("    // TODO: verify call-target calling conventions and argument/return types without a vendor PDB.")
     lines.append("    // TODO: no vendor PDB/live object layout; verify struct fields and stack offsets before execution.")
+    for header in unresolved_conditions:
+        lines.append(f"    // TODO: condition expression type not recovered: {comment_text(header)}")
+    for target, args in unresolved_calls:
+        lines.append(
+            f"    // TODO: call arguments not type-recovered for {comment_text(target)}: {comment_text(args)}"
+        )
+
+    # Type-check recovered arguments independently of the unresolved target
+    # signature; the trace sink accepts any expression types.
+    for target, args in typed_calls:
+        rendered = ", ".join(args)
+        suffix = f", {rendered}" if rendered else ""
+        lines.append(f"    trace.call_arguments({json.dumps(target)}{suffix});")
 
     # Actual resolved references: extern call thunks, extern data-table symbols
     # and string literals.  These are what make the accessor compiler-checked.
@@ -595,7 +1055,16 @@ def build_accessor(address: str, row: dict[str, str], facts: dict[str, object], 
             actual_statements += 1
         if re.match(r"(?:else\s+)?(?:if|for|while|do|switch)\b", stripped):
             actual_controls += 1
-    return lines, actual_executable, actual_controls, actual_statements
+    return (
+        lines,
+        actual_executable,
+        actual_controls,
+        actual_statements,
+        translator.typed_conditions_used,
+        len(unresolved_conditions),
+        len(typed_calls),
+        len(unresolved_calls),
+    )
 
 
 def main() -> int:
@@ -651,9 +1120,16 @@ def main() -> int:
         body_delim = f"B{address[2:]}"
         field_delim = f"F{address[2:]}"
         source_rel = path.relative_to(ROOT).as_posix()
-        accessor_lines, executable_lines, control_nodes, statement_lines = build_accessor(
-            address, row, facts, body, digest
-        )
+        (
+            accessor_lines,
+            executable_lines,
+            control_nodes,
+            statement_lines,
+            typed_conditions,
+            unresolved_conditions,
+            typed_calls,
+            unresolved_calls,
+        ) = build_accessor(address, row, facts, body, digest)
 
         record_lines = [
             f"// {address} {row['name']}",
@@ -697,6 +1173,10 @@ def main() -> int:
                     str(executable_lines),
                     str(statement_lines),
                     str(control_nodes),
+                    str(typed_conditions),
+                    str(unresolved_conditions),
+                    str(typed_calls),
+                    str(unresolved_calls),
                     "translated",
                 ]
             )
@@ -755,6 +1235,10 @@ def main() -> int:
         "executable_lines",
         "statement_lines",
         "control_flow_nodes",
+        "typed_conditions",
+        "unresolved_conditions",
+        "typed_calls",
+        "unresolved_call_args",
         "status",
     ]
     (OUT / "coverage.tsv").write_text(
@@ -766,6 +1250,8 @@ def main() -> int:
     executable_total = sum(int(row.split("\t")[12]) for row in coverage_rows)
     statement_total = sum(int(row.split("\t")[13]) for row in coverage_rows)
     control_total = sum(int(row.split("\t")[14]) for row in coverage_rows)
+    typed_condition_total = sum(int(row.split("\t")[15]) for row in coverage_rows)
+    typed_call_total = sum(int(row.split("\t")[17]) for row in coverage_rows)
     source_bytes = sum(path.stat().st_size for path in CHUNKS.glob("*.cpp"))
     summary = [
         "# Complete compiled-source coverage",
@@ -777,6 +1263,8 @@ def main() -> int:
         f"- Compiled accessors: **{len(coverage_rows)}**",
         f"- Executable accessor lines: **{executable_total}**",
         f"- Structured control nodes: **{control_total}**",
+        f"- Type-checked recovered condition expressions: **{typed_condition_total}**",
+        f"- Type-checked recovered call-argument sites: **{typed_call_total}**",
         f"- Generated chunks: **{len(chunks)}** ({source_bytes} bytes; at most {CHUNK_SIZE} functions per chunk)",
         f"- Resolved call-thunk declarations: **{len(call_symbols)}**",
         f"- Resolved data-table declarations: **{len(data_symbols)}**",

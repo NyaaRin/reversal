@@ -177,14 +177,18 @@ timeout addresses.
 
 `src/reconstructed/` covers **7,656/7,656 inventory functions** with compiled
 C++17 accessors: **0 unmapped, 0 stubs**. `re/tools/gen_reconstructed_source.py`
-deterministically writes 60 chunks (73,423,017 bytes; 70.02 MiB) and
+deterministically writes 60 chunks (84,610,023 bytes; 80.69 MiB) and
 `src/reconstructed/coverage.tsv`; every address maps to a chunk source file and
-a unique `Function_0x...` accessor. The accessors contain **416,099 executable
+a unique `Function_0x...` accessor. The accessors contain **442,104 executable
 statement/reference lines**, **312,958 `trace.statement` calls**, **49,305 real
 C++ `if`/`else`/loop/`switch` control nodes**, **7,732 actual string-literal
-calls**, plus resolved references to **4,331 extern call thunks** and **4,333
-extern data-table symbols** in `src/reconstructed/symbols.h`. The complete
-decompiler body (16.29 MiB) remains as a SHA-256-verified audit payload and is
+calls**, plus resolved references to **4,331 extern call thunks** and **4,494
+extern data-table symbols** in `src/reconstructed/symbols.h`. Recovered
+local/parameter declarations feed **20,387 compiler-checked condition
+expressions** and **25,664 `trace.call_arguments` sites**; **21,960 condition
+sites** and **29,156 call-argument sites** remain explicit TODOs because their
+types or referenced entities are not recoverable from the available evidence.
+The complete decompiler body remains as a SHA-256-verified audit payload and is
 not the executable accessor payload.
 
 `py -3 re/tools/check_reconstructed_source.py` reports `PASS 7656/7656 inventory

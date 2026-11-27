@@ -72,15 +72,18 @@ function. It exits PASS only when all 7,656 rows close.
 
 `src/reconstructed/` maps **7,656/7,656 inventory addresses** to compiled
 C++17 accessors, with **0 unmapped** and **0 stubs**. The generator
-`re/tools/gen_reconstructed_source.py` writes 60 chunks (**73,423,017 bytes**,
-70.02 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
+`re/tools/gen_reconstructed_source.py` writes 60 chunks (**84,610,023 bytes**,
+80.69 MiB) and `src/reconstructed/coverage.tsv`; every row names the chunk
 source file and a unique `Function_0x...` accessor. Accessors contain
-**416,099 audited executable statement/reference lines**, **312,958
+**442,104 audited executable statement/reference lines**, **312,958
 `trace.statement` calls**, **49,305 real C++ control nodes**, **7,732 actual
 string-literal calls**, and resolved references to **4,331 extern call thunks**
-plus **4,333 extern data-table symbols** in `src/reconstructed/symbols.h`. The
-complete decompiled body (16.29 MiB) remains a SHA-256-verified audit payload,
-not the executable accessor payload.
+plus **4,494 extern data-table symbols** in `src/reconstructed/symbols.h`.
+Recovered declarations produce **20,387 compiler-checked condition
+expressions** and **25,664 `trace.call_arguments` sites**; **21,960 condition
+sites** and **29,156 call-argument sites** remain explicit TODOs where the
+evidence is insufficient. The complete decompiled body remains a
+SHA-256-verified audit payload, not the executable accessor payload.
 
 ```
 py -3 re/tools/gen_reconstructed_source.py

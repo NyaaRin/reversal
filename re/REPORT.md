@@ -173,20 +173,28 @@ shared by several classes (identical stubs/overrides) and are named
 
 `src/reconstructed/` maps **7,656/7,656 inventory functions** to compiled C++17
 accessors, with **0 unmapped** addresses and **0 stubs**. The deterministic
-generator `re/tools/gen_reconstructed_source.py` emits 60 chunks (**73,423,017
-bytes**, 70.02 MiB) plus `src/reconstructed/coverage.tsv`; each address maps to a
+generator `re/tools/gen_reconstructed_source.py` emits 60 chunks (**84,610,023
+bytes**, 80.69 MiB) plus `src/reconstructed/coverage.tsv`; each address maps to a
 `chunk_NNN.cpp` source file and a unique `Function_0x...` accessor. Every
-accessor contains **416,099 audited executable C++ statement/reference lines**,
+accessor contains **442,104 audited executable C++ statement/reference lines**,
 including **312,958 `trace.statement` calls**, **49,305 real C++ control nodes**
 (`if`/`else`/loops/`switch`) and **7,732 actual string-literal calls**.
 
 Call targets are resolved through **4,331 declared extern `FUN_*` thunks** and
-data references through **4,333 declared extern `DAT_*`/`PTR_*`/`UNK_*`/
-`SUB_*` byte-array symbols** in `src/reconstructed/symbols.h`. The complete
-decompiled body remains in each record as a SHA-256-verified audit payload
-(16.29 MiB); it is no longer the accessor payload. The extracted source record
-also retains 17,273 call references, 22,280 data references, 80,593 original
-control-flow lines and 59,779 explicit TODO markers for unresolved runtime
+data references through **4,494 declared extern `DAT_*`/`PTR_*`/`PTR_DAT_*`/
+`UNK_*`/`SUB_*` byte-array symbols** in `src/reconstructed/symbols.h`. The generator also
+recovers local/parameter declarations and emits typed condition and call-site
+checks where the decompiler gives enough type evidence: **20,387 checked
+condition expressions** (including loops and switches) and **25,664
+`trace.call_arguments` sites**. Expressions that still contain undeclared
+entities, unresolved indirect state or ambiguous types remain explicit
+`TODO` comments; **21,960 condition sites** and **29,156 call-argument sites**
+are deliberately unresolved rather than guessed.
+
+The complete decompiled body remains in each record as a SHA-256-verified audit
+payload; it is no longer the accessor payload. The extracted source record also
+retains 17,273 call references, 22,621 data references, 80,593 original
+control-flow lines and 60,120 explicit TODO markers for unresolved runtime
 pages, globals, indirect calls, calling conventions and PDB/layout facts.
 
 `re/tools/check_reconstructed_source.py` independently re-reads the inventory,
@@ -195,16 +203,18 @@ coverage table, accessor bodies, symbols header and hashed bodies and reports:
 ```
 inventory=7656 coverage_rows=7656 checked=7656
 generated_chunks=60 accessors=7656
-executable_accessor_lines=416099 statement_lines=312958 control_nodes=49305
-literal_refs=7732 symbols_calls=4331 symbols_data=4333
+executable_accessor_lines=442104 statement_lines=312958 control_nodes=49305
+literal_refs=7732 symbols_calls=4331 symbols_data=4494
+typed_conditions=20387 unresolved_conditions=21960 typed_calls=25664 unresolved_call_args=29156
 PASS 7656/7656 inventory functions mapped; unmapped=0 stubs=0
 ```
 
 The hand-translated executable reconstruction under `src/features/` is
 unchanged. The generated accessors are compile-checked **structural traces**,
-not behaviorally equivalent implementations: condition expressions, loop
-counts, globals, indirect calls and object layouts remain TODO-marked and are
-not executable parity.
+not behaviorally equivalent implementations: recovered expression types are
+checked by the compiler where evidence is sufficient, while unresolved
+globals, indirect calls, calling conventions, loop counts and object layouts
+remain TODO-marked and are not executable parity.
 
 ## Limitations
 
